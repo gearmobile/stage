@@ -3,30 +3,30 @@
 	background-color $color-white
 
 	&__center
-		lost-center $width
 		margin auto
 		padding 0 1rem
+		lost-center $width
 
 	&__column
+		position relative
+		padding-left 7rem
 		lost-column 4/12
 		lost-column-gutter 2rem
-		padding-left 7rem
-		position relative
 
 		& > .icon
-			size(4.2rem)
 			position absolute
 			top 0
 			left 0
+			size(4.2rem)
 
 		& > h3
-			text-transform uppercase
-			font-size 1.5rem
-			color $charcoal-grey
 			margin-bottom 1rem
+			font-size 1.5rem
+			text-transform uppercase
+			color $charcoal-grey
 
 		& > p
+			font-family $opensans-light
 			font-size 1.5rem
 			line-height 1.6
 			color $grey-blue
-			font-family $opensans-light

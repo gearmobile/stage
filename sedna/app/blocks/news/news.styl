@@ -5,19 +5,19 @@
 	align-items center
 
 	&__inner
-		lost-center 100%
-		padding 0 1rem
 		margin-bottom 6rem
+		padding 0 1rem
+		lost-utility clearfix
 
 	&__column
-		lost-column 4/12
-		lost-column-gutter 1rem
 		text-align center
+		lost-column 1/3
+		lost-column-gutter 1rem
 
 	&__image
-		display block
 		position relative
 		margin-bottom 3.4rem
+		display block
 
 		& > img
 			display block
@@ -25,13 +25,13 @@
 			height auto
 
 		&::before
-			content ''
-			display block
 			position absolute
 			top 0
 			left 0
+			display block
 			width 100%
 			height 100%
+			content ''
 			background-color rgba($color-white, .3)
 			transition background-color .2s
 
@@ -40,15 +40,15 @@
 			background-color rgba($color-white, .01)
 
 	&__title
+		margin-bottom 2rem
+		font-family $opensans-bold
+		font-size 1.2rem
 		text-transform uppercase
 		color $cool-grey
-		font-size 1.2rem
-		font-family $opensans-bold
-		margin-bottom 2rem
 
 	&__link
-		color $slate-grey
 		font-size 1.5rem
+		color $slate-grey
 		transition color .2s
 
 		&:hover
@@ -56,16 +56,16 @@
 			color lighten($slate-grey, 20%)
 
 	&__button
-		display block
 		padding 1.2rem 3rem
-		border .2rem solid $warm-pink
-		border-radius 50em
+		display block
 		font-size 1.3rem
 		text-transform uppercase
 		color $warm-pink
+		border .2rem solid $warm-pink
+		border-radius 50em
 		transition background-color .2s, color .2s
 
 		&:hover
 		&:active
-			background-color $warm-pink
 			color $color-white
+			background-color $warm-pink

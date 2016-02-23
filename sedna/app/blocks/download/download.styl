@@ -2,80 +2,80 @@
 	background-color $color-white
 
 	// DOWNLOAD HEAD
-	//-------------------------------------------------
+	// -------------------------------------------------
 
 	& .head
+		position relative
 		display flex
 		flex-direction column
-		justify-content center
-		align-items center
 		min-height 50rem
 		background url(../images/bg-download.jpg) center center no-repeat
 		background-size cover
-		position relative
+		justify-content center
+		align-items center
 
 
 		// SKETCH LOGO
-		//--------------------------------------------------
+		// --------------------------------------------------
 
 		&::after
-			content ''
-			display block
-			size(23rem)
 			position absolute
 			left 50%
 			bottom -14rem
-			transform translateX(-50%)
+			display block
+			content ''
 			background url(../images/sketch-logo.png) center center no-repeat
 			background-size cover
+			transform translateX(-50%)
 			animation logoAnime 2s infinite
+			size(23rem)
 
 		// TITLE
-		//--------------------------------------------------
+		// --------------------------------------------------
 		&__title
-			font-family $opensans-light
-			color $color-white
-			font-size 4rem
 			margin-bottom 3rem
+			font-family $opensans-light
+			font-size 4rem
+			color $color-white
 
 			& > span
 				text-transform capitalize
 				color rgba($color-white, .6)
 
 				& > sup
-					color $faded-orange
 					font-size 2.5rem
 					line-height 1.8
+					color $faded-orange
 
 
 		// SUBTITLE
-		//--------------------------------------------------
+		// --------------------------------------------------
 		&__subtitle
+			margin-bottom 6rem
 			font-family $opensans-light
 			color $cool-grey
-			margin-bottom 6rem
 
 
 		// BUTTON
-		//--------------------------------------------------
+		// --------------------------------------------------
 		&__button
-			display block
 			padding 1.2rem 3rem
+			display block
+			font-size 1.3rem
+			text-transform uppercase
+			color $warm-pink
 			border .2rem solid $warm-pink
 			border-radius 50em
-			font-size 1.3rem
-			color $warm-pink
-			text-transform uppercase
 			transition color .2s, background-color .2s
 
 			&:hover
 			&:active
-				background-color $warm-pink
 				color $color-white
+				background-color $warm-pink
 
 
 	// DOWNLOAD CONTENT
-	//-------------------------------------------------
+	// -------------------------------------------------
 	& .content
 		margin-top 20rem
 		padding-bottom 10rem
@@ -87,15 +87,15 @@
 			color $slate-grey
 
 		&__heading
+			margin-bottom 6rem
 			font-size 2.4rem
 			color $charcoal-grey
-			margin-bottom 6rem
 
 		&__title
-			font-size 1.5rem
-			color $charcoal-grey
-			text-transform uppercase
 			margin-bottom 2rem
+			font-size 1.5rem
+			text-transform uppercase
+			color $charcoal-grey
 
 		&__inner
 			lost-center $width
@@ -117,7 +117,7 @@
 
 
 // SKETCH LOGO ANIME
-//--------------------------------------------------
+// --------------------------------------------------
 @keyframes logoAnime
 	0%, 100%
 		transform translate(-50%, 0%)

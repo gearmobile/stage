@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import svg4everybody from 'svg4everybody';
 import swiper from 'swiper';
-import magnific from 'magnific-popup';
+import 'magnific-popup';
 
 $(() => {
 
@@ -30,7 +30,7 @@ $(() => {
 
 	// MAGNIFIC POPUP
 	// -------------------------------------------------
-	magnific('.news__inner', {
+	$('.news__inner').magnificPopup({
 		delegate: '.news__image',
 		type: 'image'
 	});
