@@ -1,2 +1,90 @@
 .signup
-	display block
+	padding 12rem 0
+	background-color $color-white
+
+	&__inner
+		lost-center $width
+
+	&__center
+		lost-column 6/12
+		lost-column-gutter 2rem
+		lost-offset -3/12
+
+
+	// SIGNUP TITLE
+	// ---------------------------------------------
+
+	&__title
+		margin-bottom 1.5rem
+		font-size 2.4rem
+		font-weight 700
+		line-height 2
+		text-align center
+		color $charcoal-grey
+
+
+	// SIGNUP SUBTITLE
+	// ---------------------------------------------
+
+	&__subtitle
+		margin-bottom 3rem
+		font-family $opensans-light
+		line-height 2
+		text-align center
+		color $slate-grey
+
+
+	// SIGNUP EMAIL & PASSWORD
+	// ---------------------------------------------
+
+	&__wrapper
+		margin-bottom 1rem
+		padding 1.2rem 1.2rem 1.3rem 5rem
+		background-repeat no-repeat
+		background-position 1.8rem 50%
+		border .1rem solid $silver
+		border-radius .5rem
+		border-radius 5px
+
+		&:nth-child(1)
+			background-image url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSIjZmY1Mjc0IiBkPSJNMTQuNSAyaC0xM0MuNjc1IDIgMCAyLjY3NSAwIDMuNXYxMGMwIC44MjUuNjc1IDEuNSAxLjUgMS41aDEzYy44MjUgMCAxLjUtLjY3NSAxLjUtMS41di0xMGMwLS44MjUtLjY3NS0xLjUtMS41LTEuNXpNNi4yMyA4LjZMMiAxMS44OTVWNC4wNTdMNi4yMyA4LjZ6TTIuNzU2IDRoMTAuNDg4TDggNy45MzggMi43NTYgNHptMy42NCA0Ljc3N0w4IDEwLjVsMS42MDUtMS43MjNMMTIuODk1IDEzaC05Ljc5bDMuMjktNC4yMjN6TTkuNzcgOC42TDE0IDQuMDU3djcuODM4TDkuNzcgOC42eiIvPjwvc3ZnPgo=')
+
+		&:nth-child(2)
+			background-image url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSIjZmY1Mjc0IiBkPSJNMTUuNjU4IDQuOTFsLTEuNTgtMS41OC0xLjQxLTEuNDFMMTEuMDkuMzRjLS4zODYtLjM4Ni0xLjA3Ni0uNDU1LTEuNTMyLS4xNWwtNC4zMiAyLjg4Yy0uNDU1LjMwMy0uNjI3Ljk1My0uMzgyIDEuNDQzbDEuMSAyLjIwM2MuMDM1LjA2Ny4wNzQuMTQuMTE2LjIxM0wuNSAxMi41IDAgMTZoM3YtMWgydi0yaDJ2LTJoMlY5Ljg4OGMuMS4wNi4xOTUuMTEzLjI4My4xNTdsMi4yMDMgMS4xYy40OS4yNDYgMS4xNC4wNzMgMS40NDQtLjM4MmwyLjg4LTQuMzJjLjMwNC0uNDU1LjIzNi0xLjE0NS0uMTUyLTEuNTMyek0yLjM1NCAxMy4zNTRsLS43MDctLjcwN0w2LjUxNSA3Ljc4bC43MDcuNzA2LTQuODY4IDQuODY4ek0xNC4zMjggNi42MmwtLjcwNy43MDhjLS4xOTMuMTk0LS41MTIuMTk0LS43MDYgMEw4LjY3IDMuMDg1Yy0uMTkzLS4xOTQtLjE5My0uNTEzIDAtLjcwN2wuNzA4LS43MDdjLjE5NC0uMTkzLjUxMy0uMTkzLjcwNyAwbDQuMjQzIDQuMjQ0Yy4xOTQuMTk0LjE5NC41MTMgMCAuNzA3eiIvPjwvc3ZnPgo=')
+
+		&:hover
+		&:hover > input
+			color darken($silver, 20%)
+			border-color darken($silver, 10%)
+
+	&__email
+	&__password
+	&__button
+		display block
+		width 100%
+
+	&__email
+	&__password
+		padding .5rem 0 .5rem 2rem
+		font-size 1.4rem
+		color $silver
+		border-width 0 0 0 .1rem
+		border-style solid
+		border-color transparent transparent transparent $silver
+
+
+	// SIGNUP FORM BUTTON
+	// ---------------------------------------------
+
+	&__button
+		padding 1.6rem 0
+		text-transform uppercase
+		color $color-white
+		background-color $warm-pink
+		border none
+		border-radius .5rem
+
+		&:hover
+		&:active
+		&:focus
+			background-color darken($warm-pink, 5%)

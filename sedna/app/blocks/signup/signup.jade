@@ -1,3 +1,12 @@
 mixin signup()
-	+b.signup&attributes(attributes)
-		| signup
+	+b.signup
+		.signup__inner
+			.signup__center
+				h2.signup__title Get started with Sedna, absolutely free
+				h3.signup__subtitle Grab your copy today, exclusively from Codrops
+				form.signup__form(method="post" action="action.php")
+					.signup__wrapper
+						input.signup__email(type="email" name="email" id="email" placeholder="Enter your email")
+					.signup__wrapper
+						input.signup__password(type="password" name="password" id="password" placeholder="Enter your password")
+					button.signup__button(type="button" name="button" id="button") sign up for free
