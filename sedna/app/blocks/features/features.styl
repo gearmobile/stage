@@ -1,0 +1,57 @@
+.features
+	padding 11rem 0 12rem
+	position relative
+
+	&__center
+		lost-center $width
+		min-height 53.7rem
+
+	&__content
+		lost-column 6/12
+		lost-column-gutter 2rem
+
+		& p
+			font-size 1.5rem
+			line-height 1.6
+			font-family $opensans-light
+			color $dark-slate-blue
+
+			&:not(:last-child)
+				margin-bottom 2rem
+
+			& > a
+				color $dark-red
+
+				&:hover
+					color lighten($dark-red, 30%)
+
+	&__title
+		color $charcoal-grey
+		font-size 2.4rem
+		margin-bottom 2rem
+
+	&__button
+		display inline-block
+		vertical-align middle
+		margin-top 4rem
+		padding 1.2rem 3rem 1.1rem
+		border-radius 50em
+		border .2rem solid $warm-pink
+		font-size 1.3rem
+		text-transform uppercase
+		color $warm-pink
+		transition color .2s, background-color .2s
+
+		&:hover
+		&:active
+			background-color $warm-pink
+			color $color-white
+
+	&__image
+		size(74rem, 53.7rem)
+		background url(../images/features-image.png) center center no-repeat
+		background-size cover
+		position absolute
+		top 50%
+		transform translateY(-50%)
+		left 61%

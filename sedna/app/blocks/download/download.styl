@@ -1,0 +1,128 @@
+.download
+	background-color $color-white
+
+	// DOWNLOAD HEAD
+	//-------------------------------------------------
+
+	& .head
+		display flex
+		flex-direction column
+		justify-content center
+		align-items center
+		min-height 50rem
+		background url(../images/bg-download.jpg) center center no-repeat
+		background-size cover
+		position relative
+
+
+		// SKETCH LOGO
+		//--------------------------------------------------
+
+		&::after
+			content ''
+			display block
+			size(23rem)
+			position absolute
+			left 50%
+			bottom -14rem
+			transform translateX(-50%)
+			background url(../images/sketch-logo.png) center center no-repeat
+			background-size cover
+			animation logoAnime 2s infinite
+
+		// TITLE
+		//--------------------------------------------------
+		&__title
+			font-family $opensans-light
+			color $color-white
+			font-size 4rem
+			margin-bottom 3rem
+
+			& > span
+				text-transform capitalize
+				color rgba($color-white, .6)
+
+				& > sup
+					color $faded-orange
+					font-size 2.5rem
+					line-height 1.8
+
+
+		// SUBTITLE
+		//--------------------------------------------------
+		&__subtitle
+			font-family $opensans-light
+			color $cool-grey
+			margin-bottom 6rem
+
+
+		// BUTTON
+		//--------------------------------------------------
+		&__button
+			display block
+			padding 1.2rem 3rem
+			border .2rem solid $warm-pink
+			border-radius 50em
+			font-size 1.3rem
+			color $warm-pink
+			text-transform uppercase
+			transition color .2s, background-color .2s
+
+			&:hover
+			&:active
+				background-color $warm-pink
+				color $color-white
+
+
+	// DOWNLOAD CONTENT
+	//-------------------------------------------------
+	& .content
+		margin-top 20rem
+		padding-bottom 10rem
+
+		& p
+			font-family $opensans-light
+			font-size 1.5rem
+			line-height 2
+			color $slate-grey
+
+		&__heading
+			font-size 2.4rem
+			color $charcoal-grey
+			margin-bottom 6rem
+
+		&__title
+			font-size 1.5rem
+			color $charcoal-grey
+			text-transform uppercase
+			margin-bottom 2rem
+
+		&__inner
+			lost-center $width
+
+		&__center
+			lost-utility clearfix
+
+		&__column
+			width 50%
+			lost-column 6/12
+			lost-column-gutter 2rem
+
+			&:first-child
+				padding-right 7rem
+				border-right .1rem solid $silver
+
+			&:last-child
+				padding-left 7rem
+
+
+// SKETCH LOGO ANIME
+//--------------------------------------------------
+@keyframes logoAnime
+	0%, 100%
+		transform translate(-50%, 0%)
+	40%
+		transform translate(-50%, -2%)
+	60%
+		transform translate(-50%, 5%)
+

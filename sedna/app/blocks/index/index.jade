@@ -1,0 +1,17 @@
+include ../intro/intro
+include ../promo/promo
+include ../features/features
+include ../download/download
+include ../news/news
+include ../testimonials/testimonials
+include ../signup/signup
+
+mixin index()
+	+b.index
+		+intro()
+		+promo()
+		+features()
+		+download()
+		+news()
+		+testimonials()
+		+signup()

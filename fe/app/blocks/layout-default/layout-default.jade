@@ -1,0 +1,45 @@
+include ../../../node_modules/bemto.jade/bemto.jade
+include ../page/page
+include ../box/box
+include ../header/header
+include ../about/about
+include ../skills/skills
+include ../team/team
+include ../services/services
+include ../facts/facts
+include ../work/work
+include ../addwork/addwork
+include ../follow/follow
+include ../testimonial/testimonial
+include ../pricing/pricing
+include ../quotation/quotation
+include ../touch/touch
+include ../map/map
+include ../socials/socials
+include ../footer/footer
+include ../scripts/scripts
+
+
+doctype html
+html(lang='ru')
+	include ../head/head
+	+page
+		+box
+			+header
+			+about
+			+skills
+			+team
+			+services
+			+facts
+			+work
+			+addwork
+			+follow
+			+testimonial
+			+pricing
+			+quotation
+			+touch
+			+map
+			+socials
+			+footer
+
+		+scripts(['app.min.js'])

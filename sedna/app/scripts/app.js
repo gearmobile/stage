@@ -1,0 +1,38 @@
+import $ from 'jquery';
+import svg4everybody from 'svg4everybody';
+import swiper from 'swiper';
+import magnific from 'magnific-popup';
+
+$(() => {
+
+	svg4everybody();
+
+
+	// HEADER FIXED
+	// ------------------------------------------------
+	const $headerFixed = $('.header-fixed__center');
+	$(window).on('scroll', function () {
+		if ( $(this).scrollTop() > 0 ) {
+			$headerFixed.addClass('header-fixed__center--active');
+		} else {
+			$headerFixed.removeClass('header-fixed__center--active');
+		}
+	});
+
+
+	// HEADER SLIDER
+	// ------------------------------------------------
+	swiper('.header > .swiper-container', {
+		effect: 'fade',
+		autoplay: 8500
+	});
+
+
+	// MAGNIFIC POPUP
+	// -------------------------------------------------
+	magnific('.news__inner', {
+		delegate: '.news__image',
+		type: 'image'
+	});
+
+});

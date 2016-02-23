@@ -1,0 +1,49 @@
+.promo
+	min-height 76rem
+	padding-top 12rem
+	background-color $silver
+
+	&__center
+		lost-center $width
+
+	&__content
+		lost-column 5/12
+		lost-offset -7/12
+		lost-column-gutter 2rem
+
+		& p
+			font-family $opensans-light
+			font-size 1.5rem
+			line-height 1.6
+			color $dark-slate-blue
+
+	&__title
+		font-size 2.4rem
+		color $charcoal-grey
+		margin-bottom 2rem
+
+	&__list
+		margin-top 6rem
+
+		& > li
+			padding 2rem 0 2rem 6rem
+			position relative
+
+			&:not(:last-child)
+				border-bottom .1rem solid $silver
+
+			& > .icon
+				size(4rem)
+				position absolute
+				top 2rem
+				left 0
+
+			& > h3
+				text-transform uppercase
+				color $charcoal-grey
+				font-size 1.5rem
+				margin-bottom 1rem
+
+	&__image
+		position absolute
+		bottom 0

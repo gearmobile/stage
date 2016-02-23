@@ -1,0 +1,34 @@
+@import '../../node_modules/swiper/dist/css/swiper.css'
+
+@import 'sprites/*'
+@import 'helpers/svg-size'
+@import 'helpers/variables'
+@import 'helpers/mixins'
+@import 'helpers/fonts'
+@import 'helpers/optimize'
+@import 'helpers/animate'
+
+@import '../blocks/**/*'
+
+
+
+// TO TOP BUTTON STYLES
+// -------------------------------------------------
+
+.top-button
+	size(6rem)
+	position fixed
+	z-index 3
+	bottom 4rem
+	right 4rem
+	background-color rgba(0, 0, 0, .4)
+	border-radius 50%
+	background-position center center
+	background-repeat no-repeat
+	background-size 90%
+	background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgOGMwIDQuNDE4IDMuNTgyIDggOCA4czgtMy41ODIgOC04LTMuNTgyLTgtOC04LTggMy41ODItOCA4ek0xNC41IDhjMCAzLjU5LTIuOTEgNi41LTYuNSA2LjVzLTYuNS0yLjkxLTYuNS02LjUgMi45MS02LjUgNi41LTYuNSA2LjUgMi45MSA2LjUgNi41eiI+PC9wYXRoPgo8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTEuMDQzIDEwLjQ1N2wxLjQxNC0xLjQxNC00LjQ1Ny00LjQ1Ny00LjQ1NyA0LjQ1NyAxLjQxNCAxLjQxNCAzLjA0My0zLjA0M3oiPjwvcGF0aD4KPC9zdmc+Cg==')
+	transition background-color .2s
+
+	&:hover
+	&:active
+		background-color rgba(0, 0, 0, .6)

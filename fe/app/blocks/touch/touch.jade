@@ -1,0 +1,27 @@
+mixin touch()
+	+b.touch#touch
+		.touch__center
+			.heading
+				.heading__left
+					h2.heading__title get in <span>touch</span>
+					small.heading__subtitle what we do with love
+				.heading__right
+					p.heading__text Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse
+			.form(action="send.php" method="post")
+				.form__left
+					fieldset.form__row
+						input.form__name(type="text" name="name" id="name" placeholder="name")
+						input.form__email(type="email" name="email" id="email" placeholder="email")
+					fieldset.form__row
+						input.form__subject(type="text" name="subject" id="subject" placeholder="subject")
+					fieldset.form__row
+						textarea.form__message(name="message" placeholder="message")
+					button.form__button(type="submit") send message
+				.form__right
+					h2.form__title additional info
+					p If you have any questiong about our products or something else, please email us or call us. We'll get in touch with you as soon as possible.
+					ul.form__contacts
+						li Jl. Pahlawan VII No. 247D Sidoarjo
+						li: a(href="tel:+6285745965973") +62 - 85745965973
+						li: a(href="maito:rudhisasmito@gmail.com") rudhisasmito@gmail.com
+						li Mo - Fr: 9am to 6pm Sa, Su: 9am to 2pm

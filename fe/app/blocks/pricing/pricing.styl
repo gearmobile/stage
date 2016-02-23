@@ -1,0 +1,105 @@
+.pricing
+	background-color #f7f7f7
+	padding 21rem 0 14rem
+
+	&__center
+		lost-center $width
+		padding 0 1rem
+
+	& .heading
+		margin-bottom 14rem
+		padding 0 1rem
+
+
+	// pricing table
+	// ------------------------------------------
+
+	& .table
+		lost-center 100%
+
+		// pricing table item
+		// ------------------------------------------
+
+		&__item
+			lost-column 3/12
+			lost-column-gutter 2rem
+			text-align center
+			color #333
+
+		&__heading
+			min-height 8rem
+			background-color $blue
+			line-height 8rem
+			color $white
+			font-weight 700
+			font-size 2.2rem
+			text-transform capitalize
+			margin-bottom 5rem
+
+		&__currency
+			display inline-block
+			vertical-align top
+			font-size 3.6rem
+			font-weight 700
+			margin-top .4rem
+
+		&__value
+			font-size 6rem
+			font-weight 700
+
+		&__duration
+			font-size 2.4rem
+
+			&::before
+				content '/'
+				margin-right .3rem
+
+		&__body
+			padding 5rem 0
+
+		&__features-item
+			padding 2rem 0
+			font-size 1.4rem
+			text-transform capitalize
+			text-overflow ellipsis
+			white-space nowrap
+
+			& > span
+				font-weight 700
+
+		&__footer
+			padding 2rem 0
+			font-size 1.1rem
+			text-transform uppercase
+
+		&__button
+			display block
+			margin auto
+			width 12rem
+			height 4rem
+			margin-bottom 2.5rem
+			line-height 4rem
+			font-weight 700
+			color #333
+			text-decoration none
+			border 1px solid #333
+			border-radius .4rem
+			transition background-color .2s
+
+			&:hover
+			&:active
+				background-color darken(#f7f7f7, 5%)
+
+		&__free
+			text-transform uppercase
+			color #999
+
+
+// MEDIA QUERIES
+// ------------------------------------------------------------
+
++below(850px)
+
+	.pricing .table__item
+		lost-column 1/2
+		lost-column-gutter 2rem

@@ -1,0 +1,25 @@
+
+mixin header()
+	+b.header#header
+
+		// header center
+		.header__center
+
+			// header topmenu
+			.header__top-menu
+				a.header__top-logo(href="#{jv0}") fe
+				ul.header__top-navigation
+					li.header__top-item: a.header__top-link(href="#header") home
+					li.header__top-item: a.header__top-link(href="#about") about us
+					li.header__top-item: a.header__top-link(href="#work") products
+					li.header__top-item: a.header__top-link(href="#testimonial") testimonials
+					li.header__top-item: a.header__top-link(href="#touch") contact
+
+			// header hero
+			.header__hero
+				h2.header__title get ready
+				a.header__logo(href="#{jv0}") fe
+				p.header__subtitle Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, #[br] aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse, #[br] aliquam ipsum ante
+
+			// header button
+			a.header__button(href="#{jv0}")

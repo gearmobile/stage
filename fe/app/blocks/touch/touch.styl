@@ -1,0 +1,197 @@
+.touch
+	background-color $white
+	position relative
+	padding 16rem 0
+
+	&__center
+		lost-center $width
+
+		& > .heading
+			margin-bottom 17rem
+			padding 0 1rem
+
+	&::before
+		content ''
+		display block
+		width 100%
+		height 16rem
+		position absolute
+		top 0
+		left 0
+		transform-origin 0 0
+		transform skewY(-4.7deg)
+		background linear-gradient(8deg, $white 0%, $white 76%, $blue 76%, $blue 100%)
+
+
+// TOUCH FORM
+// ----------------------------------------------
+
+.form
+	padding 0 1rem
+	lost-utility clearfix
+
+	& p
+		color #666
+		line-height 1.4
+
+	& input
+	& textarea
+		color #ccc
+		text-transform capitalize
+		padding 1.9rem 2rem 1.8rem 2rem
+		border .1rem solid #ccc
+		border-radius .3rem
+		transition border-color .2s
+
+		+placeholder()
+			color #ccc
+			text-transform capitalize
+
+		&:hover
+		&:focus
+			border-color darken(#ccc, 20%)
+
+
+
+	// LEFT PART OF FORM
+	// ----------------------------------------------
+
+	&__left
+		lost-column 7/12
+		lost-column-gutter 2rem
+
+	&__row
+		border none
+		clearfix()
+
+		&:nth-child(-n+2)
+			margin-bottom 1.2rem
+
+		&:nth-child(3)
+			margin-bottom 1.4rem
+
+	&__name
+	&__email
+		width 49%
+		float left
+
+	&__name
+		margin-right 2%
+
+	&__subject
+	&__message
+		width 100%
+
+	&__message
+		min-height 16rem
+
+	&__button
+		width 15rem
+		height 5rem
+		border-radius .4rem
+		border none
+		background-color $blue
+		color $white
+		text-transform capitalize
+		transition background-color .2s
+		font-weight 700
+
+		&:hover
+		&:active
+		&:focus
+			background-color darken($blue, 10%)
+
+
+	// RIGHT PART OF FORM
+	// ----------------------------------------------
+
+	&__right
+		lost-column 5/12 2rem
+
+	&__title
+		color #333
+		font-weight 700
+		text-transform uppercase
+		margin-bottom 2rem
+
+	&__contacts
+		margin-top 4rem
+
+		& > li
+			padding-left 4.5rem
+			color #666
+			line-height 2.5rem
+			position relative
+
+			&:not(:last-child)
+				margin-bottom 2rem
+
+			&::before
+				content ''
+				display block
+				width 2.5rem
+				height 2rem
+				position absolute
+				left 0
+				top 50%
+				transform translateY(-50%)
+				background-position center center
+				background-repeat no-repeat
+				background-size 70%
+
+			&:nth-child(1)::before
+				background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAUCAYAAABSx2cSAAABLUlEQVQ4T6WT4XHCMAyFpWQCOgKMQEdIR4AJiH2eoIwAE+SsZIIyQhkBRigrZAJHPftin+s44Y7qVxzl6ZOeFYQkpJSfALBj5m2UuiDiVWtN8efoD4fDYVsUxRcArNOC0flKRB/+7MRKqbUx5gYAqwWhT4UCTiylvKVtEtHe5saOTgBQBSLiUWt9xrquK0T8johERDLjRQx4ENEGrUHMbCu7KMty0zTNIyMWzKz9+2EY3i35hIjWYRs9Eb3l5hZC7ADAGupj/2/yKzO7Dl9ym5nPbdsenTgzz9J196OpfdgwIcTPk+1yBT3VPgdxemUz6ED9Ix7bX6TH1In4Gd0uRtd197CmaXsLs1/8vs+K5+gpddK2r5ihT6iz4mTfIUedFSulVsYY+xNUqcOxR7+KjsdaL1NuYgAAAABJRU5ErkJggg==')
+				background-size 60%
+
+			&:nth-child(2)::before
+				background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABWElEQVQ4T52U/ZGCMBDF85IKvBK8EmhBSpAKIBkq0BK0Aoalg7OEswQt4WyBCpi9WSdhIoJjzD98ZX/zsu8tUH455ywzbwGstNZF0zS38C3lCtnsnNsx8yEqPBFRkQIKe1HX9WoYhj+l1CoGMHPedd05FYoZdYFxJqI8GVhV1QHAbqGwIKJTCnRRIYCr1jpvmqZPAlZVtQHwOykiInIpoNEUubHWiinr8NIY85Wq7AE4NQbAvm3b48cKZ6LTG2O+P1F5D7asGbc/CvcI9BNzYeYsOmqyOQ/Auq7XwzBcJlPzBPUt+lFK3Ywx+7g1D0BRVpZlprWWGI2jKJlk5mMIubVWYFt/kh7AMZj4BFyC+uIwNQEWB0HU5rPACCpKxny+EaNiESjFvldtdLyXTInaS2CottbKEa1SarNEDMPwFjBAvGEWQBbFS/6ZkoR7f5OAsTpphzxPp+kfqn+XVpFNTeYAAAAASUVORK5CYII=')
+
+			&:nth-child(3)::before
+				background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAATCAYAAABlcqYFAAABRklEQVQ4T72V4XGCQBCFd+8qoAVbMCVoCbEC4OYqkBKkghsWKtAStITQgi1Ywd1mloHMjSFKiIQ/DOPxvt23bxGttUkI4czMa3jxhYitUmqLxpg9Mx9erP8lh4gFZll2QMT9opA0TddKqY+lICGENxTxpSwTq6qqKjvIEqABINoyk01d1xd5EOu01tVfkiaJ8t6bpmla0RT9YfAivnPO3eSHPM8ruc2YExGRkfdkNbz3R2Zu43Td+hapB70DgER7NQF2BYCCiE699Xm/Fgkzl2MRvtx1dQaAzQPQhYi2cfXx+Z8gcl5sM2OVRbCxzsXmJC7oEWQ4dyKiXVSl2CezIq11Ec3wCABi77drCgTu0xKrTEnjJEgkKtWXzrmrtXblvZdP0dME/hYyIWQz7ZqlHL30f50s9XEcmun+T/rtfrZwc13rFvUTTr7YXPfFNeAAAAAASUVORK5CYII=')
+
+			&:nth-child(4)::before
+				background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAVCAYAAABCIB6VAAAB1klEQVQ4T5WV7XGDMAyGJTNBOkI7QjNCOkI7QSIfE6QjJBPkLDJBO0IZIRmhjNAsgO2eOMwZY3LEP430WB+vBMLMKcty1bbtXim18d6/JmaMiI0x5jjnj+kHAVprDQC8zzlF9w0iHo0xnNqOwNvt9lUp9QUAzwugsQkzs44vBnBZls/W2gsArCKDGhHrOGWxa9uWEJES2xF8AGutL1Etb4j4mUsxjoqIfgBgE+4QUQefDqy13nvvD8HAe/9WVVW9pBxEJKUL/WiKolifTqdbByai31DXPtJJt4lInL+898eqqj6TyCf+uNvtNogoKcm5MfNTLtJ74CTjmpnfMHf5KLhXkzR+CE4iPiDiXm5yaYZH7kXca/8v2BZF8XQXTEQyKCKr4eQez4KTUoy0+ABYZkAa2J0uYq01ee8lMjkNM78skVlsk2NgP3HDa8659fl8vj4CT7TcZR10HE9QJ5el4ESu4vbBzN8B3Ik/wOaGJH1Mmuac+wmrABGvxpi12A27Im3UPemJo5TQOSeTOOzquIyjtZksIpAIAOA73m79MIgERzJMsxyBez1KSYaNtaTWudJN/iACSrfdHFwystbqnIqy4ADqx11qOMpA6q+Ukn/e5JcUfP8BiAlBCbnbxZUAAAAASUVORK5CYII=')
+
+			& > a
+				text-decoration none
+				color #666
+
+				&:hover
+				&:active
+					color darken(#666, 30%)
+
+
+// MEDIA QUERIES
+// ------------------------------------------------------------
+
++below(980px)
+
+	.form__left
+	.form__right
+		lost-column 1/1
+
+	.form__left
+		margin-bottom 6rem
+
+	.form__title
+		text-align center
+
+	.form__right > p
+		padding 0 1rem
+
+
++below(600px)
+
+	.form__name
+	.form__email
+		width 100%
+		float none
+		margin 0
+
+	.form__name
+	.form__left > .form__row
+		margin-bottom 2rem
+
+	.form__button
+		display block
+		margin auto

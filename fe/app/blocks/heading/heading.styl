@@ -1,0 +1,68 @@
+.heading
+	lost-center 100%
+
+	&__left
+		lost-column 4/12
+		lost-column-gutter 2rem
+		padding-top 1.2rem
+
+	&__right
+		lost-column 8/12
+		lost-column-gutter 2rem
+		min-height 13rem
+		background transparent url(../images/heading-image.png) 2.5rem 0 no-repeat
+		padding 6rem 0 0 10rem
+
+	&__title
+		text-transform uppercase
+		font-weight 900
+		font-size 3rem
+		color $blue
+		margin-bottom 1rem
+
+		& > span
+			color #f90
+
+	&__subtitle
+		text-transform capitalize
+		color #666
+		font-size 1.8rem
+
+	&__text
+		color #666
+		line-height 2rem
+
+
+// MEDIA QUERIES
+// ------------------------------------------------------------
+
++below(850px)
+
+	.touch__center > .heading
+		margin-bottom 10rem !important
+
+	.heading__left
+	.heading__right
+		lost-column 1/1
+
+	.heading__left
+	.heading__right
+		padding 0 2rem
+		float none
+		text-align center
+
+	.heading__right
+		min-height 0
+		background none
+		//
+
+	.heading__title
+		margin-bottom 1rem
+
+	.heading__subtitle
+		display block
+		margin-bottom 2rem
+
+
++below(600px)
+	padding 0 2rem
