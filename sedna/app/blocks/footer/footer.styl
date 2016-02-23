@@ -1,1 +1,187 @@
+.footer
+	width 100%
 
+
+	// FOOTER TOP STRIPE
+	// -----------------------------------------------------------
+
+	&__top
+		height 6rem
+		background-color $gunmetal
+
+	&__inner
+		lost-center $width
+
+		& > .to-top-button
+			position relative
+			display block
+			float right
+			background-color $charcoal-grey
+			size(6rem)
+
+			&:hover
+			&:active
+			&:focus
+				background-color darken($charcoal-grey, 15%)
+				outline none
+
+			&::before
+				position absolute
+				top 50%
+				left 50%
+				display block
+				content ''
+				background-image url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAyMiAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTEuMDA0IDIuMzM3bDguNzgzIDkuNjZjLjMzMy4zMzcuODguMzM3IDEuMjEzIDAgLjMzMy0uMzM3LjMzMy0uODg1IDAtMS4yMkwxMS42NTQuNDk0Yy0uMTgtLjE4LS40Mi0uMjU2LS42NS0uMjQ0LS4yNC0uMDEtLjQ3OC4wNjYtLjY1OC4yNDVMMSAxMC43NzVjLS4zMzMuMzM3LS4zMzMuODg1IDAgMS4yMjIuMzQyLjMzNy44OC4zMzcgMS4yMTMgMGw4Ljc5LTkuNjYiIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPgo=')
+				background-repeat no-repeat
+				background-position center center
+				transform translate(-50%, -50%)
+				size(2.2rem, 1.3rem)
+
+
+	// FOOTER BOTTOM
+	// -----------------------------------------------------------
+
+	&__bottom
+		padding 12rem 0 16rem
+		width 100%
+		background $charcoal-grey
+		background -moz-linear-gradient(left, $charcoal-grey 0, $charcoal-grey 60%, $charcoal-grey-two 60%, $charcoal-grey-two 100%)
+		background -webkit-linear-gradient(left, $charcoal-grey 0, $charcoal-grey 60%, $charcoal-grey-two 60%, $charcoal-grey-two 100%)
+		background linear-gradient(to right, $charcoal-grey 0, $charcoal-grey 60%, $charcoal-grey-two 60%, $charcoal-grey-two 100%)
+
+
+	// FOOTER PRIMARY
+	// -----------------------------------------------------------
+
+	&__primary
+		padding-right 5em
+		lost-column 8/12
+		lost-column-gutter 20px
+
+
+	// FOOTER MENU
+	// -----------------------------------------------------------
+
+	&__menu
+		margin-bottom 6rem
+		padding-top 2rem
+		border-top .1rem solid $slate
+		lost-utility clearfix
+
+		& > li
+			float left
+
+			& > a
+				margin-right 3em
+				font-size 1.3rem
+				text-decoration none
+				text-transform uppercase
+				color $color-white
+				transition color .2s
+
+				&:hover
+				&:active
+					color $warm-pink
+
+
+	// FOOTER COPYRIGHT
+	// -----------------------------------------------------------
+
+	&__copyright
+	&__designer
+	&__developer
+		margin-bottom 1rem
+		font-family $opensans-light
+		color $color-white
+
+		& > a
+			font-family Arial, 'Helvetica Neue', Helvetica, sans-serif
+			text-decoration none
+			color $color-white
+			transition color .2s
+
+			&:hover
+			&:active
+			&:focus
+				color $warm-pink
+
+
+	// FOOTER ICON HEART
+	// -----------------------------------------------------------
+
+	&__heart
+		display inline-block
+		vertical-align middle
+		background-image url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSIjZmY1Mjc0IiBkPSJNMTEuOCAxQzEwLjExOCAxIDguNjcgMi4zNjggOCAzLjc5NyA3LjMzIDIuMzY3IDUuODg0IDEgNC4yIDEgMS44ODQgMSAwIDIuODgyIDAgNS4yYzAgNC43MTYgNC43NiA1Ljk1MyA4IDEwLjYxNiAzLjA2Ni00LjYzNCA4LTYuMDUgOC0xMC42MTZDMTYgMi44OCAxNC4xMiAxIDExLjggMXoiLz48L3N2Zz4K')
+		background-repeat no-repeat
+		background-position center center
+		background-size 90%
+		size(1.6rem)
+
+
+	// FOOTER SECONDARY
+	// -----------------------------------------------------------
+
+	&__secondary
+		padding-left 3rem
+		lost-column 4/12
+		lost-column-gutter 2rem
+
+
+	// FOOTER TITLE
+	// -----------------------------------------------------------
+
+	&__title
+		margin-top 2rem
+		text-transform uppercase
+		color $color-white
+
+
+	// FOOTER SOCIAL ICONS
+	// -----------------------------------------------------------
+
+	&__socials
+		margin-top 2rem
+
+	&__icon
+		position relative
+		margin-right 1.5rem
+		display inline-block
+		vertical-align middle
+		border-radius .3rem
+		transition background-color .2s
+		size(6rem)
+
+		&--twitter
+			background-color $azure
+
+			&:hover
+			&:active
+			&:focus
+				background-color darken($azure, 10%)
+
+			&::before
+				background-image url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTYgMy41MzhjLS41ODguMjYzLTEuMjIyLjQzOC0xLjg4NC41MTYuNjc4LS40MDYgMS4xOTctMS4wNSAxLjQ0NC0xLjgxNi0uNjM0LjM3NS0xLjMzOC42NS0yLjA4NC43OTdDMTIuODc2IDIuMzk3IDEyLjAyMyAyIDExLjA4IDIgOS4yNjUgMiA3Ljc5NyAzLjQ3IDcuNzk3IDUuMjgzYzAgLjI1Ni4wMjguNTA2LjA4NC43NDctMi43MjgtLjE0LTUuMTQ3LTEuNDQ1LTYuNzY2LTMuNDMyLS4yOC40ODQtLjQ0NCAxLjA1LS40NDQgMS42NSAwIDEuMTM4LjU3OCAyLjE0NCAxLjQ2IDIuNzMtLjU0LS4wMTUtMS4wNDUtLjE2NS0xLjQ5LS40MDh2LjA0YzAgMS41OTIgMS4xMzIgMi45MiAyLjYzNSAzLjIyLS4yNzUuMDc1LS41NjYuMTE2LS44NjYuMTE2LS4yMSAwLS40MTUtLjAyMi0uNjE4LS4wNi40MiAxLjMwNCAxLjYzIDIuMjU0IDMuMDY2IDIuMjgyLTEuMTI1Ljg4LTIuNTM4IDEuNDA2LTQuMDc4IDEuNDA2LS4yNjYgMC0uNTI1LS4wMTYtLjc4NC0uMDQ3IDEuNDU2LjkzNCAzLjE4IDEuNDc1IDUuMDM0IDEuNDc1IDYuMDM3IDAgOS4zNC01LjAwMyA5LjM0LTkuMzQgMC0uMTQ1LS4wMDItLjI4NS0uMDA4LS40MjYuNjQtLjQ2IDEuMTk3LTEuMDM4IDEuNjM3LTEuNjk3eiIvPjwvc3ZnPgo=')
+
+		&--facebook
+			background-color $denim-blue
+
+			&:hover
+			&:active
+			&:focus
+				background-color darken($denim-blue, 10%)
+
+			&::before
+				background-image url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNOS41IDNIMTJWMEg5LjVDNy41NyAwIDYgMS41NyA2IDMuNVY1SDR2M2gydjhoM1Y4aDIuNWwuNS0zSDlWMy41YzAtLjI3LjIzLS41LjUtLjV6Ii8+PC9zdmc+Cg==')
+
+		&::before
+			position absolute
+			top 50%
+			left 50%
+			display block
+			content ''
+			background-repeat no-repeat
+			background-position center center
+			background-size cover
+			transform translate(-50%, -50%)
+			size(2.5rem)

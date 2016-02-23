@@ -1,3 +1,23 @@
 mixin footer()
-	+b.footer&attributes(attributes)
-
+	footer.footer
+		.footer__top
+			.footer__inner
+				a.to-top-button(href="#{jv0}")
+		.footer__bottom
+			.footer__inner
+				.footer__primary
+					ul.footer__menu
+						li: a(href="#{jv0}") features
+						li: a(href="#{jv0}") pricing
+						li: a(href="#{jv0}") sign up
+						li: a(href="#{jv0}") licence
+						li: a(href="#{jv0}") codrops
+						li: a(href="#{jv0}") author
+					p.footer__copyright Copyright &copy; 2015 <a href="/">Sedna</a>
+					p.footer__designer Design with <a href="https://www.sketchapp.com/">Sketch</a> by <a href="http://peterfinlan.com/">Peter Finlan</a>
+					p.footer__developer Developed with <span class="footer__heart"></span> by <a href="http://zencoder.ru/">Zencoder</a>
+				.footer__secondary
+					h3.footer__title share sedna with your friends
+					nav.footer__socials
+						a.footer__icon.footer__icon--twitter(href="#{jv0}")
+						a.footer__icon.footer__icon--facebook(href="#{jv0}")
