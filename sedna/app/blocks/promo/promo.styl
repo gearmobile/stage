@@ -1,7 +1,10 @@
 .promo
+	position relative
 	padding-top 12rem
 	min-height 76rem
 	background-color $silver
+	border-top .1rem solid darken($silver, 10%)
+	border-bottom .1rem solid darken($silver, 10%)
 
 	&__center
 		lost-center $width
@@ -48,3 +51,14 @@
 	&__image
 		position absolute
 		bottom 0
+
+		&--one
+			width 54.9rem
+			height 64.1rem
+			background url(../images/ipad.png) 0 0 no-repeat
+
+		&--two
+			left 42.8rem
+			width 30.4rem
+			height 39.2rem
+			background url(../images/iphone.png) 0 0 no-repeat
