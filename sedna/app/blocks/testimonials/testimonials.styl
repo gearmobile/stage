@@ -1,0 +1,84 @@
+.testimonials
+	background url(../images/bg-testimonials.jpg) 50% 0 no-repeat
+	background-size cover
+
+
+	// SWIPER SLIDER
+	// ------------------------------------------
+
+	& > .swiper-container
+		width 100%
+		height 100%
+
+		& > .swiper-wrapper > .swiper-slide
+			display flex
+			flex-direction column
+			height 100vh
+			justify-content center
+			align-items center
+
+		& > .swiper-pagination
+			bottom 10%
+
+		& > .swiper-pagination > .swiper-pagination-bullet
+			size(1.2rem)
+			background-color $slate-grey-two
+			opacity 1
+			transition background-color .1s, border .1s
+
+		& > .swiper-pagination > .swiper-pagination-bullet-active
+			background-color transparent
+			border .2rem solid $color-white
+
+		& > .swiper-pagination > .swiper-pagination-bullet:hover
+		& > .swiper-pagination > .swiper-pagination-bullet:active
+			background-color $color-white
+
+		& > .swiper-button-next
+			right 15%
+			background-image url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iNDEiIHZpZXdCb3g9IjAgMCAyNCA0MSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTkuODI1IDIwLjQ5TC41MDUgMi45MjdDLS4xNjggMi4yNi0uMTY4IDEuMTY2LjUwNi41Yy42NzUtLjY2NyAxLjc3LS42NjcgMi40NDMgMEwyMy41MSAxOS4xOTNjLjM2LjM2LjUxMy44MzcuNDg3IDEuMjk4LjAyNi40OC0uMTI4Ljk1OC0uNDg3IDEuMzE3TDIuOTQ4IDQwLjVjLS42NzMuNjY3LTEuNzY4LjY2Ny0yLjQ0MiAwLS42NzUtLjY4My0uNjc1LTEuNzYgMC0yLjQyNmwxOS4zMi0xNy41ODMiIGZpbGwtb3BhY2l0eT0iLjUiIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPgo=')
+
+		& > .swiper-button-prev
+			left 15%
+			background-image url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iNDEiIHZpZXdCb3g9IjAgMCAyNCA0MSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNC4xNzUgMjAuNDlsMTkuMzItMTcuNTY0Yy42NzQtLjY2Ni42NzQtMS43NiAwLTIuNDI2LS42NzUtLjY2Ny0xLjc3LS42NjctMi40NDMgMEwuNDkgMTkuMTkzYy0uMzYuMzYtLjUxMy44MzctLjQ4NyAxLjI5OC0uMDI2LjQ4LjEyOC45NTguNDg3IDEuMzE3TDIxLjA1MiA0MC41Yy42NzMuNjY3IDEuNzY4LjY2NyAyLjQ0MiAwIC42NzUtLjY4My42NzUtMS43NiAwLTIuNDI2TDQuMTc0IDIwLjQ5IiBmaWxsLW9wYWNpdHk9Ii41IiBmaWxsPSIjRkZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4K')
+
+
+	// IMAGE
+	// ------------------------------------------
+
+	&__image
+		margin-bottom 3rem
+		border .3rem solid $color-white
+		border-radius 50%
+		size(8rem)
+
+		& > img
+			display block
+			width 100%
+			height auto
+			border-radius 50%
+
+
+	// TITLE
+	// ------------------------------------------
+
+	&__title
+		margin-bottom 3rem
+		font-size 4rem
+		quotes '\0022\00a0' '\00a0\0022'
+		color $color-white
+
+		&::before
+			content open-quote
+
+		&::after
+			content close-quote
+
+	// SUBTITLE
+	// ------------------------------------------
+
+	&__subtitle
+		font-family $opensans-light
+		letter-spacing .2rem
+		text-transform uppercase
+		color $cool-grey
