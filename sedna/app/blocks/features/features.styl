@@ -1,10 +1,15 @@
 .features
-	position relative
 	padding 11rem 0 12rem
 
 	&__center
+		position relative
+		min-height 53.7rem
+
+	&__inner
+		display flex
 		min-height 53.7rem
 		lost-center $width
+		align-items center
 
 	&__content
 		lost-column 6/12
@@ -49,9 +54,24 @@
 
 	&__image
 		position absolute
-		top 50%
-		left 61%
+		top 0
+		right 0
+		visibility hidden
 		background url(../images/features-image.png) center center no-repeat
 		background-size cover
-		transform translateY(-50%)
+		animation-duration .8s
+		animation-iteration-count 1
 		size(74rem, 53.7rem)
+		animation-fill-mode both
+
+
+@keyframes fadeInRight
+	from
+		opacity 0
+		transform translate3d(100%, 0, 0)
+	to
+		visibility visible
+		opacity 1
+		transform none
+
+

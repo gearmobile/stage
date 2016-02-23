@@ -28,6 +28,32 @@ $(() => {
 	});
 
 
+	// FEATURES IMAGE SLIDE
+	// -------------------------------------------------
+	const $featuresBlock = $('.features');
+	const $featuresImage = $featuresBlock.find('.features__image');
+
+	$(window).on('scroll', function () {
+		if ( $(this).scrollTop() > $featuresBlock.offset().top - ( $(this).height() / 3 ) * 2 ) {
+			$featuresImage.css('animation-name', 'fadeInRight');
+		}
+	});
+
+
+	// PROMO IMAGES SLIDE
+	// -------------------------------------------------
+	const $promoBlock = $('.promo');
+	const $promoImageOne = $promoBlock.find('.promo__image--one');
+	const $promoImageTwo = $promoBlock.find('.promo__image--two');
+
+	$(window).on('scroll', function () {
+		if ( $(this).scrollTop() > $promoBlock.offset().top - ( $(this).height() / 3 ) * 2 ) {
+			$promoImageOne.css('animation-name', 'fadeInUp');
+			$promoImageTwo.css('animation-name', 'fadeInUp');
+		}
+	});
+
+
 	// MAGNIFIC POPUP
 	// -------------------------------------------------
 	$('.news__inner').magnificPopup({

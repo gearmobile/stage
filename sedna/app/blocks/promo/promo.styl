@@ -41,7 +41,6 @@
 				left 0
 				size(4rem)
 
-
 			& > h3
 				margin-bottom 1rem
 				font-size 1.5rem
@@ -51,14 +50,30 @@
 	&__image
 		position absolute
 		bottom 0
+		visibility hidden
+		animation-iteration-count 1
+		animation-fill-mode both
 
 		&--one
+			left 0
 			width 54.9rem
 			height 64.1rem
 			background url(../images/ipad.png) 0 0 no-repeat
+			animation-duration 1s
 
 		&--two
 			left 42.8rem
 			width 30.4rem
 			height 39.2rem
 			background url(../images/iphone.png) 0 0 no-repeat
+			animation-duration 2s
+
+
+@keyframes fadeInUp
+	from
+		opacity 0
+		transform translate3d(0, 100%, 0)
+	to
+		visibility visible
+		opacity 1
+		transform none
