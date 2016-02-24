@@ -31,9 +31,15 @@
 
 	&__logo
 		margin-right 7rem
-		font-family $opensans-bold
-		font-size 2.4rem
-		color $grey-blue-two
+		display flex
+		align-items center
+
+		& > a
+			squish-text()
+			font-family $opensans-bold
+			font-size 2.4rem
+			color $grey-blue-two
+			letter-spacing .2rem
 
 	&__navigation
 		display flex

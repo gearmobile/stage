@@ -19,11 +19,16 @@
 		position relative
 		margin-bottom 3.4rem
 		display block
+		overflow hidden
 
 		& > img
 			display block
 			width 100%
 			height auto
+			transition transform .5s
+
+		&:hover > img
+			transform scale(1.1)
 
 		&::before
 			position absolute
@@ -40,10 +45,14 @@
 		&:active::before
 			background-color rgba($color-white, .01)
 
+	&__caption
+		display flex
+		flex-direction column
+
 	&__title
 		margin-bottom 2rem
 		font-family $opensans-bold
-		font-size 1.2rem
+		font-size 1.8rem
 		text-transform uppercase
 		color $cool-grey
 
@@ -55,6 +64,10 @@
 		&:hover
 		&:active
 			color lighten($slate-grey, 20%)
+
+		&::after
+			content ' >'
+			font-size 1.1rem
 
 	&__button
 		padding 1.2rem 3rem

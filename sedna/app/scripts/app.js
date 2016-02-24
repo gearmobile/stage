@@ -71,4 +71,12 @@ $(() => {
 		prevButton: '.swiper-button-prev'
 	});
 
+
+	// BACK TO TOP BUTTON
+	// -------------------------------------------------
+	const $toTopButton = $('.to-top-button');
+	$toTopButton.on('click', function () {
+		$('html, body').stop().animate({scrollTop: 0}, 2000);
+	});
+
 });

@@ -4,19 +4,19 @@ mixin news()
 			li.news__column
 				a.news__image(href="../assets/images/gallery/large/gallery-image-large-1.jpg")
 					img(src="../assets/images/gallery/small/gallery-image-small-1.jpg", alt="News Image")
-				figcaption
-					h3.news__title(data-hint="More about our products") product
+				.news__caption
+					h3.news__title.hint--top-right.hint--rounded.hint--bounce(data-hint="More about our products") product
 					a.news__link(href="#{jv0}") Getting started with Sedna
 			li.news__column
 				a.news__image(href="../assets/images/gallery/large/gallery-image-large-2.jpg")
 					img(src="../assets/images/gallery/small/gallery-image-small-2.jpg", alt="News Image")
-				figcaption
-					h3.news__title(data-hint="More about our technology") technology
+				.news__caption
+					h3.news__title.hint--bottom-right.hint--rounded.hint--bounce(data-hint="More about our technology") technology
 					a.news__link(href="#{jv0}") Why IE8 support is deminishing
 			li.news__column
 				a.news__image(href="../assets/images/gallery/large/gallery-image-large-3.jpg")
 					img(src="../assets/images/gallery/small/gallery-image-small-3.jpg", alt="News Image")
-				figcaption
-					h3.news__title(data-hint="More about our tutorial") tutorial
+				.news__caption
+					h3.news__title.hint--bottom-left.hint--rounded.hint--bounce(data-hint="More about our tutorial") tutorial
 					a.news__link(href="#{jv0}") Sedna tutorial: How to begin your
 		a.news__button(href="#{jv0}") more news
