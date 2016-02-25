@@ -49,7 +49,7 @@
 
 	&__bottom
 		padding 12rem 0 16rem
-		width 100%
+		lost-center 100%
 		background $charcoal-grey
 		background -moz-linear-gradient(left, $charcoal-grey 0, $charcoal-grey 60%, $charcoal-grey-two 60%, $charcoal-grey-two 100%)
 		background -webkit-linear-gradient(left, $charcoal-grey 0, $charcoal-grey 60%, $charcoal-grey-two 60%, $charcoal-grey-two 100%)
@@ -61,11 +61,18 @@
 			background -webkit-linear-gradient(left, $charcoal-grey 0, $charcoal-grey 50%, $charcoal-grey-two 50%, $charcoal-grey-two 100%)
 			background linear-gradient(to right, $charcoal-grey 0, $charcoal-grey 50%, $charcoal-grey-two 50%, $charcoal-grey-two 100%)
 
-	// &__center
-	// 	lost-center $desktop-width
+	&__center
+		lost-center $width-desktop
+		padding 0 1rem
 
-	// 	+below($bp1)
-	// 		lost-center $mobile-width
+		+below($bp1)
+			lost-center $width-mobile
+
+		+below($bp2)
+			lost-center 100%
+
+		+below($bp3)
+			text-align center
 
 
 
@@ -78,7 +85,7 @@
 		lost-column-gutter 2rem
 
 		+below($bp1)
-			padding-left 0
+			padding-right 0
 			lost-column 1/1
 			lost-column-gutter 0
 			margin-bottom 4rem
@@ -105,6 +112,9 @@
 			&:hover
 			&:active
 				color $warm-pink
+
+		+below($bp3)
+			display none
 
 
 	// FOOTER COPYRIGHT
