@@ -10,10 +10,13 @@
 		background-color $gunmetal
 
 	&__inner
+		display flex
+		justify-content flex-end
 		lost-center $width-desktop
 
 		+below($bp1)
 			width $width-mobile
+			justify-content center
 
 		& > .to-top-button
 			position relative
@@ -52,6 +55,19 @@
 		background -webkit-linear-gradient(left, $charcoal-grey 0, $charcoal-grey 60%, $charcoal-grey-two 60%, $charcoal-grey-two 100%)
 		background linear-gradient(to right, $charcoal-grey 0, $charcoal-grey 60%, $charcoal-grey-two 60%, $charcoal-grey-two 100%)
 
+		+below($bp1)
+			background $charcoal-grey
+			background -moz-linear-gradient(left, $charcoal-grey 0, $charcoal-grey 50%, $charcoal-grey-two 50%, $charcoal-grey-two 100%)
+			background -webkit-linear-gradient(left, $charcoal-grey 0, $charcoal-grey 50%, $charcoal-grey-two 50%, $charcoal-grey-two 100%)
+			background linear-gradient(to right, $charcoal-grey 0, $charcoal-grey 50%, $charcoal-grey-two 50%, $charcoal-grey-two 100%)
+
+	// &__center
+	// 	lost-center $desktop-width
+
+	// 	+below($bp1)
+	// 		lost-center $mobile-width
+
+
 
 	// FOOTER PRIMARY
 	// -----------------------------------------------------------
@@ -73,24 +89,22 @@
 
 	&__menu
 		margin-bottom 6rem
-		padding-top 2rem
-		border-top .1rem solid $slate
-		lost-utility clearfix
+		padding 2rem 1rem 0
+		box-shadow inset 0 .1rem 0 $slate
+		display flex
+		justify-content space-between
+		align-items center
 
-		& > li
-			float left
+		& > a
+			font-size 1.3rem
+			text-decoration none
+			color $color-white
+			text-transform uppercase
+			transition color .2s
 
-			& > a
-				margin-right 3em
-				font-size 1.3rem
-				text-decoration none
-				text-transform uppercase
-				color $color-white
-				transition color .2s
-
-				&:hover
-				&:active
-					color $warm-pink
+			&:hover
+			&:active
+				color $warm-pink
 
 
 	// FOOTER COPYRIGHT
