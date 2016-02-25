@@ -5,13 +5,23 @@
 	&__center
 		margin auto
 		padding 0 1rem
-		lost-center $width
+		lost-center $width-desktop
+
+		+below($bp1)
+			lost-center $width-mobile
 
 	&__column
 		position relative
 		padding-left 7rem
 		lost-column 4/12
 		lost-column-gutter 2rem
+
+		+below($bp1)
+			lost-column 1/1
+			lost-column-gutter 0
+
+			&:not(:last-child)
+				margin-bottom 6rem
 
 		& > .icon
 			position absolute

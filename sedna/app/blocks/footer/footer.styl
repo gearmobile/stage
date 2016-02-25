@@ -10,7 +10,10 @@
 		background-color $gunmetal
 
 	&__inner
-		lost-center $width
+		lost-center $width-desktop
+
+		+below($bp1)
+			width $width-mobile
 
 		& > .to-top-button
 			position relative
@@ -56,7 +59,13 @@
 	&__primary
 		padding-right 5em
 		lost-column 8/12
-		lost-column-gutter 20px
+		lost-column-gutter 2rem
+
+		+below($bp1)
+			padding-left 0
+			lost-column 1/1
+			lost-column-gutter 0
+			margin-bottom 4rem
 
 
 	// FOOTER MENU
@@ -126,6 +135,11 @@
 		padding-left 3rem
 		lost-column 4/12
 		lost-column-gutter 2rem
+
+		+below($bp1)
+			padding-left 0
+			lost-column 1/1
+			lost-column-gutter 0
 
 
 	// FOOTER TITLE

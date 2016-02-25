@@ -1,5 +1,5 @@
 .features
-	padding 11rem 0 12rem
+	padding 12rem 0 0
 
 	&__center
 		position relative
@@ -8,12 +8,20 @@
 	&__inner
 		display flex
 		min-height 53.7rem
-		lost-center $width
+		lost-center $width-desktop
 		align-items center
+		padding 0 1rem
+
+		+below($bp1)
+			lost-center $width-mobile
 
 	&__content
 		lost-column 6/12
 		lost-column-gutter 2rem
+
+		+below($bp1)
+			lost-column 1/1
+			lost-column-gutter 0
 
 		& p
 			font-family $opensans-light
@@ -55,7 +63,7 @@
 	&__image
 		position absolute
 		top 0
-		right 0
+		left 46%
 		visibility hidden
 		background url(../images/features-image.png) center center no-repeat
 		background-size cover
@@ -63,6 +71,9 @@
 		animation-iteration-count 1
 		size(74rem, 53.7rem)
 		animation-fill-mode both
+
+		+below($bp1)
+			display none
 
 
 @keyframes fadeInRight

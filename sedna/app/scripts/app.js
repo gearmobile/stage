@@ -26,10 +26,25 @@ $(() => {
 
 	$headerFixedLinks.on('click', function () {
 		const $targetID = $(this).attr('href').replace('#', '');
+		$(this).addClass('is-active').siblings().removeClass('is-active');
 		$indexBlocks.each( function () {
 			if ( $(this).attr('id') === $targetID ) {
-				console.log($headerFixed.height());
-				// $(this).css('padding-top', $headerFixed.height() + 1 ).siblings().css('padding-top', 0);
+				$(this).css('padding-top', $headerFixed.outerHeight() + 20 );
+			}
+		});
+	});
+
+	$(function () {
+		$('a[href*="#"]:not([href="#"])').on('click', function () {
+			if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+				let target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
 			}
 		});
 	});

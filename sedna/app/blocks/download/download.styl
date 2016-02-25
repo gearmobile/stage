@@ -1,4 +1,5 @@
 .download
+	padding 12rem 0 0
 	background-color $color-white
 
 	// DOWNLOAD HEAD
@@ -78,7 +79,6 @@
 	// -------------------------------------------------
 	& .content
 		margin-top 20rem
-		padding-bottom 10rem
 
 		& p
 			font-family $opensans-light
@@ -100,6 +100,9 @@
 		&__inner
 			lost-center $width
 
+			+below($bp1)
+				width $width-mobile
+
 		&__center
 			lost-utility clearfix
 
@@ -108,12 +111,25 @@
 			lost-column 6/12
 			lost-column-gutter 2rem
 
+			+below($bp1)
+				width 100%
+				lost-column 1/1
+				lost-column-gutter 0
+
 			&:first-child
 				padding-right 7rem
 				border-right .1rem solid $silver
 
+				+below($bp1)
+					padding-right 0
+					border-right none
+					margin-bottom 6rem
+
 			&:last-child
 				padding-left 7rem
+
+				+below($bp1)
+					padding-left 0
 
 
 // SKETCH LOGO ANIME
