@@ -10,13 +10,28 @@ $(() => {
 
 	// HEADER FIXED
 	// ------------------------------------------------
-	const $headerFixed = $('.header-fixed__center');
+	const $headerFixed = $('.header-fixed');
+	const $headerFixedCenter = $headerFixed.find('.header-fixed__center');
+	const $headerFixedNavigation = $headerFixed.find('.header-fixed__navigation');
+	const $headerFixedLinks = $headerFixedNavigation.find('a');
+	const $indexBlocks = $('.index > div');
+
 	$(window).on('scroll', function () {
 		if ( $(this).scrollTop() > 0 ) {
-			$headerFixed.addClass('header-fixed__center--active');
+			$headerFixedCenter.addClass('header-fixed__center--active');
 		} else {
-			$headerFixed.removeClass('header-fixed__center--active');
+			$headerFixedCenter.removeClass('header-fixed__center--active');
 		}
+	});
+
+	$headerFixedLinks.on('click', function () {
+		const $targetID = $(this).attr('href').replace('#', '');
+		$indexBlocks.each( function () {
+			if ( $(this).attr('id') === $targetID ) {
+				console.log($headerFixed.height());
+				// $(this).css('padding-top', $headerFixed.height() + 1 ).siblings().css('padding-top', 0);
+			}
+		});
 	});
 
 
