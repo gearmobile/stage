@@ -48,7 +48,7 @@ rules:
     generator-star-spacing: 0
     guard-for-in: 1
     handle-callback-err: 0
-    id-length: [2, {"min": 1, "max": 20}]
+    id-length: [0, {"min": 1, "max": 20}]
     indent: [2, "tab"]
     key-spacing: [2, { "beforeColon": false, "afterColon": true }]
     lines-around-comment: 0
@@ -94,7 +94,7 @@ rules:
     no-floating-decimal: 1
     no-func-assign: 2
     no-implied-eval: 2
-    no-invalid-this: 2
+    no-invalid-this: 0
     no-inline-comments: 0
     no-inner-declarations: [2, "functions"]
     no-invalid-regexp: 2

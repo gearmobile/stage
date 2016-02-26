@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import Chart from 'Chart.js';
+import Chart from 'chart.js';
 import swiper from 'swiper';
 import GoogleMapsLoader from 'google-maps';
 import 'jquery-smooth-scroll';
@@ -10,7 +10,7 @@ $(() => {
 	// ------------------------------------
 
 	const toTopButton = document.createElement('a');
-	toTopButton.href ='javascript:void(0)';
+	toTopButton.href = 'javascript:void(0)';
 	toTopButton.className = 'top-button';
 	toTopButton.classList.add('animated');
 	toTopButton.classList.add('fadeOutRight');
@@ -141,7 +141,7 @@ $(() => {
 		const bramptonCoords = new google.maps.LatLng(51.5220535, 0.041928900000016256);
 		const zoomValue = 15;
 
-		const isIE11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
+		const isIE11 = navigator.userAgent.toLowerCase().indexOf('trident') > -1;
 		const markerPath = ( isIE11 ) ? 'assets/images/icon-location.png' : 'assets/images/icon-location.svg';
 
 		const bramptonMapStyles = [
@@ -224,7 +224,7 @@ $(() => {
 			streetViewControl: false,
 			scrollwheel: false,
 			disableDoubleClickZoom: true,
-			draggable : true,
+			draggable: true,
 			verviewMapControl: true,
 			overviewMapControlOptions: {
 				opened: false
@@ -253,7 +253,7 @@ $(() => {
 		// MAKE GOOGLE MAP RESPONSIVE
 		// --------------------------------------------------------------------
 
-		var bramptonMapCenter = bramptonMap.getCenter(); // returns the position displayed at the center of the map
+		const bramptonMapCenter = bramptonMap.getCenter(); // returns the position displayed at the center of the map
 
 		// CENTER GOOGLE MAPS ON BROWSER RESIZE (RESPONSIVE)
 		google.maps.event.addDomListener(window, 'resize', function () {
