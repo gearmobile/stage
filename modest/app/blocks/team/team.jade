@@ -1,0 +1,8 @@
+include ../title/title
+include ../team-card/team-card
+
+mixin team()
+	.team#team
+		.team__center
+			+title('meet the team')
+			+team-card()

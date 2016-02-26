@@ -1,0 +1,110 @@
+// TEAM CAR WRAPPER
+// -----------------------------------
+
+.team-card__list
+	lost-center 100%
+
+
+// TEAM CAR ITEM
+// -----------------------------------
+
+.team-card__item
+	lost-column 3/12
+	lost-column-gutter 3rem
+	display flex
+	flex-direction column
+
+	&:hover .team-card__overlay
+		opacity 1
+
+	&:hover .team-card__content
+		background-color #3a454d
+
+	&:hover .team-card__name
+	&:hover .team-card__headline
+		color $color-white
+
+
+// TEAM CAR OVERLAY
+// -----------------------------------
+
+.team-card__overlay
+	display flex
+	justify-content center
+	align-items center
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+	background-color rgba($color-white, .4)
+	opacity 0
+	transition opacity .3s
+
+
+// TEAM CAR CONTACTS
+// -----------------------------------
+
+.team-card__contacts
+	display flex
+
+	& > a
+		display block
+		display flex
+		justify-content center
+		align-items center
+		size(5rem)
+		background-color #3a454d
+		transition background-color .3s
+
+		&:not(:last-child)
+			margin-right .1rem
+
+		&:hover
+		&:active
+			background-color #4e5a62
+
+		& > .icon
+			size(1.6rem)
+
+
+// TEAM CAR IMAGE
+// -----------------------------------
+
+.team-card__image
+	height 80%
+	position relative
+
+	& img
+		display block
+		width 100%
+		height auto
+
+
+// TEAM CAR CONTENT
+// -----------------------------------
+
+.team-card__content
+	height 20%
+	background-color #e1e6ea
+	padding 2rem
+	transition background-color .3s
+
+
+// TEAM CAR NAME
+// -----------------------------------
+
+.team-card__name
+	margin-bottom .5rem
+	text-transform uppercase
+	color #292f36
+	font-size 1rem
+
+
+// TEAM CAR HEADLINE
+// -----------------------------------
+
+.team-card__headline
+	text-transform capitalize
+	color #8d8f92
+	font-size .9rem

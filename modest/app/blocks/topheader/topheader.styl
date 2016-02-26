@@ -1,0 +1,62 @@
+.topheader
+	padding 2rem 0
+	background-color #1d2126
+	position absolute
+	left 0
+	top 0
+	width 100%
+	z-index 9
+	transition all .2s
+
+	&--fixed
+		position fixed
+		padding 1.4rem 0
+		z-index 10
+
+	&__content
+		width $width
+		margin auto
+		padding 0 1rem
+		display flex
+		justify-content space-between
+		align-items center
+
+	&__logo
+		size(10rem, 2rem)
+		background url(../images/modest-logo.png) 50% 50% no-repeat
+		background-size 99%
+
+		& > a
+			display block
+			width inherit
+			height inherit
+			squish-text()
+
+	&__menu
+		display flex
+		justify-content space-between
+
+	&__link
+		display block
+		margin 0 1rem
+		padding .8rem 1.2rem
+		text-transform uppercase
+		font-family $sans-semibold
+		font-size .875rem
+		color $color-grey
+		border .1rem solid transparent
+		border-radius .1rem
+
+		&:first-child
+			margin-left 0
+
+		&:last-child
+			margin-right 0
+
+		&:hover
+			border-color $color-grey
+
+		&:active
+		&--active
+			color $color-blue
+			border-color $color-blue

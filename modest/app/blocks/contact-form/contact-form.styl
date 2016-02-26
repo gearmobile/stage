@@ -1,0 +1,56 @@
+.contact-form
+	background-color $color-white
+	padding 3rem
+	position absolute
+	bottom 0
+	left 0
+	width 100%
+
+	& input
+	& textarea
+		display block
+		border none
+		width 100%
+		background-color #eaeef1
+		font-size 1.4rem
+		color #8d8f92
+		padding 1.2rem
+		transition background-color .2s
+
+		&:hover
+			background-color darken(#eaeef1, 2%)
+
+		&:focus
+		&:active
+			background-color darken(#eaeef1, 5%)
+
+	& textarea
+		min-height 16rem
+
+	& label
+		display inline-block
+		vertical-align middle
+		text-transform uppercase
+		text-indent .6rem
+		color #8d8f92
+		font-family $quattro-bold
+		font-size .875rem
+		margin-bottom 1rem
+
+	&__row
+		border none
+		lost-center 100%
+
+		&:not(:last-child)
+			margin-bottom 3rem
+
+	&__half
+		lost-column 6/12
+		lost-column-gutter 1rem
+		position relative
+
+		& > .contact-form
+			position absolute
+			bottom 0
+			right 0
+			z-index 1

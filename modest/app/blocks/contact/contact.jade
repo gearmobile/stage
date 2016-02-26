@@ -1,0 +1,18 @@
+include ../title/title
+include ../contact-form/contact-form
+include ../button/button
+
+mixin contact()
+	.contact#contact
+		header.contact__header
+			.contact__center
+				+title('stay in touch')
+		main.contact__map#ahmedabadMap
+		footer.contact__footer
+			.contact__center
+				.contact__half
+					h3.contact__title contact information
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nihil quo aspernatur a minima amet, fugiat explicabo adipisci numquam sunt labore quos libero ipsam illo cumque! Deleniti nemo autem explicabo! Eaque dolorum suscipit voluptas cupiditate quibusdam aspernatur, vel officia, non voluptate molestias consequatur animi hic ducimus, reiciendis accusamus ipsam ullam.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi saepe #[strong nobis reprehenderit autem] qui voluptas hic enim dicta omnis non.
+				.contact__half
+					+contact-form()

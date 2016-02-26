@@ -1,0 +1,60 @@
+// LIST ITEM
+// ------------------------------------------
+
+.list-component__item
+	display flex
+	justify-content space-between
+
+	&:not(:last-child)
+		margin-bottom 2rem
+
+
+// LIST CONTENT
+// -------------------------------------------
+
+.list-component__content p
+	color #8d8f92
+	font-size 1rem
+	line-height 1.6
+
+
+// LIST IMAGE
+// -------------------------------------------
+
+.list-component__image
+	width 5rem
+	margin-right 1rem
+
+	& > a
+		display block
+		display flex
+		justify-content center
+		align-items center
+		size(5rem)
+		font-family $quattro-bold
+		font-size 1.25rem
+		color $color-white
+		background-color $color-blue
+		transition background-color .2s
+
+		&:hover
+		&:active
+			background-color darken($color-blue, 10%)
+
+
+// LIST TITLE
+// -------------------------------------------
+
+.list-component__title
+	margin-bottom 1rem
+
+	& > a
+		text-transform uppercase
+		color #292f36
+		font-family $quattro-bold
+		font-size 1.125rem
+		transition color .2s
+
+		&:hover
+		&:active
+			color lighten(#292f36, 20%)

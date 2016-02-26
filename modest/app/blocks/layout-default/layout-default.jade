@@ -1,0 +1,24 @@
+- var pageScripts = pageScripts || [[], [], []];
+
+include ../../../node_modules/bemto.jade/bemto.jade
+include ../header/header
+include ../topheader/topheader
+include ../page/page
+include ../footer/footer
+include ../button-to-top/button-to-top
+include ../scripts/scripts
+
++script([], ['app.min.js'])
+
+doctype html
+html(lang='ru')
+	include ../head/head
+	body
+		+page()
+			+topheader()
+			+header()
+			block content
+			+footer()
+			+button-to-top()
+
+		+scripts()

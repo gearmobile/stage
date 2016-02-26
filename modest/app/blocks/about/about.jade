@@ -1,0 +1,16 @@
+include ../title/title
+include ../list-component/list-component
+include ../list-social-icons/list-social-icons
+
+mixin about()
+	.about#about
+		.about__center
+			+title('we are modest')
+			.about__content
+				.about__primary
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid fuga, ipsam quas odit! Eum totam incidunt veritatis distinctio voluptatibus ea quos reprehenderit velit quas consectetur nihil perspiciatis, vero eaque animi nobis sequi saepe ex voluptates ullam laudantium quasi. Enim expedita incidunt voluptas, tempore optio obcaecati dolorum impedit nemo minima voluptatum.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nulla #[strong delectus optio itaque consequatur cupiditate sint], aliquam. Autem, tempore officia nobis natus voluptatum magni, reiciendis. Earum similique dolore id non consectetur quod possimus qui, veniam, dolores sunt nihil cum molestiae, inventore molestias quibusdam quam esse quos facere perspiciatis illo beatae.
+					+list-social-icons()
+				.about__secondary
+					+list-component()
+

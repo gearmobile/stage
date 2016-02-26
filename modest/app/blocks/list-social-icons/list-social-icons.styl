@@ -1,0 +1,25 @@
+.list-social-icons
+	display flex
+	margin-top 5rem
+
+	& > a
+		display block
+		size(6rem)
+		display flex
+		justify-content center
+		align-items center
+		background-color #c8cdd0
+		transition background-color .2s
+
+		&:not(:last-child)
+			margin-right .1rem
+
+		&:hover
+		&:active
+			background-color #d0d5d9
+
+		// SVG ICON SIZE
+		// ------------------------------------
+
+		& > .icon
+			size(2rem)
