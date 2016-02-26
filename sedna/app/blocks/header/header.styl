@@ -155,3 +155,22 @@
 		transform translate(-50%, -50%)
 	60%
 		transform translate(-50%, 50%)
+
+.header-mobile
+	position fixed
+	width 100%
+	top 0
+	right 0
+	z-index 5
+	background-color #789
+	display none
+
+	+below($bp1)
+		display block
+
+	& > a
+		display block
+		padding 2rem 0
+		text-align center
+		text-transform capitalize
+		color $color-white

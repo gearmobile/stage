@@ -1,6 +1,6 @@
 .header-fixed
 	position fixed
-	z-index 99
+	z-index 4
 	top 0
 	left 0
 	width 100%
@@ -20,7 +20,7 @@
 			transition color .2s
 
 		&--active
-			padding 1.8rem 10rem
+			padding 1.8rem 4rem
 			width 100%
 			background-color darken($charcoal-grey, 20%)
 			box-shadow 0 .1rem .6rem rgba($color-black, .3)
@@ -93,15 +93,17 @@
 	& .mobile-button
 		display none
 		size(4rem)
-		position relative
-		background-color $charcoal-grey-two
+		position absolute
+		background-color $slate
 		border-radius 5%
+		z-index 7
 
 		+below($bp1)
 			display block
 
 		&:hover > .stripe
 			background-color rgba($color-white, 45%)
+			box-shadow 0 .9rem 0 rgba($color-white, 45%), 0 -.9rem 0 rgba($color-white, 45%)
 
 		& > .stripe
 			position absolute
@@ -109,7 +111,8 @@
 			left 50%
 			width 70%
 			height 10%
-			background-color rgba($color-white, 10%)
+			background-color rgba($color-white, 30%)
 			border-radius 50em
-			transition background-color .2s
+			transition background-color .2s, box-shadow .2s
 			transform translate(-50%, -50%)
+			box-shadow 0 .8rem 0 rgba($color-white, 30%), 0 -.8rem 0 rgba($color-white, 30%)
