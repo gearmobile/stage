@@ -1,0 +1,65 @@
+// MOBILE MENU NAVIGATION
+// -----------------------------------------------
+
+.header-mobile__nav
+	position fixed
+	top 0
+	left 0
+	opacity 0
+	transform translate(0, -100%)
+	transition transform .8s, opacity .8s
+	z-index 2
+	width 100%
+
+	& > a
+		padding 4rem 0
+		display block
+		text-align center
+		text-transform capitalize
+		color $color-white
+		font-family $opensans-bold
+		font-size 2rem
+		background-color darken($slate, 20%)
+		transition background-color .2s
+		border-bottom .1rem solid darken($slate, 40%)
+
+		&:hover
+			background-color darken($slate, 40%)
+
+	&--active
+		transform translate(0, 0)
+		opacity 1
+
+
+
+// MOBILE MENU BUTTON
+// ----------------------------------------------------------
+
+.header-mobile__button
+	position fixed
+	top 2%
+	right 2%
+	display none
+	background-color $slate
+	border-radius 8%
+	size(4rem)
+	z-index 3
+
+	+below($bp1)
+		display block
+
+	&:hover > .stripe
+		background-color rgba($color-white, 45%)
+		box-shadow 0 .9rem 0 rgba($color-white, 45%), 0 -.9rem 0 rgba($color-white, 45%)
+
+	& > .stripe
+		position absolute
+		top 50%
+		left 50%
+		width 70%
+		height 10%
+		background-color rgba($color-white, 30%)
+		border-radius 50em
+		box-shadow 0 .8rem 0 rgba($color-white, 30%), 0 -.8rem 0 rgba($color-white, 30%)
+		transition background-color .2s, box-shadow .2s
+		transform translate(-50%, -50%)

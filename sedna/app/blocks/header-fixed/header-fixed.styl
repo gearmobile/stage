@@ -5,6 +5,9 @@
 	left 0
 	width 100%
 
+	+below($bp1)
+		display none
+
 	&__center
 		margin auto
 		padding 4rem 1rem 3rem
@@ -29,27 +32,10 @@
 		display flex
 		justify-content space-between
 
-	&__logo
-		margin-right 7rem
-		display flex
-		align-items center
-
-		+below($bp1)
-			margin-right 0
-
-		& > a
-			font-family $opensans-bold
-			font-size 2.4rem
-			letter-spacing .2rem
-			color $grey-blue-two
-
 	&__navigation
 		display flex
 		justify-content space-between
 		align-items center
-
-		+below($bp1)
-			display none
 
 		& > a
 			margin 0 2rem
@@ -65,9 +51,6 @@
 		display flex
 		justify-content center
 		align-items center
-
-		+below($bp1)
-			display none
 
 		& a
 			padding .8rem 2.6rem .9rem
@@ -89,29 +72,3 @@
 			&:active
 				color $warm-pink
 				border-color $warm-pink
-
-	& .mobile-button
-		position relative
-		display none
-		background-color $slate
-		border-radius 5%
-		size(4rem)
-
-		+below($bp1)
-			display block
-
-		&:hover > .stripe
-			background-color rgba($color-white, 45%)
-			box-shadow 0 .9rem 0 rgba($color-white, 45%), 0 -.9rem 0 rgba($color-white, 45%)
-
-		& > .stripe
-			position absolute
-			top 50%
-			left 50%
-			width 70%
-			height 10%
-			background-color rgba($color-white, 30%)
-			border-radius 50em
-			box-shadow 0 .8rem 0 rgba($color-white, 30%), 0 -.8rem 0 rgba($color-white, 30%)
-			transition background-color .2s, box-shadow .2s
-			transform translate(-50%, -50%)

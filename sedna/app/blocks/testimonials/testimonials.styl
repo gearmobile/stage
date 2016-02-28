@@ -16,6 +16,7 @@
 			height 100vh
 			justify-content center
 			align-items center
+			text-align center
 
 		& > .swiper-pagination
 			bottom 10%
@@ -68,7 +69,7 @@
 	// ------------------------------------------
 
 	&__title
-		margin-bottom 3rem
+		margin 0 1rem 3rem
 		font-size 4rem
 		quotes '\0022\00a0' '\00a0\0022'
 		color $color-white
@@ -79,6 +80,12 @@
 		&::after
 			content close-quote
 
+		+below($bp2)
+			font-size 3rem
+
+		+below($bp4)
+			font-size 2rem
+
 	// SUBTITLE
 	// ------------------------------------------
 
@@ -87,3 +94,11 @@
 		letter-spacing .2rem
 		text-transform uppercase
 		color $cool-grey
+		margin 0 1rem
+		line-height 1.6
+
+		+below($bp2)
+			font-size 1.4rem
+
+		+below($bp4)
+			font-size 1.1rem

@@ -7,9 +7,30 @@ $(() => {
 
 	svg4everybody();
 
+	// HEADER MOBILE
+	// ------------------------------------------------
+
+	const $headerMobileNav = $('.header-mobile__nav');
+	const $headerMobileButton = $('.header-mobile__button');
+	const $headerMobileLinks = $headerMobileNav.find('a');
+
+	// SHOW \ HIDE MOBILE MENU
+
+	$headerMobileButton.on('click', function (event) {
+		event.preventDefault();
+		$headerMobileNav.toggleClass('header-mobile__nav--active');
+	});
+
+	// HIDE MOBILE MENU
+
+	$headerMobileLinks.on('click', function () {
+		$(this).parent().removeClass('header-mobile__nav--active');
+	});
+
 
 	// HEADER FIXED
 	// ------------------------------------------------
+
 	const $headerFixed = $('.header-fixed');
 	const $headerFixedCenter = $headerFixed.find('.header-fixed__center');
 	const $headerFixedNavigation = $headerFixed.find('.header-fixed__navigation');
@@ -24,6 +45,10 @@ $(() => {
 		}
 	});
 
+
+	// TOGGLE TOP MENU LINKS ACTIVE
+	// --------------------------------------------------
+
 	$headerFixedLinks.on('click', function () {
 		const $targetID = $(this).attr('href').replace('#', '');
 		$(this).addClass('is-active').siblings().removeClass('is-active');
@@ -34,15 +59,17 @@ $(() => {
 		});
 	});
 
+
+	// SMOOTH SCROLL
+	// ------------------------------------------------
+
 	$(function () {
 		$('a[href*="#"]:not([href="#"])').on('click', function () {
 			if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
 				let target = $(this.hash);
 				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 				if (target.length) {
-					$('html, body').animate({
-						scrollTop: target.offset().top
-					}, 1000);
+					$('html, body').stop().delay(700).animate({scrollTop: target.offset().top}, 1000);
 					return false;
 				}
 			}
@@ -52,6 +79,7 @@ $(() => {
 
 	// HEADER SLIDER
 	// ------------------------------------------------
+
 	swiper('.header > .swiper-container', {
 		effect: 'fade',
 		autoplay: 8500
@@ -60,6 +88,7 @@ $(() => {
 
 	// FEATURES IMAGE SLIDE
 	// -------------------------------------------------
+
 	const $featuresBlock = $('.features');
 	const $featuresImage = $featuresBlock.find('.features__image');
 
@@ -72,6 +101,7 @@ $(() => {
 
 	// PROMO IMAGES SLIDE
 	// -------------------------------------------------
+
 	const $promoBlock = $('.promo');
 	const $promoImageOne = $promoBlock.find('.promo__image--one');
 	const $promoImageTwo = $promoBlock.find('.promo__image--two');
@@ -86,6 +116,7 @@ $(() => {
 
 	// MAGNIFIC POPUP
 	// -------------------------------------------------
+
 	$('.news__inner').magnificPopup({
 		delegate: '.news__image',
 		type: 'image'
@@ -94,6 +125,7 @@ $(() => {
 
 	// TESTIMONIALS SLIDER
 	// -------------------------------------------------
+
 	swiper('.testimonials > .swiper-container', {
 		pagination: '.swiper-pagination',
 		paginationClickable: true,
@@ -104,6 +136,7 @@ $(() => {
 
 	// BACK TO TOP BUTTON
 	// -------------------------------------------------
+
 	const $toTopButton = $('.to-top-button');
 	$toTopButton.on('click', function () {
 		$('html, body').stop().animate({scrollTop: 0}, 2000);

@@ -5,10 +5,19 @@
 	&__inner
 		lost-center $width-desktop
 
+		+below($bp2)
+			lost-center 90%
+
 	&__center
 		lost-column 6/12
 		lost-column-gutter 2rem
 		lost-offset -3/12
+
+		+below($bp2)
+			lost-column 1/1
+			lost-column-gutter 0
+			lost-offset 0
+			margin-right 0 !important
 
 
 	// SIGNUP TITLE
@@ -22,6 +31,12 @@
 		text-align center
 		color $charcoal-grey
 
+		+below($bp1)
+			font-size 1.8rem
+
+		+below($bp4)
+			font-size 1.6rem
+
 
 	// SIGNUP SUBTITLE
 	// ---------------------------------------------
@@ -32,6 +47,9 @@
 		line-height 2
 		text-align center
 		color $slate-grey
+
+		+below($bp4)
+			font-size 1.5rem
 
 
 	// SIGNUP EMAIL & PASSWORD

@@ -14,6 +14,7 @@
 		background-size cover
 		justify-content center
 		align-items center
+		text-align center
 
 
 		// SKETCH LOGO
@@ -31,6 +32,13 @@
 			animation logoAnime 2s infinite
 			size(23rem)
 
+			+below($bp2)
+				size(12rem)
+				bottom -14%
+
+			+below($bp4)
+				display none
+
 
 		// TITLE
 		// --------------------------------------------------
@@ -45,6 +53,7 @@
 			& > span
 				text-transform capitalize
 				color rgba($color-white, .6)
+				white-space nowrap
 
 				& > sup
 					font-size 2.5rem
@@ -54,8 +63,11 @@
 			+below($bp1)
 				font-size 3rem
 
-				& sup
+				& > span > sup
 					font-size 1.5rem
+
+			+below($bp4)
+				font-size 2rem
 
 
 		// SUBTITLE
@@ -65,11 +77,15 @@
 			margin 0 1rem 6rem
 			font-family $opensans-light
 			color $cool-grey
-			line-height 1.4
+			line-height 1.6
+
+			+below($bp4)
+				font-size 1.5rem
 
 
 		// BUTTON
 		// --------------------------------------------------
+
 		&__button
 			padding 1.2rem 3rem
 			display block
@@ -86,10 +102,16 @@
 				background-color $warm-pink
 
 
+
+
 	// DOWNLOAD CONTENT
 	// -------------------------------------------------
+
 	& .content
 		margin-top 20rem
+
+		+below($bp4)
+			margin-top 10rem
 
 		& p
 			font-family $opensans-light
@@ -100,6 +122,7 @@
 		&__heading
 			margin-bottom 6rem
 			font-size 2.4rem
+			line-height 1.2
 			color $charcoal-grey
 
 		&__title
@@ -111,8 +134,12 @@
 		&__inner
 			lost-center $width-desktop
 
-			+below($bp1)
-				width $width-mobile
+			+below($bp0)
+				lost-center $width-mobile
+
+			+below($bp2)
+				text-align center
+				lost-center 90%
 
 		&__center
 			lost-utility clearfix
@@ -122,7 +149,7 @@
 			lost-column 6/12
 			lost-column-gutter 2rem
 
-			+below($bp1)
+			+below($bp0)
 				width 100%
 				lost-column 1/1
 				lost-column-gutter 0
@@ -131,7 +158,7 @@
 				padding-right 7rem
 				border-right .1rem solid $silver
 
-				+below($bp1)
+				+below($bp0)
 					margin-bottom 6rem
 					padding-right 0
 					border-right none
@@ -139,7 +166,7 @@
 			&:last-child
 				padding-left 7rem
 
-				+below($bp1)
+				+below($bp0)
 					padding-left 0
 
 
