@@ -31,13 +31,16 @@
 			animation logoAnime 2s infinite
 			size(23rem)
 
+
 		// TITLE
 		// --------------------------------------------------
+
 		&__title
-			margin-bottom 3rem
+			margin 0 1rem 3rem
 			font-family $opensans-light
 			font-size 4rem
 			color $color-white
+			line-height 1.2
 
 			& > span
 				text-transform capitalize
@@ -48,13 +51,21 @@
 					line-height 1.8
 					color $faded-orange
 
+			+below($bp1)
+				font-size 3rem
+
+				& sup
+					font-size 1.5rem
+
 
 		// SUBTITLE
 		// --------------------------------------------------
+
 		&__subtitle
-			margin-bottom 6rem
+			margin 0 1rem 6rem
 			font-family $opensans-light
 			color $cool-grey
+			line-height 1.4
 
 
 		// BUTTON

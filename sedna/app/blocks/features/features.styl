@@ -5,6 +5,9 @@
 		position relative
 		min-height 53.7rem
 
+		+below($bp0)
+			min-height 0
+
 	&__inner
 		display flex
 		min-height 53.7rem
@@ -12,16 +15,23 @@
 		align-items center
 		padding 0 1rem
 
-		+below($bp1)
+		+below($bp0)
 			margin-bottom 10%
 			min-height 0
 			lost-center $width-mobile
+
+		+below($bp3)
+			lost-center 90%
+			text-align center
+
+		+below($bp4)
+			margin-bottom 0
 
 	&__content
 		lost-column 6/12
 		lost-column-gutter 2rem
 
-		+below($bp1)
+		+below($bp0)
 			lost-column 1/1
 			lost-column-gutter 0
 
@@ -74,7 +84,7 @@
 		size(92.2rem, 53.7rem)
 		animation-fill-mode both
 
-		+below($bp1)
+		+below($bp0)
 			display none
 
 	&__device
@@ -82,8 +92,11 @@
 		display none
 		width 80%
 
-		+below($bp1)
+		+below($bp0)
 			display block
+
+		+below($bp4)
+			display none
 
 		& > img
 			display block

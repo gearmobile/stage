@@ -9,6 +9,9 @@
 	+below($bp0)
 		min-height 0
 
+	+below($bp4)
+		padding 10rem 0
+
 	&__center
 		lost-center $width-desktop
 
@@ -20,6 +23,9 @@
 			text-align center
 			lost-center 90%
 			padding 0 1rem
+
+		+below($bp4)
+			margin-bottom 0
 
 	&__content
 		lost-column 5/12
@@ -131,6 +137,9 @@
 
 		+below($bp0)
 			display block
+
+		+below($bp4)
+			display none
 
 
 @keyframes fadeInUp

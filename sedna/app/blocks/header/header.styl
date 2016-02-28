@@ -115,7 +115,7 @@
 
 		+below($bp3)
 			font-size 1.6rem
-			margin-bottom 10%
+			margin-bottom 12%
 
 		+below($bp4)
 			font-size 1.4rem
@@ -127,6 +127,10 @@
 	&__controls
 		display flex
 		justify-content center
+		align-items center
+
+		+below($bp3)
+			flex-direction column
 
 	&__button
 		margin 0 1rem
@@ -147,11 +151,7 @@
 
 		+below($bp3)
 			padding 1.2rem 2rem
-
-		+below($bp4)
-			padding 1rem 1.4rem
-			font-size 1rem
-
+			margin 0 0 2rem
 
 	// HEADER ARROW
 	// -------------------------------------------------------
