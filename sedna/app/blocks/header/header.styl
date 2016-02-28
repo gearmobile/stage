@@ -78,6 +78,11 @@
 		left 50%
 		text-align center
 		transform translate(-50%, -50%)
+		width 90%
+		padding 0 1rem
+
+		+below($bp3)
+			width 100%
 
 
 	// HEADER TITLE
@@ -90,6 +95,13 @@
 		text-transform capitalize
 		color $color-white
 
+		+below($bp3)
+			font-size 3rem
+			margin-bottom 4%
+
+		+below($bp4)
+			font-size 2rem
+
 
 	// HEADER SUBTITLE
 	// -------------------------------------------------------
@@ -100,6 +112,13 @@
 		font-size 2rem
 		line-height 1.8
 		color $color-white
+
+		+below($bp3)
+			font-size 1.6rem
+			margin-bottom 10%
+
+		+below($bp4)
+			font-size 1.4rem
 
 
 	// HEADER BUTTONS
@@ -125,6 +144,13 @@
 		&:active
 			color rgba($color-white, 1)
 			background-color $warm-pink
+
+		+below($bp3)
+			padding 1.2rem 2rem
+
+		+below($bp4)
+			padding 1rem 1.4rem
+			font-size 1rem
 
 
 	// HEADER ARROW
@@ -156,21 +182,22 @@
 	60%
 		transform translate(-50%, 50%)
 
+
 .header-mobile
 	position fixed
-	width 100%
+	z-index 2
 	top 0
 	right 0
-	z-index 5
-	background-color #789
 	display none
+	width 100%
+	background-color #789
 
 	+below($bp1)
 		display block
 
 	& > a
-		display block
 		padding 2rem 0
+		display block
 		text-align center
 		text-transform capitalize
 		color $color-white
