@@ -14,6 +14,13 @@
 	display flex
 	flex-direction column
 
+	+below($bp-786)
+		lost-column 6/12 2
+		lost-column-gutter 3rem
+
+		&:nth-child(-n+2)
+			margin-bottom 3rem
+
 	&:hover .team-card__overlay
 		opacity 1
 

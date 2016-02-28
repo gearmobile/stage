@@ -3,8 +3,7 @@
 	border-bottom .3rem solid #dde1e4
 
 	&__center
-		width $width
-		margin auto
+		lost-center $width
 		padding 0 1rem
 
 	&__content
@@ -17,6 +16,11 @@
 		lost-column 7/12
 		lost-column-gutter 2rem
 
+		+below($bp-786)
+			lost-column 1/1
+			lost-column-gutter 0
+			margin-bottom 10%
+
 		& p
 			color #8d8f92
 			font-size 1rem
@@ -25,3 +29,7 @@
 
 	&__secondary
 		lost-column 5/12
+
+		+below($bp-786)
+			lost-column 1/1
+			lost-column-gutter 0
