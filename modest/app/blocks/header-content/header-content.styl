@@ -1,0 +1,48 @@
+
+.header-content
+	lost-center $width
+	padding 0 1rem
+	display flex
+	flex-direction column
+	justify-content center
+	min-height 66rem
+
+	&__title
+		text-transform uppercase
+		color $color-white
+		font-size 2.25rem
+		line-height 1.2
+		margin-bottom 3rem
+
+		+below($bp-500)
+			font-size 1.8rem
+
+	&__subtitle
+		color #ccd1d7
+		font-size 1rem
+		line-height 1.8
+		margin-bottom 4rem
+
+	&__controls > .button
+		display inline-block
+		vertical-align top
+		padding 1.6rem 3rem
+		border-radius .3rem
+		color $color-white
+		border 1px solid $color-white
+		font-size .875rem
+		text-transform uppercase
+		font-weight 700
+
+		&:not(:last-child)
+			margin-right 1.6rem
+
+		&:hover
+		&:active
+		&:focus
+			background-color $color-blue
+			border-color $color-blue
+
+	+below($bp-786)
+		align-items center
+		text-align center

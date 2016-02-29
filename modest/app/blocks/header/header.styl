@@ -1,5 +1,5 @@
 .header
-	width 100%
+	lost-center 100%
 
 	& > .swiper-container
 		width 100%
@@ -21,11 +21,10 @@
 				background-image url(../images/header-bg.jpg)
 
 		& > .swiper-pagination
-			width $width
+			lost-center $width
 			position absolute
 			left 50%
 			transform translateX(-50%)
-			// margin auto
 			padding 0 1rem
 			display flex
 			justify-content flex-end
@@ -41,49 +40,5 @@
 			& > .swiper-pagination-bullet-active
 				background-color $color-white
 
-	&__center
-		position absolute
-		top 0
-		z-index 2
-		left 50%
-		transform translateX(-50%)
-		display flex
-		flex-direction column
-		justify-content center
-		width $width
-		min-height 66rem
-		padding 0 1rem
-		// lost-center $width flex
-
-	&__title
-		text-transform uppercase
-		color $color-white
-		font-size 2.25rem
-		margin-bottom 3rem
-
-	&__subtitle
-		max-width 40%
-		color #ccd1d7
-		font-size 1rem
-		line-height 1.8
-		margin-bottom 4rem
-
-	.button
-		display inline-block
-		vertical-align top
-		padding 1.6rem 3rem
-		border-radius .3rem
-		color $color-white
-		border 1px solid $color-white
-		font-size .875rem
-		text-transform uppercase
-		font-weight 700
-
-		&:not(:last-child)
-			margin-right 1.6rem
-
-		&:hover
-		&:active
-		&:focus
-			background-color $color-blue
-			border-color $color-blue
+			+below($bp-786)
+				justify-content center
