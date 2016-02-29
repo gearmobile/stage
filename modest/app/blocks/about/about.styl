@@ -16,16 +16,22 @@
 		lost-column 7/12
 		lost-column-gutter 2rem
 
-		+below($bp-786)
-			lost-column 1/1
-			lost-column-gutter 0
-			margin-bottom 10%
-
 		& p
 			color #8d8f92
 			font-size 1rem
 			line-height 1.6
 			margin-bottom 2rem
+
+		+below($bp-786)
+			lost-column 1/1
+			lost-column-gutter 0
+			margin-bottom 10%
+
+		+below($bp-500)
+			margin-bottom 18%
+
+			& p
+				text-align center
 
 	&__secondary
 		lost-column 5/12

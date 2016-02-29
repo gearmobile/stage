@@ -26,6 +26,12 @@
 			&:nth-child(-n+6)
 				margin-bottom 9rem
 
+		+below($bp-500)
+			lost-column 1/1
+
+			&:not(:last-child)
+				margin-bottom 8rem
+
 	&__title
 		text-transform uppercase
 		color #292f36

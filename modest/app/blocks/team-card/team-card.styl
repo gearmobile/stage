@@ -21,6 +21,13 @@
 		&:nth-child(-n+2)
 			margin-bottom 3rem
 
+	+below($bp-500)
+		lost-column 1/1
+		lost-column-gutter 0
+
+		&:not(:last-child)
+			margin-bottom 3rem
+
 	&:hover .team-card__overlay
 		opacity 1
 

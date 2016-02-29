@@ -13,9 +13,16 @@
 		padding 0 1rem
 		justify-content space-between
 
+		+below($bp-500)
+			flex-direction column
+			align-items center
+
 	&__copyright
 		font-size 1rem
 		color $color-white
+
+		+below($bp-500)
+			margin-bottom 3rem
 
 	&__social
 		display flex
@@ -26,3 +33,6 @@
 			display block
 			size(1.75rem)
 			margin 0 1rem
+
+			+below($bp-500)
+				size(2rem)

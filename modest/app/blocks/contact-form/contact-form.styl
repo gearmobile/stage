@@ -6,6 +6,10 @@
 	left 0
 	width 100%
 
+	+below($bp-786)
+		position static
+		padding 0
+
 	& input
 	& textarea
 		display block
@@ -54,3 +58,10 @@
 			bottom 0
 			right 0
 			z-index 1
+
+		+below($bp-786)
+			lost-column 1/1
+			lost-column-gutter 0
+
+			&:not(:last-child)
+				margin-bottom 3rem

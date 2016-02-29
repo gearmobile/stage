@@ -25,6 +25,13 @@
 		lost-column-gutter 3rem
 		position relative
 
+		+below($bp-786)
+			lost-column 1/1
+			lost-column-gutter 0
+
+			&:first-child
+				margin-bottom 6rem
+
 	&__title
 		text-transform uppercase
 		color #292f36
