@@ -110,3 +110,16 @@ abs-align()
 valign($value)
 	height $value
 	line-height $value
+
+
+retinaBackground($image, $ext = 'jpg') {
+	// pixel ratio of 1; background size is 100% (of a 100px image)
+	background-image url('../images/' + $image + '.' + $ext)
+	// pixel ratio of 2; background-size is 1/2 = 50% (of a 200px image)
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		background-image url('../images/' + $image + '@2x.' + $ext)
+	}
+}
+
+
+
