@@ -19,6 +19,9 @@
 		justify-content space-between
 		align-items center
 
+		+below($bp-786)
+			padding 0 4rem
+
 	&__logo
 		size(10rem, 2rem)
 		background url(../images/modest-logo.png) 50% 50% no-repeat
@@ -33,9 +36,6 @@
 	&__menu
 		display flex
 		justify-content space-between
-
-		+below($bp-786)
-			display none
 
 		& > a
 			display block
@@ -61,6 +61,13 @@
 			&.is-active
 				color $color-blue
 				border-color $color-blue
+
+		+below($bp-786)
+			display none
+
+
+	// HEADER MOBILE ICON
+	// ------------------------------------------
 
 	&__icon
 		size(3rem)
