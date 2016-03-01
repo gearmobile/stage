@@ -28,13 +28,17 @@ $( function () {
 	// TOP MENU FIXED
 	// -------------------------------------------
 
-	$(window).on('scroll', function () {
-		if ( $(window).scrollTop() > 0 ) {
-			$topheader.addClass('topheader--fixed');
-		} else {
-			$topheader.removeClass('topheader--fixed');
-		}
-	});
+	if ( $(window).width() > 768 ) {
+		$(window).on('scroll', function () {
+			if ( $(window).scrollTop() > 0 ) {
+				$topheader.addClass('topheader--fixed');
+			} else {
+				$topheader.removeClass('topheader--fixed');
+			}
+		});
+	}
+
+
 
 	$(window).on('scroll', function () {
 		if ( $(window).scrollTop() > $(window).height() / 2 ) {
@@ -116,21 +120,25 @@ $( function () {
 	// SCROLLSPY MENU
 	// ------------------------------------------------
 
-	const $navbar = $('.topheader__menu');
-	const $navbarLinks = $navbar.find('.topheader__link');
-	const $activeClass = 'topheader__link--active';
-	const $heightNavbar = $navbar.outerHeight();
+	// const $topheader = $('.topheader');
+	const $header = $('.topheader__menu');
+	const $headerLinks = $header.children('a');
+	const $activeClass = 'is-active';
 	const $sections = [];
 	let $scrolledID = '';
 	let $ID = false;
+	const $menuMobile = $('.topheader__menu--mobile');
+	const $menuIcon = $('.topheader__icon');
+	const $menuMobileLinks = $menuMobile.children('a');
+	const $menuActiveClass = 'is-visible';
 
-	$navbarLinks.each(function () {
-		$sections.push($($(this).attr('href')));
+	$headerLinks.each(function () {
+		$sections.push( $( $(this).attr('href') ) );
 	});
 
-	$navbarLinks.on('click', function (e) {
+	$headerLinks.on('click', function (e) {
 		e.preventDefault();
-		$('html, body').stop().animate({scrollTop: $( $(this).attr('href') ).offset().top - $heightNavbar}, 1000);
+		$('html, body').stop().animate({scrollTop: $( $(this).attr('href') ).offset().top - $header.outerHeight()}, 1000, 'swing');
 	});
 
 	$(window).on('scroll', function (e) {
@@ -147,13 +155,25 @@ $( function () {
 			if ($scrolledID !== $ID) {
 				$ID = $scrolledID;
 				history.pushState(null, null, '#' + $ID);
-				$navbarLinks.removeClass($activeClass);
-				$('a[href="#' + $ID + '"]', $navbar).addClass($activeClass);
+				$headerLinks.removeClass($activeClass);
+				$('a[href="#' + $ID + '"]', $header).addClass($activeClass);
 			}
 		}
 	});
 
 	$(window).trigger('scroll');
+
+	$menuIcon.on('click', function (event) {
+		event.preventDefault();
+		$(this).toggleClass('is-active');
+		$menuMobile.css('top', $topheader.outerHeight()).toggleClass($menuActiveClass);
+	});
+
+	$menuMobileLinks.on('click', function (event) {
+		event.preventDefault();
+		$(this).parent().removeClass($menuActiveClass);
+		$('html, body').stop().animate({scrollTop: $( $(this).attr('href') ).offset().top - $topheader.outerHeight()}, 1500, 'swing');
+	});
 
 
 	// MAGNIFIC POPUP
