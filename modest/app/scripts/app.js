@@ -2,8 +2,6 @@ import $ from 'jquery';
 import svg4everybody from 'svg4everybody';
 import swiper from 'swiper';
 import 'jquery-smooth-scroll';
-import 'waypoints';
-import 'jquery.easing';
 import 'magnific-popup';
 import 'jquery-match-height';
 import GoogleMapsLoader from 'google-maps';
@@ -14,7 +12,6 @@ $( function () {
 	// HEADER SWIPER SLIDER
 	// ------------------------------------------
 
-	const $container = $('.page');
 	const $topheader = $('.topheader');
 	const $buttonToTop = $('.button-to-top');
 
@@ -31,28 +28,28 @@ $( function () {
 	// TOP MENU FIXED
 	// -------------------------------------------
 
-	$container.waypoint( function (direction) {
-		if ( direction === 'down' ) {
+	$(window).on('scroll', function () {
+		if ( $(window).scrollTop() > 0 ) {
 			$topheader.addClass('topheader--fixed');
 		} else {
 			$topheader.removeClass('topheader--fixed');
 		}
-	}, {offset: '-1%'});
+	});
 
-	$container.waypoint( function (direction) {
-		if ( direction === 'down' ) {
+	$(window).on('scroll', function () {
+		if ( $(window).scrollTop() > $(window).height() / 2 ) {
 			$buttonToTop.removeClass('fadeOutRight').addClass('fadeInRight');
 		} else {
 			$buttonToTop.removeClass('fadeInRight').addClass('fadeOutRight');
 		}
-	}, {offset: '-50%'});
+	});
 
 
 	// BACK TO TOP BUTTON
 	// ------------------------------------
 
 	$buttonToTop.on('click', function () {
-		$('html, body').stop().animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+		$('html, body').stop().animate({scrollTop: 0}, 1500);
 	});
 
 	$buttonToTop.on('mouseover', function () {
@@ -124,8 +121,8 @@ $( function () {
 	const $activeClass = 'topheader__link--active';
 	const $heightNavbar = $navbar.outerHeight();
 	const $sections = [];
-	let scrolledID = '';
-	let id = false;
+	let $scrolledID = '';
+	let $ID = false;
 
 	$navbarLinks.each(function () {
 		$sections.push($($(this).attr('href')));
@@ -133,29 +130,25 @@ $( function () {
 
 	$navbarLinks.on('click', function (e) {
 		e.preventDefault();
-		$('html, body').animate({
-			scrollTop: $($(this).attr('href')).offset().top - $heightNavbar
-		});
+		$('html, body').stop().animate({scrollTop: $( $(this).attr('href') ).offset().top - $heightNavbar}, 1000);
 	});
 
 	$(window).on('scroll', function (e) {
 		e.preventDefault();
-		const $scrollTop = $(this).scrollTop() + ($(window).height() / 4);
+		const $scrollTop = $(window).scrollTop() + ($(window).height() / 4);
 
 		for (const i in $sections) {
-			const section = $sections[i];
+			const $section = $sections[i];
 
-			if ($scrollTop > section.offset().top) {
-				scrolledID = section.attr('id');
+			if ($scrollTop > $section.offset().top) {
+				$scrolledID = $section.attr('id');
 			}
 
-			if (scrolledID !== id) {
-				id = scrolledID;
-				history.pushState(null, null, '#' + id);
-
+			if ($scrolledID !== $ID) {
+				$ID = $scrolledID;
+				history.pushState(null, null, '#' + $ID);
 				$navbarLinks.removeClass($activeClass);
-
-				$('a[href="#' + id + '"]', $navbar).addClass($activeClass);
+				$('a[href="#' + $ID + '"]', $navbar).addClass($activeClass);
 			}
 		}
 	});
@@ -178,7 +171,6 @@ $( function () {
 
 	// SVG SPRITE
 	// ------------------------------------------------
-
 	svg4everybody();
 
 });
