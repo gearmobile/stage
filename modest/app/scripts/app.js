@@ -29,8 +29,8 @@ $( function () {
 	// -------------------------------------------
 
 	if ( $(window).width() > 768 ) {
-		$(window).on('scroll', function () {
-			if ( $(window).scrollTop() > 0 ) {
+		$(this).on('scroll', function () {
+			if ( $(this).scrollTop() > 0 ) {
 				$topheader.addClass('topheader--fixed');
 			} else {
 				$topheader.removeClass('topheader--fixed');
@@ -38,10 +38,8 @@ $( function () {
 		});
 	}
 
-
-
 	$(window).on('scroll', function () {
-		if ( $(window).scrollTop() > $(window).height() / 2 ) {
+		if ( $(this).scrollTop() > $(this).height() / 2 ) {
 			$buttonToTop.removeClass('fadeOutRight').addClass('fadeInRight');
 		} else {
 			$buttonToTop.removeClass('fadeInRight').addClass('fadeOutRight');
@@ -75,7 +73,9 @@ $( function () {
 
 	// CONTACT HALF BLOCKS EQUAL HEIGHT
 	// -------------------------------------
-	$('.contact__half').matchHeight();
+	if ( $(window).width() > 768 ) {
+		$('.contact__half').matchHeight();
+	}
 
 
 	// GOOGLE MAPS
@@ -119,8 +119,6 @@ $( function () {
 
 	// SCROLLSPY MENU
 	// ------------------------------------------------
-
-	// const $topheader = $('.topheader');
 	const $header = $('.topheader__menu');
 	const $headerLinks = $header.children('a');
 	const $activeClass = 'is-active';
