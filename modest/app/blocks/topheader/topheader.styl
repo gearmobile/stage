@@ -20,7 +20,7 @@
 		align-items center
 
 		+below($bp-786)
-			padding 0 4rem
+			padding 0 2rem
 
 	&__logo
 		size(10rem, 2rem)
@@ -43,7 +43,7 @@
 			padding .8rem 1.2rem
 			text-transform uppercase
 			font-family $sans-semibold
-			font-size .875rem
+			font-size 1rem
 			color $color-grey
 			border .1rem solid transparent
 			border-radius .1rem
@@ -79,7 +79,7 @@
 			margin 0 auto
 			top 1.2rem
 			width 3rem
-			height .6rem
+			height .4rem
 			background-color $color-white
 			display block
 			transition-duration 0s
@@ -90,7 +90,7 @@
 				content ''
 				position absolute
 				width 3rem
-				height .6rem
+				height .4rem
 				background-color $color-white
 				display block
 				transition-property margin, transform
@@ -98,10 +98,10 @@
 				transition-delay .2s, 0s
 
 			&::before
-				margin-top -1.2rem
+				margin-top -1rem
 
 			&::after
-				margin-top 1.2rem
+				margin-top 1rem
 
 		&.is-active > span
 			background-color rgba($color-black, .0)

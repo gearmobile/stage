@@ -119,6 +119,7 @@ $( function () {
 
 	// SCROLLSPY MENU
 	// ------------------------------------------------
+
 	const $header = $('.topheader__menu');
 	const $headerLinks = $header.children('a');
 	const $activeClass = 'is-active';
@@ -161,16 +162,19 @@ $( function () {
 
 	$(window).trigger('scroll');
 
+	$menuMobile.css( 'top', $topheader.outerHeight() );
+
 	$menuIcon.on('click', function (event) {
 		event.preventDefault();
 		$(this).toggleClass('is-active');
-		$menuMobile.css('top', $topheader.outerHeight()).toggleClass($menuActiveClass);
+		$menuMobile.toggleClass($menuActiveClass);
 	});
 
 	$menuMobileLinks.on('click', function (event) {
 		event.preventDefault();
 		$(this).parent().removeClass($menuActiveClass);
 		$('html, body').stop().animate({scrollTop: $( $(this).attr('href') ).offset().top - $topheader.outerHeight()}, 1500, 'swing');
+		$menuIcon.removeClass('is-active');
 	});
 
 

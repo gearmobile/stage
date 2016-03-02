@@ -18,11 +18,16 @@
 			align-items center
 
 	&__copyright
-		font-size 1rem
+		font-size 1.3rem
+		line-height 1.6
 		color $color-white
+
+		& > span
+			white-space nowrap
 
 		+below($bp-500)
 			margin-bottom 3rem
+			text-align center
 
 	&__social
 		display flex
