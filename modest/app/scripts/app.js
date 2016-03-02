@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import svg4everybody from 'svg4everybody';
 import swiper from 'swiper';
-import 'jquery-smooth-scroll';
 import 'magnific-popup';
 import 'jquery-match-height';
 import GoogleMapsLoader from 'google-maps';
@@ -50,24 +49,19 @@ $( function () {
 	// BACK TO TOP BUTTON
 	// ------------------------------------
 
-	$buttonToTop.on('click', function () {
+	$buttonToTop.on('click', function (event) {
+		event.preventDefault();
 		$('html, body').stop().animate({scrollTop: 0}, 1500);
 	});
 
-	$buttonToTop.on('mouseover', function () {
+	$buttonToTop.on('mouseover', function (event) {
+		event.preventDefault();
 		$(this).addClass('button-to-top--active');
 	});
 
-	$buttonToTop.on('mouseout', function () {
+	$buttonToTop.on('mouseout', function (event) {
+		event.preventDefault();
 		$(this).removeClass('button-to-top--active');
-	});
-
-
-	// SMOOTH SCROLL NAVIGATION
-	// ------------------------------------
-
-	$topheader.find('a').smoothScroll({
-		speed: 'auto'
 	});
 
 
@@ -163,6 +157,9 @@ $( function () {
 	$(window).trigger('scroll');
 
 	$menuMobile.css( 'top', $topheader.outerHeight() );
+	$menuMobileLinks.each( function () {
+		$(this).css('height', ( $(window).height() - $topheader.outerHeight() ) / $menuMobileLinks.length );
+	})
 
 	$menuIcon.on('click', function (event) {
 		event.preventDefault();

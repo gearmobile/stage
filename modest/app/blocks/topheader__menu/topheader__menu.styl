@@ -1,0 +1,31 @@
+.topheader__menu
+	display flex
+	justify-content space-between
+
+	& > a
+		display block
+		margin 0 1rem
+		padding .8rem 1.2rem
+		text-transform uppercase
+		font-family $sans-semibold
+		font-size 1rem
+		color $color-grey
+		border .1rem solid transparent
+		border-radius .1rem
+
+		&:first-child
+			margin-left 0
+
+		&:last-child
+			margin-right 0
+
+		&:hover
+			border-color $color-grey
+
+		&:active
+		&.is-active
+			color $color-blue
+			border-color $color-blue
+
+	+below($bp-786)
+		display none

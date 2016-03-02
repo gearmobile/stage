@@ -1,0 +1,52 @@
+.topheader__icon
+	size(3rem)
+	position relative
+	display none
+
+	& > span
+		position relative
+		margin 0 auto
+		top 1.2rem
+		width 3rem
+		height .4rem
+		background-color $color-white
+		display block
+		border-radius 50em
+		transition-duration 0s
+		transition-delay .2s
+
+		&::before
+		&::after
+			content ''
+			position absolute
+			width 3rem
+			height .4rem
+			background-color $color-white
+			display block
+			border-radius 50em
+			transition-property margin, transform
+			transition-duration .2s
+			transition-delay .2s, 0s
+
+		&::before
+			margin-top -1rem
+
+		&::after
+			margin-top 1rem
+
+	&.is-active > span
+		background-color rgba($color-black, .0)
+		transition-delay .2s
+
+		&:before
+			margin-top 0
+			transform rotate(45deg)
+			transition-delay 0s, .2s
+
+		&:after
+			margin-top 0
+			transform rotate(-45deg)
+			transition-delay 0s, .2s
+
+	+below($bp-786)
+		display block

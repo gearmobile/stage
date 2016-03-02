@@ -1,22 +1,12 @@
+include ../topheader__icon/topheader__icon
+include ../topheader__menu--mobile/topheader__menu--mobile
+include ../topheader__menu/topheader__menu
+include ../topheader__logo/topheader__logo
+
 mixin topheader()
 	.topheader
 		.topheader__content
-			h1.topheader__logo: a(href="#header" target="_blank" rel="nofollow") modest
-			nav.topheader__menu
-				a.topheader__link(href="#home") home
-				a.topheader__link(href="#about") about
-				a.topheader__link(href="#team") team
-				a.topheader__link(href="#work") work
-				a.topheader__link(href="#services") services
-				a.topheader__link(href="#features") features
-				a.topheader__link(href="#contact") contact
-			a.topheader__icon(href="#{jv0}")
-				span
-		nav.topheader__menu--mobile
-			a(href="#home") home
-			a(href="#about") about
-			a(href="#team") team
-			a(href="#work") work
-			a(href="#services") services
-			a(href="#features") features
-			a(href="#contact") contact
+			+topheader__logo()
+			+topheader__menu()
+			+topheader__icon()
+		+topheader__menu--mobile()
