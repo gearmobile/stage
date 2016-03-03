@@ -25,12 +25,10 @@
 		background-repeat no-repeat
 		background-size cover
 		position relative
+		margin-top 2rem
 
 		&:hover .gallery-overlay
 			opacity 1
-
-		&:nth-child(-n+3)
-			margin-bottom 2rem
 
 		&:nth-child(1)
 			background-image url(../images/gallery/small/gallery-image-small-01.jpg)
@@ -50,6 +48,24 @@
 		&:nth-child(6)
 			background-image url(../images/gallery/small/gallery-image-small-06.jpg)
 
+		&:nth-child(7)
+			background-image url(../images/gallery/small/gallery-image-small-07.jpg)
+
+		&:nth-child(8)
+			background-image url(../images/gallery/small/gallery-image-small-08.jpg)
+
+		&:nth-child(9)
+			background-image url(../images/gallery/small/gallery-image-small-09.jpg)
+
+		&:nth-child(10)
+			background-image url(../images/gallery/small/gallery-image-small-10.jpg)
+
+		&:nth-child(11)
+			background-image url(../images/gallery/small/gallery-image-small-11.jpg)
+
+		&:nth-child(12)
+			background-image url(../images/gallery/small/gallery-image-small-12.jpg)
+
 		+below($bp-786)
 			lost-column 1/2 2
 			lost-column-gutter 2rem
@@ -60,8 +76,11 @@
 			lost-column-gutter 0
 			padding-bottom 62%
 
-			&:not(:last-child)
-				margin-bottom 2rem
+	&__more
+		display none
+
+		&.is-visible
+			display block
 
 
 	// GALLERY FOOTER
