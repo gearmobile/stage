@@ -1,0 +1,134 @@
+.design
+
+  // PRIMARY PART
+  // ---------------------------------------
+
+  &__primary
+    padding-top 10rem
+    background-color $color-bg-design
+
+  &__center
+    max-width $width
+    margin auto
+    padding 0 1rem
+    text-align center
+
+  &__title
+    font-size 2.5rem
+    color $color-white
+    line-height 1.2
+    text-transform capitalize
+    margin 0 0 4rem
+
+  & p
+    color $color-grey
+    font-size 1.3rem
+    line-height 1.8
+    margin 0 0 9rem
+
+
+  // BLOCK PROMO
+  // ----------------------------
+
+  &__promo
+    width 80%
+    max-width 80%
+    margin auto
+    padding-bottom 26%
+    position relative
+
+    & > header
+    & > main
+      width 100%
+      position absolute
+      left 0
+
+    & > header
+      top 0
+      height 10%
+      background-color #2b303b
+      display flex
+      align-items center
+      padding 0 2rem
+
+      & > span
+        display block
+        size(1rem)
+        border-radius 50%
+        background-color #434955
+        box-shadow 1.5rem 0 0 #434955, 3rem 0 0 #434955
+
+    & > main
+      top 10%
+      height 82%
+      background url('%=static=%assets/design/promo-image.png') 50% 50% no-repeat
+      background-size cover
+
+      & > .desing__button
+        display block
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        padding 2.2rem 3.4rem
+        border .2rem solid $color-white
+        color $color-white
+        text-transform uppercase
+        text-decoration none
+        font-size 1.5rem
+        transition background-color .2s, color .2s
+
+        &:hover
+          background-color $color-white
+          color $color-black
+
+
+
+  // SECONDARY PART
+  // ---------------------------------------
+
+  &__secondary
+    padding 8rem 0 16rem
+    background-color #2b303b
+
+    @media screen and (max-width: 768px)
+      padding 10rem 0
+
+  &__content
+    max-width $width
+    margin auto
+    padding 0 1rem
+    display flex
+
+    @media screen and (max-width: 768px)
+      display block
+
+  &__column
+    max-width calc(100% / 4)
+    padding 0 2rem
+
+    @media screen and (max-width: 768px)
+      max-width 100%
+      text-align center
+
+      &:not(:last-child)
+        margin 0 0 8rem
+
+    & > .icon-design
+      margin 0 0 3rem
+
+    &__caption
+      text-transform capitalize
+      font-size 2rem
+      color $color-white
+      margin 0 0 3rem
+
+      & > span
+        color #3a4d60
+
+    & > p
+      color #9da5b0
+      line-height 1.8
+
+      @media screen and (max-width: 768px)
+        margin 0

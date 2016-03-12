@@ -1,0 +1,40 @@
+mixin footer(data)
+  footer.footer#contact
+    .footer__center
+      .footer__primary
+        .footer__column
+          h4 Get in touch
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam optio ratione eaque! Voluptates maiores tempora ex possimus unde adipisci corporis accusamus explicabo sed est nobis quas ducimus ullam nulla, totam sequi omnis, sit. Obcaecati necessitatibus suscipit recusandae officia quod assumenda. Suscipit est obcaecati id soluta ab aspernatur accusantium, eos unde?
+        .footer__column
+          h4 Stay in touch
+          .footer__submit
+            input(type="text")
+            span
+              != jadeHelpers.Icon.call(locals, {iconName: 'icon-submit', className: 'icon-submit'})
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis iste ad corporis quam rem excepturi vitae sit, eaque dicta in.
+      .footer__secondary
+        .footer__column
+          .footer__subcolumn
+            h4 resources
+            ul
+              li: a(href="#") tour
+              li: a(href="#") customers
+              li: a(href="#") pricing and plans
+              li: a(href="#") new features
+              li: a(href="#") education
+          .footer__subcolumn
+            h4 features
+            ul
+              li: a(href="#") tour
+              li: a(href="#") customers
+              li: a(href="#") pricing and plans
+              li: a(href="#") new features
+              li: a(href="#") education
+          .footer__subcolumn
+            h4 how to’s
+            ul
+              li: a(href="#") tour
+              li: a(href="#") customers
+              li: a(href="#") pricing and plans
+              li: a(href="#") new features
+              li: a(href="#") education

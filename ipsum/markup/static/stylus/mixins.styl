@@ -1,0 +1,43 @@
+// Mixins.
+
+m-nl()
+  margin 0
+  padding 0
+  text-indent 0
+  list-style none
+  list-style-position outside
+
+m-cf()
+  &:before, &:after
+    display table
+    content ""
+
+  &:after
+      clear both
+
+  .lt-ie8 &
+      zoom 1
+
+
+m-blocks-justify()
+  text-align justify
+  text-justify newspaper
+
+
+// You can add your own mixins here:
+
+size($width, $height = $width)
+  width $width
+  height $height
+
+gradient()
+  background transparent
+  background -moz-linear-gradient(left, transparent 0%, transparent 50%, #835fa8 50%, #835fa8 100%)
+  background -webkit-linear-gradient(left, transparent 0%, transparent 50%, #835fa8 50%, #835fa8 100%)
+  background linear-gradient(to right, transparent 0%, transparent 50%, #835fa8 50%, #835fa8 100%)
+
+gradient-reverse()
+  background transparent
+  background -moz-linear-gradient(left, #835fa8 0%, #835fa8 50%, transparent 50%, transparent 100%)
+  background -webkit-linear-gradient(left, #835fa8 0%, #835fa8 50%, transparent 50%, transparent 100%)
+  background linear-gradient(to right, #835fa8 0%, #835fa8 50%, transparent 50%, transparent 100%)

@@ -1,0 +1,107 @@
+/* Overlay style */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-violet, .95);
+  z-index 2
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  overflow: hidden;
+  border: none;
+  background: url('%=static=%assets/overlay/cross.png') no-repeat center center
+  text-indent: 200%;
+  color: transparent;
+  outline: none;
+  z-index: 100;
+}
+
+/* Menu style */
+.overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 70%;
+  font-size: 5.4rem;
+  transform: translateY(-50%);
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+
+.overlay ul li {
+  display: block;
+  height: 20%;
+  height: calc(100% / 6);
+  min-height: 5.4rem;
+}
+
+.overlay ul a
+  font-weight 300
+  display block
+  color $color-white
+  transition color .2s
+  text-decoration none
+  text-transform capitalize
+
+.overlay ul li a:hover,
+.overlay ul li a:focus
+  color lighten($color-violet, 50%)
+
+/* Effects */
+.overlay-hugeinc
+  opacity 0
+  visibility hidden
+  transition opacity .5s, visibility 0 .5s
+
+.overlay-hugeinc.open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+
+.overlay-hugeinc nav {
+  // -webkit-perspective: 1200px;
+  // perspective: 1200px;
+}
+
+.overlay-hugeinc nav ul {
+  opacity: 0.4;
+  transform: translateY(-25%) rotateX(35deg);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.overlay-hugeinc.open nav ul {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.overlay-hugeinc.close nav ul {
+  // -webkit-transform: translateY(25%) rotateX(-35deg);
+  // transform: translateY(25%) rotateX(-35deg);
+}
+
+@media screen and (max-height: 30.5em) {
+  .overlay nav {
+    height: 70%;
+    font-size: 3.4rem;
+  }
+  .overlay ul li {
+    min-height: 3.4rem;
+  }
+}

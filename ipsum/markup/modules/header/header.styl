@@ -1,0 +1,119 @@
+.header
+  padding-top 5rem
+  background-color transparent
+  position fixed
+  top 0
+  width 100%
+  z-index 1
+  transform translate(0, 0)
+  transition transform 1s
+
+  &.is-active
+    transform translate(0, -100%)
+
+  &__center
+    max-width $width
+    margin auto
+    padding 0 2rem
+    display flex
+    justify-content space-between
+
+  &__navigation
+    display flex
+    align-items center
+
+    & > .button
+      background-color #835fa8
+      font-family $opensans-semibold
+      font-weight 600
+      font-size 1rem
+      padding 1.6rem 3.2rem
+      margin 0 2rem 0 0
+
+      &:hover
+        background-color lighten(#835fa8, 10%)
+
+      @media screen and (max-width: 450px)
+        display none
+
+  &__search
+    display flex
+    align-items center
+    background-color #343c48
+    border-radius 50em
+    padding 1.5rem 3rem
+    margin 0 1.4rem 0 0
+    transition background-color .2s
+
+    @media screen and (max-width: 450px)
+      display none
+
+    & > input
+      padding 0
+      border none
+      background-color transparent
+      color #9da5b0
+      font-size 1rem
+      font-family $opensans-regular
+      font-weight 400
+      transition width .5s
+
+    &:hover
+      background-color lighten(#343c48, 10%)
+
+    & > .icon-search
+      size(1.4rem)
+
+    // & > .button
+    // @media screen and (max-width: 450px)
+    //   .header__search > .button
+    //     display none
+
+.header__icon
+  display block
+  text-decoration none
+  size(1.8rem)
+  position relative
+  z-index 4
+
+  &.is-hide
+    opacity 0
+    visibility hidden
+
+  &:focus
+  &:active
+    outline none
+
+
+  & > span
+    display block
+    background-color $color-white
+    width 1.8rem
+    height .4rem
+    margin auto
+    position relative
+    border-radius 50em
+    top .7rem
+
+    &::before
+    &::after
+      content ''
+      display block
+      width 1.8rem
+      height .4rem
+      background-color $color-white
+      border-radius 50em
+      position absolute
+      left 0
+      transition all .2s
+
+    &::before
+      top -.7rem
+
+    &::after
+      top .7rem
+
+  // &:hover span::before
+  // &:hover span::after
+  //   top 0
+

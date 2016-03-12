@@ -1,0 +1,57 @@
+mixin conectivity(data)
+  section.conectivity#conectivity
+
+    // TOP ROW
+    .conectivity__top
+      .conectivity__column
+      .conectivity__column
+      .conectivity__center
+        // TOP ROW FIRST COLUMN
+        .conectivity__column
+          h1
+            != jadeHelpers.Icon.call(locals, {iconName: 'connectivy-title', className: 'connectivy-title'})
+            | conectivity
+          h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed saepe cupiditate qui. Dicta eum a porro ducimus fugit, saepe reiciendis?
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet reiciendis expedita, architecto ex, distinctio illum quisquam voluptas adipisci neque pariatur consectetur at doloremque non ratione provident mollitia labore laboriosam facere magni eius impedit. Quis libero, facilis molestias rerum voluptatum, quidem laudantium unde nemo, ex ullam et a! Provident, numquam repudiandae?
+
+    // MIDDLE ROW
+    .conectivity__middle
+      // MIDDLE ROW FIRST ROW
+      .conectivity__row
+        .conectivity__center
+          // MIDDLE ROW FIRST ROW FIRST COLUMN
+          .conectivity__column
+            a.video__button(href="#")
+          // MIDDLE ROW FIRST ROW SECOND COLUMN
+          .conectivity__column
+            .data 12th June 2015
+            blockquote Lorem ipsum dolor sit amet, cotur adipisicing elit sed do eiusmod tempor incididunt ut labore
+            .meta
+              .meta__image
+                img(src="%=static=%img/assets/conectivity/author-image.png" alt="")
+              .meta__name blaz robar
+            a.latest-news(href="#") latest news
+      // MIDDLE ROW SECOND ROW
+      .conectivity__row
+        .conectivity__center
+          // MIDDLE ROW SECOND ROW FIRST COLUMN
+          .conectivity__column
+            h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex possimus porro laboriosam, eveniet sed quis cupiditate, neque voluptas nemo animi impedit aliquid! Ad incidunt ex voluptatem neque tempora, id excepturi fuga a adipisci ipsum blanditiis, magni, voluptas debitis.
+            .conectivity__comments
+              .number 92
+              .comments comments
+          // MIDDLE ROW SECOND ROW SECOND COLUMN
+          .conectivity__column
+
+    // BOTTOM ROW
+    .conectivity__bottom
+      .conectivity__row
+        .conectivity__center
+          // BOTTOM ROW FIRST COLUMN
+          .conectivity__column
+            blockquote Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Nisi ut aliquip ex ea commodo.
+            .meta
+              .meta__image
+                img(src="%=static=%img/assets/conectivity/author-image.png" alt="")
+              .meta__name blaz robar

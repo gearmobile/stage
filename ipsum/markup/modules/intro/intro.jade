@@ -1,0 +1,11 @@
+include ../button/button
+
+mixin intro(data)
+  section.intro#intro
+    .intro__center
+      .intro__content
+        h1.intro__title Super Duper &amp; Such
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, eos fugiat maxime dolore adipisci sapiente? Amet sit soluta nobis saepe veniam reiciendis cum deserunt porro ex incidunt inventore exercitationem sapiente esse magnam quasi optio in laudantium sed vitae atque dolor, eaque suscipit accusantium? Minima quisquam temporibus, ad hic, nulla consectetur.
+        +button('see more')
+      img.intro__image-large(src="%=static=%img/assets/intro/image-large.png", alt="Image Large")
+      img.intro__image-small(src="%=static=%img/assets/intro/image-small.png", alt="Image Small")

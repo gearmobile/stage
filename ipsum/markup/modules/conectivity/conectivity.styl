@@ -1,0 +1,267 @@
+.conectivity__center
+  max-width $width
+  width $width
+  margin auto
+  display flex
+
+.conectivity__column
+  width 50%
+
+
+// TOP SECTION
+// --------------------------------------------
+
+.conectivity__top
+  max-width 100%
+  display flex
+  background-color #e9eef1
+  height 56rem
+  position relative
+
+  & .conectivity__center
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+
+  & .conectivity__column
+  & .conectivity__column
+    width 50%
+
+  & .conectivity__column:nth-child(1)
+    padding 9rem 14rem 0 1rem
+
+    & .connectivy-title
+      margin-right 1.4rem
+
+    & h1
+      font-size 4rem
+      font-weight 300
+      text-transform capitalize
+      line-height 1.2
+      color #2b303b
+      font-family $opensans-light
+      margin 0 0 3rem
+      display flex
+      align-items center
+
+    & h3
+      color #696f7c
+      font-size 2rem
+      line-height 1.5
+      font-weight 300
+      font-family $opensans-light
+      margin 0 0 2rem
+
+    & p
+      color #44474f
+      font-family $opensans-regular
+      font-weight 400
+      font-size 1.4rem
+      line-height 2
+      margin 0
+
+  & .conectivity__column:nth-child(2)
+    background #e9eef1 url('%=static=%assets/conectivity/conectivity-image-01.png') 0 0 no-repeat
+
+
+// MIDDLE SECTION
+// --------------------------------------------
+
+.conectivity__middle
+  background-color #f4f8fb
+
+  // MIDDLE FIRST ROW
+  & .conectivity__row:nth-child(1)
+    min-height 46rem
+    gradient()
+
+    // MIDDLE FIRST ROW FIRST COLUMN
+    & .conectivity__column:nth-child(1)
+      background url('%=static=%assets/conectivity/conectivity-video-bg.png') 50% 50% no-repeat
+      background-size cover
+      position relative
+
+      & .video__button
+        text-decoration none
+        display block
+        background-color #2b303b
+        box-shadow 0 .1rem .1rem 0 rgba(0, 0, 0, .15)
+        width 8.5rem
+        height 5.6rem
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+
+        &::before
+          content ''
+          width 0
+          height 0
+          border-style solid
+          border-width 6px 0 6px 10px
+          border-color transparent transparent transparent $color-white
+          position absolute
+          top 50%
+          left 50%
+          transform translate(-50%, -50%)
+          transition background-color .2s
+
+        &:hover
+          background-color lighten(#2b303b, 10%)
+
+        &:focus
+        &:active
+          outline none
+
+    // MIDDLE FIRST ROW SECOND COLUMN
+    & .conectivity__column:nth-child(2)
+      min-height 46rem
+      background-color #835fa8
+      padding 7rem 0 0 5.5rem
+      color $color-white
+      position relative
+
+      & .data
+        font-size 1.2rem
+        font-style italic
+        margin 0 0 2rem
+
+      & blockquote
+        font-style italic
+        font-size 3.2rem
+        font-family $opensans-light
+        line-height 1.3
+        margin 0 0 3rem
+
+      & .meta
+        display flex
+        align-items center
+
+      & .meta__image
+        border-radius 50%
+        margin-right 2rem
+
+      & .meta__name
+        text-transform capitalize
+        font-size 1.5rem
+
+      & .latest-news
+        padding 1rem 1.6rem 1rem 1.4rem
+        position absolute
+        background-color #232323
+        font-size 1.2rem
+        text-transform capitalize
+        color $color-white
+        text-decoration none
+        position absolute
+        left 0
+        bottom 0
+
+        &:hover
+          background-color lighten(#232323, 10%)
+
+  // MIDDLE SECOND ROW
+  & .conectivity__row:nth-child(2)
+    min-height 30rem
+
+    // MIDDLE SECOND ROW FIRST COLUMN
+    & .conectivity__column:nth-child(1)
+      min-height 30rem
+      padding 4rem 7rem 0 4rem
+      background-color $color-white
+      position relative
+
+      &::after
+        content ''
+        display block
+        width 0
+        height 0
+        border-style solid
+        border-width 1rem 0 1rem .8rem
+        border-color transparent transparent transparent $color-white
+        position absolute
+        right -.8rem
+        top 50%
+        transform translateY(-50%)
+
+      & h3
+        color #232323
+        font-size 2.3rem
+        line-height 1.3
+        font-family $opensans-light
+        font-weight 300
+        margin 0 0 2rem
+
+      & p
+        font-size 1.4rem
+        font-family $opensans-regular
+        color #83969f
+        line-height 1.6
+        margin 0
+
+      & .conectivity__comments
+        display flex
+        align-items center
+        position absolute
+        bottom 0
+        left 4rem
+        padding 1.6rem 0
+        color #83969f
+
+        & .number
+          font-size 3rem
+          font-family $opensans-light
+          font-weight 300
+          padding-right 1.5rem
+          border-right 1px solid #ecece6
+
+        & .comments
+          padding-left 1.5rem
+          text-transform capitalize
+          font-size 1.2rem
+          font-family $opensans-semibold
+          font-weight 600
+
+    // MIDDLE SECOND ROW SECOND COLUMN
+    & .conectivity__column:nth-child(2)
+      min-height 30rem
+      background url('%=static=%assets/conectivity/conectivity-image-02.png') 0 0 no-repeat
+      background-size cover
+
+
+// BOTTOM SECTION
+// ----------------------------------------------
+
+.conectivity__bottom
+  min-height 75rem
+  background url('%=static=%assets/conectivity/conectivity-image-03.png') center center no-repeat
+  background-size cover
+
+  & .conectivity__row
+    gradient-reverse()
+
+  & .conectivity__column
+    background-color #835fa8
+    min-height 46.3rem
+    padding 9rem 20rem 0 0
+    color $color-white
+
+    & blockquote
+      font-style italic
+      font-size 3.2rem
+      font-family $opensans-light
+      line-height 1.3
+      margin 0 0 3rem
+
+    & .meta
+      display flex
+      align-items center
+
+    & .meta__image
+      border-radius 50%
+      margin-right 2rem
+
+    & .meta__name
+      text-transform capitalize
+      font-size 1.5rem

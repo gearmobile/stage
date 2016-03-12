@@ -1,0 +1,39 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../modules/overlay/overlay
+    include ../modules/head/head
+    include ../modules/header/header
+    include ../modules/hero/hero
+    include ../modules/intro/intro
+    include ../modules/features/features
+    include ../modules/design/design
+    include ../modules/conectivity/conectivity
+    include ../modules/footer/footer
+    include ../modules/button-up/button-up
+
+    head
+        +head(head.defaults)
+    body.page
+        |%=symbols=%
+
+        section.page__wrapper
+            +header()
+            +hero()
+            +intro()
+            +features()
+            +design()
+            +conectivity()
+            .page__buffer
+
+        .page__footer
+            +footer()
+
+        +overlay()
+        +button-up()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

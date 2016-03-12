@@ -1,0 +1,125 @@
+.footer
+  background-color #1a2124
+  padding 10rem 0 15rem
+
+  @media screen and (max-width: 768px)
+    padding 10rem 0
+
+  &__center
+    max-width $width
+    margin auto
+    padding 0 1rem
+    color $color-white
+
+    & h4
+      font-size 1.5rem
+      margin 0 0 3rem
+      font-family $opensans-semibold
+      text-transform capitalize
+
+    & p
+      font-size 1.3rem
+      line-height 1.8
+      margin 0
+
+      @media screen and (max-width: 768px)
+        padding 0 4rem
+
+  &__primary
+  &__secondary
+    display flex
+
+    @media screen and (max-width: 768px)
+      display block
+
+  &__primary
+    margin 0 0 3rem
+
+    @media screen and (max-width: 768px)
+      margin 0 0 5rem
+
+  &__primary > .footer__column:first-child
+    margin 0 5rem 0 0
+
+    @media screen and (max-width: 768px)
+      margin 0 0 5rem 0
+      text-align center
+      width 100%
+
+  &__primary > .footer__column:last-child
+    margin 0 0 0 5rem
+
+    @media screen and (max-width: 768px)
+      margin 0
+      width 100%
+      text-align center
+
+  &__secondary > .footer__column
+    display flex
+
+    @media screen and (max-width: 500px)
+      display block
+
+  &__column
+    width 50%
+
+    @media screen and (max-width: 768px)
+      width 100%
+
+  &__subcolumn
+    width 33.33%
+
+    @media screen and (max-width: 768px)
+      text-align center
+
+    @media screen and (max-width: 500px)
+      width 100%
+
+      &:not(:last-child)
+        margin-bottom 5rem
+
+    & li
+      margin-bottom 1rem
+
+      &:last-child
+        margin-bottom 0
+
+      & a
+        text-decoration none
+        color $color-white
+        font-size 1.3rem
+        font-family $opensans-regular
+        text-transform capitalize
+
+        &:hover
+          text-decoration underline
+
+
+  &__submit
+    margin 0 0 2rem
+    border-radius .2rem
+    display flex
+
+    & > input
+    & > span
+      padding 2rem 2rem 2rem 2.5rem
+      transition background-color .4s
+
+    & > input
+      border none
+      background-color #f6f7fa
+      flex 1
+      color #835fa8
+      font-family $opensans-semibold
+      border-radius .2rem 0 0 .2rem
+
+      &:hover + span
+        background-color darken(#835fa8, 10%)
+
+      &:focus + span
+        background-color darken(#835fa8, 20%)
+
+    & > span
+      display block
+      background-color #835fa8
+      border-radius 0 .2rem .2rem 0

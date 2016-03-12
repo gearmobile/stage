@@ -1,0 +1,14 @@
+include ../button/button
+
+mixin header(data)
+  header.header
+    .header__center
+      a.header__logo(href="#")
+        != jadeHelpers.Icon.call(locals, {iconName: 'logo', className: 'icon-logo'})
+      nav.header__navigation
+        .header__search
+          input(type="search" placeholder="Search website" name="search" id="search")
+          != jadeHelpers.Icon.call(locals, {iconName: 'search', className: 'icon-search'})
+        +button('buy $21')
+        a.header__icon(href="#")
+          span

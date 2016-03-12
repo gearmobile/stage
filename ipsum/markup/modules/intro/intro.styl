@@ -1,0 +1,53 @@
+.intro
+  background-color $color-bg-intro
+  padding 8rem 0 20rem
+
+  @media screen and (max-width: 768px)
+    padding 8rem 0
+
+  &__center
+    max-width $width
+    margin auto
+    padding 0 1rem
+    display flex
+    position relative
+
+  &__content
+    max-width 40%
+
+    @media screen and (max-width: 768px)
+      padding 0 1rem
+      max-width 100%
+      text-align center
+
+  &__title
+    font-family $opensans-light
+    font-weight 300
+    font-size 2.5rem
+    line-height 1.2
+    color $color-white
+    text-transform capitalize
+    margin 0 0 2.6rem
+
+  & p
+    font-size 1.2rem
+    color $color-white
+    line-height 1.6
+    margin 0 0 3.6rem
+
+  &__image-large
+  &__image-small
+    display block
+    position absolute
+    bottom -20rem
+
+    @media screen and (max-width: 768px)
+      display none
+
+  &__image-large
+    left 65%
+    z-index 2
+
+  &__image-small
+    z-index 1
+    left 44%

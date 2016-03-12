@@ -1,0 +1,27 @@
+.button-up
+  size(5rem)
+  border-radius 50em
+  background-color $color-violet
+  position fixed
+  bottom 2rem
+  right 2rem
+  z-index 5
+  transition transform 1s, background-color .2s, opacity 1s, visibility 1s
+  box-shadow 0 0 1rem .2rem rgba($color-black, .4)
+
+  &.is-out
+    transform translate(200%, 0)
+    opacity 0
+    visibility hidden
+
+  &.is-in
+    transform translate(0, 0)
+    opacity 1
+    visibility visible
+
+  &:hover
+    background-color lighten($color-violet, 10%)
+
+  &:focus
+  &:active
+    outline none

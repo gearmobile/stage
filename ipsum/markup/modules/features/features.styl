@@ -1,0 +1,52 @@
+.features
+  padding 6rem 0
+  background-color $color-bg-features
+
+  &__center
+    display flex
+    justify-content center
+    margin auto
+    max-width $width
+
+    @media screen and (max-width: 768px)
+      display block
+
+  &__column
+    max-width 33.33%
+    padding 0 1rem 6rem
+    position relative
+
+    @media screen and (max-width: 768px)
+      max-width 100%
+      text-align center
+
+      &:not(:last-child)
+        margin-bottom 4%
+
+    & > .button
+      position absolute
+      left 1rem
+      bottom 0
+
+      @media screen and (max-width: 768px)
+        position static
+        margin-top 4rem
+
+  &__title
+    text-transform capitalize
+    font-size 2rem
+    line-height 1.2
+    color $color-blue-dark
+    margin 0 0 3rem
+
+  &__subtitle
+    color $color-blue-dark-two
+    font-size 1.2rem
+    line-height 1.5
+    margin 0 0 3rem
+
+  & p
+    color $color-blue-dark-three
+    line-height 2
+    font-size 1.2rem
+    margin 0 0 1rem
