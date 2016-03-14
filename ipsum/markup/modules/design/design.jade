@@ -1,3 +1,5 @@
+include ../button-design/button-design
+
 mixin design(data)
   section.design#desing
     .design__primary
@@ -8,8 +10,10 @@ mixin design(data)
           header
             span
           main
-            a.desing__button(href="#") design win
-        .desing__button
+            //- from 768px
+            +button-design()
+        //- to 768px
+        +button-design()
     .design__secondary
       .design__content
         .design__column

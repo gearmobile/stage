@@ -7,6 +7,9 @@
     padding-top 10rem
     background-color $color-bg-design
 
+    @media screen and (max-width: 768px)
+      padding 6rem 0
+
   &__center
     max-width $width
     margin auto
@@ -18,13 +21,16 @@
     color $color-white
     line-height 1.2
     text-transform capitalize
-    margin 0 0 4rem
+    margin 0 0 6rem
 
   & p
     color $color-grey
     font-size 1.3rem
     line-height 1.8
     margin 0 0 9rem
+
+    @media screen and (max-width: 768px)
+      margin 0 0 4rem
 
 
   // BLOCK PROMO
@@ -37,13 +43,16 @@
     padding-bottom 26%
     position relative
 
-    & > header
-    & > main
+    @media screen and (max-width: 768px)
+      display none
+
+    & header
+    & main
       width 100%
       position absolute
       left 0
 
-    & > header
+    & header
       top 0
       height 10%
       background-color #2b303b
@@ -51,37 +60,25 @@
       align-items center
       padding 0 2rem
 
-      & > span
+      & span
         display block
         size(1rem)
         border-radius 50%
         background-color #434955
         box-shadow 1.5rem 0 0 #434955, 3rem 0 0 #434955
 
-    & > main
+    & main
       top 10%
       height 82%
       background url('%=static=%assets/design/promo-image.png') 50% 50% no-repeat
       background-size cover
 
-      & > .desing__button
-        display block
+      // button design from 768px
+      & > .button-design
         position absolute
         top 50%
         left 50%
         transform translate(-50%, -50%)
-        padding 2.2rem 3.4rem
-        border .2rem solid $color-white
-        color $color-white
-        text-transform uppercase
-        text-decoration none
-        font-size 1.5rem
-        transition background-color .2s, color .2s
-
-        &:hover
-          background-color $color-white
-          color $color-black
-
 
 
   // SECONDARY PART
@@ -132,3 +129,17 @@
 
       @media screen and (max-width: 768px)
         margin 0
+
+
+// DESING BUTTON TO 768PX
+@media screen and (max-width: 768px)
+
+  .design__center > .button-design
+    display inline-block
+
+
+// DESING BUTTON FROM 768PX
+@media screen and (min-width: 768px)
+
+  .design__center > .button-design
+    display none
