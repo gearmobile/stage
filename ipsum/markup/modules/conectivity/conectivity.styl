@@ -12,27 +12,28 @@
 // --------------------------------------------
 
 .conectivity__top
-  max-width 100%
-  display flex
   background-color #e9eef1
-  height 56rem
-  position relative
 
   & .conectivity__center
-    position absolute
-    top 50%
-    left 50%
-    transform translate(-50%, -50%)
+    display flex
+    justify-content center
 
-  & .conectivity__column
-  & .conectivity__column
-    width 50%
+    @media screen and (max-width 980px)
+      flex-direction column
 
   & .conectivity__column:nth-child(1)
-    padding 9rem 14rem 0 1rem
+    width 50%
+    display flex
+    flex-direction column
+    justify-content center
+    padding 1rem
+
+    @media screen and (max-width 980px)
+      width 100%
+      padding 6rem 1rem
 
     & .connectivy-title
-      margin-right 1.4rem
+      margin 0 1.4rem 0 0
 
     & h1
       font-size 4rem
@@ -58,12 +59,18 @@
       font-family $opensans-regular
       font-weight 400
       font-size 1.4rem
-      line-height 2
+      line-height 1.8
       margin 0
 
   & .conectivity__column:nth-child(2)
     background #e9eef1 url('%=static=%assets/conectivity/conectivity-image-01.png') 0 0 no-repeat
+    background-size cover
+    width 50%
+    height calc(7/16*100vw)
 
+    @media screen and (max-width 980px)
+      width 100%
+      height calc(8/16*100vw)
 
 // MIDDLE SECTION
 // --------------------------------------------
@@ -73,14 +80,26 @@
 
   // MIDDLE FIRST ROW
   & .conectivity__row:nth-child(1)
-    min-height 46rem
     gradient()
+
+    @media screen and (max-width 980px)
+      background-color $color-violet
+
+    & .conectivity__center
+      @media screen and (max-width 980px)
+        display flex
+        justify-content center
+        flex-direction column
 
     // MIDDLE FIRST ROW FIRST COLUMN
     & .conectivity__column:nth-child(1)
       background url('%=static=%assets/conectivity/conectivity-video-bg.png') 50% 50% no-repeat
       background-size cover
       position relative
+
+      @media screen and (max-width 980px)
+        height calc(3/4*100vw)
+        width 100%
 
       & .video__button
         text-decoration none
@@ -116,27 +135,45 @@
 
     // MIDDLE FIRST ROW SECOND COLUMN
     & .conectivity__column:nth-child(2)
-      min-height 46rem
       background-color #835fa8
       padding 7rem 0 0 5.5rem
       color $color-white
       position relative
+
+      @media screen and (max-width 980px)
+        width 100%
+        padding 6rem 2rem 6rem 2rem
+
+      @media screen and (max-width 768px)
+        text-align center
 
       & .data
         font-size 1.2rem
         font-style italic
         margin 0 0 2rem
 
+        @media screen and (max-width 768px)
+          font-size 1rem
+
       & blockquote
         font-style italic
         font-size 3.2rem
         font-family $opensans-light
-        line-height 1.3
+        line-height 1.4
         margin 0 0 3rem
+
+        @media screen and (max-width 980px)
+          font-size 2.8rem
+
+        @media screen and (max-width 768px)
+          font-size 2rem
 
       & .meta
         display flex
         align-items center
+
+        @media screen and (max-width 768px)
+          justify-content center
 
       & .meta__image
         border-radius 50%
@@ -158,19 +195,33 @@
         left 0
         bottom 0
 
+        @media screen and (max-width 980px)
+          left 50%
+          transform translateX(-50%)
+
         &:hover
           background-color lighten(#232323, 10%)
 
   // MIDDLE SECOND ROW
   & .conectivity__row:nth-child(2)
-    min-height 30rem
+    display flex
 
     // MIDDLE SECOND ROW FIRST COLUMN
     & .conectivity__column:nth-child(1)
-      min-height 30rem
+      display flex
+      flex-direction column
+      justify-content center
       padding 4rem 7rem 0 4rem
       background-color $color-white
       position relative
+
+      @media screen and (max-width 980px)
+        width 100%
+        padding 4rem 4rem 2rem 4rem
+
+      @media screen and (max-width 768px)
+        text-align center
+        padding 6rem 2rem 4rem 2rem
 
       &::after
         content ''
@@ -185,29 +236,35 @@
         top 50%
         transform translateY(-50%)
 
+        @media screen and (max-width 980px)
+          display none
+
       & h3
         color #232323
         font-size 2.3rem
-        line-height 1.3
+        line-height 1.4
         font-family $opensans-light
         font-weight 300
         margin 0 0 2rem
+
+        @media screen and (max-width 768px)
+          margin 0 0 4rem
 
       & p
         font-size 1.4rem
         font-family $opensans-regular
         color #83969f
         line-height 1.6
-        margin 0
+        margin 0 0 5rem
 
       & .conectivity__comments
         display flex
         align-items center
-        position absolute
-        bottom 0
-        left 4rem
-        padding 1.6rem 0
+        padding 0 0 1.4rem
         color #83969f
+
+        @media screen and (max-width 768px)
+          justify-content center
 
         & .number
           font-size 3rem
@@ -225,10 +282,11 @@
 
     // MIDDLE SECOND ROW SECOND COLUMN
     & .conectivity__column:nth-child(2)
-      min-height 30rem
       background url('%=static=%assets/conectivity/conectivity-image-02.png') 0 0 no-repeat
       background-size cover
 
+      @media screen and (max-width 980px)
+        display none
 
 // BOTTOM SECTION
 // ----------------------------------------------
