@@ -5,9 +5,6 @@
 	left 0
 	width 100%
 
-	+below($bp1)
-		display none
-
 	&__center
 		margin auto
 		padding 4rem 1rem 3rem
@@ -37,6 +34,9 @@
 		justify-content space-between
 		align-items center
 
+		+below($bp1)
+			display none
+
 		& > a
 			margin 0 2rem
 			font-size 1.3rem
@@ -51,6 +51,9 @@
 		display flex
 		justify-content center
 		align-items center
+
+		+below($bp1)
+			display none
 
 		& a
 			padding .8rem 2.6rem .9rem

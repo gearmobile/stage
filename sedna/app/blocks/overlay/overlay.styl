@@ -1,0 +1,99 @@
+// OVERLAY STYLE
+// -----------------------------------------------------
+
+.overlay
+	position fixed
+	top 0
+	left 0
+	width 100%
+	height 100%
+	background rgba(153, 204, 51, .9)
+	z-index 5
+
+
+// OVERLAY CLOSING CROSS
+// -----------------------------------------------------
+
+.overlay .overlay__close
+	position absolute
+	z-index 100
+	top 20px
+	right 20px
+	overflow hidden
+	size(4rem)
+	text-indent 200%
+	color transparent
+	background url(../img/cross.png) no-repeat center center
+	border none
+	outline none
+	background-color #000
+
+	&:hover
+		background-color lighten(#000, 10%)
+
+
+// MENU STYLE
+// -----------------------------------------------------
+
+.overlay nav
+	position relative
+	top 50%
+	height 60%
+	text-align center
+	transform translateY(-50%)
+
+
+.overlay ul
+	position relative
+	// margin 0 auto
+	// padding 0
+	display inline-block
+	height 100%
+	// list-style none
+
+
+.overlay ul li
+	display block
+	height 20%
+	height calc(100%/4)
+	min-height 54px
+	backface-visibility hidden
+
+
+.overlay ul li a
+	display block
+	font-size 54px
+	font-weight 300
+	color $color-white
+	transition color .2s
+
+
+.overlay ul li ahover,
+.overlay ul li afocus
+	color #e3fcb1
+
+
+// EFFECTS
+// ------------------------------------
+
+.overlay--slidedown
+	visibility hidden
+	transition transform .4s ease-in-out, visibility 0 .4s
+	transform translateY(-100%)
+
+
+.overlay--slidedown.open
+	visibility visible
+	transition transform .4s ease-in-out
+	transform translateY(0%)
+
+
+@media screen and (max-height 3.5em)
+	.overlay nav
+		height 70%
+		font-size 34px
+
+	.overlay ul li
+		min-height 34px
+
+

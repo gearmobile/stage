@@ -1,10 +1,6 @@
-include ../header-mobile/header-mobile
-include ../header-logo/header-logo
-
 mixin header()
-	+b.header&attributes(attributes)
+	+b.header
 		header.header#header
-			+header-logo()
 			.swiper-container
 				.swiper-wrapper
 					.swiper-slide
@@ -22,4 +18,3 @@ mixin header()
 					a.header__button(href="#{jv0}") download for free
 					a.header__button(href="#{jv0}") learn more
 			a.header__arrow(href="#{jv0}")
-			+header-mobile()

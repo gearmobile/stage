@@ -2,6 +2,7 @@ include /../node_modules/bemto.jade/bemto
 include /../node_modules/jade-injected/jade-injected
 include ../page/page
 include ../header-fixed/header-fixed
+include ../overlay/overlay
 include ../header/header
 include ../box/box
 include ../footer/footer
@@ -13,6 +14,7 @@ html(lang='ru')
 	include ../head/head
 	+page
 		+box
+			+overlay()
 			+header-fixed()
 			+header
 			block content

@@ -10,21 +10,18 @@ $(() => {
 	// HEADER MOBILE
 	// ------------------------------------------------
 
-	const $headerMobileNav = $('.header-mobile__nav');
-	const $headerMobileButton = $('.header-mobile__button');
-	const $headerMobileLinks = $headerMobileNav.find('a');
+	const $headerIcon = $('.header-icon');
+	const $overlay = $('.overlay');
+	const $overlayClose = $('.overlay__close');
 
-	// SHOW \ HIDE MOBILE MENU
-
-	$headerMobileButton.on('click', function (event) {
-		event.preventDefault();
-		$headerMobileNav.toggleClass('header-mobile__nav--active');
+	$headerIcon.on('click', () => {
+		$overlay.addClass('open');
+		// $(this).delay(500).addClass('is-hidden');
 	});
 
-	// HIDE MOBILE MENU
-
-	$headerMobileLinks.on('click', function () {
-		$(this).parent().removeClass('header-mobile__nav--active');
+	$overlayClose.on('click', () => {
+		$overlay.removeClass('open');
+		// $headerIcon.removeClass('is-hidden');
 	});
 
 
@@ -37,7 +34,7 @@ $(() => {
 	const $headerFixedLinks = $headerFixedNavigation.find('a');
 	const $indexBlocks = $('.index > div');
 
-	$(window).on('scroll', function () {
+	$(window).on('scroll', () => {
 		if ( $(this).scrollTop() > 0 ) {
 			$headerFixedCenter.addClass('header-fixed__center--active');
 		} else {
@@ -49,7 +46,7 @@ $(() => {
 	// TOGGLE TOP MENU LINKS ACTIVE
 	// --------------------------------------------------
 
-	$headerFixedLinks.on('click', function () {
+	$headerFixedLinks.on('click', () => {
 		const $targetID = $(this).attr('href').replace('#', '');
 		$(this).addClass('is-active').siblings().removeClass('is-active');
 		$indexBlocks.each( function () {
@@ -64,7 +61,7 @@ $(() => {
 	// ------------------------------------------------
 
 	$(function () {
-		$('a[href*="#"]:not([href="#"])').on('click', function () {
+		$('a[href*="#"]:not([href="#"])').on('click', () => {
 			if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
 				let target = $(this.hash);
 				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -106,7 +103,7 @@ $(() => {
 	const $promoImageOne = $promoBlock.find('.promo__image--one');
 	const $promoImageTwo = $promoBlock.find('.promo__image--two');
 
-	$(window).on('scroll', function () {
+	$(window).on('scroll', () => {
 		if ( $(this).scrollTop() > $promoBlock.offset().top - ( $(this).height() / 3 ) * 2 ) {
 			$promoImageOne.css('animation-name', 'fadeInUp');
 			$promoImageTwo.css('animation-name', 'fadeInUp');
@@ -138,7 +135,7 @@ $(() => {
 	// -------------------------------------------------
 
 	const $toTopButton = $('.to-top-button');
-	$toTopButton.on('click', function () {
+	$toTopButton.on('click', () => {
 		$('html, body').stop().animate({scrollTop: 0}, 2000);
 	});
 
