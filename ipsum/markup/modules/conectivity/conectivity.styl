@@ -17,23 +17,33 @@
   & .conectivity__center
     display flex
     justify-content center
+    padding 0
 
     @media screen and (max-width 980px)
       flex-direction column
 
+
+  // FIRST COLUMN
+  // -----------------------------------------
   & .conectivity__column:nth-child(1)
     width 50%
     display flex
     flex-direction column
     justify-content center
-    padding 1rem
+    padding 0 2rem
 
     @media screen and (max-width 980px)
       width 100%
-      padding 6rem 1rem
+      padding 6rem 2rem
+
+    @media screen and (max-width 768px)
+      text-align center
 
     & .connectivy-title
       margin 0 1.4rem 0 0
+
+      @media screen and (max-width 500px)
+        margin 0 0 2rem 0
 
     & h1
       font-size 4rem
@@ -46,6 +56,13 @@
       display flex
       align-items center
 
+      @media screen and (max-width 768px)
+        justify-content center
+
+      @media screen and (max-width 500px)
+        font-size 3rem
+        flex-direction column
+
     & h3
       color #696f7c
       font-size 2rem
@@ -53,6 +70,12 @@
       font-weight 300
       font-family $opensans-light
       margin 0 0 2rem
+
+      @media screen and (max-width 980px)
+        margin 0 0 4rem
+
+      @media screen and (max-width 500px)
+        font-size 1.6rem
 
     & p
       color #44474f
@@ -62,21 +85,26 @@
       line-height 1.8
       margin 0
 
+
+  // SECOND COLUMN
+  // -----------------------------------------
   & .conectivity__column:nth-child(2)
-    background #e9eef1 url('%=static=%assets/conectivity/conectivity-image-01.png') 0 0 no-repeat
-    background-size cover
     width 50%
     height calc(7/16*100vw)
+    max-height 56rem
+    background #e9eef1 url('%=static=%assets/conectivity/conectivity-image-01.png') 50% 50% no-repeat
+    background-size cover
 
     @media screen and (max-width 980px)
       width 100%
-      height calc(8/16*100vw)
+      height calc(9/16*100vw)
 
 // MIDDLE SECTION
 // --------------------------------------------
 
 .conectivity__middle
   background-color #f4f8fb
+
 
   // MIDDLE FIRST ROW
   & .conectivity__row:nth-child(1)
@@ -90,6 +118,7 @@
         display flex
         justify-content center
         flex-direction column
+
 
     // MIDDLE FIRST ROW FIRST COLUMN
     & .conectivity__column:nth-child(1)
@@ -132,6 +161,7 @@
         &:focus
         &:active
           outline none
+
 
     // MIDDLE FIRST ROW SECOND COLUMN
     & .conectivity__column:nth-child(2)
@@ -202,9 +232,11 @@
         &:hover
           background-color lighten(#232323, 10%)
 
+
   // MIDDLE SECOND ROW
   & .conectivity__row:nth-child(2)
     display flex
+
 
     // MIDDLE SECOND ROW FIRST COLUMN
     & .conectivity__column:nth-child(1)
@@ -280,6 +312,7 @@
           font-family $opensans-semibold
           font-weight 600
 
+
     // MIDDLE SECOND ROW SECOND COLUMN
     & .conectivity__column:nth-child(2)
       background url('%=static=%assets/conectivity/conectivity-image-02.png') 0 0 no-repeat
@@ -287,6 +320,7 @@
 
       @media screen and (max-width 980px)
         display none
+
 
 // BOTTOM SECTION
 // ----------------------------------------------
