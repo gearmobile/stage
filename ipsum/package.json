@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "directories": {},
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "lost": "^6.7.2"
   },
   "devDependencies": {},
   "scripts": {

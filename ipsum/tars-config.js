@@ -5,7 +5,15 @@ module.exports = {
         "Firefox ESR",
         "android 4"
     ],
-    "postcss": [],
+    "postcss": [
+        {
+            "name": "lost",
+            "options": {
+                "flexbox": "flex",
+                "gutter": "30px"
+            }
+        }
+    ],
     // конфиг для работы с svg-графикой
     "svg": {
         "active": true, // Включение поддержки svg в проекте

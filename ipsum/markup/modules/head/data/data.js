@@ -1,6 +1,6 @@
 head: {
     defaults: {
-        title: 'Ipsum',
+        title: 'Tork',
         useSocialMetaTags: true
     }
 }

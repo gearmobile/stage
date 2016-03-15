@@ -1,5 +1,5 @@
 .header
-  padding-top 5rem
+  padding 5rem 0 0 0
   background-color transparent
   position fixed
   top 0
@@ -7,6 +7,9 @@
   z-index 1
   transform translate(0, 0)
   transition transform 1s
+
+  @media screen and (max-width 500px)
+    padding 2rem 0 0 0
 
   &.is-active
     transform translate(0, -100%)
@@ -17,6 +20,10 @@
     padding 0 2rem
     display flex
     justify-content space-between
+
+    @media screen and (max-width 500px)
+      justify-content center
+      position relative
 
   &__navigation
     display flex
@@ -33,7 +40,7 @@
       &:hover
         background-color lighten(#835fa8, 10%)
 
-      @media screen and (max-width: 450px)
+      @media screen and (max-width 500px)
         display none
 
   &__search
@@ -45,7 +52,7 @@
     margin 0 1.4rem 0 0
     transition background-color .2s
 
-    @media screen and (max-width: 450px)
+    @media screen and (max-width 500px)
       display none
 
     & > input
@@ -64,17 +71,25 @@
     & > .icon-search
       size(1.4rem)
 
-    // & > .button
-    // @media screen and (max-width: 450px)
-    //   .header__search > .button
-    //     display none
+
+// HEADER ICON
+// ---------------------------------------------
 
 .header__icon
   display block
+  size(3rem)
   text-decoration none
-  size(1.8rem)
   position relative
   z-index 4
+
+  @media screen and (max-width 500px)
+    position absolute
+    top 0
+    right 2rem
+    transition transform .2s
+
+    &:hover
+      transform rotate(-90deg)
 
   &.is-hide
     opacity 0
@@ -84,22 +99,24 @@
   &:active
     outline none
 
-
   & > span
     display block
     background-color $color-white
-    width 1.8rem
+    // width 1.8rem
+    width 3rem
     height .4rem
     margin auto
     position relative
     border-radius 50em
-    top .7rem
+    // top .7rem
+    top 1.3rem
 
     &::before
     &::after
       content ''
       display block
-      width 1.8rem
+      // width 1.8rem
+      width 3rem
       height .4rem
       background-color $color-white
       border-radius 50em
@@ -108,12 +125,10 @@
       transition all .2s
 
     &::before
-      top -.7rem
+      // top -.7rem
+      top -1.2rem
 
     &::after
-      top .7rem
-
-  // &:hover span::before
-  // &:hover span::after
-  //   top 0
+      // top .7rem
+      top 1.2rem
 

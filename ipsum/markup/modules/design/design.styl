@@ -88,24 +88,27 @@
     padding 8rem 0 16rem
     background-color #2b303b
 
-    @media screen and (max-width: 768px)
+    @media screen and (max-width 980px)
       padding 10rem 0
 
   &__content
-    max-width $width
-    margin auto
+    lost-center $width
     padding 0 1rem
-    display flex
 
-    @media screen and (max-width: 768px)
+    @media screen and (max-width 768px)
       display block
 
   &__column
-    max-width calc(100% / 4)
+    lost-column 3/12
     padding 0 2rem
 
-    @media screen and (max-width: 768px)
-      max-width 100%
+    @media screen and (max-width 980px)
+      lost-column 6/12
+      lost-column-cycle 2
+
+    @media screen and (max-width 768px)
+      lost-column 1/1
+      lost-column-cycle 0
       text-align center
 
       &:not(:last-child)
