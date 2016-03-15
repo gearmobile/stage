@@ -1,11 +1,10 @@
 .conectivity__center
-  max-width $width
-  margin auto
-  display flex
+  lost-center $width
   padding 0 1rem
 
 .conectivity__column
-  width 50%
+  lost-column 6/12
+  lost-column-gutter 0
 
 
 // TOP SECTION
@@ -15,7 +14,6 @@
   background-color #e9eef1
 
   & .conectivity__center
-    display flex
     justify-content center
     padding 0
 
@@ -27,14 +25,13 @@
   // -----------------------------------------
 
   & .conectivity__column:nth-child(1)
-    width 50%
     display flex
     flex-direction column
     justify-content center
     padding 0 2rem
 
     @media screen and (max-width 980px)
-      width 100%
+      lost-column 1/1
       padding 6rem 2rem
 
     @media screen and (max-width 768px)
@@ -91,7 +88,7 @@
   // -----------------------------------------
 
   & .conectivity__column:nth-child(2)
-    width 50%
+    // width 50%
     height calc(7/16*100vw)
     max-height 56rem
     background #e9eef1 url('%=static=%assets/conectivity/conectivity-image-01.png') 50% 50% no-repeat
@@ -264,10 +261,10 @@
       position relative
 
       @media screen and (max-width 980px)
-        width 100%
         padding 4rem 4rem 2rem 4rem
 
       @media screen and (max-width 768px)
+        width 100%
         text-align center
         padding 6rem 2rem 4rem 2rem
 
