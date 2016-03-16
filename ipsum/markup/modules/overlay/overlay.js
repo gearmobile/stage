@@ -1,7 +1,7 @@
 $( () => {
 
     const $overlay = $('.overlay');
-    const $overlayBtn = $overlay.find('.overlay-close');
+    const $overlayBtn = $overlay.find('.overlay__button');
     const $overlayLinks = $overlay.find('.overlay__link');
     const $headerIcon = $('.header__icon');
 

@@ -7,14 +7,14 @@
   height 100%
   top 0
   left 0
-  background-color rgba($color-violet, .95)
+  background-color rgba($color-violet, .3)
   z-index 2
 
 
 // OVERLAY CLOSING CROSS
 // -----------------------------------------------
 
-.overlay .overlay-close
+.overlay__button
   size(3rem)
   position absolute
   right 2rem
@@ -26,35 +26,47 @@
   color transparent
   outline none
   z-index 100
+  transition transform .2s
+
+  &:hover
+    transform rotate(-45deg)
 
 
 // MENU STYLE
 // ----------------------------------
 
-.overlay nav
+.overlay__navigation
   text-align center
   position relative
   top 50%
-  height 70%
-  font-size 4rem
+  height 60%
+  font-size 5.4rem
   transform translateY(-50%)
 
+  @media screen and (max-width 980px)
+    font-size 4rem
 
-.overlay ul
+  @media screen and (max-width 980px)
+    font-size 3rem
+
+
+.overlay__list
   margin 0 auto
   display inline-block
   height 100%
   position relative
 
 
-.overlay ul li
+.overlay__item
   display block
   height 20%
+  // height calc(100% / 5)
   height calc(100% / 6)
+  // min-height 54px
   min-height 5.4rem
 
 
-.overlay ul a
+.overlay__link
   font-weight 300
   display block
   color $color-white
@@ -62,9 +74,11 @@
   text-decoration none
   text-transform capitalize
 
-.overlay ul li a:hover,
-.overlay ul li a:focus
-  color lighten($color-violet, 50%)
+
+.overlay__link:hover,
+.overlay__link:focus
+  color $color-blue
+
 
 // EFFECTS
 // ---------------------------------------
@@ -72,7 +86,8 @@
 .overlay-hugeinc
   opacity 0
   visibility hidden
-  transition opacity .5s, visibility 0 .5s
+  transition opacity .5s, visibility 0s .5s
+
 
 .overlay-hugeinc.open
   opacity 1
@@ -80,32 +95,34 @@
   transition opacity .5s
 
 
-.overlay-hugeinc nav
-  // -webkit-perspective 1200px
+.overlay-hugeinc .overlay__navigation
+  -webkit-perspective 1200px
   perspective 1200px
 
 
-.overlay-hugeinc nav ul
+.overlay-hugeinc .overlay__list
   opacity .4
   transform translateY(-25%) rotateX(35deg)
   transition transform .5s, opacity .5s
 
 
-.overlay-hugeinc.open nav ul
+.overlay-hugeinc.open .overlay__list
   opacity 1
   transform rotateX(0deg)
 
 
-.overlay-hugeinc.close nav ul
+.overlay-hugeinc.close .overlay__list
   transform translateY(25%) rotateX(-35deg)
 
 
-@media screen and (max-height 3.5em)
-  .overlay nav
-    height 70%
-    font-size 3.4rem
+@media screen and (max-height 30.5em)
+  .overlay .overlay__navigation
+    height: 70%
+    // font-size: 34px
+    font-size: 3.4rem
 
-  .overlay ul li
-    min-height 3.4rem
+  .overlay .overlay__item
+    // min-height: 34px
+    min-height: 3.4rem
 
 
