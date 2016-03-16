@@ -1,7 +1,7 @@
 $( () => {
 
     const $overlay = $('.overlay');
-    const $overlayBtn = $overlay.find('.overlay__button');
+    const $overlayButton = $overlay.find('.overlay__button');
     const $overlayLinks = $overlay.find('.overlay__link');
     const $headerIcon = $('.header__icon');
 
@@ -12,18 +12,23 @@ $( () => {
         }
     });
 
-    $overlayBtn.on('click', () => {
+    $overlayButton.on('click', () => {
         if ( $overlay.hasClass('open') ) {
             $overlay.removeClass('open');
             $headerIcon.removeClass('is-hide');
         }
     });
 
-    $overlayLinks.on('click', (event) => {
-        event.preventDefault();
-        $('html, body').stop().animate({scrollTop: $( $(this).attr('href') ).offset().top}, 1000, 'swing');
-        $overlay.delay(500).removeClass('open');
-        $headerIcon.removeClass('is-hide');
+    $overlayLinks.on('click', () => {
+        if ( $overlay.hasClass('open') ) {
+            $overlay.removeClass('open');
+            $headerIcon.removeClass('is-hide');
+        }
+    });
+
+    $overlayLinks.smoothScroll({
+        speed: 'auto',
+        easing: 'swing'
     });
 
 });

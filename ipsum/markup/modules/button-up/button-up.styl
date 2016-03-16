@@ -1,12 +1,11 @@
 .button-up
   size(5rem)
   border-radius 50em
-  // background-color $color-violet
   background-color $color-blue
   position fixed
   bottom 2rem
   right 2rem
-  z-index 5
+  z-index 6
   transition transform 1s, background-color .2s, opacity 1s, visibility 1s
   box-shadow 0 0 1rem .2rem rgba($color-black, .4)
 
@@ -21,7 +20,6 @@
     visibility visible
 
   &:hover
-    // background-color lighten($color-violet, 10%)
     background-color lighten($color-blue, 10%)
 
   &:focus
