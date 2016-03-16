@@ -1,6 +1,54 @@
+.testimonials
+  color $color-white
+
+// TESTIMONIALS PRIMARY SECTION
+// --------------------------------------------
+
 .testimonials__primary
-  background-color $color-red
+  background-color $color-red-light
   padding 10rem 0
+  position relative
+
+  &::before
+    content ''
+    display block
+    width 100%
+    height 3rem
+    position absolute
+    top 0
+    left 0
+    background linear-gradient(45deg, $color-red-light 0%, $color-red-light 50%, $color-white 50%, $color-white 100%)
+
+  & header
+    text-align center
+    margin 0 0 6rem 0
+
+    & h1
+      font-family $raleway-semibold
+      font-size 2.8rem
+      padding 0 0 2.5rem 0
+      margin 0 0 2rem 0
+      position relative
+
+      &::after
+        content ''
+        display block
+        height .1rem
+        width 10rem
+        background-color $color-white
+        position absolute
+        bottom 0
+        left 50%
+        transform translateX(-50%)
+
+    & small
+      font-family $opensans-regular
+      font-size 1.2rem
+      color #fefefe
+
+
+// TESTIMONIALS SECONDARY SECTION
+// --------------------------------------------
 
 .testimonials__secondary
   background-color $color-grey
@@ -10,5 +58,5 @@
   lost-center $width
 
 .testimonials__item
-  lost-column 4/12
+  lost-column 3/12
   lost-column-gutter 0

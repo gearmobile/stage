@@ -9,16 +9,16 @@ module.exports = {
         {
             name: "lost",
             options: {
-                "gutter": "30px",
-                "flexbox": "flex"
+                "gutter": "30px"
+                // "flexbox": "flex"
             }
         }
     ],
     "svg": {
         "active": true,
-        "workflow": "sprite",
+        "workflow": "symbols",
         "symbolsConfig": {
-            "loadingType": "inject",
+            "loadingType": "separate-file-with-link",
             "usePolyfillForExternalSymbols": true,
             "pathToExternalSymbolsFile": ""
         }
