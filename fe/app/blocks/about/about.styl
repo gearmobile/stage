@@ -25,14 +25,15 @@
 // ----------------------------------------------
 
 .navigation
+	display flex
 	margin 8rem 0 10rem
-	clearfix()
+
+	+below(980px)
+		justify-content center
 
 	&__item
 		display block
-		float left
-		width 17.5rem
-		height 5.8rem
+		size(17.5rem, 5.8rem)
 		margin-right 1px
 		background-color #eaeaea
 		text-align center
@@ -99,13 +100,13 @@
 		padding 4rem 4rem 4rem 16rem
 		position relative
 
-		&:nth-child(-n + 2)
+		&:nth-child(-n+2)
 			border-bottom 1px solid #d1d1d1
 
-		&:nth-child(2n + 1)
+		&:nth-child(2n+1)
 			border-right 1px solid #d1d1d1
 
-		&:nth-child(-2n + 3)::after
+		&:nth-child(-2n+3)::after
 			content ''
 			display block
 			size(2.4rem)
