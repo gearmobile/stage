@@ -3,22 +3,27 @@
 	background-color #f7f7f7
 	text-align center
 
+	+below(650px)
+		padding 6rem 0
+
 	&__center
 		lost-center $width
+
+	&__head
+		margin 0 0 7rem 0
+		padding 0 2rem
 
 	&__title
 		color #666
 		font-size 2.4rem
 		font-family $lato-black
 		text-transform uppercase
-		margin-bottom 5rem
+		margin 0 0 5rem 0
 
 	&__subtitle
 		color #666
 		font-size 1.6rem
-		line-height 2rem
-		margin-bottom 7rem
-		padding 0 8rem
+		line-height 2.2rem
 
 
 // FACTS GALLERY
@@ -27,6 +32,10 @@
 .facts-gallery
 	lost-center 100%
 	box-shadow inset 0 0 0 .1rem rgba(#e2e2e2, 1)
+
+	+below(980px)
+		margin 0 1rem
+		box-shadow none
 
 	&__item
 		lost-column 3/12 0 0
@@ -48,6 +57,19 @@
 		&:nth-child(4) .facts-gallery__icon
 			background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAA7CAYAAAA5MNl5AAACkElEQVRoQ+2awY3bMBBFhwTs+7awOftCWh3EJUQl7JYQlxCXsClht4R1B/bw4nNcQnyXATIYRQoEmaJkipQjgLoYBjTkvP/HJGUNg+qSUn4HgB/195l8bhFxR7my1Wr1tFwuPwFAziT5dppYFMWGzdSJNsyWQH4DwNNM3ajTvhCImTlEmb4VBBHZ/wxnEz+BPNKx5Mgj1bfNnRxJjkRSIJVWJGG9h02OeEsXKTA5EklY72GTI97SRQpMjkQS1nvY5Ii3dJECkyORhPUeNjniLV2kwORIJGG9h02OeEsXKTA5MkbYLMu+UvzhcNiPGacZO7kjBKG1prdhwDnfhIKZFKQJUasZCmYyECnlNwB47yilHBE/xpTZJCBCiBfG2JsrUWPMq1Lqpy9MdJAhEHXyY2Cigni+Hf73nvwed6KBuCAYY2UJGWNeOpK9GyYKSB/E8Xh8JYD1ev0WCiY4iJSSWj6o9cN23SjdU347RNwOKbGgIL4KD3XQBRQMxBeiTm4sTBAQKSVtdLThDSqnLmV7luoPRMy7YkeDCCE+GWPlIbB9+ewLLhhjzF4ptbHNNQokNESdoA+MFwj1cy0Wi/cuJwBg9NnJdsBsnAD21+s1P51Ol8Zv7KYRyNmL0teUFuo0Swm6YACgbC6rYe5yZEqIWumhMINBOOdftNa0OtnaAy+c8zzUQ1L7x1zB0Ny2ZjikubXWv9pxXY1nZwB4tqwYF2PMRimFQ3Zg33uEEJIxRk+WNhhrbvd00E0C0VjNXDA3Gg3taTwbY/LYTrSzq5yhMrNVR/P2sqexr9/3XK1OZOnkV5Zlz9UfGC6YbV/f70MhGquZC+Zv36/jILcrimLX3Igmt6M1Yat6aIOko3/Zif0H1IA/ACSIrEsAAAAASUVORK5CYII=')
 
+		+below(980px)
+			lost-column 1/2
+			box-shadow inset 0 0 0 .1rem rgba(#e2e2e2, 1)
+
+			&:nth-child(-n+2)
+				margin-bottom 2.5rem
+
+		+below(650px)
+			lost-column 1/1
+
+			&:nth-child(-n+3)
+				margin-bottom 2.5rem
+
 	&__icon
 		size(7rem)
 		margin 0 auto 4rem
@@ -65,32 +87,3 @@
 		color #333
 		font-size 5.2rem
 		font-family $lato-light
-
-
-// media queries
-// --------------------------------------------------------
-
-+below(968px)
-
-	.facts__subtitle
-		padding 0 2rem
-		line-height 1.8
-
-	.facts-gallery
-		margin 0 1rem
-		box-shadow none
-
-	.facts-gallery__item
-		lost-column 1/2
-		box-shadow inset 0 0 0 .1rem rgba(#e2e2e2, 1)
-
-		&:nth-child(-n+2)
-			margin-bottom 2.5rem
-
-+below(600px)
-
-	.facts-gallery__item
-		lost-column 1/1
-
-	&:nth-child(-n+3)
-		margin-bottom 2.5rem

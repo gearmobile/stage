@@ -1,24 +1,31 @@
 .skills
 	background-color #f7f7f7
-	padding 13rem 0 14rem
+	padding 13rem 0
 	position relative
+
+	+below(650px)
+		padding 6rem 0
 
 	&__center
 		lost-center $width
 
+	&__head
+		padding 0 2%
+		margin 0 0 10rem 0
+
 	&__title
+		font-family $lato-black
+		font-size 2.4rem
 		text-transform uppercase
 		text-align center
 		color #666
-		font-size 2.4rem
-		font-family $lato-black
-		margin-bottom 5.4rem
+		margin 0 0 4rem 0
 
 	&__subtitle
 		text-align center
 		color #666
 		line-height 2rem
-		margin-bottom 10rem
+		margin 0
 
 
 // SKILLS DIAGRAMS
@@ -30,20 +37,36 @@
 
 	&__item
 		lost-column 3/12
-		lost-gutter 2rem
+		lost-column-gutter 2rem
 		text-align center
+
+		+below(980px)
+			lost-column 6/12
+			lost-column-cycle 2
+			lost-column-gutter 4rem
+
+			&:nth-child(-n+2)
+				margin 0 0 4rem 0
+
+		+below(650px)
+			lost-column 1/1
+			lost-column-gutter 0
+			lost-column-cycle 0
+
+			&:not(:last-child)
+				margin 0 0 8rem 0
 
 	&__canvas
 		size(15.4rem)
-		margin-bottom 4rem
+		margin 0 0 4rem 0
 
 	&__title
 		color #333
 		font-size 2rem
 		font-family $lato-bold
 		text-transform uppercase
-		margin-bottom 2rem
+		margin 0 0 2rem 0
 
 	&__subtitle
 		color #999
-		line-height 1.2
+		line-height 1.6

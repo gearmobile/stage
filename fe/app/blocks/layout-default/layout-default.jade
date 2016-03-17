@@ -1,6 +1,7 @@
 include ../../../node_modules/bemto.jade/bemto.jade
 include ../page/page
 include ../box/box
+include ../header-topmenu/header-topmenu
 include ../header/header
 include ../footer/footer
 include ../scripts/scripts
@@ -11,6 +12,7 @@ html(lang='ru')
 	include ../head/head
 	+page
 		+box
+			+header-topmenu()
 			+header
 			block content
 			+footer

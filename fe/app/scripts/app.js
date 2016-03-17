@@ -4,7 +4,20 @@ import swiper from 'swiper';
 import GoogleMapsLoader from 'google-maps';
 import 'jquery-smooth-scroll';
 
-$(() => {
+$( () => {
+
+	// TOP MENU ANIMATION
+	// ------------------------------------
+
+	const $topMenu = $('.header-topmenu');
+
+	$(window).on('scroll', () => {
+		if ( $(this).scrollTop() > 0 ) {
+			$topMenu.addClass('is-fixed');
+		} else {
+			$topMenu.removeClass('is-fixed');
+		}
+	});
 
 	// TO TOP BUTTON
 	// ------------------------------------
@@ -20,7 +33,7 @@ $(() => {
 	const scrollDuration = 800;
 
 
-	$(window).scroll( function () {
+	$(window).scroll( () => {
 		if ( $(this).scrollTop() > sectionHeader.offsetHeight - 10 ) {
 			toTopButton.classList.remove('fadeOutRight');
 			toTopButton.classList.add('fadeInRight');
@@ -35,16 +48,17 @@ $(() => {
 		$('html, body').animate({scrollTop: 0}, scrollDuration);
 	});
 
+
 	// SOCIALS ICONS
 	// ------------------------------------
 
 	$('.social').addClass('animated fadeOut');
 
-	$('.gallery__image').on('mouseenter', function () {
+	$('.gallery__image').on('mouseenter', () => {
 		$(this).children('.social').removeClass('fadeOut').addClass('fadeIn');
 	});
 
-	$('.gallery__image').on('mouseleave', function () {
+	$('.gallery__image').on('mouseleave', () => {
 		$(this).children('.social').removeClass('fadeIn').addClass('fadeOut');
 	});
 
@@ -54,11 +68,11 @@ $(() => {
 
 	$('.showcase__button').addClass('animated fadeOutDown');
 
-	$('.showcase__item').on('mouseenter', function () {
+	$('.showcase__item').on('mouseenter', () => {
 		$(this).find('.showcase__button').removeClass('fadeOutDown').addClass('fadeInUp');
 	});
 
-	$('.showcase__item').on('mouseleave', function () {
+	$('.showcase__item').on('mouseleave', () => {
 		$(this).find('.showcase__button').removeClass('fadeInUp').addClass('fadeOutDown');
 	});
 
@@ -66,7 +80,7 @@ $(() => {
 	// ADDWORK GALLERY
 	// ------------------------------------
 
-	$(window).on('resize', function () {
+	$(window).on('resize', () => {
 
 		const content = $('.content');
 		const holder = $('.content__holder');
@@ -74,7 +88,7 @@ $(() => {
 
 	});
 
-	$('.addwork-gallery > .controls').find('.controls__item').click(function () {
+	$('.addwork-gallery > .controls').find('.controls__item').click( () => {
 		$(this).addClass('controls__item--active')
 			.siblings().removeClass('controls__item--active')
 			.parents('.addwork-gallery').find('.content__holder').eq($(this).index()).addClass('content__holder--active')
@@ -83,11 +97,11 @@ $(() => {
 
 	$('.content__icon').addClass('animated fadeOutDown');
 
-	$('.content__image').on('mouseenter', function () {
+	$('.content__image').on('mouseenter', () => {
 		$(this).find('.content__icon').removeClass('fadeOutDown').addClass('fadeInUp');
 	});
 
-	$('.content__image').on('mouseleave', function () {
+	$('.content__image').on('mouseleave', () => {
 		$(this).find('.content__icon').removeClass('fadeInUp').addClass('fadeOutDown');
 	});
 
@@ -132,7 +146,7 @@ $(() => {
 	// ------------------------------------
 
 
-	GoogleMapsLoader.load(function (google) {
+	GoogleMapsLoader.load( function (google) {
 
 		GoogleMapsLoader.LANGUAGE = 'en';
 		GoogleMapsLoader.KEY = 'AIzaSyB8K34DDu7gT9BqenQE8vJDxx7FQZt4Khg';
@@ -246,7 +260,7 @@ $(() => {
 			content: 'Brampton Manor Academy'
 		});
 
-		bramptonMarker.addListener('click', function () {
+		bramptonMarker.addListener('click', () => {
 			bramptonInfo.open(bramptonMap, bramptonMarker);
 		});
 
@@ -256,12 +270,12 @@ $(() => {
 		const bramptonMapCenter = bramptonMap.getCenter(); // returns the position displayed at the center of the map
 
 		// CENTER GOOGLE MAPS ON BROWSER RESIZE (RESPONSIVE)
-		google.maps.event.addDomListener(window, 'resize', function () {
+		google.maps.event.addDomListener(window, 'resize', () => {
 			bramptonMap.setCenter(bramptonMapCenter);
 		});
 
 		// RETURN CENTER OF MAP TO THE CENTER OF WINDOW IF MAP WAS MOVED BY USER
-		google.maps.event.addListener(bramptonMap, 'center_changed', function () {
+		google.maps.event.addListener(bramptonMap, 'center_changed', () => {
 			window.setTimeout(function () {
 				bramptonMap.setCenter(bramptonMapCenter);
 			}, 3000);
@@ -344,7 +358,7 @@ $(() => {
 		percentageInnerCutout: 82,
 		segmentStrokeWidth: 3,
 		segmentStrokeColor: '#f7f7f7',
-		onAnimationComplete: function () {
+		onAnimationComplete: () => {
 			wpContext.fillStyle = '#333';
 			wpContext.font = '3rem Lato, sans-serif';
 			wpContext.textAlign = 'center';
@@ -357,7 +371,7 @@ $(() => {
 		percentageInnerCutout: 82,
 		segmentStrokeWidth: 3,
 		segmentStrokeColor: '#f7f7f7',
-		onAnimationComplete: function () {
+		onAnimationComplete: () => {
 			htmlContext.fillStyle = '#333';
 			htmlContext.font = '3rem Lato, sans-serif';
 			htmlContext.textAlign = 'center';
@@ -370,7 +384,7 @@ $(() => {
 		percentageInnerCutout: 82,
 		segmentStrokeWidth: 3,
 		segmentStrokeColor: '#f7f7f7',
-		onAnimationComplete: function () {
+		onAnimationComplete: () => {
 			cssContext.fillStyle = '#333';
 			cssContext.font = '3rem Lato, sans-serif';
 			cssContext.textAlign = 'center';
@@ -383,7 +397,7 @@ $(() => {
 		percentageInnerCutout: 82,
 		segmentStrokeWidth: 3,
 		segmentStrokeColor: '#f7f7f7',
-		onAnimationComplete: function () {
+		onAnimationComplete: () => {
 			ptContext.fillStyle = '#333';
 			ptContext.font = '3rem Lato, sans-serif';
 			ptContext.textAlign = 'center';

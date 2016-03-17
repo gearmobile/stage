@@ -32,13 +32,29 @@
 
 .gallery
 	lost-center 100%
-	margin-top 10rem
-	padding 0 10px
+	margin 10rem 0 0 0
+	padding 0 1rem
 
 	&__item
 		lost-column 3/12
-		lost-gutter 2rem
+		lost-column-gutter 2rem
 		text-align center
+
+		+below(980px)
+			lost-column 6/12
+			lost-column-gutter 4rem
+			lost-column-cycle 2
+
+			&:nth-child(-n+2)
+				margin 0 0 8rem 0
+
+		+below(650px)
+			lost-column 1/1
+			lost-column-gutter 0
+			lost-column-cycle 0
+
+			&:not(:last-child)
+				margin 0 0 10rem 0
 
 	&__image
 		size(17.8rem)

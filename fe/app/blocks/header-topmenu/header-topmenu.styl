@@ -1,0 +1,55 @@
+.header-topmenu
+  display flex
+  justify-content space-between
+  align-items center
+  padding 3rem 2rem 0 2rem
+  position fixed
+  top 0
+  width 100%
+  z-index 1
+
+  +below(650px)
+    display none
+
+
+  // TOP MENU LOGO
+  // ------------------------------
+
+  &__logo
+    size(6.9rem, 6.4rem)
+    background transparent url(../images/logo.png) 0 0 no-repeat
+    background-size cover
+
+    & > a
+      squish-text()
+
+
+  // TOP MENU NAVIGATION
+  // ------------------------------
+
+  &__navigation
+    display flex
+    justify-content space-between
+
+    & > a
+      text-decoration none
+      text-transform capitalize
+      color $white
+      transition color .2s
+      margin 0 2rem
+
+      &:first-child
+        margin-left 0
+
+      &:last-child
+        margin-right 0
+
+      &:hover
+      &:active
+        color $orange
+
+
+&.is-fixed
+  padding 0 1rem
+  background-color #789
+
