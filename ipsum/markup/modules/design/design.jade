@@ -2,6 +2,7 @@ include ../button-design/button-design
 
 mixin design(data)
   section.design#desing
+    // PRIMARY PART
     .design__primary
       .design__center
         h1.design__title designed for humans
@@ -12,6 +13,7 @@ mixin design(data)
           main
             +button-design()
         +button-design()
+    // SECONDARY PART
     .design__secondary
       .design__content
         .design__column

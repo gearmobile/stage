@@ -63,7 +63,11 @@
       font-size 1rem
       font-family $opensans-regular
       font-weight 400
-      transition width .5s
+      transition width 1s ease
+
+      &:focus
+        max-width 16rem
+        width 16rem
 
     &:hover
       background-color lighten(#343c48, 10%)
@@ -102,20 +106,17 @@
   & > span
     display block
     background-color $color-white
-    // width 1.8rem
     width 3rem
     height .4rem
     margin auto
     position relative
     border-radius 50em
-    // top .7rem
     top 1.3rem
 
     &::before
     &::after
       content ''
       display block
-      // width 1.8rem
       width 3rem
       height .4rem
       background-color $color-white
@@ -125,10 +126,14 @@
       transition all .2s
 
     &::before
-      // top -.7rem
       top -1.2rem
 
     &::after
-      // top .7rem
       top 1.2rem
+
+  &:hover > span::before
+    transform translateY(.3rem)
+
+  &:hover > span::after
+    transform translateY(-.3rem)
 
