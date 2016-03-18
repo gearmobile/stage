@@ -25,10 +25,14 @@
 
 	&__clients
 		display flex
-		justify-content space-between
+		justify-content space-around
 		align-items center
 		margin-bottom 6rem
 		padding 0 1rem
+
+		+below(980px)
+			// flex-wrap: nowrap | wrap | wrap-reverse;
+			// flex-wrap nowrap
 
 	& .swiper-container
 		width 100%

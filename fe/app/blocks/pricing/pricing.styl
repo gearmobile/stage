@@ -2,6 +2,9 @@
 	background-color #f7f7f7
 	padding 21rem 0 14rem
 
+	+below(500px)
+		padding 6rem 0
+
 	&__center
 		lost-center $width
 		padding 0 1rem
@@ -11,13 +14,13 @@
 		padding 0 1rem
 
 
-	// pricing table
+	// PRICING TABLE
 	// ------------------------------------------
 
 	& .table
 		lost-center 100%
 
-		// pricing table item
+		// PRICING TABLE ITEM
 		// ------------------------------------------
 
 		&__item
@@ -26,15 +29,30 @@
 			text-align center
 			color #333
 
+			+below(980px)
+				lost-column 6/12
+				lost-column-cycle 2
+				lost-column-gutter 2rem
+
+				&:nth-child(-n+2)
+					margin 0 0 4rem 0
+
+			+below(650px)
+				lost-column 1/1
+				lost-column-cycle 0
+				lost-column-gutter 0
+
+				&:not(:last-child)
+					margin 0 0 4rem 0
+
 		&__heading
-			min-height 8rem
+			padding 2.8rem 0
+			margin 0 0 4rem 0
 			background-color $blue
-			line-height 8rem
 			color $white
 			font-family $lato-bold
 			font-size 2.2rem
 			text-transform capitalize
-			margin-bottom 5rem
 
 		&__currency
 			display inline-block
@@ -47,6 +65,9 @@
 			font-size 6rem
 			font-family $lato-bold
 
+			+below(500px)
+				font-size 5rem
+
 		&__duration
 			font-size 2.4rem
 
@@ -58,8 +79,8 @@
 			padding 5rem 0
 
 		&__features-item
-			padding 2rem 0
-			font-size 1.4rem
+			padding 1.6rem 0
+			font-size 1.6rem
 			text-transform capitalize
 			text-overflow ellipsis
 			white-space nowrap
@@ -68,38 +89,29 @@
 				font-family $lato-bold
 
 		&__footer
+			display flex
+			flex-direction column
+			align-items center
 			padding 2rem 0
 			font-size 1.1rem
 			text-transform uppercase
 
 		&__button
 			display block
-			margin auto
-			width 12rem
-			height 4rem
-			margin-bottom 2.5rem
-			line-height 4rem
+			padding 1.4rem 2.4rem
+			margin 0 0 2.5rem
 			font-family $lato-bold
 			color #333
 			text-decoration none
-			border 1px solid #333
+			border .1rem solid #333
 			border-radius .4rem
-			transition background-color .2s
+			transition background-color .2s, color .2s
 
 			&:hover
 			&:active
-				background-color darken(#f7f7f7, 5%)
+				background-color #333
+				color #fff
 
 		&__free
 			text-transform uppercase
 			color #999
-
-
-// MEDIA QUERIES
-// ------------------------------------------------------------
-
-+below(850px)
-
-	.pricing .table__item
-		lost-column 1/2
-		lost-column-gutter 2rem
