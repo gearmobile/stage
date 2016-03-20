@@ -1,0 +1,34 @@
+.top-header
+	padding 7rem 0 0 0
+	position fixed
+	width 100%
+	top 0
+	left 0
+	z-index 1
+
+.top-header__center
+	display flex
+	justify-content space-between
+	lost-center $width
+
+.top-header__menu
+	display flex
+	justify-content space-between
+
+	& a
+		display block
+		padding 0 0 1rem 0
+		text-transform uppercase
+		text-decoration none
+		color $color-white
+		font-family $raleway-regular
+		font-weight 400
+		font-size 1.3rem
+
+		&:first-child
+		&:hover
+			border-bottom .2rem solid $color-orange
+
+
+		&:not(:last-child)
+			margin 0 3rem 0 0

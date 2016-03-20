@@ -1,0 +1,21 @@
+mixin action(data)
+	section.action
+		.action__top
+			.action__center
+				h1 take action
+				form.action__form(method="post" action="action.php")
+					fieldset
+						input(type="text" name="name" id="name" placeholder="name")
+					fieldset
+						input(type="phone" name="phone" id="phone" placeholder="contact phone")
+					fieldset
+						input(type="email" name="email" id="email" placeholder="email")
+					fieldset
+						button(type="button") sign up
+		.action__content
+			.action__center
+				.action__secondary
+					h2 ohh this is nice
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, facilis.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora doloremque perspiciatis deleniti repellat in maxime enim! Voluptatem commodi, iste cum!
+				.action__primary

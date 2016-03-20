@@ -2,18 +2,19 @@ doctype html
 html(class="no-js", lang="ru")
 
     include ../modules/head/head
-    include ../modules/example/example
+    include ../modules/top-header/top-header
+    include ../modules/header/header
+    include ../modules/action/action
     include ../modules/footer/footer
 
     head
         +head(head.defaults)
     body.page
         |%=symbols=%
-
+        +top-header()
         section.page__wrapper
-
-            //- Include your modules here
-            +example()
+            +header()
+            +action()
 
             .page__buffer
 

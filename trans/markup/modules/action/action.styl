@@ -1,0 +1,51 @@
+.action
+	background-color $color-white
+
+.action__top
+	background: #ffffff;
+	background linear-gradient(to right, #ffffff 0%, #ffffff 50%, #323339 50%, #323339 100%)
+
+	& > .action__center
+		padding 6rem 0 8rem 6rem
+		background-color #323339
+
+		& h1
+			font-family $raleway-light
+			font-weight 300
+			margin 0 0 3rem 0
+
+	& > .action__form
+		lost-utility clearfix
+
+		& fieldset
+			lost-column 2/18
+			lost-column-gutter 1rem
+
+
+.action__center
+	lost-center $width
+
+.action__secondary
+	lost-column 4/12
+	background-color #f26522
+	padding 7rem 0 0 5rem
+	color $color-white
+
+	& > h2
+		font-family $raleway-light
+		font-weight 300
+		font-size 3.5rem
+		line-height 1.2
+		text-transform uppercase
+		margin 0 0 3rem 0
+
+	& p
+		font-family $opensans-regular
+		font-weight 400
+		line-height 1.6
+
+		&:not(:last-child)
+			margin 0 0 2rem 0
+
+.action__primary
+	lost-column 8/12
