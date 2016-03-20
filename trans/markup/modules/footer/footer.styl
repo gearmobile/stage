@@ -1,0 +1,41 @@
+.footer
+  background-color #323339
+  padding 8rem 0 24rem
+
+  &__center
+    lost-center $width
+
+.navigation
+  lost-utility clearfix
+  margin 0 0 6rem 0
+
+.navigation__column
+  font-family $montserrat-regular
+  text-transform capitalize
+  lost-column 2/10
+
+  & li
+    margin 0 0 2rem 0
+
+    &:last-child
+      margin 0
+
+  & a
+    color $color-white
+    text-decoration none
+    font-size 1.2rem
+    transition color .1s
+
+    &:hover
+    &:active
+      color $color-orange
+
+.navigation__title
+  color $color-orange
+  font-size 1.2rem
+  margin 0 0 3rem 0
+
+.footer__copyright
+  font-size 1.2rem
+  font-weight 400
+  color #484a56
