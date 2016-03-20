@@ -6,18 +6,20 @@ import 'jquery-smooth-scroll';
 
 $( () => {
 
+
 	// TOP MENU ANIMATION
 	// ------------------------------------
 
 	const $topMenu = $('.header-topmenu');
 
-	$(window).on('scroll', () => {
-		if ( $(this).scrollTop() > 0 ) {
+	$(window).scroll( () => {
+		if ( $(window).scrollTop() > 0 ) {
 			$topMenu.addClass('is-fixed');
 		} else {
 			$topMenu.removeClass('is-fixed');
 		}
 	});
+
 
 	// TO TOP BUTTON
 	// ------------------------------------

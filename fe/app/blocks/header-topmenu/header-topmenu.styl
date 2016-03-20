@@ -7,6 +7,7 @@
   top 3rem
   width 100%
   z-index 1
+  transition all .2s
 
   +below(650px)
     display none
@@ -50,6 +51,14 @@
 
 
 &.is-fixed
-  padding 0 1rem
+  top 0
+  padding 1rem 2rem
+  z-index 3
   background-color #789
+  box-shadow 0 .2rem .3rem #789
 
+  & .header-topmenu__logo
+    size(5rem, 4.6rem)
+
+  & .header-topmenu__navigation > a
+    font-size 1.4rem

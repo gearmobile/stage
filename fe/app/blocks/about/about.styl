@@ -51,7 +51,7 @@
 		display flex
 		justify-content center
 		align-items center
-		size(17.5rem, 5.8rem)
+		padding 2rem 3rem
 		margin 0 .1rem 0 0
 		background-color #eaeaea
 		transform skewX(-15deg)
@@ -88,7 +88,6 @@
 
 	&__icon
 		padding 5rem 6.4rem
-		// size(12.6rem, 10rem)
 		background-color #eaeaea
 		transition background-color .2s
 		background-position center center
@@ -129,6 +128,7 @@
 	&__item
 		display block
 		display flex
+		position relative
 		align-items center
 		lost-column 6/12
 		lost-column-gutter 0
@@ -142,6 +142,9 @@
 		&:nth-child(2n+1)
 			border-right 1px solid #d1d1d1
 
+		// CENTER WHITE SQUARE
+		// --------------------------------------------
+
 		&:nth-child(-2n+3)::after
 			content ''
 			display block
@@ -151,6 +154,9 @@
 			bottom -(2.4rem/2)
 			z-index 1
 			background-color $white
+
+			+below(768px)
+				display none
 
 		&:hover .features__icon
 		&:active .features__icon
