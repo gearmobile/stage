@@ -24,7 +24,7 @@
 // --------------------------------------------------
 
 .addwork-gallery
-	lost-center 100rem
+	lost-center 100%
 	padding 0 1rem
 
 
@@ -32,32 +32,28 @@
 	// -----------------------------------------------
 
 	& .controls
-		text-align center
-		font-size 0
-		margin-bottom 7rem
+		display flex
+		justify-content center
+		align-items center
+		margin 0 0 6rem 0
 
 		&__item
-			display inline-block
-			vertical-align top
-			border 1px solid #666
+			display block
+			border .1rem solid #666
 			border-radius .2rem
-			padding 1rem 2rem
-			margin 0 .25rem
-
+			padding .9rem 2rem 1.1rem
+			margin 0 .2rem
 			font-size 1.4rem
 			text-decoration none
 			text-transform capitalize
 			color #666
-			transition background-color .2s
+			transition background-color .2s, color .2s
 
 			&:hover
 			&:active
 			&--active
-				background-color #f1f1f1
-
-			&:focus
-			&:active
-				outline none
+				color $white
+				background-color #666
 
 
 	// GALLERY CONTENT
@@ -77,19 +73,20 @@
 			margin-bottom 4rem
 
 		&__item
-			lost-column 4/12 3 2rem
+			lost-column 1/3
+			lost-column-gutter 2rem
 			text-align center
 			padding 0 0 2rem
 
 			+below(850px)
-				lost-column 6/12
+				lost-column 1/2
+				lost-column-gutter 2rem
 				lost-column-cycle 2
-				lost-gutter 2rem
 
-			+below(500px)
+			+below(650px)
 				lost-column 1/1
-				lost-column-cycle none
-				lost-gutter 0
+				lost-column-gutter 0
+				lost-column-cycle 0
 
 				&:not(:last-child)
 					margin-bottom 2rem
@@ -123,7 +120,7 @@
 				transition background-color .2s
 
 			&:hover::before
-				background-color rgba(#000, .8)
+				background-color rgba($black, .8)
 
 			&:hover > img
 				transform scale(1.05)

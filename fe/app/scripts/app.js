@@ -82,7 +82,7 @@ $( () => {
 	// ADDWORK GALLERY
 	// ------------------------------------
 
-	$(window).on('resize', () => {
+	$(window).on('resize', function () {
 
 		const content = $('.content');
 		const holder = $('.content__holder');
@@ -90,7 +90,7 @@ $( () => {
 
 	});
 
-	$('.addwork-gallery > .controls').find('.controls__item').click( () => {
+	$('.addwork-gallery > .controls').find('.controls__item').click( function () {
 		$(this).addClass('controls__item--active')
 			.siblings().removeClass('controls__item--active')
 			.parents('.addwork-gallery').find('.content__holder').eq($(this).index()).addClass('content__holder--active')
@@ -99,11 +99,11 @@ $( () => {
 
 	$('.content__icon').addClass('animated fadeOutDown');
 
-	$('.content__image').on('mouseenter', () => {
+	$('.content__image').on('mouseenter', function () {
 		$(this).find('.content__icon').removeClass('fadeOutDown').addClass('fadeInUp');
 	});
 
-	$('.content__image').on('mouseleave', () => {
+	$('.content__image').on('mouseleave', function () {
 		$(this).find('.content__icon').removeClass('fadeInUp').addClass('fadeOutDown');
 	});
 

@@ -1,3 +1,5 @@
+include ../showcase/showcase
+
 mixin work()
 	+b.work#work
 		.work__center
@@ -7,35 +9,4 @@ mixin work()
 					small.heading__subtitle what we do with love
 				.heading__right
 					p.heading__text Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse
-		.showcase
-			ul.showcase__wrapper
-				li.showcase__item
-					.showcase__image
-					.showcase__content
-						h1.showcase__title lorem ipsum
-						small.showcase__subtitle Donec molestie, faucibus a amet #[br] commodo scelerisque libero massa. #[br] Sapien quam in eu vel nulla.
-						a.showcase__button(href="#{jv}") view case study
-				li.showcase__item
-					.showcase__image
-					.showcase__content
-						h1.showcase__title lorem ipsum
-						small.showcase__subtitle Donec molestie, faucibus a amet #[br] commodo scelerisque libero massa. #[br] Sapien quam in eu vel nulla.
-						a.showcase__button(href="#{jv}") view case study
-				li.showcase__item
-					.showcase__image
-					.showcase__content
-						h1.showcase__title lorem ipsum
-						small.showcase__subtitle Donec molestie, faucibus a amet #[br] commodo scelerisque libero massa. #[br] Sapien quam in eu vel nulla.
-						a.showcase__button(href="#{jv}") view case study
-				li.showcase__item.showcase__item--wide
-					.showcase__image
-					.showcase__content
-						h1.showcase__title lorem ipsum
-						small.showcase__subtitle Donec molestie, faucibus a amet #[br] commodo scelerisque libero massa. #[br] Sapien quam in eu vel nulla.
-						a.showcase__button(href="#{jv}") view case study
-				li.showcase__item
-					.showcase__image
-					.showcase__content
-						h1.showcase__title lorem ipsum
-						small.showcase__subtitle Donec molestie, faucibus a amet #[br] commodo scelerisque libero massa. #[br] Sapien quam in eu vel nulla.
-						a.showcase__button(href="#{jv}") view case study
+		+showcase()
