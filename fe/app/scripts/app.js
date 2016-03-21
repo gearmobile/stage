@@ -56,11 +56,11 @@ $( () => {
 
 	$('.social').addClass('animated fadeOut');
 
-	$('.gallery__image').on('mouseenter', () => {
+	$('.gallery__image').on('mouseenter', function () {
 		$(this).children('.social').removeClass('fadeOut').addClass('fadeIn');
 	});
 
-	$('.gallery__image').on('mouseleave', () => {
+	$('.gallery__image').on('mouseleave', function () {
 		$(this).children('.social').removeClass('fadeIn').addClass('fadeOut');
 	});
 
@@ -70,11 +70,11 @@ $( () => {
 
 	$('.showcase__button').addClass('animated fadeOutDown');
 
-	$('.showcase__item').on('mouseenter', () => {
+	$('.showcase__item').on('mouseenter', function () {
 		$(this).find('.showcase__button').removeClass('fadeOutDown').addClass('fadeInUp');
 	});
 
-	$('.showcase__item').on('mouseleave', () => {
+	$('.showcase__item').on('mouseleave', function () {
 		$(this).find('.showcase__button').removeClass('fadeInUp').addClass('fadeOutDown');
 	});
 
