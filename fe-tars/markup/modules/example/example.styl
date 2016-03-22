@@ -1,0 +1,31 @@
+.control
+  display flex
+  justify-content space-around
+  padding 1rem 0
+
+.control__label
+  text-transform capitalize
+
+  &:after
+    content ':'
+
+.container
+  lost-center 90%
+  padding 2rem 0
+
+.container__item
+  lost-column 4/12
+  lost-column-gutter 2rem
+  lost-column-cycle 3
+  background-color #03899c
+  height 20rem
+
+  &:nth-child(-n+3)
+    margin-bottom 2rem
+
+  &.category-1
+    border-top .2rem solid limegreen
+
+  &.category-2
+    border-top .2rem solid yellow
+
