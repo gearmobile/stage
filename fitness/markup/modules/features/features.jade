@@ -1,0 +1,34 @@
+mixin features(data)
+	section.features
+		.features__primary
+			.features__center
+				.features__column
+					!= jadeHelpers.Icon.call(locals, {iconName: 'features-icon-01', className: 'features-icon'})
+					h3 resources
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate esse saepe culpa quaerat quod odit nulla. Perferendis, ut, vel.
+					a(href="#") explore more
+				.features__column
+					!= jadeHelpers.Icon.call(locals, {iconName: 'features-icon-02', className: 'features-icon'})
+					h3 traning &amp; funding
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio repudiandae, nulla necessitatibus unde tenetur magnam.
+					a(href="#") browse traning
+				.features__column
+					!= jadeHelpers.Icon.call(locals, {iconName: 'features-icon-03', className: 'features-icon'})
+					h3 connect
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, necessitatibus.
+					a(href="#") connect now
+				.features__column
+					!= jadeHelpers.Icon.call(locals, {iconName: 'features-icon-04', className: 'features-icon'})
+					h3 communicate
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, adipisci.
+					a(href="#") start now
+		.features__secondary
+			.features__center
+				.features__row
+					.features__block-text
+						small it’s all about
+						h2 fitness first
+					.features__block-thumb
+				.features__row
+					.features__block-thumb
+					.features__block-text
