@@ -17,7 +17,6 @@
 
   & > .features-icon
     height 4.4rem
-    color $color-white
     margin 0 0 2rem 0
 
   & > h3
@@ -44,11 +43,86 @@
     left 0
 
 .features__row
-  lost-center 100%
+  display flex
+
+  &:nth-child(1) > .features__block-thumb
+    background url('%=static=%assets/features/features-bg-01.jpg') no-repeat
+
+    & > .features__metrics
+      right 4rem
+
+  &:nth-child(2) > .features__block-thumb
+    background url('%=static=%assets/features/features-bg-02.jpg') no-repeat
+
+    & > .features__metrics
+      left 4rem
 
 .features__block-text
-  lost-column 5/20
-  padding 5.5rem 5rem 0
+  lost-column 5/12
+  lost-column-gutter 0
+  padding 5.5rem 5rem 9rem
+  text-align center
+  background-color $color-white
+
+  & > small
+    display block
+    color $color-red
+    font-family $montserrat-regular
+    font-weight 400
+    font-size 1.2rem
+    text-transform uppercase
+    margin 0 0 1rem 0
+
+  & > h2
+    text-transform uppercase
+    color $color-green
+    font-family $opensans-light
+    font-weight 300
+    font-size 2rem
+    margin 0 0 2rem 0
+
+  & > .text-icon
+    margin 0 0 2rem 0
+
+  & > p
+    color $color-grey
+    font-family $opensans-regular
+    font-weight 400
+    font-size 1.4rem
+    line-height 1.8
+    margin 0 0 2rem 0
+
+  & > a
+    font-family $opensans-regular
+    font-weight 400
+    text-transform capitalize
+    color $color-green
+
+    &:hover
+    &:active
+      text-decoration none
 
 .features__block-thumb
-  lost-column 13/20
+  lost-column 7/12
+  lost-column-gutter 0
+  position relative
+
+  & > .features__metrics
+    display flex
+    align-items center
+    position absolute
+    bottom 4rem
+
+    & > a
+      text-decoration none
+      text-transform capitalize
+      font-family $opensans-regular
+      font-weight 400
+      color $color-red
+      font-size 1.2rem
+
+      & > span
+        color $color-white
+
+    & > .thumbnail-icon
+      margin 0 0 0 1rem

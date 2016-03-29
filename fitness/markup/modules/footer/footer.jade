@@ -1,2 +1,27 @@
 mixin footer(data)
     footer.footer
+      .footer__center
+        .footer__primary
+          .footer__column
+            h3.footer__title resources
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime delectus consequatur incidunt iusto rerum, veritatis harum, eveniet a! Repellat eum quaerat sint voluptates inventore excepturi sit perspiciatis, tempora, vitae fugiat.
+          .footer__column
+            h3.footer__title about us
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit doloribus quibusdam incidunt veniam ad dolore beatae dolorem, dicta sequi ea.
+          .footer__column
+            h3.footer__title stay in touch
+            nav.footer__icons
+              a(href="#")
+                != jadeHelpers.Icon.call(locals, {iconName: 'facebook', className: 'footer-icon'})
+              a(href="#")
+                != jadeHelpers.Icon.call(locals, {iconName: 'twitter', className: 'footer-icon'})
+              a(href="#")
+                != jadeHelpers.Icon.call(locals, {iconName: 'youtube', className: 'footer-icon'})
+              a(href="#")
+                != jadeHelpers.Icon.call(locals, {iconName: 'linkedin', className: 'footer-icon'})
+        .footer__secondary
+          .footer__form
+            form(action="action.php" method="post")
+              input(type="text" name="name" id="name" placeholder="your name")
+              input(type="email" name="email" id="email" placeholder="your email")
+              button(type="submit") join newsletter
