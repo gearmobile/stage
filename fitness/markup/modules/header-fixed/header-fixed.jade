@@ -1,2 +1,12 @@
 mixin header-fixed(data)
-	section.header-fixed
+  section.header-fixed
+    .header-fixed__center
+      .header-fixed__logo
+        != jadeHelpers.Icon.call(locals, {iconName: 'logo', className: 'logo-icon'})
+        a(href="/") fitness
+      .header-fixed__nav
+        a(href="#") about
+        a(href="#") how it works
+        a(href="#") services
+        a(href="#") faq
+        a(href="#") contact

@@ -1,1 +1,53 @@
+.hero
+  min-height 89rem
+  height 89rem
+  background url('%=static=%assets/hero/hero-bg.jpg') 0 0 no-repeat
+  position relative
+  overflow hidden
 
+  &::after
+    content ''
+    display block
+    position absolute
+    bottom 0
+    right 0
+    background-color rgba(253, 99, 78, .3)
+    height 11rem
+    width 100%
+    transform-origin 100% 0
+    transform skewY(-3deg)
+
+.hero__center
+  lost-center $width
+  min-height 89rem
+  height 89rem
+  position relative
+
+.hero__content
+  text-transform uppercase
+  text-align right
+  color $color-white
+  position absolute
+  left 0
+  bottom 11rem
+
+.hero__title
+  font-family $opensans-regular
+  font-weight 400
+  font-size 2.5rem
+  margin 0 0 1rem 0
+
+  &::after
+    content '/'
+    color $color-green
+
+.hero__subtitle
+  display block
+  font-family $opensans-regular
+  font-weight 400
+  font-size 1rem
+  margin 0 3rem 0 0
+
+  &::after
+    content '/'
+    color $color-red

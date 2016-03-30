@@ -2,6 +2,7 @@ doctype html
 html(class="no-js", lang="ru")
 
     include ../modules/head/head
+    include ../modules/hero/hero
     include ../modules/header-fixed/header-fixed
     include ../modules/features/features
     include ../modules/gallery/gallery
@@ -13,10 +14,11 @@ html(class="no-js", lang="ru")
     body.page
         |%=symbols=%
 
+        +header-fixed()
         section.page__wrapper
 
             //- Include your modules here
-            +header-fixed()
+            +hero()
             +features()
             +gallery()
             +promo()

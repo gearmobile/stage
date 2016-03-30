@@ -1,1 +1,63 @@
+.header-fixed
+  padding 4rem 0 0 0
+  position fixed
+  top 0
+  left 0
+  width 100%
+  z-index 2
+  transition all .2s
 
+.header-fixed__center
+  max-width $width
+  margin auto
+  display flex
+  justify-content space-between
+  align-items center
+
+
+.header-fixed__logo
+  display flex
+  align-items flex-start
+
+  & > .logo-icon
+    margin 0 1rem 0 0
+
+  & > a
+    text-transform uppercase
+    text-decoration none
+    color $color-white
+    font-family $opensans-bold
+    position relative
+    padding 0 0 1rem 0
+
+    &::after
+      content ''
+      display block
+      background-color $color-green
+      height .3rem
+      width 4rem
+      position absolute
+      bottom 0
+      left 0
+
+.header-fixed__nav
+  display flex
+  justify-content space-around
+
+  & > a
+    text-transform uppercase
+    color $color-white
+    text-decoration none
+    font-size 1.2rem
+    letter-spacing .2rem
+    margin 0 0 0 5rem
+    font-family $opensans-bold
+    transition color .2s
+
+    &:hover
+    &:active
+      color $color-red
+
+.header-fixed.is-active
+  background-color rgba(#000, .6)
+  padding 1rem 0
