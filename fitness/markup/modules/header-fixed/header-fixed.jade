@@ -1,0 +1,13 @@
+mixin header-fixed(data)
+  section.header-fixed
+    .header-fixed__center
+      a(href="/").header-fixed__logo
+        != jadeHelpers.Icon.call(locals, {iconName: 'logo', className: 'logo-icon'})
+        span fitness
+      .header-fixed__nav
+        a(href="#") about
+        a(href="#") how it works
+        a(href="#") services
+        a(href="#") faq
+        a(href="#contact") contact
+      .header-fixed__icon
