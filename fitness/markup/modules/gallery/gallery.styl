@@ -4,3 +4,58 @@
 .gallery__center
   lost-center $width
   padding 0 1rem
+
+.gallery__row
+  lost-center 100%
+  background-color $color-white
+
+  & > div:last-child
+    background-color $color-green
+
+.gallery__primary
+  lost-column 4/12
+  lost-column-gutter 0
+
+.gallery__secondary
+  lost-column 8/12
+  lost-column-gutter 0
+
+.gallery__image img
+  display block
+  width 100%
+  height auto
+
+.gallery__content
+  padding 4rem 6rem 8rem 4rem
+  position relative
+
+  & > h4
+    color $color-red
+    text-transform uppercase
+    font-family $montserrat-regular
+    font-weight 400
+    font-size 1rem
+    margin 0 0 1rem 0
+
+  & > h2
+    color $color-green
+    text-transform uppercase
+    font-family $opensans-light
+    font-weight 300
+    font-size 2.2rem
+    line-height 1.2
+    margin 0 0 3rem 0
+
+  & > p
+    color $color-grey
+    font-size 1.2rem
+    font-family $opensans-regular
+    font-weight 400
+    line-height 1.8
+    margin 0
+
+  & > .gallery-icon
+    position absolute
+    top 4rem
+    right 6rem
+    size(3.2rem)
