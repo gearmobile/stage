@@ -20,11 +20,11 @@ mixin footer(data)
               a(href="#" title="LinkedIn" target="_blank")
                 != jadeHelpers.Icon.call(locals, {iconName: 'linkedin', className: 'footer-icon'})
         .footer__secondary
-          .footer__form
-            form(action="action.php" method="post")
-              fieldset.form__field
-                input(type="text" name="name" id="name" placeholder="your name")
-              fieldset.form__field
-                input(type="email" name="email" id="email" placeholder="your email")
-              fieldset.form__field
-                button(type="submit") join newsletter
+          //- .footer__form
+          form.footer__form(action="action.php" method="post")
+            fieldset.form__field
+              input(type="text" name="name" id="name" placeholder="your name")
+            fieldset.form__field
+              input(type="email" name="email" id="email" placeholder="your email")
+            fieldset.form__field
+              button(type="submit") join newsletter

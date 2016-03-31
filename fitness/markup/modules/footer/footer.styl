@@ -2,16 +2,19 @@
   background-color $color-grey-dark
   padding 6rem 0 50rem
 
-.footer__primary
-  lost-utility clearfix
-  margin 0 0 3rem 0
-
 .footer__center
   lost-center $width
   padding 0 1rem
 
+// FOOTER SECONDARY
+// --------------------------------------------
+
+.footer__primary
+  lost-center 100%
+  margin 0 0 4rem 0
+
 .footer__column
-  lost-column 4/12
+  lost-column 1/3
   lost-column-gutter 5rem
 
   @media screen and (max-width $bp768)
@@ -82,30 +85,28 @@
     justify-content center
 
 
-// FOOTER FORM
+// FOOTER SECONDARY
 // --------------------------------------------
 
 .footer__secondary
   lost-center 100%
 
 .footer__form
-  lost-column 8/12
-  lost-column-gutter 0
-  lost-offset -4/12
+  lost-column 2/3
+  lost-offset -1/3
 
-.footer__form form
-  lost-utility clearfix
+.footer__form
+  lost-center 100%
+  lost-column-gutter 1rem
 
 .form__field:nth-child(1)
-  lost-column 3/12
-  lost-column-gutter 1rem
+  lost-column 1/4
 
 .form__field:nth-child(2)
-  lost-column 6/12
-  lost-column-gutter 1rem
+  lost-column 2/4
 
 .form__field:nth-child(3)
-  lost-column 3/12
+  lost-column 1/4
 
 .footer__form input
 .footer__form button
@@ -115,6 +116,7 @@
   font-size 1.4rem
 
 .footer__form input
+  // width 100%
   +placeholder()
     font-size 1.4rem
     text-transform capitalize
