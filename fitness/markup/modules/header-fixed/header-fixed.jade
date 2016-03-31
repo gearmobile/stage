@@ -1,13 +1,23 @@
 mixin header-fixed(data)
   section.header-fixed
     .header-fixed__center
+<<<<<<< HEAD
       a(href="/").header-fixed__logo
         != jadeHelpers.Icon.call(locals, {iconName: 'logo', className: 'logo-icon'})
         span fitness
+=======
+      .header-fixed__logo
+        != jadeHelpers.Icon.call(locals, {iconName: 'logo', className: 'logo-icon'})
+        a(href="/") fitness
+>>>>>>> 6d718acf712d1f955e7a359a26b01b45689aac7d
       .header-fixed__nav
         a(href="#") about
         a(href="#") how it works
         a(href="#") services
         a(href="#") faq
+<<<<<<< HEAD
         a(href="#contact") contact
       .header-fixed__icon
+=======
+        a(href="#") contact
+>>>>>>> 6d718acf712d1f955e7a359a26b01b45689aac7d
