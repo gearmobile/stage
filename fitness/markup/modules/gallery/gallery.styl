@@ -6,19 +6,57 @@
   padding 0 1rem
 
 .gallery__row
-  lost-center 100%
+  display flex
   background-color $color-white
 
   & > div:last-child
     background-color $color-green
 
+  @media screen and (max-width 600px)
+    flex-direction column
+
 .gallery__primary
   lost-column 4/12
   lost-column-gutter 0
 
+  @media screen and (max-width 768px)
+    lost-column 1/1
+    lost-column-gutter 0
+
 .gallery__secondary
   lost-column 8/12
   lost-column-gutter 0
+
+  @media screen and (max-width 768px)
+    lost-column 1/1
+    lost-column-gutter 0
+
+.gallery__image
+  height 360px
+
+.gallery__row:nth-child(1) div:nth-child(1) .gallery__image
+  background url('%=static=%assets/gallery/gallery-image-01.jpg') center center no-repeat
+  background-size cover
+
+.gallery__row:nth-child(1) div:nth-child(2) .gallery__image
+  background url('%=static=%assets/gallery/gallery-image-02.jpg') center center no-repeat
+  background-size cover
+
+.gallery__row:nth-child(1) div:nth-child(2) .gallery__content h2
+.gallery__row:nth-child(2) div:nth-child(2) .gallery__content h2
+.gallery__row:nth-child(1) div:nth-child(2) .gallery__content h4
+.gallery__row:nth-child(2) div:nth-child(2) .gallery__content h4
+.gallery__row:nth-child(1) div:nth-child(2) .gallery__content p
+.gallery__row:nth-child(2) div:nth-child(2) .gallery__content p
+  color $color-white
+
+.gallery__row:nth-child(2) div:nth-child(1) .gallery__image
+  background url('%=static=%assets/gallery/gallery-image-03.jpg') center center no-repeat
+  background-size cover
+
+.gallery__row:nth-child(2) div:nth-child(2) .gallery__image
+  background url('%=static=%assets/gallery/gallery-image-04.jpg') center center no-repeat
+  background-size cover
 
 .gallery__image img
   display block
@@ -57,5 +95,8 @@
   & > .gallery-icon
     position absolute
     top 4rem
-    right 6rem
+    right 3rem
     size(3.2rem)
+
+  @media screen and (max-width 600px)
+    text-align center

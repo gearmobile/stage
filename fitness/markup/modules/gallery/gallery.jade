@@ -4,7 +4,6 @@ mixin gallery(data)
       .gallery__row
         .gallery__primary
           figure.gallery__image
-            img(src="%=static=%img/assets/gallery/gallery-image-01.jpg", alt="Gallery Image")
           .gallery__content
             != jadeHelpers.Icon.call(locals, {iconName: 'user', className: 'gallery-icon'})
             h4 track your
@@ -12,14 +11,12 @@ mixin gallery(data)
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod ea explicabo mollitia quam. Saepe magnam tempora nihil dolores voluptatem eum?
         .gallery__secondary
           figure.gallery__image
-            img(src="%=static=%img/assets/gallery/gallery-image-02.jpg", alt="Gallery Image")
           .gallery__content
             h2 summer of fun
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos doloremque tempore hic repudiandae praesentium libero provident corporis minima veniam, et sunt necessitatibus dicta, blanditiis, excepturi consequuntur. Provident hic eum nulla? Perspiciatis esse quisquam nisi ullam eos, nam ratione iusto fuga.
       .gallery__row
         .gallery__secondary
           figure.gallery__image
-            img(src="%=static=%img/assets/gallery/gallery-image-03.jpg", alt="Gallery Image")
           .gallery__content
             != jadeHelpers.Icon.call(locals, {iconName: 'strawberry', className: 'gallery-icon'})
             h4 track your
@@ -27,7 +24,6 @@ mixin gallery(data)
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore, ipsum cupiditate reiciendis tenetur voluptatum eum, suscipit porro non assumenda! Rerum, adipisci eveniet hic harum eum, iure necessitatibus nisi soluta perspiciatis quasi dolores consectetur, illo officia quia provident suscipit itaque.
         .gallery__primary
           figure.gallery__image
-            img(src="%=static=%img/assets/gallery/gallery-image-04.jpg", alt="Gallery Image")
           .gallery__content
             != jadeHelpers.Icon.call(locals, {iconName: 'pear', className: 'gallery-icon'})
             h4 improve your

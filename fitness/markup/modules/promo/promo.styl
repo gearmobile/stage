@@ -1,6 +1,5 @@
 .promo
   background url('%=static=%assets/promo/promo-bg.jpg') center center no-repeat
-  padding 0 0 8rem 0
   position relative
   overflow hidden
 
@@ -16,6 +15,39 @@
     z-index 2
     transform-origin 0 0
     transform skewY(1.2deg)
+
+.promo__center
+  lost-center $width
+  height 724px
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  color $color-white
+  padding 0 1rem
+
+.promo__title
+  font-size 3rem
+  font-family $opensans-bold
+  font-weight 400
+  line-height 1.4
+  margin 0 0 2.5rem 0
+  text-align center
+
+.promo__slogan
+  text-align center
+  font-family $opensans-regular
+  font-weight 400
+  font-size 1.2rem
+  line-height 2
+  padding 0 20%
+
+  @media screen and (max-width 500px)
+    padding 0
+
+
+// DECOR BLOCK
+// -------------------------------
 
 .promo__decor
   width 100%
@@ -47,28 +79,3 @@
     top 0
     right 0
     transform skewY(-6deg)
-
-.promo__center
-  lost-center $width
-  height 724px
-  display flex
-  flex-direction column
-  justify-content center
-  align-items center
-  color $color-white
-  padding 0 1rem
-
-.promo__title
-  font-size 3rem
-  font-family $opensans-bold
-  font-weight 400
-  line-height 1.2
-  margin 0 0 2.5rem 0
-
-.promo__slogan
-  text-align center
-  font-family $opensans-regular
-  font-weight 400
-  font-size 1.2rem
-  line-height 1.8
-  padding 0 20%
