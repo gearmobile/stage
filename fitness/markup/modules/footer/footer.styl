@@ -9,6 +9,7 @@
   lost-center $width
   padding 0 1rem
 
+
 // FOOTER PRIMARY
 // --------------------------------------------
 
@@ -108,8 +109,7 @@
     justify-content center
 
 .footer__form
-  lost-center 100%
-  // lost-column 2/3
+  width: calc(100vw*7/12)
 
   @media screen and (max-width 980px)
     lost-center 100%
@@ -143,22 +143,25 @@
 .footer__form input
 .footer__form button
   width 100%
-  padding 1.8rem 2rem
   border none
   border-radius 2px
-  font-size 1.6rem
+  font-size 1.4rem
 
 .footer__form input
+  padding: 2rem
   +placeholder()
-    font-size 1.6rem
+    font-size 1.4rem
     color #83969f
     text-transform capitalize
 
 .footer__form button
+  //display: flex
+  font-size: 1.5rem
+  text-align center
   text-transform capitalize
   background-color $color-green
   transition background-color .2s
   color $color-white
   white-space nowrap
-  padding 1.9rem 2rem
+  padding: 2rem
 
