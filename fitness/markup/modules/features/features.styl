@@ -1,195 +1,122 @@
 .features
   background-color $color-green
 
-.features__primary
-  padding 12rem 0
+  &__center
+    lost-center $width
+    padding 0 2rem
 
-  @media screen and (max-width $bp500)
-    padding 6rem 0
-
-  & > .features__center
+  &__row
     display flex
 
-.features__center
-  lost-center $width
-  padding 0 1rem
+    &:nth-child(1) > .features__block-thumb
+      background url('%=static=%assets/features/features-bg-01.jpg') center center no-repeat
+      background-size cover
 
-.features__column
-  lost-column 3/12
-  lost-column-gutter 4rem
-  display flex
-  flex-direction column
-  position relative
+      & > .features__metrics
+        right 4rem
 
-  & > .features-icon
-    margin 0 0 2rem 0
+    &:nth-child(2) > .features__block-thumb
+      background url('%=static=%assets/features/features-bg-02.jpg') center center no-repeat
+      background-size cover
 
-    @media screen and (max-width $bp768)
-      margin 0 auto 2rem
+      & > .features__metrics
+        left 4rem
 
-  & > h3
-    text-transform capitalize
-    color $color-white
-    font-family $opensans-bold
-    font-weight 400
-    font-size 1.8rem
-    line-height 1.4
-    margin 0 0 2rem 0
+    @media screen and (max-width 600px)
+      flex-direction column
+      justify-content center
+      align-items center
 
-  & > p
-    font-weight 300
-    color $color-white
-    line-height 1.6
-    margin 0 0 3rem 0
 
-  & > .readmore
-    font-size 1.2rem
-    font-family $opensans-regular
-    text-decoration none
-    text-transform capitalize
-    color $color-white
-    position absolute
-    bottom 0
-    left 0
-    transition color .2s
-
-    &::after
-      content '\0020\02192'
-
-    &:hover
-      color $color-grey
-
-    @media screen and (max-width $bp768)
-      left 50%
-      transform translateX(-50%)
-
-  @media screen and (max-width $bp768)
-    lost-column 6/12
-    lost-column-cycle 2
+  &__block-text
+    lost-column 5/12
+    lost-column-gutter 0
+    padding 5.5rem 5rem 9rem
     text-align center
+    background-color $color-white
+    min-height 39.4rem
 
-    &:nth-child(-n+2)
-      margin-bottom 6rem
+    & > small
+      display block
+      color $color-red
+      font-family $montserrat-regular
+      font-weight 400
+      font-size 1.2rem
+      text-transform uppercase
+      margin 0 0 1rem 0
 
-  @media screen and (max-width 600px)
-    lost-column 1/1
-    lost-column-cycle 0
-    lost-column-gutter 0
+    & > .features__title
+      text-transform uppercase
+      color $color-green
+      font-family $opensans-light
+      font-weight 300
+      font-size 2rem
+      margin 0 0 2rem 0
 
-    &:not(:last-child)
-      margin-bottom 8rem
+    & > .text-icon
+      margin 0 0 2rem 0
 
-.features__row
-  display flex
-
-  &:nth-child(1) > .features__block-thumb
-    background url('%=static=%assets/features/features-bg-01.jpg') center center no-repeat
-    background-size cover
-
-    & > .features__metrics
-      right 4rem
-
-  &:nth-child(2) > .features__block-thumb
-    background url('%=static=%assets/features/features-bg-02.jpg') center center no-repeat
-    background-size cover
-
-    & > .features__metrics
-      left 4rem
-
-  @media screen and (max-width 600px)
-    flex-direction column
-    justify-content center
-    align-items center
-
-
-.features__block-text
-  lost-column 5/12
-  lost-column-gutter 0
-  padding 5.5rem 5rem 9rem
-  text-align center
-  background-color $color-white
-  min-height 39.4rem
-
-  & > small
-    display block
-    color $color-red
-    font-family $montserrat-regular
-    font-weight 400
-    font-size 1.2rem
-    text-transform uppercase
-    margin 0 0 1rem 0
-
-  & > h2
-    text-transform uppercase
-    color $color-green
-    font-family $opensans-light
-    font-weight 300
-    font-size 2rem
-    margin 0 0 2rem 0
-
-  & > .text-icon
-    margin 0 0 2rem 0
-
-  & > p
-    color $color-grey
-    font-family $opensans-regular
-    font-weight 400
-    font-size 1.4rem
-    line-height 1.8
-    margin 0 0 2rem 0
-
-  & > a
-    font-family $opensans-regular
-    font-weight 400
-    text-transform capitalize
-    color $color-green
-
-    &:hover
-    &:active
-      text-decoration none
-
-  @media screen and (max-width 768px)
-    lost-column 1/2
-    lost-column-gutter 0
-
-  @media screen and (max-width 600px)
-    lost-column 1/1
-    lost-column-gutter 0
-    padding 5rem
-
-
-.features__block-thumb
-  lost-column 7/12
-  lost-column-gutter 0
-  position relative
-  background-size cover
-  min-height 39.4rem
-
-
-  & > .features__metrics
-    display flex
-    align-items center
-    position absolute
-    bottom 4rem
-
-    & > a
-      text-decoration none
-      text-transform capitalize
+    & > p
+      color $color-grey
       font-family $opensans-regular
       font-weight 400
-      color $color-red
-      font-size 1.2rem
+      font-size 1.4rem
+      line-height 1.8
+      margin 0 0 2rem 0
 
-      & > span
-        color $color-white
+    & > .features__readmore
+      font-family $opensans-regular
+      font-weight 400
+      text-transform capitalize
+      color $color-green
+      text-decoration: none
 
-    & > .thumbnail-icon
-      margin 0 0 0 1rem
+      &:hover
+      &:active
+        color: $color-red
 
-  @media screen and (max-width 768px)
-    lost-column 1/2
+    @media screen and (max-width 768px)
+      lost-column 1/2
+      lost-column-gutter 0
+
+    @media screen and (max-width 600px)
+      lost-column 1/1
+      lost-column-gutter 0
+      padding 5rem
+
+
+  &__block-thumb
+    lost-column 7/12
     lost-column-gutter 0
+    position relative
+    background-size cover
+    min-height 39.4rem
 
-  @media screen and (max-width 600px)
-    lost-column 1/1
-    lost-column-gutter 0
+
+    & > .features__metrics
+      display flex
+      align-items center
+      position absolute
+      bottom 4rem
+
+      & > a
+        text-decoration none
+        text-transform capitalize
+        font-family $opensans-regular
+        font-weight 400
+        color $color-red
+        font-size 1.2rem
+
+        & > span
+          color $color-white
+
+      & > .thumbnail-icon
+        margin 0 0 0 1rem
+
+    @media screen and (max-width 768px)
+      lost-column 1/2
+      lost-column-gutter 0
+
+    @media screen and (max-width 600px)
+      lost-column 1/1
+      lost-column-gutter 0

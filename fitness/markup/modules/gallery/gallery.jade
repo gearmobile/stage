@@ -1,5 +1,5 @@
 mixin gallery(data)
-  section.gallery#services
+  section.gallery#gallery
     .gallery__center
       // first row
       .gallery__row
@@ -13,9 +13,10 @@ mixin gallery(data)
         .gallery__secondary
           figure.gallery__image
             .gallery__data
-                .gallery__date 24th august
+                .gallery__date
+                  a(href="#") 24th august
                 .gallery__meta
-                  | health &amp; fitness
+                  a(href="#") health &amp; fitness
                   != jadeHelpers.Icon.call(locals, {iconName: 'gallery-icon', className: 'gallery-icon'})
           .gallery__content
             h2 summer of fun

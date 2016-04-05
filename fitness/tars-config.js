@@ -9,7 +9,6 @@ module.exports = {
         {
             "name": "lost",
             "options": {
-                // "flexbox": "flex",
                 "gutter": "30px"
             }
         }

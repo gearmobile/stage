@@ -1,83 +1,112 @@
 .gallery
   background-color $color-red
 
-.gallery__center
-  lost-center $width
-  padding 0 1rem
+  &__center
+    lost-center $width
+    padding 0 2rem
 
-.gallery__row
-  display flex
-  background-color $color-white
+  &__row
+    display flex
+    background-color $color-white
 
-  & > div:last-child
-    background-color $color-green
+    & > div:last-child
+      background-color $color-green
 
-  @media screen and (max-width 600px)
-    flex-direction column
+    @media screen and (max-width 600px)
+      flex-direction column
 
-.gallery__primary
-  lost-column 4/12
-  lost-column-gutter 0
-
-  @media screen and (max-width 768px)
-    lost-column 1/1
+  &__primary
+    lost-column 4/12
     lost-column-gutter 0
 
-.gallery__secondary
-  lost-column 8/12
-  lost-column-gutter 0
+    @media screen and (max-width 768px)
+      lost-column 1/1
+      lost-column-gutter 0
 
-  @media screen and (max-width 768px)
-    lost-column 1/1
+  &__secondary
+    lost-column 8/12
     lost-column-gutter 0
 
-.gallery__row:nth-child(1) div:nth-child(1) .gallery__image
-  background url('%=static=%assets/gallery/gallery-image-01.jpg') center center no-repeat
-  background-size cover
+    @media screen and (max-width 768px)
+      lost-column 1/1
+      lost-column-gutter 0
 
-.gallery__row:nth-child(1) div:nth-child(2) .gallery__image
-  background url('%=static=%assets/gallery/gallery-image-02.jpg') center center no-repeat
-  background-size cover
+  &__row:nth-child(1) div:nth-child(1) .gallery__image
+    background url('%=static=%assets/gallery/gallery-image-01.jpg') center center no-repeat
+    background-size cover
 
-.gallery__row:nth-child(1) div:nth-child(2) .gallery__content h2
-.gallery__row:nth-child(2) div:nth-child(2) .gallery__content h2
-.gallery__row:nth-child(1) div:nth-child(2) .gallery__content h4
-.gallery__row:nth-child(2) div:nth-child(2) .gallery__content h4
-.gallery__row:nth-child(1) div:nth-child(2) .gallery__content p
-.gallery__row:nth-child(2) div:nth-child(2) .gallery__content p
-  color $color-white
+  &__row:nth-child(1) div:nth-child(2) .gallery__image
+    background url('%=static=%assets/gallery/gallery-image-02.jpg') center center no-repeat
+    background-size cover
 
-.gallery__row:nth-child(2) div:nth-child(1) .gallery__image
-  background url('%=static=%assets/gallery/gallery-image-03.jpg') center center no-repeat
-  background-size cover
+  &__row:nth-child(1) div:nth-child(2) .gallery__content h2
+  &__row:nth-child(2) div:nth-child(2) .gallery__content h2
+  &__row:nth-child(1) div:nth-child(2) .gallery__content h4
+  &__row:nth-child(2) div:nth-child(2) .gallery__content h4
+  &__row:nth-child(1) div:nth-child(2) .gallery__content p
+  &__row:nth-child(2) div:nth-child(2) .gallery__content p
+    color $color-white
 
-.gallery__row:nth-child(2) div:nth-child(2) .gallery__image
-  background url('%=static=%assets/gallery/gallery-image-04.jpg') center center no-repeat
-  background-size cover
+  &__row:nth-child(2) div:nth-child(1) .gallery__image
+    background url('%=static=%assets/gallery/gallery-image-03.jpg') center center no-repeat
+    background-size cover
 
-.gallery__image
-  height 360px
+  &__row:nth-child(2) div:nth-child(2) .gallery__image
+    background url('%=static=%assets/gallery/gallery-image-04.jpg') center center no-repeat
+    background-size cover
 
-.gallery__image img
-  display block
-  width 100%
-  height auto
+  &__image
+    height 360px
 
-.gallery__data
-  display flex
-  justify-content space-between
-  align-items center
-  text-transform uppercase
-  color $color-white
-  font-size 1.4rem
-  font-family $montserrat-regular
-  font-weight 400
-  padding 6rem 6rem 0
+  &__image img
+    display block
+    width 100%
+    height auto
 
-.gallery__meta
-  display flex
-  align-items center
-  justify-content space-between
+  &__data
+    display flex
+    justify-content space-between
+    align-items center
+    padding 6rem 6rem 0
+
+    @media screen and (max-width: 768px)
+      flex-direction: column
+      padding: 6rem 0 0 0
+
+      & > .gallery__date
+        margin-bottom: 1rem
+
+    @media screen and (max-width 600px)
+      flex-direction: row
+      padding 6rem 6rem 0
+
+      & > .gallery__date
+        margin-bottom: 0
+
+    @media screen and (max-width: 450px)
+      flex-direction: column
+      padding: 6rem 0 0 0
+
+      & > .gallery__date
+        margin-bottom: 1rem
+
+    & a
+      color: $color-white
+      text-decoration: none
+      text-transform: uppercase
+      font-size: 1.4rem
+      font-family $montserrat-regular
+      font-weight: 400
+      transition: color .2s
+
+      &:hover
+        color: $color-red
+
+  &__meta
+    display flex
+    align-items center
+    justify-content space-between
+
 
 .gallery-icon
   margin 0 0 0 1rem

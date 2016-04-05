@@ -1,48 +1,25 @@
 mixin features(data)
-	section.features
-		.features__primary
-			.features__center
-				.features__column
-					!= jadeHelpers.Icon.call(locals, {iconName: 'features-icon-01', className: 'features-icon'})
-					h3 resources
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate esse saepe culpa quaerat quod odit nulla. Perferendis, ut, vel.
-					a.readmore(href="#") explore more
-				.features__column
-					!= jadeHelpers.Icon.call(locals, {iconName: 'features-icon-02', className: 'features-icon'})
-					h3 traning &amp; funding
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio repudiandae, nulla necessitatibus unde tenetur magnam.
-					a.readmore(href="#") browse traning
-				.features__column
-					!= jadeHelpers.Icon.call(locals, {iconName: 'features-icon-03', className: 'features-icon'})
-					h3 connect
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, necessitatibus.
-					a.readmore(href="#") connect now
-				.features__column
-					!= jadeHelpers.Icon.call(locals, {iconName: 'features-icon-04', className: 'features-icon'})
-					h3 communicate
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, adipisci.
-					a.readmore(href="#") start now
-		.features__secondary
-			.features__center
-				.features__row
-					.features__block-text
-						small it’s all about
-						h2 fitness first
-						!= jadeHelpers.Icon.call(locals, {iconName: 'drop-grey', className: 'text-icon'})
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem modi nostrum ratione distinctio aliquam ex quod, earum qui velit corrupti voluptatibus, eos at consequatur possimus veniam placeat mollitia iure eius!
-						a(href="#") read more
-					.features__block-thumb
-						.features__metrics
-							a(href="#") active users <span>(34)</span>
-							!= jadeHelpers.Icon.call(locals, {iconName: 'drop-red', className: 'thumbnail-icon'})
-				.features__row
-					.features__block-thumb
-						.features__metrics
-							a(href="#") products used <span>(658)</span>
-							!= jadeHelpers.Icon.call(locals, {iconName: 'drop-red', className: 'thumbnail-icon'})
-					.features__block-text
-						small love your
-						h2 your body
-						!= jadeHelpers.Icon.call(locals, {iconName: 'drop-grey', className: 'text-icon'})
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem modi nostrum ratione distinctio aliquam ex quod, earum qui velit corrupti voluptatibus, eos at consequatur possimus veniam placeat mollitia iure eius!
-						a(href="#") read more
+	section.features#features
+		.features__center
+			.features__row
+				.features__block-text
+					small it’s all about
+					h2.features__title fitness first
+					!= jadeHelpers.Icon.call(locals, {iconName: 'drop-grey', className: 'text-icon'})
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem modi nostrum ratione distinctio aliquam ex quod, earum qui velit corrupti voluptatibus, eos at consequatur possimus veniam placeat mollitia iure eius!
+					a.features__readmore(href="#") read more
+				.features__block-thumb
+					.features__metrics
+						a(href="#") active users <span>(34)</span>
+						!= jadeHelpers.Icon.call(locals, {iconName: 'drop-red', className: 'thumbnail-icon'})
+			.features__row
+				.features__block-thumb
+					.features__metrics
+						a(href="#") products used <span>(658)</span>
+						!= jadeHelpers.Icon.call(locals, {iconName: 'drop-red', className: 'thumbnail-icon'})
+				.features__block-text
+					small love your
+					h2.features__title your body
+					!= jadeHelpers.Icon.call(locals, {iconName: 'drop-grey', className: 'text-icon'})
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem modi nostrum ratione distinctio aliquam ex quod, earum qui velit corrupti voluptatibus, eos at consequatur possimus veniam placeat mollitia iure eius!
+					a.features__readmore(href="#") read more
