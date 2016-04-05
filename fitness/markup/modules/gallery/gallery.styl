@@ -31,9 +31,6 @@
     lost-column 1/1
     lost-column-gutter 0
 
-.gallery__image
-  height 360px
-
 .gallery__row:nth-child(1) div:nth-child(1) .gallery__image
   background url('%=static=%assets/gallery/gallery-image-01.jpg') center center no-repeat
   background-size cover
@@ -58,10 +55,32 @@
   background url('%=static=%assets/gallery/gallery-image-04.jpg') center center no-repeat
   background-size cover
 
+.gallery__image
+  height 360px
+
 .gallery__image img
   display block
   width 100%
   height auto
+
+.gallery__data
+  display flex
+  justify-content space-between
+  align-items center
+  text-transform uppercase
+  color $color-white
+  font-size 1.4rem
+  font-family $montserrat-regular
+  font-weight 400
+  padding 6rem 6rem 0
+
+.gallery__meta
+  display flex
+  align-items center
+  justify-content space-between
+
+.gallery-icon
+  margin 0 0 0 1rem
 
 .gallery__content
   padding 4rem 6rem 8rem 4rem
