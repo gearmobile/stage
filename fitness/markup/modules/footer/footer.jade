@@ -26,5 +26,5 @@ mixin footer(data)
             fieldset.form__field
               input(type="email" name="email" id="email" placeholder="your email")
             fieldset.form__field
-              button(type="submit") join newsletter
-              != jadeHelpers.Icon.call(locals, {iconName: 'circle', className: 'footer-icon'})
+              button(type="submit")
+                | join newsletter

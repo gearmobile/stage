@@ -7,6 +7,9 @@
   @media screen and (max-width $bp500)
     padding 6rem 0
 
+  & > .features__center
+    display flex
+
 .features__center
   lost-center $width
   padding 0 1rem
@@ -39,15 +42,22 @@
     line-height 1.6
     margin 0 0 3rem 0
 
-  & > a
+  & > .readmore
     font-size 1.2rem
-    font-family $opensans-light
+    font-family $opensans-regular
     text-decoration none
     text-transform capitalize
     color $color-white
     position absolute
     bottom 0
     left 0
+    transition color .2s
+
+    &::after
+      content '\0020\02192'
+
+    &:hover
+      color $color-grey
 
     @media screen and (max-width $bp768)
       left 50%
