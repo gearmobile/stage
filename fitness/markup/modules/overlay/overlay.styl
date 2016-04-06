@@ -1,0 +1,77 @@
+
+// OVERLAY STYLE
+// ------------------------------
+
+.overlay
+  position fixed
+  width 100%
+  height 100%
+  top 0
+  left 0
+  background-color rgba($color-green, .8)
+  z-index 3
+
+// MENU STYLE
+// ------------------------------
+
+.overlay__wrapper
+  text-align center
+  position relative
+  top 50%
+  height 60%
+  transform translateY(-50%)
+
+.overlay__list
+  list-style none
+  padding 0
+  margin 0 auto
+  display inline-block
+  height 100%
+  position relative
+
+.overlay__item
+  display block
+  height 20%
+  height calc(100% / 5)
+  min-height 54px
+  backface-visibility hidden
+
+.overlay__link
+  display block
+  font-size 4rem
+  font-weight 300
+  color $color-white
+  transition color .2s
+  text-decoration none
+  font-family $opensans-regular
+  font-weight 400
+  text-transform uppercase
+
+.overlay__link:hover
+.overlay__link:focus
+  color $color-grey-dark
+
+
+// EFFECTS
+// ------------------------------
+
+.overlay-slidedown
+  visibility hidden
+  transform translateY(-100%)
+  transition transform .4s ease-in-out, visibility 0s .4s
+
+.overlay-slidedown.open
+  visibility visible
+  transform translateY(0%)
+  transition transform .4s ease-in-out
+
+
+// MEDIA QUERIES
+// ------------------------------
+
+@media screen and (max-height 30.5em)
+  .overlay__wrapper
+    height 70%
+    font-size 3rem
+  .overlay__item
+    font-size 3rem

@@ -2,6 +2,7 @@ doctype html
 html(class="no-js", lang="ru")
 
     include ../modules/head/head
+    include ../modules/overlay/overlay
     include ../modules/hero/hero
     include ../modules/about/about
     include ../modules/header-fixed/header-fixed
@@ -15,6 +16,7 @@ html(class="no-js", lang="ru")
     body.page
         |%=symbols=%
         +header-fixed()
+        +overlay()
         section.page__wrapper
             +hero()
             +about()
