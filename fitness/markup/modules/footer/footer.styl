@@ -9,6 +9,9 @@
   lost-center $width
   padding 0 1rem
 
+  @media screen and (max-width 980px)
+    padding 0 2rem
+
 
 // FOOTER PRIMARY
 // --------------------------------------------
@@ -46,6 +49,7 @@
     color $color-grey-light
     font-size 1.2rem
     line-height 1.6
+    margin 0 0 2rem 0
 
   @media screen and (max-width 980px)
     margin 0 0 4rem 0
@@ -102,23 +106,27 @@
 // --------------------------------------------
 
 .footer__secondary
-  display flex
-  justify-content flex-end
+  lost-utility clearfix
 
   @media screen and (max-width 980px)
     justify-content center
 
 .footer__form
-  width: calc(100vw*7/12)
+  lost-column 8/12
+  lost-offset -4/12
 
   @media screen and (max-width 980px)
-    lost-center 100%
+    lost-column 1/1
 
 .form__field:nth-child(1)
   lost-column 1/4
   lost-column-gutter .6rem
 
-  @media screen and (max-width 600px)
+  @media screen and (max-width 980px)
+    lost-column 4/12
+    lost-column-gutter 1rem
+
+  @media screen and (max-width 768px)
     lost-column 1/1
     lost-column-gutter 0
     margin-bottom 2rem
@@ -127,7 +135,11 @@
   lost-column 2/4
   lost-column-gutter .6rem
 
-  @media screen and (max-width 600px)
+  @media screen and (max-width 980px)
+    lost-column 4/12
+    lost-column-gutter 1rem
+
+  @media screen and (max-width 768px)
     lost-column 1/1
     lost-column-gutter 0
     margin-bottom 2rem
@@ -136,7 +148,11 @@
   lost-column 1/4
   lost-column-gutter .6rem
 
-  @media screen and (max-width 600px)
+  @media screen and (max-width 980px)
+    lost-column 4/12
+    lost-column-gutter 1rem
+
+  @media screen and (max-width 768px)
     lost-column 1/1
     lost-column-gutter 0
 
@@ -148,11 +164,13 @@
   font-size 1.4rem
 
 .footer__form input
-  padding: 2rem
+  padding 2rem
+
   +placeholder()
     font-size 1.4rem
     color #83969f
     text-transform capitalize
+
 
 .footer__form button
   font-size 1.5rem
