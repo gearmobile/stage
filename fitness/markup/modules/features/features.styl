@@ -5,6 +5,9 @@
     lost-center $width
     padding 0 2rem
 
+    @media screen and (max-width 600px)
+      padding-bottom: 2rem
+
   &__row
     display flex
 
@@ -27,7 +30,8 @@
       justify-content center
       align-items center
 
-
+  // BLOCK TEXT
+  // -------------------------------------
   &__block-text
     lost-column 5/12
     lost-column-gutter 0
@@ -84,7 +88,8 @@
       lost-column-gutter 0
       padding 5rem
 
-
+  // BLOCK THUMB
+  // -----------------------------------------
   &__block-thumb
     lost-column 7/12
     lost-column-gutter 0
@@ -124,3 +129,4 @@
     @media screen and (max-width 600px)
       lost-column 1/1
       lost-column-gutter 0
+      order 2
