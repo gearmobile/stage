@@ -1,7 +1,7 @@
 mixin header-fixed(data)
   section.header-fixed
     .header-fixed__center
-      a(href="/").header-fixed__logo
+      a.header-fixed__logo(href="/")
         != jadeHelpers.Icon.call(locals, {iconName: 'drop-red', className: 'logo-icon'})
         span fitness
       .header-fixed__nav
@@ -10,4 +10,4 @@ mixin header-fixed(data)
         a(href="#gallery") services
         a(href="#promo") faq
         a(href="#contact") contact
-      .header-fixed__icon
+      a.header-fixed__icon(href="#")

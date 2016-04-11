@@ -1,4 +1,4 @@
-const $topHeader = $('.header-fixed');
+var $topHeader = $('.header-fixed');
 
 $(window).on('scroll', function () {
   if ( $(window).scrollTop() > 0 ) {

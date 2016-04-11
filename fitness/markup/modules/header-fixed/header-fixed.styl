@@ -77,10 +77,9 @@
 
 .header-fixed__icon
   size(3rem)
-  background-color $color-green
-  cursor pointer
   display none
   transition all .2s
+  background-color: $color-red
 
   @media screen and (max-width 768px)
     display block
@@ -88,4 +87,3 @@
     &:hover
       transform: rotate(-45deg)
       border-radius .5rem
-      background-color: $color-red
