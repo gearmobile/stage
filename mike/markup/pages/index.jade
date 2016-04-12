@@ -2,6 +2,8 @@ doctype html
 html(class="no-js", lang="ru")
 
     include ../modules/head/head
+    include ../modules/download/download
+    include ../modules/clients/clients
     include ../modules/latest/latest
     include ../modules/contact/contact
     include ../modules/footer/footer
@@ -14,6 +16,8 @@ html(class="no-js", lang="ru")
         section.page__wrapper
 
             //- Include your modules here
+            +download()
+            +clients()
             +latest()
             +contact()
 
