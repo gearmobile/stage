@@ -14,9 +14,9 @@ mixin top-header(data)
                     a.top-header__link(href="#blog") blog
                     a.top-header__link(href="#contact") contact
             .top-header__secondary
-                a.top-header__icons(href="#")
+                a.top-header__icons(href="#" title="Facebook")
                     != jadeHelpers.Icon.call(locals, {iconName: 'facebook', className: 'header-icon'})
-                a.top-header__icons(href="#")
+                a.top-header__icons(href="#" title="Twitter")
                     != jadeHelpers.Icon.call(locals, {iconName: 'twitter', className: 'header-icon'})
-                a.top-header__icons(href="#")
+                a.top-header__icons(href="#" title="Behance")
                     != jadeHelpers.Icon.call(locals, {iconName: 'behance', className: 'header-icon'})

@@ -1,14 +1,14 @@
 .top-header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 2
   padding: 1.6rem 0 1.8rem
   background-color: $color-white
 
   &.is-fixed
-    background-color: cornsilk;
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    z-index: 5
+    padding: 1.4rem 0
 
   &__center
     lost-center $width
@@ -22,10 +22,15 @@
     align-items: center
 
   &__logo
+    display: flex
+    align-items: center
+    padding-left: 5.2rem
+    height: 2.9rem
     font-family: $montserrat-regular
     color: #757575
     text-decoration: none
     font-size: 1.8rem
+    background: url('%=static=%assets/top-header/logo.png') 0 50% no-repeat
 
   &__navigation
     margin: 0 0 0 10rem
@@ -46,7 +51,8 @@
     align-items: center
 
   &__icons
-    display: block
+    display: flex
+    align-items: center
     text-decoration: none
     padding: 0 1rem
 
