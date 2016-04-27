@@ -1,0 +1,55 @@
+.top-header
+  padding: 1.6rem 0 1.8rem
+  background-color: $color-white
+
+  &.is-fixed
+    background-color: cornsilk;
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 5
+
+  &__center
+    lost-center $width
+    padding: 0 1.5rem
+    justify-content: space-between
+    text-transform: uppercase
+
+  &__primary
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__logo
+    font-family: $montserrat-regular
+    color: #757575
+    text-decoration: none
+    font-size: 1.8rem
+
+  &__navigation
+    margin: 0 0 0 10rem
+
+  &__link
+    text-decoration: none
+    font-family: $montserrat-regular
+    color: #aaaaaa
+    font-size: 1.2rem
+    margin: 0 .8rem
+
+    &:hover
+    &:focus
+      color: #757575
+
+  &__secondary
+    display: flex
+    align-items: center
+
+  &__icons
+    display: block
+    text-decoration: none
+    padding: 0 1rem
+
+    &:nth-child(2)
+    &:nth-child(3)
+      border-left: 1px solid #aaaaaa
