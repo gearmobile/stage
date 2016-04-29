@@ -1,1 +1,48 @@
+.about
+    background-color: #e3e3e3
+    padding: 7rem 0
 
+    &__center
+        lost-center $width
+        padding: 0 1.5rem
+
+    // PRIMARY SECTION
+
+    &__primary
+        background-color: $color-white
+
+    &__image > img
+        display: block
+        width: 100%
+        height: auto
+
+    &__content
+        padding: 5rem 10rem
+
+        & p
+            font-family: $crimson_text-roman
+            font-weight: 400
+            font-size: 1.4rem
+            color: #3e3d3d
+            line-height: 1.7
+
+    &__title
+        text-align: center
+        padding-bottom: 3rem
+        margin-bottom: 4rem
+        font-family: $amsdam-regular
+        text-transform: uppercase
+        font-weight: 400
+        letter-spacing: .2rem
+        background: url('%=static=%assets/about/underline.png') 50% 100% no-repeat
+
+    // SECONDARY SECTION
+
+    &__secondary
+        lost-center 100% flex
+        padding: 3rem 0
+
+    &__item
+        lost-column 1/4
+        lost-olumn-gutter 0
+        text-align: center
