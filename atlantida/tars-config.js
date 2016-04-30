@@ -9,8 +9,8 @@ module.exports = {
         {
             "name": "lost",
             "options": {
-                "flexbox": "flex",
-                "gutter": "30px"
+                //"flexbox": "flex",
+                "gutter": "15px"
             }
         }
     ],

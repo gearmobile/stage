@@ -1,1 +1,126 @@
+.services
+    padding: 7rem 0 8rem
+    background: url('%=static=%assets/services/services-bg.jpg') 50% 50% no-repeat
+    background-size: cover
+
+    &__center
+        lost-center $width
+        padding: 0 $gutter
+
+    &__title
+        margin: 0 0 4rem
+        padding: 0 0 3rem
+        text-align: center
+        background: url('%=static=%assets/services/underline-services.png') 50% 100% no-repeat
+        font-family: $amsdam-regular
+        font-weight: 400
+        font-size: 2rem
+        text-transform: uppercase
+        color: $color-white
+        letter-spacing: .2rem
+
+    &__subtitle
+        text-align: center
+        color: #cfcfcf
+        font-size: 1.4rem
+        line-height: 1.7
+        font-family: $crimson_text-roman
+        padding: 0 7rem
+        margin: 0 0 7rem
+
+        @media screen and (max-width: $bp600)
+            padding: 0
+
+    &__content
+        lost-column 100%
+
+    &__item
+        lost-column 1/4
+        padding 4rem 3.4rem 6rem
+        border-width: 0 .1rem .1rem .1rem
+        border-color: transparent #898989 #898989 #898989
+        border-style: none solid solid solid
+        text-align: center
+        color: #898989
+        position: relative
+
+        &::before
+        &::after
+            content: ''
+            display: block
+            height: .1rem
+            width: 40%
+            background-color: #898989
+            position: absolute
+            top: 0
+
+        &::before
+            left: 0
+
+        &::after
+            right: 0
+
+        & p
+            font-family: $crimson_text-roman
+            font-size: 1.4rem
+            line-height: 1.5
+            font-weight: 400
+            margin: 0
+
+        @media screen and (max-width: $bp980)
+            lost-column 1/2
+            lost-column-gutter $gutter2
+            lost-column-cycle 2
+
+            &:nth-child(-n+2)
+                margin-bottom: $gutter2
+
+        @media screen and (max-width: $bp600)
+            lost-column 1/1
+            lost-column-cycle 0
+
+            &:nth-child(-n+4)
+                margin-bottom: $gutter2
+
+    &__icon
+        min-height: 2.5rem
+        position: absolute
+        top: -1rem
+        left: 50%
+        transform: translateX(-50%);
+        padding: 0 2rem
+
+    &__heading
+        text-transform: uppercase
+        font-size: 1.3rem
+        font-weight: 400
+        font-family: $montserrat-regular
+        text-align: center
+        line-height: 1.6
+        margin: 0 0 3rem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
