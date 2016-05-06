@@ -1,12 +1,15 @@
 .team
-    min-height: 666px
     padding: 7rem 0
     background: url('%=static=%assets/team/team-bg.jpg') 50% 50% no-repeat
     background-size: cover
 
+    // TEAM CENTER
+
     &__center
         lost-center $width
         padding: 0 $gutter
+
+    // TEAM TITLE
 
     &__title
         font: 400 2rem/1.2 $amsdam-regular
@@ -18,26 +21,48 @@
         margin: 0 0 4rem
         background: url('%=static=%assets/team/team-underline.png') 50% 100% no-repeat
 
+    // TEAM SUBTITLE
+
     &__subtitle
         text-align: center
         font: 400 1.4rem/1.7 $crimson_text-roman
         color: $color-grey
         margin: 0 0 5rem
 
+        @media screen and  (max-width: $bp600)
+            padding: 0 $gutter
+
+    // TEAM GALLERY
+
     &__gallery
-        lost-center 87rem flex
+        lost-center 88rem flex
         justify-content: center
+
+    // TEAM ITEM
 
     &__item
         lost-column 1/3
         lost-column-gutter 3rem
-        min-height: 34rem
         position: relative
 
         & > img
             display: block
             width: 100%
             height: auto
+
+        &:hover .team__cover
+        &:focus .team__cover
+            opacity: 1
+            visibility: visible
+
+        @media screen and  (max-width: $bp600)
+            lost-column 1/1
+            lost-column-gutter 0
+
+            &:not(:last-child)
+                margin-bottom: $gutter
+
+    // TEAM ITEM COVER
 
     &__cover
         position: absolute
@@ -46,6 +71,9 @@
         left: 1rem
         width: calc(100% - 1rem * 2)
         height: calc(100% - 1rem * 2)
+        /*opacity: 0*/
+        /*visibility: hidden*/
+        transition: opacity .2s, visibility .2s
 
     &__data
         position: absolute
@@ -71,50 +99,16 @@
         font-style: italic
         margin: 0
 
-    &__icons
+    &__socials
         display: flex
-        align-items: center
-        list-style-type: none
-        margin: 0
-        padding: 0
-
-        & li
-            /*height: 1rem*/
-
-        & li:not(:last-child)
-            padding-right: .5rem
-            border-right: .1rem solid #3e3d3d
-
-        & li:not(:first-child)
-            padding-left: .5rem
 
         & .team-icon
             width: 1rem
             height: 1rem
 
+        & a:not(:last-child)
+            padding-right: .5rem
+            border-right: .1rem solid #3e3d3d
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        & a:not(:first-child)
+            padding-left: .5rem

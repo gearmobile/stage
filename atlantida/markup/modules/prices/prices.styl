@@ -1,1 +1,110 @@
+.prices
+    background-color: #e3e3e3
+    padding: 7rem 0 9rem
+
+    &__center
+        lost-center $width
+        padding: 0 $gutter
+
+    &__title
+        text-align: center
+        text-transform: uppercase
+        font: 400 2rem/1 $amsdam-regular
+        color: $color-grey
+        padding: 0 0 3rem
+        margin: 0 0 4rem
+        letter-spacing: .2rem
+        background: url('%=static=%assets/prices/prices-underline.png') 50% 100% no-repeat
+
+    &__subtitle
+        text-align: center
+        font: 1.4rem/1.7 $crimson_text-roman
+        color: $color-grey
+        margin: 0 0 8rem
+
+    & .table
+        lost-center $width
+
+        &__item
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            lost-column 1/3
+            lost-column-gutter 3rem
+            background-color: $color-white
+            padding: 5rem 0 6rem
+            text-align: center
+
+        &__title
+            text-transform: uppercase
+            color: $color-grey
+            font: 400 1.3rem/1.2 $montserrat-regular
+            margin: 0 0 3rem
+
+        &__icon
+            width: 5rem
+            height: 5rem
+            border-radius: 50%
+            border: .2rem solid $color-grey
+            margin: 0 0 3rem
+            position: relative
+            background-color: $color-white
+
+            &::before
+            &::after
+                content: ''
+                display: block
+                height: .1rem
+                background-color: $color-grey
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                width: 160%
+
+            &::before
+                left: -1600%
+
+            &::after
+                right: 160%
+
+        &__price
+            font: 700 6rem/1.2 $montserrat-bold
+            color: $color-grey
+            margin: 0 0 5rem
+
+        &__list
+            margin: 0 0 5rem
+            padding: 0
+            list-style-type: none
+            font: 400 1.6rem/2 $crimson_text-italic
+            color: $color-grey
+            text-transform: capitalize
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
