@@ -1,1 +1,47 @@
+.blog
+    padding: 8rem 0 0
+    background-color: #e3e3e3
 
+    &__center
+        lost-center $width
+        padding: 0 $gutter
+
+    &__title
+        text-transform: uppercase
+        font: 400 2rem/1 $amsdam-regular
+        text-align: center
+        color: $color-grey
+        padding: 0 0 3rem
+        margin: 0 0 4rem
+        letter-spacing: .2rem
+        background: url('%=static=%assets/blog/blog-underline.png') 50% 100% no-repeat
+
+    &__subtitle
+        text-align: center
+        font: 400 1.4rem/1.7 $crimson_text-roman
+        color: $color-grey
+        margin: 0 0 8rem
+
+    &__gallery
+        lost-center 100%
+
+    &__row
+        lost-center 100% flex
+
+    &__item
+        lost-column 1/2
+        lost-column-gutter 0
+
+    &__thumb
+        lost-column 1/2
+        lost-column-gutter 0
+
+        & > img
+            display: block
+            width: 100%
+            height: auto
+
+    &__content
+        lost-column 1/2
+        lost-column-gutter 0
+        background-color: #555557

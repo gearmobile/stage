@@ -1,2 +1,26 @@
 mixin blog(data)
     .blog
+        .blog__center
+            h1.blog__title blog
+            p.blog__subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla dui, volutpat eu lectus vel, dapibus hendrerit ipsum. Nam nec ante lacus. Quisque in ornare nibh. Donec eleifend lectus ut orci elementum gravida. Morbi mi arcu, viverra id accumsan ac, aliquam vel tellus.
+        .blog__gallery
+            .blog__row
+                .blog__item
+                    .blog__thumb
+                        img(src="%=static=%img/assets/blog/blog-image-01.jpg" alt="Blog Image")
+                    .blog__content
+                        h3.blog__heading
+                            a(href="#") Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                .blog__item
+                    .blog__thumb
+                        img(src="%=static=%img/assets/blog/blog-image-02.jpg" alt="Blog Image")
+                    .blog__content
+            .blog__row
+                .blog__item
+                    .blog__content
+                    .blog__thumb
+                        img(src="%=static=%img/assets/blog/blog-image-03.jpg" alt="Blog Image")
+                .blog__item
+                    .blog__content
+                    .blog__thumb
+                        img(src="%=static=%img/assets/blog/blog-image-04.jpg" alt="Blog Image")
