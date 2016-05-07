@@ -1,8 +1,9 @@
+include ../heading/heading
+
 mixin history(data)
     .history
         .history__center
-            h1.history__title history
-            p.history__subtitle In pulvinar, mi at rhoncus condimentum, turpis nisl scelerisque turpis, ut gravida eros tortor non arcu. In eget arcu ante. Curabitur lacinia ultricies ante, eget mattis orci vestibulum sit amet.
+            +heading('history')
             .history__content
                 .history__year 2015
                 .history__list

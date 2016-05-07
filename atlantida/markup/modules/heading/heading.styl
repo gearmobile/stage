@@ -1,1 +1,21 @@
+.heading
+    margin: 0 0 8rem
 
+    &__title
+        text-transform: uppercase
+        font: 400 2rem/1 $amsdam-regular
+        text-align: center
+        color: $color-grey
+        padding: 0 0 3rem
+        margin: 0 0 4rem
+        letter-spacing: .2rem
+        background: url('%=static=%assets/heading/heading-underline.png') 50% 100% no-repeat
+
+    &__subtitle
+        text-align: center
+        font: 400 1.4rem/1.7 $crimson_text-roman
+        color: $color-grey
+        margin: 0
+
+        @media screen and (max-width: $bp980)
+            padding: 0 $gutter

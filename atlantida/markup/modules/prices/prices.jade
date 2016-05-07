@@ -1,8 +1,9 @@
+include ../heading/heading
+
 mixin prices(data)
     .prices
         .prices__center
-            h1.prices__title prices
-            p.prices__subtitle Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
+            +heading('prices')
             .table
                 .table__item
                     h4.table__title basic
