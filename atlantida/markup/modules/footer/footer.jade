@@ -5,21 +5,23 @@ mixin footer(data)
                 h1.footer__title atlantida
             .footer__content
                 .footer__primary
-                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
-                    h3 atlantida studio
-                    ul.footer__address
-                        li Steven Bernson, Attorney at Law
-                        li 1556 Broadway, suite 416
-                        li New York, NY, 10120, USA
-                    ul.footer__contacts
-                        li: E-mail: <a href="">elegantflyers@gmail.com</a>
-                        li: a(href="") +84 956 654 972
-                    ul.footer__socials
-                        li: a(href="#")
-                        li: a(href="#")
-                        li: a(href="#")
+                    p.footer__slogan Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                    .footer__address
+                        h3.footer__subtitle atlantida studio
+                        ul.footer__city
+                            li Steven Bernson, Attorney at Law
+                            li 1556 Broadway, suite 416
+                            li New York, NY, 10120, USA
+                        ul.footer__contacts
+                            li
+                                | E-mail: <a href="mailto:elegantflyers@gmail.com">elegantflyers@gmail.com</a>
+                            li: a(href="tel:+84956654972") +84 956 654 972
+                        ul.footer__socials
+                            li: a(href="#")
+                            li: a(href="#")
+                            li: a(href="#")
                 .footer__secondary
-                    form.footer.form(method="post" action="action.php")
+                    form.form(method="post" action="action.php")
                         .form__row
                             .form__column
                                 input(type="text" name="name" id="name" placeholder="name")
@@ -33,6 +35,6 @@ mixin footer(data)
                         .form__row
                             textarea(name="message" id="message" placeholder="message")
                         .form__row
-                            button(type="submit") submit
+                            button.form__button(type="submit") submit
             footer.footer__footer
                 p Copyright &copy; <span class="year">2015</span> <a class="studio" href="#">Atlantida Theme</a>

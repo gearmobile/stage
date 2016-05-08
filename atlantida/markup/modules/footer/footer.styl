@@ -1,5 +1,5 @@
 .footer
-    background-color: #292929
+    background: #292929 url("%=static=%assets/footer/footer-bg.png") 0 0 repeat
     padding: 6rem 0 4rem
 
     &__center
@@ -9,10 +9,148 @@
     &__content
         lost-center 100% flex
 
+    // FOOTER PRIMARY SECTION
+
     &__primary
         lost-column 4/12
-        lost-column-gutter 0
+        lost-column-gutter $gutter2
+
+    &__slogan
+        font: 400 1.4rem/1.5 $crimson_text-roman
+        color: #949494
+        margin: 0
+
+    &__address
+        margin: 4rem 0 0 0
+
+    &__subtitle
+        text-transform: uppercase
+        color: $color-white
+        font: 400 1.3rem/1 $montserrat-regular
+        color: #e3e3e3
+        margin: 0 0 3rem
+
+    &__city
+        margin: 0 0 3rem
+
+        & > li
+            font: 400 1.4rem/1.5 $crimson_text-roman
+            color: #949494
+
+            &:not(:last-child)
+                margin: 0 0 1rem
+
+    &__contacts
+        margin: 0 0 4rem
+
+        & > li
+            font: 400 1.3rem/1.6 $montserrat-regular
+            color: #e3e3e3
+            text-transform: uppercase
+            letter-spacing: .2rem
+
+            & > a
+                text-decoration: none
+                color: #e3e3e3
+
+    // FOOTER SECONDARY SECTION
 
     &__secondary
         lost-column 8/12
-        lost-column-gutter 0
+        lost-column-gutter $gutter2
+
+    .form
+        width: 100%
+
+        & input
+        & textarea
+            width: 100%
+            background-color: transparent
+            border: .2rem solid #464646
+            padding: 2.2rem 2.4rem
+            transition: border-color .2s
+
+            +placeholder()
+                font: 400 1.4rem/1.2 $crimson_text-italic
+                color: #949494
+                text-transform: capitalize
+
+            &:hover
+            &:focus
+                border-color: #949494
+
+        & textarea
+            resize: none
+            min-height: 10rem
+            user-select: text
+
+        &__row
+            lost-center 100% flex
+
+            &:not(:last-child)
+                margin: 0 0 2rem
+
+        &__column
+            lost-column 1/2
+            lost-column-gutter $gutter2
+
+        &__button
+            border: none
+            background-color: #464646
+            text-transform: capitalize
+            color: #e3e3e3
+            font: 400 1.3rem/1 $montserrat-regular
+            padding: 1.6rem 4rem
+
+    &__header
+        height: 2.9rem
+        margin: 0 0 4rem
+
+    &__title
+        display: flex
+        align-items: center
+        min-height: 2.9rem
+        font: 400 1.8rem/1 $montserrat-regular
+        color: $color-white
+        letter-spacing: .2rem
+        text-transform: uppercase
+        padding: 0 0 0 5.3rem
+        margin: 0
+        background: url("%=static=%assets/footer/footer-logo.png") 0 50% no-repeat
+
+    // FOOTER COPYRIGHT
+
+    &__footer
+        padding: 4rem 0 3rem
+        border-top: .1rem solid #3e3e3e
+
+        & p
+            font: 400 1.4rem/1.2 $crimson_text-italic
+            color: #949494
+            margin: 0
+
+            & > a
+                text-decoration: none
+                color: #949494
+
+                &:hover
+                &:focus
+                    text-decoration: underline
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
