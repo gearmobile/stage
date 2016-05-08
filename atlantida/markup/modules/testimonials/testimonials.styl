@@ -1,6 +1,80 @@
 .testimonials
     padding: 7rem 0
-    min-height: 524px
     background: url('%=static=%assets/testimonials/testimonials-bg.jpg') 50% 50% no-repeat
     background-size: cover
 
+    & .testimonials__slider
+        lost-center 80rem
+
+        & .testimonials__slide
+            display: flex
+            flex-direction: column
+            justify-content: center;
+            align-items: center;
+
+            & .testimonials__thumb
+                width: 10.6rem
+                height: 10.6rem
+                border-radius: 50%
+                margin: 0 0 4rem
+
+                & > img
+                    display: block
+                    width: 100%
+                    height: auto
+                    border-radius: 50%
+
+            & .testimonials__quote
+                text-align: center
+                font: 400 2rem/1.6 $crimson_text-italic
+                color: #efefef
+                margin: 0 0 6rem
+                padding: 0 2rem
+                quotes: "\201c" "\201d"
+                position: relative
+
+                &::before
+                &::after
+                    font-size: 10rem
+                    position: absolute
+
+                &::before
+                    content: open-quote
+                    left: -0.5rem
+                    top: -4rem
+
+                &::after
+                    content: close-quote
+                    top: 1.5rem
+                    right: 7.5rem
+
+            & .testimonials__author
+                font: 400 1.4rem/1.2 $montserrat-regular
+                color: #e3e3e3
+                text-transform: uppercase
+                margin: 0 0 2rem
+
+            & .testimonials__occupation
+                font: 400 1.3rem/1.1 $crimson_text-italic
+                color: #efefef
+
+        & .slick-dots
+            display: flex
+            justify-content: center
+            margin: 4rem 0 0 0
+
+            & a
+                display: block
+                width: 1.2rem
+                height: 1.2rem
+                border-radius: 50%
+                border: none
+                margin: 0 .2rem
+                background-color: #c5c5c5
+
+                &:hover
+                &:focus
+                    outline: none
+
+            & .slick-active a
+                background-color: #e3e3e3
