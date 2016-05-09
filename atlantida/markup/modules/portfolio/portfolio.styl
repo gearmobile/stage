@@ -5,3 +5,44 @@
     &__center
         lost-center $width
         padding: 0 $gutter
+
+    // PORTFOLIO FILTERING
+
+    & .portfolio-filtering
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 0 6rem
+
+        &__item
+            text-transform: uppercase
+            text-decoration: none
+            font: 400 1rem/1.2 $montserrat-regular
+            color: $color-grey
+            padding: 1rem 2rem
+            border: .2rem solid $color-grey
+            margin: 0 .2rem
+            transition: background-color .2s, color .2s
+
+            &:nth-child(1)
+            &:hover
+            &:focus
+                background-color: $color-grey
+                color: $color-white
+
+    // PORTFOLIO GALLERY
+
+    & .portfolio-gallery
+        lost-center 100% flex
+
+
+        &__item
+        &__sizer
+            width: calc(100% / 4)
+
+        &__item
+            float: left
+
+            & img
+                display: block
+                max-width: 100%

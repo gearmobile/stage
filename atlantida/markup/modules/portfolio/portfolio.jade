@@ -4,4 +4,26 @@ mixin portfolio(data)
     .portfolio
         .portfolio__center
             +heading('portfolio')
-        .portfolio__gallery
+        .portfolio-filtering
+            a.portfolio-filtering__item(href="#0" data-filter="*") all
+            a.portfolio-filtering__item(href="#0" data-filter=".website") website
+            a.portfolio-filtering__item(href="#0" data-filter=".brochures") brochures
+            a.portfolio-filtering__item(href="#0" data-filter=".logos") logos
+        .portfolio-gallery
+            .portfolio-gallery__sizer
+            .portfolio-gallery__item.portfolio-item.website
+                img(src="%=static=%img/assets/portfolio/portfolio-image-01.jpg" alt="Portfolio Image")
+            .portfolio-gallery__item.portfolio-item.brochures
+                img(src="%=static=%img/assets/portfolio/portfolio-image-02.jpg" alt="Portfolio Image")
+            .portfolio-gallery__item.portfolio-item.website
+                img(src="%=static=%img/assets/portfolio/portfolio-image-03.jpg" alt="Portfolio Image")
+            .portfolio-gallery__item.portfolio-item.brochures
+                img(src="%=static=%img/assets/portfolio/portfolio-image-04.jpg" alt="Portfolio Image")
+            .portfolio-gallery__item.portfolio-item.website
+                img(src="%=static=%img/assets/portfolio/portfolio-image-05.jpg" alt="Portfolio Image")
+            .portfolio-gallery__item.portfolio-item.logos
+                img(src="%=static=%img/assets/portfolio/portfolio-image-06.jpg" alt="Portfolio Image")
+            .portfolio-gallery__item.portfolio-item.brochures
+                img(src="%=static=%img/assets/portfolio/portfolio-image-07.jpg" alt="Portfolio Image")
+            .portfolio-gallery__item.portfolio-item.logos
+                img(src="%=static=%img/assets/portfolio/portfolio-image-08.jpg" alt="Portfolio Image")

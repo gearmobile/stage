@@ -5,6 +5,7 @@
 
     & .testimonials__slider
         lost-center 80rem
+        padding: 0 $gutter
 
         & .testimonials__slide
             display: flex
@@ -29,24 +30,15 @@
                 font: 400 2rem/1.6 $crimson_text-italic
                 color: #efefef
                 margin: 0 0 6rem
-                padding: 0 2rem
+                padding: 0 1rem
                 quotes: "\201c" "\201d"
                 position: relative
 
                 &::before
-                &::after
-                    font-size: 10rem
-                    position: absolute
-
-                &::before
                     content: open-quote
-                    left: -0.5rem
-                    top: -4rem
 
                 &::after
                     content: close-quote
-                    top: 1.5rem
-                    right: 7.5rem
 
             & .testimonials__author
                 font: 400 1.4rem/1.2 $montserrat-regular
