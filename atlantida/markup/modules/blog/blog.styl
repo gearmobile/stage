@@ -6,54 +6,18 @@
         lost-center $width
         padding: 0 $gutter
 
-    &__gallery
-        lost-center 100%
+    $ .gallery
+          lost-utility: clearfix
 
-    &__row
-        lost-center 100% flex
+    & .gallery__item
+        float: left
+        width: 25%
 
-    &__item
-        lost-column 1/2
-        lost-column-gutter 0
 
-    &__thumb
-        lost-column 1/2
-        lost-column-gutter 0
-
-        & > img
+        & img
             display: block
             width: 100%
             height: auto
 
-    &__content
-        lost-column 1/2
-        lost-column-gutter 0
-        background-color: #2d2d2f
-
-        & p
-            font: 400 1.4rem/1.5 $crimson_text-roman
-            color: #949494
-
-    &__heading
-        margin: 0 0 3rem
-        padding: 0 0 0 2rem
-        position: relative
-
-        &::before
-            content: ''
-            display: block
-            width: 0
-            height: 0
-            border-style: solid
-            border-width: .4rem 0 .4rem .4rem
-            border-color: transparent transparent transparent #e3e3e3
-            position: absolute
-            left: 1rem
-            top: 50%
-            transform: translateY(-50%)
-
-        & > a
-            text-decoration: none
-            text-transform: uppercase
-            color: #e3e3e3
-            font: 400 1.3rem/1.2 $montserrat-regular
+        &:nth-child(2n)
+            background-color: #424242
