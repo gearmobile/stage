@@ -5,14 +5,69 @@
 
 .slider
     lost-center 110rem flex
+    position: relative
+
+.slick-list
+    padding: 5rem 0 4rem
+
+.slick-prev
+.slick-next
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+.slick-prev
+    left: 0
+
+.slick-next
+    right: 0
+
+.slider__subtitle
+    text-align: center
+    font: 400 1.4rem/1.2 $crimson_text-roman
+    color: $color-white
+    margin: 0 0 2rem 0
+
+.slider__content
+    text-align: center
 
 .slider__title
     text-transform: uppercase
+    text-align: center
     font: 400 3.6rem/1.2 $amsdam-regular
     color: $color-white
-    padding: 3.6rem 0
+    padding: 3.4rem 0
     letter-spacing: .2rem
+    margin: 0 0 4rem 0
+    background: url("%=static=%assets/hero/hero-underline.png") 50% 0 no-repeat
 
+.slider__button
+    display: inline-block
+    border: 2px solid $color-white
+    text-transform: capitalize
+    font: 400 1.5rem/1.2 $montserrat-regular
+    color: $color-white
+    text-decoration: none
+    padding: 1.5rem 2.6rem 1.6rem
+    transition: background-color .2s, color .2s
+    position: relative
+
+    &::after
+        content: ''
+        display: block
+        width: 15px
+        height: 50px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -44px
+        background: transparent url("%=static=%assets/hero/arrow.png") 50% 0% no-repeat // arrow.png
+        z-index: 1
+
+    &:hover
+    &:focus
+        background-color: $color-white
+        color: $color-grey
 
 .slick-arrow
     padding: 0

@@ -7,5 +7,5 @@ $('.slider').slick({
     slidesToScroll: 1,
     arrows: true,
     prevArrow: '<a href="#" class="slick-prev"></a>',
-    nextArrow: '<a href="#" class="slick-prev"></a>'
+    nextArrow: '<a href="#" class="slick-next"></a>'
 });
