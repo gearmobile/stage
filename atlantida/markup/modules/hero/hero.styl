@@ -1,26 +1,43 @@
 .hero
+    min-height: 69.8rem
     height: 69.8rem
     background: url("%=static=%assets/hero/hero-bg.jpg") no-repeat
     background-size: cover
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+// HERO SLIDER
 
 .slider
     lost-center 110rem flex
-    position: relative
 
 .slick-list
     padding: 5rem 0 4rem
 
+.slick-arrow
+    padding: 0
+    width: 3.4rem
+    height: 3.4rem
+    border-radius: 50%
+
+    &:focus
+        outline: none
+
 .slick-prev
 .slick-next
     position: absolute
-    top: 50%
+    top: 51%
     transform: translateY(-50%)
 
 .slick-prev
     left: 0
+    background: url("%=static=%assets/hero/arrow-left.png") 50% 50% no-repeat
 
 .slick-next
     right: 0
+    background: url("%=static=%assets/hero/arrow-right.png") 50% 50% no-repeat
 
 .slider__subtitle
     text-align: center
@@ -31,6 +48,10 @@
 .slider__content
     text-align: center
 
+// переделать title
+// сделать из линии паттерн
+// положить паттерн через ::before && ::after
+
 .slider__title
     text-transform: uppercase
     text-align: center
@@ -40,6 +61,10 @@
     letter-spacing: .2rem
     margin: 0 0 4rem 0
     background: url("%=static=%assets/hero/hero-underline.png") 50% 0 no-repeat
+    position: relative
+
+    @media screen and (max-width: $bp600)
+        font-size: 2rem
 
 .slider__button
     display: inline-block
@@ -48,7 +73,7 @@
     font: 400 1.5rem/1.2 $montserrat-regular
     color: $color-white
     text-decoration: none
-    padding: 1.5rem 2.6rem 1.6rem
+    padding: 1.5rem 2.6rem
     transition: background-color .2s, color .2s
     position: relative
 
@@ -63,15 +88,12 @@
         bottom: -44px
         background: transparent url("%=static=%assets/hero/arrow.png") 50% 0% no-repeat // arrow.png
         z-index: 1
+        transition: bottom .2s
 
     &:hover
     &:focus
         background-color: $color-white
         color: $color-grey
 
-.slick-arrow
-    padding: 0
-    width: 3.4rem
-    height: 3.4rem
-    border-radius: 50%
-    background-color: $color-white
+        &::after
+            bottom: -52px
