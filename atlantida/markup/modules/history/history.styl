@@ -8,95 +8,112 @@
 
     // HISTORY CONTENT
 
-    &__content
-        padding-top: 7.4rem
-        position: relative
+    & .content
 
-    &__year
-        position: absolute
-        left: 50%
-        transform: translateX(-50%)
-        top: 0
-        display: flex
-        justify-content: center
-        align-items: center
-        width: 7.4rem
-        height: 7.4rem
-        border-radius: 50%
-        border: .2rem solid $color-grey
-        font: 400 1.3rem/1.2 $montserrat-regular
-        color: $color-grey
+        &__panel
+            padding: 7.4rem 0 0 0
+            position: relative
 
-    &__list
-        position: relative
-        padding: 4rem 0
-
-        &::before
-            content: ''
-            display: block
-            width: .2rem
-            height: 100%
-            background-color: $color-grey
+        &__year
             position: absolute
             left: 50%
-            top: 0
             transform: translateX(-50%)
+            top: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 7.4rem
+            height: 7.4rem
+            border-radius: 50%
+            border: .2rem solid $color-grey
+            font: 400 1.3rem/1.2 $montserrat-regular
+            color: $color-grey
 
-    &__row
-        lost-utility clearfix
-        position: relative
-        margin: 0 0 1rem
+        &__list
+            position: relative
+            padding: 4rem 0
 
-    &__item
-        text-decoration: none
-        color: $color-grey
-        border: .2rem solid $color-grey
-        width: 48%
-        transition: background-color .2s, color .2s
+            &::before
+                content: ''
+                display: block
+                width: .2rem
+                height: 100%
+                background-color: $color-grey
+                position: absolute
+                left: 50%
+                top: 0
+                transform: translateX(-50%)
 
-        & p
-            font: 400 1.4rem/1.5 $crimson_text-roman
-            margin: 0 0 3rem 0
+        &__row
+            lost-utility clearfix
+            position: relative
 
-            &:last-of-type
-                margin: 0
+            &:not(:last-child)
+                margin: 0 0 1rem
 
-        &:first-child
-            padding: 3rem 6rem 3rem 2rem
-            float: left
+        &__item
+            text-decoration: none
+            color: $color-grey
+            border: .2rem solid $color-grey
+            width: 48%
+            transition: background-color .2s, color .2s
 
-        &:last-child
-            padding: 3rem 2rem 3rem 6rem
-            float: right
-            margin: 4rem 0 0 0
+            & p
+                font: 400 1.4rem/1.5 $crimson_text-roman
+                margin: 0 0 3rem 0
 
-        &::before
-            content: ''
+                &:last-of-type
+                    margin: 0
+
+            &:first-child
+                padding: 3rem 6rem 3rem 2rem
+                float: left
+
+            &:last-child
+                padding: 3rem 2rem 3rem 6rem
+                float: right
+                margin: 4rem 0 0 0
+
+            &::before
+                content: ''
+                display: block
+                border-radius: 50%
+                width: 1.8rem
+                height: 1.8rem
+                background-color: $color-grey
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+
+            &:hover
+            &:focus
+                background-color: $color-grey
+                color: #e4e4e4
+
+        &__meta
+            margin: 0 0 3rem
+
+        &__heading
+            text-transform: uppercase
+            font: 400 1.3rem/1.2 $montserrat-regular
+            margin: 0 0 1rem
+
+        &__date
+            text-transform: capitalize
+            font: 400 1rem/1 $montserrat-regular
+
+        // CONTENT SHOW MORE
+
+        &__more
+            display: flex
+            justify-content: center
+
+        &__show
             display: block
             border-radius: 50%
-            width: 1.8rem
-            height: 1.8rem
-            background-color: $color-grey
-            position: absolute
-            left: 50%
-            transform: translateX(-50%)
-
-        &:hover
-        &:focus
-            background-color: $color-grey
-            color: #e4e4e4
-
-    &__meta
-        margin: 0 0 3rem
-
-    &__heading
-        text-transform: uppercase
-        font: 400 1.3rem/1.2 $montserrat-regular
-        margin: 0 0 1rem
-
-    &__date
-        text-transform: capitalize
-        font: 400 1rem/1 $montserrat-regular
+            width: 5.4rem
+            height: 5.4rem
+            background: $color-grey url("%=static=%assets/history/show.png") 50% 50% no-repeat
 
 
 
