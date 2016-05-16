@@ -22,14 +22,19 @@ mixin top-header(data)
                     != jadeHelpers.Icon.call(locals, {iconName: 'twitter', className: 'header-icon'})
                 a.top-header__icons(href="#" title="Behance")
                     != jadeHelpers.Icon.call(locals, {iconName: 'behance', className: 'header-icon'})
+            // OVERLAY TRIGGER
+            a.overlay__trigger(href="#")
             // OVERLAY MENU
-            nav.overlay
-                a.overlay__link(href="#home") home
-                a.overlay__link(href="#about") about
-                a.overlay__link(href="#services") services
-                a.overlay__link(href="#history") history
-                a.overlay__link(href="#team") team
-                a.overlay__link(href="#portfolio") portfolio
-                a.overlay__link(href="#prices") prices
-                a.overlay__link(href="#blog") blog
-                a.overlay__link(href="#contact") contact
+            .overlay.overlay--effect
+                button.overlay__button(type="button")
+                .overlay__wrapper
+                    ul.overlay__menu
+                        li.overlay__item: a.overlay__link(href="#home") home
+                        li.overlay__item: a.overlay__link(href="#about") about
+                        li.overlay__item: a.overlay__link(href="#services") services
+                        li.overlay__item: a.overlay__link(href="#history") history
+                        li.overlay__item: a.overlay__link(href="#team") team
+                        li.overlay__item: a.overlay__link(href="#portfolio") portfolio
+                        li.overlay__item: a.overlay__link(href="#prices") prices
+                        li.overlay__item: a.overlay__link(href="#blog") blog
+                        li.overlay__item: a.overlay__link(href="#contact") contact
