@@ -22,7 +22,22 @@ $(function () {
         }
     }
 
-    overlayTrigger.addEventListener('click', toggleOverlay, false);
-    overlayClose.addEventListener('click', toggleOverlay, false);
+    // OPEN OVERLAY
+    function openOverlay() {
+        if ( overlay.hasClass('is-close') ) {
+            overlay.removeClass('is-close');
+        }
+        overlay.addClass('is-open');
+    }
+
+    // CLOSE OVERLAY
+    function closeOverlay() {
+        if ( overlay.hasClass('is-open') ) {
+            overlay.removeClass('is-open').addClass('is-close');
+        }
+    }
+
+    overlayTrigger.on('click', openOverlay);
+    overlayClose.on('click', closeOverlay);
 
 });

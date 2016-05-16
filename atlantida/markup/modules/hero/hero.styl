@@ -11,7 +11,7 @@
 // HERO SLIDER
 
 .slider
-    lost-center 110rem flex
+    max-width: 110rem
 
 .slick-list
     padding: 5rem 0 4rem
@@ -48,23 +48,37 @@
 .slider__content
     text-align: center
 
-// переделать title
-// сделать из линии паттерн
-// положить паттерн через ::before && ::after
 
 .slider__title
+    display: inline-block
     text-transform: uppercase
     text-align: center
     font: 400 3.6rem/1.2 $amsdam-regular
     color: $color-white
-    padding: 3.4rem 0
+    padding: 3rem 2rem
     letter-spacing: .2rem
     margin: 0 0 4rem 0
-    background: url("%=static=%assets/hero/hero-underline.png") 50% 0 no-repeat
     position: relative
+
+    &::before
+    &::after
+        content: ''
+        display: block
+        height: 5px
+        width: 100%
+        left: 0
+        position: absolute
+        background: url("%=static=%assets/hero/underline-pattern.png") 0 0 repeat-x
+
+    &::before
+        top: 0
+
+    &::after
+        bottom: 0
 
     @media screen and (max-width: $bp600)
         font-size: 2rem
+        padding: 2rem 1rem
 
 .slider__button
     display: inline-block

@@ -78,8 +78,7 @@
     height: 100%
     top: 0
     left: 0
-    background-color: rgba(153,204,51,0.9)
-    /*display: none*/
+    background-color: rgba(153, 204, 51,.96)
 
 .overlay__trigger
     display: none
@@ -119,7 +118,7 @@
     transform: translateY(-50%)
     font-size: 4rem
     text-align: center
-    /*perspective: 1200px*/
+    perspective: 1200px
 
 .overlay__menu
     display: inline-block
@@ -127,12 +126,11 @@
     margin: 0 auto
     position: relative
     opacity: .4
-    /*transform: translateY(-25%) rotateX(35deg)*/
     transition: transform .5s, opacity .5s
+    transform: translateY(-25%) rotateX(35deg)
 
 .overlay__item
     display: block
-    height: 20%
     height: calc(100% / 9)
     min-height: 4rem
 
@@ -142,10 +140,12 @@
     color: $color-grey
     transition: color .2s
     text-decoration: none
+    text-transform: uppercase
 
     &:hover
     &:focus
-        color: $color-black
+        //color: $color-black
+        color: $color-white
 
 
 .overlay--effect
