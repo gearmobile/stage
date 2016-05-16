@@ -1,8 +1,9 @@
+include ../heading/heading
+
 mixin services(data)
     .services
         .services__center
-            h1.services__title services
-            p.services__subtitle Donec aliquet, ipsum ut lobortis facilisis, nisi ligula aliquam odio, ut vehicula odio lorem in erat. Quisque quam ipsum, commodo non condimentum a, fermentum id sapien. Pellentesque sit amet sem neque.
+            +heading('services')
             .services__content
                 .services__item
                     .services__icon

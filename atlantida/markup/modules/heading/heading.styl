@@ -1,15 +1,27 @@
 .heading
     margin: 0 0 8rem
+    text-align: center
 
     &__title
+        display: inline-block
         text-transform: uppercase
         font: 400 2rem/1 $amsdam-regular
         text-align: center
         color: $color-grey
-        padding: 0 0 3rem
         margin: 0 0 4rem
         letter-spacing: .2rem
-        background: url('%=static=%assets/heading/heading-underline.png') 50% 100% no-repeat
+        padding: 0 2rem 2.6rem
+        position: relative
+
+        &::after
+            content: ''
+            display: block
+            height: 5px
+            width: 100%
+            background: url('%=static=%assets/heading/underline-pattern.png') 0 0 repeat-x
+            position: absolute
+            left: 0
+            bottom: 0
 
     &__subtitle
         text-align: center

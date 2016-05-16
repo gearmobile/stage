@@ -7,29 +7,25 @@
         lost-center $width
         padding: 0 $gutter
 
-    &__title
-        margin: 0 0 4rem
-        padding: 0 0 3rem
-        text-align: center
-        background: url('%=static=%assets/services/underline-services.png') 50% 100% no-repeat
-        font-family: $amsdam-regular
-        font-weight: 400
-        font-size: 2rem
-        text-transform: uppercase
-        color: $color-white
-        letter-spacing: .2rem
+        & .heading__title
+            color: $color-white
+            padding: 2.6rem 2rem
 
-    &__subtitle
-        text-align: center
-        color: #cfcfcf
-        font-size: 1.4rem
-        line-height: 1.7
-        font-family: $crimson_text-roman
-        padding: 0 7rem
-        margin: 0 0 7rem
+            &::before
+            &::after
+                background: url('%=static=%assets/services/underline-pattern.png') 0 0 repeat-x
 
-        @media screen and (max-width: $bp600)
-            padding: 0
+            &::before
+                content: ''
+                display: block
+                height: 5px
+                width: 100%
+                position: absolute
+                left: 0
+                top: 0
+
+        & .heading__subtitle
+            color: #cfcfcf
 
     &__content
         lost-column 100%

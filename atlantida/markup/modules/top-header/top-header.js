@@ -13,14 +13,7 @@ $(function () {
     var overlay = $('.overlay');
     var overlayTrigger = $('.overlay__trigger');
     var overlayClose = $('.overlay__button');
-
-    function toggleOverlay() {
-        if ( overlay.hasClass('is-open') ) {
-            overlay.removeClass('is-open').addClass('is-close');
-        } else if ( overlay.not(overlay.hasClass('is-close')) ) {
-            overlay.addClass('is-open');
-        }
-    }
+    var overlayLinks = $('.overlay__link');
 
     // OPEN OVERLAY
     function openOverlay() {
@@ -39,5 +32,6 @@ $(function () {
 
     overlayTrigger.on('click', openOverlay);
     overlayClose.on('click', closeOverlay);
+    overlayLinks.on('click', closeOverlay);
 
 });
