@@ -1,0 +1,23 @@
+include ../blog-item/blog-item
+
+mixin blog-content(data)
+    .blog-content
+        .grid
+            .grid__sizer
+            .grid__item
+                .blog-item
+                    .blog__image
+                        img(src="%=static=%img/assets/blog-content/blog-image-01.jpg" alt="Blog Image")
+                    h3.blog__title Donec id lobortis tellus. Maecenas vel dignissim
+            .grid__item
+                //+blog-item()
+            .grid__item
+                //+blog-item()
+            .grid__item
+                //+blog-item()
+            .grid__item
+            .grid__item
+            .grid__item
+            .grid__item
+            .grid__item
+            .grid__item
