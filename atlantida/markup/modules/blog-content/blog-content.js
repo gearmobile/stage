@@ -1,5 +1,7 @@
-$('.blog-content__grid').masonry({
+$('.blog-content__grid').isotope({
     itemSelector: '.blog-content__item',
-    columnWidth: '.blog-content__sizer',
+    masonry: {
+        columnWidth: '.blog-content__sizer'
+    },
     percentPosition: true
 });
