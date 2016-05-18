@@ -1,11 +1,12 @@
-mixin blog-thumb(title, path)
+mixin blog-thumb(title, imagePath)
     .thumb
         .thumb__image
-            img(src= path alt="Blog Image")
+            img(src= imagePath alt="Blog Image")
         h3.thumb__title= title
         ul.thumb__meta
             li.thumb__author
-                | by
+                <span>by</span>
+                = ' '
                 a(href="javascript:void();") admin
             li.thumb__date: a(href="javascript:void();") 07 october 2015
         ul.thumb__links
