@@ -1,0 +1,7 @@
+include ../post-main/post-main
+include ../post-sidebar/post-sidebar
+
+mixin post-content(data)
+    .post-content
+        +post-main()
+        +post-sidebar()

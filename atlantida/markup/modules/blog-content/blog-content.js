@@ -10,6 +10,3 @@ var gridBlog = $('.blog-content__grid').masonry({
 gridBlog.imagesLoaded().progress( function () {
     gridBlog.masonry();
 });
-
-
-

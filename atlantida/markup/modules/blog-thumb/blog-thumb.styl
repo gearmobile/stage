@@ -27,9 +27,13 @@
 // ------------------------------------------------------------
 .thumb__title
     text-transform: uppercase
-    font: 700 1.6rem/1.2 $montserrat-regular
+    font: 700 1.6rem/1.6 $montserrat-regular
     color: $color-grey
     margin: 0 0 1.4rem
+
+    @media screen and (max-width: $bp980)
+        text-align: center
+        margin: 0 0 3rem
 
 
 // THUMB META
@@ -120,6 +124,9 @@
     &:focus
         background-color: $color-grey
         color: $color-white
+
+    @media screen and (max-width: $bp980)
+        margin: auto
 
 
 

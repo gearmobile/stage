@@ -3,8 +3,8 @@ html(class="no-js", lang="ru")
 
     include ../modules/head/head
     include ../modules/top-header/top-header
-    include ../modules/blog-head/blog-head
-    include ../modules/blog-content/blog-content
+    include ../modules/post-head/post-head
+    include ../modules/post-content/post-content
     include ../modules/footer/footer
 
     head
@@ -15,8 +15,8 @@ html(class="no-js", lang="ru")
 
         section.page__wrapper
 
-            +blog-head()
-            +blog-content()
+            +post-head()
+            +post-content()
 
             .page__buffer
 
