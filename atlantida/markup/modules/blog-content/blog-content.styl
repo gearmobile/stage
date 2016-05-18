@@ -1,37 +1,20 @@
+// BLOG CONTENT
+// ------------------------------------------------------------
 .blog-content
     padding: 8rem 0 12rem
     background-color: #e3e3e3
 
-    & .grid
-        max-width: 1600px
-        margin: 0 auto
 
-    & .grid::before
-    & .grid:after
-        content: ''
-        display: table
+// BLOG MASONRY
+// ------------------------------------------------------------
+.blog-content__grid
+    lost-center 1600px
 
-    & .grid:after
-        clear: both
+.blog-content__sizer
+.blog-content__item
+    width: 25%
 
-    & .grid__sizer
-    & .grid__item
-        width: 25%
-
-    & .grid__item
-        float: left
-        height: 120px
-        padding: 1.5rem
-        background: #d26
-        border: 2px solid #333
-        border-radius: 5px
-
-        &:nth-child(2n)
-            height: 300px
-
-    & .blog__image
-        margin: 0 0 4rem
-
-        & > img
-            display: block
-            width: 100%
+.blog-content__item
+    float: left
+    padding: 1.5rem 1.5rem 6rem
+    border: 1px solid red

@@ -1,0 +1,15 @@
+mixin blog-thumb(title, path)
+    .thumb
+        .thumb__image
+            img(src= path alt="Blog Image")
+        h3.thumb__title= title
+        ul.thumb__meta
+            li.thumb__author: a(href="javascript:void();") by admin
+            li.thumb__date: a(href="javascript:void();") 07 october 2015
+        ul.thumb__links
+            li.thumb__comments: a(href="javascript:void();") 95
+            li.thumb__views: a(href="javascript:void();") 567
+            li.thumb__tag: a(href="javascript:void();") branding
+        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
+        a.thumb__read(href="javascript:void();") read more
+

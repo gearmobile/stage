@@ -1,5 +1,5 @@
-$('.blog-content .grid').masonry({
-    itemSelector: '.grid__item',
-    columnWidth: '.grid__sizer',
+$('.blog-content__grid').masonry({
+    itemSelector: '.blog-content__item',
+    columnWidth: '.blog-content__sizer',
     percentPosition: true
 });
