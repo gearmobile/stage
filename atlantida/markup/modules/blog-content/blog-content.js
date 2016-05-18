@@ -1,7 +1,15 @@
-$('.blog-content__grid').isotope({
+
+// INIT MASONRY
+var gridBlog = $('.blog-content__grid').masonry({
     itemSelector: '.blog-content__item',
-    masonry: {
-        columnWidth: '.blog-content__sizer'
-    },
-    percentPosition: true
+    percentPosition: true,
+    columnWidth: '.blog-content__sizer'
 });
+
+// LAYOUT ISOTOPE AFTER EACH IMAGE LOADS
+gridBlog.imagesLoaded().progress( function () {
+    gridBlog.masonry();
+});
+
+
+

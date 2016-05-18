@@ -4,7 +4,9 @@ mixin blog-thumb(title, path)
             img(src= path alt="Blog Image")
         h3.thumb__title= title
         ul.thumb__meta
-            li.thumb__author: a(href="javascript:void();") by admin
+            li.thumb__author
+                | by
+                a(href="javascript:void();") admin
             li.thumb__date: a(href="javascript:void();") 07 october 2015
         ul.thumb__links
             li.thumb__comments: a(href="javascript:void();") 95
