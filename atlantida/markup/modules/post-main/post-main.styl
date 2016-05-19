@@ -4,6 +4,10 @@
     lost-column 8/12
     lost-column-gutter $gutter*3
 
+    @media screen and (max-width: 800px)
+        lost-column 1/1
+        lost-column-gutter 0
+
 // POST ITEM
 // ----------------------------------------------------
 .post-item
@@ -78,6 +82,7 @@
 // POST COMMENTS
 // ----------------------------------------------------
 .post-comments
+    margin: 0 0 8rem
 
     &__title
         text-transform: uppercase
