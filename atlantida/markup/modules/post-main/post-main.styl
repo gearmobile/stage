@@ -1,1 +1,86 @@
+// POST MAIN
+// ----------------------------------------------------
+.post-main
+    lost-column 8/12
+    lost-column-gutter $gutter*3
 
+// POST ITEM
+// ----------------------------------------------------
+.post-item
+    margin: 0 0 4rem
+
+    // POST ITEM IMAGE
+    &__image
+        margin: 0 0 4rem
+
+        & > img
+            display: block
+            width: 100%
+            height: auto
+
+    // POST ITEM TITLE
+    &__title
+        text-transform: uppercase
+        font: 700 1.6rem/1.6 $montserrat-regular
+        color: $color-grey
+        margin: 0 0 1.4rem
+
+    // POST ITEM CONTENTS
+    &__contents
+
+        & p
+            font: 400 1.4rem/1.8 $crimson_text-roman
+            color: $color-grey
+            margin: 0 0 2rem
+
+        & blockquote
+            font: 700 1.6rem/1.8 $crimson_text-italic
+            color: $color-grey
+            padding: 6rem 4rem
+            border: .2rem solid #a8a8a8
+            margin: 4rem 0
+
+
+// POST SOCIALS
+// ----------------------------------------------------
+.post-socials
+    display: flex
+    justify-content: center
+    border-top: .1rem solid #b7b7b7
+    border-bottom: .1rem solid #b7b7b7
+    padding: 1.8rem 0
+
+    &__icon
+        display: block
+        width: 3.1rem
+        height: 3.1rem
+        margin: 0 .2rem
+        border-radius: 50%
+        border: .1rem solid #b7b7b7
+
+        &:nth-child(1)
+            background: url("%=static=%assets/post-main/post-icon-01.png") 50% 50% no-repeat
+
+        &:nth-child(2)
+            background: url("%=static=%assets/post-main/post-icon-02.png") 50% 50% no-repeat
+
+        &:nth-child(3)
+            background: url("%=static=%assets/post-main/post-icon-03.png") 50% 50% no-repeat
+
+        &:nth-child(4)
+            background: url("%=static=%assets/post-main/post-icon-04.png") 50% 50% no-repeat
+
+        &:nth-child(5)
+            background: url("%=static=%assets/post-main/post-icon-05.png") 50% 50% no-repeat
+
+
+// POST COMMENTS
+// ----------------------------------------------------
+.post-comments
+    //
+
+
+// POST COMMENTS LEAVE
+// ----------------------------------------------------
+.post-comment-leave
+    //
