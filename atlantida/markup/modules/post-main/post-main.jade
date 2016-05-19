@@ -1,9 +1,15 @@
+include ../blog-meta/blog-meta
+include ../blog-links/blog-links
+include ../block-comments/block-comments
+include ../block-submit/block-submit
 
 mixin post-main(data)
     .post-main
         .post-item
             figure.post-item__image: img(src="%=static=%img/assets/post-main/post-image-01.jpg" alt="Post Image")
             h2.post-item__title donec id lobortis tellus. maecenas vel dignissim
+            +blog-meta('admin', '07 october 2015')
+            +blog-links()
             .post-item__contents
                 p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac consequat erat. Maecenas dignissim, justo sit amet consequat sagittis, libero ipsum elementum nisi, at efficitur tellus ante a nisl. Pellentesque eu imperdiet lacus, quis gravida libero. Vivamus ac est mauris. Sed orci velit, iaculis quis elementum sit amet, lacinia vitae purus. Nam magna nulla, ultrices nec faucibus in, venenatis imperdiet nisi. Aliquam interdum lectus tempus nunc luctus condimentum a vel magna.
@@ -19,4 +25,8 @@ mixin post-main(data)
             a.post-socials__icon(href="javascript:void();" title="Behance")
             a.post-socials__icon(href="javascript:void();" title="YouTube")
         .post-comments
-        form.post-comment-leave(method="post" action="action.php")
+            h2.post-comments__title comments (4)
+            +block-comments()
+        .post-comment-leave
+            h2.post-comment-leave__title leave a comment
+            +block-submit()

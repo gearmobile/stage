@@ -10,6 +10,12 @@
         border: .2rem solid #a8a8a8
         padding: 1rem 2.6rem 1rem 1rem
         background: url("%=static=%assets/post-sidebar/search-icon.png") 98% 50% no-repeat
+        transition: border-color .2s
+        will-change: transition
+
+        &:hover
+        &:focus
+            border-color: darken(#a8a8a8, 30%)
 
         & > input
             width: 100%
@@ -47,7 +53,6 @@
             float: left
             width: 11rem
             height: 11rem
-            overflow: hidden
 
             & > img
                 display: block
@@ -151,8 +156,6 @@
             &:hover
                 text-decoration: underline
 
-
-
     // FLICKR
     // --------------------------------------------------------------
     & .flickr
@@ -179,25 +182,3 @@
                 display: block
                 width: 100%
                 height: auto
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

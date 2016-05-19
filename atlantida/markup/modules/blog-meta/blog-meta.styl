@@ -1,0 +1,26 @@
+
+// META
+// ------------------------------------------------------------
+
+.meta
+    display: flex
+    margin: 0 0 2rem
+
+    & li
+        font: 400 1.4rem/1.2 $crimson_text-italic
+        text-transform: capitalize
+        color: $color-grey
+
+    & .meta__author
+        padding: 0 .5rem 0 0
+
+        &::after
+            content: '/'
+
+    & a
+        color: $color-grey
+        text-decoration: none
+
+        &:hover
+        &:focus
+            text-decoration: underline

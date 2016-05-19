@@ -1,0 +1,18 @@
+mixin block-comments(data)
+    ul.comment
+        li.comment__item
+            article.comment__wrapper
+                figure.comment__image: img(src="%=static=%img/assets/block-comments/comment-image-01.jpg" alt="Comment Image")
+                .comment__holder
+                    h4.comment__title brian smith
+                    .comment__time 02 November 2015 at 11:00 pm
+                    p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
+                    a.comment__reply(href="javascript:void();") reply
+            ul.comment.comment--reply
+                li.comment__item
+                    figure.comment__image: img(src="%=static=%img/assets/block-comments/comment-image-02.jpg" alt="Comment Image")
+                    .comment__holder
+                        h4.comment__title angela roberts
+                        .comment__time 03 November 2015 at 08:00 pm
+                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
+                        a.comment__reply(href="javascript:void();") reply

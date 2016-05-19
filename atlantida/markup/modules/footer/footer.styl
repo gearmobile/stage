@@ -3,14 +3,14 @@
     padding: 6rem 0 4rem
 
     // FOOTER CENTER SECTION
-
+    // -----------------------------------------------------------
     &__center
         lost-center $width
         padding: 0 $gutter
 
 
     // FOOTER HEADER SECTION
-
+    // -----------------------------------------------------------
     &__header
         display: flex
         align-items: center
@@ -34,14 +34,14 @@
 
 
     // FOOTER CONTENT SECTION
-
+    // -----------------------------------------------------------
     &__content
         lost-center 100% flex
         padding: 0 0 6rem
 
 
     // FOOTER PRIMARY SECTION
-
+    // -----------------------------------------------------------
     &__primary
         lost-column 4/12
         lost-column-gutter $gutter2
@@ -106,7 +106,7 @@
 
 
     // FOOTER SECONDARY SECTION
-
+    // -----------------------------------------------------------
     &__secondary
         lost-column 8/12
         lost-column-gutter $gutter2
@@ -115,77 +115,9 @@
             lost-column 1/1
             lost-column-gutter 0
 
-    .form
-        width: 100%
-
-        & input
-        & textarea
-            width: 100%
-            background-color: transparent
-            border: .2rem solid #464646
-            padding: 2.2rem 2.4rem
-            transition: border-color .2s
-            font: 400 1.4rem/1.2 $crimson_text-italic
-            color: #949494
-
-            +placeholder()
-                font: 400 1.4rem/1.2 $crimson_text-italic
-                color: #949494
-                text-transform: capitalize
-
-            &:hover
-            &:focus
-                border-color: #949494
-
-            &:focus::placeholder
-                transition: opacity 0.5s 0.5s ease
-                opacity: 0
-
-        & textarea
-            resize: none
-            min-height: 10rem
-            user-select: text
-
-        &__row
-            lost-center 100% flex
-
-            &:not(:last-child)
-                margin: 0 0 2rem
-
-            &:last-child
-                @media screen and (max-width: $bp800)
-                    display: flex
-                    justify-content: center
-
-        &__column
-            lost-column 1/2
-            lost-column-gutter $gutter2
-
-            @media screen and (max-width: $bp980)
-                lost-column 1/1
-                lost-column-gutter 0
-
-                &:nth-child(1)
-                    margin-bottom: $gutter2
-
-
-        &__button
-            border: none
-            background-color: #464646
-            text-transform: capitalize
-            color: #e3e3e3
-            font: 400 1.3rem/1 $montserrat-regular
-            padding: 1.6rem 4rem
-            transition: background-color .2s, color .2s
-
-            &:hover
-            &:focus
-                background-color: #949494
-                color: #464646
-
 
     // FOOTER COPYRIGHT
-
+    // -----------------------------------------------------------
     &__footer
         display: flex
         padding: 4rem 0 3rem
@@ -206,21 +138,3 @@
                 &:hover
                 &:focus
                     text-decoration: underline
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

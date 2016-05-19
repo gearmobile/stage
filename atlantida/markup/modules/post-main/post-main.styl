@@ -36,7 +36,7 @@
         & blockquote
             font: 700 1.6rem/1.8 $crimson_text-italic
             color: $color-grey
-            padding: 6rem 4rem
+            padding: 5rem 4rem
             border: .2rem solid #a8a8a8
             margin: 4rem 0
 
@@ -49,12 +49,13 @@
     border-top: .1rem solid #b7b7b7
     border-bottom: .1rem solid #b7b7b7
     padding: 1.8rem 0
+    margin: 0 0 6rem
 
     &__icon
         display: block
         width: 3.1rem
         height: 3.1rem
-        margin: 0 .2rem
+        margin: 0 .5rem
         border-radius: 50%
         border: .1rem solid #b7b7b7
 
@@ -77,10 +78,33 @@
 // POST COMMENTS
 // ----------------------------------------------------
 .post-comments
-    //
+
+    &__title
+        text-transform: uppercase
+        font: 400 1.6rem/1.2 $montserrat-bold
+        margin: 0 0 5rem
 
 
 // POST COMMENTS LEAVE
 // ----------------------------------------------------
 .post-comment-leave
-    //
+
+    &__title
+        font: 400 1.6rem/1.2 $montserrat-bold
+        color: $color-grey
+        text-transform: uppercase
+        margin: 0 0 4rem
+
+    & .form__button
+        background-color: #464646
+
+        &:hover
+        &:focus
+            background-color: $color-grey-light
+
+    & input
+    & textarea
+        color: #464646
+
+        +placeholder()
+            color: #464646
