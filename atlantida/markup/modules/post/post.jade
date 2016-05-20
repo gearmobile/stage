@@ -1,0 +1,7 @@
+include ../modules/block-heading/block-heading
+include ../modules/post-content/post-content
+
+mixin post(data)
+    .post
+        +block-heading('post with sidebar','home','blog')
+        +post-content()
