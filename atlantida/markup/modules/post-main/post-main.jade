@@ -2,6 +2,7 @@ include ../blog-meta/blog-meta
 include ../blog-links/blog-links
 include ../block-comments/block-comments
 include ../block-submit/block-submit
+include ../block-socials/block-socials
 
 mixin post-main(data)
     .post-main
@@ -18,15 +19,8 @@ mixin post-main(data)
                 p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac consequat erat. Maecenas dignissim, justo sit amet consequat sagittis, libero ipsum elementum nisi, at efficitur tellus ante a nisl. Pellentesque eu imperdiet lacus, quis gravida libero. Vivamus ac est mauris. Sed orci velit, iaculis quis elementum sit amet, lacinia vitae purus. Nam magna nulla, ultrices nec faucibus in, venenatis imperdiet nisi. Aliquam interdum lectus tempus nunc luctus condimentum a vel magna.
                 p Aliquam nibh diam, elementum in lorem eu, dictum pretium leo. Nullam condimentum ante at sapien consectetur fringilla. Fusce ut ultricies tortor, eu sagittis elit. Pellentesque pretium, arcu ut consectetur posuere, nulla purus porttitor eros, vel eleifend mi ligula vel ligula. Aenean eget malesuada erat, ut ultricies orci. Sed sed tortor ut lorem semper feugiat vel vel magna. Aliquam fermentum, nunc nec cursus lobortis, odio odio elementum augue, eget rhoncus magna elit ut lorem. Quisque ac quam non purus venenatis lacinia. Donec sit amet posuere ante, pulvinar interdum nibh.
-        nav.post-socials
-            a.post-socials__icon(href="javascript:void();" title="Facebook")
-            a.post-socials__icon(href="javascript:void();" title="Twitter")
-            a.post-socials__icon(href="javascript:void();" title="Google Plus")
-            a.post-socials__icon(href="javascript:void();" title="Behance")
-            a.post-socials__icon(href="javascript:void();" title="YouTube")
+        +block-socials()
         .post-comments
-            h2.post-comments__title comments (4)
             +block-comments()
         .post-comment-leave
-            h2.post-comment-leave__title leave a comment
             +block-submit()

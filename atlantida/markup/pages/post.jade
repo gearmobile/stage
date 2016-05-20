@@ -3,7 +3,7 @@ html(class="no-js", lang="ru")
 
     include ../modules/head/head
     include ../modules/top-header/top-header
-    include ../modules/post-head/post-head
+    include ../modules/block-heading/block-heading
     include ../modules/post-content/post-content
     include ../modules/footer/footer
 
@@ -15,7 +15,7 @@ html(class="no-js", lang="ru")
 
         section.page__wrapper
 
-            +post-head()
+            +block-heading('post with sidebar','home','blog')
             +post-content()
 
             .page__buffer

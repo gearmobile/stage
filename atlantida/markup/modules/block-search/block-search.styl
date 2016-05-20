@@ -1,0 +1,24 @@
+
+// POST SEARCH
+
+// --------------------------------------------------------------
+.search
+    margin: 0 0 4rem
+    border: .2rem solid #a8a8a8
+    padding: 1rem 2.6rem 1rem 1rem
+    background: url("%=static=%assets/block-search/search-icon.png") 98% 50% no-repeat
+    transition: border-color .2s
+    will-change: transition
+
+    &:hover
+    &:focus
+        border-color: darken(#a8a8a8, 30%)
+
+    & > input
+        width: 100%
+        border: none
+        background-color: transparent;
+        padding: .2rem
+        font: 400 1.3rem/1 $crimson_text-italic
+        color: $color-grey
+        text-transform: capitalize

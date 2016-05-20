@@ -1,76 +1,16 @@
+include ../block-posts/block-posts
+include ../block-categories/block-categories
+include ../block-archives/block-archives
+include ../block-flickr/block-flickr
+include ../block-search/block-search
+
 mixin post-sidebar(data)
     .post-sidebar
-        form.search(method="post" action="action.php")
-            input(type="text" name="search" id="search" placeholder="search")
-        .posts
-            h3.posts__heading latest posts
-            ul.posts__list
-                li.posts__item
-                    figure.posts__image
-                        a(href="javascript:void();")
-                            img(src="%=static=%img/assets/post-sidebar/posts-image-01.jpg" alt="Post Image")
-                    .posts__holder
-                        h4.posts__title sit amet pretium odio magna ege
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum
-                li.posts__item
-                    figure.posts__image
-                        a(href="javascript:void();")
-                            img(src="%=static=%img/assets/post-sidebar/posts-image-02.jpg" alt="Post Image")
-                    .posts__holder
-                        h4.posts__title sit amet pretium odio magna ege
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum
-                li.posts__item
-                    figure.posts__image
-                        a(href="javascript:void();")
-                            img(src="%=static=%img/assets/post-sidebar/posts-image-03.jpg" alt="Post Image")
-                    .posts__holder
-                        h4.posts__title sit amet pretium odio magna ege
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum
-                li.posts__item
-                    figure.posts__image
-                        a(href="javascript:void();")
-                            img(src="%=static=%img/assets/post-sidebar/posts-image-04.jpg" alt="Post Image")
-                    .posts__holder
-                        h4.posts__title sit amet pretium odio magna ege
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum
-        .categories
-            h3.categories__heading categories
-            ul.categories__list
-                li.categories__item: a.categories__link(href="javascript:void();") photography
-                li.categories__item: a.categories__link(href="javascript:void();") website design
-                li.categories__item: a.categories__link(href="javascript:void();") branding
-                li.categories__item: a.categories__link(href="javascript:void();") flyers
-                li.categories__item: a.categories__link(href="javascript:void();") uncategories
-                li.categories__item: a.categories__link(href="javascript:void();") category 22
-        .archives
-            h3.archives__heading archives
-            ul.archives__list
-                li.archives__item: a.archives__link(href="javascript:void();") january 2015
-                li.archives__item: a.archives__link(href="javascript:void();") december 2015
-                li.archives__item: a.archives__link(href="javascript:void();") november 2015
-                li.archives__item: a.archives__link(href="javascript:void();") october 2015
-                li.archives__item: a.archives__link(href="javascript:void();") september 2015
-        .flickr
-            h3.flickr__heading flickr photos
-            ul.flickr__gallery
-                li.flickr__image
-                    a(href="javascript:void();")
-                        img(src="%=static=%img/assets/post-sidebar/flickr-image-01.jpg" alt="Flickr Image")
-                li.flickr__image
-                    a(href="javascript:void();")
-                        img(src="%=static=%img/assets/post-sidebar/flickr-image-02.jpg" alt="Flickr Image")
-                li.flickr__image
-                    a(href="javascript:void();")
-                        img(src="%=static=%img/assets/post-sidebar/flickr-image-03.jpg" alt="Flickr Image")
-                li.flickr__image
-                    a(href="javascript:void();")
-                        img(src="%=static=%img/assets/post-sidebar/flickr-image-04.jpg" alt="Flickr Image")
-                li.flickr__image
-                    a(href="javascript:void();")
-                        img(src="%=static=%img/assets/post-sidebar/flickr-image-05.jpg" alt="Flickr Image")
-                li.flickr__image
-                    a(href="javascript:void();")
-                        img(src="%=static=%img/assets/post-sidebar/flickr-image-06.jpg" alt="Flickr Image")
+        +block-search()
+        +block-posts()
+        +block-categories()
+        +block-archives()
+        +block-flickr()
 
 
 

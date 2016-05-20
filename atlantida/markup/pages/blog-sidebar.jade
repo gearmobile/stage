@@ -4,7 +4,7 @@ html(class="no-js", lang="ru")
     include ../modules/head/head
     include ../modules/top-header/top-header
     include ../modules/block-heading/block-heading
-    include ../modules/blog-content/blog-content
+    include ../modules/post-content/post-content
     include ../modules/footer/footer
 
     head
@@ -15,8 +15,8 @@ html(class="no-js", lang="ru")
 
         section.page__wrapper
 
-            +block-heading('masonry blog','home','blog')
-            +blog-content()
+            +block-heading('blog with sidebar','home','blog')
+            +post-content()
 
             .page__buffer
 
