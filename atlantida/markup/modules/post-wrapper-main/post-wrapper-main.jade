@@ -3,9 +3,9 @@ include ../block-socials/block-socials
 include ../block-comments/block-comments
 include ../block-submit/block-submit
 
-mixin post-main(data)
-    .post-main
-        +block-post()
+mixin post-wrapper-main(data)
+    .post-wrapper-main
+        +block-post('%=static=%img/assets/post-wrapper-main/post-image-01.jpg')
         +block-socials()
         +block-comments()
         +block-submit()

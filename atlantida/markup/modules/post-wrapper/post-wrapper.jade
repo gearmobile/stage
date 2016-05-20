@@ -1,0 +1,7 @@
+include ../post-wrapper-head/post-wrapper-head
+include ../post-wrapper-content/post-wrapper-content
+
+mixin post-wrapper(data)
+    .post-wrapper
+        +post-wrapper-head()
+        +post-wrapper-content()

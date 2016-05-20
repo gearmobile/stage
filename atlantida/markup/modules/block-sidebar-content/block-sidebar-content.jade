@@ -1,0 +1,10 @@
+include ../block-sidebar-main/block-sidebar-main
+include ../block-sidebar-aside/block-sidebar-aside
+
+mixin block-sidebar-content(data)
+    .block-sidebar-content
+        .block-sidebar-content__center
+            .block-sidebar-content__primary
+                +block-sidebar-main()
+            .block-sidebar-content__secondary
+                +block-sidebar-aside()

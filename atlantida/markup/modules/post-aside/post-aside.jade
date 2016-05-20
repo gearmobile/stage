@@ -1,0 +1,13 @@
+include ../block-search/block-search
+include ../block-posts/block-posts
+include ../block-categories/block-categories
+include ../block-archives/block-archives
+include ../block-flickr/block-flickr
+
+mixin post-aside(data)
+    .post-aside
+        +block-search()
+        +block-posts()
+        +block-categories()
+        +block-archives()
+        +block-flickr()

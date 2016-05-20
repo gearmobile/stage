@@ -1968,7 +1968,7 @@ proto.resize = function() {
 };
 
 /**
- * check if layout is needed post layout
+ * check if layout is needed post-wrapper layout
  * @returns Boolean
  */
 proto.needsResizeLayout = function() {

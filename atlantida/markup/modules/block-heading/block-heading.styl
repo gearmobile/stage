@@ -14,17 +14,21 @@
         font: 3.6rem/1 $amsdam-regular
         color: $color-white
         letter-spacing: .2rem
-        padding: 0 0 2rem
+        padding: 0 0 3rem
         margin: 0 0 3rem
         position: relative
 
         &::after
+            content: ''
             display: block
-            height: 5px
-            background: url("%=static=%assets/block-heading/underline-pattern.png") 0 0 repeat-x
             width: 60%
+            height: .5rem
+            position: absolute
             left: 50%
+            bottom: 0
             transform: translateX(-50%)
+            background: url("%=static=%assets/block-heading/underline-pattern.png") 0 0 repeat-x
+
 
     // HEADING NAVIGATION
     // ----------------------------------------------------------
