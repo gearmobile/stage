@@ -74,35 +74,88 @@
         // CONTENT ITEM
         // ----------------------------------------------------
         &__item
-            text-decoration: none
             color: $color-grey
             border: .2rem solid $color-grey
             width: 48%
-            transition: background-color .2s, color .2s
+            transition: background-color .2s
 
             @media screen and (max-width: $bp768)
                 width: 90%
 
-            & p
-                font: 400 1.4rem/1.5 $crimson_text-roman
-                margin: 0 0 3rem 0
+            & a
+                display: block
+                height: 100%
+                text-decoration: none
+                color: $color-grey
+                transition: color .2s
+                position: relative
 
-                &:last-of-type
-                    margin: 0
+                &::before
+                &::after
+                    content: ''
+                    display: block
+                    width: 0
+                    height: 0
+                    position: absolute
+                    border-style: solid
+                    transition: border-color .2s
+
+                & p
+                    font: 400 1.4rem/1.5 $crimson_text-roman
+                    margin: 0 0 3rem 0
+
+                    &:last-of-type
+                        margin: 0
 
             &:first-child
-                padding: 3rem 6rem 3rem 2rem
                 float: left
+
+                & a
+                    padding: 3rem 6rem 3rem 2rem
+
+                    &::before
+                        border-width: 1rem 1rem 0 0
+                        border-color: $color-grey transparent transparent transparent
+                        right: -1.2rem
+                        top: .5rem
+
+                    &::after
+                        border-width: .9rem .9rem 0 0
+                        border-color: #ededed transparent transparent transparent
+                        right: -.7rem
+                        top: .7rem
+
+                &:hover a::after
+                    border-color: $color-grey transparent transparent transparent
 
                 @media screen and (max-width: $bp768)
                     float: right
-                    padding: 3rem 2rem 3rem 6rem
+
+                    & a
+                        padding: 3rem 2rem 3rem 6rem
 
 
             &:last-child
-                padding: 3rem 2rem 3rem 6rem
                 float: right
                 margin: 4rem 0 0 0
+
+                & a
+                    padding: 3rem 2rem 3rem 6rem
+
+                    &::before
+                        border-width: 0 1rem 1rem 0
+                        border-color: transparent $color-grey transparent transparent
+                        left: -1.2rem
+                        top: .5rem
+
+                    &::after
+                        border-width: 0 .9rem .9rem 0
+                        border-color: transparent #ededed transparent transparent
+                        left: -.7rem
+                        top: .7rem
+
+                &:hover a::after
+                    border-color: transparent $color-grey transparent transparent
 
 
             &::before
@@ -123,7 +176,11 @@
             &:hover
             &:focus
                 background-color: $color-grey
+
+            &:hover a
+            &:focus a
                 color: #e4e4e4
+
 
         &__meta
             margin: 0 0 3rem
