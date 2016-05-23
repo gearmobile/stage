@@ -1,7 +1,12 @@
+// VARIABLES
+// -------------------------------------------------------------
 var grid = $('.gallery');
 var buttons = $('.filtering');
 var galleryItem = $('.gallery__item');
 
+
+// MASONRY LAYOUT
+// -------------------------------------------------------------
 grid.isotope({
     itemSelector: '.gallery__item',
     percentPosition: true,
@@ -10,11 +15,24 @@ grid.isotope({
     }
 });
 
+
+// LAYOUT ISOTOPE AFTER EACH IMAGE LOADS
+// -------------------------------------------------------------
+grid.imagesLoaded().progress( function () {
+    grid.isotope('layout');
+});
+
+
+// ISOTOPE FILTERING
+// -------------------------------------------------------------
 buttons.on('click', 'a', function () {
     var filterValue = $( this ).attr('data-filter');
     grid.isotope({ filter: filterValue });
 });
 
+
+// MAGNIFIC POPUP
+// -------------------------------------------------------------
 galleryItem.magnificPopup({
     type: 'image',
     closeOnContentClick: true,
@@ -26,6 +44,6 @@ galleryItem.magnificPopup({
     },
     zoom: {
         enabled: true,
-        duration: 300 // don't foget to change the duration also in CSS
+        duration: 300
     }
 });
