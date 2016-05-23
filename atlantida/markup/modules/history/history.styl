@@ -60,6 +60,7 @@
 
         // CONTENT ROW
         // ----------------------------------------------------
+
         &__row
             lost-utility clearfix
             position: relative
@@ -73,6 +74,7 @@
 
         // CONTENT ITEM
         // ----------------------------------------------------
+
         &__item
             color: $color-grey
             border: .2rem solid $color-grey
@@ -133,6 +135,18 @@
 
                     & a
                         padding: 3rem 2rem 3rem 6rem
+
+                        &::before
+                            border-width: 0 1rem 1rem 0
+                            border-color: transparent $color-grey transparent transparent
+                            left: -1.2rem
+                            top: .5rem
+
+                        &::after
+                            border-width: 0 .9rem .9rem 0
+                            border-color: transparent #ededed transparent transparent
+                            left: -.7rem
+                            top: .7rem
 
 
             &:last-child
