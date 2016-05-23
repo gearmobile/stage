@@ -7,15 +7,17 @@
         padding: 0 $gutter
 
     // HISTORY CONTENT
-
+    // ----------------------------------------------------
     & .content
 
         // CONTENT PANEL
+        // ----------------------------------------------------
         &__panel
             padding: 7.4rem 0 0 0
             position: relative
 
         // CONTENT YEAR
+        // ----------------------------------------------------
         &__year
             position: absolute
             left: 50%
@@ -36,6 +38,7 @@
                 transform: translateX(0)
 
         // CONTENT LIST
+        // ----------------------------------------------------
         &__list
             position: relative
             padding: 4rem 0
@@ -56,6 +59,7 @@
                     transform: translateX(0)
 
         // CONTENT ROW
+        // ----------------------------------------------------
         &__row
             lost-utility clearfix
             position: relative
@@ -64,9 +68,11 @@
                 margin: 0 0 1rem
 
             @media screen and (max-width: $bp768)
-                margin: 0 0 0 7.4rem
+                &:not(:last-child)
+                    margin: 0 0 4rem 0
 
         // CONTENT ITEM
+        // ----------------------------------------------------
         &__item
             text-decoration: none
             color: $color-grey
@@ -132,7 +138,7 @@
             font: 400 1rem/1 $montserrat-regular
 
         // CONTENT SHOW MORE
-
+        // ----------------------------------------------------
         &__more
             display: flex
             justify-content: center
@@ -156,7 +162,7 @@
 
 
 // SHOW COLLAPSED BLOCK
-
+// ----------------------------------------------------
 .is-collapsed
     display: none
 
