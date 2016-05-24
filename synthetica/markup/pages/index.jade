@@ -1,0 +1,33 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../modules/head/head
+    include ../modules/topheader/topheader
+    include ../modules/hero/hero
+    include ../modules/crew/crew
+    include ../modules/articles/articles
+    include ../modules/freebies/freebies
+    include ../modules/started/started
+    include ../modules/footer/footer
+
+    head
+        +head(head.defaults)
+    body.page
+        |%=symbols=%
+        +topheader()
+        section.page__wrapper
+            +hero()
+            +crew()
+            +articles()
+            +freebies()
+            +started()
+            .page__buffer
+
+        .page__footer
+            +footer()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

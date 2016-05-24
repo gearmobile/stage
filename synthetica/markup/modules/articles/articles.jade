@@ -1,0 +1,36 @@
+include ../heading/heading
+
+mixin articles(data)
+    .articles
+        .articles__center
+            .articles__head
+                +heading('latest articles')
+                form.articles__search(method="post" action="action.php")
+                    label(for="name")
+                    input(type="text" name="" id="" placeholder="experience design")
+            .articles__gallery
+                .articles__gallery-item
+                    figure.articles__gallery-image
+                        img(src="" alt="Article Image")
+                        a.articles__gallery-tooltip(href="javascript:void();") featured article
+                    h3.articles__gallery-title 8 tips when working with multiple stakeholders
+                    p A posuere donec senectus suspendisse bibendum magna ridiculus a justo orci parturient suspendisse ad rhoncus &hellip;
+                    .articles__gallery-links
+                        a(href="javascript:void();") product
+                        a(href="javascript:void();") 0
+                .articles__gallery-item
+                    figure.articles__gallery-image
+                        img(src="" alt="Article Image")
+                    h3.articles__gallery-title 8 tips when working with multiple stakeholders
+                    p A posuere donec senectus suspendisse bibendum magna ridiculus a justo orci parturient suspendisse ad rhoncus &hellip;
+                    .articles__gallery-links
+                        a(href="javascript:void();") product
+                        a(href="javascript:void();") 0
+                .articles__gallery-item
+                    figure.articles__gallery-image
+                        img(src="" alt="Article Image")
+                    h3.articles__gallery-title 8 tips when working with multiple stakeholders
+                    p A posuere donec senectus suspendisse bibendum magna ridiculus a justo orci parturient suspendisse ad rhoncus &hellip;
+                    .articles__gallery-links
+                        a(href="javascript:void();") product
+                        a(href="javascript:void();") 0

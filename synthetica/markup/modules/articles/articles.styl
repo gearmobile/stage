@@ -1,0 +1,64 @@
+.articles
+    background-color: $white-color
+    padding: 12rem 0
+
+    &__center
+        lost-center $width
+        padding: 0 $gutter
+
+    &__head
+        display: flex
+        justify-content: space-between
+        margin: 0 0 7rem
+
+    &__gallery
+        lost-center 100%
+
+    &__gallery-item
+        lost-column 1/3
+        lost-column-gutter 3rem
+
+        & p
+            color: $gunmetal
+            font-size: 1.5rem
+            line-height: 1.8
+
+            &:not(:last-child)
+                margin: 0
+
+    &__gallery-image
+        margin: 0 0 2rem
+        position: relative
+
+        & img
+            display: block
+            width: 100%
+            height: auto
+
+    &__gallery-tooltip
+        display: block
+        padding: .4rem 1rem
+        border-radius: 4rem
+        position: absolute
+        background-color: #66e0e5
+        text-decoration: none
+        color: $white-color
+        text-transform: capitalize
+        font-size: 1.3rem
+
+    &__gallery-title
+        margin: 0 0 1rem
+        font-size: 2rem
+        line-height: 1.4
+        color: $charcoal-grey-color
+
+    &__gallery-links
+        display: flex
+        justify-content: space-between
+        margin: 3.5rem 0 0
+        padding: 1.4rem 0 0
+        border-top: .2rem solid #e1e3e7
+
+        & a
+            text-decoration: none
+            text-transform: capitalize
