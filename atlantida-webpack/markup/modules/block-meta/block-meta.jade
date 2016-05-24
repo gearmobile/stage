@@ -1,0 +1,7 @@
+mixin block-meta(author, date)
+    ul.meta
+        li.meta__author
+            <span>by</span>
+            = ' '
+            a(href="javascript:void();")= author
+        li.meta__date: a(href="javascript:void();")= date

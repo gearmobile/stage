@@ -1,0 +1,13 @@
+include ../block-meta/block-meta
+include ../block-links/block-links
+include ../block-readmore/block-readmore
+
+mixin blog-thumb(title, imagePath)
+    .thumb
+        .thumb__image
+            img(src= imagePath alt="Blog Image")
+        h3.thumb__title= title
+        +block-meta('admin', '07 october 2015')
+        +block-links()
+        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
+        +block-readmore('read more')
