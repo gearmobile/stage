@@ -1,0 +1,19 @@
+mixin overview(data)
+    .overview
+        .overview__center
+            ul.overview__list
+                li.overview__item
+                    != jadeHelpers.Icon.call(locals, {iconName: 'trophy', className: 'overview-icon'})
+                    .overview__item-holder
+                        h3 18
+                        p awards won
+                li.overview__item
+                    != jadeHelpers.Icon.call(locals, {iconName: 'book', className: 'overview-icon'})
+                    .overview__item-holder
+                        h3 341
+                        p articles
+                li.overview__item
+                    != jadeHelpers.Icon.call(locals, {iconName: 'pen', className: 'overview-icon'})
+                    .overview__item-holder
+                        h3 45
+                        p freebies

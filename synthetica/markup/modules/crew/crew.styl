@@ -5,3 +5,174 @@
     &__center
         lost-center $width
         padding: 0 $gutter
+
+
+    // CREW GALLERY
+    // ------------------------------------------------
+
+    & .gallery
+        lost-center 100% flex
+        margin-bottom: 5rem
+
+        // CREW GALLERY ITEM
+        // ------------------------------------------------
+
+        &__item
+            lost-column 1/4
+            lost-colmn-gutter $gutter
+            position: relative
+
+            @media screen and (max-width: 768px)
+                lost-column 1/2
+                lost-column-gutter $gutter
+
+                &:nth-child(-n+2)
+                    margin-bottom: 15px
+
+            @media screen and (max-width: 500px)
+                lost-column 1/1
+                lost-column-gutter 0
+
+                &:not(:last-child)
+                    margin-bottom: 15px
+
+            & > img
+                display: block
+                width: 100%
+                height: auto
+
+            &:hover .gallery__item-cover
+            &:focus .gallery__item-cover
+                opacity: .75
+                visibility: visible
+
+        // CREW GALLERY COVER
+        // ------------------------------------------------
+
+        &__item-cover
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            color: $white-color
+            text-align: center
+            padding: 0 10%
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: #66e0e5
+            opacity: 0
+            visibility: hidden
+            transition: opacity .2s, visibility .2s
+
+            // CREW GALLERY COVER CONTENT
+            // ------------------------------------------------
+
+            & h3
+                text-transform: uppercase
+                letter-spacing: .2rem
+                margin: 0 0 2rem
+                font-size: 1.5rem
+
+            & p
+                font-size: 1.5rem
+                line-height: 1.6
+                margin: 0 0 2rem
+
+            & ul
+                display: flex
+                justify-content: center
+
+                & li
+                    display: flex
+                    align-items: center
+                    margin: 0 .5rem
+
+                & .gallery-icon
+                    width: 1.6rem
+                    height: 1.6rem
+
+
+    // CREW SKILLS
+    // --------------------------------------------------------------
+
+    & .skills
+        lost-center 100%
+
+        &__column
+            lost-column 1/2
+            los-column-gutter $gutter
+
+            & .skills__item:nth-child(1)
+                margin: 0 0 3rem
+
+            @media screen and (max-width: 500px)
+                lost-column 1/1
+                lost-column-gutter 0
+
+                &:nth-child(1)
+                    margin: 0 0 3rem
+
+        &__meta
+            display: flex
+            justify-content: space-between
+            align-items: center
+            font-size: 1.3rem
+            color: $gunmetal
+            margin: 0 0 2rem
+
+            @media screen and (max-width: 768px)
+                font-size: 1rem
+
+        &__title
+            text-transform: uppercase
+            margin: 0
+
+        &__bar
+            width: 100%
+            height: 1rem
+            background-color: $gunmetal
+
+        &__bar-inside
+            height: 1rem
+            background-color: #66e0e5
+
+        &__item-design .skills__bar-inside
+            width: 90%
+
+        &__item-html .skills__bar-inside
+            width: 95%
+
+        &__item-prototyping .skills__bar-inside
+            width: 80%
+
+        &__item-visual .skills__bar-inside
+            width: 85%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
