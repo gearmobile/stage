@@ -6,7 +6,9 @@
   "directories": {},
   "dependencies": {
     "gulp": "^3.9.1",
-    "lost": "^6.8.0"
+    "jquery": "^2.2.4",
+    "lost": "^6.8.0",
+    "magnific-popup": "^1.1.0"
   },
   "devDependencies": {},
   "scripts": {

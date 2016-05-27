@@ -6,10 +6,18 @@
         lost-center $width
         padding: 0 $gutter
 
+
+    // ARTICLES HEAD
+    // -----------------------------------------------
+
     &__head
         display: flex
         justify-content: space-between
         margin: 0 0 7rem
+
+
+    // ARTICLES GALLERY
+    // -----------------------------------------------
 
     &__gallery
         lost-center 100%
@@ -18,22 +26,32 @@
         lost-column 1/3
         lost-column-gutter 3rem
 
-        & p
-            color: $gunmetal
-            font-size: 1.5rem
-            line-height: 1.8
+        &:hover .articles__gallery-image::before
+        &:focus .articles__gallery-image::before
+            opacity: .2
 
-            &:not(:last-child)
-                margin: 0
+
+    // ARTICLES GALLERY IMAGE
+    // -----------------------------------------------
 
     &__gallery-image
+        width: 100%
+        height: 25rem
+        min-height: 25rem
         margin: 0 0 2rem
         position: relative
 
-        & img
-            display: block
-            width: 100%
-            height: auto
+        &:nth-child(1)
+            background: url('%=static=%assets/articles/article-image-01.jpg') 50% 50% no-repeat
+            background-size: cover
+
+        &:nth-child(2)
+            background: url('%=static=%assets/articles/article-image-02.jpg') 50% 50% no-repeat
+            background-size: cover
+
+        &:nth-child(3)
+            background: url('%=static=%assets/articles/article-image-03.jpg') 50% 50% no-repeat
+            background-size: cover
 
         &::before
             content: ''
@@ -45,31 +63,65 @@
             left: 0
             background-color: #414a52
             opacity: .6
+            transition: opacity .2s
+
+
+    // ARTICLES GALLERY TOOLTIP
+    // -----------------------------------------------
 
     &__gallery-tooltip
         display: block
-        padding: .4rem 1rem
+        padding: .6rem 1.2rem
         border-radius: 4rem
-        position: absolute
-        background-color: #66e0e5
+        background-color: $color-teal
+        transition: background-color .2s
         text-decoration: none
-        color: $white-color
+        color: $color-white
         text-transform: capitalize
         font-size: 1.3rem
+        position: absolute
+        left: 2rem
+        bottom: 2rem
+
+        &:hover
+        &:focus
+            background-color: $color-teal-dark
+
+
+    // ARTICLES GALLERY CONTENT
+    // -----------------------------------------------
+
+    &__gallery-content
+        margin: 0 0 3rem
+
+        & p
+            font: 1.5rem/1.8 $raleway-regular
+            color: $color-slate
+            margin: 0 0 2rem
+
+
+    // ARTICLES GALLERY TITLE
+    // -----------------------------------------------
 
     &__gallery-title
+        font: 2rem/1.4 $raleway-semibold
+        color: $color-slate-light
         margin: 0 0 1rem
-        font-size: 2rem
-        line-height: 1.4
-        color: $charcoal-grey-color
 
-    &__gallery-links
+
+    // ARTICLES GALLERY META
+    // -----------------------------------------------
+
+    &__gallery-meta
         display: flex
         justify-content: space-between
-        margin: 3.5rem 0 0
         padding: 1.4rem 0 0
         border-top: .2rem solid #e1e3e7
 
         & a
             text-decoration: none
             text-transform: capitalize
+
+    &__gallery-category a
+        font: 1.3rem/1 $raleway-regular
+        color: $color-teal

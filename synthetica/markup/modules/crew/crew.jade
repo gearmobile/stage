@@ -3,12 +3,12 @@ include ../heading/heading
 mixin crew(data)
     .crew
         .crew__center
-            +heading('the crew')
+            .crew__header
+                +heading('the crew')
 
             ul.gallery
 
                 li.gallery__item
-                    img(src="%=static=%img/content/crew-image-01.jpg" alt="Crew Image")
                     .gallery__item-cover
                         h3 peter finlan
                         p 8-bit aesthetic kitsch 90's humblebrag. Gastropub tacos hoodie letterpress.
@@ -19,7 +19,6 @@ mixin crew(data)
                                 != jadeHelpers.Icon.call(locals, {iconName: 'linkedin', className: 'gallery-icon'})
 
                 li.gallery__item
-                    img(src="%=static=%img/content/crew-image-02.jpg" alt="Crew Image")
                     .gallery__item-cover
                         h3 blaz robar
                         p 8-bit aesthetic kitsch 90's humblebrag. Gastropub tacos hoodie letterpress.
@@ -30,7 +29,6 @@ mixin crew(data)
                                 != jadeHelpers.Icon.call(locals, {iconName: 'linkedin', className: 'gallery-icon'})
 
                 li.gallery__item
-                    img(src="%=static=%img/content/crew-image-03.jpg" alt="Crew Image")
                     .gallery__item-cover
                         h3 mary luo
                         p 8-bit aesthetic kitsch 90's humblebrag. Gastropub tacos hoodie letterpress.
@@ -41,7 +39,6 @@ mixin crew(data)
                                 != jadeHelpers.Icon.call(locals, {iconName: 'linkedin', className: 'gallery-icon'})
 
                 li.gallery__item
-                    img(src="%=static=%img/content/crew-image-04.jpg" alt="Crew Image")
                     .gallery__item-cover
                         h3 crew dude
                         p 8-bit aesthetic kitsch 90's humblebrag. Gastropub tacos hoodie letterpress.
@@ -58,26 +55,26 @@ mixin crew(data)
                             h3.skills__title experience design
                             span.skills__value 90
                         .skills__bar
-                            .skills__bar-inside
+                            .skills__bar-value(data-value="90")
                     .skills__item.skills__item-html
                         .skills__meta
                             h3.skills__title html5/css3
                             span.skills__value 95
                         .skills__bar
-                            .skills__bar-inside
+                            .skills__bar-value(data-value="95")
                 li.skills__column
                     .skills__item.skills__item-prototyping
                         .skills__meta
                             h3.skills__title interactive prototyping
                             span.skills__value 80
                         .skills__bar
-                            .skills__bar-inside
+                            .skills__bar-value(data-value="80")
                     .skills__item.skills__item-visual
                         .skills__meta
                             h3.skills__title visual design
                             span.skills__value 85
                         .skills__bar
-                            .skills__bar-inside
+                            .skills__bar-value(data-value="85")
 
 
 

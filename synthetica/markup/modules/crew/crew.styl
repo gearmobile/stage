@@ -7,12 +7,20 @@
         padding: 0 $gutter
 
 
+    // CREW HEADER
+    // ------------------------------------------------
+
+    &__header
+        margin: 0 0 6rem
+
+
     // CREW GALLERY
     // ------------------------------------------------
 
     & .gallery
         lost-center 100% flex
         margin-bottom: 5rem
+
 
         // CREW GALLERY ITEM
         // ------------------------------------------------
@@ -21,25 +29,38 @@
             lost-column 1/4
             lost-colmn-gutter $gutter
             position: relative
+            min-height: 30rem
+            height: 30rem
 
-            @media screen and (max-width: 768px)
+            @media screen and (max-width: $bp980)
                 lost-column 1/2
                 lost-column-gutter $gutter
 
                 &:nth-child(-n+2)
-                    margin-bottom: 15px
+                    margin-bottom: $gutter
 
-            @media screen and (max-width: 500px)
+            @media screen and (max-width: $bp500)
                 lost-column 1/1
                 lost-column-gutter 0
 
                 &:not(:last-child)
-                    margin-bottom: 15px
+                    margin-bottom: $gutter
 
-            & > img
-                display: block
-                width: 100%
-                height: auto
+            &:nth-child(1)
+                background: url('%=static=%assets/crew/crew-image-01.jpg') 50% 50% no-repeat
+                background-size: cover
+
+            &:nth-child(2)
+                background: url('%=static=%assets/crew/crew-image-02.jpg') 50% 50% no-repeat
+                background-size: cover
+
+            &:nth-child(3)
+                background: url('%=static=%assets/crew/crew-image-03.jpg') 50% 50% no-repeat
+                background-size: cover
+
+            &:nth-child(4)
+                background: url('%=static=%assets/crew/crew-image-04.jpg') 50% 50% no-repeat
+                background-size: cover
 
             &:hover .gallery__item-cover
             &:focus .gallery__item-cover
@@ -64,9 +85,10 @@
             width: 100%
             height: 100%
             background-color: #66e0e5
-            //opacity: 0
-            //visibility: hidden
+            opacity: 0
+            visibility: hidden
             transition: opacity .2s, visibility .2s
+
 
             // CREW GALLERY COVER CONTENT
             // ------------------------------------------------
@@ -104,7 +126,7 @@
     // --------------------------------------------------------------
 
     & .skills
-        lost-center 100%
+        lost-center 100% flex
 
         &__column
             lost-column 1/2
@@ -113,7 +135,7 @@
             & .skills__item:nth-child(1)
                 margin: 0 0 3rem
 
-            @media screen and (max-width: 500px)
+            @media screen and (max-width: $bp500)
                 lost-column 1/1
                 lost-column-gutter 0
 
@@ -128,7 +150,7 @@
             color: $gunmetal
             margin: 0 0 2rem
 
-            @media screen and (max-width: 768px)
+            @media screen and (max-width: $bp768)
                 font-size: 1rem
 
         &__title
@@ -140,20 +162,20 @@
             height: 1rem
             background-color: $gunmetal
 
-        &__bar-inside
+        &__bar-value
             height: 1rem
             background-color: #66e0e5
 
-        &__item-design .skills__bar-inside
+        &__item-design .skills__bar-value
             width: 90%
 
-        &__item-html .skills__bar-inside
+        &__item-html .skills__bar-value
             width: 95%
 
-        &__item-prototyping .skills__bar-inside
+        &__item-prototyping .skills__bar-value
             width: 80%
 
-        &__item-visual .skills__bar-inside
+        &__item-visual .skills__bar-value
             width: 85%
 
 
