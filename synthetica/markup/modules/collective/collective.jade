@@ -3,14 +3,17 @@ include ../heading/heading
 mixin collective(data)
     .collective
         .collective__center
-            .collective__head
+            header.collective__header
                 +heading('the collective')
-                p 8-bit aesthetic kitsch 90's humblebrag. Gastropub tacos hoodie letterpress, banjo normcore trust fund hella. Kinfolk gluten-free lo-fi quinoa. Pabst kitsch ennui hoodie meggings banjo. Schlitz tacos kitsch godard before they sold out. Kale chips chillwave kickstarter photo booth cronut cold-pressed. Banjo fixie umami kombucha affogato gluten-free authentic slow-carb hashtag, hammock pour-over chambray viral VHS normcore.
-            .collective__middle
-                video.video(controls preload="auto" width="600" height="300" poster="%=static=%img/assets/collective/video-cover.jpg" data-setup="{}")
-                    source(src="%=static=%img/content/typing-numbers.mp4" type='video/mp4')
-                    source(src="%=static=%img/content/typing-numbers.webm" type='video/webm')
-                    source(src="%=static=%img/content/typing-numbers.ogv" type='video/ogg')
-            .collective__footer
-                p 8-bit aesthetic kitsch 90's humblebrag. Gastropub tacos hoodie letterpress, banjo normcore trust fund hella. Kinfolk gluten-free lo-fi quinoa.
-                p Pabst kitsch ennui hoodie meggings banjo. Schlitz tacos kitsch godard before they sold out. Kale chips chillwave kickstarter photo booth cronut cold-pressed. Banjo fixie umami kombucha affogato gluten-free authentic slow-carb hashtag, hammock pour-over chambray viral VHS normcore.
+                .collective__header-content
+                    p 8-bit aesthetic kitsch 90's humblebrag. Gastropub tacos hoodie letterpress, banjo normcore trust fund hella. Kinfolk gluten-free lo-fi quinoa. Pabst kitsch ennui hoodie meggings banjo. Schlitz tacos kitsch godard before they sold out. Kale chips chillwave kickstarter photo booth cronut cold-pressed. Banjo fixie umami kombucha affogato gluten-free authentic slow-carb hashtag, hammock pour-over chambray viral VHS normcore.
+            main.collective__main
+                .collective__main-content
+                    video.video(controls preload="auto" width="568" height="300" poster="%=static=%img/assets/collective/video-cover.jpg" data-setup="{}")
+                        source(src="%=static=%img/video/typing-numbers.mp4" type='video/mp4')
+                        source(src="%=static=%img/video/typing-numbers.webm" type='video/webm')
+                        source(src="%=static=%img/video/typing-numbers.ogv" type='video/ogg')
+            footer.collective__footer
+                .collective__footer-content
+                    p 8-bit aesthetic kitsch 90's humblebrag. Gastropub tacos hoodie letterpress, banjo normcore trust fund hella. Kinfolk gluten-free lo-fi quinoa.
+                    p Pabst kitsch ennui hoodie meggings banjo. Schlitz tacos kitsch godard before they sold out. Kale chips chillwave kickstarter photo booth cronut cold-pressed. Banjo fixie umami kombucha affogato gluten-free authentic slow-carb hashtag, hammock pour-over chambray viral VHS normcore.

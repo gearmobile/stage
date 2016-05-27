@@ -6,8 +6,7 @@
   "directories": {},
   "dependencies": {
     "gulp": "^3.9.1",
-    "lost": "^6.8.0",
-    "video.js": "^5.10.2"
+    "lost": "^6.8.0"
   },
   "devDependencies": {},
   "scripts": {

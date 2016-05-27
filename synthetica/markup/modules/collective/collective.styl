@@ -1,7 +1,81 @@
 .collective
-  padding: 12rem 0
-  background-color: $white-color
+    padding: 12rem 0
+    background-color: $white-color
 
-  &__center
-    lost-center $width
-    padding: 0 $gutter
+    &__center
+        lost-center $width
+        padding: 0 $gutter
+
+
+    // COLLECTIVE HEADER
+    // --------------------------------------
+
+    &__header
+        lost-center 100% flex
+        margin-bottom: 5rem
+
+        & .heading
+            lost-column 2/10
+            lost-column-gutter $gutter
+
+            @media screen and (max-width: 900px)
+                lost-column 1/1
+                lost-column-gutter 0
+
+    &__header-content
+        lost-column 8/10
+        lost-column-gutter $gutter
+
+        @media screen and (max-width: 900px)
+            lost-column 1/1
+            lost-column-gutter 0
+            margin: 2rem 0 0 0
+
+
+    // COLLECTIVE MAIN
+    // --------------------------------------
+
+    &__main
+        lost-center: 100% flex
+        margin-bottom: 5rem
+
+    &__main-content
+        lost-column: 8/10
+        lost-column-gutter: $gutter
+        lost-offset: -2/10
+
+        @media screen and (max-width: 900px)
+            lost-column 1/1
+            lost-column-gutter 0
+            lost-offset: 0
+            display: flex
+            justify-content: center
+            align-items: center
+
+
+    // COLLECTIVE FOOTER
+    // --------------------------------------
+
+    &__footer
+        lost-center: 100% flex
+
+    &__footer-content
+        lost-column: 8/10
+        lost-column-gutter: $gutter
+        lost-offset: -2/10
+
+        @media screen and (max-width: 900px)
+            lost-column 1/1
+            lost-column-gutter 0
+            lost-offset: 0
+
+
+    // COLLECTIVE PARAGRAPH
+    // --------------------------------------
+
+    & p
+        font: 1.5rem/1.8 $raleway-regular
+        margin: 0 0 2rem
+
+        &:last-child
+            margin-bottom: 0
