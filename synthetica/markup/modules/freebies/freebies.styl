@@ -1,97 +1,111 @@
 .freebies
     padding: 12rem 0 0
-    background-color: $white-color
+    background-color: $color-white
+
+    // FREEBIES PRIMARY
+    // -----------------------------------------
 
     &__center
         lost-center $width
         padding: 0 $gutter
 
+
+    // FREEBIES HEAD
+    // -----------------------------------------
+
+    &__head
+        margin: 0 0 6rem
+
     &__content
         lost-center 100%
+        padding: 0 0 8rem
 
     &__content-column
         lost-column 1/2
         lost-column-gutter 0
-        padding-bottom: 8rem
-        color: $gunmetal
-        line-height: 1.8
-        font-size: 1.5rem
+
+        & p
+            font: 1.5rem/1.8 $raleway-regular
+            color: $color-slate
+            margin: 0 0 2rem
+
+            &:last-of-type
+                margin: 0
 
         &:first-child
             padding-right: 4rem
+            border-right: .1rem solid $color-silver
 
         &:last-child
             padding-left: 4rem
 
-    &__gallery
-        display: flex
-        justify-content: center
-        flex-wrap: wrap
+        @media screen and (max-width: $bp768)
+            lost-column 1/1
+            lost-column-gutter 0
 
-    &__thumb
-        flex 0 1 50%
-        height: 500px // ACHTUNG!
-        background-color: #cccccc // ACHTUNG!
+            &:first-child
+                padding-right: 0
+                border-right: none
+                margin: 0 0 $gutter
+
+            &:last-child
+                padding-left: 0
+
+
+    // FREEBIES SECONDARY
+    // -----------------------------------------
+
+    &__gallery
+        lost-center 100% flex
+
+    &__gallery-item
+        lost-column 1/2 2
+        lost-column-gutter 0
+        background-color: $color-slate-dark
         position: relative
 
-    &__thumb-cover
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        background-color: $charcoal-grey-color
-        opacity: .9
-
-    &__thumb-meta
-        position: absolute
-        top: 3rem
-        left: 5rem
-        display: flex
-
-        & li
-            padding: 0 1rem
-
-            &:not(:last-child)
-                border-right: 1px solid $white-color
-
-        & a
-            display: flex
-            align-items: center
-            text-decoration: none
-            color: $white-color
-            font-size: 1.3rem
-
-    &__thumb-content
-        text-align: center
-
-        .date
+        & img
             display: block
-            color: #b0b3b6
-            font-size: 1.3rem
-            margin: 0 0 1.4rem
-            letter-spacing: .2rem
+            width: 100%
+            height: auto
 
-        & h2
-            padding: 0 3.5rem 3rem
-            border-bottom: .2rem solid #e3e7ec
-            margin: 0 0 4rem
-            color: $white-color
-            text-transform: uppercase
-            font-size: 1.5rem
-            font-weight: 400
+        &::before
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            background-color: $color-slate-light
+            position: absolute
+            top: 0
+            left: 0
+            opacity: .6
+            transition: opacity .2s
 
-        & .download
-            text-transform: uppercase
-            text-decoration: none
-            border: .2rem solid #66e0e5
-            padding: 1.5rem 2rem
-            color: #66e0e5
-            font-size: 1.3rem
+        &:hover::before
+        &:focus::before
+            opacity: .9
+
+        @media screen and (max-width: $bp768)
+            lost-column 1/1 0
+            lost-column-gutter 0
+
+        & .overlay
+            visibility: hidden
+            opacity: 0
+
+        &:hover .overlay
+        &:focus .overlay
+            visibility: visible
+            opacity: 1
+
+        @media screen and (max-width: $bp500)
+
+            & .overlay
+                display: none
+
+
+
+
 
 
 

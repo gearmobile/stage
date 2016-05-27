@@ -1,0 +1,16 @@
+include ../button-secondary/button-secondary
+
+mixin freebies-overlay(date, title, likes)
+    .overlay
+        nav.overlay__link
+            a.overlay__link-heart(href="javascript:void();")
+                != jadeHelpers.Icon.call(locals, {iconName: 'heart', className: 'overlay-icon'})
+                = likes
+            a.overlay__link-like(href="javascript:void();")
+                != jadeHelpers.Icon.call(locals, {iconName: 'like', className: 'overlay-icon'})
+        .overlay__content
+            .overlay__content-primary
+                .overlay__content-date= date
+                h2.overlay__content-title= title
+            .overlay__content-secondary
+                +button-secondary('download')

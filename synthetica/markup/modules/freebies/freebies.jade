@@ -1,21 +1,33 @@
 include ../heading/heading
+include ../freebies-overlay/freebies-overlay
 
 mixin freebies(data)
+
     .freebies
-        .freebies__center
-            +heading('freshest freebies')
-            .freebies__content
-                .freebies__content-column A posuere donec senectus suspendisse bibendum magna ridiculus a justo orci parturient suspendisse ad rhoncus cursus ut parturient viverra elit aliquam ultrices est sem. Tellus nam ad fermentum ac enim est duis facilisis congue a lacus adipiscing consequat risus consectetur scelerisque integer suspendisse a mus integer elit massa ut.
-                .freebies__content-column A posuere donec senectus suspendisse bibendum magna ridiculus a justo orci parturient suspendisse ad rhoncus cursus ut parturient viverra elit aliquam ultrices est sem. Tellus nam ad fermentum ac enim est duis facilisis congue a lacus adipiscing consequat risus consectetur scelerisque integer suspendisse a mus integer elit massa ut.
-        .freebies__gallery
-            .freebies__thumb
-                .freebies__thumb-cover
-                    ul.freebies__thumb-meta
-                        li: a(href="javascript:void();") 24
-                        li: a(href="javascript:void();") share
-                    .freebies__thumb-content
-                        time.date 03/01/2016
-                        h2 sedna html css template
-                        a.download(href="javascript:void();") download
-            .freebies__thumb
-                .freebies__thumb-cover
+
+        .freebies__primary
+            .freebies__center
+                .freebies__head
+                    +heading('freshest freebies')
+                .freebies__content
+                    .freebies__content-column
+                        p A posuere donec senectus suspendisse bibendum magna ridiculus a justo orci parturient suspendisse ad rhoncus cursus ut parturient viverra elit aliquam ultrices est sem. Tellus nam ad fermentum ac enim est duis facilisis congue a lacus adipiscing consequat risus consectetur scelerisque integer suspendisse a mus integer elit massa ut.
+                    .freebies__content-column
+                        p A posuere donec senectus suspendisse bibendum magna ridiculus a justo orci parturient suspendisse ad rhoncus cursus ut parturient viverra elit aliquam ultrices est sem. Tellus nam ad fermentum ac enim est duis facilisis congue a lacus adipiscing consequat risus consectetur scelerisque integer suspendisse a mus integer elit massa ut.
+
+        .freebies__secondary
+            ul.freebies__gallery
+                li.freebies__gallery-item
+                    img(src="%=static=%img/assets/freebies/freebie-image-01.jpg" alt="Freebies Image")
+                    +freebies-overlay('03/01/2016', 'first html css template', '20')
+                li.freebies__gallery-item
+                    img(src="%=static=%img/assets/freebies/freebie-image-02.jpg" alt="Freebies Image")
+                    +freebies-overlay('05/05/2016', 'second html css template', '30')
+                li.freebies__gallery-item
+                    img(src="%=static=%img/assets/freebies/freebie-image-03.jpg" alt="Freebies Image")
+                    +freebies-overlay('02/06/2016', 'third html css template', '10')
+                li.freebies__gallery-item
+                    img(src="%=static=%img/assets/freebies/freebie-image-04.jpg" alt="Freebies Image")
+                    +freebies-overlay('22/09/2016', 'fourth html css template', '2')
+
+

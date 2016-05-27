@@ -1,0 +1,60 @@
+.overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    transition: visibility .2s, opacity .2s
+
+
+    // OVERLAY CONTENT
+    // ----------------------------------------------
+
+    &__content
+        text-align: center
+
+    &__content-primary
+        padding: 0 4rem 3rem
+        border-bottom: .2rem solid $color-white
+        margin: 0 0 4rem
+
+    &__content-date
+        font: 1.3rem/1 $raleway-medium
+        color: $color-grey
+        margin: 0 0 1.4rem
+
+    &__content-title
+        font: 1.5rem/1 $raleway-regular
+        color: $color-white
+        text-transform: uppercase
+        margin: 0
+
+
+    // OVERLAY LINKS
+    // ----------------------------------------------
+
+    &__link
+        position: absolute
+        top: 2rem
+        left: 2rem
+        display: flex
+        align-items: center
+
+        & a
+            text-decoration: none
+            color: $color-white
+            display: flex
+            font-size: 1.3rem
+            line-height: 1
+            margin: 0 .8rem
+
+        & .overlay-icon
+            width: 1.3rem
+            height: 1.3rem
+
+        & .overlay__link-heart .overlay-icon
+            margin: 0 1rem 0 0

@@ -1,5 +1,4 @@
 .started
-    /*padding: 10rem 0*/
     height: 25rem
     background: linear-gradient(to right, #51ccdc 0%, #70f6ea 100%)
     color: $color-white
@@ -73,6 +72,12 @@
             color: $color-white
             text-decoration: none
             font-family: $raleway-semibold
+            border-bottom: .2rem solid rgba(255,255,255,.6)
+            transition: border-bottom-color .2s
+
+            &:hover
+            &:focus
+                border-bottom-color: rgba(255,255,255,1)
 
 
         @media screen and (max-width: $bp900)
