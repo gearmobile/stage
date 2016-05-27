@@ -12,7 +12,7 @@
         min-height: 40rem
         justify-content: space-between
         align-items: center
-        color: $white-color
+        color: $color-white
 
     &__item
         display: flex
@@ -23,11 +23,11 @@
             width: 6rem
             height: 6rem
 
-            @media screen and (max-width: 768px)
+            @media screen and (max-width: $bp768)
                 width: 4rem
                 height: 4rem
 
-            @media screen and (max-width: 500px)
+            @media screen and (max-width: $bp500)
                 width: 2rem
                 height: 2rem
 
@@ -35,10 +35,10 @@
         font-size: 4.8rem
         margin: 0 0 .5rem
 
-        @media screen and (max-width: 768px)
+        @media screen and (max-width: $bp768)
             font-size: 3rem
 
-        @media screen and (max-width: 500px)
+        @media screen and (max-width: $bp500)
             font-size: 2rem
 
     & p
@@ -46,10 +46,10 @@
         text-transform: uppercase
         margin: 0
 
-        @media screen and (max-width: 768px)
+        @media screen and (max-width: $bp768)
             font-size: 1.2rem
 
-        @media screen and (max-width: 500px)
+        @media screen and (max-width: $bp500)
             font-size: 1rem
 
     &__item-holder

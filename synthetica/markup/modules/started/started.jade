@@ -1,5 +1,9 @@
+include ../button-secondary/button-secondary
+
 mixin started(data)
     .started
         .started__center
-            .started__offer Get started now. Try Synthetica <a href="javascript:void();">FREE</a> for 30 days.
-            a.started__button(href="javascript:void();") get started
+            .started__primary
+                p.started__offer Get started now. Try Synthetica <a href="javascript:void();">FREE</a> for 30 days.
+            .started__secondary
+                +button-secondary('get started')
