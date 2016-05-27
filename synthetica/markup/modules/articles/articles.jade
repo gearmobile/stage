@@ -7,8 +7,12 @@ mixin articles(data)
             .articles__head
                 +heading('latest articles')
                 form.articles__search(method="post" action="action.php")
-                    label(for="name")
-                    input(type="text" name="" id="" placeholder="experience design")
+                    label(for="search") sort by
+                    select(name="search" class="search")
+                        option(value="") experience design
+                        option(value="") visual design
+                        option(value="") product design
+                        option(value="") patterns
 
             .articles__gallery
 
@@ -19,8 +23,11 @@ mixin articles(data)
                         h3.articles__gallery-title 8 tips when working with multiple stakeholders
                         p A posuere donec senectus suspendisse bibendum magna ridiculus a justo orci parturient suspendisse ad rhoncus &hellip;
                     ul.articles__gallery-meta
-                        li.articles__gallery-category: a(href="javascript:void();") product
-                        li.articles__gallery-comments: a(href="javascript:void();") 0
+                        li.articles__gallery-category
+                            a(href="javascript:void();") design
+                        li.articles__gallery-comments
+                            != jadeHelpers.Icon.call(locals, {iconName: 'bubbles', className: 'articles-icon'})
+                            a(href="javascript:void();") 1
 
                 .articles__gallery-item
                     figure.articles__gallery-image
@@ -28,8 +35,11 @@ mixin articles(data)
                         h3.articles__gallery-title 8 tips when working with multiple stakeholders
                         p A posuere donec senectus suspendisse bibendum magna ridiculus a justo orci parturient suspendisse ad rhoncus &hellip;
                     ul.articles__gallery-meta
-                        li.articles__gallery-category: a(href="javascript:void();") product
-                        li.articles__gallery-comments: a(href="javascript:void();") 0
+                        li.articles__gallery-category
+                            a(href="javascript:void();") prototyping
+                        li.articles__gallery-comments
+                            != jadeHelpers.Icon.call(locals, {iconName: 'bubbles', className: 'articles-icon'})
+                            a(href="javascript:void();") 13
 
                 .articles__gallery-item
                     figure.articles__gallery-image
@@ -37,5 +47,45 @@ mixin articles(data)
                         h3.articles__gallery-title 8 tips when working with multiple stakeholders
                         p A posuere donec senectus suspendisse bibendum magna ridiculus a justo orci parturient suspendisse ad rhoncus &hellip;
                     ul.articles__gallery-meta
-                        li.articles__gallery-category: a(href="javascript:void();") product
-                        li.articles__gallery-comments: a(href="javascript:void();") 0
+                        li.articles__gallery-category
+                            a(href="javascript:void();") javascript
+                        li.articles__gallery-comments
+                            != jadeHelpers.Icon.call(locals, {iconName: 'bubbles', className: 'articles-icon'})
+                            a(href="javascript:void();") 3
+
+                .articles__gallery-item
+                    figure.articles__gallery-image
+                        a.articles__gallery-tooltip(href="javascript:void();") featured article
+                    .articles__gallery-content
+                        h3.articles__gallery-title 8 tips when working with multiple stakeholders
+                        p A posuere donec senectus suspendisse bibendum magna ridiculus a justo orci parturient suspendisse ad rhoncus &hellip;
+                    ul.articles__gallery-meta
+                        li.articles__gallery-category
+                            a(href="javascript:void();") angular
+                        li.articles__gallery-comments
+                            != jadeHelpers.Icon.call(locals, {iconName: 'bubbles', className: 'articles-icon'})
+                            a(href="javascript:void();") 11
+
+                .articles__gallery-item
+                    figure.articles__gallery-image
+                    .articles__gallery-content
+                        h3.articles__gallery-title 8 tips when working with multiple stakeholders
+                        p A posuere donec senectus suspendisse bibendum magna ridiculus a justo orci parturient suspendisse ad rhoncus &hellip;
+                    ul.articles__gallery-meta
+                        li.articles__gallery-category
+                            a(href="javascript:void();") design
+                        li.articles__gallery-comments
+                            != jadeHelpers.Icon.call(locals, {iconName: 'bubbles', className: 'articles-icon'})
+                            a(href="javascript:void();") 20
+
+                .articles__gallery-item
+                    figure.articles__gallery-image
+                    .articles__gallery-content
+                        h3.articles__gallery-title 8 tips when working with multiple stakeholders
+                        p A posuere donec senectus suspendisse bibendum magna ridiculus a justo orci parturient suspendisse ad rhoncus &hellip;
+                    ul.articles__gallery-meta
+                        li.articles__gallery-category
+                            a(href="javascript:void();") javascript
+                        li.articles__gallery-comments
+                            != jadeHelpers.Icon.call(locals, {iconName: 'bubbles', className: 'articles-icon'})
+                            a(href="javascript:void();") 10

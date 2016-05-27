@@ -13,7 +13,14 @@
     &__head
         display: flex
         justify-content: space-between
-        margin: 0 0 7rem
+        margin: 0 0 6rem
+
+        @media screen and (max-width: $bp768)
+            flex-direction: column
+            justify-content: flex-start
+
+            & .articles__search
+                margin: 4rem 0 0 0
 
 
     // ARTICLES GALLERY
@@ -26,9 +33,26 @@
         lost-column 1/3
         lost-column-gutter 3rem
 
+        &:nth-child(-n+3)
+            margin-bottom: $gutter
+
         &:hover .articles__gallery-image::before
         &:focus .articles__gallery-image::before
             opacity: .2
+
+        @media screen and (max-width: $bp900)
+            lost-column 1/2 2
+            lost-column-gutter 3rem
+
+            &:nth-child(-n+4)
+                margin-bottom: $gutter
+
+        @media screen and (max-width: $bp768)
+            lost-column 1/1 0
+            lost-column-gutter 0
+
+            &:nth-child(-n+5)
+                margin-bottom: $gutter
 
 
     // ARTICLES GALLERY IMAGE
@@ -51,6 +75,18 @@
 
         &:nth-child(3)
             background: url('%=static=%assets/articles/article-image-03.jpg') 50% 50% no-repeat
+            background-size: cover
+
+        &:nth-child(4)
+            background: url('%=static=%assets/articles/article-image-04.jpg') 50% 50% no-repeat
+            background-size: cover
+
+        &:nth-child(5)
+            background: url('%=static=%assets/articles/article-image-05.jpg') 50% 50% no-repeat
+            background-size: cover
+
+        &:nth-child(6)
+            background: url('%=static=%assets/articles/article-image-06.jpg') 50% 50% no-repeat
             background-size: cover
 
         &::before
@@ -99,6 +135,12 @@
             color: $color-slate
             margin: 0 0 2rem
 
+            &:last-child
+                margin: 0
+
+        @media screen and (max-width: $bp500)
+            text-align: center
+
 
     // ARTICLES GALLERY TITLE
     // -----------------------------------------------
@@ -108,6 +150,9 @@
         color: $color-slate-light
         margin: 0 0 1rem
 
+        @media screen and (max-width: $bp500)
+            margin: 0 0 2rem
+
 
     // ARTICLES GALLERY META
     // -----------------------------------------------
@@ -115,13 +160,35 @@
     &__gallery-meta
         display: flex
         justify-content: space-between
+        align-items: center
         padding: 1.4rem 0 0
         border-top: .2rem solid #e1e3e7
+        font: 1.3rem/1 $raleway-regular
 
         & a
             text-decoration: none
             text-transform: capitalize
+            transition: color .2s
 
     &__gallery-category a
-        font: 1.3rem/1 $raleway-regular
         color: $color-teal
+
+        &:hover
+        &:focus
+            color: $color-teal-dark
+
+    &__gallery-comments
+        display: flex
+
+        & .articles-icon
+            width: 1.3rem
+            height: 1.3rem
+
+        & a
+            display: flex
+            padding: 0 0 0 .5rem
+            color: $color-slate
+
+            &:hover
+            &:focus
+                color: $color-black
