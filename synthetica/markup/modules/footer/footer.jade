@@ -2,16 +2,22 @@ mixin footer(data)
     footer.footer
         .footer__center
             .footer__content
-                h1.footer__title synthetica
+                h1.footer__title
+                    != jadeHelpers.Icon.call(locals, {iconName: 'logo', className: 'footer-logo'})
+                    | synthetica
                 p An experience design collective curated by designers, for designers.
             .footer__navigation
-                ul.footer__menu
+                ul.footer__navigation-primary
                     li: a(href="javascript:void();") the collective
                     li: a(href="javascript:void();") the crew
                     li: a(href="javascript:void();") articles
                     li: a(href="javascript:void();") freebies
                     li: a(href="javascript:void();") subscribe
-                ul.footer__submenu
-                    li: a(href="javascript:void();") licence
-                    li: a(href="javascript:void();") share
-            .footer__copyright &copy; Synthetica 2016. Design &amp; Development by <a href="javascript:void();">peter finlan</a>
+                ul.footer__navigation-secondary
+                    li: a(href="javascript:void();")
+                        != jadeHelpers.Icon.call(locals, {iconName: 'key', className: 'footer-icon'})
+                        | licence
+                    li: a(href="javascript:void();")
+                        != jadeHelpers.Icon.call(locals, {iconName: 'like', className: 'footer-icon'})
+                        | share
+            .footer__copyright &copy; Synthetica 2016. Design &amp; Development by <a href="javascript:void(); target="_blank" title="Peter Finlan">peter finlan</a>

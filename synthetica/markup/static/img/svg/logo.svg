@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="33px" height="35px" viewBox="0 0 33 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+    <title>Polygon 1 + S</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Synthetica-1600px" transform="translate(-215.000000, -5304.000000)">
+            <g id="Footer" transform="translate(0.000000, 5233.000000)">
+                <g id="SYNTHETICA-+-Polygon-1-+-S" transform="translate(216.000000, 72.000000)">
+                    <g id="Polygon-1-+-S">
+                        <path d="M11.9277531,0.974580984 C13.847573,-0.115949981 16.9656722,-0.112850633 18.8800359,0.974580984 L27.3316476,5.77541902 C29.2514674,6.86594998 30.807789,9.54056627 30.807789,11.7429181 L30.807789,21.2570819 C30.807789,23.4623097 29.2460112,26.1371494 27.3316476,27.224581 L18.8800359,32.025419 C16.960216,33.11595 13.8421167,33.1128506 11.9277531,32.025419 L3.47614138,27.224581 C1.55632151,26.13405 8.46272523e-15,23.4594337 7.21303202e-15,21.2570819 L1.8143552e-15,11.7429181 C5.63030077e-16,9.53769034 1.56177774,6.86285063 3.47614138,5.77541902 L11.9277531,0.974580984 Z" id="Polygon-1" stroke="#66E0E5" stroke-width="2"></path>
+                        <text id="S" transform="translate(15.139344, 16.500000) rotate(-47.000000) translate(-15.139344, -16.500000) " font-family="Montserrat-Regular, Montserrat" font-size="20" font-weight="normal" fill="#66E0E5">
+                            <tspan x="8.63934426" y="23.5">S</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
