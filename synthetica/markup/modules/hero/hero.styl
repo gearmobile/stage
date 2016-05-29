@@ -9,6 +9,18 @@
     & .hero-slider
         position: relative
 
+    & .hero-slider__item:nth-child(1)
+        background: url('%=static=%assets/hero/hero-bg-01.jpg') 50% 50% no-repeat
+        background-size: cover
+
+    & .hero-slider__item:nth-child(2)
+        background: url('%=static=%assets/hero/hero-bg-02.jpg') 50% 50% no-repeat
+        background-size: cover
+
+    & .hero-slider__item:nth-child(3)
+        background: url('%=static=%assets/hero/hero-bg-03.jpg') 50% 50% no-repeat
+        background-size: cover
+
 
     // HERO SLIDER CELL
     // -----------------------------------------------
@@ -49,27 +61,27 @@
                 background-color: $color-white
 
 
-// HERO SLIDER CONTENT
-// -----------------------------------------------
+    // HERO SLIDER CONTENT
+    // -----------------------------------------------
 
-.hero__content
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    text-align: center
-    color: $color-white
+    & .hero__content
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center
+        color: $color-white
 
-    &-primary
-        padding: 0 0 3rem 0
-        border-bottom: 1px solid $color-white
+        &-primary
+            padding: 0 0 3rem 0
+            border-bottom: 1px solid $color-white
 
-    &-title
-        font: 4.5rem/1.6 $raleway-semibold
-        margin: 0 0 4rem
+        &-title
+            font: 4.5rem/1.6 $raleway-semibold
+            margin: 0 0 4rem
 
-    &-secondary
-        padding: 3rem 0 0 0
+        &-secondary
+            padding: 3rem 0 0 0
 
-        & p
-            font: 1.5rem/1.7 $raleway-regular
+            & p
+                font: 1.5rem/1.7 $raleway-regular
