@@ -3,54 +3,68 @@
     background: url('%=static=%assets/overview/overview-bg.jpg') 50% 50% no-repeat
     background-size: cover
 
+    // OVERVIEW CENTER
+    // ----------------------------------------------
+
     &__center
         lost-center $width
         padding: 0 $gutter
 
+
+    // OVERVIEW LIST
+    // ----------------------------------------------
+
     &__list
         display: flex
         min-height: 40rem
-        justify-content: space-between
+        justify-content: space-around
         align-items: center
         color: $color-white
 
+        @media screen and (max-width: $bp768)
+            flex-direction: column
+            justify-content: space-around
+
+    // OVERVIEW LIST ITEM
+    // ----------------------------------------------
+
     &__item
         display: flex
-        justify-content: center
         align-items: center
 
         & .overview-icon
             width: 6rem
             height: 6rem
 
-            @media screen and (max-width: $bp768)
+            @media screen and (max-width: $bp500)
                 width: 4rem
                 height: 4rem
 
-            @media screen and (max-width: $bp500)
-                width: 2rem
-                height: 2rem
-
-    & h3
-        font-size: 4.8rem
-        margin: 0 0 .5rem
-
         @media screen and (max-width: $bp768)
-            font-size: 3rem
+            width: 20rem
 
-        @media screen and (max-width: $bp500)
-            font-size: 2rem
 
-    & p
-        font-size: 1.5rem
-        text-transform: uppercase
-        margin: 0
-
-        @media screen and (max-width: $bp768)
-            font-size: 1.2rem
-
-        @media screen and (max-width: $bp500)
-            font-size: 1rem
+    // OVERVIEW LIST ITEM HOLDER
+    // ----------------------------------------------
 
     &__item-holder
         margin: 0 0 0 2rem
+
+
+        // OVERVIEW LIST TITLE
+        // ----------------------------------------------
+
+        & h3
+            font-size: 4.8rem
+            margin: 0 0 .5rem
+
+            @media screen and (max-width: $bp500)
+                font-size: 3rem
+
+        & p
+            font-size: 1.5rem
+            text-transform: uppercase
+            margin: 0
+
+            @media screen and (max-width: $bp500)
+                font-size: 1.2rem

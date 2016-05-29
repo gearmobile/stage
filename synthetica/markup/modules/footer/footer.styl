@@ -19,16 +19,22 @@
         border-bottom: .1rem solid rgba($color-teal, .3)
         color: $color-white
 
+        @media screen and (max-width: $bp768)
+            text-align: center
+
     &__title
         display: flex
         align-items: center
         text-transform: uppercase
         margin: 0 0 2rem 0
-        font: 1.6rem/1 $raleway-medium
+        font: 1.6rem/1.2 $raleway-medium
         letter-spacing: .6rem
 
         & .footer-logo
             margin: 0 2rem 0 0
+
+        @media screen and (max-width: $bp768)
+            justify-content: center
 
     & p
         font: 1.4rem/1.4 $raleway-regular
@@ -56,6 +62,13 @@
             &:focus
                 color: $color-teal
 
+        & li
+            transition: border-bottom-color .2s
+
+        @media screen and (max-width: $bp768)
+            padding: 3rem 0 6rem
+
+
     &__navigation-primary
         lost-column 7/12
         lost-column-gutter $gutter
@@ -68,8 +81,13 @@
             & li
                 border-bottom: 1px solid rgba($color-teal, .2)
 
+                &:hover
+                &:focus
+                    border-bottom-color: rgba($color-teal, .6)
+
                 & a
                     padding: 3rem 0
+
 
     &__navigation-secondary
         lost-column 4/12
@@ -110,7 +128,7 @@
 
     &__copyright
         color: $color-white
-        font: 1.4rem/1.2 $raleway-light
+        font: 1.4rem/1.8 $raleway-light
 
         & a
             color: $color-teal
@@ -120,6 +138,13 @@
             &:hover
             &:focus
                 color: $color-teal-dark
+
+        @media screen and (max-width: $bp768)
+            text-align: center
+
+            & a
+                display: inline-block
+                vertical-align: middle
 
 
 
