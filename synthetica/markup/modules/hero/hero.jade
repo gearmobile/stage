@@ -1,6 +1,29 @@
+include ../button-primary/button-primary
+
 mixin hero(data)
     .hero
-        .hero-slider
-            .hero-slider__item
-            .hero-slider__item
-            .hero-slider__item
+        .hero-slider.main-carousel
+            .hero-slider__item.carousel-cell
+                img(src="%=static=%img/assets/hero/hero-bg-01.jpg" alt="Hero Image")
+                .hero__content
+                    .hero__content-primary
+                        h1.hero__content-title Curated goodies for Designers & Developers
+                        +button-primary('latest collection')
+                    .hero__content-secondary
+                        p Synthetica is an experience design collective, bringing you the latest product, interaction and visual design goodies straight to your inbox.
+            .hero-slider__item.carousel-cell
+                img(src="%=static=%img/assets/hero/hero-bg-02.jpg" alt="Hero Image")
+                .hero__content
+                    .hero__content-primary
+                        h1.hero__content-title Curated goodies for Designers & Developers
+                        +button-primary('latest collection')
+                    .hero__content-secondary
+                        p Synthetica is an experience design collective, bringing you the latest product, interaction and visual design goodies straight to your inbox.
+            .hero-slider__item.carousel-cell
+                img(src="%=static=%img/assets/hero/hero-bg-03.jpg" alt="Hero Image")
+                .hero__content
+                    .hero__content-primary
+                        h1.hero__content-title Curated goodies for Designers & Developers
+                        +button-primary('latest collection')
+                    .hero__content-secondary
+                        p Synthetica is an experience design collective, bringing you the latest product, interaction and visual design goodies straight to your inbox.

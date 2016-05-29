@@ -1,2 +1,75 @@
 .hero
     padding: 1rem
+    margin-top: 10rem
+
+
+    // HERO SLIDER
+    // -----------------------------------------------
+
+    & .hero-slider
+        position: relative
+
+
+    // HERO SLIDER CELL
+    // -----------------------------------------------
+
+    & .carousel-cell
+        width: 100%
+        height: 68rem
+        position: relative
+        cursor: move
+
+
+    // HERO SLIDER DOTS
+    // -----------------------------------------------
+
+    & .flickity-page-dots
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 4rem
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+
+        & .dot
+            width: 1.2rem
+            height: 1.2rem
+            margin: 0 1rem
+            border: 1px solid $color-white
+            opacity: 1
+            background-color: transparent
+            border-radius: 50%
+            cursor: pointer
+            transition: background-color .2s
+
+            &.is-selected
+            &:hover
+            &:focus
+                background-color: $color-white
+
+
+// HERO SLIDER CONTENT
+// -----------------------------------------------
+
+.hero__content
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    text-align: center
+    color: $color-white
+
+    &-primary
+        padding: 0 0 3rem 0
+        border-bottom: 1px solid $color-white
+
+    &-title
+        font: 4.5rem/1.6 $raleway-semibold
+        margin: 0 0 4rem
+
+    &-secondary
+        padding: 3rem 0 0 0
+
+        & p
+            font: 1.5rem/1.7 $raleway-regular

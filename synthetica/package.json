@@ -5,11 +5,8 @@
   "main": "gulpfile.js",
   "directories": {},
   "dependencies": {
-    "flickity": "^1.2.1",
     "gulp": "^3.9.1",
-    "jquery": "^2.2.4",
-    "lost": "^6.8.0",
-    "magnific-popup": "^1.1.0"
+    "lost": "^6.8.0"
   },
   "devDependencies": {},
   "scripts": {

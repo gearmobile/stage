@@ -23,7 +23,7 @@ module.exports = {
         }
     },
     "js": {
-        "workflow": "modular",
+        "workflow": "concat",
         "bundler": "webpack",
         "lint": true,
         "useBabel": false,
@@ -70,7 +70,8 @@ module.exports = {
     "templater": "jade",
     "cssPreprocessor": "stylus",
     "useImagesForDisplayWithDpi": [
-        96
+        96,
+        192
     ],
     "fs": {
         "staticFolderName": "static",
