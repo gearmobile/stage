@@ -1,72 +1,72 @@
 .topheader
     position: fixed
+    z-index: 999
     top: 0
     left: 0
     width: 100%
-    z-index: 999
+    height: 10rem
     display: flex
     justify-content: space-between
-    height: 10rem
     align-items: center
-    transition: background-color .2s
 
 
-    // TOPHEADER LOGO
-    // -----------------------------------------------
+    // TOPHEADER PRIMARY
+    // ------------------------------------------------------------
 
-    &__logo
-        width: 34rem
-        height: 100%
+    &__primary
         display: flex
-        align-items: center
         justify-content: center
-        background-color: $color-slate-light
+        align-items: center
+        height: 100%
+        padding: 0 4rem
+        background-color: $color-slate
         border-bottom: .5rem solid $color-teal-light
 
         & a
             display: flex
+            width: 100%
+            height: 100%
             align-items: center
+            justify-content: center
+            font: 1.6rem/1.2 $raleway-semibold
             text-transform: uppercase
-            color: $color-white
             letter-spacing: .6rem
+            color: $color-white
 
         & .topheader-icon
             margin: 0 2rem 0 0
 
-        &:hover
-            border-bottom-color: $color-teal-dark
 
+    // TOPHEADER SECONDARY
+    // ------------------------------------------------------------
 
-    // TOPHEADER MENU
-    // -----------------------------------------------
-
-    &__menu
-        display: flex
-
-    &__menu-list
+    &__secondary
         display: flex
 
 
+    // TOPHEADER SECONDARY NAV
+    // ------------------------------------------------------------
 
-    // TOPHEADER MENU LIST
-    // -----------------------------------------------
-
-    &__menu-list
+    &__secondary-nav
         display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 6rem 0 0
 
         & li
-            padding: 0 3rem
-            border-right: 1px solid $color-silver
+            padding: .6rem 2rem
 
-            &:last-of-type
-                border-right: none
+            &:not(:last-child)
+                border-right: .1rem solid $color-grey-light-super
 
         & a
+            display: flex
             text-transform: uppercase
-            padding: 0 0 1rem
-            color: $color-grey-dark
-            font: 1.3rem/1 $raleway-semibold
+            font: 1.3rem/1 $raleway-bold
+            letter-spacing: .1rem
+            color: $color-slate-dark
             border-bottom: .2rem solid transparent
+            padding: 0 0 .4rem 0
             transition: border-bottom-color .2s, color .2s
 
             &:hover
@@ -75,18 +75,60 @@
                 border-bottom-color: $color-teal-light
 
 
-    // TOPHEADER BUTTON
-    // -----------------------------------------------
+    //  TOPHEADER SECONDARY SUBSCRIBE
+    // ------------------------------------------------------------
 
-    &__menu-button
+    &__secondary-subscribe
         display: flex
-        width: 20rem
-        background-color: $color-slate-light
-        height: 100%
+        align-items: center
+        justify-content: center
+        background-color: $color-slate
+        height: 10rem
+        padding: 0 2rem
+
+        & li
+            padding: .6rem 2rem
+
+            &:first-child
+                border-right: .1rem solid $color-grey-light-super
+
+                & a:hover
+                & a:focus
+                    border-bottom-color: $color-teal-light
+
+        & a
+            display: flex
+            color: $color-teal-light
+            text-transform: uppercase
+            font: 1.3rem/1 $raleway-bold
+            letter-spacing: .1rem
+            border-bottom: .2rem solid transparent
+            padding: 0 0 .4rem 0
+            transition: border-bottom-color .2s
+
+        & .topheader-search-icon
+            width: 1.4rem
+            height: 1.4rem
 
 
-&.is-scrolled
-    //background-color: $color-teal-light
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

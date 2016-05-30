@@ -1,10 +1,20 @@
 $(document).ready( function () {
+
     var topHeader = $('.topheader');
+    var topHeaderNav = topHeader.find('.topheader__secondary-nav');
+
+    if ( !topHeaderNav.hasClass('animated') ) {
+        topHeaderNav.addClass('animated');
+    }
+
     $(window).on('scroll', function () {
         if ( $(window).scrollTop() > 0 ) {
-            topHeader.addClass('is-scrolled');
+            if ( topHeaderNav.hasClass('fadeInRight') ) {
+                topHeaderNav.removeClass('fadeInRight');
+            }
+            topHeaderNav.addClass('fadeOutRight');
         } else {
-            topHeader.removeClass('is-scrolled');
+            topHeaderNav.removeClass('fadeOutRight').addClass('fadeInRight');
         }
     });
 });

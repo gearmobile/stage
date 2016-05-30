@@ -1,15 +1,16 @@
 mixin topheader(data)
     .topheader
-        .topheader__logo
+        .topheader__primary
             a(href="javascript:void();")
                 != jadeHelpers.Icon.call(locals, {iconName: 'logo', className: 'topheader-icon'})
                 | synthetica
-        .topheader__menu
-            ul.topheader__menu-list
+        .topheader__secondary
+            ul.topheader__secondary-nav
                 li: a(href="javascript:void();") the collective
                 li: a(href="javascript:void();") the crew
                 li: a(href="javascript:void();") articles
                 li: a(href="javascript:void();") freebies
-            ul.topheader__menu-button
+            ul.topheader__secondary-subscribe
                 li: a(href="javascript:void();") subscribe
                 li: a(href="javascript:void();")
+                        != jadeHelpers.Icon.call(locals, {iconName: 'search', className: 'topheader-search-icon'})
