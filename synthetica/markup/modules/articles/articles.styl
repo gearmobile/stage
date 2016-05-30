@@ -23,9 +23,37 @@
                 margin: 4rem 0 0 0
 
     &__search
-        text-transform: capitalize
-        color: $color-grey
-        font: 1.3rem/1 $raleway-medium
+
+        & > label
+            font: 1.3rem/1 $raleway-semibold
+            margin: 0 1rem 0 0
+            text-transform: uppercase
+
+        & > select
+            width: 30rem
+            color: $color-grey
+            font: 1.3rem/1 $raleway-medium
+            text-transform: capitalize
+            background-color: transparent
+            padding: 0 0 1rem 0
+            border-width: 0 0 .2rem 0
+            border-color: transparent transparent $color-teal transparent
+            border-style: none none solid none
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
+            cursor: pointer
+            border-radius: 0
+            background: url('%=static=%assets/articles/select-arrow.png') 96% 40% no-repeat
+
+            &:hover
+            &:focus
+                border-bottom-color: $color-teal-dark
+                color: $color-grey-dark
+
+            & > option
+                text-indent: 1rem
+                padding: .8rem 0
 
 
     // ARTICLES GALLERY
@@ -196,4 +224,4 @@
 
             &:hover
             &:focus
-                color: $color-black
+                color: $color-teal-dark

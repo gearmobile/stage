@@ -32,9 +32,18 @@
             text-transform: uppercase
             letter-spacing: .6rem
             color: $color-white
+            transition: color .2s
+
+            &:hover
+            &:focus
+                color: $color-teal-light
 
         & .topheader-icon
             margin: 0 2rem 0 0
+            transition: transform .2s
+
+        &:hover .topheader-icon
+            transform: rotate(-180deg)
 
 
     // TOPHEADER SECONDARY
