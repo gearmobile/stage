@@ -5,15 +5,15 @@ mixin overview(data)
                 li.overview__item
                     != jadeHelpers.Icon.call(locals, {iconName: 'trophy', className: 'overview-icon'})
                     .overview__item-holder
-                        h3 18
-                        p awards won
+                        h3.overview__item-counter(data-stop=20) 20
+                        p.overview__item-text awards won
                 li.overview__item
                     != jadeHelpers.Icon.call(locals, {iconName: 'book', className: 'overview-icon'})
                     .overview__item-holder
-                        h3 341
-                        p articles
+                        h3.overview__item-counter(data-stop=340) 340
+                        p.overview__item-text articles
                 li.overview__item
                     != jadeHelpers.Icon.call(locals, {iconName: 'pen', className: 'overview-icon'})
                     .overview__item-holder
-                        h3 45
-                        p freebies
+                        h3.overview__item-counter(data-stop=50) 50
+                        p.overview__item-text freebies
