@@ -25,3 +25,16 @@ m-blocks-justify()
 
 
 // You can add your own mixins here:
+
+[placeholder]:focus::placeholder
+    color transparent
+
+placeholder()
+    &::-webkit-input-placeholder
+        {block}
+    &::-moz-placeholder
+        {block}
+    &:-moz-placeholder
+        {block}
+    &:-ms-input-placeholder
+        {block}

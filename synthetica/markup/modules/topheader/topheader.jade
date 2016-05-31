@@ -11,6 +11,11 @@ mixin topheader(data)
                 li: a(href='#articles') articles
                 li: a(href='#freebies') freebies
             ul.topheader__secondary-subscribe
-                li: a(href='javascript:void();') subscribe
-                li: a(href='javascript:void();')
+                li: a(href='#subscribe') subscribe
+                li: a.topheader__secondary-open(href='javascript:void();')
                         != jadeHelpers.Icon.call(locals, {iconName: 'search', className: 'topheader-search-icon'})
+            ul.topheader__secondary-search.is-hidden
+                li: input(type="text" id="topheader-search" placeholder="start search here")
+                li
+                    a.topheader__secondary-close(href="javascript:void();")
+                        != jadeHelpers.Icon.call(locals, {iconName: 'cancel-circle', className: 'search-icon'})

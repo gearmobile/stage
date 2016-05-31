@@ -74,14 +74,29 @@
             font: 1.3rem/1 $raleway-bold
             letter-spacing: .1rem
             color: $color-slate-dark
-            border-bottom: .2rem solid transparent
-            padding: 0 0 .4rem 0
-            transition: border-bottom-color .2s, color .2s
+            transition: color .2s
+            position: relative
+
+            &::after
+                content: ''
+                display: block
+                background-color: $color-teal-light
+                height: .2rem
+                width: 100%
+                position: absolute
+                left: 0
+                bottom: -.4rem
+                transition: all .2s
+                visibility: hidden
+                transform: scaleX(0)
 
             &:hover
             &:focus
                 color: $color-teal-light
-                border-bottom-color: $color-teal-light
+
+            &:hover::after
+                visibility: visible
+                transform: scaleX(1)
 
 
     //  TOPHEADER SECONDARY SUBSCRIBE
@@ -94,6 +109,7 @@
         background-color: $color-slate
         height: 10rem
         padding: 0 2rem
+        transition: visibility .8s, opacity .8s
 
         & li
             padding: .6rem 2rem
@@ -101,9 +117,26 @@
             &:first-child
                 border-right: .1rem solid $color-grey-light-super
 
-                & a:hover
-                & a:focus
-                    border-bottom-color: $color-teal-light
+                & a
+                    position: relative
+
+                    &::after
+                        content: ''
+                        display: block
+                        height: .2rem
+                        width: 100%
+                        background-color: $color-teal-light
+                        position: absolute
+                        left: 0
+                        bottom: -0.4rem
+                        visibility: hidden
+                        transition: all .2s
+                        transform: scaleX(0)
+
+                    &:hover::after
+                        visibility: visible
+                        transform: scaleX(1)
+
 
         & a
             display: flex
@@ -111,22 +144,57 @@
             text-transform: uppercase
             font: 1.3rem/1 $raleway-bold
             letter-spacing: .1rem
-            border-bottom: .2rem solid transparent
-            padding: 0 0 .4rem 0
-            transition: border-bottom-color .2s
+            transition: color .2s
+
 
         & .topheader-search-icon
             width: 1.4rem
             height: 1.4rem
 
 
+    //  TOPHEADER SECONDARY SEARCH
+    // ------------------------------------------------------------
 
+    &__secondary-search
+        width: 60rem
+        height: 10rem
+        position: absolute
+        top: 0
+        right: 0
+        background-color: $color-slate
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0 2rem
+        border-bottom: .5rem solid $color-teal-light
+        transition: visibility .8s, opacity .8s
 
+        & input
+            width: 30rem
+            border-width: 0 0 .2rem 0
+            border-style: none none solid none
+            border-color: transparent transparent $color-teal transparent
+            background-color: transparent
+            padding: .6rem 1rem
+            color: $color-white
+            font: 1.5rem/1 $raleway-regular
+            transition: width .4s
 
+            +placeholder()
+                text-transform: capitalize
+                color: $color-white
+                font: 1.5rem/1 $raleway-light
 
+            &:focus
+                width: 40rem
 
+.is-hidden
+    visibility: hidden
+    opacity: 0
 
-
+.is-visible
+    visibility: visible
+    opacity: 1
 
 
 
