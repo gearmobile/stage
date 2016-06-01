@@ -1,6 +1,6 @@
 $(document).ready( function () {
 
-    // HIDE \ SHOW SECONDARY MENU TO RIGHT
+    // VARIABLES
     // -----------------------------------------------------------------
     var topHeader = $('.topheader');
     var topHeaderNav = topHeader.find('.topheader__secondary-nav');
@@ -8,7 +8,10 @@ $(document).ready( function () {
     var topHeaderSecondarySearch = topHeader.find('.topheader__secondary-search');
     var topHeaderSecondaryOpen = topHeader.find('.topheader__secondary-open');
     var topHeaderSecondaryClose = topHeader.find('.topheader__secondary-close');
+    var topHeaderHamburgerIcon = topHeader.find('.hamburger');
 
+    // HIDE \ SHOW SECONDARY MENU TO RIGHT
+    // -----------------------------------------------------------------
     if ( !topHeaderNav.hasClass('animated') ) {
         topHeaderNav.addClass('animated');
     }
@@ -49,6 +52,12 @@ $(document).ready( function () {
         topHeaderSecondarySearch.removeClass('is-visible').addClass('is-hidden');
         topHeaderSecondarySubscribe.removeClass('is-hidden').addClass('is-visible');
         topHeaderNav.removeClass('fadeOutRight').addClass('fadeInRight');
+    });
+
+    // TRIGGER HAMBURGER MENU
+    // -----------------------------------------------------------------
+    topHeaderHamburgerIcon.on('click', function () {
+        topHeaderHamburgerIcon.toggleClass('is-active');
     });
 });
 

@@ -19,3 +19,7 @@ mixin topheader(data)
                 li
                     a.topheader__secondary-close(href="javascript:void();")
                         != jadeHelpers.Icon.call(locals, {iconName: 'cancel-circle', className: 'search-icon'})
+            .topheader__secondary-mobile
+                button.hamburger.hamburger--spin(type="button")
+                    span.hamburger-box
+                        span.hamburger-inner

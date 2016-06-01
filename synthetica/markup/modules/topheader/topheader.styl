@@ -98,6 +98,9 @@
                 visibility: visible
                 transform: scaleX(1)
 
+        @media screen and (max-width: $bp1100)
+            display: none
+
 
     //  TOPHEADER SECONDARY SUBSCRIBE
     // ------------------------------------------------------------
@@ -152,6 +155,9 @@
             height: 1.4rem
 
 
+        @media screen and (max-width: $bp1100)
+            display: none
+
     //  TOPHEADER SECONDARY SEARCH
     // ------------------------------------------------------------
 
@@ -178,15 +184,39 @@
             padding: .6rem 1rem
             color: $color-white
             font: 1.5rem/1 $raleway-regular
-            transition: width .4s
+            transition: width .4s, color .4s
 
             +placeholder()
                 text-transform: capitalize
                 color: $color-white
                 font: 1.5rem/1 $raleway-light
 
+            &:hover
+                width: 32rem
+
             &:focus
                 width: 40rem
+
+
+    //  TOPHEADER SECONDARY MOBILE
+    // ------------------------------------------------------------
+    &__secondary-mobile
+        width: 10rem
+        height: 10rem
+        background-color: $color-slate
+        border-bottom: .5rem solid $color-teal-light
+        display: flex
+        justify-content: center
+        align-items: center
+
+        & .hamburger-inner
+            background-color: $color-white
+
+            &::before
+            &::after
+                background-color: $color-white
+
+
 
 .is-hidden
     visibility: hidden
