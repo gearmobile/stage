@@ -62,7 +62,7 @@ $(document).ready( function () {
     // TOPHEADER MOBILE MENU
     // -----------------------------------------------------------------
     if ( !topOverlay.hasClass('animated') ) {
-        topOverlay.addClass('animated');
+        topOverlay.addClass('animated fadeOutUp');
     }
 
     topHeaderHamburgerIcon.hover(
