@@ -58,18 +58,26 @@ $(document).ready( function () {
         topHeaderNav.removeClass('fadeOutRight').addClass('fadeInRight');
     });
 
-    // TRIGGER HAMBURGER MENU
+    // TOPHEADER HAMBURGER MENU
     // -----------------------------------------------------------------
-    topHeaderHamburgerIcon.on('click', function () {
+    if ( !topOverlay.hasClass('animated') ) {
+        topOverlay.addClass('animated');
+    }
+
+    topHeaderHamburgerIcon.on('mouseover', function () {
         topHeaderHamburgerIcon.toggleClass('is-active');
-        topOverlay.removeClass('fadeInUp').addClass('animated fadeOutDown'); // ?
+    });
+
+    topHeaderHamburgerIcon.on('click', function () {
+        topOverlay.removeClass('fadeOutUp').addClass('fadeInDown');
     });
 
     // TOPHEADER OVERLAY BUTTON
     // -----------------------------------------------------------------
+
     topHeaderOverlayButton.on('click', function () {
         topHeaderOverlayButton.toggleClass('is-active');
-        topOverlay.removeClass('fadeOutDown').addClass('fadeInUp'); // ?
+        topOverlay.removeClass('fadeInDown').addClass('fadeOutUp');
     });
 });
 
