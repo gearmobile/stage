@@ -242,7 +242,7 @@
         left: 0
         width: 100%
         height: 100%
-        background-color: #2b81af
+        background-color: $color-teal-dark
         display: flex
         justify-content: center
         align-items: center
@@ -257,11 +257,20 @@
             display: flex
             justify-content: center
             align-items: center
+            transition: background-color .2s
+
+            &:hover
+                background-color: $color-teal
 
         &__link
             text-transform: capitalize
-            color: $color-white
+            color: rgba($color-white, .6)
             font: 4rem/1 $raleway-bold
+            letter-spacing: .2rem
+            transition: color .1s
+
+            &:hover
+                color: rgba($color-white, 1)
 
         &__button
             position: absolute

@@ -11,6 +11,7 @@ $(document).ready( function () {
     var topHeaderHamburgerIcon = topHeader.find('.topheader__secondary-mobile > .hamburger');
     var topOverlay = topHeader.find('.topheader-overlay');
     var topHeaderOverlayButton = topHeader.find('.topheader-overlay__button > .hamburger');
+    var topHeaderOverlayLinks = topHeader.find('.topheader-overlay .topheader-overlay__link');
 
     // HIDE \ SHOW SECONDARY MENU TO RIGHT
     // -----------------------------------------------------------------
@@ -58,25 +59,39 @@ $(document).ready( function () {
         topHeaderNav.removeClass('fadeOutRight').addClass('fadeInRight');
     });
 
-    // TOPHEADER HAMBURGER MENU
+    // TOPHEADER MOBILE MENU
     // -----------------------------------------------------------------
     if ( !topOverlay.hasClass('animated') ) {
         topOverlay.addClass('animated');
     }
 
-    topHeaderHamburgerIcon.on('mouseover', function () {
-        topHeaderHamburgerIcon.toggleClass('is-active');
-    });
+    topHeaderHamburgerIcon.hover(
+        function () {
+            $(this).addClass('is-active');
+        },
+        function () {
+            $(this).removeClass('is-active');
+        }
+    );
 
     topHeaderHamburgerIcon.on('click', function () {
         topOverlay.removeClass('fadeOutUp').addClass('fadeInDown');
     });
 
-    // TOPHEADER OVERLAY BUTTON
-    // -----------------------------------------------------------------
+    topHeaderOverlayButton.hover(
+        function () {
+            $(this).addClass('is-active');
+        },
+        function () {
+            $(this).removeClass('is-active');
+        }
+    );
 
     topHeaderOverlayButton.on('click', function () {
-        topHeaderOverlayButton.toggleClass('is-active');
+        topOverlay.removeClass('fadeInDown').addClass('fadeOutUp');
+    });
+
+    topHeaderOverlayLinks.on('click', function () {
         topOverlay.removeClass('fadeInDown').addClass('fadeOutUp');
     });
 });
