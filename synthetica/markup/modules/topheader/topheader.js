@@ -8,7 +8,9 @@ $(document).ready( function () {
     var topHeaderSecondarySearch = topHeader.find('.topheader__secondary-search');
     var topHeaderSecondaryOpen = topHeader.find('.topheader__secondary-open');
     var topHeaderSecondaryClose = topHeader.find('.topheader__secondary-close');
-    var topHeaderHamburgerIcon = topHeader.find('.hamburger');
+    var topHeaderHamburgerIcon = topHeader.find('.topheader__secondary-mobile > .hamburger');
+    var topOverlay = topHeader.find('.topheader-overlay');
+    var topHeaderOverlayButton = topHeader.find('.topheader-overlay__button > .hamburger');
 
     // HIDE \ SHOW SECONDARY MENU TO RIGHT
     // -----------------------------------------------------------------
@@ -20,8 +22,10 @@ $(document).ready( function () {
         console.log($(window).scrollTop());
         if ( $(window).scrollTop() > 0 ) {
             topHeaderNav.removeClass('fadeInRight').addClass('fadeOutRight');
+            topHeaderSecondarySubscribe.addClass('is-fixed');
         } else if ( $(window).scrollTop() === 0 ) {
             topHeaderNav.removeClass('fadeOutRight').addClass('fadeInRight');
+            topHeaderSecondarySubscribe.removeClass('is-fixed');
         }
     });
 
@@ -58,8 +62,18 @@ $(document).ready( function () {
     // -----------------------------------------------------------------
     topHeaderHamburgerIcon.on('click', function () {
         topHeaderHamburgerIcon.toggleClass('is-active');
+        topOverlay.removeClass('fadeInUp').addClass('animated fadeOutDown'); // ?
+    });
+
+    // TOPHEADER OVERLAY BUTTON
+    // -----------------------------------------------------------------
+    topHeaderOverlayButton.on('click', function () {
+        topHeaderOverlayButton.toggleClass('is-active');
+        topOverlay.removeClass('fadeOutDown').addClass('fadeInUp'); // ?
     });
 });
+
+
 
 
 

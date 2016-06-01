@@ -23,3 +23,14 @@ mixin topheader(data)
                 button.hamburger.hamburger--spin(type="button")
                     span.hamburger-box
                         span.hamburger-inner
+        .topheader-overlay
+            .topheader-overlay__button
+                button.hamburger.hamburger--collapse(type="button")
+                    span.hamburger-box
+                        span.hamburger-inner
+            ul.topheader-overlay__wrapper
+                li.topheader-overlay__item: a.topheader-overlay__link(href="#collective") the collective
+                li.topheader-overlay__item: a.topheader-overlay__link(href="#crew") the crew
+                li.topheader-overlay__item: a.topheader-overlay__link(href="#articles") articles
+                li.topheader-overlay__item: a.topheader-overlay__link(href="#freebies") freebies
+                li.topheader-overlay__item: a.topheader-overlay__link(href="#subscribe") subscribe
