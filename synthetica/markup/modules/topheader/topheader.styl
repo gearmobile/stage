@@ -123,6 +123,12 @@
 
                 & a
                     position: relative
+                    display: flex
+                    color: $color-teal-light
+                    text-transform: uppercase
+                    font: 1.3rem/1 $raleway-bold
+                    letter-spacing: .1rem
+                    transition: color .2s
 
                     &::after
                         content: ''
@@ -141,19 +147,12 @@
                         visibility: visible
                         transform: scaleX(1)
 
+            &:last-child a
+                position: relative
 
-        & a
-            display: flex
-            color: $color-teal-light
-            text-transform: uppercase
-            font: 1.3rem/1 $raleway-bold
-            letter-spacing: .1rem
-            transition: color .2s
-
-
-        & .topheader-search-icon
-            width: 1.4rem
-            height: 1.4rem
+                & .topheader-search-icon
+                    width: 1.4rem
+                    height: 1.4rem
 
         &.is-fixed
             border-bottom-color: $color-teal-light

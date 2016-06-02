@@ -1,36 +1,54 @@
 mixin topheader(data)
+
+    // TOPHEADER
     .topheader
+
+        // TOPHEADER PRIMARY SECTION
         .topheader__primary
             a(href='javascript:void();')
                 != jadeHelpers.Icon.call(locals, {iconName: 'logo', className: 'topheader-icon'})
                 | synthetica
+
+        // TOPHEADER SECONDARY SECTION
         .topheader__secondary
             ul.topheader__secondary-nav
                 li: a(href='#collective') the collective
                 li: a(href='#crew') the crew
                 li: a(href='#articles') articles
                 li: a(href='#freebies') freebies
+
+            // TOPHEADER SUBSCRIBE SECTION
             ul.topheader__secondary-subscribe
                 li: a(href='#subscribe') subscribe
                 li: a.topheader__secondary-open(href='javascript:void();')
                         != jadeHelpers.Icon.call(locals, {iconName: 'search', className: 'topheader-search-icon'})
+
+            // TOPHEADER SEARCH SECTION
             ul.topheader__secondary-search.is-hidden
                 li: input(type="text" id="topheader-search" placeholder="start search here")
                 li
                     a.topheader__secondary-close(href="javascript:void();")
                         != jadeHelpers.Icon.call(locals, {iconName: 'cancel-circle', className: 'search-icon'})
+
+            // TOPHEADER MOBILE BUTTON
             .topheader__secondary-mobile
                 button.hamburger.hamburger--spin(type="button")
                     span.hamburger-box
                         span.hamburger-inner
-        .topheader-overlay
-            .topheader-overlay__button
-                button.hamburger.hamburger--collapse(type="button")
-                    span.hamburger-box
-                        span.hamburger-inner
-            ul.topheader-overlay__wrapper
-                li.topheader-overlay__item: a.topheader-overlay__link(href="#collective") the collective
-                li.topheader-overlay__item: a.topheader-overlay__link(href="#crew") the crew
-                li.topheader-overlay__item: a.topheader-overlay__link(href="#articles") articles
-                li.topheader-overlay__item: a.topheader-overlay__link(href="#freebies") freebies
-                li.topheader-overlay__item: a.topheader-overlay__link(href="#subscribe") subscribe
+
+            // TOPHEADER OVERLAY
+            .topheader-overlay
+
+                // TOPHEADER OVERLAY BUTTON
+                .topheader-overlay__button
+                    button.hamburger.hamburger--collapse(type="button")
+                        span.hamburger-box
+                            span.hamburger-inner
+
+                // TOPHEADER OVERLAY WRAPPER
+                ul.topheader-overlay__wrapper
+                    li.topheader-overlay__item: a.topheader-overlay__link(href="#collective") the collective
+                    li.topheader-overlay__item: a.topheader-overlay__link(href="#crew") the crew
+                    li.topheader-overlay__item: a.topheader-overlay__link(href="#articles") articles
+                    li.topheader-overlay__item: a.topheader-overlay__link(href="#freebies") freebies
+                    li.topheader-overlay__item: a.topheader-overlay__link(href="#subscribe") subscribe
