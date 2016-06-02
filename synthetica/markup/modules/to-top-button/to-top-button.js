@@ -1,7 +1,8 @@
 $(document).ready( function () {
     var topButton = $('.to-top-button');
+    var scrollValue = $('.hero').height();
     $(window).on('scroll', function () {
-        if ( $(window).scrollTop() !== 0 ) {
+        if ( $(window).scrollTop() > scrollValue ) {
             topButton.fadeIn();
         } else {
             topButton.fadeOut();
