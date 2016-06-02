@@ -61,7 +61,7 @@ $(document).ready( function () {
     // TOPHEADER MOBILE MENU
     // -----------------------------------------------------------------
     if ( !topOverlay.hasClass('animated') ) {
-        topOverlay.addClass('animated fadeOutUp');
+        topOverlay.addClass('animated');
     }
 
     topHeaderHamburgerIcon.hover(
@@ -74,7 +74,7 @@ $(document).ready( function () {
     );
 
     topHeaderHamburgerIcon.on('click', function () {
-        topOverlay.removeClass('fadeOutUp').addClass('fadeInDown');
+        topOverlay.css('visibility', 'visible').addClass('fadeInDown');
     });
 
     topHeaderOverlayButton.hover(
