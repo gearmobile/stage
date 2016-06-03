@@ -5,7 +5,7 @@ mixin freebies-overlay(date, title, likes)
         nav.overlay__link
             a.overlay__link-heart(href="javascript:void();")
                 != jadeHelpers.Icon.call(locals, {iconName: 'heart', className: 'overlay-icon'})
-                = likes
+                span.overlay__link-count= likes
             a.overlay__link-like(href="javascript:void();")
                 != jadeHelpers.Icon.call(locals, {iconName: 'like', className: 'overlay-icon'})
         .overlay__content
