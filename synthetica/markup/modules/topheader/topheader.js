@@ -49,13 +49,11 @@ $(document).ready( function () {
     topHeaderSecondaryOpen.on('click', function () {
         topHeaderSecondarySubscribe.removeClass('is-visible').addClass('is-hidden');
         topHeaderSecondarySearch.removeClass('is-hidden').addClass('is-visible');
-        topHeaderNav.removeClass('fadeInRight').addClass('fadeOutRight');
     });
 
     topHeaderSecondaryClose.on('click', function () {
         topHeaderSecondarySearch.removeClass('is-visible').addClass('is-hidden');
         topHeaderSecondarySubscribe.removeClass('is-hidden').addClass('is-visible');
-        topHeaderNav.removeClass('fadeOutRight').addClass('fadeInRight');
     });
 
     // TOPHEADER MOBILE MENU
