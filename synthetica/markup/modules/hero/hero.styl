@@ -72,6 +72,12 @@
         text-align: center
         color: $color-white
 
+        @media screen and (max-width: $bp800)
+            width: 60%
+
+        @media screen and (max-width: $bp420)
+            width: 80%
+
         &-primary
             padding: 0 0 3rem 0
             border-bottom: 1px solid $color-white
@@ -80,8 +86,12 @@
             font: 4.5rem/1.6 $raleway-semibold
             margin: 0 0 4rem
 
+            @media screen and (max-width: $bp800)
+                font: 3rem/1.6 $raleway-semibold
+
         &-secondary
             padding: 3rem 0 0 0
 
             & p
                 font: 1.5rem/1.7 $raleway-regular
+                margin: 0

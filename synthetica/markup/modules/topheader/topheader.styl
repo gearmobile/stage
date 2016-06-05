@@ -8,6 +8,11 @@
     display: flex
     justify-content: space-between
     align-items: center
+    transition: all .2s
+
+    @media screen and (max-width: $bp500)
+        background-color: $color-slate
+        box-shadow: inset 0 -5px 0 0 $color-teal-light
 
 
     // TOPHEADER PRIMARY
@@ -20,7 +25,11 @@
         height: 100%
         padding: 0 4rem
         background-color: $color-slate
-        border-bottom: .5rem solid $color-teal-light
+        box-shadow: inset 0 -5px 0 0 $color-teal-light
+        transition: all .2s
+
+        @media screen and (max-width: $bp500)
+            padding: 0 0 0 1rem
 
         & a
             display: flex
@@ -212,7 +221,7 @@
         width: 10rem
         height: 10rem
         background-color: $color-slate
-        border-bottom: .5rem solid $color-teal-light
+        box-shadow: inset 0 -5px 0 0 $color-teal-light
         display: flex
         justify-content: center
         align-items: center
@@ -229,6 +238,9 @@
         @media screen and (max-width: $bp1100)
             visibility: visible
             opacity: 1
+
+        @media screen and (max-width: $bp500)
+            width: 8rem
 
 
 

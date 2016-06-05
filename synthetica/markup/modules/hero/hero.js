@@ -8,7 +8,7 @@ $(document).ready(function () {
         contain: true,
         prevNextButtons: false,
         pageDots: true,
-        autoPlay: true,
+        // autoPlay: true,
         imagesLoaded: true,
         accessibility: false,
         wrapAround: true
