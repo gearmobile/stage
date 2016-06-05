@@ -13,10 +13,10 @@ mixin collective(data)
 
             main.collective__main
                 .collective__main-content
-                    video.video(controls preload="none" poster="%=static=%img/assets/collective/video-cover.jpg" data-setup="{}")
-                        source(src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4')
-                        source(src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm')
-                        source(src="http://vjs.zencdn.net/v/oceans.ogv" type='video/ogg')
+                    .plyr
+                        video.video(controls poster="%=static=%img/assets/collective/video-cover.jpg")
+                            source(src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.mp4" type='video/mp4')
+                            source(src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.webm" type='video/webm')
 
             footer.collective__footer
                 .collective__footer-content
