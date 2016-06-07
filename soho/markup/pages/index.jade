@@ -4,6 +4,8 @@ html(class="no-js", lang="ru")
     include ../components/head/head
     include ../components/header/header
     include ../components/hero/hero
+    include ../components/navigation/navigation
+    include ../components/gallery/gallery
     include ../components/footer/footer
 
     head
@@ -15,6 +17,8 @@ html(class="no-js", lang="ru")
 
             //- Include your components here
             +hero()
+            +navigation()
+            +gallery()
 
             .page__buffer
 
