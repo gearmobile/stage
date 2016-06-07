@@ -1,0 +1,35 @@
+.header-main
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 99
+    height: 6rem
+    background-color: #242424
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    & .icon-sidebar
+    & .icon-cardbar
+        display: flex
+        align-items: center
+        height: 100%
+
+    & .icon-sidebar
+        padding: 0 2rem
+        border-right: .1rem solid rgba(255, 255, 255, 0.05)
+
+    & .logo
+        text-transform: uppercase
+        color: $color-white
+        font: 2.6rem / 1 $josefin-sans-bold
+        letter-spacing: .4rem
+        transition: color .2s
+
+        &:hover
+            color: $color-blue
+
+    & .icon-cardbar
+        padding: 0 2rem
+        border-left: .1rem solid rgba(255, 255, 255, 0.05)

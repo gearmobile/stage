@@ -1,0 +1,7 @@
+mixin header-main(data)
+    .header-main
+        a.icon-sidebar(href='javascript:void();')
+            != jadeHelpers.Icon.call(locals, {iconName: 'icon-sidebar', className: 'header-icon'})
+        a.logo(href='javascript:void();') soho
+        a.icon-cardbar(href='javascript:void();')
+            != jadeHelpers.Icon.call(locals, {iconName: 'icon-cardbar', className: 'header-icon'})
