@@ -1,57 +1,78 @@
 .hero
     margin: 6rem 0 0
+    background-color: #f2f5f9
 
-    & .slider
+
+    // SLIDER
+    // ------------------------------------------------------
+    & .swiper-container
         lost-center $width
-        padding: 0 $gutter
 
-        & .slider__item
-            width: 100%
+        & .swiper-slide
+            position: relative
             height: 70rem
 
-        & .slider__content
-            position: absolute
-            top: 50%
-            left: 0
-            transform: translateY(-50%)
+    & .swiper-pagination
+        display: flex
+        bottom: 20%
 
-            & .title
-                font: 4rem/1 $josefin-sans-bold
-                color: $color-dark
-                margin: 0 0 2rem
-
-        & .slider__image
-            /*position: absolute*/
-            /*right: 0*/
-
-        & .slider__data
-            display: flex
-            align-items: center
-
-            & .price
-                font: 3rem/1 $work-sans-bold
-                color: $color-blue
-                margin: 0 2rem 0 0
-
-            & .buy
-                font: 2rem/1 $work-sans-semibold
-                color: $color-red
-                text-decoration: underline
-                text-transform: capitalize
-
-                &:hover
-                    text-decoration: none
-
-        & .flickity-page-dots
-            display: flex
-
-        & .flickity-page-dots .dot
+        & .swiper-pagination-bullet
             width: 1.2rem
             height: 1.2rem
-            margin: 0 1rem
-            background-color: rgba(0, 0, 0, 0.2)
             opacity: 1
+            background-color: $color-grey
+            margin: 0 1.4rem 0 0
 
-        & .flickity-page-dots .dot.is-selected
-        & .flickity-page-dots .dot:hover
+        & .swiper-pagination-bullet-active
+        & .swiper-pagination-bullet:hover
             background-color: $color-red
+
+
+    // SLIDER CONTENT
+    // ------------------------------------------------------
+    & .hero__content
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+
+    & .hero__title
+        text-transform: capitalize
+        font: 4rem/1 $josefin-sans-bold
+        color: $color-dark
+        margin: 0 0 2rem
+
+    & .hero__data
+        display: flex
+        align-items: center
+
+        & .price
+            font: 3rem/1 $work-sans-bold
+            color: $color-blue
+            margin: 0 2rem 0 0
+
+        & .buy
+            font: 2rem/1 $work-sans-medium
+            color: $color-red
+            text-transform: capitalize
+
+
+    // SLIDER IMAGE
+    // -----------------------------------------------------
+    & .hero__image
+        width: 60rem
+        height: 100%
+        position: absolute
+        right: 0
+        bottom: 0
+
+        & img
+            display: block
+            position: absolute
+            bottom: 0
+            right: 10rem
+
+
+    // SLIDER BADGE
+    // ------------------------------------------------------
+    //

@@ -1,7 +1,10 @@
 $(document).ready( function () {
-    $('.hero > .slider').flickity({
-        prevNextButtons: false,
-        contain: true,
-        freeScroll: true
+    $('.swiper-container').swiper({
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        grabCursor: true,
+        loop: true,
+        speed: 1200
     });
 });
+

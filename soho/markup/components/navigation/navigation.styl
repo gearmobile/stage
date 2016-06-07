@@ -1,24 +1,20 @@
 .navigation
-    height: 12rem
-    background-color: $color-white
-
-    &__wrapper
-        lost-center $width flex
-        padding: 0 $gutter
-        justify-content: center
-        align-items: center
+    height: 14rem
+    display: flex
+    align-items: center
+    justify-content: center
 
     &__item
-        margin: 0 2rem
+        margin: 0 1.4rem
+        padding: 0 0 .6rem 0
 
-        & a
-            text-transform: capitalize
-            font: 3rem/1 $josefin-sans-regular
-            color: $color-dark
-            transition: color .2s
+        &:first-child
+            border-bottom: .2rem solid $color-red
 
-            &:hover
-                color: $color-red
+    &__link
+        text-transform: capitalize
+        color: $color-dark
+        font: 3rem/1 $josefin-sans-regular
 
-        &:first-child a
-            text-decoration: underline
+        &:hover
+            color: $color-red

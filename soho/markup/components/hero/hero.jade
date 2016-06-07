@@ -1,27 +1,34 @@
+include ../badge/badge
+
 mixin hero(data)
     .hero
-        ul.slider
-            li.slider__item
-                .slider__content
-                    h3.title Sammen Armchair
-                    .slider__data
-                        span.price $399
-                        a.buy(href='javascript:void()' target='_blank') buy now
-                .slider__image
-                    img(src='%=static=%img/assets/hero/slider-image-01.jpg' alt='Image Slider')
-            li.slider__item
-                .slider__content
-                    h3.title Braun Watch SD12
-                    .slider__data
-                        span.price $299
-                        a.buy(href='javascript:void()' target='_blank') buy now
-                .slider__image
-                    img(src='%=static=%img/assets/hero/slider-image-02.jpg' alt='Image Slider')
-            li.slider__item
-                .slider__content
-                    h3.title Sammen Armchair
-                    .slider__data
-                        span.price $399
-                        a.buy(href='javascript:void()' target='_blank') buy now
-                .slider__image
-                    img(src='%=static=%img/assets/hero/slider-image-01.jpg' alt='Image Slider')
+        .swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    .hero__content
+                        h3.hero__title Sammen Armchair
+                        .hero__data
+                            span.price $399
+                            a.buy(href='javascript:void()' target='_blank') buy now
+                    figure.hero__image
+                        +badge()
+                        img(src='%=static=%img/assets/hero/slider-image-01.jpg' alt='Image Slider')
+                .swiper-slide
+                    .hero__content
+                        h3.hero__title Braun Watch SD12
+                        .hero__data
+                            span.price $299
+                            a.buy(href='javascript:void()' target='_blank') buy now
+                    .hero__image
+                        +badge()
+                        img(src='%=static=%img/assets/hero/slider-image-02.jpg' alt='Image Slider')
+                .swiper-slide
+                    .hero__content
+                        h3.hero__title Sammen Armchair
+                        .hero__data
+                            span.price $399
+                            a.buy(href='javascript:void()' target='_blank') buy now
+                    .hero__image
+                        +badge()
+                        img(src='%=static=%img/assets/hero/slider-image-01.jpg' alt='Image Slider')
+            .swiper-pagination
