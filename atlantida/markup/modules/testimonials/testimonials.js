@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready( function () {
 
     const slickOptions = {
         dots: true,
@@ -10,7 +10,16 @@ $(document).ready(function () {
         infinite: true,
         customPaging: function () {
             return '<a href="#"></a>';
-        }
+        },
+        // disable dots at 600px
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    dots: false
+                }
+            }
+        ]
     };
 
     $('.testimonials__slider').slick(slickOptions);
