@@ -1,19 +1,199 @@
 function initMap () {
 
-    var myLatLng = { lat: 20.9652675, lng: 105.7681278 };
+    var greyScaleStyles = [
+        {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#e9e9e9"
+                },
+                {
+                    "lightness": 17
+                }
+            ]
+        },
+        {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#f5f5f5"
+                },
+                {
+                    "lightness": 20
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "color": "#ffffff"
+                },
+                {
+                    "lightness": 17
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [
+                {
+                    "color": "#ffffff"
+                },
+                {
+                    "lightness": 29
+                },
+                {
+                    "weight": 0.2
+                }
+            ]
+        },
+        {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#ffffff"
+                },
+                {
+                    "lightness": 18
+                }
+            ]
+        },
+        {
+            "featureType": "road.local",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#ffffff"
+                },
+                {
+                    "lightness": 16
+                }
+            ]
+        },
+        {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#f5f5f5"
+                },
+                {
+                    "lightness": 21
+                }
+            ]
+        },
+        {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#dedede"
+                },
+                {
+                    "lightness": 21
+                }
+            ]
+        },
+        {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+                {
+                    "visibility": "on"
+                },
+                {
+                    "color": "#ffffff"
+                },
+                {
+                    "lightness": 16
+                }
+            ]
+        },
+        {
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "saturation": 36
+                },
+                {
+                    "color": "#333333"
+                },
+                {
+                    "lightness": 40
+                }
+            ]
+        },
+        {
+            "elementType": "labels.icon",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "transit",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#f2f2f2"
+                },
+                {
+                    "lightness": 19
+                }
+            ]
+        },
+        {
+            "featureType": "administrative",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "color": "#fefefe"
+                },
+                {
+                    "lightness": 20
+                }
+            ]
+        },
+        {
+            "featureType": "administrative",
+            "elementType": "geometry.stroke",
+            "stylers": [
+                {
+                    "color": "#fefefe"
+                },
+                {
+                    "lightness": 17
+                },
+                {
+                    "weight": 1.2
+                }
+            ]
+        }
+    ];
 
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var mapCenterCoords = { lat: -27.471011, lng: 153.023449 }; // Brisbane, Australia
+    var mapMarkerCoords = { lat: -27.471498, lng: 153.01701 }; // Brisbane, Australia, Gomo
+    var mapOptions = {
         zoom: 14,
-        center: myLatLng,
+        center: mapCenterCoords,
         disableDefaultUI: true,
         scrollwheel: false,
         disableDoubleClickZoom: true,
-        draggable: true
-    });
+        draggable: true,
+        styles: greyScaleStyles
+    };
 
-    var iconPath = '../../../modules/map/assets/map-icon.png';
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions );
+
+    var iconPath = 'static/img/assets/map/map-icon.png';
     var marker = new google.maps.Marker({
-        position: { lat: 20.9652675, lng: 105.7681278 },
+        position: mapMarkerCoords,
         map: map,
         icon: iconPath,
         visible: true,
@@ -31,21 +211,22 @@ function initMap () {
         }
     }
 
-    // MAKE GOOGLE MAP RESPONSIVE
-    // --------------------------------------------------------------------
-    var mapCenter = map.getCenter(); // returns the position displayed at the center of the map
-
-    // CENTER GOOGLE MAPS ON BROWSER RESIZE (RESPONSIVE)
-    google.maps.event.addDomListener(window, 'resize', function () {
-        map.setCenter(mapCenter);
-    });
-
-    // RETURN CENTER OF MAP TO THE CENTER OF WINDOW IF MAP WAS MOVED BY USER
-    google.maps.event.addListener(map, 'center_changed', function () {
-        window.setTimeout(function () {
-            mao.setCenter(mapCenter);
+    map.addListener('center_changed', function () {
+        // 3 seconds after the center of the map has changed, pan back to the marker
+        window.setTimeout(function() {
+            map.panTo( marker.getPosition() );
         }, 3000);
     });
+
+    marker.addListener('click', function () {
+        map.setZoom(8);
+        map.setCenter( marker.getPosition() );
+    });
+
+
+
+    //var map = new google.maps.Map(document.getElementById('map'), mapOptions );
+
 
 }
 
