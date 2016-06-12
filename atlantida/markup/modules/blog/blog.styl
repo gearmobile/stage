@@ -37,6 +37,7 @@
         &:nth-child(6)
         &:nth-child(8)
             background-size: cover
+            opacity: .8
 
             @media screen and (max-width: $bp768)
                 min-height: 300px
@@ -55,6 +56,30 @@
         @media screen and (max-width: $bp768)
             flex: 0 1 100%
 
+            &:nth-child(1)
+                order 1
+
+            &:nth-child(2)
+                order 2
+
+            &:nth-child(3)
+                order 3
+
+            &:nth-child(4)
+                order 4
+
+            &:nth-child(5)
+                order: 6
+
+            &:nth-child(6)
+                order: 5
+
+            &:nth-child(7)
+                order: 8
+
+            &:nth-child(8)
+                order: 7
+
     &__meta
         display: flex
         width: 60%
@@ -62,15 +87,21 @@
         padding: 0 0 1rem 0
         margin: 0 0 2rem 0
 
-    &__date > a
-    &__author > a
+    &__date
+        padding: 0 .4rem 0 0
+
+    &__date a
+    &__author a
         text-decoration: none
         text-transform: capitalize
         font: 400 1.2rem/1.2 $crimson_text-italic
         color: #e3e3e3
 
+        &:hover
+            text-decoration: underline;
+
     &__date::after
-        content: '/'
+        content: ' /'
         color: #e3e3e3
         font: 400 1.2rem/1.2 $crimson_text-italic
 

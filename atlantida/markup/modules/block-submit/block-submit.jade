@@ -4,12 +4,12 @@ mixin block-submit(data)
         form.form(method="post" action="action.php")
             .form__row
                 .form__column
-                    input(type="text" name="name" id="name" placeholder="name" required)
+                    input(type="text" name="name" id="name" placeholder="name *" required)
                 .form__column
-                    input(type="email" name="email" id="email" placeholder="e-mail" required)
+                    input(type="email" name="email" id="email" placeholder="e-mail *" required)
             .form__row
                 .form__column
-                    input(type="phone" name="phone" id="phone" placeholder="telephone" required)
+                    input(type="phone" name="phone" id="phone" placeholder="telephone *" required)
                 .form__column
                     input(type="text" name="site" id="site" placeholder="website")
             .form__row

@@ -5,13 +5,16 @@ $(document).ready( function () {
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplaySpeed: 1000,
-        // autoplay: true,
+        speed: 800,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
         infinite: true,
         customPaging: function () {
             return '<a href="#"></a>';
         },
-        // disable dots at 600px
+
+        // DISABLE DOTS AT 600PX
         responsive: [
             {
                 breakpoint: 600,
