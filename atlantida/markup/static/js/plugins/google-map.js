@@ -1,5 +1,6 @@
 function initMap () {
 
+    // MAP STYLES
     var greyScaleStyles = [
         {
             "featureType": "water",
@@ -177,8 +178,11 @@ function initMap () {
         }
     ];
 
+    // MAP COORDINATES
     var mapCenterCoords = { lat: -27.471011, lng: 153.023449 }; // Brisbane, Australia
     var mapMarkerCoords = { lat: -27.471498, lng: 153.01701 }; // Brisbane, Australia, Gomo
+
+    // MAP OPTIONS
     var mapOptions = {
         zoom: 14,
         center: mapCenterCoords,
@@ -186,11 +190,13 @@ function initMap () {
         scrollwheel: false,
         disableDoubleClickZoom: true,
         draggable: true,
-        styles: greyScaleStyles
+        styles: greyScaleStyles,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
     };
 
     var map = new google.maps.Map(document.getElementById('map'), mapOptions );
 
+    // MAP MARKER
     var iconPath = 'static/img/assets/map/map-icon.png';
     var marker = new google.maps.Marker({
         position: mapMarkerCoords,
@@ -200,34 +206,49 @@ function initMap () {
         animation: google.maps.Animation.DROP
     });
 
-    marker.addListener('click', toggleBounce);
+    //marker.addListener('click', toggleBounce);
+    //
+    //
+    //function toggleBounce() {
+    //    if (marker.getAnimation() !== null) {
+    //        marker.setAnimation(null);
+    //    } else {
+    //        marker.setAnimation(google.maps.Animation.BOUNCE);
+    //    }
+    //}
+
+    // MAP RESPONSIVE
+    google.maps.event.addDomListener(window, 'resize', function () {
+        var center = map.getCenter();
+        google.maps.event.trigger( map, 'resize' );
+        map.setCenter( center );
+    });
 
 
-    function toggleBounce() {
-        if (marker.getAnimation() !== null) {
-            marker.setAnimation(null);
-        } else {
-            marker.setAnimation(google.maps.Animation.BOUNCE);
-        }
-    }
+    // ZOOM TO 16 WHEN CLICKING ON MARKER
+    google.maps.event.addListener(marker, 'click', function () {
+        map.setZoom(16);
+        map.setCenter(marker.getPosition());
+    });
 
-    map.addListener('center_changed', function () {
-        // 3 seconds after the center of the map has changed, pan back to the marker
-        window.setTimeout(function() {
-            map.panTo( marker.getPosition() );
+    //MAP CENTER CHANGE
+    google.maps.event.addListener(map, 'center_changed', function () {
+        window.setTimeout(function () {
+            map.panTo(marker.getPosition());
         }, 3000);
     });
 
-    marker.addListener('click', function () {
-        map.setZoom(8);
-        map.setCenter( marker.getPosition() );
+
+    // MAP INFO WINDOW
+    var infoWindow = new google.maps.InfoWindow({
+        content:"Hello from Australia!"
     });
 
-
-
-    //var map = new google.maps.Map(document.getElementById('map'), mapOptions );
-
+    google.maps.event.addListener(marker, 'click', function () {
+        infoWindow.open( map, marker );
+    });
 
 }
 
-initMap ();
+google.maps.event.addDomListener(window, 'load', initMap);
+google.maps.event.addDomListener(window, 'resize', initMap);
