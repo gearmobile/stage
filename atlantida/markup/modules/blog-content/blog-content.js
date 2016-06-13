@@ -1,12 +1,19 @@
+// VARIABLES
+// -------------------------------------------------------------
+var gridBlog = $('.blog-content__grid');
 
-// INIT MASONRY
-var gridBlog = $('.blog-content__grid').masonry({
+// MASONRY LAYOUT
+// -------------------------------------------------------------
+gridBlog.isotope({
     itemSelector: '.blog-content__item',
     percentPosition: true,
-    columnWidth: '.blog-content__sizer'
+    masonry: {
+        columnWidth: '.blog-content__sizer'
+    }
 });
 
 // LAYOUT ISOTOPE AFTER EACH IMAGE LOADS
+// -------------------------------------------------------------
 gridBlog.imagesLoaded().progress( function () {
-    gridBlog.masonry();
+    gridBlog.isotope('layout');
 });
