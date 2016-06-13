@@ -15,7 +15,10 @@ $(function () {
     var overlayClose = $('.overlay__button');
     var overlayLinks = $('.overlay__link');
 
+
     // OPEN OVERLAY
+    // ------------------------------------------------------------------------
+
     function openOverlay() {
         if ( overlay.hasClass('is-close') ) {
             overlay.removeClass('is-close');
@@ -23,7 +26,10 @@ $(function () {
         overlay.addClass('is-open');
     }
 
+
     // CLOSE OVERLAY
+    // ------------------------------------------------------------------------
+
     function closeOverlay() {
         if ( overlay.hasClass('is-open') ) {
             overlay.removeClass('is-open').addClass('is-close');
