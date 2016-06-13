@@ -1,3 +1,5 @@
+
+
 // VARIABLES
 // -------------------------------------------------------------
 var gridBlog = $('.blog-content__grid');
@@ -17,3 +19,4 @@ gridBlog.isotope({
 gridBlog.imagesLoaded().progress( function () {
     gridBlog.isotope('layout');
 });
+
