@@ -1,7 +1,7 @@
 include ../heading/heading
 
 mixin team(data)
-    .team
+    .team#team
         .team__center
             +heading('our team')
             .team__gallery
@@ -14,11 +14,11 @@ mixin team(data)
                                 h4.team__name john roderick
                                 p.team__occupation designer
                             nav.team__socials
-                                a(href="#" title='Facebook')
+                                a(href='javascript:void(0);' title='Facebook')
                                     != jadeHelpers.Icon.call(locals, {iconName: 'team-facebook', className: 'team-icon'})
-                                a(href="#" title='Twitter')
+                                a(href='javascript:void(0);' title='Twitter')
                                     != jadeHelpers.Icon.call(locals, {iconName: 'team-twitter', className: 'team-icon'})
-                                a(href="#" title='Behance')
+                                a(href='javascript:void(0);' title='Behance')
                                     != jadeHelpers.Icon.call(locals, {iconName: 'team-behance', className: 'team-icon'})
 
                 .team__item
@@ -29,11 +29,11 @@ mixin team(data)
                                 h4.team__name julia smith
                                 p.team__occupation designer
                             nav.team__socials
-                                a(href="#" title='Facebook')
+                                a(href='javascript:void(0);' title='Facebook')
                                     != jadeHelpers.Icon.call(locals, {iconName: 'team-facebook', className: 'team-icon'})
-                                a(href="#" title='Twitter')
+                                a(href='javascript:void(0);' title='Twitter')
                                     != jadeHelpers.Icon.call(locals, {iconName: 'team-twitter', className: 'team-icon'})
-                                a(href="#" title='Behance')
+                                a(href='javascript:void(0);' title='Behance')
                                     != jadeHelpers.Icon.call(locals, {iconName: 'team-behance', className: 'team-icon'})
 
                 .team__item
@@ -41,12 +41,12 @@ mixin team(data)
                     .team__cover
                         .team__data
                             .team__headling
-                                h4.team__name omelia swansson
+                                h4.team__name omelia swanson
                                 p.team__occupation designer
                             nav.team__socials
-                                a(href="#" title='Facebook')
+                                a(href='javascript:void(0);' title='Facebook')
                                     != jadeHelpers.Icon.call(locals, {iconName: 'team-facebook', className: 'team-icon'})
-                                a(href="#" title='Twitter')
+                                a(href='javascript:void(0);' title='Twitter')
                                     != jadeHelpers.Icon.call(locals, {iconName: 'team-twitter', className: 'team-icon'})
-                                a(href="#" title='Behance')
+                                a(href='javascript:void(0);' title='Behance')
                                     != jadeHelpers.Icon.call(locals, {iconName: 'team-behance', className: 'team-icon'})

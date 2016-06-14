@@ -4,6 +4,7 @@
 
     // FOOTER CENTER SECTION
     // -----------------------------------------------------------
+
     &__center
         lost-center $width
         padding: 0 $gutter
@@ -11,6 +12,7 @@
 
     // FOOTER HEADER SECTION
     // -----------------------------------------------------------
+
     &__header
         display: flex
         align-items: center
@@ -35,6 +37,7 @@
 
     // FOOTER CONTENT SECTION
     // -----------------------------------------------------------
+
     &__content
         lost-center 100% flex
         padding: 0 0 6rem
@@ -42,6 +45,7 @@
 
     // FOOTER PRIMARY SECTION
     // -----------------------------------------------------------
+
     &__primary
         lost-column 4/12
         lost-column-gutter $gutter2
@@ -62,7 +66,6 @@
 
     &__subtitle
         text-transform: uppercase
-        //color: $color-white
         font: 400 1.3rem/1 $montserrat-regular
         color: #e3e3e3
         margin: 0 0 3rem
@@ -89,6 +92,10 @@
             & > a
                 text-decoration: none
                 color: #e3e3e3
+                transition: color .2s
+
+                &:hover
+                    color: $color-white
 
     &__socials
         display: flex
@@ -107,9 +114,13 @@
 
     // FOOTER SECONDARY SECTION
     // -----------------------------------------------------------
+
     &__secondary
         lost-column 8/12
         lost-column-gutter $gutter2
+
+        & .block-submit .block-submit__title
+            display: none;
 
         @media screen and (max-width: $bp800)
             lost-column 1/1
@@ -118,6 +129,7 @@
 
     // FOOTER COPYRIGHT
     // -----------------------------------------------------------
+
     &__footer
         display: flex
         padding: 4rem 0 3rem

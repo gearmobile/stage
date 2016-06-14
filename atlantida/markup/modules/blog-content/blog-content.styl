@@ -1,5 +1,6 @@
 // BLOG CONTENT
 // ------------------------------------------------------------
+
 .blog-content
     padding: 8rem 0 6rem
     background-color: #e3e3e3
@@ -7,12 +8,13 @@
 
 // BLOG MASONRY
 // ------------------------------------------------------------
+
 .blog-content__grid
     lost-center 1600px
 
-.blog-content__sizer
-.blog-content__item
-    width: 25%
+    & .blog-content__sizer
+    & .blog-content__item
+        width: 33.333333333333336%
 
     @media screen and (max-width: $bp980)
         width: 50%
@@ -20,6 +22,6 @@
     @media screen and (max-width: $bp500)
         width: 100%
 
-.blog-content__item
-    float: left
-    padding: 1.5rem 1.5rem 6rem
+    & .blog-content__item
+        float: left
+        padding: 1.5rem 1.5rem 6rem

@@ -9,6 +9,7 @@
 
     // HEADING TITLE
     // ----------------------------------------------------------
+
     &__title
         text-transform: uppercase
         font: 3.6rem/1 $amsdam-regular
@@ -32,6 +33,7 @@
 
     // HEADING NAVIGATION
     // ----------------------------------------------------------
+
     &__nav
         display: flex
         justify-content: center
@@ -42,12 +44,11 @@
             font: 400 1.4rem/1 $crimson_text-roman
             color: $color-white
 
-           &:not(:last-child)::after
-               content: '>'
-               position: absolute
-               right: -.5rem
-               top: 50%
-               transform: translateY(-50%)
+            &:not(:last-child)::after
+                content: '>'
+                position: absolute
+                right: -.5rem
+                top: 0
 
         & a
             text-decoration: none

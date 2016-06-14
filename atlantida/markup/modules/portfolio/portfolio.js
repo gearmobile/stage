@@ -1,8 +1,9 @@
+
 // VARIABLES
 // -------------------------------------------------------------
-var grid = $('.gallery');
-var buttons = $('.filtering');
-var galleryItem = $('.gallery__item');
+var grid = $('.portfolio .gallery');
+var buttons = $('.portfolio .filtering');
+var galleryItem = $('.portfolio .gallery__item');
 
 
 // MASONRY LAYOUT
@@ -25,7 +26,7 @@ grid.imagesLoaded().progress( function () {
 
 // ISOTOPE FILTERING
 // -------------------------------------------------------------
-buttons.on('click', 'a', function () {
+buttons.on('click', '.filtering__item', function () {
     var filterValue = $( this ).attr('data-filter');
     grid.isotope({ filter: filterValue });
 });

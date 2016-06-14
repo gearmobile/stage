@@ -1,7 +1,7 @@
 include ../block-submit/block-submit
 
 mixin footer(data)
-    footer.footer
+    footer.footer#contact
         .footer__center
             header.footer__header
                 h1.footer__title atlantida
@@ -15,9 +15,9 @@ mixin footer(data)
                             li 1556 Broadway, suite 416
                             li New York, NY, 10120, USA
                         ul.footer__contacts
-                            li
+                            li.footer__contacts-email
                                 | E-mail: <a href="mailto:elegantflyers@gmail.com">elegantflyers@gmail.com</a>
-                            li: a(href="tel:+84956654972") +84 956 654 972
+                            li.footer__contacts-phone: a(href="tel:+84956654972") +84 956 654 972
                         nav.footer__socials
                             a(href="#" title="Facebook" target="_blank")
                                 != jadeHelpers.Icon.call(locals, {iconName: 'footer-facebook', className: 'footer-icons'})

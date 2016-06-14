@@ -6,11 +6,12 @@ $('.slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    autoplay: true,
     prevArrow: '<a href="#" class="slick-prev"></a>',
     nextArrow: '<a href="#" class="slick-next"></a>',
     responsive: [
         {
-            breakpoint: 1110,
+            breakpoint: 1140,
             settings: {
                 arrows: false,
                 autoplay: true,

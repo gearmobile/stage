@@ -19,36 +19,61 @@
                 border-radius: 50%
                 margin: 0 0 4rem
 
-                & > img
+                & img
                     display: block
                     width: 100%
                     height: auto
                     border-radius: 50%
+                    opacity: .8
+                    transition: opacity .2s
+
+                &:hover img
+                    opacity: 1
 
             & .testimonials__quote
                 text-align: center
                 font: 400 2rem/1.6 $crimson_text-italic
                 color: #efefef
                 margin: 0 0 6rem
-                padding: 0 1rem
+                padding: 0 4rem
                 quotes: "\201c" "\201d"
                 position: relative
 
                 &::before
+                &::after
+                    position: absolute;
+                    top: -2.8rem
+                    font-size: 9rem
+
+                &::before
                     content: open-quote
+                    left: -.6rem
 
                 &::after
                     content: close-quote
+                    right: .6rem
 
             & .testimonials__author
-                font: 400 1.4rem/1.2 $montserrat-regular
-                color: #e3e3e3
-                text-transform: uppercase
                 margin: 0 0 2rem
 
-            & .testimonials__occupation
+                & a
+                    font: 400 1.4rem/1.2 $montserrat-regular
+                    color: #e3e3e3
+                    text-transform: uppercase
+                    text-decoration: none
+                    transition: color .2s
+
+                    &:hover
+                        color: $color-white
+
+            & .testimonials__occupation a
                 font: 400 1.3rem/1.1 $crimson_text-italic
                 color: #efefef
+                text-decoration: none;
+                transition: color .2s
+
+                &:hover
+                    color: $color-white
 
         & .slick-dots
             display: flex
@@ -61,7 +86,7 @@
                 height: 1.2rem
                 border-radius: 50%
                 border: none
-                margin: 0 .2rem
+                margin: 0 1rem
                 background-color: #c5c5c5
 
                 &:hover

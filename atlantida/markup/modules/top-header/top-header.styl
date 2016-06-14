@@ -71,6 +71,7 @@
 
 
 // OVERLAY MOBIE MENU
+// ------------------------------------------------
 
 .overlay
     position: fixed
@@ -78,7 +79,7 @@
     height: 100%
     top: 0
     left: 0
-    background-color: rgba(153, 204, 51,.96)
+    background-color: $color-grey-light
 
 .overlay__trigger
     display: none
@@ -96,8 +97,8 @@
         display: block
 
 .overlay__button
-    width: 8rem
-    height: 8rem
+    width: 3rem
+    height: 3rem
     position: absolute
     top: 2rem
     right: 2rem
@@ -116,7 +117,6 @@
     height: 80%
     top: 50%
     transform: translateY(-50%)
-    font-size: 4rem
     text-align: center
     perspective: 1200px
 
@@ -136,15 +136,15 @@
 
 .overlay__link
     display: block
-    font-weight: 300
     color: $color-grey
     transition: color .2s
     text-decoration: none
     text-transform: uppercase
+    font-size: 2rem
+    font-weight: 500
 
     &:hover
     &:focus
-        //color: $color-black
         color: $color-white
 
 

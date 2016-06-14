@@ -33,7 +33,7 @@
             font: 400 1.3rem/1.2 $montserrat-regular
             color: $color-grey
 
-            @media screen and (max-width: $bp768)
+            @media screen and (max-width: $bp980)
                 left: 0
                 transform: translateX(0)
 
@@ -54,8 +54,9 @@
                 top: 0
                 transform: translateX(-50%)
 
-                @media screen and (max-width: $bp768)
-                    left: 5%
+                @media screen and (max-width: $bp980)
+                    //left: 5%
+                    left: 3.7rem
                     transform: translateX(0)
 
         // CONTENT ROW
@@ -65,12 +66,16 @@
             lost-utility clearfix
             position: relative
 
+            @media screen and (max-width: $bp980)
+                margin: 0 0 4rem 7.4rem
+
             &:not(:last-child)
                 margin: 0 0 1rem
 
-            @media screen and (max-width: $bp768)
+            @media screen and (max-width: $bp980)
                 &:not(:last-child)
-                    margin: 0 0 4rem 0
+                    //margin: 0 0 4rem 0
+                    margin: 0 0 4rem 7.4rem
 
         // CONTENT ITEM
         // ----------------------------------------------------
@@ -81,8 +86,8 @@
             width: 48%
             transition: background-color .2s
 
-            @media screen and (max-width: $bp768)
-                width: 90%
+            @media screen and (max-width: $bp980)
+                width: 100%
 
             & a
                 display: block
@@ -130,11 +135,11 @@
                 &:hover a::after
                     border-color: $color-grey transparent transparent transparent
 
-                @media screen and (max-width: $bp768)
+                @media screen and (max-width: $bp980)
                     float: right
 
                     & a
-                        padding: 3rem 2rem 3rem 6rem
+                        padding: 3rem 2rem 3rem 2rem
 
                         &::before
                             border-width: 0 1rem 1rem 0
@@ -154,7 +159,7 @@
                 margin: 4rem 0 0 0
 
                 & a
-                    padding: 3rem 2rem 3rem 6rem
+                    padding: 3rem 2rem 3rem 2rem
 
                     &::before
                         border-width: 0 1rem 1rem 0
@@ -183,8 +188,8 @@
                 left: 50%
                 transform: translateX(-50%)
 
-                @media screen and (max-width: $bp768)
-                    left: 4%
+                @media screen and (max-width: $bp980)
+                    left: -4.5rem
                     transform: translateX(0)
 
             &:hover
@@ -214,7 +219,7 @@
             display: flex
             justify-content: center
 
-            @media screen and (max-width: $bp768)
+            @media screen and (max-width: $bp980)
                 justify-content: flex-start
                 margin-left: 1rem
 

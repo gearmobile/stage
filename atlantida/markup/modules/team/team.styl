@@ -5,12 +5,14 @@
 
     // TEAM CENTER
     // --------------------------------------------------------------
+
     &__center
         lost-center $width
         padding: 0 $gutter
 
     // TEAM GALLERY
     // --------------------------------------------------------------
+
     &__gallery
         lost-center 100% flex
         justify-content: center
@@ -18,6 +20,7 @@
 
     // TEAM ITEM
     // --------------------------------------------------------------
+
     &__item
         flex 0 1 36rem
         margin: 1.5rem
@@ -40,8 +43,10 @@
             &:not(:last-child)
                 margin-bottom: $gutter
 
+
     // TEAM ITEM COVER
     // --------------------------------------------------------------
+
     &__cover
         position: absolute
         background-color: rgba(246, 246, 246, .82)
@@ -50,6 +55,7 @@
         width: calc(100% - 1rem * 2)
         height: calc(100% - 1rem * 2)
         opacity: 0
+        text-decoration: none;
         visibility: hidden
         transition: opacity .2s, visibility .2s
 
@@ -65,10 +71,11 @@
         margin: 0 0 2rem
 
     &__name
+        margin: 0 0 .8rem
         text-transform: capitalize
         font: 400 1.3rem/1 $montserrat-regular
         color: $color-grey
-        margin: 0 0 .8rem
+
 
     &__occupation
         font: 400 1.3rem/1 $crimson_text-roman
