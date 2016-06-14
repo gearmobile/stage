@@ -1,0 +1,240 @@
+*,  *::before, *::after {
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ----------- FABRICA STYLES ------------ */
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 256px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+  z-index: -1;
+}
+
+#sidebar.slideout-menu {
+  left: 0;
+}
+
+#navbar.slideout-menu {
+  left: auto;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel, {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+
+.fixed {
+  backface-visibility: hidden;
+  position: fixed;
+  z-index: 2;
+  transition: transform 300ms ease;
+}
+
+.fixed-open-left {
+  transform: translate3d(256px, 0px, 0px);
+}
+
+.fixed-open-right {
+  transform: translate3d(-256px, 0px, 0px);
+}
+
+/* ----------- END FABRICA STYLES ------------ */
+
+/* ----  CUSTOM STYLES ---- */
+
+/* ------------------ TOPHEADER ------------------- */
+
+.topheader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: darkslategray;
+}
+
+.topheader .title {
+  color: #fff;
+  font: 700 3rem Helvetica, sans-serif;
+  letter-spacing: .2rem;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.topheader .button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  transition: background-color .2s;
+}
+
+.topheader .button-sidebar {
+  background-color: orangered;
+}
+
+.topheader .button-sidebar:hover {
+  background-color: darkorange;
+}
+
+.topheader .button-navbar {
+  background-color: yellowgreen;
+}
+
+.topheader .button-navbar:hover {
+  background-color: greenyellow;
+}
+
+
+/* -------------------- SIDEBARS ----------------- */
+
+.side-panel {
+  padding: 60px 0;
+  text-align: center;
+  min-height: 100%;
+}
+
+.sidebar-header,
+.navbar-header {
+  margin: 0 0 40px 0;
+}
+
+.sidebar-header .title,
+.navbar-header .title {
+  text-transform: capitalize;
+  margin: 0;
+  font: 700 26px/1 Helvetica, sans-serif;
+}
+
+.sidebar-menu__item,
+.navbar-menu__item {
+  margin: 0 0 30px 0;
+}
+
+.sidebar-menu__item:last-child,
+.navbar-menu__item:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-menu__item a,
+.navbar-menu__item a {
+  text-transform: capitalize;
+  text-decoration: none;
+  font: 400 18px/1 Arial, sans-serif;
+  color: cadetblue;
+}
+
+.sidebar-menu__item a:hover,
+.navbar-menu__item a:hover {
+  color: dodgerblue;
+}
+
+
+/* ----------------- MAIN RULES ----------------- */
+
+.main {
+  background: #ddd;
+  margin: 6rem 0 0;
+  padding: 60px 40px;
+}
+
+.main .title {
+  margin: 0 0 40px;
+  text-transform: uppercase;
+  font: 700 28px/1 Helvetica, sans-serif;
+}
+
+.main article {
+  margin: 0 0 40px 0;
+  background-color: #fff;
+}
+
+.main article:last-child {
+  margin-bottom: 0;
+}
+
+.main img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.main p {
+  padding: 20px 40px;
+  margin: 0;
+  font: 400 16px/1.4 Arial, sans-serif;
+  color: darkslategrey;
+}
+
+/* ------------- SWIPER SLIDER ----------------- */
+
+#main .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+#main .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main .swiper-slide img {
+  display: block;
+  width: 100%
+  height: auto;
+}
+
+#main .swiper-pagination {
+  /*bottom: 50%;*/
+  bottom: 5%;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: flex-end;*/
+  /*position: absolute;*/
+  /*transform: translateY(50%);*/
+}
+
+#main .swiper-pagination .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  background-color: palegreen;
+  transition: background-color .2s;
+  margin: 8px 16px 8px 0;
+}
+
+#main .swiper-pagination .swiper-pagination-bullet-active,
+#main .swiper-pagination .swiper-pagination-bullet:hover {
+  background-color: darkslategrey;
+}
