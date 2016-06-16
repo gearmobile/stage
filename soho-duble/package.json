@@ -5,6 +5,8 @@
   "main": "gulpfile.js",
   "directories": {},
   "dependencies": {
+    "imagesloaded": "^4.1.0",
+    "isotope-layout": "^3.0.1",
     "lost": "^6.8.1",
     "slideout": "^0.1.12",
     "swiper": "^3.3.1"

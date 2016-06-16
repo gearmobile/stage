@@ -41,15 +41,19 @@
 
 // NAVBAR CONTENT
 // -------------------------------------------
+
 .navbar-content
+    height: 100%
     display: flex;
     flex-direction: column
     justify-content: space-between
+    align-items: center;
 
 // NAVBAR LIST
 // --------------------------------------------
 
 .navbar-list
+    width: 100%
     margin: 0 0 2rem
 
 .navbar-list .navbar-list__item
@@ -114,11 +118,18 @@
 // NAVBAR SUMMARY
 // --------------------------------------------
 
+.navbar-summary
+    width: 100%
+    text-align: center;
+
 .navbar-summary .navbar-total
+.navbar-summary .navbar-checkout
     height: 6rem
     display: flex;
     justify-content: center;
     align-items: center;
+
+.navbar-summary .navbar-total
     background-color: #f2f5f9
     text-transform: capitalize;
 
@@ -127,15 +138,9 @@
         margin: 0 .5rem
 
 .navbar-summary .navbar-checkout
-    height: 6rem
     background-color: $color-black
 
     & a
-        width: 100%
-        height: 100%
-        display: flex;
-        justify-content: center;
-        align-items: center;
         text-transform: uppercase;
         font: 2rem/1 $josefin-sans-semibold;
         color: $color-white

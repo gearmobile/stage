@@ -2,6 +2,9 @@
 
 var swiper = require('swiper');
 var Slideout = require('slideout');
+var Isotope = require('isotope-layout');
+var imagesLoaded = require('imagesLoaded');
+
 
 window.addEventListener('load', function () {
 
@@ -80,6 +83,27 @@ window.addEventListener('load', function () {
         pagination: '.swiper-pagination',
         paginationClickable: true
         // autoplay: 3500
+    });
+
+
+    // ISOTOPE
+    // --------------------------------------------------
+    var grid = document.querySelector('.gallery-content');
+    var filtersElem = document.querySelector('.gallery-control');
+    var iso;
+    imagesLoaded( grid, function () {
+        iso = new Isotope( grid, {
+            itemSelector: '.gallery-content__item',
+            percentPosition: true,
+            masonry: {
+                columnWidth: '.gallery-content__sizer'
+            }
+        });
+    });
+
+    // BIND FILTER BUTTON CLICK ----------------------------------
+    filtersElem.addEventListener( 'click', function ( event ) {
+        iso.arrange({ filter: event.target.getAttribute('data-filter') });
     });
 
 

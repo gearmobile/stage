@@ -2,9 +2,13 @@ mixin sidebar(data)
     aside#sidebar.sidebar-panel
 
         header.sidebar-header
-            form.sidebar-search(action="action.php" method="post")
-                input(type="text" id="sidebar-input" name="sidebar-input" required)
-                .sidebar-button
+            .sidebar-search
+                != jadeHelpers.Icon.call(locals, {iconName: 'search', className: 'sidebar-icon'})
+            form.sidebar-form(action="action.php" method="post")
+                input(type="text" id="sidebar-input" name="sidebar-input" placeholder="start search here" required)
+            .sidebar-close
+                != jadeHelpers.Icon.call(locals, {iconName: 'switch', className: 'sidebar-icon'})
+
 
         .sidebar-content
 

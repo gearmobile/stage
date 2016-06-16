@@ -1,0 +1,85 @@
+mixin content(data)
+    .content
+        .gallery
+            .gallery-control
+                a.gallery-control__item(href='javascript:void(0);' data-filter='*') all
+                a.gallery-control__item(href='javascript:void(0);' data-filter='.featured') featured
+                a.gallery-control__item(href='javascript:void(0);' data-filter='.furniture') furniture
+                a.gallery-control__item(href='javascript:void(0);' data-filter='.decoration') decoration
+                a.gallery-control__item(href='javascript:void(0);' data-filter='.lighting') lighting
+                a.gallery-control__item(href='javascript:void(0);' data-filter='.electronics') electronics
+
+            ul.gallery-content
+
+                li.gallery-content__sizer
+
+                li.gallery-content__item.furniture
+                    a(href='javascript:void(0);')
+                        figure.gallery-image
+                            img(src="%=static=%img/assets/content/product-image-01.png" alt="Product Image")
+                        .gallery-info
+                            p.gallery-category furniture
+                            h3.gallery-title big black chair
+                            p.gallery-price $99
+
+                li.gallery-content__item.decoration
+                    a(href='javascript:void(0);')
+                        figure.gallery-image
+                            img(src="%=static=%img/assets/content/product-image-02.png" alt="Product Image")
+                        .gallery-info
+                            p.gallery-category decoration
+                            h3.gallery-title bright wall clock
+                            p.gallery-price $99
+
+                li.gallery-content__item
+                    a(href='javascript:void(0);')
+                        //
+
+                li.gallery-content__item
+                    a(href='javascript:void(0);')
+                        //
+
+                li.gallery-content__item.decoration
+                    a(href='javascript:void(0);')
+                        figure.gallery-image
+                            img(src="%=static=%img/assets/content/product-image-03.png" alt="Product Image")
+                        .gallery-info
+                            p.gallery-category decoration
+                            h3.gallery-title stewie floor lamp
+                            p.gallery-price $99
+
+                li.gallery-content__item.furniture
+                    a(href='javascript:void(0);')
+                        figure.gallery-image
+                            img(src="%=static=%img/assets/content/product-image-04.png" alt="Product Image")
+                        .gallery-info
+                            p.gallery-category furniture
+                            h3.gallery-title classic chair
+                            p.gallery-price $99
+
+                li.gallery-content__item.furniture
+                    a(href='javascript:void(0);')
+                        figure.gallery-image
+                            img(src="%=static=%img/assets/content/product-image-05.png" alt="Product Image")
+                        .gallery-info
+                            p.gallery-category furniture
+                            h3.gallery-title sheep bench felt
+                            p.gallery-price $99
+
+                li.gallery-content__item.electronics
+                    a(href='javascript:void(0);')
+                        figure.gallery-image
+                            img(src="%=static=%img/assets/content/product-image-06.png" alt="Product Image")
+                        .gallery-info
+                            p.gallery-category electronics
+                            h3.gallery-title vifa loudspeaker
+                            p.gallery-price $99
+
+                li.gallery-content__item.lighting
+                    a(href='javascript:void(0);')
+                        figure.gallery-image
+                            img(src="%=static=%img/assets/content/product-image-07.png" alt="Product Image")
+                        .gallery-info
+                            p.gallery-category lighting
+                            h3.gallery-title muuto lamp
+                            p.gallery-price $99
