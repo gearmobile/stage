@@ -4,7 +4,7 @@ mixin navbar(data)
             .navbar-amount
                 a(href='javascript:void(0);') 2
             .navbar-button
-                //
+                != jadeHelpers.Icon.call(locals, {iconName: 'switch', className: 'navbar-icon'})
         nav.navbar-content
             ul.navbar-list
                 li.navbar-list__item
@@ -29,4 +29,11 @@ mixin navbar(data)
                                 span $99
                             li.navbar-list-remove
                                 a(href='javascript:void(0);') delete
-                li.navbar-list-total
+            ul.navbar-summary
+                li.navbar-total
+                    span
+                        | total:
+                    span
+                        | $308
+                li.navbar-checkout
+                    a(href='javascript:void(0);') checkout

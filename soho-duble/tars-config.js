@@ -1,10 +1,17 @@
 module.exports = {
-    "postcss": [],
+    "postcss": [
+        {
+            "name": "lost",
+            "options": {
+                "gutter": "15px"
+            }
+        }
+    ],
     "svg": {
         "active": true,
-        "workflow": "sprite",
+        "workflow": "symbols",
         "symbolsConfig": {
-            "loadingType": "inject",
+            "loadingType": "separate-file-with-link",
             "usePolyfillForExternalSymbols": true,
             "pathToExternalSymbolsFile": ""
         }

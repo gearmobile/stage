@@ -11,33 +11,16 @@
     background-color: darkslategray;
 }
 
-.topheader .title {
-    color: #fff;
-    font: 700 3rem Helvetica, sans-serif;
+.topheader-title {
+    color: $color-white
+    font: 2.6rem/1 $josefin-sans-semibold
     letter-spacing: .2rem;
-    text-transform: capitalize;
-    margin: 0;
+    text-transform: uppercase;
 }
 
-.topheader .button {
+.topheader .button-sidebar,
+.topheader .button-navbar {
     width: 3rem;
     height: 3rem;
-    border-radius: 50%;
-    transition: background-color .2s;
-}
-
-.topheader .button-sidebar {
-    background-color: orangered;
-}
-
-.topheader .button-sidebar:hover {
-    background-color: darkorange;
-}
-
-.topheader .button-navbar {
-    background-color: yellowgreen;
-}
-
-.topheader .button-navbar:hover {
-    background-color: greenyellow;
+    cursor: pointer;
 }

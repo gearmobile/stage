@@ -16,13 +16,41 @@
     height: 2rem
     background-color: $color-blue
     border-radius: 50%
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     & a
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%
+        height: 100%
         color: $color-white
         font: 1.2rem/1 $josefin-sans-regular
+        transition: color .2s
+        will-change: color
+
+        &:hover
+            color: $color-black
+
+.navbar-button
+    cursor: pointer;
+
+.navbar-button .navbar-icon
+    width: 2rem
+    height: 2rem
+
+
+// NAVBAR CONTENT
+// -------------------------------------------
+.navbar-content
+    display: flex;
+    flex-direction: column
+    justify-content: space-between
+
+// NAVBAR LIST
+// --------------------------------------------
+
+.navbar-list
+    margin: 0 0 2rem
 
 .navbar-list .navbar-list__item
     display: flex
@@ -55,6 +83,7 @@
             font: 2rem/1 $josefin-sans-semibold
             color: $color-dark
             transition: color .2s
+            will-change: color
 
             &:hover
                 color: $color-red
@@ -73,16 +102,48 @@
             text-decoration: underline;
             font: 1.6rem $josefin-sans-regular
             color: $color-dark
-            text-transform: capitalize;
+            text-transform: capitalize
+            transition: color .2s
+            will-change: color
 
             &:hover
                 text-decoration: none;
                 color: $color-red
 
 
+// NAVBAR SUMMARY
+// --------------------------------------------
 
+.navbar-summary .navbar-total
+    height: 6rem
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f5f9
+    text-transform: capitalize;
 
+    span
+        font: 1.8rem/1 $josefin-sans-semibold;
+        margin: 0 .5rem
 
+.navbar-summary .navbar-checkout
+    height: 6rem
+    background-color: $color-black
+
+    & a
+        width: 100%
+        height: 100%
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font: 2rem/1 $josefin-sans-semibold;
+        color: $color-white
+        will-change: color
+        transition: color .2s
+
+        &:hover
+            color: $color-blue
 
 
 

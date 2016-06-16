@@ -1,5 +1,7 @@
 mixin topheader(data)
     header.topheader.fixed
-        a.button.button-sidebar(href='#0')
-        h1.title topheader title
-        a.button.button-navbar(href='#0')
+        span.button-sidebar
+            != jadeHelpers.Icon.call(locals, {iconName: 'indent-increase', className: 'topheader-icon'})
+        h1.topheader-title soho
+        span.button-navbar
+            != jadeHelpers.Icon.call(locals, {iconName: 'briefcase', className: 'topheader-icon'})
