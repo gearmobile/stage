@@ -1,12 +1,7 @@
 'use strict';
 
-/*
-    This file can be used as entry point for webpack!
- */
-var DEBUG = false;
 var swiper = require('swiper');
 var Slideout = require('slideout');
-var rellax = require('rellax');
 
 window.addEventListener('load', function () {
 
@@ -16,8 +11,8 @@ window.addEventListener('load', function () {
     var navbar = document.querySelector('#navbar');
     var main = document.querySelector('#main');
     var blockFixed = document.querySelector('.fixed');
-    var sidebarWidth = 256;
-    var navbarWidth = 256;
+    var sidebarWidth = 400;
+    var navbarWidth = 400;
     var btnSidebar = document.querySelector('.button-sidebar');
     var btnNavbar = document.querySelector('.button-navbar');
 
@@ -87,9 +82,5 @@ window.addEventListener('load', function () {
         // autoplay: 3500
     });
 
-    // PARALLAX WITH RELLAX.JS
-    // --------------------------------------------------
-    //var rellax = new Rellax('.main-article');
-    rellax('.main-article');
 
 }, false);

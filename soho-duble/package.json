@@ -5,7 +5,6 @@
   "main": "gulpfile.js",
   "directories": {},
   "dependencies": {
-    "rellax": "0.0.1",
     "slideout": "^0.1.12",
     "swiper": "^3.3.1"
   },

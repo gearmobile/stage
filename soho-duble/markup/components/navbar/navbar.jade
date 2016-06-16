@@ -1,16 +1,32 @@
 mixin navbar(data)
     aside#navbar.navbar-panel
         header.navbar-header
-            h2.title navbar menu
+            .navbar-amount
+                a(href='javascript:void(0);') 2
+            .navbar-button
+                //
         nav.navbar-content
-            ul.navbar-menu
-                li.navbar-menu__item
-                    a(href='#0') sidebar menu item
-                li.navbar-menu__item
-                    a(href='#0') sidebar menu item
-                li.navbar-menu__item
-                    a(href='#0') sidebar menu item
-                li.navbar-menu__item
-                    a(href='#0') sidebar menu item
-                li.navbar-menu__item
-                    a(href='#0') sidebar menu item
+            ul.navbar-list
+                li.navbar-list__item
+                    figure.navbar-image
+                        img(src="%=static=%img/assets/navbar/product-image-01.jpg" alt="Product Image")
+                    .navbar-list-content
+                        h3.navbar-list-title
+                            a(href='javascript:void(0);') bright wall clock
+                        ul.navbar-list-meta
+                            li.navbar-list-price
+                                span $33
+                            li.navbar-list-remove
+                                a(href='javascript:void(0);') delete
+                li.navbar-list__item
+                    figure.navbar-image
+                        img(src="%=static=%img/assets/navbar/product-image-02.jpg" alt="Product Image")
+                    .navbar-list-content
+                        h3.navbar-list-title
+                            a(href='javascript:void(0);') bright wall clock
+                        ul.navbar-list-meta
+                            li.navbar-list-price
+                                span $99
+                            li.navbar-list-remove
+                                a(href='javascript:void(0);') delete
+                li.navbar-list-total

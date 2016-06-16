@@ -1,16 +1,29 @@
 mixin sidebar(data)
     aside#sidebar.sidebar-panel
+
         header.sidebar-header
-            h2.title sidebar menu
-        nav.sidebar-content
-            ul.sidebar-menu
+            form.sidebar-search(action="action.php" method="post")
+                input(type="text" id="sidebar-input" name="sidebar-input" required)
+                .sidebar-button
+
+        .sidebar-content
+
+            ul.sidebar-menu.sidebar-menu--primary
                 li.sidebar-menu__item
-                    a(href='#0') sidebar menu item
+                    a(href='javascript:void(0);') furniture
                 li.sidebar-menu__item
-                    a(href='#0') sidebar menu item
+                    a(href='javascript:void(0);') decoration
                 li.sidebar-menu__item
-                    a(href='#0') sidebar menu item
+                    a(href='javascript:void(0);') lighting
                 li.sidebar-menu__item
-                    a(href='#0') sidebar menu item
+                    a(href='javascript:void(0);') electronics
+
+            ul.sidebar-menu.sidebar-menu--secondary
                 li.sidebar-menu__item
-                    a(href='#0') sidebar menu item
+                    a(href='javascript:void(0);') about us
+                li.sidebar-menu__item
+                    a(href='javascript:void(0);') contact us
+                li.sidebar-menu__item
+                    a(href='javascript:void(0);') delivery
+                li.sidebar-menu__item
+                    a(href='javascript:void(0);') returns

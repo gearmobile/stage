@@ -1,34 +1,59 @@
 .sidebar-panel {
-    padding: 60px 0;
-    text-align: center;
-    min-height: 100%;
+    padding: 0 0 6rem 0
 }
+
+// SIDEBAR HEADER
+// ---------------------------------------------------
 
 .sidebar-header {
-    margin: 0 0 40px 0;
+    margin: 0 0 6rem 0;
 }
 
-.sidebar-header .title {
-    text-transform: capitalize;
-    margin: 0;
-    font: 700 26px/1 Helvetica, sans-serif;
-}
+// SIDEBAR CONTENT
+// ---------------------------------------------------
 
-.sidebar-menu__item {
-    margin: 0 0 30px 0;
-}
+.sidebar-content
+    min-height: 100%
+    text-align: center;
+    padding: 0 1rem
 
-.sidebar-menu__item:last-child {
-    margin-bottom: 0;
-}
 
-.sidebar-menu__item a {
-    text-transform: capitalize;
-    text-decoration: none;
-    font: 400 18px/1 Arial, sans-serif;
-    color: cadetblue;
-}
+// SIDEBAR MENU PRIMARY
+// ---------------------------------------------------
 
-.sidebar-menu__item a:hover {
-    color: dodgerblue;
-}
+.sidebar-menu--primary
+    margin: 0 0 6rem
+
+.sidebar-menu--primary .sidebar-menu__item
+    margin: 0 0 2rem
+
+    &:last-child
+        margin-bottom: 0
+
+    & a
+        text-transform: capitalize;
+        color: $color-dark
+        font: 3.4rem / 1 $josefin-sans-bold;
+        transition: color .2s;
+
+        &:hover
+            color: $color-red;
+
+
+// SIDEBAR MENU SECONDARY
+// ---------------------------------------------------
+
+.sidebar-menu--secondary .sidebar-menu__item
+    margin: 0 0 2rem
+
+    &:last-child
+        margin-bottom: 0
+
+    & a
+        text-transform: capitalize;
+        font: 2.4rem/1 $josefin-sans-regular;
+        color: $color-dark
+        transition: color .2s;
+
+        &:hover
+            color: $color-red;

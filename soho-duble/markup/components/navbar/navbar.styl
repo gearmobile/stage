@@ -1,34 +1,111 @@
 .navbar-panel {
-    padding: 60px 0;
-    text-align: center;
-    min-height: 100%;
+    padding: 0 0 6rem 0;
 }
 
 .navbar-header {
-    margin: 0 0 40px 0;
+    height: 6rem
+    padding: 0 2rem
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+    box-shadow: inset 0 -.1rem 0 0 #e8e8e8
 }
 
-.navbar-header .title {
-    text-transform: capitalize;
-    margin: 0;
-    font: 700 26px/1 Helvetica, sans-serif;
-}
+.navbar-amount
+    width: 2rem
+    height: 2rem
+    background-color: $color-blue
+    border-radius: 50%
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.navbar-menu__item {
-    margin: 0 0 30px 0;
-}
+    & a
+        color: $color-white
+        font: 1.2rem/1 $josefin-sans-regular
 
-.navbar-menu__item:last-child {
-    margin-bottom: 0;
-}
+.navbar-list .navbar-list__item
+    display: flex
+    padding: 4rem 2rem
+    box-shadow: inset 0 -.1rem 0 0 #e8e8e8
 
-.navbar-menu__item a {
-    text-transform: capitalize;
-    text-decoration: none;
-    font: 400 18px/1 Arial, sans-serif;
-    color: cadetblue;
-}
+    & .navbar-image
+        width: 16rem
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-.navbar-menu__item a:hover {
-    color: dodgerblue;
-}
+    & .navbar-list-content
+        display: flex
+        flex-direction: column
+        text-align: center
+        align-items: center;
+        justify-content: center;
+
+    & .navbar-list-meta
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    & .navbar-list-title
+        margin: 0 0 2rem
+
+        & a
+            text-transform: capitalize;
+            font: 2rem/1 $josefin-sans-semibold
+            color: $color-dark
+            transition: color .2s
+
+            &:hover
+                color: $color-red
+
+    & .navbar-list-price
+        margin: 0 1rem 0 0
+
+        & span
+            font: 1.8rem $work-sans-bold
+            color: $color-blue
+
+    & .navbar-list-remove
+        margin: 0 0 0 1rem
+
+        & a
+            text-decoration: underline;
+            font: 1.6rem $josefin-sans-regular
+            color: $color-dark
+            text-transform: capitalize;
+
+            &:hover
+                text-decoration: none;
+                color: $color-red
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

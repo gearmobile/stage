@@ -5,7 +5,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    width: 256px;
+    width: 400px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     display: none;
@@ -43,11 +43,11 @@
 }
 
 .fixed-open-left {
-    transform: translate3d(256px, 0px, 0px);
+    transform: translate3d(400px, 0px, 0px);
 }
 
 .fixed-open-right {
-    transform: translate3d(-256px, 0px, 0px);
+    transform: translate3d(-400px, 0px, 0px);
 }
 
 /* ----------- END FABRICA STYLES ------------ */
