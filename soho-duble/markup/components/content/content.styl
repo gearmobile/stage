@@ -14,12 +14,15 @@
         text-transform: capitalize
         font: 3rem/1 $josefin-sans-regular
         color: $color-dark
-        margin: 0 2rem
+        margin: 0 2rem .1rem
         transition: color .2s
         will-change: color
 
         &:hover
             color: $color-red
+
+        &:first-child
+            border-bottom: 2px solid $color-red
 
 
 // GALLERY CONTENT
@@ -27,7 +30,6 @@
 
 .gallery-content
     border-top: 1px solid #e8e8e8
-    //border-bottom: 1px solid #e8e8e8
 
 .gallery-content::before
 .gallery-content::after
@@ -47,8 +49,10 @@
     justify-content: center
     align-items: center
 
+
 // SPECIAL
 // ----------------------------------
+
 .gallery-content__item.special
     background: url('%=static=%assets/content/product-image-08.jpg') 50% 50% no-repeat
     background-size: cover
