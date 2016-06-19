@@ -1,0 +1,100 @@
+.footer
+    background-color: $color-dark
+    padding: 8rem 0
+
+    // FOOTER CENTER
+    // ---------------------------------------
+    &__center
+        lost-center $width
+
+
+    // FOOTER PRIMARY
+    // ---------------------------------------
+    &__primary
+        lost-column 3/12
+        lost-column-gutter 0
+
+    // FOOTER TITLE
+    // ---------------------------------------
+    &__title
+        font: 4rem/1 $josefin-sans-bold
+        color: $color-white
+        text-transform: capitalize
+        letter-spacing: .3rem
+
+
+    // FOOTER SECONDARY
+    // ---------------------------------------
+    &__secondary
+        lost-column 9/12
+        lost-column-gutter 0
+
+    &__slogan
+        font: 1.8rem/1.6 $work-sans-regular
+        color: $color-white
+
+
+    // FOOTER CONTENT
+    // ---------------------------------------
+
+    &__content
+        margin: 5rem 0 0
+
+    &__main-list
+        lost-column 2/9
+        lost-column-gutter $gutter
+
+    &__second-list
+        lost-column 2/9
+        lost-column-gutter $gutter
+
+    &__main-list
+    &__second-list
+
+        & li
+            margin: 0 0 2rem
+
+            &:last-child
+                margin-bottom: 0
+
+        & a
+            text-transform: capitalize
+            color: $color-white
+            font: 1.8rem/1 $josefin-sans-semibold
+            letter-spacing: .1rem
+            will-change color
+            transition: color .2s
+            margin: 0 0 .1rem
+            border-bottom: 2px solid $color-white
+
+            &:hover
+            &:active
+                color: #acdadc
+                border-color: #acdadc
+
+
+    // FOOTER INFO
+    // ---------------------------------------
+    &__content-info
+        lost-column 5/9
+        lost-column-gutter $gutter
+
+        & p
+            font: 1.8rem/1 $josefin-sans-semibold
+            color: $color-white
+            margin: 0 0 1.4rem
+
+            &:last-child
+                margin-bottom: 0
+
+            & a
+                color: $color-white
+                border-bottom: 2px solid $color-white
+                margin: 0 0 .1rem
+                will-change color
+                transition: color .2s
+
+                &:hover
+                &:active
+                    color: #acdadc
+                    border-color: #acdadc
