@@ -53,15 +53,38 @@
     background-size: cover
 
     & a
+        display: flex
+        flex-direction: column
+        justify-content: center
         position: relative
         overflow: hidden
 
     & .special-label
+        padding: 4rem 3rem 1rem
         background-color: $color-dark
         color: $color-white
         text-transform: uppercase
         font: 1.3rem/1 $work-sans-semibold
-  
+        transform: rotate(-45deg)
+        position: absolute
+        top: -14px
+        left: -38px
+
+    & .special__title
+        font: 3rem/1.2 $josefin-sans-semibold
+        text-transform: uppercase
+        color: $color-white
+        margin: 0 0 1.4rem
+
+    & .special__price
+        font-family: $work-sans-semibold
+        color: $color-white
+        font-size: 2.2rem
+
+        & span
+            font-size: 1.6rem
+            vertical-align: top
+            text-decoration: line-through
 
 // SALES
 // ----------------------------------
