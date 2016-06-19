@@ -31,13 +31,18 @@ mixin content(data)
                             h3.gallery-title bright wall clock
                             p.gallery-price $99
 
-                li.gallery-content__item
+                li.gallery-content__item.featured.special
                     a(href='javascript:void(0);')
-                        //
+                        p.special-label special
+                        h2 vifa <br> speaker
+                        p $49 <span>$89</span>
 
-                li.gallery-content__item
+                li.gallery-content__item.featured.sales
                     a(href='javascript:void(0);')
-                        //
+                        .sales__caption
+                            h2.sales__title 60 <span class='sales__percentage'>%</span>
+                            p.sales__brief Flash Sale
+                        p.sales__slogan Just use coupon code 60 WINTER for getting your discount.
 
                 li.gallery-content__item.decoration
                     a(href='javascript:void(0);')

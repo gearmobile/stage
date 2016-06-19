@@ -46,9 +46,74 @@
     justify-content: center
     align-items: center
 
-.gallery-content .gallery-content__item:nth-child(3)
-    background: url('%=static=%assets/gallery/product-image-08.jpg') 50% 50% no-repeat
+// SPECIAL
+// ----------------------------------
+.gallery-content__item.special
+    background: url('%=static=%assets/content/product-image-08.jpg') 50% 50% no-repeat
     background-size: cover
+
+    & a
+        position: relative
+        overflow: hidden
+
+    & .special-label
+        background-color: $color-dark
+        color: $color-white
+        text-transform: uppercase
+        font: 1.3rem/1 $work-sans-semibold
+  
+
+// SALES
+// ----------------------------------
+.gallery-content__item.sales
+    background-color: $color-fusia
+    will-change background-color
+    transition: background-color .2s
+
+    & a
+        display: flex;
+        flex-direction: column
+        justify-content: center;
+        align-items: center;
+        text-align: center
+        font-family: $work-sans-semibold
+
+    & .sales__caption
+        line-height: 1
+        margin: 0 0 4rem
+        padding: 0 0 4rem
+        position: relative
+        
+        &::before
+            content: ''
+            display: block
+            background-color: $color-white
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            height: .2rem
+            width: 2rem
+
+    &:hover
+        background-color: darken($color-fusia, 10%)
+
+    & .sales__title
+        font-size: 11.6rem
+        color: rgba($color-white, .5)
+
+
+    & .sales__percentage
+        color: rgba($color-black, .2)
+        margin-left: -5.6rem
+
+    & .sales__brief
+        font-size: 3.4rem
+        color: rgba($color-white, .5)
+
+    & .sales__slogan
+        font: 2.2rem/1.4 $work-sans-medium
+        color: $color-white
 
 .gallery-content__item a
     display: block
@@ -58,8 +123,11 @@
     transition: background-color .2s
     will-change: background-color
 
+
+    // HOVER EFFECT
+    // ----------------------------------
     &:hover
-        background-color: #f2f5f9
+        //background-color: #f2f5f9
 
 .gallery-content__item .gallery-image
     text-align: center
