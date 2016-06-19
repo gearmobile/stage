@@ -7,11 +7,32 @@ mixin main(data)
             .swiper-container
                 .swiper-wrapper
                     .swiper-slide
-                        | slide 1
+                        .slider-content
+                            h2.slider-title sammen armchair
+                            .slider-info
+                                p.slider-price $399
+                                a.slider-link(href='javascript:void(0);') buy now
+                        .slider-image
+                            img(src="%=static=%img/assets/main/slider-image-01.png" alt="Slider Image")
+                        .slider-label new
                     .swiper-slide
-                        | slide 2
+                        .slider-content
+                            h2.slider-title braun classic
+                            .slider-info
+                                p.slider-price $275
+                                a.slider-link(href='javascript:void(0);') buy now
+                        .slider-image
+                            img(src="%=static=%img/assets/main/slider-image-02.png" alt="Slider Image")
+                        .slider-label new
                     .swiper-slide
-                        | slide 3
+                        .slider-content
+                            h2.slider-title sammen armchair
+                            .slider-info
+                                p.slider-price $399
+                                a.slider-link(href='javascript:void(0);') buy now
+                        .slider-image
+                            img(src="%=static=%img/assets/main/slider-image-01.png" alt="Slider Image")
+                        .slider-label new
                 .swiper-pagination
         +content()
         +subscribe()

@@ -1,49 +1,117 @@
 
-/* ----------------- MAIN RULES ----------------- */
+// MAIN RULES
+// -----------------------------------------------
 
-.main {
-    background: #ddd;
-    margin: 6rem 0 0;
-}
+.main
+    background: #f2f5f9
+    margin: 6rem 0 0
 
 
-/* ------------- SWIPER SLIDER ----------------- */
+// SWIPER SLIDER
+// -----------------------------------------------
 
-.main .swiper-container {
-    width: 100%;
+.main .swiper-container
+    lost-center $width
     height: 100%;
-}
 
-.main .swiper-slide {
+
+.main .swiper-slide
+    display: flex
+    align-items: center
+    height: 70rem
+    position: relative
+
+
+.main .swiper-pagination
+    bottom: 20%
+    display: flex;
+
+.main .swiper-pagination .swiper-pagination-bullet
+    width: 1.2rem
+    height: 1.2rem
+    opacity: 1
+    background-color: rgba($color-black, .2)
+    transition: background-color .2s
+    will-change background-color
+    margin: 0 .8rem
+
+
+.main .swiper-pagination .swiper-pagination-bullet-active,
+.main .swiper-pagination .swiper-pagination-bullet:hover
+    background-color: $color-red
+
+
+// SLIDER INFO
+// -----------------------------------------------
+
+.main .slider-title
+    font: 4rem/1 $josefin-sans-bold
+    text-transform: capitalize
+    color: $color-dark
+    margin: 0 0 3rem
+
+.main .slider-info
+    display: flex
+    align-items: center
+
+.main .slider-price
+    font: 3rem/1 $work-sans-bold
+    color: $color-blue
+    margin: 0 2rem 0 0
+
+.main .slider-link
+    font: 2rem/1 $work-sans-medium
+    color: $color-red
+    text-transform: capitalize
+    padding: 0 0 .1rem 0
+    border-bottom: 1px solid $color-red
+    transition: border-color .2s, color .2s
+
+    &:hover
+        color: darken($color-red, 20%)
+        border-color: darken($color-red, 20%)
+
+.main .slider-image
+    position: absolute;
+    right: 0
+    bottom: 0
+    z-index: 1
+
+    & img
+        vertical-align: top
+
+.main .slider-label
+    border-radius: 50%
+    width: 17.6rem
+    height: 17.6rem
+    background-color: $color-red
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px
-}
+    font: 3rem/1 $montserrat-bold
+    color: $color-white
+    text-transform: uppercase
+    position: absolute
 
-.main .swiper-slide:nth-child(1)
-    background-color: goldenrod;
+.main .swiper-slide:nth-child(1) .slider-label
+    top: 9rem
+    right: 28rem
 
-.main .swiper-slide:nth-child(2)
-    background-color: mediumaquamarine;
+.main .swiper-slide:nth-child(2) .slider-label
+    top: 14rem
+    right: 38rem
 
-.main .swiper-slide:nth-child(3)
-    background-color: tomato;
+.main .swiper-slide:nth-child(3) .slider-label
+    top: 9rem
+    right: 28rem
 
-.main .swiper-pagination {
-    bottom: 5%;
-}
 
-.main .swiper-pagination .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
-    opacity: 1;
-    background-color: palegreen;
-    transition: background-color .2s;
-    margin: 8px 16px 8px 0;
-}
 
-.main .swiper-pagination .swiper-pagination-bullet-active,
-.main .swiper-pagination .swiper-pagination-bullet:hover {
-    background-color: darkslategrey;
-}
+
+
+
+
+
+
+
+
