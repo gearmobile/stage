@@ -39,7 +39,7 @@
     backface-visibility: hidden;
     position: fixed;
     z-index: 2;
-    transition: transform 300ms ease;
+    transition: transform 300ms ease-out;
 }
 
 .fixed-open-left {

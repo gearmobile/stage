@@ -20,13 +20,15 @@ window.addEventListener('load', function () {
     var closeSidebar = document.querySelector('.sidebar-close');
     var btnNavbar = document.querySelector('.button-navbar');
     var closeNavbar = document.querySelector('.navbar-button');
+    var footer = document.querySelector('.footer');
 
 
     var leftSlideout = new Slideout({
         'panel': main,
         'menu': sidebar,
         'padding': sidebarWidth,
-        'tolerance': 70
+        'tolerance': 70,
+        'duration': 300
     });
 
 
@@ -35,7 +37,8 @@ window.addEventListener('load', function () {
         'menu': navbar,
         'padding': navbarWidth,
         'tolerance': 70,
-        'side': 'right'
+        'side': 'right',
+        'duration': 300
     });
 
 
@@ -57,10 +60,12 @@ window.addEventListener('load', function () {
 
     leftSlideout.on('beforeopen', function () {
         blockFixed.classList.add('fixed-open-left');
+        footer.classList.add('fixed-open-left');
     });
 
     leftSlideout.on('beforeclose', function () {
         blockFixed.classList.remove('fixed-open-left');
+        footer.classList.remove('fixed-open-left');
     });
 
 
@@ -81,10 +86,12 @@ window.addEventListener('load', function () {
 
     rightSlideout.on('beforeopen', function () {
         blockFixed.classList.add('fixed-open-right');
+        footer.classList.add('fixed-open-right');
     });
 
     rightSlideout.on('beforeclose', function () {
         blockFixed.classList.remove('fixed-open-right');
+        footer.classList.remove('fixed-open-right');
     });
 
 
