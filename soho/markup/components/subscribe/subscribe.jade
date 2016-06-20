@@ -1,6 +1,18 @@
 mixin subscribe(data)
     .subscribe
         .subscribe__center
+            //nav.social
+            //    a.social__icon.social__icon--facebook(href="javascript:void(0);")
+            //        != jadeHelpers.Icon.call(locals, {iconName: 'facebook', className: 'subscribe-icon'})
+            //    a.social__icon.social__icon--twitter(href="javascript:void(0);")
+            //        != jadeHelpers.Icon.call(locals, {iconName: 'twitter', className: 'subscribe-icon'})
+            //    a.social__icon.social__icon--instagram(href="javascript:void(0);")
+            //        != jadeHelpers.Icon.call(locals, {iconName: 'instagram', className: 'subscribe-icon'})
+            .subscribe-holder
+                p.subscribe-form-label Subscribe to get <span>update</span>
+                form.subscribe-form
+                    input(type="email" id="subscribe-form-email" name="subscribe-form-email" placeholder="Your email ...")
+                    button(type="submit" id="subscribe-form-submit" name="subscribe-form-submit") subscribe
             nav.social
                 a.social__icon.social__icon--facebook(href="javascript:void(0);")
                     != jadeHelpers.Icon.call(locals, {iconName: 'facebook', className: 'subscribe-icon'})
@@ -8,8 +20,3 @@ mixin subscribe(data)
                     != jadeHelpers.Icon.call(locals, {iconName: 'twitter', className: 'subscribe-icon'})
                 a.social__icon.social__icon--instagram(href="javascript:void(0);")
                     != jadeHelpers.Icon.call(locals, {iconName: 'instagram', className: 'subscribe-icon'})
-            .subscribe-holder
-                p.subscribe-form-label Subscribe to get <span>update</span>
-                form.subscribe-form
-                    input(type="email" id="subscribe-form-email" name="subscribe-form-email" placeholder="Your email ...")
-                    button(type="submit" id="subscribe-form-submit" name="subscribe-form-submit") subscribe

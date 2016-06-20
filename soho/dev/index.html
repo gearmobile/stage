@@ -219,6 +219,20 @@
             </div>
             <div class="subscribe">
               <div class="subscribe__center">
+                <!--nav.social-->
+                <!--    a.social__icon.social__icon--facebook(href="javascript:void(0);")-->
+                <!--        != jadeHelpers.Icon.call(locals, {iconName: 'facebook', className: 'subscribe-icon'})-->
+                <!--    a.social__icon.social__icon--twitter(href="javascript:void(0);")-->
+                <!--        != jadeHelpers.Icon.call(locals, {iconName: 'twitter', className: 'subscribe-icon'})-->
+                <!--    a.social__icon.social__icon--instagram(href="javascript:void(0);")-->
+                <!--        != jadeHelpers.Icon.call(locals, {iconName: 'instagram', className: 'subscribe-icon'})-->
+                <div class="subscribe-holder">
+                  <p class="subscribe-form-label">Subscribe to get <span>update</span></p>
+                  <form class="subscribe-form">
+                    <input type="email" id="subscribe-form-email" name="subscribe-form-email" placeholder="Your email ...">
+                    <button type="submit" id="subscribe-form-submit" name="subscribe-form-submit">subscribe</button>
+                  </form>
+                </div>
                 <nav class="social"><a href="javascript:void(0);" class="social__icon social__icon--facebook">
             <svg class="subscribe-icon" width="16px" height="16px">
                 <use xlink:href="../svg-symbols.svg#facebook"></use>
@@ -232,13 +246,6 @@
                 <use xlink:href="../svg-symbols.svg#instagram"></use>
             </svg>
         </a></nav>
-                <div class="subscribe-holder">
-                  <p class="subscribe-form-label">Subscribe to get <span>update</span></p>
-                  <form class="subscribe-form">
-                    <input type="email" id="subscribe-form-email" name="subscribe-form-email" placeholder="Your email ...">
-                    <button type="submit" id="subscribe-form-submit" name="subscribe-form-submit">subscribe</button>
-                  </form>
-                </div>
               </div>
             </div>
         </main>
