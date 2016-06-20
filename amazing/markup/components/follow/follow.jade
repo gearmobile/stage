@@ -1,0 +1,12 @@
+include ../button/button
+
+mixin follow(data)
+    .follow
+        .follow__column
+            h3.follow__title spotify
+            p Follow me, stream and add my songs to your Spotify playlist.
+            +button('follow on spotify')
+        .follow__column
+            h3.follow__title
+            p Buy and download my songs from iTunes.
+            +button('buy from itunes')
