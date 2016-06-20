@@ -25,123 +25,276 @@
       <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
   </head>
   <body class="page">
-      <div class="header">
-          <div class="header-menu"></div>
-          <div class="header-main"><a href="javascript:void();" class="icon-sidebar">
-            <svg class="header-icon" width="26px" height="18px">
-                <use xlink:href="../svg-symbols.svg#icon-sidebar"></use>
-            </svg>
-        </a><a href="javascript:void();" class="logo">soho</a><a href="javascript:void();" class="icon-cardbar">
-            <svg class="header-icon" width="20px" height="25px">
-                <use xlink:href="../svg-symbols.svg#icon-cardbar"></use>
-            </svg>
-        </a></div>
-          <div class="header-cart"></div>
-      </div>
     <section class="page__wrapper">
-        <div class="hero">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="hero__content">
-                  <h3 class="hero__title">Sammen Armchair</h3>
-                  <div class="hero__data"><span class="price">$399</span><a href="javascript:void()" target="_blank" class="buy">buy now</a></div>
+        <aside id="navbar" class="navbar-panel">
+          <header class="navbar-header">
+            <div class="navbar-amount"><a href="javascript:void(0);">2</a></div>
+            <div class="navbar-button">
+            <svg class="navbar-icon" width="32px" height="32px">
+                <use xlink:href="../svg-symbols.svg#switch"></use>
+            </svg>
+        
+            </div>
+          </header>
+          <nav class="navbar-content">
+            <ul class="navbar-list">
+              <li class="navbar-list__item">
+                <figure class="navbar-image"><img src="/static/img/assets/navbar/product-image-01.jpg" alt="Product Image"></figure>
+                <div class="navbar-list-content">
+                  <h3 class="navbar-list-title"><a href="javascript:void(0);">bright wall clock</a></h3>
+                  <ul class="navbar-list-meta">
+                    <li class="navbar-list-price"><span>$33</span></li>
+                    <li class="navbar-list-remove"><a href="javascript:void(0);">delete</a></li>
+                  </ul>
                 </div>
-                <figure class="hero__image">
-                    <div class="badge">new</div><img src="/static/img/assets/hero/slider-image-01.jpg" alt="Image Slider">
-                </figure>
+              </li>
+              <li class="navbar-list__item">
+                <figure class="navbar-image"><img src="/static/img/assets/navbar/product-image-02.jpg" alt="Product Image"></figure>
+                <div class="navbar-list-content">
+                  <h3 class="navbar-list-title"><a href="javascript:void(0);">bright wall clock</a></h3>
+                  <ul class="navbar-list-meta">
+                    <li class="navbar-list-price"><span>$99</span></li>
+                    <li class="navbar-list-remove"><a href="javascript:void(0);">delete</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="navbar-summary">
+              <li class="navbar-total"><span>total:</span><span>$308</span></li>
+              <li class="navbar-checkout"><a href="javascript:void(0);">checkout</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <aside id="sidebar" class="sidebar-panel">
+          <header class="sidebar-header">
+            <div class="sidebar-search">
+            <svg class="sidebar-icon" width="32px" height="32px">
+                <use xlink:href="../svg-symbols.svg#search"></use>
+            </svg>
+        
+            </div>
+            <form action="action.php" method="post" class="sidebar-form">
+              <input type="text" id="sidebar-input" name="sidebar-input" placeholder="start search here" required>
+            </form>
+            <div class="sidebar-close">
+            <svg class="sidebar-icon" width="32px" height="32px">
+                <use xlink:href="../svg-symbols.svg#switch"></use>
+            </svg>
+        
+            </div>
+          </header>
+          <div class="sidebar-content">
+            <ul class="sidebar-menu sidebar-menu--primary">
+              <li class="sidebar-menu__item"><a href="javascript:void(0);">furniture</a></li>
+              <li class="sidebar-menu__item"><a href="javascript:void(0);">decoration</a></li>
+              <li class="sidebar-menu__item"><a href="javascript:void(0);">lighting</a></li>
+              <li class="sidebar-menu__item"><a href="javascript:void(0);">electronics</a></li>
+            </ul>
+            <ul class="sidebar-menu sidebar-menu--secondary">
+              <li class="sidebar-menu__item"><a href="javascript:void(0);">about us</a></li>
+              <li class="sidebar-menu__item"><a href="javascript:void(0);">contact us</a></li>
+              <li class="sidebar-menu__item"><a href="javascript:void(0);">delivery</a></li>
+              <li class="sidebar-menu__item"><a href="javascript:void(0);">returns</a></li>
+            </ul>
+          </div>
+        </aside>
+        <header class="topheader fixed"><span class="button-sidebar">
+            <svg class="topheader-icon" width="32px" height="32px">
+                <use xlink:href="../svg-symbols.svg#indent-increase"></use>
+            </svg>
+        </span>
+          <h1 class="topheader-title">soho</h1><span class="button-navbar">
+            <svg class="topheader-icon" width="32px" height="32px">
+                <use xlink:href="../svg-symbols.svg#briefcase"></use>
+            </svg>
+        </span>
+        </header>
+        <main id="main" class="main">
+          <div class="main__wrapper">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="slider-content">
+                    <h2 class="slider-title">sammen armchair</h2>
+                    <div class="slider-info">
+                      <p class="slider-price">$399</p><a href="javascript:void(0);" class="slider-link">buy now</a>
+                    </div>
+                  </div>
+                  <div class="slider-image"><img src="/static/img/assets/main/slider-image-01.png" alt="Slider Image"></div>
+                  <div class="slider-label">new</div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider-content">
+                    <h2 class="slider-title">braun classic</h2>
+                    <div class="slider-info">
+                      <p class="slider-price">$275</p><a href="javascript:void(0);" class="slider-link">buy now</a>
+                    </div>
+                  </div>
+                  <div class="slider-image"><img src="/static/img/assets/main/slider-image-02.png" alt="Slider Image"></div>
+                  <div class="slider-label">new</div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider-content">
+                    <h2 class="slider-title">sammen armchair</h2>
+                    <div class="slider-info">
+                      <p class="slider-price">$399</p><a href="javascript:void(0);" class="slider-link">buy now</a>
+                    </div>
+                  </div>
+                  <div class="slider-image"><img src="/static/img/assets/main/slider-image-01.png" alt="Slider Image"></div>
+                  <div class="slider-label">new</div>
+                </div>
               </div>
-              <div class="swiper-slide">
-                <div class="hero__content">
-                  <h3 class="hero__title">Braun Watch SD12</h3>
-                  <div class="hero__data"><span class="price">$299</span><a href="javascript:void()" target="_blank" class="buy">buy now</a></div>
-                </div>
-                <div class="hero__image">
-                    <div class="badge">new</div><img src="/static/img/assets/hero/slider-image-02.jpg" alt="Image Slider">
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+            <div class="content">
+              <div class="gallery">
+                <div class="gallery-control"><a href="javascript:void(0);" data-filter="*" class="gallery-control__item">all</a><a href="javascript:void(0);" data-filter=".featured" class="gallery-control__item">featured</a><a href="javascript:void(0);" data-filter=".furniture" class="gallery-control__item">furniture</a><a href="javascript:void(0);" data-filter=".decoration" class="gallery-control__item">decoration</a><a href="javascript:void(0);" data-filter=".lighting" class="gallery-control__item">lighting</a><a href="javascript:void(0);" data-filter=".electronics" class="gallery-control__item">electronics</a></div>
+                <ul class="gallery-content">
+                  <li class="gallery-content__sizer"></li>
+                  <li class="gallery-content__item furniture"><a href="javascript:void(0);">
+                      <figure class="gallery-image"><img src="/static/img/assets/content/product-image-01.png" alt="Product Image"></figure>
+                      <div class="gallery-info">
+                        <p class="gallery-category">furniture</p>
+                        <h3 class="gallery-title">big black chair</h3>
+                        <p class="gallery-price">$99</p>
+                      </div></a></li>
+                  <li class="gallery-content__item decoration"><a href="javascript:void(0);">
+                      <figure class="gallery-image"><img src="/static/img/assets/content/product-image-02.png" alt="Product Image"></figure>
+                      <div class="gallery-info">
+                        <p class="gallery-category">decoration</p>
+                        <h3 class="gallery-title">bright wall clock</h3>
+                        <p class="gallery-price">$89</p>
+                      </div></a></li>
+                  <li class="gallery-content__item featured special"><a href="javascript:void(0);">
+                      <p class="special-label">special</p>
+                      <div class="special__info">
+                        <h2 class="special__title">vifa <br> speaker</h2>
+                        <p class="special__price">$49 <span>$89</span></p>
+                      </div></a></li>
+                  <li class="gallery-content__item featured sales"><a href="javascript:void(0);">
+                      <div class="sales__caption">
+                        <h2 class="sales__title">60 <span class='sales__percentage'>%</span></h2>
+                        <p class="sales__brief">Flash Sale</p>
+                      </div>
+                      <p class="sales__slogan">Just use coupon code 60 WINTER for getting your discount.</p></a></li>
+                  <li class="gallery-content__item decoration"><a href="javascript:void(0);">
+                      <figure class="gallery-image"><img src="/static/img/assets/content/product-image-03.png" alt="Product Image"></figure>
+                      <div class="gallery-info">
+                        <p class="gallery-category">decoration</p>
+                        <h3 class="gallery-title">stewie floor lamp</h3>
+                        <p class="gallery-price">$99</p>
+                      </div></a></li>
+                  <li class="gallery-content__item furniture"><a href="javascript:void(0);">
+                      <figure class="gallery-image"><img src="/static/img/assets/content/product-image-04.png" alt="Product Image"></figure>
+                      <div class="gallery-info">
+                        <p class="gallery-category">furniture</p>
+                        <h3 class="gallery-title">classic chair</h3>
+                        <p class="gallery-price">$299</p>
+                      </div></a></li>
+                  <li class="gallery-content__item furniture"><a href="javascript:void(0);">
+                      <figure class="gallery-image"><img src="/static/img/assets/content/product-image-05.png" alt="Product Image"></figure>
+                      <div class="gallery-info">
+                        <p class="gallery-category">furniture</p>
+                        <h3 class="gallery-title">sheep bench felt</h3>
+                        <p class="gallery-price">$199</p>
+                      </div></a></li>
+                  <li class="gallery-content__item electronics"><a href="javascript:void(0);">
+                      <figure class="gallery-image"><img src="/static/img/assets/content/product-image-06.png" alt="Product Image"></figure>
+                      <div class="gallery-info">
+                        <p class="gallery-category">electronics</p>
+                        <h3 class="gallery-title">vifa loudspeaker</h3>
+                        <p class="gallery-price">$499</p>
+                      </div></a></li>
+                  <li class="gallery-content__item lighting"><a href="javascript:void(0);">
+                      <figure class="gallery-image"><img src="/static/img/assets/content/product-image-07.png" alt="Product Image"></figure>
+                      <div class="gallery-info">
+                        <p class="gallery-category">lighting</p>
+                        <h3 class="gallery-title">muuto lamp</h3>
+                        <p class="gallery-price">$99</p>
+                      </div></a></li>
+                </ul>
+                <button type="button" class="gallery-content-open">show more</button>
+              </div>
+            </div>
+            <div class="subscribe">
+              <div class="subscribe__center">
+                <nav class="social"><a href="javascript:void(0);" class="social__icon social__icon--facebook">
+            <svg class="subscribe-icon" width="16px" height="16px">
+                <use xlink:href="../svg-symbols.svg#facebook"></use>
+            </svg>
+        </a><a href="javascript:void(0);" class="social__icon social__icon--twitter">
+            <svg class="subscribe-icon" width="16px" height="16px">
+                <use xlink:href="../svg-symbols.svg#twitter"></use>
+            </svg>
+        </a><a href="javascript:void(0);" class="social__icon social__icon--instagram">
+            <svg class="subscribe-icon" width="16px" height="16px">
+                <use xlink:href="../svg-symbols.svg#instagram"></use>
+            </svg>
+        </a></nav>
+                <div class="subscribe-holder">
+                  <p class="subscribe-form-label">Subscribe to get <span>update</span></p>
+                  <form class="subscribe-form">
+                    <input type="email" id="subscribe-form-email" name="subscribe-form-email" placeholder="Your email ...">
+                    <button type="submit" id="subscribe-form-submit" name="subscribe-form-submit">subscribe</button>
+                  </form>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="hero__content">
-                  <h3 class="hero__title">Sammen Armchair</h3>
-                  <div class="hero__data"><span class="price">$399</span><a href="javascript:void()" target="_blank" class="buy">buy now</a></div>
-                </div>
-                <div class="hero__image">
-                    <div class="badge">new</div><img src="/static/img/assets/hero/slider-image-01.jpg" alt="Image Slider">
-                </div>
-              </div>
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-        <ul class="navigation">
-          <li class="navigation__item"><a href="javascript:void();" class="navigation__link">featured</a></li>
-          <li class="navigation__item"><a href="javascript:void();" class="navigation__link">furniture</a></li>
-          <li class="navigation__item"><a href="javascript:void();" class="navigation__link">decoration</a></li>
-          <li class="navigation__item"><a href="javascript:void();" class="navigation__link">lighting</a></li>
-          <li class="navigation__item"><a href="javascript:void();" class="navigation__link">electronics</a></li>
-        </ul>
-        <div class="gallery">
-          <div class="gallery__item">
-            <div class="gallery__image"><img src="" alt="Gallery Image"></div>
-            <div class="gallery__content">
-              <h4 class="category">furniture</h4>
-              <h3 class="title">big black chair</h3>
-              <h2 class="price">$249</h2>
-            </div>
-          </div>
-          <div class="gallery__item">
-            <div class="gallery__image"><img src="" alt="Gallery Image"></div>
-            <div class="gallery__content">
-              <h4 class="category">decoration</h4>
-              <h3 class="title">big black chair</h3>
-              <h2 class="price">$249</h2>
-            </div>
-          </div>
-          <div class="gallery__item">
-            <div class="gallery__image"><img src="" alt="Gallery Image"></div>
-            <div class="gallery__content">
-              <h4 class="category">furniture</h4>
-              <h3 class="title">big black chair</h3>
-              <h2 class="price">$249</h2>
-            </div>
-          </div>
-          <div class="gallery__item">
-            <div class="gallery__image"><img src="" alt="Gallery Image"></div>
-            <div class="gallery__content">
-              <h4 class="category">furniture</h4>
-              <h3 class="title">big black chair</h3>
-              <h2 class="price">$249</h2>
-            </div>
-          </div>
-          <div class="gallery__item">
-            <div class="gallery__image"><img src="" alt="Gallery Image"></div>
-            <div class="gallery__content">
-              <h4 class="category">furniture</h4>
-              <h3 class="title">big black chair</h3>
-              <h2 class="price">$249</h2>
-            </div>
-          </div>
-          <div class="gallery__item">
-            <div class="gallery__image"><img src="" alt="Gallery Image"></div>
-            <div class="gallery__content">
-              <h4 class="category">furniture</h4>
-              <h3 class="title">big black chair</h3>
-              <h2 class="price">$249</h2>
-            </div>
-          </div>
-          <div class="gallery__item">
-            <div class="gallery__image"><img src="" alt="Gallery Image"></div>
-            <div class="gallery__content">
-              <h4 class="category">furniture</h4>
-              <h3 class="title">big black chair</h3>
-              <h2 class="price">$249</h2>
-            </div>
-          </div>
-        </div>
+        </main>
       <div class="page__buffer"></div>
     </section>
     <div class="page__footer">
-        <footer class="footer"></footer>
+        <footer class="footer">
+          <div class="footer__center">
+            <div class="footer__primary">
+              <h1 class="footer__title">about us</h1>
+            </div>
+            <div class="footer__secondary">
+              <p class="footer__slogan">Soho make it possible for everyone to create a unique and personal look by introducing a large range of different fabrics, lovely patterns and beautiful colors. thank your for your attention.</p>
+              <div class="footer__content">
+                <div class="footer__main-list">
+                  <ul>
+                    <li><a href="javascript:void(0);">featured</a></li>
+                    <li><a href="javascript:void(0);">furniture</a></li>
+                    <li><a href="javascript:void(0);">decoration</a></li>
+                    <li><a href="javascript:void(0);">electronics</a></li>
+                    <li><a href="javascript:void(0);">lighting</a></li>
+                  </ul>
+                </div>
+                <div class="footer__second-list">
+                  <ul>
+                    <li><a href="javascript:void(0);">about us</a></li>
+                    <li><a href="javascript:void(0);">contact us</a></li>
+                    <li><a href="javascript:void(0);">delivery</a></li>
+                    <li><a href="javascript:void(0);">returns</a></li>
+                  </ul>
+                </div>
+                <div class="footer__content-info">
+                  <p>Copyright 2016 Soho Theme.</p>
+                  <p>Powered by <a href='javascript:void(0); target='_blank' rel='nofollow'>Shopify</a></p>
+                  <ul class="footer-social">
+                    <li><a href="javascript:void(0);" title="Visa" target="_blank" rel="nofollow">
+            <svg class="footer-icon" width="49px" height="17px">
+                <use xlink:href="../svg-symbols.svg#visa-icon"></use>
+            </svg>
+        </a></li>
+                    <li><a href="javascript:void(0);" title="MasterCard" target="_blank" rel="nofollow">
+            <svg class="footer-icon" width="50px" height="31px">
+                <use xlink:href="../svg-symbols.svg#mastercard-icon"></use>
+            </svg>
+        </a></li>
+                    <li><a href="javascript:void(0);" title="PayPal" target="_blank" rel="nofollow">
+            <svg class="footer-icon" width="60px" height="20px">
+                <use xlink:href="../svg-symbols.svg#paypal-icon"></use>
+            </svg>
+        </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
     </div>
     <script src="/static/js/separate-js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>

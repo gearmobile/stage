@@ -9,6 +9,8 @@
     padding: 6rem 0
     display: flex
     justify-content: center
+    border-right: 1px solid #e8e8e8
+    border-left: 1px solid #e8e8e8
 
     &__item
         text-transform: capitalize
@@ -29,7 +31,8 @@
 // -----------------------------------------
 
 .gallery-content
-    border-top: 1px solid #e8e8e8
+    border: 1px solid #e8e8e8
+    margin: 0 0 10px 0
 
 .gallery-content::before
 .gallery-content::after
@@ -123,9 +126,6 @@
             height: .2rem
             width: 2rem
 
-    &:hover
-        background-color: darken($color-fusia, 10%)
-
     & .sales__title
         font-size: 11.6rem
         color: rgba($color-white, .5)
@@ -150,6 +150,9 @@
     padding: 4rem
     transition: background-color .2s
     will-change: background-color
+
+    &:hover
+        background-color: rgba($color-black, .1)
 
 
     // HOVER EFFECT

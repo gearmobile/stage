@@ -17,7 +17,9 @@ window.addEventListener('load', function () {
     var sidebarWidth = 400;
     var navbarWidth = 400;
     var btnSidebar = document.querySelector('.button-sidebar');
+    var closeSidebar = document.querySelector('.sidebar-close');
     var btnNavbar = document.querySelector('.button-navbar');
+    var closeNavbar = document.querySelector('.navbar-button');
 
 
     var leftSlideout = new Slideout({
@@ -48,6 +50,11 @@ window.addEventListener('load', function () {
 
     });
 
+    closeSidebar.addEventListener('click', function () {
+        leftSlideout.close();
+    });
+
+
     leftSlideout.on('beforeopen', function () {
         blockFixed.classList.add('fixed-open-left');
     });
@@ -68,6 +75,10 @@ window.addEventListener('load', function () {
 
     });
 
+    closeNavbar.addEventListener('click', function () {
+        rightSlideout.close();
+    });
+
     rightSlideout.on('beforeopen', function () {
         blockFixed.classList.add('fixed-open-right');
     });
@@ -75,6 +86,7 @@ window.addEventListener('load', function () {
     rightSlideout.on('beforeclose', function () {
         blockFixed.classList.remove('fixed-open-right');
     });
+
 
 
     // SWIPER SLIDER
