@@ -1,0 +1,26 @@
+.hero
+    height: 90rem
+    background: url('%=static=%assets/hero/hero-bg.jpg') 50% 50% no-repeat
+    background-size: cover
+
+    &__center
+        lost-center $width
+        display: flex
+        flex-direction: column
+        position: relative
+        justify-content: center;
+        height: 90rem
+
+    &__logo
+        position: absolute
+        left: 0
+        top: 10rem
+        width: 8rem
+        height: 8rem
+        background: url('%=static=%assets/hero/hero-logo.jpg') 50% 50% no-repeat
+        background-size: cover
+
+    &__button
+        position: absolute
+        right: 0
+        top: 10rem

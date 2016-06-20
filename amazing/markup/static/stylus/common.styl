@@ -1,0 +1,50 @@
+// Common styles of the project
+
+*,*::before,*::after
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+html, body
+    height 100%
+    width: 100%
+
+h1, h2, h3, h4, p
+    margin: 0
+
+ul, ol
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+a
+    text-decoration: none
+
+    &:focus
+    &:active
+        outline: none
+
+button
+    cursor: pointer
+
+img
+    display: block
+    width: 100%
+    height: auto
+
+.page
+    font-size: 1.6rem
+    line-height: 1
+    font-family: sans-serif
+
+.page__wrapper
+    min-height 100%
+    margin-bottom -50px
+
+
+* html .page__wrapper
+    height 100%
+
+.page__buffer
+    height 50px

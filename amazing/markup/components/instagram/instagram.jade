@@ -1,0 +1,21 @@
+include ../button/button
+
+mixin instagram(data)
+    .instagram
+        ul.instagram__row.instagram__row--firts
+            li.instagram__column
+            li.instagram__column
+                h3.instagram__title sed faucibus quis
+                p Fusce bibendum luctus massa, ut tincidunt lectus tincidunt in. Nulla tristique ipsum vitae lacus ullamcorper, at dictum nunc scelerisque.
+        ul.instagram__row.instagram__row--second
+            li.instagram__column
+            li.instagram__column
+            li.instagram__column
+            li.instagram__column
+        ul.instagram__row.instagram__row--third
+            li.instagram__column
+                h3.instagram__title instagram
+                p Etiam lacus dolor, tincidunt vitae nisi in, vulputate placerat odio. Pellentesque iaculis.
+                +button('view on instagram')
+            li.instagram__column
+            li.instagram__column
