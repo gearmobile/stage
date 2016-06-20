@@ -100,7 +100,9 @@ window.addEventListener('load', function () {
     // --------------------------------------------------
     swiper('.main .swiper-container', {
         pagination: '.swiper-pagination',
-        paginationClickable: true
+        paginationClickable: true,
+        grabCursor: true,
+        loop: true
         // autoplay: 3500
     });
 
