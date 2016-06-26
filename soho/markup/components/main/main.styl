@@ -6,39 +6,42 @@
     background: #f2f5f9
     margin: 6rem 0 0
 
-
-// SWIPER SLIDER
-// -----------------------------------------------
-
-.main .swiper-container
-    lost-center $width
-    height: 100%;
+.main__wrapper
+    padding: 0 $gutter
 
 
-.main .swiper-slide
-    display: flex
-    align-items: center
-    height: 70rem
-    position: relative
+    // SWIPER SLIDER
+    // -----------------------------------------------
+
+    & .swiper-container
+        lost-center $width
+        height: 100%
 
 
-.main .swiper-pagination
-    bottom: 20%
-    display: flex;
-
-.main .swiper-pagination .swiper-pagination-bullet
-    width: 1.2rem
-    height: 1.2rem
-    opacity: 1
-    background-color: rgba($color-black, .2)
-    transition: background-color .2s
-    will-change background-color
-    margin: 0 .8rem
+    & .swiper-slide
+        display: flex
+        align-items: center
+        height: 70rem
+        position: relative
 
 
-.main .swiper-pagination .swiper-pagination-bullet-active,
-.main .swiper-pagination .swiper-pagination-bullet:hover
-    background-color: $color-red
+    & .swiper-pagination
+        bottom: 20%
+        display: flex;
+
+    & .swiper-pagination .swiper-pagination-bullet
+        width: 1.2rem
+        height: 1.2rem
+        opacity: 1
+        background-color: rgba($color-black, .2)
+        transition: background-color .2s
+        will-change background-color
+        margin: 0 .8rem
+
+
+    & .swiper-pagination .swiper-pagination-bullet-active,
+    & .swiper-pagination .swiper-pagination-bullet:hover
+        background-color: $color-red
 
 
 // SLIDER INFO

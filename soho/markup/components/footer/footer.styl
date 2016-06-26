@@ -19,6 +19,13 @@
         @media screen and (max-width: $bp980)
             display: none
 
+        @media screen and (max-width: $bp600)
+            display: block
+            lost-column 1/1
+            lost-column-gutter 0
+            text-align: center
+            margin: 0 0 4rem
+
 
     // FOOTER TITLE
     // ---------------------------------------
@@ -40,6 +47,9 @@
             lost-column-gutter 0
             padding: 0 $gutter
 
+        @media screen and (max-width: $bp600)
+            padding: 0
+
     &__slogan
         font: 1.8rem/1.6 $work-sans-regular
         color: $color-white
@@ -58,13 +68,22 @@
         @media screen and (max-width: $bp980)
             padding: 0 6rem
 
+        @media screen and (max-width: $bp768)
+            padding: 0
+
     &__main-list
         lost-column 2/9
         lost-column-gutter $gutter
 
+        @media screen and (max-width: $bp600)
+            display: none
+
     &__second-list
         lost-column 2/9
         lost-column-gutter $gutter
+
+        @media screen and (max-width: $bp600)
+            display: none
 
     &__main-list
     &__second-list
@@ -98,7 +117,11 @@
         lost-column-gutter $gutter
 
         @media screen and (max-width: $bp980)
-            text-align: center;
+            text-align: center
+
+        @media screen and (max-width: $bp600)
+            lost-column 1/1
+            lost-column-gutter 0
 
         & p
             font: 1.8rem/1 $josefin-sans-semibold
@@ -119,6 +142,12 @@
                 &:active
                     color: #acdadc
                     border-color: #acdadc
+
+            @media screen and (max-width: $bp600)
+                margin: 0 0 2rem
+
+                &:last-child
+                    margin-bottom: 0
 
         // FOOTER SOCIAL
         // ---------------------------------------

@@ -6,6 +6,12 @@
         lost-center $width flex
         padding: 0 $gutter
 
+        @media screen and (max-width: $bp1180)
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+
     // SUBSCRIBE ICONS
     // ---------------------------------------------------
 
@@ -13,13 +19,19 @@
         lost-column 3/12
         lost-column-gutter 0
         display: flex
-        justify-content: center;
+        justify-content: center
         box-shadow: .1rem 0 0 0 #e8e8e8
 
+        @media screen and (max-width: $bp1180)
+            order: 2
+            box-shadow: none
+            lost-column 1/1
+            lost-column-gutter 0
+
         &__icon
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex
+            justify-content: center
+            align-items: center
             width: 6rem
             height: 6rem
             margin: 0 .8rem
@@ -58,8 +70,17 @@
         align-items: center
         justify-content: space-between
 
+        @media screen and (max-width: $bp1180)
+            order: 1
+            lost-column 1/1
+            lost-column-gutter 0
+            padding: 0
+            margin: 0 0 5rem
+            justify-content: center
+            flex-direction: column
+
     .subscribe-form-label
-        lost-column 4/9
+        lost-column 4/9 flex
         lost-column-gutter 0
         font: 2.6rem/1 $josefin-sans-regular
         color: $color-dark
@@ -67,6 +88,13 @@
 
         span
             font-family: $josefin-sans-semibold
+
+        @media screen and (max-width: $bp1180)
+            lost-column 1/1
+            lost-column-gutter 0
+            text-align: center
+            margin: 0 0 4rem
+
 
     .subscribe-form
         lost-column 5/9
@@ -77,7 +105,7 @@
         justify-content: space-between
 
         input
-            float: left;
+            float: left
             height: 6rem
             width: 38rem
             background-color: #fcfafa
@@ -91,21 +119,48 @@
             &:hover
                 border-color: darken(#e8e8e8, 20%)
 
+            @media screen and (max-width: $bp1180)
+                margin: 0 1rem 0 0
+
+            @media screen and (max-width: $bp480)
+                float: none
+                display: block
+                width: 100%
+                margin: 0 0 2rem
+
         button
-            float: right;
+            float: right
             height: 6rem
             width: 17.6rem
             background-color: #acdadc
             border: none
             padding: 0
-            font: 2rem/1 $josefin-sans-bold
+            font: 2rem / 1 $josefin-sans-bold
             color: $color-white
-            text-transform: capitalize;
+            text-transform: capitalize
             will-change: background-color
             transition: background-color .2s
 
             &:hover
                 background-color: darken(#acdadc, 20%)
+
+            @media screen and (max-width: $bp1180)
+                margin: 0 0 0 1rem
+
+            @media screen and (max-width: $bp480)
+                float: none
+                display: block
+                width: 100%
+                margin: 0
+
+        @media screen and (max-width: $bp1180)
+            lost-column 1/1
+            lost-column-gutter 0
+            padding: 0
+            justify-content: center
+
+        @media screen and (max-width: $bp480)
+            flex-direction: column
 
 
 

@@ -32,7 +32,7 @@
 
 .gallery-content
     border: 1px solid #e8e8e8
-    margin: 0 0 10px 0
+    //margin: 0 0 10px 0
 
 .gallery-content::before
 .gallery-content::after
@@ -51,6 +51,12 @@
     flex-direction: column
     justify-content: center
     align-items: center
+
+    @media screen and ( max-width: $bp980 )
+        width: 50%
+
+        &:nth-child(n+6)
+            display: none
 
 
 // SPECIAL

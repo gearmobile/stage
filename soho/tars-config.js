@@ -5,6 +5,9 @@ module.exports = {
             "options": {
                 "gutter": "15px"
             }
+        },
+        {
+            "name": "postcss-flexibility"
         }
     ],
     "svg": {
