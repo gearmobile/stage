@@ -1,4 +1,9 @@
 .header-top
+    position: fixed
+    width: 100%
+    top: 0
+    left: 0
+    z-index: 99
     padding: 2rem 0
     background-color: #f5f5f5
     box-shadow: 0 .2rem .4em 0 rgba( $color-black, .2)
@@ -20,17 +25,39 @@
             font: 1.3rem/1 $open_sans-regular
             color: #8ea3ad
 
+        // HEADER LANGUAGE ---------------------------------
+
         & .header-top__language
             position: relative
+            margin: 0 1rem 0 0
+            width: 10rem
+            cursor: pointer
+            background-color: lightcoral;
 
             & ul
                 position: absolute
-                padding: 1rem
+                top: 2.4rem
+                left: 0
+                padding: 2rem 1rem
                 background-color: $color-grey
                 min-width: 20rem
 
+                & li
+                    margin: 0 0 1rem
+
+                    &:last-child
+                        margin-bottom: 0
+
+                & a
+                    color: $color-white
+                    padding: 0 0 0 1rem
+
+        // HEADER CURRENCY ---------------------------------
+
         & .header-top__currency
             position: relative
+            cursor: pointer
+            width: 10rem
 
             & ul
                 position: absolute
@@ -38,6 +65,7 @@
                 background-color: $color-grey
                 min-width: 20rem
                 display: none;
+
 
     // HEADER SECONDARY
     // ---------------------------------------------------
