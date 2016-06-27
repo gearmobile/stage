@@ -3,13 +3,14 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head
     include ../components/header/header
+    include ../components/header-top/header-top
     include ../components/footer/footer
 
     head
         +head(head.defaults)
     body.page
         |%=symbols=%
-
+        +header-top()
         section.page__wrapper
 
             //- Include your components here

@@ -7,6 +7,20 @@ mixin header(data)
                         h1 cherry<span>shop</span>
                         small top of the fashion
                 .header__form
+                    form
+                        input( type='text' name='search-input' id='search-input' placeholder='search ...' )
+                        button( type='button' name='search-button' id='search-button' )
+                            != jadeHelpers.Icon.call(locals, {iconName: 'search', className: 'search-icon'})
+                    .header__entry
+                        ul.header__entry--primary
+                            li
+                                ul.header__entry--secondary
+                                    li.header__entry--login: a( href='javascript:void(0);' ) Welcome Login
+                                    li.header__entry--register: a( href='javascript:void(0);' ) Create an account
+                            li.header__entry--cart
+                                .header__entry--icon
+                                    != jadeHelpers.Icon.call(locals, {iconName: 'briefcase', className: 'cart-icon'})
+                                a( href='javascript:void(0);' ) 0 item(s) - <span>$0.00</span>
         .header__secondary
             .header__center
                 ul.header__menu
@@ -17,3 +31,7 @@ mixin header(data)
                     li: a( href='javascript:void(0);' ) interiors
                     li: a( href='javascript:void(0);' ) kitchen
                     li: a( href='javascript:void(0);' ) house holds
+
+
+
+
