@@ -1,0 +1,103 @@
+.footer
+    background: url('%=static=%assets/footer/footer-bg.jpg') 50% 50% no-repeat
+    background-size: cover
+
+    &__center
+        lost-center $width flex
+        padding: 0 $gutter
+
+    &__primary
+    &__secondary
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+
+    // FOOTER PRIMARY SECTION
+    // ---------------------------------------------
+
+    &__primary
+        lost-column 8/12
+        lost-column-gutter 0
+        padding: 2rem 10rem 2rem 0
+
+        @media screen and ( max-width: $bp768 )
+            lost-column 1/1
+            padding: 4rem 0
+            align-items: center
+            text-align: center
+
+    &__title
+        text-transform: capitalize
+        font: 2.4rem/1 $roboto-regular
+        margin: 0 0 2rem
+
+    & p
+        font: 1.4rem/1.4 $open_sans-regular
+        margin: 0 0 2rem
+
+
+    // FOOTER SECONDARY SECTION
+    // ---------------------------------------------
+
+    &__secondary
+        lost-column 4/12
+        lost-column-gutter 0
+        background-color: rgba( $color-white, .2 )
+        align-items: center
+        padding: 2rem 0
+
+        @media screen and ( max-width: $bp768 )
+            lost-column 1/1
+            padding: 4rem 0
+
+    &__menu
+        list-style-type: disc
+
+        & li
+            margin: 0 0 1rem
+
+            &:last-child
+                margin-bottom: 0
+
+        & a
+            text-transform: capitalize
+            color: $color-white
+            font: 1.4rem/1 $open_sans-regular
+            transition: color .2s
+
+            &:hover
+            &:active
+                color: $color-green
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

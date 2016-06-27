@@ -1,0 +1,56 @@
+.header
+    background-color: $color-white
+
+    &__center
+        lost-center $width
+
+
+    // HEADER PRIMARY
+    // ----------------------------------------------
+
+    &__primary
+        padding: 3rem 2rem
+
+        & .header__center
+            justify-content: space-between
+
+        & .header__logo
+            text-transform: uppercase
+
+            & h1
+                font: 3.2rem/1 $glegoo-regular
+                color: #3b5c6c
+
+                & span
+                    font: 3.2rem/1 $concert_one-regular
+
+            & small
+                text-transform: uppercase
+                font: 1.4rem/1 Tahoma, Verdana, Segoe, sans-serif
+                color:$color-green
+                letter-spacing 0.2rem
+
+
+    // HEADER SECONDARY
+    // ----------------------------------------------
+
+    &__secondary
+        background-color: $color-green
+        border-bottom: .2rem solid $color-white
+        box-shadow: 0 .2rem .4rem 0 rgba( $color-black, .2)
+
+    &__menu
+        display: flex
+
+        & a
+            display: block
+            padding: 1.6rem 1rem
+            text-transform: uppercase
+            font: 1.6rem/1 $roboto-regular
+            color: $color-white
+            text-shadow .1rem .1rem .1rem rgba( $color-black, .2)
+            transition: background-color .2s
+
+            &:hover
+            &:focus
+                background-color: $color-grey
