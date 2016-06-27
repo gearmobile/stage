@@ -1,32 +1,44 @@
 'use strict';
 
-var menuCurrency = document.querySelector( '#header-currency' );
-var menuCurrencyList = document.querySelector( '#header-currency-list' );
-var menuLanguage = document.querySelector( '#header-language' );
-var menuLanguageList = document.querySelector( '#header-language-list' );
+window.addEventListener( 'DOMContentLoaded', function () {
 
 
-// OPEN LANGUAGE MENU
-// ----------------------------------------------------------
-menuLanguage.addEventListener( 'click', function ( event ) {
-    event.preventDefault();
-    menuLanguageList.classList.add('is-visible');
+    var menuLanguage = document.querySelector('#header-language');
+    var menuLanguageList = document.querySelector('#header-language-list');
+
+    var menuCurrency = document.querySelector('#header-currency');
+    var menuCurrencyList = document.querySelector( '#header-currency-list');
+
+
+    // OPEN LANGUAGE MENU
+    // ----------------------------------------------------------
+    menuLanguage.addEventListener( 'click', function () {
+        menuLanguageList.classList.add('is-active');
+    }, false );
+
+    // CLOSE LANGUAGE MENU
+    // ----------------------------------------------------------
+    document.addEventListener( 'click', function ( event ) {
+        if ( event.target.id !== menuLanguage.id && event.target.id !== menuLanguageList.id && menuLanguageList.classList.contains('is-active') ) {
+            menuLanguageList.classList.remove('is-active');
+        }
+    }, false );
+
+
+    // OPEN CURRENCY MENU
+    // ----------------------------------------------------------
+    menuCurrency.addEventListener( 'click', function () {
+        menuCurrencyList.classList.add('is-active');
+    }, false );
+
+
+    // CLOSE CURRENCY MENU
+    // ----------------------------------------------------------
+    document.addEventListener( 'click', function ( event ) {
+        if ( event.target.id !== menuCurrency.id && event.target.id !== menuCurrencyList.id && menuCurrencyList.classList.contains('is-active') ) {
+            menuCurrencyList.classList.remove('is-active');
+        }
+    }, false );
+
+
 }, false );
-
-// OPEN CURRENCY MENU
-// ----------------------------------------------------------
-menuCurrency.addEventListener( 'click', function ( event ) {
-    event.preventDefault();
-    menuCurrencyList.classList.add('is-visible');
-    //var className = menuCurrencyList.className;
-    //console.log(className);
-}, false );
-
-document.addEventListener( 'click', function ( event ) {
-    if ( event.target.id !== menuCurrencyList.id ) {
-        //console.log(menuCurrencyList.id);
-        menuCurrencyList.classList.remove('is-visible');
-    }
-});
-
-//console.log(menuCurrencyList.className);

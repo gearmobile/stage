@@ -2,25 +2,35 @@ mixin header-top(data)
     .header-top
         .header-top__center
             .header-top__primary
-                ul.header-top__language#header-language
+                ul.header-top__language
                     li
-                        a( href='javascript:void(0);' ) language
+                        a#header-language( href='javascript:void(0);' ) language
                         ul#header-language-list
-                            li: a( href='javascript:void(0);' ) language item
-                            li: a( href='javascript:void(0);' ) language item
-                            li: a( href='javascript:void(0);' ) language item
-                            li: a( href='javascript:void(0);' ) language item
-                ul.header-top__currency#header-currency
+                            li
+                                a( href='javascript:void(0);' ) language item
+                            li
+                                a( href='javascript:void(0);' ) language item
+                            li
+                                a( href='javascript:void(0);' ) language item
+                            li
+                                a( href='javascript:void(0);' ) language item
+                ul.header-top__currency
                     li
-                        a( href='javascript:void(0);' ) currency
+                        a#header-currency( href='javascript:void(0);' ) currency
                         ul#header-currency-list
-                            li: a( href='javascript:void(0);' ) currency item
-                            li: a( href='javascript:void(0);' ) currency item
-                            li: a( href='javascript:void(0);' ) currency item
-                            li: a( href='javascript:void(0);' ) currency item
+                            li
+                                a( href='javascript:void(0);' ) currency item
+                            li
+                                a( href='javascript:void(0);' ) currency item
+                            li
+                                a( href='javascript:void(0);' ) currency item
+                            li
+                                a( href='javascript:void(0);' ) currency item
             ul.header-top__secondary
-                li.header-top__account: a( href='javascript:void(0);' ) my account
-                li.header-top__list: a( href='javascript:void(0);' ) wish list <span>(0)</span>
+                li.header-top__account
+                    a( href='javascript:void(0);' ) my account
+                li.header-top__list
+                    a( href='javascript:void(0);' ) wish list <span>(0)</span>
 
 
 

@@ -30,41 +30,77 @@
         & .header-top__language
             position: relative
             margin: 0 1rem 0 0
+            /*cursor: pointer*/
+
+        & #header-language
+            display: block
             width: 10rem
-            cursor: pointer
-            background-color: lightcoral;
 
-            & ul
-                position: absolute
-                top: 2.4rem
-                left: 0
-                padding: 2rem 1rem
-                background-color: $color-grey
-                min-width: 20rem
+            &:hover
+                color: $color-green
 
-                & li
-                    margin: 0 0 1rem
+        & #header-language-list
+            position: absolute
+            z-index: 98
+            top: 2.4rem
+            left: 0
+            padding: 2rem 1rem
+            background-color: $color-grey
+            min-width: 20rem
+            opacity: 0
+            visibility: hidden
 
-                    &:last-child
-                        margin-bottom: 0
+            & li
+                margin: 0 0 1rem
 
-                & a
-                    color: $color-white
-                    padding: 0 0 0 1rem
+                &:last-child
+                    margin-bottom: 0
+
+            & a
+                color: $color-white
+                padding: 0 0 0 1rem
+
+            &.is-active
+                opacity: 1
+                visibility: visible
 
         // HEADER CURRENCY ---------------------------------
 
         & .header-top__currency
             position: relative
             cursor: pointer
+
+        & #header-currency
+            display: block
             width: 10rem
 
-            & ul
-                position: absolute
-                padding: 1rem
-                background-color: $color-grey
-                min-width: 20rem
-                display: none;
+            &:hover
+                color: $color-green
+
+        & #header-currency-list
+            position: absolute
+            z-index: 98
+            top: 2.4rem
+            left: 0
+            padding: 2rem 1rem
+            background-color: $color-grey
+            min-width: 20rem
+            opacity: 0
+            visibility: hidden
+
+            & li
+                margin: 0 0 1rem
+
+                &:last-child
+                    margin-bottom: 0
+
+            & a
+                color: $color-white
+                padding: 0 0 0 1rem
+
+            &.is-active
+                opacity: 1
+                visibility: visible
 
 
     // HEADER SECONDARY
