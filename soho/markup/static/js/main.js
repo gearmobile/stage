@@ -4,6 +4,8 @@ var swiper = require('swiper');
 var Slideout = require('slideout');
 var Isotope = require('isotope-layout');
 var imagesLoaded = require('imagesLoaded');
+var select2 = require('select2');
+var $ = require('jquery');
 
 
 window.addEventListener('load', function () {
@@ -112,6 +114,7 @@ window.addEventListener('load', function () {
     var grid = document.querySelector('.gallery-content');
     var filtersElem = document.querySelector('.gallery-control');
     var iso;
+
     imagesLoaded( grid, function () {
         iso = new Isotope( grid, {
             itemSelector: '.gallery-content__item',
@@ -126,6 +129,30 @@ window.addEventListener('load', function () {
     filtersElem.addEventListener( 'click', function ( event ) {
         iso.arrange({ filter: event.target.getAttribute('data-filter') });
     });
+
+
+    // SELECT
+    // ----------------------------------------------------
+    $('.gallery-control--mobile').select2({
+        placeholder: 'Select a state'
+    });
+
+
+    // CHANGE IMAGE IN SLIDER
+    // ----------------------------------------------------
+    var slideSecondImage = $('.swiper-container .swiper-slide__second img');
+    var bp900 = 900;
+
+    function changeImagePath() {
+        if ( $(window).width() <= bp900 ) {
+            $( slideSecondImage ).attr( 'src', '/static/img/assets/main/slider-image-02-mobile.png' );
+        } else {
+            $( slideSecondImage ).attr( 'src', '/static/img/assets/main/slider-image-02.png' );
+        }
+    }
+    changeImagePath();
+    $(window).on( 'load', changeImagePath );
+    $(window).on( 'resize', changeImagePath );
 
 
 }, false);

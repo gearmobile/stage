@@ -2,12 +2,21 @@ mixin content(data)
     .content
         .gallery
             .gallery-control
-                a.gallery-control__item(href='javascript:void(0);' data-filter='*') all
-                a.gallery-control__item(href='javascript:void(0);' data-filter='.featured') featured
-                a.gallery-control__item(href='javascript:void(0);' data-filter='.furniture') furniture
-                a.gallery-control__item(href='javascript:void(0);' data-filter='.decoration') decoration
-                a.gallery-control__item(href='javascript:void(0);' data-filter='.lighting') lighting
-                a.gallery-control__item(href='javascript:void(0);' data-filter='.electronics') electronics
+                .gallery-control__wrapper
+                    a.gallery-control__item(href='javascript:void(0);' data-filter='*') all
+                    a.gallery-control__item(href='javascript:void(0);' data-filter='.featured') featured
+                    a.gallery-control__item(href='javascript:void(0);' data-filter='.furniture') furniture
+                    a.gallery-control__item(href='javascript:void(0);' data-filter='.decoration') decoration
+                    a.gallery-control__item(href='javascript:void(0);' data-filter='.lighting') lighting
+                    a.gallery-control__item(href='javascript:void(0);' data-filter='.electronics') electronics
+
+                .gallery-control__holder
+                    select.gallery-control--mobile( style='width: 384px' )
+                        option(value='featured') category: featured
+                        option(value='furniture') category: furniture
+                        option(value='decoration') category: decoration
+                        option(value='lighting') category: lighting
+                        option(value='electronics') category: electronics
 
             ul.gallery-content
 

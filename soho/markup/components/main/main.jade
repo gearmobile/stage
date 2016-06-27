@@ -14,7 +14,7 @@ mixin main(data)
                                 a.slider-link(href='javascript:void(0);') buy now
                         .slider-image
                             img(src="%=static=%img/assets/main/slider-image-01.png" alt="Slider Image")
-                        .slider-label new
+                            .slider-label new
                     .swiper-slide.swiper-slide__second
                         .slider-content
                             h2.slider-title braun classic
@@ -22,8 +22,9 @@ mixin main(data)
                                 p.slider-price $275
                                 a.slider-link(href='javascript:void(0);') buy now
                         .slider-image
-                            img(src="%=static=%img/assets/main/slider-image-02.png" alt="Slider Image")
-                        .slider-label new
+                            //img(src="%=static=%img/assets/main/slider-image-02.png" alt="Slider Image")
+                            img(src="" alt="Slider Image")
+                            .slider-label new
                     .swiper-slide.swiper-slide__third
                         .slider-content
                             h2.slider-title sammen armchair
@@ -32,7 +33,7 @@ mixin main(data)
                                 a.slider-link(href='javascript:void(0);') buy now
                         .slider-image
                             img(src="%=static=%img/assets/main/slider-image-01.png" alt="Slider Image")
-                        .slider-label new
+                            .slider-label new
                 .swiper-pagination
         +content()
         +subscribe()

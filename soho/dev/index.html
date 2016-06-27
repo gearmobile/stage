@@ -120,8 +120,9 @@
                       <p class="slider-price">$399</p><a href="javascript:void(0);" class="slider-link">buy now</a>
                     </div>
                   </div>
-                  <div class="slider-image"><img src="/static/img/assets/main/slider-image-01.png" alt="Slider Image"></div>
-                  <div class="slider-label">new</div>
+                  <div class="slider-image"><img src="/static/img/assets/main/slider-image-01.png" alt="Slider Image">
+                    <div class="slider-label">new</div>
+                  </div>
                 </div>
                 <div class="swiper-slide swiper-slide__second">
                   <div class="slider-content">
@@ -130,8 +131,10 @@
                       <p class="slider-price">$275</p><a href="javascript:void(0);" class="slider-link">buy now</a>
                     </div>
                   </div>
-                  <div class="slider-image"><img src="/static/img/assets/main/slider-image-02.png" alt="Slider Image"></div>
-                  <div class="slider-label">new</div>
+                  <div class="slider-image">
+                    <!--img(src="/static/img/assets/main/slider-image-02.png" alt="Slider Image")--><img src="" alt="Slider Image">
+                    <div class="slider-label">new</div>
+                  </div>
                 </div>
                 <div class="swiper-slide swiper-slide__third">
                   <div class="slider-content">
@@ -140,8 +143,9 @@
                       <p class="slider-price">$399</p><a href="javascript:void(0);" class="slider-link">buy now</a>
                     </div>
                   </div>
-                  <div class="slider-image"><img src="/static/img/assets/main/slider-image-01.png" alt="Slider Image"></div>
-                  <div class="slider-label">new</div>
+                  <div class="slider-image"><img src="/static/img/assets/main/slider-image-01.png" alt="Slider Image">
+                    <div class="slider-label">new</div>
+                  </div>
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -149,7 +153,18 @@
           </div>
             <div class="content">
               <div class="gallery">
-                <div class="gallery-control"><a href="javascript:void(0);" data-filter="*" class="gallery-control__item">all</a><a href="javascript:void(0);" data-filter=".featured" class="gallery-control__item">featured</a><a href="javascript:void(0);" data-filter=".furniture" class="gallery-control__item">furniture</a><a href="javascript:void(0);" data-filter=".decoration" class="gallery-control__item">decoration</a><a href="javascript:void(0);" data-filter=".lighting" class="gallery-control__item">lighting</a><a href="javascript:void(0);" data-filter=".electronics" class="gallery-control__item">electronics</a></div>
+                <div class="gallery-control">
+                  <div class="gallery-control__wrapper"><a href="javascript:void(0);" data-filter="*" class="gallery-control__item">all</a><a href="javascript:void(0);" data-filter=".featured" class="gallery-control__item">featured</a><a href="javascript:void(0);" data-filter=".furniture" class="gallery-control__item">furniture</a><a href="javascript:void(0);" data-filter=".decoration" class="gallery-control__item">decoration</a><a href="javascript:void(0);" data-filter=".lighting" class="gallery-control__item">lighting</a><a href="javascript:void(0);" data-filter=".electronics" class="gallery-control__item">electronics</a></div>
+                  <div class="gallery-control__holder">
+                    <select style="width: 384px" class="gallery-control--mobile">
+                      <option value="featured">category: featured</option>
+                      <option value="furniture">category: furniture</option>
+                      <option value="decoration">category: decoration</option>
+                      <option value="lighting">category: lighting</option>
+                      <option value="electronics">category: electronics</option>
+                    </select>
+                  </div>
+                </div>
                 <ul class="gallery-content">
                   <li class="gallery-content__sizer"></li>
                   <li class="gallery-content__item furniture"><a href="javascript:void(0);">

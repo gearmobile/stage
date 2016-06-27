@@ -7,8 +7,10 @@
   "dependencies": {
     "imagesloaded": "^4.1.0",
     "isotope-layout": "^3.0.1",
+    "jquery": "^3.0.0",
     "lost": "^6.8.1",
     "postcss-flexibility": "^1.0.3",
+    "select2": "^4.0.3",
     "slideout": "^0.1.12",
     "swiper": "^3.3.1"
   },

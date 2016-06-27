@@ -24,10 +24,17 @@
         height: 70rem
         position: relative
 
+        @media screen and ( max-width: $bp900 )
+            flex-direction: column
+
 
     & .swiper-pagination
         bottom: 20%
         display: flex;
+
+        @media screen and ( max-width: $bp900 )
+            bottom: 74%
+            justify-content: center
 
     & .swiper-pagination .swiper-pagination-bullet
         width: 1.2rem
@@ -44,18 +51,32 @@
         background-color: $color-red
 
 
-// SLIDER INFO
-// -----------------------------------------------
+    // SLIDER CONTENT
+    // -----------------------------------------------
 
-.main .slider-title
-    font: 4rem/1 $josefin-sans-bold
-    text-transform: capitalize
-    color: $color-dark
-    margin: 0 0 3rem
+    & .slider-content
+
+        @media screen and ( max-width: $bp900 )
+            width: 100%
+            text-align: center
+            margin: 4rem 0 0 0
+
+    & .slider-title
+        font: 4rem/1 $josefin-sans-bold
+        text-transform: capitalize
+        color: $color-dark
+        margin: 0 0 3rem
+
+
+// SLIDER CONTENT INFO
+// -----------------------------------------------
 
 .main .slider-info
     display: flex
     align-items: center
+
+    @media screen and ( max-width: $bp900 )
+        justify-content: center
 
 .main .slider-price
     font: 3rem/1 $work-sans-bold
@@ -74,39 +95,85 @@
         color: darken($color-red, 20%)
         border-color: darken($color-red, 20%)
 
+
+// SLIDER CONTENT IMAGE
+// -----------------------------------------------
+
 .main .slider-image
     position: absolute;
     right: 0
     bottom: 0
     z-index: 1
 
-    & img
-        vertical-align: top
+    & .slider-label
+        border-radius: 50%
+        width: 17.6rem
+        height: 17.6rem
+        background-color: $color-red
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font: 3rem/1 $montserrat-bold
+        color: $color-white
+        text-transform: uppercase
+        position: absolute
+        z-index: -1
 
-.main .slider-label
-    border-radius: 50%
-    width: 17.6rem
-    height: 17.6rem
-    background-color: $color-red
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font: 3rem/1 $montserrat-bold
-    color: $color-white
-    text-transform: uppercase
-    position: absolute
+        @media screen and ( max-width: $bp900 )
+            width: 14rem
+            height: 14rem
+            font: 2rem/1 $montserrat-bold
 
+        @media screen and ( max-width: $bp480 )
+            width: 12rem
+            height: 12rem
+
+    @media screen and ( max-width: $bp900 )
+        right: auto
+        left: 50%
+        transform: translateX(-50%)
+        width: 40rem
+        height: 45.6rem
+
+        @media screen and ( max-width: $bp480 )
+            width: 32rem
+
+
+// SLIDER LABEL FIRST
+// -----------------------------------------------
 .main .swiper-slide__first .slider-label
-    top: 9rem
-    right: 28rem
+    top: -2rem
+    left: 8rem
 
+    @media screen and ( max-width: $bp900 )
+        top: -2rem
+        left: 6rem
+
+    @media screen and ( max-width: $bp480 )
+        top: -2rem
+        left: 4rem
+
+
+// SLIDER LABEL SECOND
+// -----------------------------------------------
 .main .swiper-slide__second .slider-label
     top: 14rem
     right: 38rem
 
+
+// SLIDER LABEL THIRD
+// -----------------------------------------------
 .main .swiper-slide__third .slider-label
-    top: 9rem
-    right: 28rem
+    top: -2rem
+    left: 8rem
+
+    @media screen and ( max-width: $bp900 )
+        top: -2rem
+        left: 6rem
+
+    @media screen and ( max-width: $bp480 )
+        top: -2rem
+        left: 4rem
 
 
 
