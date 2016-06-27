@@ -1,0 +1,67 @@
+
+.slider
+    width: 100%
+    height: 44rem
+
+
+    // SLIDER
+    // ------------------------------------
+
+    & .swiper-container
+        width: 100%
+        height: 100%
+
+        & .swiper-slide:nth-child(1)
+            background: url('%=static=%assets/slider/photo-01.jpg') 50% 50% no-repeat
+            background-size: cover
+
+        & .swiper-slide:nth-child(2)
+            background: url('%=static=%assets/slider/photo-02.jpg') 50% 50% no-repeat
+            background-size: cover
+
+        & .swiper-slide:nth-child(3)
+            background: url('%=static=%assets/slider/photo-03.jpg') 50% 50% no-repeat
+            background-size: cover
+
+        & .swiper-slide:nth-child(4)
+            background: url('%=static=%assets/slider/photo-04.jpg') 50% 50% no-repeat
+            background-size: cover
+
+
+    // SLIDER CONTENT
+    // ------------------------------------
+
+    & .slider__content
+        lost-center $width
+        padding: 0 $gutter
+        height: 44rem
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+    & .slider__info
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 0 0 0 2rem
+
+        & p
+            margin: 0 0 4rem
+            text-transform: uppercase
+
+            &:first-child
+            &:last-child
+                margin-left: 2rem
+                color: #6fb38a
+                font: 3rem/1.2 $lato-light
+
+                & span
+                    font-family: $lato-bold
+
+            &:nth-child(2)
+                color: #3b5c6c
+                font: 3rem/1.2 $pontano_sans-regular
+
+            &:last-child
+                margin-bottom: 0
+

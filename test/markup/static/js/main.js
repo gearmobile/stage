@@ -1,5 +1,7 @@
 'use strict';
 
+var swiper = require('swiper');
+
 window.addEventListener( 'DOMContentLoaded', function () {
 
 
@@ -39,6 +41,21 @@ window.addEventListener( 'DOMContentLoaded', function () {
             menuCurrencyList.classList.remove('is-active');
         }
     }, false );
+
+
+    // SWIPER SLIDER
+    // ----------------------------------------------------------
+    swiper('.swiper-container', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        breakpoints: {
+            900: {
+                nextButton: null,
+                prevButton: null
+            }
+        }
+    });
+
 
 
 }, false );
