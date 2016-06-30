@@ -1,0 +1,153 @@
+.about
+    padding: 12rem 0
+    background-color: $color-white
+
+    &__center
+        lost-center $width flex
+        padding: 0 $gutter
+
+        // ABOUT CONTENT
+        // --------------------------------
+
+        & .about-content
+            width: 100%
+            margin: 4rem 0 0 0
+
+            &__control
+                margin: 0 0 12rem
+
+                & ul
+                    display: flex
+
+                & li
+                    width: 17.6rem
+                    height: 5.8rem
+                    background-color: $color-grey-light
+                    margin: 0 .1rem 0 0
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    color: $color-grey-dark
+                    text-transform: uppercase
+                    font: 1.8rem/1 $lato-regular
+                    transform: skewX( -15deg )
+
+                    & span
+                        transform: skewX( 15deg )
+
+                    &:first-child
+                        background-color: $color-blue
+                        color: $color-white
+
+
+
+        // ABOUT CONTENT GRID
+        // --------------------------------
+
+        & .about-content-grid
+            lost-center 100% flex
+
+
+        // ABOUT CONTENT GRID ITEM
+        // --------------------------------
+
+        & .about-content-item
+            lost-column 1/2 flex
+            lost-column-gutter 0
+            lost-column-cycle 2
+            display: flex
+            justify-content: space-between
+            padding: 2rem 4rem 2rem 3rem
+            min-height: 16rem
+
+            &:nth-child( 2 ) .about-content-icon
+                background-color: $color-blue
+
+            &:nth-child( -n+2 )
+                border-bottom: .1rem solid $color-grey-light
+
+            &:nth-child( 2n+1 )
+                border-right: .1rem solid $color-grey-light
+
+            &:nth-child( 1 )
+                position: relative
+
+                &::after
+                    content: ''
+                    display: block
+                    width: 4rem
+                    height: 4rem
+                    background-color: $color-white
+                    position: absolute
+                    bottom: -2rem
+                    right: -2rem
+                    z-index: 1
+
+            @media screen and ( max-width: $bp980 )
+                lost-column 1/1
+                lost-column-gutter 0
+                lost-column-cycle none
+                padding: 4rem 2rem 4rem 2rem
+                justify-content: flex-start
+
+
+        // ABOUT CONTENT GRID ICON
+        // --------------------------------
+
+        & .about-content-icon
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 12rem
+            height: 10rem
+            background-color: $color-grey-light
+            transform: skewX( -8deg )
+
+            & .about-icon
+                width: 5rem
+                height: auto
+                transform: skewX( 8deg )
+
+
+        // ABOUT CONTENT GRID INFO
+        // --------------------------------
+
+        & .about-content-info
+            margin: 0 0 0 3rem
+
+            & h3
+                text-transform: capitalize
+                color: $color-grey-dark
+                font: 2rem/1 $lato-bold
+                margin: 0 0 1rem
+
+            & p
+                font: 1.6rem/1.4 $lato-regular
+                color: $color-grey-light-dark
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

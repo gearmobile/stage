@@ -1,0 +1,63 @@
+.topheader
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 999
+    padding: 3rem 0 0
+
+    @media screen and ( max-width: $bp600 )
+        padding: 1rem 0 0 0
+
+
+    // TOPHEADER CENTER
+    // --------------------------------------
+
+    &__center
+        lost-center $width flex
+        padding: 0 $gutter
+        justify-content: space-between
+        align-items: center
+
+
+    // TOPHEADER LOGO
+    // --------------------------------------
+
+
+    &__logo
+
+        @media screen and ( max-width: $bp600 )
+            display: none
+
+    // TOPHEADER MENU
+    // --------------------------------------
+
+    & .topheader-menu
+        display: flex
+
+        & li
+            margin: 0 0 0 3rem
+
+            &:first-child
+                margin-left: 0
+
+        & a
+            text-transform: capitalize
+            color: $color-white
+            transition: color .2s
+
+        @media screen and ( max-width: $bp600 )
+            display: none
+
+
+    // TOPHEADER MOBILE MENU
+    // -----------------------------------------
+
+    & .topheader-menu__mobile
+        width: 2rem
+        height: 2rem
+        background-color: $color-black
+        display: none
+
+        @media screen and ( max-width: $bp600 )
+            display: block

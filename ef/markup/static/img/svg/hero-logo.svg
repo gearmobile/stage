@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="192px" height="191px" viewBox="0 0 192 191">
+<style type="text/css"><![CDATA[
+.style0 {
+  font-size: 60px;
+  font-family: "Lato-Italic";
+  fill: rgb(255,255,255);
+}
+]]></style>
+<text transform="matrix(2.55,0.00,0.00,2.55,123.60,189.36)" class="style0"><tspan x="0.00" fill="rgb(255,255,255)">e</tspan></text><path fillRule="evenodd" d="M 121.81 0.63C 121.81 0.63 171.44 0.63 171.44 0.63 171.44 0.63 154.98 47.5 154.98 47.5 154.98 47.5 105.36 47.5 105.36 47.5 105.36 47.5 121.81 0.63 121.81 0.63Z" fill="rgb(255,173,0)"/><path fillRule="evenodd" d="M 97 69.55C 97 69.55 146.63 69.55 146.63 69.55 146.63 69.55 130.17 116.42 130.17 116.42 130.17 116.42 80.54 116.42 80.54 116.42 80.54 116.42 97 69.55 97 69.55Z" fill="rgb(0,203,255)"/><path fillRule="evenodd" d="M 58.41 0.63C 58.41 0.63 108.03 0.63 108.03 0.63 108.03 0.63 50.22 160.53 50.22 160.53 50.22 160.53 0.59 160.53 0.59 160.53 0.59 160.53 58.41 0.63 58.41 0.63Z" fill="rgb(0,203,255)"/></svg>

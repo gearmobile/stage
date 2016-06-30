@@ -1,0 +1,39 @@
+.skills
+    padding: 12rem 0
+    background-color: rgb(247, 247, 247)
+
+    &__center
+        lost-center $width
+        padding: 0 $gutter
+
+
+    // SKILLS HEADER
+    // -----------------------------------------------------------
+
+    &__header
+        margin: 0 0 10rem
+        color: $color-grey-light-dark
+        text-align: center
+
+        & h2
+            text-transform: uppercase
+            font: 2.4rem/1.2 $lato-bold
+            margin: 0 0 5rem
+
+
+        & p
+            lost-center 60rem
+            font: 1.6rem/1.4 $lato-regular
+
+
+    // SKILLS CONTENT
+    // -----------------------------------------------------------
+
+    &__content
+        lost-center 100% flex
+
+    &__item
+        lost-column 1/4 flex
+        lost-column-gutter 0
+        flex-direction: column
+        align-items: center

@@ -1,0 +1,37 @@
+// Common styles of the project
+
+*,*::before,*::after
+    box-sizing: border-box
+
+html, body
+    height 100%
+    width: 100%
+
+html
+    font-size: 62.5%
+
+ul, ol
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+h1, h2, h3, h4, p
+    margin: 0
+
+a
+    text-decoration: none
+
+.page
+    font: 1.6rem/1 $lato-regular
+    color: $color-white
+
+.page__wrapper
+    min-height 100%
+    margin-bottom -50px
+
+
+* html .page__wrapper
+    height 100%
+
+.page__buffer
+    height 50px

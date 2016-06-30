@@ -1,0 +1,39 @@
+mixin block-about(data)
+    .about
+        .about__center
+            .about-content
+                .about-content__control
+                    ul
+                        li
+                            span welcome
+                        li
+                            span vision
+                        li
+                            span mission
+                        li
+                            span mission
+                ul.about-content-grid
+                    li.about-content-item
+                        .about-content-icon
+                            != jadeHelpers.Icon.call(locals, {iconName: 'about-icon-01', className: 'about-icon'})
+                        .about-content-info
+                            h3 100% money back
+                            p Aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.
+                    li.about-content-item
+                        .about-content-icon
+                            != jadeHelpers.Icon.call(locals, {iconName: 'about-icon-02', className: 'about-icon'})
+                        .about-content-info
+                            h3 cross browser
+                            p Aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.
+                    li.about-content-item
+                        .about-content-icon
+                            != jadeHelpers.Icon.call(locals, {iconName: 'about-icon-03', className: 'about-icon'})
+                        .about-content-info
+                            h3 retina display
+                            p Aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.
+                    li.about-content-item
+                        .about-content-icon
+                            != jadeHelpers.Icon.call(locals, {iconName: 'about-icon-04', className: 'about-icon'})
+                        .about-content-info
+                            h3 bootstrap 3
+                            p Aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.
