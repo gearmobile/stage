@@ -10,9 +10,9 @@
     align-items: center
     transition: all .2s
 
-    @media screen and (max-width: $bp500)
+    @media screen and ( max-width: $bp500 )
         background-color: $color-slate
-        box-shadow: inset 0 -5px 0 0 $color-teal-light
+        box-shadow: inset 0 -.5rem 0 0 $color-teal-light
 
 
     // TOPHEADER PRIMARY
@@ -25,11 +25,8 @@
         height: 100%
         padding: 0 4rem
         background-color: $color-slate
-        box-shadow: inset 0 -5px 0 0 $color-teal-light
+        box-shadow: inset 0 -.5rem 0 0 $color-teal-light
         transition: all .2s
-
-        @media screen and (max-width: $bp500)
-            padding: 0 0 0 1rem
 
         & a
             display: flex
@@ -37,7 +34,7 @@
             height: 100%
             align-items: center
             justify-content: center
-            font: 1.6rem/1.2 $raleway-semibold
+            font: 1.6rem / 1.2 $raleway-semibold
             text-transform: uppercase
             letter-spacing: .6rem
             color: $color-white
@@ -52,7 +49,10 @@
             transition: transform .2s
 
         &:hover .topheader-icon
-            transform: rotate(-180deg)
+            transform: rotate( -180deg )
+
+        @media screen and ( max-width: $bp500 )
+            padding: 0 0 0 1rem
 
 
     // TOPHEADER SECONDARY
@@ -80,7 +80,7 @@
         & a
             display: flex
             text-transform: uppercase
-            font: 1.3rem/1 $raleway-bold
+            font: 1.3rem / 1 $raleway-bold
             letter-spacing: .1rem
             color: $color-slate-dark
             transition: color .2s
@@ -97,7 +97,7 @@
                 bottom: -.4rem
                 transition: all .2s
                 visibility: hidden
-                transform: scaleX(0)
+                transform: scaleX( 0 )
 
             &:hover
             &:focus
@@ -105,9 +105,9 @@
 
             &:hover::after
                 visibility: visible
-                transform: scaleX(1)
+                transform: scaleX( 1 )
 
-        @media screen and (max-width: $bp1100)
+        @media screen and ( max-width: $bp1100 )
             display: none
 
 
@@ -135,7 +135,7 @@
                     display: flex
                     color: $color-teal-light
                     text-transform: uppercase
-                    font: 1.3rem/1 $raleway-bold
+                    font: 1.3rem / 1 $raleway-bold
                     letter-spacing: .1rem
                     transition: color .2s
 
@@ -150,11 +150,11 @@
                         bottom: -0.4rem
                         visibility: hidden
                         transition: all .2s
-                        transform: scaleX(0)
+                        transform: scaleX( 0 )
 
                     &:hover::after
                         visibility: visible
-                        transform: scaleX(1)
+                        transform: scaleX( 1 )
 
             &:last-child a
                 position: relative
@@ -167,7 +167,7 @@
             border-bottom-color: $color-teal-light
 
 
-        @media screen and (max-width: $bp1100)
+        @media screen and ( max-width: $bp1100 )
             display: none
 
 
@@ -202,7 +202,7 @@
             +placeholder()
                 text-transform: capitalize
                 color: $color-white
-                font: 1.5rem/1 $raleway-light
+                font: 1.5rem / 1 $raleway-light
 
             &:hover
                 width: 32rem
@@ -235,11 +235,11 @@
             &::after
                 background-color: $color-white
 
-        @media screen and (max-width: $bp1100)
+        @media screen and ( max-width: $bp1100 )
             visibility: visible
             opacity: 1
 
-        @media screen and (max-width: $bp500)
+        @media screen and ( max-width: $bp500 )
             width: 8rem
 
 
@@ -265,7 +265,7 @@
 
         &__item
             width: 100%
-            height: calc(100% / 5)
+            height: calc( 100% / 5 )
             display: flex
             justify-content: center
             align-items: center
@@ -276,13 +276,13 @@
 
         &__link
             text-transform: capitalize
-            color: rgba($color-white, .6)
-            font: 4rem/1 $raleway-bold
+            color: rgba( $color-white, .6 )
+            font: 3rem / 1.2 $raleway-bold
             letter-spacing: .2rem
             transition: color .1s
 
             &:hover
-                color: rgba($color-white, 1)
+                color: rgba( $color-white, 1 )
 
         &__button
             position: absolute
@@ -295,7 +295,6 @@
                 &::before
                 &::after
                     background-color: $color-white
-
 
 
 //  TOPHEADER TOOGLE CLASSES
