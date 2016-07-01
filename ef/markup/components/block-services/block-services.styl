@@ -1,0 +1,49 @@
+.services
+    padding: 14rem 0 20rem
+    background-color: $color-white
+
+    &__center
+        lost-center $width
+        padding: 0 $gutter
+
+    &__header
+        margin: 0 0 6rem
+
+    &__grid
+        lost-center 100% flex
+
+    &__item
+        lost-column 1/2
+        lost-column-cycle 2
+        lost-column-gutter 0
+        display: flex
+        align-items: flex-start
+        padding: 2rem 1rem 2rem 3rem
+
+        & p
+            font: 1.6rem/1.4 $lato-regular
+            color: $color-grey-light-dark
+
+        &:nth-child( 2n+1 )
+            border-right: .1rem solid $color-grey-light
+
+        &:nth-child( -n+4 )
+            border-bottom: .1rem solid $color-grey-light
+
+    &__title
+        text-transform: capitalize
+        font: 2rem/1.2 $lato-bold
+        color: $color-orange
+        margin: 0 0 1rem
+
+    &__icon
+        width: 12rem
+        height: 10rem
+        background-color: $color-blue
+        margin: 0 3rem 0 0
+        transform: skewX(-8deg)
+
+        & span
+            transform: skewX(-8deg)
+
+

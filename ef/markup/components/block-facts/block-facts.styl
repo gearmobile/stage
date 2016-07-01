@@ -1,0 +1,81 @@
+.facts
+    padding: 12rem 0 20rem
+    background-color: $color-grey-grey
+
+    // FACTS CENTER
+    // --------------------------------------------
+
+    &__center
+        lost-center $width flex
+        flex-direction: column
+        align-items: center
+        padding: 0 $gutter
+
+    // FACTS HEADER
+    // --------------------------------------------
+
+    &__header
+        margin: 0 0 6rem
+        text-align: center
+
+        & p
+            lost-center 60rem flex
+            font: 1.6rem/1.4 $lato-regular
+            color: $color-grey
+
+    // FACTS TITLE
+    // --------------------------------------------
+
+    &__title
+        text-transform: uppercase
+        margin: 0 0 5rem
+        font: 2.4rem/1.2 $lato-black
+        color: $color-grey
+
+    // FACTS CONTENT
+    // --------------------------------------------
+
+    &__content
+        lost-center 100% flex
+        border 0.1rem solid #ccc
+
+    &__item
+        lost-column 1/4
+        lost-column-gutter 0
+        flex-direction: column
+        align-items: center
+        text-align: center
+        padding: 3rem 1rem
+
+        &:nth-child( -n+3 )
+            border-right 0.1rem solid #ccc
+
+    &__icon
+        margin: 0 0 4rem
+
+    &__caption
+        text-transform: capitalize
+        margin: 0 0 3rem
+        font: 2rem/1.2 $lato-regular
+        color: $color-blue
+
+    &__count
+        font: 5rem/1.2 $lato-light
+        color: $color-grey-dark
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

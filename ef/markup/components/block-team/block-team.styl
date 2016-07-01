@@ -1,12 +1,11 @@
 .team
-    height: 100rem
     background: url('%=static=%assets/block-team/team-bg.jpg') 50% 50% no-repeat
     background-size: cover
+    padding: 20rem 0
 
     &__center
         lost-center $width flex
         padding: 0 $gutter
-        height: 100rem
         justify-content: center
         align-items: center
         align-content: center
@@ -18,7 +17,7 @@
 
     &__head
         margin: 0 0 8rem 0
-
+        outline: 1px solid brown
 
     // TEAM CONTENT
     // -------------------------------------------
@@ -70,6 +69,10 @@
             width: 100%
             height: auto
 
+        &:hover .team__header--overlay
+            visibility: visible
+            opacity: 1
+
 
 
     // TEAM CONTENT IMAGE OVERLAY
@@ -86,6 +89,9 @@
         top: 0
         left: 0
         z-index: 1
+        transition: visibility .2s, opacity .2s
+        visibility: hidden
+        opacity: 0
 
         & ul
             display: flex

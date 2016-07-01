@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "directories": {},
   "dependencies": {
+    "chart.js": "^2.1.6",
     "lost": "^6.8.1",
     "postcss-flexibility": "^1.0.3"
   },

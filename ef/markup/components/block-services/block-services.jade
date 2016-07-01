@@ -1,0 +1,51 @@
+include ../module-header/module-header
+
+mixin block-services(data)
+    .services
+        .services__center
+            .services__header
+                +module-header( 'our', 'services' )
+            .services__content
+                ul.services__grid
+                    li.services__item
+                        .services__icon
+                            span
+                                != jadeHelpers.Icon.call(locals, {iconName: 'services-icon-01', className: 'services-icon'})
+                        .services__info
+                            h3.services__title Brand Identity
+                            p Aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.
+                    li.services__item
+                        .services__icon
+                            span
+                                != jadeHelpers.Icon.call(locals, {iconName: 'services-icon-02', className: 'services-icon'})
+                        .services__info
+                            h3.services__title UI/UX Design
+                            p Aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.
+                    li.services__item
+                        .services__icon
+                            span
+                                != jadeHelpers.Icon.call(locals, {iconName: 'services-icon-03', className: 'services-icon'})
+                        .services__info
+                            h3.services__title Graphic Design
+                            p Aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.
+                    li.services__item
+                        .services__icon
+                            span
+                                != jadeHelpers.Icon.call(locals, {iconName: 'services-icon-04', className: 'services-icon'})
+                        .services__info
+                            h3.services__title Mobile Application
+                            p Aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.
+                    li.services__item
+                        .services__icon
+                            span
+                                != jadeHelpers.Icon.call(locals, {iconName: 'services-icon-05', className: 'services-icon'})
+                        .services__info
+                            h3.services__title Illustration
+                            p Aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.
+                    li.services__item
+                        .services__icon
+                            span
+                                != jadeHelpers.Icon.call(locals, {iconName: 'services-icon-06', className: 'services-icon'})
+                        .services__info
+                            h3.services__title Videography
+                            p Aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.
