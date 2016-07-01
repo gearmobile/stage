@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Avocode 0.4.0 - http://avocode.com -->
+<svg height="64" width="69" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69 64">
+    <text font-size="47" font-family="Lato" fill="#ffffff" y="64" x="49">
+        <tspan>e</tspan>
+    </text>
+    <path fill="#ffae00" fill-rule="evenodd" d="M 43.97 0 L 61.97 0 Z L 56 17 Z L 38 17 Z L 43.97 0 Z Z" />
+    <path fill="#00ccff" fill-rule="evenodd" d="M 34.97 25 L 52.97 25 Z L 47 42 Z L 29 42 Z L 34.97 25 Z Z" />
+    <path fill="#00ccff" fill-rule="evenodd" d="M 20.97 0 L 38.97 0 Z L 18 58 Z L 0 58 Z L 20.97 0 Z Z" />
+</svg>

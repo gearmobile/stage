@@ -1,10 +1,28 @@
+include ../module-header/module-header
+
 mixin block-team(data)
     .team
         .team__center
+            .team__head
+                +module-header()
             .team__content
                 .team__item
                     .team__header
-                        //
+                        img(src="%=static=%img/assets/block-team/team-image-01.jpg" alt="Team Image")
+                        .team__header--overlay
+                            ul
+                                li
+                                    a( href='javascript:void(0);' title='Facebook' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, {iconName: 'team-icon-01', className: 'team-icon'})
+                                li
+                                    a( href='javascript:void(0);' title='Tweeter' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, {iconName: 'team-icon-02', className: 'team-icon'})
+                                li
+                                    a( href='javascript:void(0);' title='LinkedIn' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, {iconName: 'team-icon-03', className: 'team-icon'})
+                                li
+                                    a( href='javascript:void(0);' title='Behance' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, {iconName: 'team-icon-04', className: 'team-icon'})
                     .team__footer
                         .team__title
                             h4 patricia medina
@@ -13,7 +31,21 @@ mixin block-team(data)
                             p Imperdiet nulla sem fringilla, purus enim amet, nascetur faucibus, adipiscing neque ut bibendum, at felis nec in.
                 .team__item
                     .team__header
-                        //
+                        img(src="%=static=%img/assets/block-team/team-image-02.jpg" alt="Team Image")
+                        .team__header--overlay
+                            ul
+                                li
+                                    a( href='javascript:void(0);' title='Facebook' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, { iconName: 'team-icon-01', className: 'team-icon' })
+                                li
+                                    a( href='javascript:void(0);' title='Tweeter' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, { iconName: 'team-icon-02', className: 'team-icon' })
+                                li
+                                    a( href='javascript:void(0);' title='LinkedIn' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, { iconName: 'team-icon-03', className: 'team-icon' })
+                                li
+                                    a( href='javascript:void(0);' title='Behance' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, { iconName: 'team-icon-04', className: 'team-icon' })
                     .team__footer
                         .team__title
                             h4 patricia medina
@@ -22,7 +54,21 @@ mixin block-team(data)
                             p Imperdiet nulla sem fringilla, purus enim amet, nascetur faucibus, adipiscing neque ut bibendum, at felis nec in.
                 .team__item
                     .team__header
-                        //
+                        img(src="%=static=%img/assets/block-team/team-image-03.jpg" alt="Team Image")
+                        .team__header--overlay
+                            ul
+                                li
+                                    a( href='javascript:void(0);' title='Facebook' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, { iconName: 'team-icon-01', className: 'team-icon' })
+                                li
+                                    a( href='javascript:void(0);' title='Tweeter' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, { iconName: 'team-icon-02', className: 'team-icon' })
+                                li
+                                    a( href='javascript:void(0);' title='LinkedIn' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, { iconName: 'team-icon-03', className: 'team-icon' })
+                                li
+                                    a( href='javascript:void(0);' title='Behance' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, { iconName: 'team-icon-04', className: 'team-icon' })
                     .team__footer
                         .team__title
                             h4 patricia medina
@@ -31,7 +77,21 @@ mixin block-team(data)
                             p Imperdiet nulla sem fringilla, purus enim amet, nascetur faucibus, adipiscing neque ut bibendum, at felis nec in.
                 .team__item
                     .team__header
-                        //
+                        img(src="%=static=%img/assets/block-team/team-image-04.jpg" alt="Team Image")
+                        .team__header--overlay
+                            ul
+                                li
+                                    a( href='javascript:void(0);' title='Facebook' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, { iconName: 'team-icon-01', className: 'team-icon' })
+                                li
+                                    a( href='javascript:void(0);' title='Tweeter' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, { iconName: 'team-icon-02', className: 'team-icon' })
+                                li
+                                    a( href='javascript:void(0);' title='LinkedIn' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, { iconName: 'team-icon-03', className: 'team-icon' })
+                                li
+                                    a( href='javascript:void(0);' title='Behance' target='_blank' rel='nofollow' )
+                                        != jadeHelpers.Icon.call(locals, { iconName: 'team-icon-04', className: 'team-icon' })
                     .team__footer
                         .team__title
                             h4 patricia medina
