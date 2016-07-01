@@ -1,0 +1,58 @@
+.footer
+
+    &__primary
+    &__secondary
+        display: flex
+        justify-content: center
+
+
+    // FOOTER PRIMARY
+    // ------------------------------------------
+
+    &__primary
+        background-color #2f2e2e
+        padding: 4rem 0
+
+        &--list
+            display: flex
+            justify-content: center
+            align-items: center
+
+        &--item
+            margin: 0 1rem
+
+        & .footer-icon
+            width: 2rem
+            height: 2rem
+
+
+    // FOOTER SECONDARY
+    // ------------------------------------------
+
+    &__secondary
+        background-color $color-blue
+        padding: 2rem 0
+        color: $color-white
+        font: 1.6rem/1.2 $lato-regular
+        letter-spacing: .1rem
+
+        & a
+            color #0f91b1
+            transition: color .2s
+
+            &:hover
+                color: $color-white
+
+        &--list
+            display: flex
+            justify-content: center
+            align-items: center
+
+            @media screen and ( max-width: $bp500 )
+                flex-direction: column
+
+        &--item
+            margin: 0 .2rem
+
+            @media screen and ( max-width: $bp500 )
+                margin: .4rem 0

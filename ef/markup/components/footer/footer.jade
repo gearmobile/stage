@@ -1,2 +1,33 @@
 mixin footer(data)
     footer.footer
+        .footer__primary
+            ul.footer__primary--list
+                li.footer__primary--item
+                    a( href='javascript:void(0);' )
+                        != jadeHelpers.Icon.call(locals, {iconName: 'footer-icon-01', className: 'footer-icon'})
+                li.footer__primary--item
+                    a( href='javascript:void(0);' )
+                        != jadeHelpers.Icon.call(locals, {iconName: 'footer-icon-02', className: 'footer-icon'})
+                li.footer__primary--item
+                    a( href='javascript:void(0);' )
+                        != jadeHelpers.Icon.call(locals, {iconName: 'footer-icon-03', className: 'footer-icon'})
+                li.footer__primary--item
+                    a( href='javascript:void(0);' )
+                        != jadeHelpers.Icon.call(locals, {iconName: 'footer-icon-04', className: 'footer-icon'})
+                li.footer__primary--item
+                    a( href='javascript:void(0);' )
+                        != jadeHelpers.Icon.call(locals, {iconName: 'footer-icon-05', className: 'footer-icon'})
+                li.footer__primary--item
+                    a( href='javascript:void(0);' )
+                        != jadeHelpers.Icon.call(locals, {iconName: 'footer-icon-06', className: 'footer-icon'})
+                li.footer__primary--item
+                    a( href='javascript:void(0);' )
+                        != jadeHelpers.Icon.call(locals, {iconName: 'footer-icon-07', className: 'footer-icon'})
+        .footer__secondary
+            ul.footer__secondary--list
+                li.footer__secondary--item
+                    | &copy; 2015 <a href='javascript:void(0);'>Fe</a>
+                li.footer__secondary--item
+                    | All rights reserved.
+                li.footer__secondary--item
+                    | Theme by <a href='javascript:void(0);'>Rudhi Sasmito</a>.
