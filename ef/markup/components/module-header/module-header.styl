@@ -1,1 +1,55 @@
+.header
+    lost-center 100% flex
+    padding: 0 $gutter
+    min-height: 11.9rem
 
+    // HEADER PRIMARY
+    // --------------------------------------
+
+    &__primary
+        lost-column 3/12
+        lost-column-gutter 0
+
+        @media screen and ( max-width: $bp768 )
+            lost-column 1/1
+            lost-column-gutter 0
+            text-align: center
+
+    // HEADER SECONDARY
+    // --------------------------------------
+
+    &__secondary
+        lost-column 9/12
+        lost-column-gutter 0
+        padding: 4rem 0 0 10rem
+        background: url('%=static=%assets/module-header/header-divider.png') 2rem 0 no-repeat
+
+        @media screen and ( max-width: $bp768 )
+            lost-column 1/1
+            lost-column-gutter 0
+            padding: 3rem 0 0 0
+            background: none
+            text-align: center
+
+        & p
+            font: 1.6rem/1.4 $lato-regular
+            color: $color-grey
+
+    // HEADER TITLE
+    // --------------------------------------
+
+    &__title
+        text-transform: uppercase
+        font: 3rem/1.2 $lato-black
+        color: $color-blue
+
+        & > span
+            color: $color-orange
+
+    // HEADER SUBTITLE
+    // --------------------------------------
+
+    &__subtitle
+        text-transform: capitalize
+        color: $color-grey
+        font: italic 1.6rem/1.2 $lato-regular

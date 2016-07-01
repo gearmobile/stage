@@ -1,2 +1,9 @@
-mixin module-header(data)
-    .module-header
+mixin module-header( title, subtitle )
+    .header
+        .header__primary
+            h2.header__title= title
+                = ' '
+                span= subtitle
+            small.header__subtitle what we do with love
+        .header__secondary
+            p Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse

@@ -7,7 +7,17 @@
         lost-center $width flex
         padding: 0 $gutter
         height: 100rem
+        justify-content: center
+        align-items: center
+        align-content: center
         outline: 1px solid rosybrown
+
+
+    // TEAM HEAD
+    // -------------------------------------------
+
+    &__head
+        margin: 0 0 8rem 0
 
 
     // TEAM CONTENT
@@ -27,9 +37,21 @@
         display: flex
         flex-direction: column
         align-items: center
+        justify-content: center
         text-align: center
-        padding: 0 1rem
+        padding: 1rem
         outline: 1px solid greenyellow
+
+        @media screen and ( max-width: $bp980 )
+            lost-column 1/2
+            lost-column-cycle 2
+            lost-column-gutter 0
+            padding: 2rem 1rem
+
+        @media screen and ( max-width: $bp600 )
+            lost-column 1/1
+            lost-column-cycle none
+            lost-column-gutter 0
 
 
     // TEAM CONTENT IMAGE
@@ -79,6 +101,9 @@
             & .team-icon
                 width: 1.6rem
                 height: 1.6rem
+
+        @media screen and ( max-width: $bp600 )
+            display: none
 
 
     // TEAM ITEM CONTENT
