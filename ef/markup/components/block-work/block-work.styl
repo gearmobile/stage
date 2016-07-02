@@ -2,13 +2,72 @@
     background-color: $color-white
     padding: 18rem 0 3rem
 
+    // WORK HEADER
+    // -----------------------------------------
+
     &__header
         lost-center 100% flex
         margin: 0 0 12rem
+
+    // WORK CENTER
+    // -----------------------------------------
 
     &__center
         lost-column $width
         padding: 0 $gutter
 
-    &__content
-        //
+    // WORK GRID
+    // -----------------------------------------
+
+    & .work-grid
+        lost-center 100% flex
+
+        &__item
+            lost-column 1/3
+            lost-column-gutter 3rem
+            padding: 1rem
+            height: 48.4rem
+            background-color: crimson; //
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            color: $color-grey-dark
+
+            &:nth-child( -n+3 )
+                margin-bottom: 3rem
+
+            &--double
+                lost-column 2/3
+                lost-column-gutter 3rem
+
+            @media screen and ( max-width: $bp980 )
+                lost-column 1/2
+                lost-column-gutter 3rem
+
+                &--double
+                    lost-column 1/1
+                    lost-column-gutter 0
+                    order 1
+
+            @media screen and ( max-width: $bp768 )
+                lost-column 1/1
+                lost-column-gutter 0
+
+                &:nth-child( 5 )
+                    margin-bottom: 3rem
+
+        // WORK GRID TITLE
+        // -----------------------------------------
+
+        &__title
+            font: 4rem/1.2 $lato-light
+            margin: 0 0 3rem
+
+        // WORK GRID SUBTITLE
+        // -----------------------------------------
+
+        &__subtitle
+            lost-center 40rem
+            font: 2rem/1.4 $lato-regular
+            text-align: center
