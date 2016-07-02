@@ -27,12 +27,33 @@
             lost-column-gutter 3rem
             padding: 1rem
             height: 48.4rem
-            background-color: crimson; //
             display: flex
             flex-direction: column
             align-items: center
             justify-content: center
             color: $color-grey-dark
+            opacity: .7
+            transition: all .4s
+
+            &:nth-child(1)
+                background: url('%=static=%assets/block-work/work-image-01.jpg') 50% 50% no-repeat
+                background-size: cover
+
+            &:nth-child(2)
+                background: url('%=static=%assets/block-work/work-image-02.jpg') 50% 50% no-repeat
+                background-size: cover
+
+            &:nth-child(3)
+                background: url('%=static=%assets/block-work/work-image-03.jpg') 50% 50% no-repeat
+                background-size: cover
+
+            &:nth-child(4)
+                background: url('%=static=%assets/block-work/work-image-04.jpg') 50% 50% no-repeat
+                background-size: cover
+
+            &:nth-child(5)
+                background: url('%=static=%assets/block-work/work-image-05.jpg') 50% 50% no-repeat
+                background-size: cover
 
             &:nth-child( -n+3 )
                 margin-bottom: 3rem
@@ -40,6 +61,13 @@
             &--double
                 lost-column 2/3
                 lost-column-gutter 3rem
+
+            &:hover
+                opacity: 1
+
+            &:hover .work-grid__button
+                visibility: visible
+                opacity: 1
 
             @media screen and ( max-width: $bp980 )
                 lost-column 1/2
@@ -71,3 +99,25 @@
             lost-center 40rem
             font: 2rem/1.4 $lato-regular
             text-align: center
+            margin: 0 0 4rem
+
+        // WORK GRID BUTTON
+        // -----------------------------------------
+
+        &__button
+            /*display: block;*/
+            /*padding: 1.4rem 6.4rem 1.8rem*/
+            max-width: 30rem
+            padding: 1.4rem 0 1.8rem
+            /*lost-center 33.6rem*/
+            text-transform: lowercase
+            font: 3rem/1 $lato-regular
+            color: $color-grey-dark
+            border: .4rem solid $color-grey-dark
+            transition: background-color .2s, color .2s
+            visibility: hidden
+            opacity: 0
+
+            &:hover
+                color: $color-white
+                background-color: $color-grey-dark
