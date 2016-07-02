@@ -116,6 +116,6 @@
         "prefer-arrow-callback": 0,
         "prefer-template": 0,
         "require-yield": 2,
-        "no-var": 1
+        "no-var": 0
     }
 }

@@ -3,139 +3,226 @@
 var Chart = require('chart.js');
 var GoogleMapsLoader = require('google-maps');
 
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener( 'DOMContentLoaded', function () {
 
     // CHART.JS
     // ------------------------------------
 
-    const color1 = '#0cf';
-    const color2 = '#eaeaea';
+    var color1 = '#0cf';
+    var color2 = '#eaeaea';
+    var colorStroke = '#f00';
 
-    const wp = document.querySelector('#wordpress');
-    const html = document.querySelector('#html');
-    const css = document.querySelector('#css');
-    const pt = document.querySelector('#photoshop');
+    var wpValue = 58;
+    var htmlValue = 75;
+    var cssValue = 80;
+    var ptValue = 90;
 
-    const wpContext = wp.getContext('2d');
-    const htmlContext = html.getContext('2d');
-    const cssContext = css.getContext('2d');
-    const ptContext = pt.getContext('2d');
+    var cutoutValue = 82;
 
-    const wpData = [
-        {
-            value: 58,
-            color: color1
-        },
-        {
-            value: 100 - 58,
-            color: color2
-        }
-    ];
+    var wpElement = document.querySelector('#wordpress');
+    var htmlElement = document.querySelector('#html');
+    var cssElement = document.querySelector('#css');
+    var ptElement = document.querySelector('#photoshop');
 
-    const htmlData = [
-        {
-            value: 75,
-            color: color1
-        },
-        {
-            value: 100 - 75,
-            color: color2
-        }
-    ];
+    var wpContext = wpElement.getContext('2d');
+    var htmlContext = htmlElement.getContext('2d');
+    var cssContext = cssElement.getContext('2d');
+    var ptContext = ptElement.getContext('2d');
 
-    const cssData = [
-        {
-            value: 80,
-            color: color1
-        },
-        {
-            value: 100 - 80,
-            color: color2
-        }
-    ];
-
-    const ptData = [
-        {
-            value: 95,
-            color: color1
-        },
-        {
-            value: 100 - 95,
-            color: color2
-        }
-    ];
+    // CHARTS GLOBAL CONFIG  ------------------------------------------
 
     Chart.defaults.global.showTooltips = false;
+    Chart.defaults.global.legend.display = false;
+    Chart.defaults.global.title.display = false;
+    Chart.defaults.global.defaultFontColor = '#333';
+    Chart.defaults.global.defaultFontSize = 30;
+    Chart.defaults.global.defaultFontSize = 'normal';
+    //Chart.defaults.global.defaultFontFamily = 'Lato, sans-serif';
+    Chart.defaults.global.animation.duration = 1000;
+    Chart.defaults.global.animation.easing = 'easeOutQuart';
 
-    Chart( wpContext ).Doughnut( wpData, {
-        percentageInnerCutout: 82,
-        segmentStrokeWidth: 3,
-        segmentStrokeColor: '#f7f7f7',
-        onAnimationComplete: function () {
-            wpContext.fillStyle = '#333';
-            //wpContext.font = '3rem Lato, sans-serif';
-            wpContext.textAlign = 'center';
-            wpContext.textBaseline = 'middle';
-            wpContext.fillText( wpData[0].value + '%', wp.width / 2, wp.height / 2 );
+    // CHARTS DATA  ------------------------------------------
+
+    var wpData = {
+        labels: [
+            'Blue',
+            'White'
+        ],
+        datasets: [
+            {
+                data: [ wpValue, 100 - wpValue ],
+                backgroundColor: [
+                    color1,
+                    color2
+                ],
+                hoverBackgroundColor: [
+                    color1,
+                    color2
+                ]
+            }]
+    };
+
+    var htmlData = {
+        labels: [
+            'Blue',
+            'White'
+        ],
+        datasets: [
+            {
+                data: [ htmlValue, 100 - htmlValue ],
+                backgroundColor: [
+                    color1,
+                    color2
+                ],
+                hoverBackgroundColor: [
+                    color1,
+                    color2
+                ]
+            }]
+    };
+
+    var cssData = {
+        labels: [
+            'Blue',
+            'White'
+        ],
+        datasets: [
+            {
+                data: [ cssValue, 100 - cssValue ],
+                backgroundColor: [
+                    color1,
+                    color2
+                ],
+                hoverBackgroundColor: [
+                    color1,
+                    color2
+                ]
+            }]
+    };
+
+    var ptData = {
+        labels: [
+            'Blue',
+            'White'
+        ],
+        datasets: [
+            {
+                data: [ ptValue, 100 - ptValue ],
+                backgroundColor: [
+                    color1,
+                    color2
+                ],
+                hoverBackgroundColor: [
+                    color1,
+                    color2
+                ]
+            }]
+    };
+
+    // CHARTS OPTIONS  ------------------------------------------
+
+    var wpOptions = {
+        cutoutPercentage: cutoutValue,
+        //borderWidth: 1,
+        //borderColor: colorStroke,
+        responsive: true,
+        animation: {
+            animateScale: true,
+            animateRotate: true,
+            onAnimationComplete: function () {
+                wpContext.textAlign = 'center';
+                wpContext.textBaseline = 'middle';
+                wpContext.fillText( wpData.datasets[0].data[0] + '%', wpElement.width / 2, wpElement.height / 2 );
+            }
         }
+    };
+
+    var htmlOptions = {
+        cutoutPercentage: cutoutValue,
+        borderWidth: 3,
+        borderColor: colorStroke,
+        animation: {
+            animateScale: true,
+            animateRotate: true,
+            onAnimationComplete: function () {
+                htmlContext.textAlign = 'center';
+                htmlContext.textBaseline = 'middle';
+                htmlContext.fillText( htmlData.datasets[0].data[0] + '%', htmlElement.width / 2, htmlElement.height / 2 );
+            }
+        }
+    };
+
+    var cssOptions = {
+        cutoutPercentage: cutoutValue,
+        borderWidth: 3,
+        borderColor: colorStroke,
+        animation: {
+            animateScale: true,
+            animateRotate: true,
+            onAnimationComplete: function () {
+                cssContext.textAlign = 'center';
+                cssContext.textBaseline = 'middle';
+                cssContext.fillText( cssData.datasets[0].data[0] + '%', cssElement.width / 2, cssElement.height / 2 );
+            }
+        }
+    };
+
+    var ptOptions = {
+        cutoutPercentage: cutoutValue,
+        borderWidth: 3,
+        borderColor: colorStroke,
+        animation: {
+            animateScale: true,
+            animateRotate: true,
+            onAnimationComplete: function () {
+                ptContext.textAlign = 'center';
+                ptContext.textBaseline = 'middle';
+                ptContext.fillText( ptData.datasets[0].data[0] + '%', ptElement.width / 2, ptElement.height / 2 );
+            }
+        }
+    };
+
+    // CHARTS  ------------------------------------------
+
+    var wpChart = new Chart( wpContext, {
+        type: 'doughnut',
+        data: wpData,
+        options: wpOptions
     });
 
-    Chart( htmlContext ).Doughnut( htmlData, {
-        percentageInnerCutout: 82,
-        segmentStrokeWidth: 3,
-        segmentStrokeColor: '#f7f7f7',
-        onAnimationComplete: function () {
-            htmlContext.fillStyle = '#333';
-            //htmlContext.font = '3rem Lato, sans-serif';
-            htmlContext.textAlign = 'center';
-            htmlContext.textBaseline = 'middle';
-            htmlContext.fillText( htmlData[0].value + '%', html.width / 2, html.height / 2 );
-        }
+    var htmlChart = new Chart( htmlContext, {
+        type: 'doughnut',
+        data: htmlData,
+        options: htmlOptions
     });
 
-    Chart( cssContext ).Doughnut( cssData, {
-        percentageInnerCutout: 82,
-        segmentStrokeWidth: 3,
-        segmentStrokeColor: '#f7f7f7',
-        onAnimationComplete: function () {
-            cssContext.fillStyle = '#333';
-            //cssContext.font = '3rem Lato, sans-serif';
-            cssContext.textAlign = 'center';
-            cssContext.textBaseline = 'middle';
-            cssContext.fillText( cssData[0].value + '%', css.width / 2, css.height / 2 );
-        }
+    var cssChart = new Chart( cssContext, {
+        type: 'doughnut',
+        data: cssData,
+        options: cssOptions
     });
 
-    Chart( ptContext ).Doughnut( ptData, {
-        percentageInnerCutout: 82,
-        segmentStrokeWidth: 3,
-        segmentStrokeColor: '#f7f7f7',
-        onAnimationComplete: function () {
-            ptContext.fillStyle = '#333';
-            //ptContext.font = '3rem Lato, sans-serif';
-            ptContext.textAlign = 'center';
-            ptContext.textBaseline = 'middle';
-            ptContext.fillText( ptData[0].value + '%', pt.width / 2, pt.height / 2 );
-        }
+    var ptChart = new Chart( ptContext, {
+        type: 'doughnut',
+        data: ptData,
+        options: ptOptions
     });
 
 
     // GOOGLE MAPS
     // ------------------------------------
 
-    GoogleMapsLoader.load( function (google) {
+    GoogleMapsLoader.load( function ( google ) {
 
         GoogleMapsLoader.LANGUAGE = 'en';
-        GoogleMapsLoader.KEY = 'AIzaSyB8K34DDu7gT9BqenQE8vJDxx7FQZt4Khg';
+        GoogleMapsLoader.KEY = 'AIzaSyAjunIsdBzwn5n0IhHJctIg4PPCMlH7u24';
 
-        const brampton = document.getElementById('brampton');
-        const bramptonCoords = new google.maps.LatLng(51.5220535, 0.041928900000016256);
-        const zoomValue = 15;
+        var brampton = document.querySelector( '#brampton' );
+        var bramptonCoords = new google.maps.LatLng( 51.5220535, 0.041928900000016256 );
+        var zoomValue = 15;
+        var markerPath = 'static/img/assets/block-map/location-icon.png';
 
-        const isIE11 = navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-        const markerPath = ( isIE11 ) ? 'assets/images/icon-location.png' : 'assets/images/icon-location.svg';
-
-        const bramptonMapStyles = [
+        var bramptonMapStyles = [
             {
                 featureType: 'water',
                 elementType: 'geometry',
@@ -191,21 +278,21 @@ window.addEventListener('DOMContentLoaded', function () {
             {
                 featureType: 'transit',
                 elementType: 'geometry',
-                stylers: [{color: '#f2f2f2'}, {lightness: 19}]
+                stylers: [{ color: '#f2f2f2' }, { lightness: 19 }]
             },
             {
                 featureType: 'administrative',
                 elementType: 'geometry.fill',
-                stylers: [{color: '#fefefe'}, {lightness: 20}]
+                stylers: [{ color: '#fefefe' }, { lightness: 20 }]
             },
             {
                 featureType: 'administrative',
                 elementType: 'geometry.stroke',
-                stylers: [{color: '#fefefe'}, {lightness: 17}, {weight: 1.2}]
+                stylers: [{ color: '#fefefe' }, { lightness: 17 }, { weight: 1.2 }]
             }
         ];
 
-        const bramptonProperties = {
+        var bramptonProperties = {
             center: bramptonCoords,
             zoom: zoomValue,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -223,9 +310,9 @@ window.addEventListener('DOMContentLoaded', function () {
             styles: bramptonMapStyles
         };
 
-        const bramptonMap = new google.maps.Map(brampton, bramptonProperties);
+        var bramptonMap = new google.maps.Map( brampton, bramptonProperties );
 
-        const bramptonMarker = new google.maps.Marker({
+        var bramptonMarker = new google.maps.Marker({
             position: bramptonCoords,
             map: bramptonMap,
             icon: markerPath,
@@ -233,28 +320,28 @@ window.addEventListener('DOMContentLoaded', function () {
             animation: google.maps.Animation.DROP
         });
 
-        const bramptonInfo = new google.maps.InfoWindow({
+        var bramptonInfo = new google.maps.InfoWindow({
             content: 'Brampton Manor Academy'
         });
 
         bramptonMarker.addListener('click', function () {
-            bramptonInfo.open(bramptonMap, bramptonMarker);
+            bramptonInfo.open( bramptonMap, bramptonMarker );
         });
 
         // MAKE GOOGLE MAP RESPONSIVE
         // --------------------------------------------------------------------
 
-        const bramptonMapCenter = bramptonMap.getCenter(); // returns the position displayed at the center of the map
+        var bramptonMapCenter = bramptonMap.getCenter(); // returns the position displayed at the center of the map
 
         // CENTER GOOGLE MAPS ON BROWSER RESIZE (RESPONSIVE)
-        google.maps.event.addDomListener(window, 'resize', function () {
-            bramptonMap.setCenter(bramptonMapCenter);
+        google.maps.event.addDomListener( window, 'resize', function () {
+            bramptonMap.setCenter( bramptonMapCenter );
         });
 
         // RETURN CENTER OF MAP TO THE CENTER OF WINDOW IF MAP WAS MOVED BY USER
-        google.maps.event.addListener(bramptonMap, 'center_changed', function () {
-            window.setTimeout(function () {
-                bramptonMap.setCenter(bramptonMapCenter);
+        google.maps.event.addListener( bramptonMap, 'center_changed', function () {
+            window.setTimeout( function () {
+                bramptonMap.setCenter( bramptonMapCenter );
             }, 3000);
         });
 
