@@ -1,20 +1,21 @@
 .facts
-    padding: 12rem 0 20rem
+    padding: 12rem 0
     background-color: $color-grey-grey
 
     // FACTS CENTER
     // --------------------------------------------
 
     &__center
-        lost-center $width flex
-        flex-direction: column
-        align-items: center
+        lost-center $width
         padding: 0 $gutter
 
     // FACTS HEADER
     // --------------------------------------------
 
     &__header
+        lost-center 100% flex
+        padding: 0 $gutter
+        flex-direction: column
         margin: 0 0 6rem
         text-align: center
 
@@ -48,10 +49,39 @@
         padding: 3rem 1rem
 
         &:nth-child( -n+3 )
-            border-right 0.1rem solid #ccc
+            border-right .1rem solid #ccc
 
-    &__icon
+        @media screen and ( max-width: $bp768 )
+            lost-column 1/2
+            lost-column-gutter 0
+            lost-column-cycle 2
+
+            &:nth-child( 2n+1 )
+                border-right .1rem solid #ccc
+
+            &:nth-child( -n+2 )
+                border-bottom .1rem solid #ccc
+
+            &:nth-child( 2 )
+                border-right: none
+
+        @media screen and ( max-width: $bp500 )
+            lost-column 1/1
+            lost-column-gutter 0
+            lost-column-cycle 2
+
+            &:nth-child( 2n+1 )
+                border-right none
+
+            &:nth-child( -n+3 )
+                border-bottom .1rem solid #ccc
+
+    &__thumb
         margin: 0 0 4rem
+
+        & .facts-icon
+            width: 6rem
+            height: auto
 
     &__caption
         text-transform: capitalize
