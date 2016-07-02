@@ -2,6 +2,8 @@
 
 var Chart = require('chart.js');
 var GoogleMapsLoader = require('google-maps');
+var Isotope = require('isotope-layout');
+var imagesLoaded = require('imagesLoaded');
 
 window.addEventListener( 'DOMContentLoaded', function () {
 
@@ -345,6 +347,29 @@ window.addEventListener( 'DOMContentLoaded', function () {
             }, 3000);
         });
 
+    });
+
+
+
+    // ISOTOPE
+    // --------------------------------------------------
+    var grid = document.querySelector('.recent__content');
+    var filterElems = document.querySelector('.recent-grid__control');
+    var iso;
+
+    imagesLoaded( grid, function () {
+        iso = new Isotope( grid, {
+            itemSelector: '.recent-grid__item',
+            percentPosition: true,
+            masonry: {
+                columnWidth: '.recent-grid__sizer'
+            }
+        });
+    });
+
+    // BIND FILTER BUTTON CLICK ----------------------------------
+    filterElems.addEventListener( 'click', function ( event ) {
+        iso.arrange({ filter: event.target.getAttribute('data-filter') });
     });
 
 }, false );

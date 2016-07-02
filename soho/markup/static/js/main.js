@@ -8,7 +8,7 @@ var select2 = require('select2');
 var $ = require('jquery');
 
 
-window.addEventListener('load', function () {
+window.addEventListener( 'load', function () {
 
     // SLIDEOUT
     // --------------------------------------------------

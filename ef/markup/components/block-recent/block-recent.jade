@@ -1,0 +1,26 @@
+mixin block-recent(data)
+    .recent
+        .recent__center
+            .recent__header
+                h2.recent__title additional recent work
+                p.recent__subtitle Market-proven software with award winning design
+            .recent__content
+                .recent-grid
+                    .recent-grid__control
+                        a.recent-grid__link(href='javascript:void(0);' data-filter='*') all
+                        a.recent-grid__link(href='javascript:void(0);' data-filter='.website') website
+                        a.recent-grid__link(href='javascript:void(0);' data-filter='.graphic') graphic
+                        a.recent-grid__link(href='javascript:void(0);' data-filter='.identity') identity
+                        a.recent-grid__link(href='javascript:void(0);' data-filter='.mobile') mobile apps
+                    .recent-grid__main
+                        .recent-grid__sizer
+                        .recent-grid__item.website
+                            .recent-grid__image
+                            .recent-grid__info
+                                h4.recent-grid__caption outfield
+                                p Mobile interaction CRM for field reps
+                        .recent-grid__item.graphic
+                        .recent-grid__item.identity
+                        .recent-grid__item.mobile
+                        .recent-grid__item.website
+                        .recent-grid__item.graphic

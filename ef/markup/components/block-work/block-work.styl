@@ -105,11 +105,12 @@
         // -----------------------------------------
 
         &__button
-            /*display: block;*/
-            /*padding: 1.4rem 6.4rem 1.8rem*/
-            max-width: 30rem
-            padding: 1.4rem 0 1.8rem
-            /*lost-center 33.6rem*/
+            display: flex
+            justify-content: center
+            align-items: center
+            white-space: nowrap
+            width: 26rem
+            height: 7rem
             text-transform: lowercase
             font: 3rem/1 $lato-regular
             color: $color-grey-dark
@@ -121,3 +122,7 @@
             &:hover
                 color: $color-white
                 background-color: $color-grey-dark
+
+            @media screen and ( max-width: $bp500 )
+                width: 20rem
+                font-size: 2rem
