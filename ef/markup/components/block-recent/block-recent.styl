@@ -13,6 +13,7 @@
     // -----------------------------------------------
 
     &__header
+        padding: 0 $gutter
         margin: 0 0 9rem
         text-align: center
 
@@ -32,49 +33,60 @@
         font: 2.4rem/1.2 $lato-regular
         color: $color-grey-dark
 
-    // RECENT CONTENT
+    // RECENT GRID CONTROL
     // -----------------------------------------------
 
-    & .recent-grid
-        //
+    & .recent-grid__control
+        margin: 0 0 6rem
+        display: flex
+        justify-content: center
 
-        &__control
-            margin: 0 0 6rem
-            display: flex
-            justify-content: center
+    & .recent-grid__link
+        padding: .9rem 1.6rem 1rem 1.6rem
+        border .1rem solid #ccc
+        border-radius .2rem .1rem .1rem .2rem
+        font: 1.4rem/1 $lato-regular
+        color: $color-grey
+        text-transform: capitalize
+        margin: 0 .6rem
+        transition: background-color .2s
 
-        &__link
-            padding: .9rem 1.6rem 1rem 1.6rem
-            border .1rem solid #ccc
-            border-radius .2rem .1rem .1rem .2rem
-            font: 1.4rem/1 $lato-regular
-            color: $color-grey
-            text-transform: capitalize
-            margin: 0 .6rem
-            transition: background-color .2s
+        &:nth-child(1)
+            background-color: #f1f1f1
 
-            &:nth-child(1)
-                background-color: #f1f1f1
+        &:hover
+            background-color: #f1f1f1
 
-            &:hover
-                background-color: #f1f1f1
+    // RECENT GRID MAIN
+    // -----------------------------------------------
 
-        &__main
-            lost-center 100%
+    & .recent-grid__main::before
+    & .recent-grid__main::after
+        content: ''
+        display: table
 
-        &__sizer
-        &__item
-            //lost-column 1/3
-            //lost-cloumn-gutter 2rem
-            float: left
-            width: 31%
-            height: 32rem
-            background-color: salmon
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: center
-            margin: 1rem
+    & .recent-grid__main::after
+        clear: both
+
+    & .recent-grid__sizer
+    & .recent-grid__item
+        float: left
+        width: 32%
+        height: 32rem
+        background-color: salmon
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin: .666666667%
+
+        @media screen and ( max-width: $bp980 )
+            width: 48%
+            margin: 1%
+
+        @media screen and ( max-width: $bp768 )
+            width: 98%
+            margin: 1%
 
 
 

@@ -3,7 +3,7 @@
 var Chart = require('chart.js');
 var GoogleMapsLoader = require('google-maps');
 var Isotope = require('isotope-layout');
-var imagesLoaded = require('imagesLoaded');
+var imagesload = require('imagesloaded');
 
 window.addEventListener( 'DOMContentLoaded', function () {
 
@@ -353,22 +353,24 @@ window.addEventListener( 'DOMContentLoaded', function () {
 
     // ISOTOPE
     // --------------------------------------------------
-    var grid = document.querySelector('.recent__content');
-    var filterElems = document.querySelector('.recent-grid__control');
+    var grid = document.querySelector('.recent-grid__main');
+    var gridItem = '.recent-grid__item';
+    var gridSizer = '.recent-grid__sizer';
+    var gridControl = document.querySelector('.recent-grid__control');
     var iso;
 
-    imagesLoaded( grid, function () {
+    imagesload( grid, function () {
         iso = new Isotope( grid, {
-            itemSelector: '.recent-grid__item',
+            itemSelector: gridItem,
             percentPosition: true,
             masonry: {
-                columnWidth: '.recent-grid__sizer'
+                columnWidth: gridSizer
             }
         });
     });
 
     // BIND FILTER BUTTON CLICK ----------------------------------
-    filterElems.addEventListener( 'click', function ( event ) {
+    gridControl.addEventListener( 'click', function ( event ) {
         iso.arrange({ filter: event.target.getAttribute('data-filter') });
     });
 

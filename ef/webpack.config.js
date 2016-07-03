@@ -141,6 +141,8 @@ module.exports = {
         }
     },
 
+    // INCLUDE ISOTOPE
+    // ---------------------------------------------
     resolve: {
         alias: {
             'masonry': 'masonry-layout',
