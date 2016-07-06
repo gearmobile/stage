@@ -349,8 +349,6 @@ window.addEventListener( 'DOMContentLoaded', function () {
 
     });
 
-
-
     // ISOTOPE
     // --------------------------------------------------
     var grid = document.querySelector('.recent-grid__main');
@@ -373,6 +371,14 @@ window.addEventListener( 'DOMContentLoaded', function () {
     gridControl.addEventListener( 'click', function ( event ) {
         iso.arrange({ filter: event.target.getAttribute('data-filter') });
     });
+
+
+    // GALLERY SHOW MORE BUTTON
+    // ------------------------------------------------------
+
+
+
+
 
 }, false );
 

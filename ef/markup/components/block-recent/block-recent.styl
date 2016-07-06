@@ -33,6 +33,14 @@
         font: 2.4rem/1.2 $lato-regular
         color: $color-grey-dark
 
+
+    // RECENT GRID
+    // -----------------------------------------------
+
+    & .recent-grid
+        position: relative
+
+
     // RECENT GRID CONTROL
     // -----------------------------------------------
 
@@ -60,6 +68,9 @@
     // RECENT GRID MAIN
     // -----------------------------------------------
 
+    & .recent-grid__main
+        margin: 0 0 6rem
+
     & .recent-grid__main::before
     & .recent-grid__main::after
         content: ''
@@ -74,10 +85,6 @@
         width: 32%
         height: 32rem
         background-color: salmon
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
         margin: .666666667%
 
         @media screen and ( max-width: $bp980 )
@@ -89,6 +96,23 @@
             margin: 1%
 
 
+    // RECENT GRID BUTTON
+    // -----------------------------------------------
+
+    & .recent-grid__button
+        width: 14rem
+        height: 4rem
+        background-color: $color-blue
+        display: flex
+        justify-content: center
+        align-items: center
+        text-transform: uppercase
+        font: 1.4rem/1.2 $lato-regular
+        cursor: pointer
+        margin: auto
+
+        &:hover
+            background-color: darken( $color-blue, 10% )
 
 
 
