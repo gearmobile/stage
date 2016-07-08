@@ -4,6 +4,7 @@ var Chart = require('chart.js');
 var GoogleMapsLoader = require('google-maps');
 var Isotope = require('isotope-layout');
 var imagesload = require('imagesloaded');
+var swiper = require('swiper');
 
 window.addEventListener( 'DOMContentLoaded', function () {
 
@@ -407,6 +408,10 @@ window.addEventListener( 'DOMContentLoaded', function () {
         }
 
     }, false );
+
+
+    // SWIPER
+    // ------------------------------------
 
 
 

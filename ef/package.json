@@ -10,7 +10,8 @@
     "imagesloaded": "^4.1.0",
     "isotope-layout": "^3.0.1",
     "lost": "^6.8.1",
-    "postcss-flexibility": "^1.0.3"
+    "postcss-flexibility": "^1.0.3",
+    "swiper": "^3.3.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1"

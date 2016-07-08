@@ -1,0 +1,141 @@
+.pricing
+    padding 14rem 0
+    background-color $color-grey-grey
+
+
+    // PRICING CENTER
+    // ------------------------------------------------
+
+    &__center
+        lost-center $width
+        padding 0 $gutter
+
+    // PRICING HEADER
+    // ------------------------------------------------
+
+    &__header
+        margin 0 0 14rem
+
+    // PRICING CONTENT
+    // ------------------------------------------------
+
+    &__content
+        padding 0 $gutter
+
+        @media screen and ( max-width $bp600 )
+            padding 0
+
+        // PRICING TABLE
+        // ------------------------------------------------
+
+        & .table
+            lost-center 100% flex
+
+            // PRICING TABLE ITEM
+            // ------------------------------------------------
+
+            &__item
+                lost-column 1/4
+                lost-column-gutter $gutter
+                display flex
+                flex-direction column
+
+                @media screen and ( max-width $bp980 )
+                    lost-column 1/2
+                    lost-column-gutter $gutter
+
+                    &:nth-child( -n+2 )
+                        margin-bottom $gutter
+
+                @media screen and ( max-width $bp600 )
+                    lost-column 1/1
+                    lost-column-gutter 0
+
+                    &:nth-child( -n+3 )
+                        margin-bottom $gutter
+
+
+            // PRICING TABLE HEADER
+            // ------------------------------------------------
+
+            &__header
+                width 100%
+                height 8rem
+                background-color $color-blue
+                display flex
+                justify-content center
+                align-items center
+                text-transform capitalize
+                font 2rem/1.2 $lato-bold
+                letter-spacing .1rem
+                color $color-white
+
+
+            // PRICING TABLE MAIN
+            // ------------------------------------------------
+
+            &__main
+                padding 4rem 0
+                text-align center
+
+
+            // PRICING TABLE PRICE
+            // ------------------------------------------------
+
+            &__price
+                font 6rem/1 $lato-bold
+                color $color-grey-dark
+                margin 0 0 5rem
+
+            &__currency
+                font-size 3.6rem
+                line-height 1.2
+                vertical-align top
+
+            &__month
+                font-size 2.4rem
+                line-height 1
+
+                &::before
+                    content '/'
+
+
+            // PRICING TABLE INFO
+            // ------------------------------------------------
+
+            &__info
+                font 1.4rem/4 $lato-regular
+                color $color-grey-dark
+                text-transform capitalize
+
+
+            // PRICING TABLE FOOTER
+            // ------------------------------------------------
+
+            &__footer
+                display flex
+                flex-direction column
+                align-items center
+                padding 1rem 0
+
+            &__button
+                margin 0 0 2rem
+                width 12rem
+                height 4rem
+                border .1rem solid $color-grey-dark
+                border-radius .4rem
+                padding 0
+                background-color transparent
+                font 1rem/1 $lato-bold
+                color $color-grey-dark
+                text-transform uppercase
+                transition background-color .2s, color .2s
+
+                &:hover
+                    color $color-white
+                    background-color $color-grey-dark
+
+            &__special
+                font 1rem/1 $lato-regular
+                color $color-grey-light-dark
+                text-transform uppercase
