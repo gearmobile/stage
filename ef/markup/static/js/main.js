@@ -410,9 +410,13 @@ window.addEventListener( 'DOMContentLoaded', function () {
     }, false );
 
 
-    // SWIPER
+    // SWIPER SLIDER CITATION
     // ------------------------------------
-
+    swiper( '.citation .swiper-container', {
+        pagination: '.citation .swiper-pagination',
+        paginationClickable: true,
+        loop: true
+    });
 
 
 

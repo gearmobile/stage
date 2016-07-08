@@ -1,1 +1,51 @@
+.citation
+    background url('%=static=%assets/block-follow/follow-bg.jpg') 50% 50% no-repeat
+    background-size cover
+    opacity .8
+    height 57rem
+    padding 10rem 0
 
+    &__center
+        lost-center $width flex
+        outline 1px solid red
+
+        & .swiper-container
+            width 100%
+            height 100%
+
+        & .swiper-slide
+            display flex
+            flex-direction column
+            align-items center
+            justify-content center
+            color $color-white
+
+        & .citation__header
+            margin 0 0 8rem
+
+        & .citation__icon
+            width 9rem
+            height 9rem
+
+        & .citation__main
+            lost-center 80rem flex
+            font 1.8rem/1.6 $lato-regular
+            text-align center
+            margin 0 0 7rem
+
+        & .citation__footer
+            font 1.8rem/1.6 $lato-regular
+            margin 0 0 4rem
+
+        & .swiper-pagination
+            bottom 0
+
+        & .swiper-pagination-bullet
+            width 1rem
+            height 1rem
+            opacity 1
+            background-color #ccc
+            margin 0.3rem
+
+        & .swiper-pagination-bullet-active
+            background-color $color-grey-light-dark
