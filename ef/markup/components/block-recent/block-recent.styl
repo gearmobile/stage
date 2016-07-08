@@ -49,6 +49,9 @@
         display: flex
         justify-content: center
 
+        @media screen and ( max-width: $bp500 )
+            display: none
+
     & .recent-grid__link
         padding: .9rem 1.6rem 1rem 1.6rem
         border .1rem solid #ccc
@@ -83,18 +86,66 @@
     & .recent-grid__item
         float: left
         width: 32%
-        height: 32rem
-        background-color: salmon
-        margin: .666666667%
+        min-height: 24rem
+        color: $color-grey-dark
+        margin: 2% .666666667%
 
         @media screen and ( max-width: $bp980 )
             width: 48%
-            margin: 1%
+            margin: 2% 1%
 
         @media screen and ( max-width: $bp768 )
             width: 98%
-            margin: 1%
+            margin: 2% 1%
 
+    & .recent-grid__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        text-align: center
+        padding: 0 0 1rem
+
+        &:hover .recent-grid__overlay
+            visibility: visible
+            opacity: 1
+
+    & .recent-grid__image
+        width: 100%
+        height: 16rem
+        position: relative
+
+        & > img
+            display: block
+            width: 100%
+            height: auto
+
+    & .recent-grid__overlay
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba( $color-black, .8 )
+        visibility: hidden
+        opacity: 0
+        transition: visibility .2s, opacity .2s
+
+        & .recent-icon
+            width: 1.8rem
+            height: 1.8rem
+            margin: 0 1rem
+
+    & .recent-grid__caption
+        text-transform: capitalize
+        font: 1.6rem/1.2 $lato-bold
+        margin: 0 0 1rem
+
+    & .recent-grid__subcaption
+        font: 1.4rem/1.2 $lato-regular
 
     // RECENT GRID BUTTON
     // -----------------------------------------------
