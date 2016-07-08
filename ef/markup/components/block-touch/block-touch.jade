@@ -1,2 +1,37 @@
+include ../module-header/module-header
+
 mixin block-touch(data)
-    .block-touch
+    .touch
+        .touch__center
+            .touch__header
+                +module-header( 'get in', 'touch' )
+            .touch__content
+                .touch__primary
+                    form.touch-form
+                        .touch-form__row
+                            .touch-form__column
+                                input.touch-form__input( type='text' placeholder='name' )
+                            .touch-form__column
+                                input.touch-form__input( type='email' placeholder='email' )
+                        .touch-form__row
+                            input.touch-form__input( type='text' placeholder='subject' )
+                        .touch-form__row
+                            textarea.touch-form__textarea( placeholder='message' )
+                        .touch-form__row
+                            button.touch-form__button( type='button' ) send message
+                .touch__secondary
+                    h3.touch__title additional info
+                    p If you have any questiong about our products or something else, please email us or call us. We'll get in touch with you as soon as possible.
+                    ul.touch__list
+                        li.touch__item
+                            != jadeHelpers.Icon.call(locals, {iconName: 'touch-icon-01', className: 'touch-icon'})
+                            | Jl. Pahlawan VII No. 247D Sidoarjo
+                        li.touch__item
+                            != jadeHelpers.Icon.call(locals, {iconName: 'touch-icon-02', className: 'touch-icon'})
+                            a( href='tel:+6285745965973' ) +62 - 85745965973
+                        li.touch__item
+                            != jadeHelpers.Icon.call(locals, {iconName: 'touch-icon-03', className: 'touch-icon'})
+                            a( href='mailto:rudhisasmito@gmail.com' ) rudhisasmito@gmail.com
+                        li.touch__item
+                            != jadeHelpers.Icon.call(locals, {iconName: 'touch-icon-04', className: 'touch-icon'})
+                            | Mo - Fr: 9am to 6pm

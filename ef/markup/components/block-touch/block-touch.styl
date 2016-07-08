@@ -1,1 +1,187 @@
+.touch
+    padding: 16rem 0
+    background-color: $color-white
+
+
+    &__center
+        lost-center $width flex
+        padding: 0 $gutter
+
+    // TOUCH HEADER
+    // -------------------------------------
+
+    &__header
+        margin: 0 0 16rem
+
+
+    // TOUCH CONTENT
+    // -------------------------------------
+
+    &__content
+        lost-center $width flex
+        padding: 0 $gutter
+
+        @media screen and ( max-width: $bp768 )
+            padding: 0
+
+
+    // TOUCH PRIMARY
+    // -------------------------------------
+
+    &__primary
+        lost-column 7/12
+        lost-column-gutter $gutter
+
+        @media screen and ( max-width: $bp980 )
+            lost-column 1/1
+            lost-column-gutter 0
+            margin: 0 0 4rem
+
+    // TOUCH FORM
+    // -------------------------------------
+
+    & .touch-form
+        width: 100%
+
+    & .touch-form__row
+        lost-center 100% flex
+        margin: 0 0 1rem
+
+    & .touch-form__column
+        lost-column 1/2
+        lost-column-gutter $gutter
+
+        @media screen and ( max-width: $bp768 )
+            lost-column 1/1
+            lost-column-gutter 0
+
+            &:nth-child( 1 )
+                margin: 0 0 1rem
+
+    & .touch-form__input
+    & .touch-form__textarea
+        width: 100%
+        border-radius: .3rem
+        border: .1rem solid #ccc
+        background-color: transparent
+        padding: 2rem
+        color: #ccc
+        font: 1.6rem/1.2 $lato-regular
+        text-transform: capitalize
+
+        +placeholder()
+            text-transform: capitalize
+
+        &:hover
+        &:focus
+            border-color: darken( #ccc, 20% )
+
+    & .touch-form__textarea
+        height: 16rem
+
+    & .touch-form__button
+        width 15rem
+        height 5rem
+        background-color $color-blue
+        border-radius .4rem
+        border: none
+        padding: 0
+        font: 1.6rem/1.2 $lato-regular
+        color: $color-white
+        text-transform: capitalize
+
+        &:hover
+            background-color darken( $color-blue, 10% )
+
+        @media screen and ( max-width: $bp980 )
+            margin: auto
+
+        @media screen and ( max-width: $bp768 )
+            margin: 1rem auto 0
+
+
+    // TOUCH SECONDARY
+    // -------------------------------------
+
+    &__secondary
+        lost-column 5/12
+        lost-column-gutter $gutter
+        padding: 0 0 0 3rem
+
+        & p
+            font: 1.6rem/1.6 $lato-regular
+            color: $color-grey
+
+            @media screen and ( max-width: $bp980 )
+                text-align: center
+
+        @media screen and ( max-width: $bp980 )
+            lost-column 1/1
+            lost-column-gutter 0
+
+        @media screen and ( max-width: $bp768 )
+            padding: 0
+
+    &__title
+        text-transform: uppercase
+        margin: 0 0 2rem
+        color: $color-grey-dark
+        font: 1.6rem/1.2 $lato-bold
+
+        @media screen and ( max-width: $bp980 )
+            text-align: center
+
+    &__list
+        margin: 5rem 0 0
+        font: 1.6rem/2.2 $lato-regular
+        color: $color-grey
+
+        & a
+            color: $color-grey
+            transition: color .2s
+
+            &:hover
+                color: $color-blue
+
+    &__item
+        display: flex
+        align-items: center
+
+        & .touch-icon
+            width: 2rem
+            height: 2rem
+            margin: 0 2rem 0 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
