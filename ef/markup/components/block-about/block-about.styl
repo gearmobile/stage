@@ -6,6 +6,7 @@
         lost-center $width flex
         padding: 0 $gutter
 
+
         // ABOUT CONTENT
         // --------------------------------
 
@@ -13,11 +14,17 @@
             width: 100%
             margin: 4rem 0 0 0
 
+            // ABOUT CONTENT CONTROL
+            // --------------------------------
+
             &__control
                 margin: 0 0 12rem
 
                 & ul
                     display: flex
+
+                    @media screen and ( max-width: $bp768 )
+                        justify-content: center
 
                 & li
                     width: 17.6rem
@@ -38,6 +45,10 @@
                     &:first-child
                         background-color: $color-blue
                         color: $color-white
+
+                    @media screen and ( max-width: $bp768 )
+                        &:nth-child( n+2 )
+                            display: none
 
 
 
@@ -86,9 +97,23 @@
             @media screen and ( max-width: $bp980 )
                 lost-column 1/1
                 lost-column-gutter 0
-                lost-column-cycle none
-                padding: 4rem 2rem 4rem 2rem
+                padding: 4rem 2rem
                 justify-content: flex-start
+
+                &:nth-child( 2n+1 )
+                    border-right: none
+
+                &:nth-child( 1 )::after
+                    display: none
+
+                &:nth-child( -n+3 )
+                    border-bottom: .1rem solid $color-grey-light
+
+            @media screen and ( max-width: $bp768 )
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                padding: 3rem 1rem
 
 
         // ABOUT CONTENT GRID ICON
@@ -108,6 +133,9 @@
                 height: auto
                 transform: skewX( 8deg )
 
+            @media screen and ( max-width: $bp768 )
+                margin: 0 0 4rem
+
 
         // ABOUT CONTENT GRID INFO
         // --------------------------------
@@ -124,6 +152,10 @@
             & p
                 font: 1.6rem/1.4 $lato-regular
                 color: $color-grey-light-dark
+
+            @media screen and ( max-width: $bp768 )
+                text-align: center
+                margin: 0
 
 
 

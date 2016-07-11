@@ -30,6 +30,40 @@
         &:nth-child( -n+4 )
             border-bottom: .1rem solid $color-grey-light
 
+        &:nth-child( 1 )
+        &:nth-child( 3 )
+            position: relative
+
+            &::after
+              content: ''
+              display: block
+              width: 4rem
+              height: 4rem
+              background-color: $color-white
+              position: absolute
+              bottom: -2rem
+              right: -2rem
+              z-index: 1
+
+        @media screen and ( max-width: $bp980 )
+            lost-column 1/1
+            lost-column-gutter 0
+            padding: 3rem 1rem
+
+            &:nth-child( 2n+1 )
+                border-right: none
+
+            &:nth-child( 1 )::after
+            &:nth-child( 3 )::after
+                display: none
+
+            &:nth-child( -n+5 )
+                border-bottom: .1rem solid $color-grey-light
+
+        @media screen and ( max-width: $bp768 )
+            flex-direction: column
+            align-items: center
+
     &__title
         text-transform: capitalize
         font: 2rem/1.2 $lato-bold
@@ -37,13 +71,28 @@
         margin: 0 0 1rem
 
     &__icon
+        display: flex
+        justify-content: center
+        align-items: center
         width: 12rem
         height: 10rem
         background-color: $color-blue
         margin: 0 3rem 0 0
-        transform: skewX(-8deg)
+        transform: skewX( -8deg )
+
+        @media screen and ( max-width: $bp768 )
+            margin: 0 0 4rem 0
 
         & span
-            transform: skewX(-8deg)
+            transform: skewX( 8deg )
+
+        & .services-icon
+            width: 5rem
+            height: auto
+
+    &__info
+        @media screen and ( max-width: $bp768 )
+            text-align: center
+
 
 
