@@ -410,6 +410,32 @@ window.addEventListener( 'DOMContentLoaded', function () {
     }, false );
 
 
+    // SWIPER SLIDER FOLLOW
+    // ------------------------------------
+    swiper( '.follow .swiper-container', {
+        pagination: '.follow .swiper-pagination',
+        paginationClickable: true,
+        loop: true,
+        breakpoints: {
+            500: {
+                autoplay: 2000
+            }
+        }
+    });
+
+
+    // SWIPER SLIDER CITATION
+    // ------------------------------------
+    swiper( '.citation .swiper-container', {
+        pagination: '.citation .swiper-pagination',
+        paginationClickable: true,
+        loop: true,
+        500: {
+            autoplay: 2000
+        }
+    });
+
+
 
     // SWIPER SLIDER TESTIMONIALS
     // ------------------------------------
@@ -426,18 +452,12 @@ window.addEventListener( 'DOMContentLoaded', function () {
             },
             768: {
                 slidesPerView: 1
+            },
+            500: {
+                slidesPerView: 1,
+                autoplay: 2000
             }
         }
-    });
-
-
-
-    // SWIPER SLIDER CITATION
-    // ------------------------------------
-    swiper( '.citation .swiper-container', {
-        pagination: '.citation .swiper-pagination',
-        paginationClickable: true,
-        loop: true
     });
 
 

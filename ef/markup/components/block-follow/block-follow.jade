@@ -1,12 +1,42 @@
 mixin block-follow(data)
     .follow
-        .swiper-container
-            .swiper-wrapper
-                .swiper-slide
-                    .follow__icon
-                    p Premium Template - orci in adipiscing felis velit nibh. Consectetuer porttitor feugiat vestibulum sit feugiat, voluptates dui eros libero
-                    p Follow us on Twitter: @rudhisasmito
-                .swiper-slide
-                .swiper-slide
-                .swiper-slide
-                .swiper-slide
+        .follow__center
+            .swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                        header.follow__header
+                            != jadeHelpers.Icon.call(locals, {iconName: 'follow-icon', className: 'follow__icon'})
+                        main.follow__main
+                            p Premium Template - orci in adipiscing felis velit nibh. Consectetuer porttitor feugiat vestibulum sit feugiat, voluptates dui eros libero
+                        footer.follow__footer
+                            p Follow us on Twitter
+                                = ' '
+                                a( href='javascript:void(0);' ) @rudhisasmito
+                    .swiper-slide
+                        header.follow__header
+                            != jadeHelpers.Icon.call(locals, {iconName: 'follow-icon', className: 'follow__icon'})
+                        main.follow__main
+                            p Premium Template - orci in adipiscing felis velit nibh. Consectetuer porttitor feugiat vestibulum sit feugiat, voluptates dui eros libero
+                        footer.follow__footer
+                            p Follow us on Twitter
+                                = ' '
+                                a( href='javascript:void(0);' ) @rudhisasmito
+                    .swiper-slide
+                        header.follow__header
+                            != jadeHelpers.Icon.call(locals, {iconName: 'follow-icon', className: 'follow__icon'})
+                        main.follow__main
+                            p Premium Template - orci in adipiscing felis velit nibh. Consectetuer porttitor feugiat vestibulum sit feugiat, voluptates dui eros libero
+                        footer.follow__footer
+                            p Follow us on Twitter
+                                = ' '
+                                a( href='javascript:void(0);' ) @rudhisasmito
+                    .swiper-slide
+                        header.follow__header
+                            != jadeHelpers.Icon.call(locals, {iconName: 'follow-icon', className: 'follow__icon'})
+                        main.follow__main
+                            p Premium Template - orci in adipiscing felis velit nibh. Consectetuer porttitor feugiat vestibulum sit feugiat, voluptates dui eros libero
+                        footer.follow__footer
+                            p Follow us on Twitter
+                                = ' '
+                                a( href='javascript:void(0);' ) @rudhisasmito
+                .swiper-pagination

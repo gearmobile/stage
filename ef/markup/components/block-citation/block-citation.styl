@@ -1,7 +1,6 @@
 .citation
     background url('%=static=%assets/block-follow/follow-bg.jpg') 50% 50% no-repeat
     background-size cover
-    //opacity .8
     padding 16rem 0
     position: relative
 
@@ -10,7 +9,7 @@
         content: ''
         display: block
         background-color: $color-white
-        width: 120%
+        width: 100%
         height: 16rem
         left: 0
         position: absolute
@@ -20,6 +19,7 @@
 
     &::after
         bottom: 0
+
 
     // CITATION CENTER
     // ------------------------------------------
@@ -31,52 +31,76 @@
         @media screen and ( margin: $bp600 )
             padding: 7rem 2rem
 
-        & .swiper-container
-            width 100%
-            height 100%
 
-        & .swiper-slide
-            display: flex
-            flex-direction: column
-            align-items: center
-            justify-content: center
-            color: $color-white
+    // CITATION SWIPER SLIDER
+    // ------------------------------------------
+
+    & .swiper-container
+        width: 100%
+        height: 100%
+
+    & .swiper-slide
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        color: $color-white
+
+    & .swiper-pagination
+        bottom 0
+        display: flex
+        justify-content: center
+
+        @media screen and ( max-width: $bp500 )
+            display: none
+
+    & .swiper-pagination-bullet
+        width 1rem
+        height 1rem
+        opacity 1
+        background-color #ccc
+        margin 0.3rem
+
+    & .swiper-pagination-bullet-active
+        background-color $color-grey-light-dark
 
 
-        & .swiper-pagination
-            bottom 0
-            display: flex
-            justify-content: center
+    // CITATION HEADER
+    // ------------------------------------------
 
-        & .swiper-pagination-bullet
-            width 1rem
-            height 1rem
-            opacity 1
-            background-color #ccc
-            margin 0.3rem
+    & .citation__header
+        margin 0 0 8rem
 
-        & .swiper-pagination-bullet-active
-            background-color $color-grey-light-dark
+    & .citation__icon
+        width 9rem
+        height 9rem
+
+        @media screen and ( max-width: $bp500 )
+            width 7rem
+            height 7rem
 
 
-        // CITATION HEADER
-        // ------------------------------------------
+    // CITATION MAIN
+    // ------------------------------------------
 
-        & .citation__header
-            margin 0 0 8rem
+    & .citation__main
+        lost-center 80rem flex
+        font 1.8rem/1.6 $lato-regular
+        text-align center
+        margin 0 0 7rem
 
-        & .citation__icon
-            width 9rem
-            height 9rem
+        @media screen and ( max-width: $bp500 )
+            font-size 1.6rem
+            margin 0 0 5rem
 
-        & .citation__main
-            lost-center 80rem flex
-            font 1.8rem/1.6 $lato-regular
-            text-align center
-            margin 0 0 7rem
 
-        & .citation__footer
-            font 1.8rem/1.6 $lato-regular
-            margin 0 0 4rem
+    // CITATION FOOTER
+    // ------------------------------------------
 
+    & .citation__footer
+        font 1.8rem/1.6 $lato-regular
+        margin 0 0 4rem
+
+        @media screen and ( max-width: $bp500 )
+            font-size 1.6rem
 
