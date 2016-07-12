@@ -465,7 +465,122 @@ window.addEventListener( 'DOMContentLoaded', function () {
 }, false );
 
 
+// TRIANGLES
+// -------------------------------------------------------
+
+var color1 = '#fff';
+var color2 = '#0cf';
+
+var delta = 0.12;
+var delta1 = 0.08;
+var delta2 = 0.041;
+var delta3 = 0.66;
+
+var width, height, width1, height1, height2;
+
+// HERO VARIABLE ------------------------------------------
+var hero = document.querySelector( '.hero' );
+var heroBottom = document.querySelector( '.hero__bottom' );
+var heroImageBottom = document.querySelector('.hero-image-bottom');
+var heroTriangleBottom = document.querySelector( '#heroTriangleBottom' );
+var heroTriangleBottomCtx = heroTriangleBottom.getContext( '2d' );
 
 
+// DRAW TRIANGLE TOP
+// -------------------------------------------------
+function drawTriangleTop( triangleTopCtx ) {
+    triangleTopCtx.lineWidth = 1;
+    triangleTopCtx.strokeStyle = color1;
+    triangleTopCtx.fillStyle = color1;
+    triangleTopCtx.beginPath();
+    triangleTopCtx.moveTo( 0, 0 );
+    triangleTopCtx.lineTo( width, 0 );
+    triangleTopCtx.lineTo( 0, height );
+    triangleTopCtx.stroke();
+    triangleTopCtx.fill();
+    triangleTopCtx.closePath();
+}
 
+
+// DRAW TRIANGLE BOTTOM
+// -------------------------------------------------
+function drawTriangleBottom( triangleBottomCtx ) {
+    triangleBottomCtx.lineWidth = 1;
+
+    // draw large triangle
+    triangleBottomCtx.strokeStyle = color1;
+    triangleBottomCtx.fillStyle = color1;
+    triangleBottomCtx.beginPath();
+    triangleBottomCtx.moveTo( width, 0 );
+    triangleBottomCtx.lineTo( width, height );
+    triangleBottomCtx.lineTo( 0, height );
+    triangleBottomCtx.stroke();
+    triangleBottomCtx.fill();
+    triangleBottomCtx.closePath();
+
+    // draw small triangle
+    triangleBottomCtx.beginPath();
+    triangleBottomCtx.strokeStyle = color2;
+    triangleBottomCtx.fillStyle = color2;
+    triangleBottomCtx.moveTo( width, 0 );
+    triangleBottomCtx.lineTo( width, height1 );
+    triangleBottomCtx.lineTo( width1, height2 );
+    triangleBottomCtx.stroke();
+    triangleBottomCtx.fill();
+    triangleBottomCtx.closePath();
+}
+
+function canvasToImage( image, context, canvas ) {
+    image.src = context.canvas.toDataURL();
+    canvas.style.display = 'none';
+}
+
+function variablesValues() {
+    width = Math.floor( window.innerWidth );
+    height = Math.floor( width * delta );
+    width1 = Math.floor( width * delta3 );
+    height1 = Math.floor( width * delta1 );
+    height2 = Math.floor( width * delta2 );
+}
+
+function stylingTop( block, blockTop, triangleTop ) {
+    blockTop.style.height = height + 'px';
+    blockTop.style.width = '100%';
+    blockTop.style.position = 'absolute';
+    blockTop.style.left = 0;
+    blockTop.style.top = 0;
+    block.style.paddingTop = height + 'px';
+    block.style.position = 'relative';
+    triangleTop.width = width;
+    triangleTop.height = height;
+}
+
+function stylingBottom( block, blockBottom, triangleBottom ) {
+    blockBottom.style.height = height + 'px';
+    blockBottom.style.width = '100%';
+    blockBottom.style.position = 'absolute';
+    blockBottom.style.left = 0;
+    blockBottom.style.bottom = 0;
+    block.style.paddingBottom = height + 'px';
+    block.style.position = 'relative';
+    triangleBottom.width = width;
+    triangleBottom.height = height;
+}
+
+
+window.addEventListener( 'DOMContentLoaded', function () {
+    variablesValues();
+    // SECTION BLOCK HERO -----------------------------------------
+    stylingBottom( hero, heroBottom, heroTriangleBottom );
+    drawTriangleBottom( heroTriangleBottomCtx );
+    canvasToImage( heroImageBottom, heroTriangleBottomCtx, heroTriangleBottom );
+}, false );
+
+window.addEventListener( 'resize', function () {
+    variablesValues();
+    // SECTION BLOCK HERO -----------------------------------------
+    stylingBottom( hero, heroBottom, heroTriangleBottom );
+    drawTriangleBottom( heroTriangleBottomCtx );
+    canvasToImage( heroImageBottom, heroTriangleBottomCtx, heroTriangleBottom );
+}, false );
 
