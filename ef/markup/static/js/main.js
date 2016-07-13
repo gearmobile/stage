@@ -5,25 +5,82 @@ var GoogleMapsLoader = require('google-maps');
 var Isotope = require('isotope-layout');
 var imagesload = require('imagesloaded');
 var swiper = require('swiper');
+var smoothScroll = require('smooth-scroll');
+
 
 window.addEventListener( 'DOMContentLoaded', function () {
 
-    // WINDOW SCROLL
+    // TO TOP BUTTON
     // ------------------------------------
+
+    var topButton = document.querySelector('.module-button');
+
+    function scrollToTopLinear( scrollDuration ) {
+        var scrollStep = -window.scrollY / ( scrollDuration / 15 );
+        var scrollInterval = setInterval( function () {
+            if ( window.scrollY !== 0 ) {
+                window.scrollBy( 0, scrollStep );
+            } else {
+                clearInterval( scrollInterval );
+            }
+        }, 15 );
+    }
+
+    function scrollToTopEaseInOut( scrollDuration ) {
+        var scrollHeight = window.scrollY;
+        var scrollStep = Math.PI / ( scrollDuration / 15 );
+        var cosParameter = scrollHeight / 2;
+        var scrollCount = 0;
+        var scrollMargin;
+        function step() {
+            setTimeout( function () {
+                if ( window.scrollY !== 0 ) {
+                    requestAnimationFrame( step );
+                    scrollCount = scrollCount + 1;
+                    scrollMargin = cosParameter - cosParameter * Math.cos( scrollCount * scrollStep );
+                    window.scrollTo( 0, ( scrollHeight - scrollMargin ) );
+                }
+            }, 15 );
+        }
+        requestAnimationFrame( step );
+    }
+
+    topButton.addEventListener( 'click', function () {
+        scrollToTopEaseInOut(1000);
+    }, false );
+
+
+    // SMOOTH SCROLL
+    // ------------------------------------
+
+    smoothScroll.init({
+        selector: '.topheader__link',
+        easing: 'easeInOutQuart',
+        speed: 2000
+    });
+
+
+    // WINDOW SCROLL && TO TOP BUTTON
+    // ------------------------------------
+
     var topHeader = document.querySelector( '.topheader' );
     var topOffset = 110;
+
     window.addEventListener( 'scroll', function () {
         var scrollOffset = window.pageYOffset || document.documentElement.scrollTop;
         if ( scrollOffset > topOffset ) {
             topHeader.classList.add('is-hidden');
+            topButton.classList.add('is-visible');
         } else {
             topHeader.classList.remove('is-hidden');
+            topButton.classList.remove('is-visible');
         }
     }, false );
 
 
-    // CHART.JS
+    // CHART.JS DIAGRAMMS
     // ------------------------------------
+
     var color1 = '#0cf';
     var color2 = '#eaeaea';
     var colorStroke = '#f00';
@@ -141,7 +198,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
         animation: {
             animateScale: true,
             animateRotate: true,
-            onComplete: function ( animation ) {
+            onComplete: function () {
                 wpContext.fillStyle = '#333';
                 wpContext.font = '3rem Lato, sans-serif';
                 wpContext.textAlign = 'center';
@@ -158,7 +215,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
         animation: {
             animateScale: true,
             animateRotate: true,
-            onComplete: function ( animation ) {
+            onComplete: function () {
                 htmlContext.fillStyle = '#333';
                 htmlContext.font = '3rem Lato, sans-serif';
                 htmlContext.textAlign = 'center';
@@ -175,7 +232,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
         animation: {
             animateScale: true,
             animateRotate: true,
-            onComplete: function ( animation ) {
+            onComplete: function () {
                 cssContext.fillStyle = '#333';
                 cssContext.font = '3rem Lato, sans-serif';
                 cssContext.textAlign = 'center';
@@ -192,7 +249,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
         animation: {
             animateScale: true,
             animateRotate: true,
-            onComplete: function ( animation ) {
+            onComplete: function () {
                 ptContext.fillStyle = '#333';
                 ptContext.font = '3rem Lato, sans-serif';
                 ptContext.textAlign = 'center';
@@ -362,7 +419,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
         google.maps.event.addListener( bramptonMap, 'center_changed', function () {
             window.setTimeout( function () {
                 bramptonMap.setCenter( bramptonMapCenter );
-            }, 3000);
+            }, 3000 );
         });
 
     });

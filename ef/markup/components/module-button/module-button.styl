@@ -1,0 +1,22 @@
+.module-button
+    display: block
+    width: 4rem
+    height: 4rem
+    border-radius: 50%
+    background-color: $color-orange
+    position: fixed
+    right: 2rem
+    bottom: 2rem
+    cursor: pointer
+    z-index: 99
+    visibility: hidden
+    opacity: 0
+    transition: visibility .2s, opacity .2s, background-color .2s
+    will-change: transition
+
+    &:hover
+        background-color: lighten( $color-orange, 20% )
+
+    &.is-visible
+        visibility: visible
+        opacity: 1

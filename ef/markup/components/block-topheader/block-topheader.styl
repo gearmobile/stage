@@ -35,41 +35,30 @@
         @media screen and ( max-width: $bp600 )
             display: none
 
+
     // TOPHEADER MENU
     // --------------------------------------
 
     & .topheader-menu
         display: flex
 
-        & li
-            margin: 0 0 0 3rem
+    & .topheader__item
+        margin: 0 0 0 3rem
 
-            &:first-child
-                margin-left: 0
+        &:first-child
+            margin-left: 0
 
-        & a
-            text-transform: capitalize
-            color: $color-white
-            transition: color .2s
+    & .topheader__link
+        text-transform: capitalize
+        color: $color-white
+        transition: color .2s
 
-            &:hover
-                color: $color-orange
+        &:hover
+            color: $color-orange
 
         @media screen and ( max-width: $bp600 )
             display: none
 
-
-    // TOPHEADER MOBILE MENU
-    // -----------------------------------------
-
-    & .topheader-menu__mobile
-        width: 2rem
-        height: 2rem
-        background-color: $color-black
-        display: none
-
-        @media screen and ( max-width: $bp600 )
-            display: block
 
 &.is-hidden
     visibility hidden

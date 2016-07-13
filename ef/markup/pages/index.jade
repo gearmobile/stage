@@ -18,6 +18,7 @@ html(class='no-js', lang='ru')
     include ../components/block-touch/block-touch
     include ../components/block-map/block-map
     include ../components/footer/footer
+    include ../components/module-button/module-button
 
     head
         +head(head.defaults)
@@ -25,6 +26,7 @@ html(class='no-js', lang='ru')
         |%=symbols=%
 
         +block-topheader()
+        +module-button()
 
         section.page__wrapper
 
@@ -41,7 +43,7 @@ html(class='no-js', lang='ru')
             +block-pricing()
             +block-citation()
             +block-touch()
-            //+block-map()
+            +block-map()
 
             .page__buffer
 

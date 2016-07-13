@@ -1,12 +1,11 @@
 mixin block-topheader(data)
-    .topheader
+    .topheader#topheader
         .topheader__center
             .topheader__logo
             .topheader__navigation
                 ul.topheader-menu
-                    li: a( href='javascript:void(0);' ) home
-                    li: a( href='#about' ) about us
-                    li: a( href='#work' ) products
-                    li: a( href='#testimonials' ) testimonials
-                    li: a( href='#touch' ) contact
-            .topheader-menu__mobile
+                    li.topheader__item: a.topheader__link( href='#topheader' ) home
+                    li.topheader__item: a.topheader__link( href='#about' ) about us
+                    li.topheader__item: a.topheader__link( href='#work' ) products
+                    li.topheader__item: a.topheader__link( href='#testimonials' ) testimonials
+                    li.topheader__item: a.topheader__link( href='#touch' ) contact
