@@ -1,24 +1,17 @@
 .follow
-    padding: 16rem 0
     background: url('%=static=%assets/block-follow/follow-bg.jpg') 50% 50% no-repeat
     background-size: cover
     position: relative
 
     &::before
-    &::after
         content: ''
         display: block
-        background-color: $color-white
         width: 100%
-        height: 16rem
-        left: 0
+        height: 100%
+        background-color: rgba( $color-black, .8 )
         position: absolute
-
-    &::before
         top: 0
-
-    &::after
-        bottom: 0
+        left: 0
 
     // FOLLOW CENTER
     // ------------------------------------------

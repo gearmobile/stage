@@ -1,5 +1,8 @@
 mixin block-follow(data)
     .follow
+        .follow__top
+            canvas#followTopCanvas
+            img.follow-top-image()
         .follow__center
             .swiper-container
                 .swiper-wrapper
@@ -40,3 +43,6 @@ mixin block-follow(data)
                                 = ' '
                                 a( href='javascript:void(0);' ) @rudhisasmito
                 .swiper-pagination
+        .follow__bottom
+            canvas#followBottomCanvas
+            img.follow-bottom-image()

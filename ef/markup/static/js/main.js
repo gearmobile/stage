@@ -478,61 +478,74 @@ var delta3 = 0.66;
 
 var width, height, width1, height1, height2;
 
-// HERO VARIABLE ------------------------------------------
+// SECTION HERO ------------------------------------------
 var hero = document.querySelector( '.hero' );
 var heroBottom = document.querySelector( '.hero__bottom' );
 var heroImageBottom = document.querySelector('.hero-image-bottom');
 var heroTriangleBottom = document.querySelector( '#heroTriangleBottom' );
 var heroTriangleBottomCtx = heroTriangleBottom.getContext( '2d' );
 
+// SECTION FOLLOW -----------------------------------------
+var follow = document.querySelector( '.follow' );
+
+var followTop = document.querySelector( '.follow__top' );
+var followTopCanvas = document.querySelector( '#followTopCanvas' );
+var followTopCanvasContext = followTopCanvas.getContext( '2d' );
+var followTopImage = document.querySelector( '.follow-top-image' );
+
+var followBottom = document.querySelector( '.follow__bottom' );
+var followBottomCanvas = document.querySelector( '#followBottomCanvas' );
+var followBottomCanvasContext = followBottomCanvas.getContext( '2d' );
+var followBottomImage = document.querySelector( '.follow-bottom-image' );
+
 
 // DRAW TRIANGLE TOP
 // -------------------------------------------------
-function drawTriangleTop( triangleTopCtx ) {
-    triangleTopCtx.lineWidth = 1;
-    triangleTopCtx.strokeStyle = color1;
-    triangleTopCtx.fillStyle = color1;
-    triangleTopCtx.beginPath();
-    triangleTopCtx.moveTo( 0, 0 );
-    triangleTopCtx.lineTo( width, 0 );
-    triangleTopCtx.lineTo( 0, height );
-    triangleTopCtx.stroke();
-    triangleTopCtx.fill();
-    triangleTopCtx.closePath();
+function drawTriangleTop( topCanvasContext ) {
+    topCanvasContext.lineWidth = 1;
+    topCanvasContext.strokeStyle = color1;
+    topCanvasContext.fillStyle = color1;
+    topCanvasContext.beginPath();
+    topCanvasContext.moveTo( 0, 0 );
+    topCanvasContext.lineTo( width, 0 );
+    topCanvasContext.lineTo( 0, height );
+    topCanvasContext.stroke();
+    topCanvasContext.fill();
+    topCanvasContext.closePath();
 }
 
 
 // DRAW TRIANGLE BOTTOM
 // -------------------------------------------------
-function drawTriangleBottom( triangleBottomCtx ) {
-    triangleBottomCtx.lineWidth = 1;
+function drawTriangleBottom( bottomCanvasContext ) {
+    bottomCanvasContext.lineWidth = 1;
 
     // draw large triangle
-    triangleBottomCtx.strokeStyle = color1;
-    triangleBottomCtx.fillStyle = color1;
-    triangleBottomCtx.beginPath();
-    triangleBottomCtx.moveTo( width, 0 );
-    triangleBottomCtx.lineTo( width, height );
-    triangleBottomCtx.lineTo( 0, height );
-    triangleBottomCtx.stroke();
-    triangleBottomCtx.fill();
-    triangleBottomCtx.closePath();
+    bottomCanvasContext.strokeStyle = color1;
+    bottomCanvasContext.fillStyle = color1;
+    bottomCanvasContext.beginPath();
+    bottomCanvasContext.moveTo( width, 0 );
+    bottomCanvasContext.lineTo( width, height );
+    bottomCanvasContext.lineTo( 0, height );
+    bottomCanvasContext.stroke();
+    bottomCanvasContext.fill();
+    bottomCanvasContext.closePath();
 
     // draw small triangle
-    triangleBottomCtx.beginPath();
-    triangleBottomCtx.strokeStyle = color2;
-    triangleBottomCtx.fillStyle = color2;
-    triangleBottomCtx.moveTo( width, 0 );
-    triangleBottomCtx.lineTo( width, height1 );
-    triangleBottomCtx.lineTo( width1, height2 );
-    triangleBottomCtx.stroke();
-    triangleBottomCtx.fill();
-    triangleBottomCtx.closePath();
+    bottomCanvasContext.beginPath();
+    bottomCanvasContext.strokeStyle = color2;
+    bottomCanvasContext.fillStyle = color2;
+    bottomCanvasContext.moveTo( width, 0 );
+    bottomCanvasContext.lineTo( width, height1 );
+    bottomCanvasContext.lineTo( width1, height2 );
+    bottomCanvasContext.stroke();
+    bottomCanvasContext.fill();
+    bottomCanvasContext.closePath();
 }
 
-function canvasToImage( image, context, canvas ) {
-    image.src = context.canvas.toDataURL();
-    canvas.style.display = 'none';
+function canvasToImage( blockImage, blockCanvasContext, blockCanvas ) {
+    blockImage.src = blockCanvasContext.canvas.toDataURL();
+    blockCanvas.style.display = 'none';
 }
 
 function variablesValues() {
@@ -543,44 +556,60 @@ function variablesValues() {
     height2 = Math.floor( width * delta2 );
 }
 
-function stylingTop( block, blockTop, triangleTop ) {
+function stylingTop( block, blockTop, blockTopCanvas ) {
+    block.style.paddingTop = height + 'px';
     blockTop.style.height = height + 'px';
-    blockTop.style.width = '100%';
+    blockTop.style.width = width;
     blockTop.style.position = 'absolute';
     blockTop.style.left = 0;
     blockTop.style.top = 0;
-    block.style.paddingTop = height + 'px';
-    block.style.position = 'relative';
-    triangleTop.width = width;
-    triangleTop.height = height;
+    blockTopCanvas.width = width;
+    blockTopCanvas.height = height;
 }
 
-function stylingBottom( block, blockBottom, triangleBottom ) {
+function stylingBottom( block, blockBottom, blockBottomCanvas ) {
+    block.style.paddingBottom = height + 'px';
     blockBottom.style.height = height + 'px';
-    blockBottom.style.width = '100%';
+    blockBottom.style.width = width;
     blockBottom.style.position = 'absolute';
     blockBottom.style.left = 0;
     blockBottom.style.bottom = 0;
-    block.style.paddingBottom = height + 'px';
-    block.style.position = 'relative';
-    triangleBottom.width = width;
-    triangleBottom.height = height;
+    blockBottomCanvas.width = width;
+    blockBottomCanvas.height = height;
 }
 
 
 window.addEventListener( 'DOMContentLoaded', function () {
     variablesValues();
-    // SECTION BLOCK HERO -----------------------------------------
+
+    // SECTION HERO -----------------------------------------
     stylingBottom( hero, heroBottom, heroTriangleBottom );
     drawTriangleBottom( heroTriangleBottomCtx );
     canvasToImage( heroImageBottom, heroTriangleBottomCtx, heroTriangleBottom );
+
+    // SECTION FOLLOW -----------------------------------------
+    stylingTop( follow, followTop, followTopCanvas );
+    stylingBottom( follow, followBottom, followBottomCanvas );
+    drawTriangleTop( followTopCanvasContext );
+    drawTriangleBottom( followBottomCanvasContext );
+    canvasToImage( followTopImage, followTopCanvasContext, followTopCanvas );
+    canvasToImage( followBottomImage, followBottomCanvasContext, followBottomCanvas );
 }, false );
 
 window.addEventListener( 'resize', function () {
     variablesValues();
+
     // SECTION BLOCK HERO -----------------------------------------
     stylingBottom( hero, heroBottom, heroTriangleBottom );
     drawTriangleBottom( heroTriangleBottomCtx );
     canvasToImage( heroImageBottom, heroTriangleBottomCtx, heroTriangleBottom );
+
+    // SECTION FOLLOW -----------------------------------------
+    stylingTop( follow, followTop, followTopCanvas );
+    stylingBottom( follow, followBottom, followBottomCanvas );
+    drawTriangleTop( followTopCanvasContext );
+    drawTriangleBottom( followBottomCanvasContext );
+    canvasToImage( followTopImage, followTopCanvasContext, followTopCanvas );
+    canvasToImage( followBottomImage, followBottomCanvasContext, followBottomCanvas );
 }, false );
 
