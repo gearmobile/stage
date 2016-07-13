@@ -8,9 +8,22 @@ var swiper = require('swiper');
 
 window.addEventListener( 'DOMContentLoaded', function () {
 
+    // WINDOW SCROLL
+    // ------------------------------------
+    var topHeader = document.querySelector( '.topheader' );
+    var topOffset = 110;
+    window.addEventListener( 'scroll', function () {
+        var scrollOffset = window.pageYOffset || document.documentElement.scrollTop;
+        if ( scrollOffset > topOffset ) {
+            topHeader.classList.add('is-hidden');
+        } else {
+            topHeader.classList.remove('is-hidden');
+        }
+    }, false );
+
+
     // CHART.JS
     // ------------------------------------
-
     var color1 = '#0cf';
     var color2 = '#eaeaea';
     var colorStroke = '#f00';
@@ -122,8 +135,8 @@ window.addEventListener( 'DOMContentLoaded', function () {
 
     var wpOptions = {
         cutoutPercentage: cutoutValue,
-        //borderWidth: 1,
-        //borderColor: colorStroke,
+        borderWidth: 1,
+        borderColor: colorStroke,
         responsive: true,
         animation: {
             animateScale: true,
