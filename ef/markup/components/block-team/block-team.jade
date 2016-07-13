@@ -2,6 +2,9 @@ include ../module-header/module-header
 
 mixin block-team(data)
     .team
+        .team__top
+            canvas#teamTopCanvas
+            img.team-top-image
         .team__center
             .team__head
                 +module-header('about','us')
@@ -98,3 +101,6 @@ mixin block-team(data)
                             small senior desigener
                         .team__info
                             p Imperdiet nulla sem fringilla, purus enim amet, nascetur faucibus, adipiscing neque ut bibendum, at felis nec in.
+        .team__bottom
+            canvas#teamBottomCanvas
+            img.team-bottom-image

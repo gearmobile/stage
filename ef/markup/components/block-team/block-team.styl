@@ -1,32 +1,26 @@
 .team
-    background: url('%=static=%assets/block-team/team-bg.jpg') 50% 50% no-repeat
+    background: url('%=static=%assets/block-follow/follow-bg.jpg') 50% 50% no-repeat
     background-size: cover
-    padding: 16rem 0
     position: relative
 
     &::before
-    &::after
         content: ''
         display: block
-        background-color: $color-white
         width: 100%
-        height: 16rem
-        left: 0
+        height: 100%
+        background-color: rgba( $color-black, .7 )
         position: absolute
-
-    &::before
         top: 0
+        left: 0
 
-    &::after
-        bottom: 0
+    // TEAM CENTER
+    // -------------------------------------------
 
     &__center
-        lost-center $width flex
-        padding: 8rem $gutter
-        justify-content: center
-        align-items: center
-        align-content: center
-
+        lost-center: $width flex
+        padding: 7rem 1rem
+        position: relative
+        z-index 1
 
     // TEAM HEAD
     // -------------------------------------------

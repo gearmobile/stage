@@ -480,10 +480,12 @@ var width, height, width1, height1, height2;
 
 // SECTION HERO ------------------------------------------
 var hero = document.querySelector( '.hero' );
+
 var heroBottom = document.querySelector( '.hero__bottom' );
-var heroImageBottom = document.querySelector('.hero-image-bottom');
-var heroTriangleBottom = document.querySelector( '#heroTriangleBottom' );
-var heroTriangleBottomCtx = heroTriangleBottom.getContext( '2d' );
+var heroBottomCanvas = document.querySelector( '#heroBottomCanvas' );
+var heroBottomCanvasContext = heroBottomCanvas.getContext( '2d' );
+var heroBottomImage = document.querySelector( '.hero-bottom-image' );
+
 
 // SECTION FOLLOW -----------------------------------------
 var follow = document.querySelector( '.follow' );
@@ -510,6 +512,19 @@ var citationBottom = document.querySelector( '.citation__bottom' );
 var citationBottomCanvas = document.querySelector( '#citationBottomCanvas' );
 var citationBottomCanvasContext = citationBottomCanvas.getContext( '2d' );
 var citationBottomImage = document.querySelector( '.citation-bottom-image' );
+
+// SECTION TEAM -----------------------------------------
+var team = document.querySelector( '.team' );
+
+var teamTop = document.querySelector( '.team__top' );
+var teamTopCanvas = document.querySelector( '#teamTopCanvas' );
+var teamTopCanvasContext = teamTopCanvas.getContext( '2d' );
+var teamTopImage = document.querySelector( '.team-top-image' );
+
+var teamBottom = document.querySelector( '.team__bottom' );
+var teamBottomCanvas = document.querySelector( '#teamBottomCanvas' );
+var teamBottomCanvasContext = teamBottomCanvas.getContext( '2d' );
+var teamBottomImage = document.querySelector( '.team-bottom-image' );
 
 // DRAW TRIANGLE TOP
 // -------------------------------------------------
@@ -595,9 +610,10 @@ window.addEventListener( 'DOMContentLoaded', function () {
     variablesValues();
 
     // SECTION HERO -----------------------------------------
-    stylingBottom( hero, heroBottom, heroTriangleBottom );
-    drawTriangleBottom( heroTriangleBottomCtx );
-    canvasToImage( heroImageBottom, heroTriangleBottomCtx, heroTriangleBottom );
+    stylingBottom( hero, heroBottom, heroBottomCanvas );
+    drawTriangleBottom( heroBottomCanvasContext );
+    canvasToImage( heroBottomImage, heroBottomCanvasContext, heroBottomCanvas );
+
 
     // SECTION FOLLOW -----------------------------------------
     stylingTop( follow, followTop, followTopCanvas );
@@ -614,6 +630,14 @@ window.addEventListener( 'DOMContentLoaded', function () {
     drawTriangleBottom( citationBottomCanvasContext );
     canvasToImage( citationTopImage, citationTopCanvasContext, citationTopCanvas );
     canvasToImage( citationBottomImage, citationBottomCanvasContext, citationBottomCanvas );
+
+    // SECTION TEAM -----------------------------------------
+    stylingTop( team, teamTop, teamTopCanvas );
+    stylingBottom( team, teamBottom, teamBottomCanvas );
+    drawTriangleTop( teamTopCanvasContext );
+    drawTriangleBottom( teamBottomCanvasContext );
+    canvasToImage( teamTopImage, teamTopCanvasContext, teamTopCanvas );
+    canvasToImage( teamBottomImage, teamBottomCanvasContext, teamBottomCanvas );
 }, false );
 
 window.addEventListener( 'resize', function () {
@@ -639,5 +663,13 @@ window.addEventListener( 'resize', function () {
     drawTriangleBottom( citationBottomCanvasContext );
     canvasToImage( citationTopImage, citationTopCanvasContext, citationTopCanvas );
     canvasToImage( citationBottomImage, citationBottomCanvasContext, citationBottomCanvas );
+
+    // SECTION TEAM -----------------------------------------
+    stylingTop( team, teamTop, teamTopCanvas );
+    stylingBottom( team, teamBottom, teamBottomCanvas );
+    drawTriangleTop( teamTopCanvasContext );
+    drawTriangleBottom( teamBottomCanvasContext );
+    canvasToImage( teamTopImage, teamTopCanvasContext, teamTopCanvas );
+    canvasToImage( teamBottomImage, teamBottomCanvasContext, teamBottomCanvas );
 }, false );
 
