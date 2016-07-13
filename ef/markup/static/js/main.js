@@ -644,9 +644,9 @@ window.addEventListener( 'resize', function () {
     variablesValues();
 
     // SECTION BLOCK HERO -----------------------------------------
-    stylingBottom( hero, heroBottom, heroTriangleBottom );
-    drawTriangleBottom( heroTriangleBottomCtx );
-    canvasToImage( heroImageBottom, heroTriangleBottomCtx, heroTriangleBottom );
+    stylingBottom( hero, heroBottom, heroBottomCanvas );
+    drawTriangleBottom( heroBottomCanvasContext );
+    canvasToImage( heroBottomImage, heroBottomCanvasContext, heroBottomCanvas );
 
     // SECTION FOLLOW -----------------------------------------
     stylingTop( follow, followTop, followTopCanvas );
