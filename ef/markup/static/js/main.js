@@ -498,6 +498,18 @@ var followBottomCanvas = document.querySelector( '#followBottomCanvas' );
 var followBottomCanvasContext = followBottomCanvas.getContext( '2d' );
 var followBottomImage = document.querySelector( '.follow-bottom-image' );
 
+// SECTION CITATION -----------------------------------------
+var citation = document.querySelector( '.citation' );
+
+var citationTop = document.querySelector( '.citation__top' );
+var citationTopCanvas = document.querySelector( '#citationTopCanvas' );
+var citationTopCanvasContext = citationTopCanvas.getContext( '2d' );
+var citationTopImage = document.querySelector( '.citation-top-image' );
+
+var citationBottom = document.querySelector( '.citation__bottom' );
+var citationBottomCanvas = document.querySelector( '#citationBottomCanvas' );
+var citationBottomCanvasContext = citationBottomCanvas.getContext( '2d' );
+var citationBottomImage = document.querySelector( '.citation-bottom-image' );
 
 // DRAW TRIANGLE TOP
 // -------------------------------------------------
@@ -594,6 +606,14 @@ window.addEventListener( 'DOMContentLoaded', function () {
     drawTriangleBottom( followBottomCanvasContext );
     canvasToImage( followTopImage, followTopCanvasContext, followTopCanvas );
     canvasToImage( followBottomImage, followBottomCanvasContext, followBottomCanvas );
+
+    // SECTION CITATION -----------------------------------------
+    stylingTop( citation, citationTop, citationTopCanvas );
+    stylingBottom( citation, citationBottom, citationBottomCanvas );
+    drawTriangleTop( citationTopCanvasContext );
+    drawTriangleBottom( citationBottomCanvasContext );
+    canvasToImage( citationTopImage, citationTopCanvasContext, citationTopCanvas );
+    canvasToImage( citationBottomImage, citationBottomCanvasContext, citationBottomCanvas );
 }, false );
 
 window.addEventListener( 'resize', function () {
@@ -611,5 +631,13 @@ window.addEventListener( 'resize', function () {
     drawTriangleBottom( followBottomCanvasContext );
     canvasToImage( followTopImage, followTopCanvasContext, followTopCanvas );
     canvasToImage( followBottomImage, followBottomCanvasContext, followBottomCanvas );
+
+    // SECTION CITATION -----------------------------------------
+    stylingTop( citation, citationTop, citationTopCanvas );
+    stylingBottom( citation, citationBottom, citationBottomCanvas );
+    drawTriangleTop( citationTopCanvasContext );
+    drawTriangleBottom( citationBottomCanvasContext );
+    canvasToImage( citationTopImage, citationTopCanvasContext, citationTopCanvas );
+    canvasToImage( citationBottomImage, citationBottomCanvasContext, citationBottomCanvas );
 }, false );
 
