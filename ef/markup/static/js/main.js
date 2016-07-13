@@ -37,10 +37,6 @@ window.addEventListener( 'DOMContentLoaded', function () {
     Chart.defaults.global.showTooltips = false;
     Chart.defaults.global.legend.display = false;
     Chart.defaults.global.title.display = false;
-    Chart.defaults.global.defaultFontColor = '#333';
-    Chart.defaults.global.defaultFontSize = 30;
-    Chart.defaults.global.defaultFontSize = 'normal';
-    //Chart.defaults.global.defaultFontFamily = 'Lato, sans-serif';
     Chart.defaults.global.animation.duration = 1000;
     Chart.defaults.global.animation.easing = 'easeOutQuart';
 
@@ -132,7 +128,9 @@ window.addEventListener( 'DOMContentLoaded', function () {
         animation: {
             animateScale: true,
             animateRotate: true,
-            onAnimationComplete: function () {
+            onComplete: function ( animation ) {
+                wpContext.fillStyle = '#333';
+                wpContext.font = '3rem Lato, sans-serif';
                 wpContext.textAlign = 'center';
                 wpContext.textBaseline = 'middle';
                 wpContext.fillText( wpData.datasets[0].data[0] + '%', wpElement.width / 2, wpElement.height / 2 );
@@ -147,7 +145,9 @@ window.addEventListener( 'DOMContentLoaded', function () {
         animation: {
             animateScale: true,
             animateRotate: true,
-            onAnimationComplete: function () {
+            onComplete: function ( animation ) {
+                htmlContext.fillStyle = '#333';
+                htmlContext.font = '3rem Lato, sans-serif';
                 htmlContext.textAlign = 'center';
                 htmlContext.textBaseline = 'middle';
                 htmlContext.fillText( htmlData.datasets[0].data[0] + '%', htmlElement.width / 2, htmlElement.height / 2 );
@@ -162,7 +162,9 @@ window.addEventListener( 'DOMContentLoaded', function () {
         animation: {
             animateScale: true,
             animateRotate: true,
-            onAnimationComplete: function () {
+            onComplete: function ( animation ) {
+                cssContext.fillStyle = '#333';
+                cssContext.font = '3rem Lato, sans-serif';
                 cssContext.textAlign = 'center';
                 cssContext.textBaseline = 'middle';
                 cssContext.fillText( cssData.datasets[0].data[0] + '%', cssElement.width / 2, cssElement.height / 2 );
@@ -177,7 +179,9 @@ window.addEventListener( 'DOMContentLoaded', function () {
         animation: {
             animateScale: true,
             animateRotate: true,
-            onAnimationComplete: function () {
+            onComplete: function ( animation ) {
+                ptContext.fillStyle = '#333';
+                ptContext.font = '3rem Lato, sans-serif';
                 ptContext.textAlign = 'center';
                 ptContext.textBaseline = 'middle';
                 ptContext.fillText( ptData.datasets[0].data[0] + '%', ptElement.width / 2, ptElement.height / 2 );
