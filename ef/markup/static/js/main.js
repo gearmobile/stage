@@ -542,8 +542,9 @@ window.addEventListener( 'DOMContentLoaded', function () {
 // TRIANGLES
 // -------------------------------------------------------
 
-var color1 = '#fff';
-var color2 = '#0cf';
+var primaryColor = '#fff';
+var secondaryColor = '#0cf';
+var tertiaryColor = '#f7f7f7';
 
 var delta = 0.12;
 var delta1 = 0.08;
@@ -602,10 +603,10 @@ var teamBottomImage = document.querySelector( '.team-bottom-image' );
 
 // DRAW TRIANGLE TOP
 // -------------------------------------------------
-function drawTriangleTop( topCanvasContext ) {
+function drawTriangleTop( topCanvasContext, color ) {
     topCanvasContext.lineWidth = 1;
-    topCanvasContext.strokeStyle = color1;
-    topCanvasContext.fillStyle = color1;
+    topCanvasContext.strokeStyle = color;
+    topCanvasContext.fillStyle = color;
     topCanvasContext.beginPath();
     topCanvasContext.moveTo( 0, 0 );
     topCanvasContext.lineTo( width, 0 );
@@ -618,7 +619,7 @@ function drawTriangleTop( topCanvasContext ) {
 
 // DRAW TRIANGLE BOTTOM
 // -------------------------------------------------
-function drawTriangleBottom( bottomCanvasContext ) {
+function drawTriangleBottom( bottomCanvasContext, color1, color2 ) {
     bottomCanvasContext.lineWidth = 1;
 
     // draw large triangle
@@ -685,33 +686,34 @@ window.addEventListener( 'DOMContentLoaded', function () {
 
     // SECTION HERO -----------------------------------------
     stylingBottom( hero, heroBottom, heroBottomCanvas );
-    drawTriangleBottom( heroBottomCanvasContext );
+    drawTriangleBottom( heroBottomCanvasContext, primaryColor, secondaryColor );
     canvasToImage( heroBottomImage, heroBottomCanvasContext, heroBottomCanvas );
 
+    // SECTION TEAM -----------------------------------------
+    stylingTop( team, teamTop, teamTopCanvas );
+    stylingBottom( team, teamBottom, teamBottomCanvas );
+    drawTriangleTop( teamTopCanvasContext, tertiaryColor );
+    drawTriangleBottom( teamBottomCanvasContext, primaryColor, secondaryColor );
+    canvasToImage( teamTopImage, teamTopCanvasContext, teamTopCanvas );
+    canvasToImage( teamBottomImage, teamBottomCanvasContext, teamBottomCanvas );
 
     // SECTION FOLLOW -----------------------------------------
     stylingTop( follow, followTop, followTopCanvas );
     stylingBottom( follow, followBottom, followBottomCanvas );
-    drawTriangleTop( followTopCanvasContext );
-    drawTriangleBottom( followBottomCanvasContext );
+    drawTriangleTop( followTopCanvasContext, tertiaryColor );
+    drawTriangleBottom( followBottomCanvasContext, primaryColor, secondaryColor );
     canvasToImage( followTopImage, followTopCanvasContext, followTopCanvas );
     canvasToImage( followBottomImage, followBottomCanvasContext, followBottomCanvas );
 
     // SECTION CITATION -----------------------------------------
     stylingTop( citation, citationTop, citationTopCanvas );
     stylingBottom( citation, citationBottom, citationBottomCanvas );
-    drawTriangleTop( citationTopCanvasContext );
-    drawTriangleBottom( citationBottomCanvasContext );
+    drawTriangleTop( citationTopCanvasContext, tertiaryColor );
+    drawTriangleBottom( citationBottomCanvasContext, primaryColor, secondaryColor );
     canvasToImage( citationTopImage, citationTopCanvasContext, citationTopCanvas );
     canvasToImage( citationBottomImage, citationBottomCanvasContext, citationBottomCanvas );
 
-    // SECTION TEAM -----------------------------------------
-    stylingTop( team, teamTop, teamTopCanvas );
-    stylingBottom( team, teamBottom, teamBottomCanvas );
-    drawTriangleTop( teamTopCanvasContext );
-    drawTriangleBottom( teamBottomCanvasContext );
-    canvasToImage( teamTopImage, teamTopCanvasContext, teamTopCanvas );
-    canvasToImage( teamBottomImage, teamBottomCanvasContext, teamBottomCanvas );
+
 }, false );
 
 window.addEventListener( 'resize', function () {
@@ -719,31 +721,33 @@ window.addEventListener( 'resize', function () {
 
     // SECTION BLOCK HERO -----------------------------------------
     stylingBottom( hero, heroBottom, heroBottomCanvas );
-    drawTriangleBottom( heroBottomCanvasContext );
+    drawTriangleBottom( heroBottomCanvasContext, primaryColor, secondaryColor );
     canvasToImage( heroBottomImage, heroBottomCanvasContext, heroBottomCanvas );
+
+    // SECTION TEAM -----------------------------------------
+    stylingTop( team, teamTop, teamTopCanvas );
+    stylingBottom( team, teamBottom, teamBottomCanvas );
+    drawTriangleTop( teamTopCanvasContext, tertiaryColor );
+    drawTriangleBottom( teamBottomCanvasContext, primaryColor, secondaryColor );
+    canvasToImage( teamTopImage, teamTopCanvasContext, teamTopCanvas );
+    canvasToImage( teamBottomImage, teamBottomCanvasContext, teamBottomCanvas );
 
     // SECTION FOLLOW -----------------------------------------
     stylingTop( follow, followTop, followTopCanvas );
     stylingBottom( follow, followBottom, followBottomCanvas );
-    drawTriangleTop( followTopCanvasContext );
-    drawTriangleBottom( followBottomCanvasContext );
+    drawTriangleTop( followTopCanvasContext, tertiaryColor );
+    drawTriangleBottom( followBottomCanvasContext, primaryColor, secondaryColor );
     canvasToImage( followTopImage, followTopCanvasContext, followTopCanvas );
     canvasToImage( followBottomImage, followBottomCanvasContext, followBottomCanvas );
 
     // SECTION CITATION -----------------------------------------
     stylingTop( citation, citationTop, citationTopCanvas );
     stylingBottom( citation, citationBottom, citationBottomCanvas );
-    drawTriangleTop( citationTopCanvasContext );
-    drawTriangleBottom( citationBottomCanvasContext );
+    drawTriangleTop( citationTopCanvasContext, tertiaryColor );
+    drawTriangleBottom( citationBottomCanvasContext, primaryColor, secondaryColor );
     canvasToImage( citationTopImage, citationTopCanvasContext, citationTopCanvas );
     canvasToImage( citationBottomImage, citationBottomCanvasContext, citationBottomCanvas );
 
-    // SECTION TEAM -----------------------------------------
-    stylingTop( team, teamTop, teamTopCanvas );
-    stylingBottom( team, teamBottom, teamBottomCanvas );
-    drawTriangleTop( teamTopCanvasContext );
-    drawTriangleBottom( teamBottomCanvasContext );
-    canvasToImage( teamTopImage, teamTopCanvasContext, teamTopCanvas );
-    canvasToImage( teamBottomImage, teamBottomCanvasContext, teamBottomCanvas );
+
 }, false );
 

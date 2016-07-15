@@ -27,7 +27,7 @@ module.exports = {
         "bundler": "webpack",
         "lint": true,
         "useBabel": false,
-        "removeConsoleLog": true,
+        "removeConsoleLog": false,
         "webpack": {
             "useHMR": false
         },
@@ -52,7 +52,7 @@ module.exports = {
         "sounds": {},
         "taskFinishedText": "Task finished at: "
     },
-    "minifyHtml": false,
+    "minifyHtml": true,
     "generateStaticPath": true,
     "buildPath": "./builds/",
     "useBuildVersioning": true,
