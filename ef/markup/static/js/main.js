@@ -647,6 +647,7 @@ function drawTriangleBottom( bottomCanvasContext, color1, color2 ) {
 
 function canvasToImage( blockImage, blockCanvasContext, blockCanvas ) {
     blockImage.src = blockCanvasContext.canvas.toDataURL();
+    blockImage.alt = '';
     blockCanvas.style.display = 'none';
 }
 
