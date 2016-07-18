@@ -645,12 +645,6 @@ function drawTriangleBottom( bottomCanvasContext, color1, color2 ) {
     bottomCanvasContext.closePath();
 }
 
-function canvasToImage( blockImage, blockCanvasContext, blockCanvas ) {
-    blockImage.src = blockCanvasContext.canvas.toDataURL();
-    blockImage.alt = '';
-    blockCanvas.style.display = 'none';
-}
-
 function variablesValues() {
     width = Math.floor( window.innerWidth );
     height = Math.floor( width * delta );
@@ -688,32 +682,24 @@ window.addEventListener( 'DOMContentLoaded', function () {
     // SECTION HERO -----------------------------------------
     stylingBottom( hero, heroBottom, heroBottomCanvas );
     drawTriangleBottom( heroBottomCanvasContext, primaryColor, secondaryColor );
-    canvasToImage( heroBottomImage, heroBottomCanvasContext, heroBottomCanvas );
 
     // SECTION TEAM -----------------------------------------
     stylingTop( team, teamTop, teamTopCanvas );
     stylingBottom( team, teamBottom, teamBottomCanvas );
     drawTriangleTop( teamTopCanvasContext, tertiaryColor );
     drawTriangleBottom( teamBottomCanvasContext, primaryColor, secondaryColor );
-    canvasToImage( teamTopImage, teamTopCanvasContext, teamTopCanvas );
-    canvasToImage( teamBottomImage, teamBottomCanvasContext, teamBottomCanvas );
 
     // SECTION FOLLOW -----------------------------------------
     stylingTop( follow, followTop, followTopCanvas );
     stylingBottom( follow, followBottom, followBottomCanvas );
     drawTriangleTop( followTopCanvasContext, tertiaryColor );
     drawTriangleBottom( followBottomCanvasContext, primaryColor, secondaryColor );
-    canvasToImage( followTopImage, followTopCanvasContext, followTopCanvas );
-    canvasToImage( followBottomImage, followBottomCanvasContext, followBottomCanvas );
 
     // SECTION CITATION -----------------------------------------
     stylingTop( citation, citationTop, citationTopCanvas );
     stylingBottom( citation, citationBottom, citationBottomCanvas );
     drawTriangleTop( citationTopCanvasContext, tertiaryColor );
     drawTriangleBottom( citationBottomCanvasContext, primaryColor, secondaryColor );
-    canvasToImage( citationTopImage, citationTopCanvasContext, citationTopCanvas );
-    canvasToImage( citationBottomImage, citationBottomCanvasContext, citationBottomCanvas );
-
 
 }, false );
 
@@ -723,32 +709,24 @@ window.addEventListener( 'resize', function () {
     // SECTION BLOCK HERO -----------------------------------------
     stylingBottom( hero, heroBottom, heroBottomCanvas );
     drawTriangleBottom( heroBottomCanvasContext, primaryColor, secondaryColor );
-    canvasToImage( heroBottomImage, heroBottomCanvasContext, heroBottomCanvas );
 
     // SECTION TEAM -----------------------------------------
     stylingTop( team, teamTop, teamTopCanvas );
     stylingBottom( team, teamBottom, teamBottomCanvas );
     drawTriangleTop( teamTopCanvasContext, tertiaryColor );
     drawTriangleBottom( teamBottomCanvasContext, primaryColor, secondaryColor );
-    canvasToImage( teamTopImage, teamTopCanvasContext, teamTopCanvas );
-    canvasToImage( teamBottomImage, teamBottomCanvasContext, teamBottomCanvas );
 
     // SECTION FOLLOW -----------------------------------------
     stylingTop( follow, followTop, followTopCanvas );
     stylingBottom( follow, followBottom, followBottomCanvas );
     drawTriangleTop( followTopCanvasContext, tertiaryColor );
     drawTriangleBottom( followBottomCanvasContext, primaryColor, secondaryColor );
-    canvasToImage( followTopImage, followTopCanvasContext, followTopCanvas );
-    canvasToImage( followBottomImage, followBottomCanvasContext, followBottomCanvas );
 
     // SECTION CITATION -----------------------------------------
     stylingTop( citation, citationTop, citationTopCanvas );
     stylingBottom( citation, citationBottom, citationBottomCanvas );
     drawTriangleTop( citationTopCanvasContext, tertiaryColor );
     drawTriangleBottom( citationBottomCanvasContext, primaryColor, secondaryColor );
-    canvasToImage( citationTopImage, citationTopCanvasContext, citationTopCanvas );
-    canvasToImage( citationBottomImage, citationBottomCanvasContext, citationBottomCanvas );
-
 
 }, false );
 

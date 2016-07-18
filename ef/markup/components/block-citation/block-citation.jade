@@ -2,26 +2,24 @@ mixin block-citation(data)
     .citation
         .citation__top
             canvas#citationTopCanvas
-            img.citation-top-image
         .citation__center
             .swiper-container
                 .swiper-wrapper
                     .swiper-slide
-                        header.citation__header
+                        .citation__header
                             != jadeHelpers.Icon.call(locals, {iconName: 'citation-icon', className: 'citation__icon'})
-                        main.citation__main Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendiss  aliquam ipsum ante.
-                        footer.citation__footer Rudhi Sasmito - CEO Company
+                        .citation__main Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendiss  aliquam ipsum ante.
+                        .citation__footer Rudhi Sasmito - CEO Company
                     .swiper-slide
-                        header.citation__header
+                        .citation__header
                             != jadeHelpers.Icon.call(locals, {iconName: 'citation-icon', className: 'citation__icon'})
-                        main.citation__main Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendiss  aliquam ipsum ante.
-                        footer.citation__footer Rudhi Sasmito - CEO Company
+                        .citation__main Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendiss  aliquam ipsum ante.
+                        .citation__footer Rudhi Sasmito - CEO Company
                     .swiper-slide
-                        header.citation__header
+                        .citation__header
                             != jadeHelpers.Icon.call(locals, {iconName: 'citation-icon', className: 'citation__icon'})
-                        main.citation__main Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendiss  aliquam ipsum ante.
-                        footer.citation__footer Rudhi Sasmito - CEO Company
+                        .citation__main Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendiss  aliquam ipsum ante.
+                        .citation__footer Rudhi Sasmito - CEO Company
                 .swiper-pagination
         .citation__bottom
             canvas#citationBottomCanvas
-            img.citation-bottom-image
