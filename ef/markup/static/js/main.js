@@ -559,8 +559,6 @@ var hero = document.querySelector( '.hero' );
 var heroBottom = document.querySelector( '.hero__bottom' );
 var heroBottomCanvas = document.querySelector( '#heroBottomCanvas' );
 var heroBottomCanvasContext = heroBottomCanvas.getContext( '2d' );
-var heroBottomImage = document.querySelector( '.hero-bottom-image' );
-
 
 // SECTION FOLLOW -----------------------------------------
 var follow = document.querySelector( '.follow' );
@@ -568,12 +566,10 @@ var follow = document.querySelector( '.follow' );
 var followTop = document.querySelector( '.follow__top' );
 var followTopCanvas = document.querySelector( '#followTopCanvas' );
 var followTopCanvasContext = followTopCanvas.getContext( '2d' );
-var followTopImage = document.querySelector( '.follow-top-image' );
 
 var followBottom = document.querySelector( '.follow__bottom' );
 var followBottomCanvas = document.querySelector( '#followBottomCanvas' );
 var followBottomCanvasContext = followBottomCanvas.getContext( '2d' );
-var followBottomImage = document.querySelector( '.follow-bottom-image' );
 
 // SECTION CITATION -----------------------------------------
 var citation = document.querySelector( '.citation' );
@@ -581,12 +577,10 @@ var citation = document.querySelector( '.citation' );
 var citationTop = document.querySelector( '.citation__top' );
 var citationTopCanvas = document.querySelector( '#citationTopCanvas' );
 var citationTopCanvasContext = citationTopCanvas.getContext( '2d' );
-var citationTopImage = document.querySelector( '.citation-top-image' );
 
 var citationBottom = document.querySelector( '.citation__bottom' );
 var citationBottomCanvas = document.querySelector( '#citationBottomCanvas' );
 var citationBottomCanvasContext = citationBottomCanvas.getContext( '2d' );
-var citationBottomImage = document.querySelector( '.citation-bottom-image' );
 
 // SECTION TEAM -----------------------------------------
 var team = document.querySelector( '.team' );
@@ -594,12 +588,10 @@ var team = document.querySelector( '.team' );
 var teamTop = document.querySelector( '.team__top' );
 var teamTopCanvas = document.querySelector( '#teamTopCanvas' );
 var teamTopCanvasContext = teamTopCanvas.getContext( '2d' );
-var teamTopImage = document.querySelector( '.team-top-image' );
 
 var teamBottom = document.querySelector( '.team__bottom' );
 var teamBottomCanvas = document.querySelector( '#teamBottomCanvas' );
 var teamBottomCanvasContext = teamBottomCanvas.getContext( '2d' );
-var teamBottomImage = document.querySelector( '.team-bottom-image' );
 
 // DRAW TRIANGLE TOP
 // -------------------------------------------------
@@ -615,7 +607,6 @@ function drawTriangleTop( topCanvasContext, color ) {
     topCanvasContext.fill();
     topCanvasContext.closePath();
 }
-
 
 // DRAW TRIANGLE BOTTOM
 // -------------------------------------------------
