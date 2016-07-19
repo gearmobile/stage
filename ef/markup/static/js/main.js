@@ -49,6 +49,14 @@ window.addEventListener( 'DOMContentLoaded', function () {
         scrollToTopEaseInOut(1000);
     }, false );
 
+    window.addEventListener( 'load', function () {
+        if ( window.innerWidth < 500 ) {
+            topButton.style.display = 'none';
+        } else {
+            topButton.style.display = 'block';
+        }
+    }, false);
+
     window.addEventListener( 'resize', function () {
         if ( window.innerWidth < 500 ) {
             topButton.style.display = 'none';
