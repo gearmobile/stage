@@ -2,6 +2,19 @@ doctype html
 html(class="no-js", lang="ru")
 
     include ../components/head/head
+    include ../components/block-topheader/block-topheader
+    include ../components/block-header/block-header
+    include ../components/block-about/block-about
+    include ../components/block-services/block-services
+    include ../components/block-history/block-history
+    include ../components/block-team/block-team
+    include ../components/block-portfolio/block-portfolio
+    include ../components/block-prices/block-prices
+    include ../components/block-purchase/block-purchase
+    include ../components/block-blog/block-blog
+    include ../components/block-clients/block-clients
+    include ../components/block-testimonials/block-testimonials
+    include ../components/block-map/block-map
     include ../components/footer/footer
 
     head
@@ -9,9 +22,22 @@ html(class="no-js", lang="ru")
     body.page
         |%=symbols=%
 
+        +block-topheader()
+
         section.page__wrapper
 
-            //- Include your components here
+            +block-header()
+            +block-about()
+            +block-services()
+            +block-history()
+            +block-team()
+            +block-portfolio()
+            +block-prices()
+            +block-purchase()
+            +block-blog()
+            +block-clients()
+            +block-testimonials()
+            +block-map()
 
             .page__buffer
 
