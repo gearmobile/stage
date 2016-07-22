@@ -1,6 +1,18 @@
 .topheader
     background-color: $color-white
     padding: 2rem 0
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 999
+    visibility: visible
+    opacity: 1
+    transition: visibility .2s, opacity .2s
+
+    &.is-hidden
+        visibility: hidden
+        opacity: 0
 
 
     // TOPHEADER CENTER
@@ -17,9 +29,7 @@
         justify-content: space-between
         align-items: center
         lost-column 9/12
-        lost-column-gutter $gutter
-        outline: 1px solid red
-
+        lost-column-gutter 0
 
     // TOPHEADER SECONDARY
     // -----------------------------
@@ -27,7 +37,6 @@
     &__secondary
         lost-column 1/12
         lost-column-gutter $gutter
-        outline: 1px solid blue
         display: flex
         align-items: center
 
@@ -47,7 +56,6 @@
             font: 1.8rem/1.2 $montserrat-regular
             color: $color-grey-light
             background: url('%=static=%assets/block-topheader/icon-logo.png') 0 50% no-repeat
-            outline: 1px solid green
 
     // TOPHEADER MENU PRIMARY
     // -----------------------------
@@ -63,12 +71,23 @@
             font: 1.2rem/1.2 $montserrat-regular
             color: $color-grey-dark
 
-
     // TOPHEADER MENU SECONDARY
     // -----------------------------
 
     &__menu--secondary
-        //
+        display: flex
+        justify-content: space-around
+        width: 100%
+
+        & a
+            display: block
+            width: 1.6rem
+            height: 1.6rem
+
+        & .topheader-icon
+            width: 1.6rem
+            height: 1.6rem
+            fill: $color-grey-light
 
 
 
