@@ -1,2 +1,31 @@
+include ../module-heading-oneside/module-heading-oneside
+include ../module-button/module-button
+
 mixin block-about(data)
-    .block-about
+    .about
+        .center
+            .about__primary
+                .about__image
+                .about__content
+                    +module-heading-oneside( 'about us' )
+                    p Donec aliquet, ipsum ut lobortis facilisis, nisi ligula aliquam odio, ut vehicula odio lorem in erat. Quisque quam ipsum, commodo non condimentum a, fermentum id sapien. Pellentesque sit amet sem neque. Maecenas est enim, sollicitudin sit amet nisi vel, mattis efficitur sapien. Nulla lobortis dui in aliquam placerat. Maecenas commodo odio nec neque imperdiet sagittis. Fusce mauris tellus, vulputate id finibus a, rutrum et justo. Vivamus at eros sed justo laoreet mattis vulputate vel magna. Sed quis pulvinar quam, et tempus purus. Fusce et nisi eget dui hendrerit iaculis. Cras volutpat augue tempor viverra tincidunt. Maecenas interdum scelerisque enim. Aenean interdum leo ac lectus gravida, id tincidunt sem finibus. Curabitur ac arcu blandit, tempus leo id, ultrices ante.
+                    .about__controls
+                        +module-button( 'contact us' )
+                        +module-button( 'portfolio' )
+            .about__secondary
+                .about__item
+                    .about__thumb
+                    .about__caption awards #[br] winner
+                    .about__count 54
+                .about__item
+                    .about__thumb
+                    .about__caption jobs #[br] done
+                    .about__count 1054
+                .about__item
+                    .about__thumb
+                    .about__caption happy #[br] clients
+                    .about__count 120
+                .about__item
+                    .about__thumb
+                    .about__caption reviews #[br] recieved
+                    .about__count 54
