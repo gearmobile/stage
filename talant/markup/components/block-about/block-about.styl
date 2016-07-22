@@ -51,6 +51,9 @@
         width: 100%
         padding: 3rem 0 0 0
 
+    // ABOUT ITEM
+    // -------------------------------------------
+
     &__item
         lost-column 1/4
         lost-column-gutter 0
@@ -60,8 +63,24 @@
         padding: .2rem 0
         color: $color-grey
 
+        &:nth-child( -n+3 )
+            border-right: .1rem solid $color-grey-smooth
+
+    // ABOUT THUMB
+    // -------------------------------------------
+
     &__thumb
+        width: 4rem
+        height: 4rem
         margin: 0 0 2rem
+
+        & .about-icon
+            width: 4rem
+            height: 4rem
+            fill: $color-grey
+
+    // ABOUT CAPTION
+    // -------------------------------------------
 
     &__caption
         font: 1.3rem/1.4 $montserrat-regular
@@ -69,9 +88,11 @@
         text-align: center
         text-transform: uppercase
 
+    // ABOUT COUNT
+    // -------------------------------------------
+
     &__count
         font: 4rem/1.2 $montserrat-regular
-        /*color: $color-grey*/
 
 
 
