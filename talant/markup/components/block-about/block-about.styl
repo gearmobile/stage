@@ -9,13 +9,18 @@
         flex-direction: column
         align-items: center
 
+
     // ABOUT PRIMARY
     // -------------------------------------------
 
     &__primary
         display: flex
-        width: 100%
-        background-color: $color-white
+        flex-direction: column
+
+    &__image
+        height: 32.5rem
+        background: url('%=static=%assets/block-about/about-bg.jpg') 50% 50% no-repeat
+        background-size: cover
 
     // ABOUT CONTENT
     // -------------------------------------------
@@ -42,6 +47,7 @@
             &:first-child
                 background-color: $color-grey
                 color: $color-white
+
 
     // ABOUT SECONDARY
     // -------------------------------------------

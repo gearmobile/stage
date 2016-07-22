@@ -1,1 +1,114 @@
+.services
+    padding: 8rem 0
+    background: url('%=static=%assets/block-services/services-bg.jpg') 50% 50% no-repeat
+    background-size: cover
+
+    // SERVICES CENTER
+    // ----------------------------------------
+
+    & .center
+        flex-direction: column
+
+    // SERVICES HEADER
+    // ----------------------------------------
+
+    &__header
+        margin: 0 0 6rem
+
+    &__header .heading-oneside h2
+        color: $color-white
+        background: url('%=static=%assets/module-heading-oneside/underline-pattern-white.png') 0 100% repeat-x
+
+
+    &__header p
+        lost-center 100rem flex
+        font-size: 1.4rem
+        color: $color-white-smoke
+        line-height: 2
+        text-align: center
+
+    // SERVICES MAIN
+    // ----------------------------------------
+
+    &__main
+        display: flex
+
+    // SERVICES ITEM
+    // ----------------------------------------
+
+    &__item
+        lost-column: 3/12
+        lost-column-gutter: $gutter*2
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 6rem 3rem 4rem
+        border-width: 0 .1rem .1rem .1rem
+        border-style: none solid solid solid
+        border-color: transparent $color-grey-smooth $color-grey-smooth $color-grey-smooth
+        position: relative
+
+        &::before
+        &::after
+            content: ''
+            display: block
+            height: .1rem
+            width: 36%
+            background-color: $color-grey-smooth
+            position: absolute
+            top: 0
+
+        &::before
+            left: 0
+
+        &::after
+            right: 0
+
+    // SERVICES THUMB
+    // ----------------------------------------
+
+    &__thumb
+        position: absolute
+        size( 3rem )
+        top: -1.5rem
+        left: 50%
+        transform: translateX( -50% )
+
+        & .services-icon
+            size( 3rem )
+            fill: $color-white-smooth
+
+    // SERVICES CAPTION
+    // ----------------------------------------
+
+    &__caption
+        margin: 0 0 3rem
+        text-align: center
+
+        & h4
+            font: 400 1.3rem/1.8 $montserrat-regular
+            text-transform: uppercase
+            color: $color-white-smooth
+
+    // SERVICES CONTENT
+    // ----------------------------------------
+
+    &__content
+        text-align: center
+
+        & p
+            color: $color-white-smooth
+            font: 1.4rem/2 $crimson-regular
+
+
+
+
+
+
+
+
+
+
+
+
 
