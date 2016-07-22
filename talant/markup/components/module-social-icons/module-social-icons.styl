@@ -1,0 +1,31 @@
+.social-icons
+    display: flex
+    align-items: center
+
+    &__item
+        size( 1.6rem )
+        margin: 0 .5rem
+
+        &:nth-child( -n+3 )
+            border-right: .1rem solid $color-grey-light
+
+    &__link
+        display: block
+        width: 1.6rem
+        height: 1.6rem
+
+        &:nth-child( 1 )
+            padding: 0 .5rem 0 0
+            //border-right: .1rem solid $color-grey-light
+
+        &:nth-child( 2 )
+            padding: 0 .5rem
+            //border-right: .1rem solid $color-grey-light
+
+        &:nth-child( 3 )
+            padding: 0 0 .5rem 0
+
+    & .social-icon
+        width: 1.6rem
+        height: 1.6rem
+        fill: $color-grey-light

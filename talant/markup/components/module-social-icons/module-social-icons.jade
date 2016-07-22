@@ -1,0 +1,11 @@
+mixin module-social-icons(data)
+    ul.social-icons
+        li.social-icons__item
+            a.social-icons__link( href='#{js}' title='Facebook' target='_blank' rel='nofollow' )
+                != jadeHelpers.Icon.call(locals, {iconName: 'social-icon-01', className: 'social-icon'})
+        li.social-icons__item
+            a.social-icons__link( href='#{js}' title='Twitter' target='_blank' rel='nofollow' )
+                != jadeHelpers.Icon.call(locals, {iconName: 'social-icon-02', className: 'social-icon'})
+        li.social-icons__item
+            a.social-icons__link( href='#{js}' title='Behance' target='_blank' rel='nofollow' )
+                != jadeHelpers.Icon.call(locals, {iconName: 'social-icon-03', className: 'social-icon'})

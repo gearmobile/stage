@@ -1,2 +1,27 @@
+include ../module-heading-oneside/module-heading-oneside
+include ../module-social-icons/module-social-icons
+
 mixin block-team(data)
-    .block-team
+    .team
+        .center
+            .team__header
+                +module-heading-oneside( 'our team' )
+                p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
+            .team__main
+                .team__item
+                    img( src='%=static=%img/assets/block-team/team-image-01.jpg' alt='Team Image' )
+                    .team__overlay
+                        .team__content
+                .team__item
+                    img( src='%=static=%img/assets/block-team/team-image-02.jpg' alt='Team Image' )
+                    .team__overlay
+                        .team__content
+                .team__item
+                    img( src='%=static=%img/assets/block-team/team-image-03.jpg' alt='Team Image' )
+                    .team__overlay
+                        .team__content
+                            .team__info
+                                h4.team__title jilia smith
+                                p.team__subtitle designer
+                            .team__social
+                                +module-social-icons()
