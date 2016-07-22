@@ -1,2 +1,24 @@
 mixin block-topheader(data)
-    .block-topheader
+    .topheader
+        .center
+            .topheader__primary
+                .topheader__logo
+                    a( href='#{js}' ) atlantida
+                nav.topheader__menu--primary
+                    a( href='/' ) home
+                    a( href='#about' ) about
+                    a( href='#services' ) services
+                    a( href='#history' ) history
+                    a( href='#team' ) team
+                    a( href='#portfolio' ) portfolio
+                    a( href='#prices' ) prices
+                    a( href='#blog' ) blog
+                    a( href='#contact' ) contact
+            .topheader__secondary
+                .topheader__menu--secondary
+                    a( href='#{js}' title='Facebook' target='_blank' rel='nofollow' )
+                        != jadeHelpers.Icon.call(locals, {iconName: 'topheader-icon-01', className: 'topheader-icon'})
+                    a( href='#{js}' title='Twitter' target='_blank' rel='nofollow' )
+                        != jadeHelpers.Icon.call(locals, {iconName: 'topheader-icon-02', className: 'topheader-icon'})
+                    a( href='#{js}' title='Behance' target='_blank' rel='nofollow' )
+                        != jadeHelpers.Icon.call(locals, {iconName: 'topheader-icon-03', className: 'topheader-icon'})
