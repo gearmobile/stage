@@ -141,6 +141,16 @@ module.exports = {
         }
     },
 
+    // INCLUDE ISOTOPE
+    // ---------------------------------------------
+    resolve: {
+        alias: {
+            'masonry': 'masonry-layout',
+                'isotope': 'isotope-layout'
+        }
+    },
+    // ---------------------------------------------
+
     eslint: {
         configFile: `${cwd}/.eslintrc`
     }

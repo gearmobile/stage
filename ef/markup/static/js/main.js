@@ -8,12 +8,12 @@ var swiper = require('swiper');
 var smoothScroll = require('smooth-scroll');
 
 
-window.addEventListener( 'DOMContentLoaded', function () {
+window.addEventListener( 'load', function () {
 
     // TO TOP BUTTON
     // ------------------------------------
 
-    var topButton = document.querySelector('.module-button');
+    var topButton = document.querySelector( '.module-button' );
 
     function scrollToTopLinear( scrollDuration ) {
         var scrollStep = -window.scrollY / ( scrollDuration / 15 );

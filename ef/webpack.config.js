@@ -149,6 +149,7 @@ module.exports = {
                 'isotope': 'isotope-layout'
         }
     },
+    // ---------------------------------------------
 
     eslint: {
         configFile: `${cwd}/.eslintrc`
