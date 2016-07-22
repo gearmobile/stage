@@ -2,6 +2,9 @@
 // COMMON STYLES OF THE PROJECT
 // ----------------------------------------
 
+*, *::before, *::after
+    box-sizing: border-box
+
 html, body
     height 100%
     width: 100%
@@ -25,8 +28,13 @@ button
     padding: 0
     border: none
 
+input, textarea
+    resize none
+    user-select text
+
 h1, h2, h3, h4, p
     margin: 0
+
 
 // BODY STYLES
 // ------------------------------------------

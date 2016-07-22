@@ -4,7 +4,10 @@
   "description": "Your awesome project description",
   "main": "gulpfile.js",
   "directories": {},
-  "dependencies": {},
+  "dependencies": {
+    "lost": "^7.0.3",
+    "postcss-flexibility": "^1.1.0"
+  },
   "devDependencies": {
     "gulp": "^3.9.1"
   },
