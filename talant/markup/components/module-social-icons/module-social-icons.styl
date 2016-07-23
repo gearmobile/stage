@@ -1,29 +1,36 @@
+
+// SOCIAL-ICONS
+// ---------------------------------------------
+
 .social-icons
     display: flex
     align-items: center
 
-    &__item
-        size( 1.6rem )
-        margin: 0 .5rem
+    // SOCIAL-ICONS ITEM
+    // ---------------------------------------------
 
-        &:nth-child( -n+3 )
+    &__item
+        padding: 0 .5rem
+
+        &:first-child
+            padding-left: 0
+
+        &:last-child
+            padding-right: 0
+
+        &:nth-child( -n+2 )
             border-right: .1rem solid $color-grey-light
+
+    // SOCIAL-ICONS LINK
+    // ---------------------------------------------
 
     &__link
         display: block
         width: 1.6rem
         height: 1.6rem
 
-        &:nth-child( 1 )
-            padding: 0 .5rem 0 0
-            //border-right: .1rem solid $color-grey-light
-
-        &:nth-child( 2 )
-            padding: 0 .5rem
-            //border-right: .1rem solid $color-grey-light
-
-        &:nth-child( 3 )
-            padding: 0 0 .5rem 0
+    // SOCIAL-ICONS SVG
+    // ---------------------------------------------
 
     & .social-icon
         width: 1.6rem
