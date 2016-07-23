@@ -1,5 +1,7 @@
 .team
     padding: 6rem 0
+    background: url( '%=static=%assets/block-team/team-bg.jpg' ) 50% 50% no-repeat
+    background-size: cover
 
     // TEAM CENTER
     // ----------------------------------
@@ -18,9 +20,8 @@
             lost-center 100rem flex
             text-align: center
             font-size: 1.4rem
-            color: $color-white-smoke
+            color: $color-grey
             line-height: 2
-            text-align: center
 
     // TEAM MAIN
     // ----------------------------------
@@ -29,7 +30,6 @@
         display: flex
         justify-content: center
         flex-wrap: wrap
-        width: 100%
 
     // TEAM ITEM
     // ----------------------------------
@@ -46,6 +46,10 @@
             width: 100%
             height: auto
 
+        &:hover .team__overlay
+            visibility: visible
+            opacity: 1
+
     // TEAM OVERLAY
     // ----------------------------------
 
@@ -55,7 +59,10 @@
         left: .8rem
         background-color: rgba( $color-white, .8 )
         size ( calc( 100% - .8rem * 2 ) )
-
+        opacity: 0
+        visibility: hidden
+        transition: visibility .2s, opacity .2s
+        will-change: transition
 
     // TEAM CONTENT
     // ----------------------------------
@@ -72,7 +79,6 @@
     &__info
         padding: 0 0 1rem 0
         border-bottom: .2rem solid $color-black-light
-        text-transform: capitalize
         color: $color-grey
 
     // TEAM TITLE
@@ -80,6 +86,7 @@
 
     &__title
         font: 1.3rem/1.8 $montserrat-regular
+        text-transform: capitalize
 
     // TEAM SUBTITLE
     // ----------------------------------
