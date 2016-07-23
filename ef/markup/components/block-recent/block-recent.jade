@@ -1,4 +1,4 @@
-mixin block-recent(data)
+mixin block-recent()
     .recent
         .recent__center
             .recent__header
@@ -7,11 +7,11 @@ mixin block-recent(data)
             .recent__content
                 .recent-grid
                     .recent-grid__control
-                        a.recent-grid__link(href='javascript:void(0);' data-filter='*') all
-                        a.recent-grid__link(href='javascript:void(0);' data-filter='.website') website
-                        a.recent-grid__link(href='javascript:void(0);' data-filter='.graphic') graphic
-                        a.recent-grid__link(href='javascript:void(0);' data-filter='.identity') identity
-                        a.recent-grid__link(href='javascript:void(0);' data-filter='.mobile') mobile apps
+                        a.recent-grid__link( href='javascript:void(0);' data-filter='*') all
+                        a.recent-grid__link( href='javascript:void(0);' data-filter='.website' ) website
+                        a.recent-grid__link( href='javascript:void(0);' data-filter='.graphic' ) graphic
+                        a.recent-grid__link( href='javascript:void(0);' data-filter='.identity' ) identity
+                        a.recent-grid__link( href='javascript:void(0);' data-filter='.mobile' ) mobile apps
                     .recent-grid__main
                         .recent-grid__sizer
                         .recent-grid__item.website

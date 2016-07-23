@@ -6,4 +6,27 @@ mixin block-portfolio()
             .portfolio__header
                 +module-heading-oneside( 'portfolio' )
                 p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
-            .portfolio__main
+        .portfolio__main
+            .portfolio__controls
+                button( type='button' data-filter='*' ) all
+                button( type='button' data-filter='.website' ) website
+                button( type='button' data-filter='.brochures' ) brochures
+                button( type='button' data-filter='.logos' ) logos
+            .portfolio__grid
+                .portfolio__sizer
+                .portfolio__item.website
+                    img( src='%=static=%img/assets/block-portfolio/portfolio-image-01.jpg' alt='Portfolio Image' )
+                .portfolio__item.brochures
+                    img( src='%=static=%img/assets/block-portfolio/portfolio-image-02.jpg' alt='Portfolio Image' )
+                .portfolio__item.logos
+                    img( src='%=static=%img/assets/block-portfolio/portfolio-image-03.jpg' alt='Portfolio Image' )
+                .portfolio__item.website
+                    img( src='%=static=%img/assets/block-portfolio/portfolio-image-04.jpg' alt='Portfolio Image' )
+                .portfolio__item.brochures
+                    img( src='%=static=%img/assets/block-portfolio/portfolio-image-05.jpg' alt='Portfolio Image' )
+                .portfolio__item.logos
+                    img( src='%=static=%img/assets/block-portfolio/portfolio-image-06.jpg' alt='Portfolio Image' )
+                .portfolio__item.website
+                    img( src='%=static=%img/assets/block-portfolio/portfolio-image-07.jpg' alt='Portfolio Image' )
+                .portfolio__item.brochures
+                    img( src='%=static=%img/assets/block-portfolio/portfolio-image-08.jpg' alt='Portfolio Image' )

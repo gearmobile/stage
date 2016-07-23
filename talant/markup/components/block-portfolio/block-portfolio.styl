@@ -21,4 +21,47 @@
     // --------------------------------------
 
     &__main
-        //
+        width: 100%
+
+    // PORTFOLIO CONTROLS
+    // --------------------------------------
+
+    &__controls
+        display: flex
+        justify-content: center
+        margin: 0 0 6rem
+
+        & button
+            padding: 1rem 2rem
+            margin: 0 .3rem
+            border: .2rem solid $color-grey
+            font: 1.1rem/1.2 $montserrat-regular
+            color: $color-grey
+            text-transform: uppercase
+            transition: background-color .2s, color .2s
+            will-change: transition
+
+            &:hover
+            &:first-child
+                background-color: $color-grey
+                color: $color-white
+
+    // PORTFOLIO GRID
+    // --------------------------------------
+
+    &__grid
+        clearfix()
+
+    // PORTFOLIO SIZER && ITEM
+    // --------------------------------------
+
+    &__sizer
+    &__item
+        float: left
+        width: 25%
+        height: auto
+
+    &__item img
+        display: block
+        width: 100%
+        height: auto

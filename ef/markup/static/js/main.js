@@ -442,10 +442,10 @@ window.addEventListener( 'load', function () {
 
     // ISOTOPE
     // --------------------------------------------------
-    var grid = document.querySelector('.recent-grid__main');
+    var grid = document.querySelector( '.recent-grid__main' );
     var gridItem = '.recent-grid__item';
     var gridSizer = '.recent-grid__sizer';
-    var gridControl = document.querySelector('.recent-grid__control');
+    var gridControl = document.querySelector( '.recent-grid__control' );
     var iso;
 
     imagesload( grid, function () {
@@ -460,7 +460,7 @@ window.addEventListener( 'load', function () {
 
     // BIND FILTER BUTTON CLICK ----------------------------------
     gridControl.addEventListener( 'click', function ( event ) {
-        iso.arrange({ filter: event.target.getAttribute('data-filter') });
+        iso.arrange({ filter: event.target.getAttribute( 'data-filter' ) });
     });
 
 
