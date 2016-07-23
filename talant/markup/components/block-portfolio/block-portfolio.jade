@@ -1,2 +1,9 @@
-mixin block-portfolio(data)
-    .block-portfolio
+include ../module-heading-oneside/module-heading-oneside
+
+mixin block-portfolio()
+    .portfolio
+        .center
+            .portfolio__header
+                +module-heading-oneside( 'portfolio' )
+                p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
+            .portfolio__main
