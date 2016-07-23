@@ -1,19 +1,48 @@
+
+// PURCHASE
+// ---------------------------------
+
 .purchase
     background-color: #2d2d2f
     padding: 4rem 0
+
+    // PURCHASE CENTER
+    // ---------------------------------
+
+    & .center
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
 
     // PURCHASE PRIMARY
     // ---------------------------------
 
     &__primary
-        //
+        lost-column: 8/12
+        lost-column-gutter: 0
+        padding: 0 0 0 17rem
+        min-height: 10.4rem
+        background: url( '%=static=%assets/block-purchase/purchaise-logo.png' ) 0 50% no-repeat
+
+        & p
+            font: 1.6rem/1.25 $crimson-italic
+            color: #888
 
     // PURCHASE SECONDARY
     // ---------------------------------
 
     &__secondary
-        //
+        lost-column: 2/12
+        lost-column-gutter: 0
 
         & .button
             border-color: $color-grey-pale
             color: $color-grey-pale
+
+    // PURCHASE CAPTION
+    // ---------------------------------
+
+    &__caption
+        font: 1.6rem/1.2 $montserrat-regular
+        color: $color-white-smooth
+        margin: 0 0 2rem
