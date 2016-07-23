@@ -3,7 +3,7 @@
 // ---------------------------------
 
 .purchase
-    background-color: #2d2d2f
+    background-color: $color-grey-heavy
     padding: 4rem 0
 
     // PURCHASE CENTER
@@ -14,19 +14,35 @@
         justify-content: space-between
         align-items: center
 
+        @media screen and ( max-width: $bp980 )
+            flex-direction: column
+
     // PURCHASE PRIMARY
     // ---------------------------------
 
     &__primary
+        min-height: 10.4rem
         lost-column: 8/12
         lost-column-gutter: 0
+        display: flex
+        flex-direction: column
+        justify-content: center
         padding: 0 0 0 17rem
-        min-height: 10.4rem
         background: url( '%=static=%assets/block-purchase/purchaise-logo.png' ) 0 50% no-repeat
 
         & p
             font: 1.6rem/1.25 $crimson-italic
             color: #888
+
+        @media screen and ( max-width: $bp980 )
+            lost-column 1/1
+            margin-bottom: $gutter*2
+
+        @media screen and ( max-width: $bp768 )
+            padding: 14rem 0 0 0
+            background: url( '%=static=%assets/block-purchase/purchaise-logo.png' ) 50% 0 no-repeat
+            min-height: 0
+            text-align: center
 
     // PURCHASE SECONDARY
     // ---------------------------------
@@ -39,10 +55,19 @@
             border-color: $color-grey-pale
             color: $color-grey-pale
 
+            &:hover
+                background-color: $color-grey-pale
+                color: $color-grey-heavy
+
+        @media screen and ( max-width: $bp980 )
+            lost-column 1/1
+            display: flex
+            justify-content: center
+
     // PURCHASE CAPTION
     // ---------------------------------
 
     &__caption
-        font: 1.6rem/1.2 $montserrat-regular
+        font: 1.6rem/1.4 $montserrat-regular
         color: $color-white-smooth
         margin: 0 0 2rem
