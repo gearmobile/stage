@@ -1,2 +1,10 @@
-mixin block-purchase(data)
-    .block-purchase
+include ../module-button/module-button
+
+mixin block-purchase()
+    .purchase
+        .center
+            .purchase__primary
+                .purchase__caption Looking for a quality and affordable for your next project?
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu libero ut erat sodales finibus sed in dolor. Etiam iaculis, nibh a lobortis egestas, est urna sodales
+            .purchase__secondary
+                +module-button( 'purchaise' )
