@@ -1,0 +1,40 @@
+
+// META
+// ------------------------------
+
+.meta
+    display: flex
+    width: 15rem
+    padding: 0 0 1rem 0
+    border-bottom: .1rem solid #454545
+
+    &__primary
+    &__secondary
+        color: $color-grey-pale
+        font: 1.2rem/1.2 $crimson-italic
+        position: relative
+
+    // META PRIMARY
+    // ------------------------------
+
+    &__primary
+        padding: 0 .8rem 0 0
+
+        &::after
+            content: '/'
+            position: absolute
+            right: -.3rem
+
+
+    // META SECONDARY
+    // ------------------------------
+
+    &__secondary
+        padding: 0 0 0 .8rem
+
+    // META LINK
+    // ------------------------------
+
+    &__link
+        color: $color-grey-pale
+        text-transform: capitalize

@@ -23,4 +23,69 @@
     // -----------------------------------------
 
     &__main
-        //
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+
+    // BLOG ITEM
+    // -----------------------------------------
+
+    &__item
+        display: flex
+        flex-direction: column
+        flex: 0 1 25%
+        outline: 1px solid darkblue
+
+        @media screen and ( max-width: $bp980 )
+            flex: 0 1 50%
+
+        &--picture
+            background-color: sandybrown
+            img-adaptive()
+
+        &--content
+            background-color: $color-grey-heavy
+            padding: 4rem
+
+    // BLOG META
+    // -----------------------------------------
+
+    &__meta
+        margin: 0 0 2rem
+
+    // BLOG DESCRIPTION
+    // -----------------------------------------
+
+    &__description p
+        color: $color-grey-58
+        font: 1.4rem/1.6 'crimson_textroman', sans-serif
+
+    // BLOG TITLE
+    // -----------------------------------------
+
+    &__title
+        text-transform: uppercase
+        font: 1.3rem/1.2 $montserrat-regular
+        letter-spacing: .1rem
+        margin: 0 0 4rem
+        position: relative
+        padding: 0 0 0 1rem
+
+        &::before
+            content: ''
+            display: block
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 3.5px 0 3.5px 4px
+            border-color: transparent transparent transparent $color-grey-pale
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+
+        & a
+            color: $color-grey-pale
+
+            &:hover
+                color: $color-grey-58
