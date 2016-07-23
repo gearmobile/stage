@@ -1,1 +1,162 @@
+.prices
+    background-color: $color-grey-pale
+    padding: 6rem 0 9rem
+
+
+    // PRICES HEADER
+    // ----------------------------------
+
+    &__header
+        margin: 0 0 8rem
+
+        & p
+            lost-center 100rem flex
+            text-align: center
+            font-size: 1.4rem
+            color: $color-grey
+            line-height: 2
+
+    // PRICES MAIN
+    // ----------------------------------
+
+    &__main
+        width: 100%
+
+    // PRICES TABLE
+    // ----------------------------------
+
+    & .table
+        lost-center: 100% flex
+
+        // TABLE ITEM
+        // ----------------------------------
+
+        &__item
+            lost-column 1/3
+            lost-column-gutter $gutter*2
+            background-color: $color-white
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 4rem 1rem 6rem
+
+            @media screen and ( max-width: $bp980 )
+                lost-column 1/2
+                lost-column-gutter $gutter*2
+                lost-column-cycle 2
+
+                &:nth-child( -n+2 )
+                    margin-bottom: $gutter*2
+
+                &:last-child
+                    lost-offset -1/4
+
+            @media screen and ( max-width: $bp768 )
+                lost-column 1/1
+                lost-column-gutter 0
+                lost-column-cycle 0
+
+                &:last-child
+                    lost-offset 0
+                    margin-right: 0 !important
+
+        // TABLE CAPTION
+        // ----------------------------------
+
+        &__caption
+            font: 1.3rem/1.2 $montserrat-regular
+            color: $color-grey
+            text-transform: uppercase
+            margin: 0 0 3rem
+
+        // TABLE THUMB
+        // ----------------------------------
+
+        &__thumb
+            size( 5rem )
+            border-radius: 50%
+            border .2rem solid $color-grey
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0 0 4rem
+
+            &::before
+            &::after
+                content: ''
+                display: block
+                background-color: $color-grey
+                height: .1rem
+                width: 120%
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+
+            &::before
+                left: -120%
+
+            &::after
+                right: -120%
+
+            & .table-icon
+                fill: $color-grey
+
+        // TABLE PRICE
+        // ----------------------------------
+
+        &__price
+            font: 7rem/1.2 $montserrat-bold
+            color: $color-grey
+
+        // TABLE CURRENCY
+        // ----------------------------------
+
+        &__currency
+            font: 3rem/1.2 $montserrat-regular
+            color: $color-grey
+            vertical-align: top
+            margin: 0 .8rem 0 0
+
+        // TABLE DESCRIPTION
+        // ----------------------------------
+
+        &__description
+            margin: 5rem 0
+            text-align: center
+
+            & li
+                font: 1.6rem/2 $crimson-italic
+                color: $color-grey
+                text-transform: capitalize
+
+        // TABLE BUTTON
+        // ----------------------------------
+
+        &__button
+            //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

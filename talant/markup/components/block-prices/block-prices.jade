@@ -1,2 +1,57 @@
-mixin block-prices(data)
-    .block-prices
+include ../module-heading-oneside/module-heading-oneside
+include ../module-button/module-button
+
+mixin block-prices()
+    .prices
+        .center
+            .prices__header
+                +module-heading-oneside( 'prices' )
+                p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
+            .prices__main
+                .table
+                    .table__item
+                        .table__caption basic
+                        .table__thumb
+                            != jadeHelpers.Icon.call( locals, {iconName: 'table-icon-01', className: 'table-icon' })
+                        .table__price
+                            span.table__currency $
+                            | 10
+                        ul.table__description
+                            li full access
+                            li unlimited edition
+                            li full backup
+                            li free tea and free mockup
+                            li several prices
+                        .table__button
+                            +module-button( 'sin up' )
+                    .table__item
+                        .table__caption advanced
+                        .table__thumb
+                            != jadeHelpers.Icon.call( locals, {iconName: 'table-icon-02', className: 'table-icon' })
+                        .table__price
+                            span.table__currency $
+                            | 20
+                        ul.table__description
+                            li full access
+                            li unlimited edition
+                            li full backup
+                            li free tea and free mockup
+                            li several prices
+                        .table__button
+                            +module-button( 'sin up' )
+                    .table__item
+                        .table__caption pro
+                        .table__thumb
+                            != jadeHelpers.Icon.call( locals, {iconName: 'table-icon-03', className: 'table-icon' })
+                        .table__price
+                            span.table__currency $
+                            | 30
+                        ul.table__description
+                            li full access
+                            li unlimited edition
+                            li full backup
+                            li free tea and free mockup
+                            li several prices
+                        .table__button
+                            +module-button( 'sin up' )
+
