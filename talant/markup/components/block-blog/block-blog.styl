@@ -27,6 +27,11 @@
         justify-content: center
         flex-wrap: wrap
 
+        @media screen and ( max-width: $bp768 )
+            flex-direction: column
+            flex-wrap: nowrap
+            //height: 100rem
+
     // BLOG ITEM
     // -----------------------------------------
 
@@ -56,7 +61,8 @@
             border: .1rem solid $color-grey-58
 
         @media screen and ( max-width: $bp768 )
-            flex: 0 1 100%
+            //flex: 0 1 100%
+            flex: 1 1 0
 
         &--content
             background-color: $color-grey-heavy
