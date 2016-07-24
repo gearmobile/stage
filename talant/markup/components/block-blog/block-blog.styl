@@ -10,7 +10,7 @@
 
     &__header
         background-color: $color-grey-pale
-        padding: 8rem 0
+        padding: 8rem $gutter
 
         & p
             lost-center 100rem flex
@@ -34,14 +34,29 @@
         display: flex
         flex-direction: column
         flex: 0 1 25%
-        outline: 1px solid darkblue
 
-        @media screen and ( max-width: $bp980 )
+        &:nth-child(1)
+            background: url( '%=static=%assets/block-blog/blog-image-01.jpg' ) 50% 50% no-repeat
+            background-size: cover
+
+        &:nth-child(3)
+            background: url( '%=static=%assets/block-blog/blog-image-02.jpg' ) 50% 50% no-repeat
+            background-size: cover
+
+        &:nth-child(6)
+            background: url( '%=static=%assets/block-blog/blog-image-03.jpg' ) 50% 50% no-repeat
+            background-size: cover
+
+        &:nth-child(8)
+            background: url( '%=static=%assets/block-blog/blog-image-04.jpg' ) 50% 50% no-repeat
+            background-size: cover
+
+        @media screen and ( max-width: $bp1200 )
             flex: 0 1 50%
+            border: .1rem solid $color-grey-58
 
-        &--picture
-            background-color: sandybrown
-            img-adaptive()
+        @media screen and ( max-width: $bp768 )
+            flex: 0 1 100%
 
         &--content
             background-color: $color-grey-heavy

@@ -1,14 +1,13 @@
 include ../module-heading-oneside/module-heading-oneside
 include ../module-meta/module-meta
 
-mixin block-blog(data)
+mixin block-blog()
     .blog
         .blog__header
             +module-heading-oneside( 'blog' )
             p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
         .blog__main
             .blog__item.blog__item--picture
-                img( src='%=static=%img/assets/block-blog/blog-image-01.jpg' alt='Blog Image' )
             .blog__item.blog__item--content
                 .blog__meta
                     +module-meta( '14 aug 2015', 'by admin' )
@@ -16,11 +15,23 @@ mixin block-blog(data)
                     h4.blog__title: a( href='#{js}' ) donec id lobortis tellus maecenas.
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
             .blog__item.blog__item--picture
-                img( src='%=static=%img/assets/block-blog/blog-image-02.jpg' alt='Blog Image' )
             .blog__item.blog__item--content
+                .blog__meta
+                    +module-meta( '14 aug 2015', 'by admin' )
+                .blog__description
+                    h4.blog__title: a( href='#{js}' ) donec id lobortis tellus maecenas.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
             .blog__item.blog__item--content
+                .blog__meta
+                    +module-meta( '14 aug 2015', 'by admin' )
+                .blog__description
+                    h4.blog__title: a( href='#{js}' ) donec id lobortis tellus maecenas.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
             .blog__item.blog__item--picture
-                img( src='%=static=%img/assets/block-blog/blog-image-03.jpg' alt='Blog Image' )
             .blog__item.blog__item--content
+                .blog__meta
+                    +module-meta( '14 aug 2015', 'by admin' )
+                .blog__description
+                    h4.blog__title: a( href='#{js}' ) donec id lobortis tellus maecenas.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
             .blog__item.blog__item--picture
-                img( src='%=static=%img/assets/block-blog/blog-image-04.jpg' alt='Blog Image' )
