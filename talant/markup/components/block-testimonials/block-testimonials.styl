@@ -1,1 +1,98 @@
+// TESTIMONIALS
+// --------------------------------------------
 
+.testimonials
+    padding: 8rem 0
+    background: url( '%=static=%assets/block-testimonials/testimonials-bg.jpg' ) 50% 50% no-repeat
+    background-size: cover
+
+    // TESTIMONIALS SWIPER-CONTAINER
+    // --------------------------------------------
+
+    & .swiper-container
+        width: 100%
+        height: 100%
+        padding: 0 0 4rem 0
+
+    // TESTIMONIALS SWIPER-SLIDE
+    // --------------------------------------------
+
+    & .swiper-slide
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    // TESTIMONIALS SWIPER-PAGINATION
+    // --------------------------------------------
+
+    & .swiper-pagination
+        bottom: 0
+
+    // TESTIMONIALS PAGINATION BULLETS
+    // --------------------------------------------
+
+    & .swiper-pagination-bullet
+        size( 1.2rem )
+        background-color: #c5c5c5
+        opacity: 1
+        margin: 0 .2rem
+
+    // TESTIMONIALS PAGINATION BULLET ACTIVE
+    // --------------------------------------------
+
+    & .swiper-pagination-bullet-active
+        background-color: $color-grey-pale
+
+    // TESTIMONIALS IMAGE
+    // --------------------------------------------
+
+    &__image
+        size( 10rem )
+        border-radius: 50%
+        overflow: hidden
+        margin: 0 0 5rem
+
+        & > img
+            img-adaptive()
+
+    // TESTIMONIALS CONTENT
+    // --------------------------------------------
+
+    &__content
+        lost-center 77rem flex
+        font: 2rem/2 $crimson-italic
+        color: $color-white-smoke
+        text-align: center
+
+    // TESTIMONIALS INFO
+    // --------------------------------------------
+
+    &__info
+        margin: 6rem 0 0 0
+        text-align: center
+
+    // TESTIMONIALS AUTHOR
+    // --------------------------------------------
+
+    &__author
+        text-transform: uppercase
+        font: 1.3rem/1.8 $montserrat-regular
+        margin: 0 0 2rem
+
+        & a
+            color: $color-grey-pale
+
+            &:hover
+                color: $color-grey
+
+    // TESTIMONIALS OCUPATION
+    // --------------------------------------------
+
+    &__ocupation
+        font: 1.4rem/1.4 $crimson-italic
+
+        & a
+            color: $color-white-smoke
+
+            &:hover
+                color: $color-grey

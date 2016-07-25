@@ -1,2 +1,42 @@
-mixin block-testimonials(data)
-    .block-testimonials
+mixin block-testimonials()
+    .testimonials
+        .center
+            .swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                        .testimonials__image
+                            a( href='#{js}' )
+                                img( src='%=static=%img/assets/block-testimonials/testimonials-image-01.jpg' alt='Testimonials Author' )
+                        .testimonials__content
+                            blockqoute
+                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu libero ut erat sodales finibus sed in dolor. Etiam iaculis, nibh a lobortis egestas, est urna sodales
+                        .testimonials__info
+                            h4.testimonials__author
+                                a( href='#{js}' ) alexandr podvalny
+                            p.testimonials__ocupation
+                                a( href='#{js}' ) Free-PSD-Template.com Company
+                    .swiper-slide
+                        .testimonials__image
+                            a( href='#{js}' )
+                                img( src='%=static=%img/assets/block-testimonials/testimonials-image-01.jpg' alt='Testimonials Author' )
+                        .testimonials__content
+                            blockqoute
+                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu libero ut erat sodales finibus sed in dolor. Etiam iaculis, nibh a lobortis egestas, est urna sodales
+                        .testimonials__info
+                            h4.testimonials__author
+                                a( href='#{js}' ) alexandr podvalny
+                            p.testimonials__ocupation
+                                a( href='#{js}' ) Free-PSD-Template.com Company
+                    .swiper-slide
+                        .testimonials__image
+                            a( href='#{js}' )
+                                img( src='%=static=%img/assets/block-testimonials/testimonials-image-01.jpg' alt='Testimonials Author' )
+                        .testimonials__content
+                            blockqoute
+                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu libero ut erat sodales finibus sed in dolor. Etiam iaculis, nibh a lobortis egestas, est urna sodales
+                        .testimonials__info
+                            h4.testimonials__author
+                                a( href='#{js}' ) alexandr podvalny
+                            p.testimonials__ocupation
+                                a( href='#{js}' ) Free-PSD-Template.com Company
+                .swiper-pagination
