@@ -60,9 +60,42 @@
 
     &__content
         lost-center 77rem flex
-        font: 2rem/2 $crimson-italic
+        font: 2rem/1.8 $crimson-italic
         color: $color-white-smoke
         text-align: center
+
+        @media screen and ( max-width: $bp768 )
+            font-size: 1.8rem
+
+        & blockqoute
+            quotes: '\201c' '\201d'
+            padding: 0 3rem
+            position: relative
+
+            @media screen and ( max-width: $bp768 )
+                padding: 0 2rem
+
+            &::before
+            &::after
+                font-size: 9rem
+                line-height: 1
+                position: absolute
+                top: 0
+
+                @media screen and ( max-width: $bp768 )
+                    font-size: 7rem
+
+            &::before
+                content: open-quote
+                left: -1rem
+
+                @media screen and ( max-width: $bp768 )
+                    left: 0
+
+            &::after
+                content: close-quote
+                right: .5rem
+
 
     // TESTIMONIALS INFO
     // --------------------------------------------
