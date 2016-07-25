@@ -1,0 +1,18 @@
+include ../module-button/module-button
+
+mixin module-contact-form(data)
+    form.form( method='post' action='action.php' )
+        .form__row
+            .form__column
+                input( type='text' name='name' title='Your Name' placeholder='name*' required )
+            .form__column
+                input( type='email' name='email' title='Your Email Address' placeholder='e-mail*' required )
+        .form__row
+            .form__column
+                input( type='tel' name='phone' pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' title='Phone Number ( Format: +99(99)9999-9999 )' placeholder='telephone*' required )
+            .form__column
+                input( type='text' name='site' title='Your Website URL' placeholder='website' )
+        .form__row
+            textarea( placeholder='message' )
+        .form__row
+            +module-button( 'submit' )

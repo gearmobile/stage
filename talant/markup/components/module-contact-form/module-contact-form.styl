@@ -1,0 +1,55 @@
+
+// FORM
+// ----------------------------------------------
+
+.form
+    width: 100%
+
+    // FORM ROW
+    // ----------------------------------------------
+
+    &__row
+        lost-center: 100% flex
+
+        &:not(:last-child)
+            margin: 0 0 2rem
+
+    // FORM COLUMN
+    // ----------------------------------------------
+
+    &__column
+        lost-column 1/2
+        lost-column-gutter $gutter*2
+
+
+    // FORM INPUT AND TEXTAREA
+    // ----------------------------------------------
+
+    & input
+    & textarea
+        background-color: transparent
+        width: 100%
+        border: .2rem solid #464646
+        padding: 2rem
+        color: #949494
+        font: 1.4rem/1.2 $crimson-italic
+        transition: border-color .2s
+        will-change: transition
+
+        &:hover
+        &:active
+            border-color: lighten( #464646, 10% )
+
+        +placeholder()
+            text-transform: capitalize
+
+    & textarea
+        min-height: 10rem
+
+    // FORM BUTTON
+    // ----------------------------------------------
+
+    & .button
+        background-color: #464646
+        border-color: #464646
+        color: $color-white

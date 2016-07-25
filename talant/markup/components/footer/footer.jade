@@ -1,4 +1,5 @@
 include ../module-social-icons/module-social-icons
+include ../module-contact-form/module-contact-form
 
 mixin footer()
     footer.footer
@@ -21,6 +22,7 @@ mixin footer()
                     .footer__socials
                         +module-social-icons()
                 .footer__second-part
+                    +module-contact-form()
             .footer__secondary
                 p Copyright &copy; 2015 Atlantida Theme
 
