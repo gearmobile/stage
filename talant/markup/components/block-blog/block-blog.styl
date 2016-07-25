@@ -23,22 +23,17 @@
     // -----------------------------------------
 
     &__main
-        display: flex
-        justify-content: center
-        flex-wrap: wrap
-
-        @media screen and ( max-width: $bp768 )
-            flex-direction: column
-            flex-wrap: nowrap
-            //height: 100rem
+        width: 100%
+        clearfix()
 
     // BLOG ITEM
     // -----------------------------------------
 
     &__item
+        float: left
+        width: 25%
         display: flex
         flex-direction: column
-        flex: 0 1 25%
 
         &:nth-child(1)
             background: url( '%=static=%assets/block-blog/blog-image-01.jpg' ) 50% 50% no-repeat
@@ -55,14 +50,6 @@
         &:nth-child(8)
             background: url( '%=static=%assets/block-blog/blog-image-04.jpg' ) 50% 50% no-repeat
             background-size: cover
-
-        @media screen and ( max-width: $bp1200 )
-            flex: 0 1 50%
-            border: .1rem solid $color-grey-58
-
-        @media screen and ( max-width: $bp768 )
-            //flex: 0 1 100%
-            flex: 1 1 0
 
         &--content
             background-color: $color-grey-heavy

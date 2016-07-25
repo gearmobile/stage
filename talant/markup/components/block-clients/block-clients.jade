@@ -1,2 +1,24 @@
-mixin block-clients(data)
-    .block-clients
+include ../module-heading-oneside/module-heading-oneside
+
+mixin block-clients()
+    .clients
+        .center
+            .clients__header
+                +module-heading-oneside( 'clients' )
+                p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
+            .clients__main
+                .clients__item
+                    a( href='#{js}' )
+                        img(src='%=static=%img/assets/block-clients/client-image-01.png' alt='Client Image')
+                .clients__item
+                    a( href='#{js}' )
+                        img(src='%=static=%img/assets/block-clients/client-image-02.png' alt='Client Image')
+                .clients__item
+                    a( href='#{js}' )
+                        img(src='%=static=%img/assets/block-clients/client-image-03.png' alt='Client Image')
+                .clients__item
+                    a( href='#{js}' )
+                        img(src='%=static=%img/assets/block-clients/client-image-04.png' alt='Client Image')
+                .clients__item
+                    a( href='#{js}' )
+                        img(src='%=static=%img/assets/block-clients/client-image-05.png' alt='Client Image')
