@@ -76,7 +76,6 @@ window.addEventListener( 'load', function () {
 
         GoogleMapsLoader.LANGUAGE = 'en';
         GoogleMapsLoader.KEY = 'AIzaSyAjunIsdBzwn5n0IhHJctIg4PPCMlH7u24';
-
         var brampton = document.querySelector( '#map' );
         var bramptonCoords = new google.maps.LatLng( 51.5220535, 0.0419289 );
         var zoomValue = 15;
@@ -184,7 +183,7 @@ window.addEventListener( 'load', function () {
             content: 'Brampton Manor Academy'
         });
 
-        bramptonMarker.addListener('click', function () {
+        bramptonMarker.addListener( 'click', function () {
             bramptonInfo.open( bramptonMap, bramptonMarker );
         });
 
@@ -207,7 +206,8 @@ window.addEventListener( 'load', function () {
 
     });
 
-
+    // BLOG GRID
+    // ------------------------------------
     equalHeight( '.blog__item' );
 
 
@@ -216,10 +216,6 @@ window.addEventListener( 'load', function () {
 
 // BLOG GRID
 // ------------------------------------
-
-//window.addEventListener( 'load', function () {
-//    equalHeight( '.blog__item' );
-//}, false );
 
 window.addEventListener( 'resize', function () {
     equalHeight( '.blog__item' );
