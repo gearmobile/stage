@@ -35,6 +35,13 @@
         display: flex
         flex-direction: column
 
+        @media screen and ( max-width: $bp1000 )
+            width: 50%
+            border: .1rem solid $color-grey-58
+
+        @media screen and ( max-width: $bp768 )
+            width: 100%
+
         &:nth-child(1)
             background: url( '%=static=%assets/block-blog/blog-image-01.jpg' ) 50% 50% no-repeat
             background-size: cover
@@ -73,7 +80,7 @@
 
     &__title
         text-transform: uppercase
-        font: 1.3rem/1.2 $montserrat-regular
+        font: 1.3rem/1.4 $montserrat-regular
         letter-spacing: .1rem
         margin: 0 0 4rem
         position: relative
