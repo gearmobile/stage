@@ -1,17 +1,122 @@
+// FOOTER
+// ----------------------------------------
+
 .footer
     background: #292929 url( '%=static=%assets/moduleName/sample-image-name.png' ) 0 0 repeat
 
+    // FOOTER PRIMARY
+    // ----------------------------------------
+
     &__primary
         padding: 6rem 0
+
+    // FOOTER WRAPPER
+    // ----------------------------------------
+
+    &__wrapper
         lost-center: 100% flex
+
+    // FOOTER FIRST-PART
+    // ----------------------------------------
 
     &__first-part
         lost-column 4/12
         lost-column-gutter $gutter*2
 
+        & p
+            font-size: 1.4rem
+            line-height: 1.4
+            color: $color-grey-58
+
+        @media screen and ( max-width: $bp980 )
+            lost-column 1/1
+            lost-column-gutter 0
+            margin-bottom: $gutter*2
+
+    // FOOTER CAPTION
+    // ----------------------------------------
+
+    &__caption
+        display: flex
+        align-items: center
+        min-height: 2.9rem
+        margin: 0 0 4rem
+        padding: 0 0 0 5.4rem
+        background: url( '%=static=%assets/footer/footer-logo.png' ) 0 50% no-repeat
+
+    // FOOTER TITLE
+    // ----------------------------------------
+
+    &__title
+        text-transform: uppercase
+        color: $color-white
+        font: 1.8rem/1.2 $montserrat-regular
+        letter-spacing: .1rem
+
+    // FOOTER ADDRESS
+    // ----------------------------------------
+
+    &__address
+        margin: 4rem 0 0
+
+        & ul
+            font-size: 1.4rem
+            color: $color-grey-58
+            line-height: 2
+
+    // FOOTER SUBTITLE
+    // ----------------------------------------
+
+    &__subtitle
+        font: 1.3rem/1.2 $montserrat-regular
+        color: $color-white
+        text-transform: uppercase
+        letter-spacing: .1rem
+        margin: 0 0 2rem
+
+    // FOOTER CONTACTS
+    // ----------------------------------------
+
+    &__contacts
+        margin: 2rem 0 0
+
+        & ul
+            font: 1.3rem/1.6 $montserrat-regular
+            text-transform: uppercase
+            letter-spacing: .1rem
+
+        & a
+            color: $color-white
+
+            &:hover
+                color: $color-grey-58
+
+    // FOOTER SOCIALS
+    // ----------------------------------------
+
+    &__socials
+        margin: 3rem 0 0
+
+        & .social-icon:hover
+            fill: $color-white
+
+        @media screen and ( max-width: $bp500 )
+            & .social-icons
+                justify-content: center
+
+    // FOOTER SECOND-PART
+    // ----------------------------------------
+
     &__second-part
         lost-column 8/12
         lost-column-gutter $gutter*2
+
+        @media screen and ( max-width: $bp980 )
+            lost-column 1/1
+            lost-column-gutter 0
+
+    // FOOTER SECONDARY
+    // ----------------------------------------
 
     &__secondary
         padding: 4rem 0
@@ -21,3 +126,6 @@
         & p
             font: 1.3rem/1.2 $crimson-italic
             color: #949494
+
+        @media screen and ( max-width: $bp500 )
+            text-align: center

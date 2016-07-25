@@ -21,6 +21,13 @@
         lost-column 1/2
         lost-column-gutter $gutter*2
 
+        @media screen and ( max-width: $bp768 )
+            lost-column 1/1
+            lost-column-gutter 0
+
+            &:not(:last-child)
+                margin-bottom: 2rem
+
 
     // FORM INPUT AND TEXTAREA
     // ----------------------------------------------
@@ -50,6 +57,13 @@
     // ----------------------------------------------
 
     & .button
-        background-color: #464646
-        border-color: #464646
+        background-color: $color-grey-2
         color: $color-white
+        border: none
+
+        @media screen and ( max-width: $bp500 )
+            margin: auto
+
+        &:hover
+            background-color: $color-white
+            color: $color-grey-2
