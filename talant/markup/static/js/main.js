@@ -40,7 +40,12 @@ window.addEventListener( 'load', function () {
         breakpoints: {
             768: {
                 autoplay: 2000,
-                speed: 800
+                speed: 800,
+                grabCursor: true
+            },
+            500: {
+                effect: 'fade',
+                grabCursor: false
             }
         }
     });

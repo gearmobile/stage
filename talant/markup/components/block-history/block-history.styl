@@ -95,15 +95,37 @@
 
     &__thumb
         border: .1rem solid $color-grey
-        padding: 3rem 7rem 3rem 2rem
+        padding: 3rem 6rem 3rem 2rem
         margin: 0 0 $gutter*2
         color: $color-grey
+        position relative
+        transition background-color .2s, color .2s
 
         &:last-child
             margin-bottom: 0
 
         & p
             font: 1.4rem/1.8 $crimson-regular
+
+        &::before
+            content ''
+            display block
+            size( 1.6rem )
+            border-radius 50%
+            background-color $color-grey
+            position absolute
+            top 1rem
+            left -( 3rem + .8rem )
+
+            @media screen and ( max-width: $bp500 )
+                display: none
+
+        &:hover
+            background-color $color-grey
+            color $color-white
+
+            & a
+                color $color-white
 
         @media screen and ( max-width: $bp500 )
             padding 3rem
@@ -117,6 +139,12 @@
 
     &__meta
         margin: 0 0 3rem
+
+        & a
+            color $color-grey
+
+            &:hover
+                color $color-grey-light
 
     // HISTORY TITLE
     // ------------------------------------
