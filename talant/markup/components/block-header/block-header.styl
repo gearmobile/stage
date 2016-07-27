@@ -1,1 +1,66 @@
+// HEADER
+// ---------------------------------------------
 
+.header
+    background: url( '%=static=%assets/block-header/header-bg.jpg' ) 50% 50% no-repeat
+    background-size: cover
+
+    // HEADER SWIPER-CONTAINER
+    // ---------------------------------------------
+
+    & .swiper-container
+        width: 100%
+        height: 100%
+
+    // HEADER SWIPER-SLIDE
+    // ---------------------------------------------
+
+    & .swiper-slide
+        min-height: 69.8rem
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+    // HEADER TITLE
+    // ---------------------------------------------
+
+    &__title
+        margin 0 0 3rem
+        font 1.4rem/1.2 $crimson-regular
+        color $color-white
+
+    // HEADER HEADING-TWOSIDE
+    // ---------------------------------------------
+
+    & .heading-twoside h2
+        color: $color-white
+        background: url('%=static=%assets/module-heading-oneside/underline-pattern-white.png') 0 0 repeat-x,
+                    url('%=static=%assets/module-heading-oneside/underline-pattern-white.png') 0 100% repeat-x
+
+    // HEADER BUTTON
+    // ---------------------------------------------
+
+    & .button
+        border-color: $color-white
+        color: $color-white
+        position: relative
+
+        &:hover
+            background-color: $color-white
+            color: $color-grey
+
+        &::after
+            content: ''
+            display: block
+            width: 1.5rem
+            height: 5rem
+            position: absolute
+            left: 50%
+            transform: translateX( -50% )
+            bottom: -4.4rem
+            background: url( '%=static=%assets/block-header/button-arrow.png' ) 50% 50% no-repeat
+            background-size: cover
+
+        &:hover::after
+            bottom -5rem

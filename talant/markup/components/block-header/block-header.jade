@@ -1,2 +1,15 @@
+include ../module-button/module-button
+include ../module-heading-twoside/module-heading-twoside
+
 mixin block-header(data)
     .header
+        .swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    h3.header__title
+                        | Design Studio and Digital Agency
+                    +module-heading-twoside( 'we are atlantida' )
+                    +module-button( 'get started' )
+                .swiper-slide
+                .swiper-slide
+            .swiper-pagination
