@@ -1,1 +1,92 @@
+// HISTORY
+// ---------------------------------
 
+.history
+    background-color #ededed
+    padding 6rem 0
+
+    // HISTORY CENTER
+    // ------------------------------------
+
+    & .center
+        //
+
+
+    // HISTORY HEADER
+    // ------------------------------------
+
+    &__header
+        margin 0 0 4rem
+
+        & p
+            lost-center 100rem flex
+            text-align: center
+            font-size: 1.4rem
+            color: $color-grey
+            line-height: 2
+
+    // HISTORY MAIN
+    // ------------------------------------
+
+    &__main
+        //
+
+    // HISTORY BLOCK
+    // ------------------------------------
+
+    &__block
+        padding 6rem 0 6rem 6rem
+        position relative
+        outline .1rem solid green // !!
+
+        &::before
+            content ''
+            display block
+            width .1rem
+            height 100%
+            background-color $color-grey
+            position absolute
+            top 0
+            left 3rem
+
+    // HISTORY ROW
+    // ------------------------------------
+
+    &__row
+        margin 0 0 3rem
+
+    // HISTORY THUMB
+    // ------------------------------------
+
+    &__thumb
+        border .1rem solid $color-grey
+        padding 3rem 7rem 3rem 2rem
+        margin 0 0 $gutter*2
+        color $color-grey
+
+        &:not(:last-child)
+            margin 0 0 $gutter*2
+
+        & p
+            font 1.4rem/1.8 $crimson-regular
+
+    // HISTORY META
+    // ------------------------------------
+
+    &__meta
+        margin 0 0 3rem
+
+    // HISTORY TITLE
+    // ------------------------------------
+
+    &__title
+        font 1.3rem/1.2 $montserrat-regular
+        text-transform uppercase
+        margin 0 0 1rem
+
+    // HISTORY DATE
+    // ------------------------------------
+
+    &__date
+        font 1.1rem/1.2 $montserrat-regular
+        text-transform capitalize
