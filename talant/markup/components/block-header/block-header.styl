@@ -22,6 +22,26 @@
         align-items: center
         justify-content: center
 
+    // HEADER SWIPER-BUTTON
+    // ---------------------------------------------
+
+    & .swiper-button-next
+    & .swiper-button-prev
+        size( 3.4rem )
+        border-radius: 50%
+        background-color: $color-white
+
+        @media screen and ( max-width $bp768 )
+            display: none
+
+    & .swiper-button-next
+        background: url( '%=static=%assets/block-header/arrow-next.png' ) 50% 50% no-repeat
+        background-size: cover
+
+    & .swiper-button-prev
+        background: url( '%=static=%assets/block-header/arrow-prev.png' ) 50% 50% no-repeat
+        background-size: cover
+
     // HEADER TITLE
     // ---------------------------------------------
 
@@ -37,6 +57,12 @@
         color: $color-white
         background: url('%=static=%assets/module-heading-oneside/underline-pattern-white.png') 0 0 repeat-x,
                     url('%=static=%assets/module-heading-oneside/underline-pattern-white.png') 0 100% repeat-x
+
+        @media screen and ( max-width $bp768 )
+            font-size 2rem
+
+        @media screen and ( max-width $bp500 )
+            font-size 1.6rem
 
     // HEADER BUTTON
     // ---------------------------------------------
@@ -61,6 +87,10 @@
             bottom: -4.4rem
             background: url( '%=static=%assets/block-header/button-arrow.png' ) 50% 50% no-repeat
             background-size: cover
+            transition bottom .2s
+
+            @media screen and ( max-width $bp768 )
+                display: none
 
         &:hover::after
-            bottom -5rem
+            bottom -5.2rem

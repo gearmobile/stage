@@ -30,6 +30,21 @@ function equalHeight( items ) {
 
 window.addEventListener( 'load', function () {
 
+
+    // HEADER SLIDER
+    // ------------------------------------
+    swiper( '.header .swiper-container', {
+        nextButton: '.header .swiper-button-next',
+        prevButton: '.header .swiper-button-prev',
+        loop: true,
+        breakpoints: {
+            768: {
+                autoplay: 2000,
+                speed: 800
+            }
+        }
+    });
+
     // TESTIMONIALS SLIDER
     // ------------------------------------
 
@@ -242,17 +257,3 @@ window.addEventListener( 'resize', function () {
 //        topHeader.classList.remove( 'is-hidden' );
 //    }
 //}, false );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
