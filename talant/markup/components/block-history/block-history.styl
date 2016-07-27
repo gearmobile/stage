@@ -189,9 +189,12 @@
 
         &::after
             size( 1rem )
-            top: 1.6rem
+            top: 1.5rem
             left: -1rem
             background: url( '%=static=%assets/block-history/arrow_left.png' ) 50% 50% no-repeat
+
+            @media screen and ( max-width: $bp500 )
+                display: none
 
         &:hover
             background-color $color-grey
@@ -205,10 +208,17 @@
 
         @media screen and ( min-width: $bp980 )
             flex: 0 1 44%
-            position: static
 
             &:first-child
                 margin-bottom: 0
+
+            &:first-child::after
+                left: auto
+                right: -1rem
+                background: url( '%=static=%assets/block-history/arrow_right.png' ) 50% 50% no-repeat
+
+            &:first-child:hover::after
+                background: url( '%=static=%assets/block-history/arrow_right--active.png' ) 50% 50% no-repeat
 
             &:last-child
                 margin-top: 3rem
