@@ -29,7 +29,34 @@
     // ------------------------------------
 
     &__main
-        //
+        position: relative
+
+        &::before
+            content: ''
+            size( 6rem )
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            position: absolute
+            left: 0
+            bottom: -6rem
+            background: $color-grey url( '%=static=%assets/block-history/history-icon.png' ) 50% 50% no-repeat
+            cursor: pointer
+            transition: background-color .2s
+
+            @media screen and ( min-width: $bp980 )
+                left: 50%
+                transform: translateX( -50% )
+
+            @media screen and ( max-width: $bp500 )
+                left: 50%
+                transform: translateX( -50% )
+
+        &:hover::before
+            background-color: $color-black-light
+
+
 
     // HISTORY BLOCK
     // ------------------------------------
@@ -38,6 +65,9 @@
         padding: 10rem 0 6rem 6rem
         position: relative
         outline: .1rem dashed red
+
+        @media screen and ( min-width: $bp980 )
+            padding: 10rem 0 6rem 0
 
         @media screen and ( max-width: $bp500 )
             padding 7rem 0 6rem
@@ -51,6 +81,10 @@
             position: absolute
             top: 6rem
             left: 3rem
+
+            @media screen and ( min-width: $bp980 )
+                left: 50%
+                transform: translateX( -50% )
 
             @media screen and ( max-width: $bp500 )
                 display: none
@@ -73,6 +107,10 @@
             font: 1.3rem/1.2 $montserrat-regular
             color: $color-grey
 
+        @media screen and ( min-width: $bp980 )
+            left: 50%
+            transform: translateX( -50% )
+
         @media screen and ( max-width: $bp500 )
             border-radius 0
             width 100%
@@ -89,6 +127,29 @@
 
         &:last-child
             margin-bottom: 0
+
+        @media screen and ( min-width: $bp980 )
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            position: relative
+
+            &::before
+            &::after
+                content: ''
+                display: block
+                size( 1.6rem )
+                border-radius 50%
+                background-color $color-grey
+                position: absolute
+                left: 50%
+                transform: translateX( -50% )
+
+            &::before
+                top: 1rem
+
+            &::after
+                top: 4rem
 
     // HISTORY THUMB
     // ------------------------------------
@@ -117,6 +178,9 @@
             top 1rem
             left -( 3rem + .8rem )
 
+            @media screen and ( min-width: $bp980 )
+                display: none
+
             @media screen and ( max-width: $bp500 )
                 display: none
 
@@ -126,6 +190,16 @@
 
             & a
                 color $color-white
+
+        @media screen and ( min-width: $bp980 )
+            flex: 0 1 44%
+            position: static
+
+            &:first-child
+                margin-bottom: 0
+
+            &:last-child
+                margin-top: 3rem
 
         @media screen and ( max-width: $bp500 )
             padding 3rem
