@@ -75,7 +75,7 @@
         &::before
             content: ''
             display: block
-            width: .1rem
+            width: .2rem
             height: calc( 100% - 6rem )
             background-color: $color-grey
             position: absolute
@@ -94,7 +94,7 @@
 
     &__year
         size( 6rem )
-        border .1rem solid $color-grey
+        border .2rem solid $color-grey
         border-radius: 50%
         position: absolute
         top: 0
@@ -155,12 +155,12 @@
     // ------------------------------------
 
     &__thumb
-        border: .1rem solid $color-grey
+        border: .2rem solid $color-grey
         padding: 3rem 6rem 3rem 2rem
         margin: 0 0 $gutter*2
         color: $color-grey
         position relative
-        transition background-color .2s, color .2s
+        transition background-color .2.5s, color .2.5s
 
         &:last-child
             margin-bottom: 0
@@ -169,14 +169,17 @@
             font: 1.4rem/1.8 $crimson-regular
 
         &::before
+        &::after
             content ''
             display block
+            position absolute
+
+        &::before
             size( 1.6rem )
             border-radius 50%
             background-color $color-grey
-            position absolute
             top 1rem
-            left -( 3rem + .8rem )
+            left -( 3rem + .9rem )
 
             @media screen and ( min-width: $bp980 )
                 display: none
@@ -184,12 +187,21 @@
             @media screen and ( max-width: $bp500 )
                 display: none
 
+        &::after
+            size( 1rem )
+            top: 1.6rem
+            left: -1rem
+            background: url( '%=static=%assets/block-history/arrow_left.png' ) 50% 50% no-repeat
+
         &:hover
             background-color $color-grey
             color $color-white
 
             & a
                 color $color-white
+
+        &:hover::after
+            background: url( '%=static=%assets/block-history/arrow_left--active.png' ) 50% 50% no-repeat
 
         @media screen and ( min-width: $bp980 )
             flex: 0 1 44%
