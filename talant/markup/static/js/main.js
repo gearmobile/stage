@@ -30,7 +30,6 @@ function equalHeight( items ) {
 
 window.addEventListener( 'load', function () {
 
-
     // TOPHEADER HIDE AND SHOW
     // ------------------------------------
 
@@ -110,29 +109,6 @@ window.addEventListener( 'load', function () {
         event.preventDefault();
         iso.arrange({ filter: event.target.getAttribute( 'data-filter' ) });
     });
-
-
-    // PAGE BLOG GRID
-    // ------------------------------------
-    var blogGrid = document.querySelector( '.main-blog .grid' );
-    var blogGridItem = '.main-blog .grid__item';
-    var blogGridSizer = '.main-blog .grid__sizer';
-    var blogGridIso;
-
-    // PORTFOLIO LAYOUT
-    // ------------------------------------
-
-    imagesload( blogGrid, function () {
-        blogGridIso = new Isotope( blogGrid, {
-            // layoutMode: 'fitColumns',
-            itemSelector: blogGridItem,
-            percentPosition: true,
-            masonry: {
-                columnWidth: blogGridSizer
-            }
-        });
-    });
-
 
     // GOOGLE MAPS
     // ------------------------------------
@@ -275,9 +251,22 @@ window.addEventListener( 'load', function () {
     // ------------------------------------
     equalHeight( '.blog__item' );
 
+    // PAGE BLOG GRID
+    // ------------------------------------
+    var pageBlogGrid = document.querySelector( '#page-about .grid' );
+    console.log( pageBlogGrid );
+    var blogGrid = null;
+    imagesload( pageBlogGrid, function () {
+        blogGrid = new Isotope( pageBlogGrid, {
+            itemSelector: '#page-about .grid__item',
+            percentPosition: true,
+            masonry: {
+                columnWidth: '#page-about .grid__sizer'
+            }
+        });
+    });
 
 }, false );
-
 
 // BLOG GRID
 // ------------------------------------
