@@ -35,7 +35,7 @@ window.addEventListener( 'load', function () {
     // ------------------------------------
 
     var topHeader = document.querySelector( '#topheader' );
-    var topOffset = 110;
+    var topOffset = 50;
 
     window.addEventListener( 'scroll', function () {
         var scrollOffset = window.pageYOffset || document.documentElement.scrollTop;

@@ -1,0 +1,11 @@
+mixin module-meta-icons( primo, secondo, tetro )
+    ul.meta-icons
+        li.meta-icons__item
+            != jadeHelpers.Icon.call( locals, { iconName: 'meta-icon-01', className: 'meta-icon' })
+            a.meta-icons__link( href='#{js}' )= primo
+        li.meta-icons__item
+            != jadeHelpers.Icon.call( locals, { iconName: 'meta-icon-02', className: 'meta-icon' })
+            a.meta-icons__link( href='#{js}' )= secondo
+        li.meta-icons__item
+            != jadeHelpers.Icon.call( locals, { iconName: 'meta-icon-03', className: 'meta-icon' })
+            a.meta-icons__link( href='#{js}' )= tetro

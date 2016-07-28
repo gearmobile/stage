@@ -1,5 +1,6 @@
-include ../module-heading-oneside/module-heading-oneside
+include ../module-heading-navigation/module-heading-navigation
 
-mixin block-header-blog(data)
+mixin block-header-blog()
     .header-blog
-        +module-heading-oneside( 'masonry blog' )
+        .center
+            +module-heading-navigation( 'masonry blog', 'home', 'blog' )

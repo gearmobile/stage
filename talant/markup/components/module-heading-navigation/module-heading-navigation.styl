@@ -1,0 +1,37 @@
+.heading-navigation
+    display: flex
+    flex-direction column
+    align-items center
+    justify-content: center
+
+
+    & h2
+        margin: 0 0 3rem
+        text-transform: uppercase
+        font: 2rem/1.2 $amsdam-regular
+        // color: $color-grey
+        letter-spacing: .2rem
+        padding: 0 0 2.4rem
+        // background: url('%=static=%assets/module-heading-oneside/underline-pattern-black.png') 0 100% repeat-x
+        background: url('%=static=%assets/module-heading-oneside/underline-pattern-white.png') 50% 100% repeat-x
+        color: $color-white
+
+    & ul
+        display flex
+        flex-direction row
+
+    & li
+        margin 0 1rem
+        position relative
+
+        &:first-child::after
+            content '>'
+            position absolute
+            color $color-white
+
+    & a
+        text-transform capitalize
+        color $color-white
+
+        &:hover
+            color $color-grey-light
