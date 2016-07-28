@@ -1,6 +1,4 @@
-include ../module-meta/module-meta
-include ../module-meta-icons/module-meta-icons
-include ../module-button/module-button
+include ../block-post/block-post
 
 mixin block-main-blog()
     .main-blog
@@ -8,110 +6,20 @@ mixin block-main-blog()
             .grid
                 .grid__sizer
                 .grid__item
-                    .grid__header
-                        .grid__thumb
-                            img( src='%=static=%img/assets/block-main-blog/blog-image-01.jpg' alt='Blog Image' )
-                        h3.grid__title
-                            | donec id lobortis tellus maecenas vel dignissim
-                        +module-meta( 'by admin', '07 october 2015' )
-                        +module-meta-icons( '95', '567', 'branding' )
-                    .grid__main
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
-                    .grid__footer
-                        +module-button( 'read more' )
+                    +block-post( '%=static=%img/assets/block-post/post-image-01.jpg' )
                 .grid__item
-                    .grid__header
-                        .grid__thumb
-                            img( src='%=static=%img/assets/block-main-blog/blog-image-02.jpg' alt='Blog Image' )
-                        h3.grid__title
-                            | donec id lobortis tellus maecenas vel dignissim
-                        +module-meta( 'by admin', '07 october 2015' )
-                        +module-meta-icons( '95', '567', 'branding' )
-                    .grid__main
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
-                    .grid__footer
-                        +module-button( 'read more' )
+                    +block-post( '%=static=%img/assets/block-post/post-image-02.jpg' )
                 .grid__item
-                    .grid__header
-                        .grid__thumb
-                            img( src='%=static=%img/assets/block-main-blog/blog-image-03.jpg' alt='Blog Image' )
-                        h3.grid__title
-                            | donec id lobortis tellus maecenas vel dignissim
-                        +module-meta( 'by admin', '07 october 2015' )
-                        +module-meta-icons( '95', '567', 'branding' )
-                    .grid__main
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
-                    .grid__footer
-                        +module-button( 'read more' )
+                    +block-post( '%=static=%img/assets/block-post/post-image-03.jpg' )
                 .grid__item
-                    .grid__header
-                        .grid__thumb
-                            img( src='%=static=%img/assets/block-main-blog/blog-image-04.jpg' alt='Blog Image' )
-                        h3.grid__title
-                            | donec id lobortis tellus maecenas vel dignissim
-                        +module-meta( 'by admin', '07 october 2015' )
-                        +module-meta-icons( '95', '567', 'branding' )
-                    .grid__main
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
-                    .grid__footer
-                        +module-button( 'read more' )
+                    +block-post( '%=static=%img/assets/block-post/post-image-04.jpg' )
                 .grid__item
-                    .grid__header
-                        .grid__thumb
-                            img( src='%=static=%img/assets/block-main-blog/blog-image-05.jpg' alt='Blog Image' )
-                        h3.grid__title
-                            | donec id lobortis tellus maecenas vel dignissim
-                        +module-meta( 'by admin', '07 october 2015' )
-                        +module-meta-icons( '95', '567', 'branding' )
-                    .grid__main
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
-                    .grid__footer
-                        +module-button( 'read more' )
+                    +block-post( '%=static=%img/assets/block-post/post-image-05.jpg' )
                 .grid__item
-                    .grid__header
-                        .grid__thumb
-                            img( src='%=static=%img/assets/block-main-blog/blog-image-06.jpg' alt='Blog Image' )
-                        h3.grid__title
-                            | donec id lobortis tellus maecenas vel dignissim
-                        +module-meta( 'by admin', '07 october 2015' )
-                        +module-meta-icons( '95', '567', 'branding' )
-                    .grid__main
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
-                    .grid__footer
-                        +module-button( 'read more' )
+                    +block-post( '%=static=%img/assets/block-post/post-image-06.jpg' )
                 .grid__item
-                    .grid__header
-                        .grid__thumb
-                            img( src='%=static=%img/assets/block-main-blog/blog-image-07.jpg' alt='Blog Image' )
-                        h3.grid__title
-                            | donec id lobortis tellus maecenas vel dignissim
-                        +module-meta( 'by admin', '07 october 2015' )
-                        +module-meta-icons( '95', '567', 'branding' )
-                    .grid__main
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
-                    .grid__footer
-                        +module-button( 'read more' )
+                    +block-post( '%=static=%img/assets/block-post/post-image-07.jpg' )
                 .grid__item
-                    .grid__header
-                        .grid__thumb
-                            img( src='%=static=%img/assets/block-main-blog/blog-image-08.jpg' alt='Blog Image' )
-                        h3.grid__title
-                            | donec id lobortis tellus maecenas vel dignissim
-                        +module-meta( 'by admin', '07 october 2015' )
-                        +module-meta-icons( '95', '567', 'branding' )
-                    .grid__main
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
-                    .grid__footer
-                        +module-button( 'read more' )
+                    +block-post( '%=static=%img/assets/block-post/post-image-08.jpg' )
                 .grid__item
-                    .grid__header
-                        .grid__thumb
-                            img( src='%=static=%img/assets/block-main-blog/blog-image-09.jpg' alt='Blog Image' )
-                        h3.grid__title
-                            | donec id lobortis tellus maecenas vel dignissim
-                        +module-meta( 'by admin', '07 october 2015' )
-                        +module-meta-icons( '95', '567', 'branding' )
-                    .grid__main
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
-                    .grid__footer
-                        +module-button( 'read more' )
+                    +block-post( '%=static=%img/assets/block-post/post-image-09.jpg' )

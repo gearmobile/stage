@@ -253,15 +253,14 @@ window.addEventListener( 'load', function () {
 
     // PAGE BLOG GRID
     // ------------------------------------
-    var pageBlogGrid = document.querySelector( '#page-about .grid' );
-    console.log( pageBlogGrid );
-    var blogGrid = null;
+    var pageBlogGrid = document.querySelector( '#blog .grid' );
+    var blogGrid;
     imagesload( pageBlogGrid, function () {
         blogGrid = new Isotope( pageBlogGrid, {
-            itemSelector: '#page-about .grid__item',
+            itemSelector: '#blog .grid__item',
             percentPosition: true,
             masonry: {
-                columnWidth: '#page-about .grid__sizer'
+                columnWidth: '#blog .grid__sizer'
             }
         });
     });

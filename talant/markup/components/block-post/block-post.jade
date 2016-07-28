@@ -1,0 +1,17 @@
+include ../module-meta/module-meta
+include ../module-meta-icons/module-meta-icons
+include ../module-button/module-button
+
+mixin block-post( imagePath )
+    .post
+        .post__header
+            .post__image
+                img( src=imagePath alt='Blog Image' )
+            h3.post__title
+                | donec id lobortis tellus maecenas vel dignissim
+            +module-meta( 'by admin', '07 october 2015' )
+            +module-meta-icons( '95', '567', 'branding' )
+        .post__main
+            p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
+        .post__footer
+            +module-button( 'read more' )

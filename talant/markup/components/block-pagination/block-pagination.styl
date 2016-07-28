@@ -1,0 +1,35 @@
+
+// PAGINATION
+// ----------------------------------------
+
+.pagination
+    display flex
+    justify-content center
+    padding 6rem 0 0
+    border-top .1rem solid $color-grey
+
+    // PAGINATION ITEM
+    // ----------------------------------------
+
+    &__item
+        display block
+        size( 4rem )
+        border .1rem solid $color-grey
+        margin 0 .3rem
+
+    // PAGINATION LINK
+    // ----------------------------------------
+
+    &__link
+        display flex
+        size( 100% )
+        justify-content center
+        align-items center
+        font 1.4rem/1.2 $crimson-italic
+        color $color-grey
+        transition background-color .2s, color .2s
+
+        &:hover
+        &:active
+            color $color-white
+            background-color $color-grey
