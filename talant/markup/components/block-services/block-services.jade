@@ -6,31 +6,31 @@ mixin block-services(data)
             .services__header
                 +module-heading-oneside( 'services' )
                 p Donec aliquet, ipsum ut lobortis facilisis, nisi ligula aliquam odio, ut vehicula odio lorem in erat. Quisque quam ipsum, commodo non condimentum a, fermentum id sapien. Pellentesque sit amet sem neque.
-            .services__main
-                .services__item
+            ul.services__main
+                li.services__item
                     .services__thumb
-                        != jadeHelpers.Icon.call(locals, {iconName: 'services-icon-01', className: 'services-icon'})
+                        != jadeHelpers.Icon.call( locals, { iconName: 'services-icon-01', className: 'services-icon' } )
                     .services__caption
                         h4 graphic #[br] design
                     .services__content
                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                .services__item
+                li.services__item
                     .services__thumb
-                        != jadeHelpers.Icon.call(locals, {iconName: 'services-icon-02', className: 'services-icon'})
+                        != jadeHelpers.Icon.call( locals, { iconName: 'services-icon-02', className: 'services-icon' } )
                     .services__caption
                         h4 website #[br] design
                     .services__content
                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                .services__item
+                li.services__item
                     .services__thumb
-                        != jadeHelpers.Icon.call(locals, {iconName: 'services-icon-03', className: 'services-icon'})
+                        != jadeHelpers.Icon.call( locals, { iconName: 'services-icon-03', className: 'services-icon' } )
                     .services__caption
                         h4 seo & #[br] analitycs
                     .services__content
                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                .services__item
+                li.services__item
                     .services__thumb
-                        != jadeHelpers.Icon.call(locals, {iconName: 'services-icon-04', className: 'services-icon'})
+                        != jadeHelpers.Icon.call( locals, { iconName: 'services-icon-04', className: 'services-icon' } )
                     .services__caption
                         h4 wordpress #[br] programing
                     .services__content

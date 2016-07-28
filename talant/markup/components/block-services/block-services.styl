@@ -30,7 +30,8 @@
     // ----------------------------------------
 
     &__main
-        display: flex
+        // display: flex
+        lost-center 100% flex
 
     // SERVICES ITEM
     // ----------------------------------------
@@ -62,6 +63,22 @@
 
         &::after
             right: 0
+
+        @media screen and ( max-width $bp980 )
+            lost-column: 1/2
+            lost-column-gutter: $gutter*2
+            lost-column-cycle 2
+
+            &:nth-child( -n+2 )
+                margin-bottom $gutter*2
+
+        @media screen and ( max-width $bp768 )
+            lost-column 1/1
+            lost-column-gutter: 0
+            lost-column-cycle 0
+
+            &:nth-child( -n+3 )
+                margin-bottom $gutter*4
 
     // SERVICES THUMB
     // ----------------------------------------
@@ -98,16 +115,3 @@
         & p
             color: $color-white-smooth
             font: 1.4rem/2 $crimson-regular
-
-
-
-
-
-
-
-
-
-
-
-
-
