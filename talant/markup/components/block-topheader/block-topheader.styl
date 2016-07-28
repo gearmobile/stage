@@ -9,16 +9,21 @@
     visibility: visible
     opacity: 1
     transition: visibility .2s, opacity .2s
+    will-change: transition
 
     &.is-hidden
         visibility: hidden
         opacity: 0
+
+    @media screen and ( max-width $bp980 )
+        display none
 
 
     // TOPHEADER CENTER
     // ----------------------------
 
     & .center
+        flex-direction row
         justify-content: space-between
 
     // TOPHEADER PRIMARY
@@ -71,6 +76,9 @@
             font: 1.2rem/1.2 $montserrat-regular
             color: $color-grey-dark
 
+            &:hover
+                color darken( $color-grey-dark, 50% )
+
     // TOPHEADER MENU SECONDARY
     // -----------------------------
 
@@ -79,41 +87,5 @@
         justify-content: space-around
         width: 100%
 
-        & a
-            display: block
-            width: 1.6rem
-            height: 1.6rem
-
-        & .topheader-icon
-            width: 1.6rem
-            height: 1.6rem
-            fill: $color-grey-light
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        & .social-icons .social-icon:hover
+            fill: $color-grey-dark

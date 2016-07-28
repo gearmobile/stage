@@ -1,5 +1,7 @@
-mixin block-topheader(data)
-    .topheader
+include ../module-social-icons/module-social-icons
+
+mixin block-topheader()
+    .topheader#topheader
         .center
             .topheader__primary
                 .topheader__logo
@@ -16,9 +18,4 @@ mixin block-topheader(data)
                     a( href='#contact' ) contact
             .topheader__secondary
                 .topheader__menu--secondary
-                    a( href='#{js}' title='Facebook' target='_blank' rel='nofollow' )
-                        != jadeHelpers.Icon.call(locals, {iconName: 'topheader-icon-01', className: 'topheader-icon'})
-                    a( href='#{js}' title='Twitter' target='_blank' rel='nofollow' )
-                        != jadeHelpers.Icon.call(locals, {iconName: 'topheader-icon-02', className: 'topheader-icon'})
-                    a( href='#{js}' title='Behance' target='_blank' rel='nofollow' )
-                        != jadeHelpers.Icon.call(locals, {iconName: 'topheader-icon-03', className: 'topheader-icon'})
+                    +module-social-icons()

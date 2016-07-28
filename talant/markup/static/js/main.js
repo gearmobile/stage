@@ -31,6 +31,22 @@ function equalHeight( items ) {
 window.addEventListener( 'load', function () {
 
 
+    // TOPHEADER HIDE AND SHOW
+    // ------------------------------------
+
+    var topHeader = document.querySelector( '#topheader' );
+    var topOffset = 110;
+
+    window.addEventListener( 'scroll', function () {
+        var scrollOffset = window.pageYOffset || document.documentElement.scrollTop;
+        if ( scrollOffset > topOffset ) {
+            topHeader.classList.add( 'is-hidden' );
+        } else {
+            topHeader.classList.remove( 'is-hidden' );
+        }
+    }, false );
+
+
     // HEADER SLIDER
     // ------------------------------------
     swiper( '.header .swiper-container', {
@@ -247,25 +263,3 @@ window.addEventListener( 'load', function () {
 window.addEventListener( 'resize', function () {
     equalHeight( '.blog__item' );
 }, false );
-
-
-
-
-
-
-
-
-// TOPHEADER HIDE AND SHOW
-// ------------------------------------
-
-//var topHeader = document.querySelector( '.topheader' );
-//var topOffset = 110;
-//
-//window.addEventListener( 'scroll', function () {
-//    var scrollOffset = window.pageYOffset || document.documentElement.scrollTop;
-//    if ( scrollOffset > topOffset ) {
-//        topHeader.classList.add( 'is-hidden' );
-//    } else {
-//        topHeader.classList.remove( 'is-hidden' );
-//    }
-//}, false );
