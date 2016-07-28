@@ -2,19 +2,24 @@ include ../module-meta/module-meta
 include ../module-meta-icons/module-meta-icons
 include ../module-button/module-button
 
-mixin block-main-blog(data)
+mixin block-main-blog()
     .main-blog
         .center
             .grid
                 .grid__sizer
                 .grid__item
                     .grid__thumb
-                        .grid__image
-                        h3.grid__title
-                        +module-meta( 'by admin', '07 october 2015' )
-                        +module-meta-icons( '95', '567', 'branding' )
-                        p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
-                        +module-button( 'read more' )
+                        .grid__header
+                            .grid__image
+                                img( src='%=static=%img/assets/block-main-blog/blog-image-01.jpg' alt='Blog Image' )
+                            h3.grid__title
+                                | donec id lobortis tellus maecenas vel dignissim
+                            +module-meta( 'by admin', '07 october 2015' )
+                            +module-meta-icons( '95', '567', 'branding' )
+                        .grid__main
+                            p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis
+                        .grid__footer
+                            +module-button( 'read more' )
                 .grid__item
                 .grid__item
                 .grid__item

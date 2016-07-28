@@ -13,7 +13,11 @@
     // -----------------------------------
 
     &__item
+        display flex
         margin 0 1rem 0 0
+
+        &:last-child
+            margin-right 0
 
     // META-ICONS LINK
     // -----------------------------------
@@ -22,6 +26,12 @@
         color $color-grey-3
         text-transform capitalize
         font 1.4rem/1.2 $crimson-italic
+        vertical-align middle
 
         &:hover
             color darken( $color-grey-3, 50% )
+
+    & .meta-icon
+        size( 1.4rem )
+        margin 0 .5rem 0 0
+        fill: $color-grey-3
