@@ -59,10 +59,9 @@
         left: .8rem
         background-color: rgba( $color-white, .8 )
         size ( calc( 100% - .8rem * 2 ) )
-        opacity: 0
-        visibility: hidden
+        // opacity: 0
+        // visibility: hidden
         transition: visibility .2s, opacity .2s
-        will-change: transition
 
     // TEAM CONTENT
     // ----------------------------------
@@ -100,13 +99,5 @@
     &__social
         padding: 1rem 0 0 0
 
-
-
-
-
-
-
-
-
-
-
+        & .social-icons .social-icon:hover
+            fill: $color-grey
