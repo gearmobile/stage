@@ -10,20 +10,24 @@
     // ------------------------------------------
 
     & .center
-        //
+        // lost-center 100% flex
 
     // MAIN-BLOG GRID
     // ------------------------------------------
 
     & .grid
-        //
+        clearfix()
+        // lost-masonry-wrap: no-flex
 
         // MAIN-BLOG GRID SIZER && ITEM
         // ------------------------------------------
 
         &__sizer
         &__item
-            //
+            float left
+            width 32%
+            margin calc( (100% - 32% * 3 ) / 6 )
+            // lost-masonry-column: 1/3
 
 
         // MAIN-BLOG GRID HEADER

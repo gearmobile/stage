@@ -112,6 +112,28 @@ window.addEventListener( 'load', function () {
     });
 
 
+    // PAGE BLOG GRID
+    // ------------------------------------
+    var blogGrid = document.querySelector( '.main-blog .grid' );
+    var blogGridItem = '.main-blog .grid__item';
+    var blogGridSizer = '.main-blog .grid__sizer';
+    var blogGridIso;
+
+    // PORTFOLIO LAYOUT
+    // ------------------------------------
+
+    imagesload( blogGrid, function () {
+        blogGridIso = new Isotope( blogGrid, {
+            // layoutMode: 'fitColumns',
+            itemSelector: blogGridItem,
+            percentPosition: true,
+            masonry: {
+                columnWidth: blogGridSizer
+            }
+        });
+    });
+
+
     // GOOGLE MAPS
     // ------------------------------------
 
