@@ -55,7 +55,14 @@ window.addEventListener( 'load', function () {
 
     swiper( '.testimonials .swiper-container', {
         pagination: '.testimonials .swiper-pagination',
-        paginationClickable: true
+        paginationClickable: true,
+        breakpoints: {
+            500: {
+                autoplay: 2000,
+                speed: 1000,
+                grabCursor: true
+            }
+        }
     });
 
     // PORTFOLIO

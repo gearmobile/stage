@@ -28,6 +28,9 @@
     & .swiper-pagination
         bottom: 0
 
+        @media screen and ( max-width: $bp500 )
+            display none
+
     // TESTIMONIALS PAGINATION BULLETS
     // --------------------------------------------
 
@@ -54,6 +57,7 @@
 
         & > img
             img-adaptive()
+            opacity .8
 
     // TESTIMONIALS CONTENT
     // --------------------------------------------
@@ -75,6 +79,9 @@
             @media screen and ( max-width: $bp768 )
                 padding: 0 2rem
 
+            @media screen and ( max-width: $bp500 )
+                padding 0
+
             &::before
             &::after
                 font-size: 9rem
@@ -84,6 +91,9 @@
 
                 @media screen and ( max-width: $bp768 )
                     font-size: 7rem
+
+                @media screen and ( max-width: $bp500 )
+                    display none
 
             &::before
                 content: open-quote
