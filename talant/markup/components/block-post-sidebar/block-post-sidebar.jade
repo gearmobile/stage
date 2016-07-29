@@ -1,4 +1,5 @@
 include ../block-hero/block-hero
+include ../block-post-full/block-post-full
 include ../block-search/block-search
 include ../block-posts-latest/block-posts-latest
 include ../block-category/block-category
@@ -11,6 +12,7 @@ mixin block-post-sidebar()
         .post-sidebar__main
             .post-sidebar__center
                 .post-sidebar__primary
+                    +block-post-full( '%=static=%img/assets/block-post-full/post-full-image-01.jpg' )
                 .post-sidebar__secondary
                     .post-sidebar__form
                         +block-search()

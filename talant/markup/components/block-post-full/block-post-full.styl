@@ -1,0 +1,62 @@
+.post-full
+    //
+
+    // POST-FULL HEADER
+    // ------------------------------------------
+
+    &__header
+        margin 0 0 3rem
+
+    // POST-FULL IMAGE
+    // ------------------------------------------
+
+    &__image
+        margin 0 0 4rem
+        img-adaptive()
+
+    // POST-FULL TITLE
+    // ------------------------------------------
+
+    &__title
+        font 1.6rem/1.4 $montserrat-bold
+        color $color-grey
+        text-transform uppercase
+        letter-spacing .1rem
+        margin 0 0 1rem
+
+    // POST-FULL META
+    // ------------------------------------------
+
+    & .meta
+        margin 0 0 2rem
+        padding 0
+        border-bottom none
+
+        & .meta__link
+        & .meta__primary
+        & .meta__secondary
+            color $color-grey
+
+        & .meta__link:hover
+            color darken( $color-grey, 90% )
+
+    // POST-FULL MAIN
+    // ------------------------------------------
+
+    &__main
+        margin 0 0 3rem
+
+        & p
+            font 1.4rem/1.8 $crimson-regular
+            color $color-grey
+            margin 0 0 2rem
+
+            &:last-child
+                margin 0
+
+        & blockquote
+            border .2rem solid $color-grey-5
+            margin 2rem 0
+            padding 6rem 6rem 6rem 4rem
+            font 700 1.6rem/1.8 $crimson-italic
+            color $color-grey
