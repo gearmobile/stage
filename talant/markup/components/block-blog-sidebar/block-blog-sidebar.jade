@@ -1,5 +1,6 @@
 include ../block-hero/block-hero
 include ../block-post/block-post
+include ../block-search/block-search
 include ../block-posts-latest/block-posts-latest
 include ../block-category/block-category
 include ../block-photos/block-photos
@@ -20,10 +21,7 @@ mixin block-blog-sidebar()
                     +block-pagination()
                 .blog-sidebar__secondary
                     .blog-sidebar__form
-                        form( method='post' action='action.php' )
-                            fieldset
-                                input( type='text' name='search' id='search' placeholder='search' )
-                                != jadeHelpers.Icon.call( locals, { iconName: 'search-icon', className: 'blog-sidebar-icon' })
+                        +block-search()
                     +block-posts-latest(
                         'latest posts',
                         '%=static=%img/assets/block-posts-latest/posts-latest-image-01.jpg',

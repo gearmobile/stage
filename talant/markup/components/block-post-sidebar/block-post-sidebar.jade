@@ -1,0 +1,9 @@
+include ../block-hero/block-hero
+
+mixin block-post-sidebar()
+    .post-sidebar
+        .post-sidebar__header
+            +block-hero( 'post with sidebar', 'home', 'blog' )
+        .post-sidebar__main
+            .post-sidebar__primary
+            .post-sidebar__secondary
