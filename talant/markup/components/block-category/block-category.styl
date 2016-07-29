@@ -8,22 +8,46 @@
     // ----------------------
 
     &__title
-        //
+        margin 0 0 4rem
+        text-transform uppercase
+        color $color-grey
+        font 1.6rem/1.2 $montserrat-bold
 
     // CATEGORY LIST
     // ----------------------
 
     &__list
-        //
+        padding 0 0 6rem
 
     // CATEGORY ITEM
     // ----------------------
 
     &__item
-        //
+        padding 2rem 0 2rem 1.4rem
+        border-bottom .1rem solid $color-grey-4
+        position relative
+
+        &::before
+            content ''
+            display block
+            width 0
+            height 0
+            border-style: solid
+            border-width: 3.5px 0 3.5px 4px
+            border-color: transparent transparent transparent $color-grey
+            position absolute
+            top 50%
+            transform translateY( -50% )
+            left 0
+
 
     // CATEGORY LINK
     // ----------------------
 
     &__link
-        //
+        font 1.6rem/1.2 $crimson-italic
+        color $color-grey
+        text-transform capitalize
+
+        &:hover
+            color $color-grey-heavy
