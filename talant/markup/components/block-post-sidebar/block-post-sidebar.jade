@@ -4,6 +4,8 @@ include ../block-search/block-search
 include ../block-posts-latest/block-posts-latest
 include ../block-category/block-category
 include ../block-photos/block-photos
+include ../block-social-links/block-social-links
+include ../block-comments/block-comments
 
 mixin block-post-sidebar()
     .post-sidebar
@@ -13,6 +15,8 @@ mixin block-post-sidebar()
             .post-sidebar__center
                 .post-sidebar__primary
                     +block-post-full( '%=static=%img/assets/block-post-full/post-full-image-01.jpg' )
+                    +block-social-links()
+                    +block-comments()
                 .post-sidebar__secondary
                     .post-sidebar__form
                         +block-search()

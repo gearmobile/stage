@@ -1,0 +1,24 @@
+include ../module-contact-form/module-contact-form
+
+mixin block-comments(data)
+    .comments
+        .comments__primary
+            dl.comments__list
+                dt.comments__item
+                    .comments__primo
+                        .comments__image
+                    .comments__secondo
+                        .comments__header
+                            h4.comments__subtitle
+                                | brian smith
+                            small.comments__date
+                                | 02 November 2015 at 11:00 pm
+                        .comments__content
+                            p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
+                    .comments__reply
+                        a.comments__reply( href='#{js}' ) reply
+                    dd.comments__subitem
+        .comments__secondary
+            h3.comments__title
+                | leave a comment
+            +module-contact-form()
