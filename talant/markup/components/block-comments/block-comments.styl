@@ -15,28 +15,101 @@
     // ---------------------------------
 
     &__item
-        padding 0 0 6rem
+        display flex
+        padding 4rem 0 6rem
         border-bottom .1rem solid $color-grey-4
         position relative
+
+    // COMMENTS PRIMO
+    // ---------------------------------
+
+    &__primo
+        flex 1 1 auto
+
+    // COMMENTS SECONDO
+    // ---------------------------------
+
+    &__secondo
+        flex 1 7 auto
+        padding 0 0 0 $gutter*2
+
+    // COMMENTS HEADER
+    // ---------------------------------
+
+    &__header
+        padding 1rem 0 0 0
+
+    // COMMENTS SUBTITLE
+    // ---------------------------------
+
+    &__subtitle
+        text-transform uppercase
+        font 1.3rem/1.2 $montserrat-bold
+        color $color-grey
+        margin 0 0 .5rem
+
+    // COMMENTS INFO
+    // ---------------------------------
+
+    &__info
+        font 1.4rem/1.2 $crimson-italic
+        color $color-grey
+
+    // COMMENTS CONTENT
+    // ---------------------------------
+
+    &__content
+        margin 3rem 0 0 0
+
+        & p
+            font 1.4rem/1.8 $crimson-regular
+            color $color-grey
+
+    // COMMENTS IMAGE
+    // ---------------------------------
+
+    &__image
+        size( 7rem )
+        border-radius 50%
+        img-adaptive()
+
+        & img
+            border-radius 50%
+            opacity .8
+            transition opacity .2s
+
+            &:hover
+                opacity 1
 
     // COMMENTS REPLY
     // ---------------------------------
 
     &__reply
+        display flex
+        align-items center
+        justify-content space-between
         position absolute
         right 0
         bottom 1rem
+
+        & .comment-icon
+            fill: $color-grey
+            size( 1.4rem )
+            margin 0 1rem 0 0
 
         & a
             text-transform capitalize
             font 1.4rem/1.2 $crimson-italic
             color $color-grey
 
+            &:hover
+                color lighten( $color-grey, 40% )
+
     // COMMENTS SECONDARY
     // ---------------------------------
 
-    &__secondary
-        //
+    &__secondary .form
+        margin 4rem 0 0 0
 
     // COMMENTS TITLE
     // ---------------------------------
@@ -45,4 +118,4 @@
         font 1.6rem/1.2 $montserrat-bold
         color $color-grey
         text-transform uppercase
-        margin 0 0 4rem
+        // margin 0 0 4rem
