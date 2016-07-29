@@ -1,5 +1,6 @@
 include ../block-hero/block-hero
 include ../block-post/block-post
+include ../block-posts-latest/block-posts-latest
 include ../block-category/block-category
 include ../block-photos/block-photos
 include ../block-pagination/block-pagination
@@ -18,6 +19,13 @@ mixin block-blog-sidebar()
                     +block-post( '%=static=%img/assets/block-post/post-image-1-5.jpg' )
                     +block-pagination()
                 .blog-sidebar__secondary
+                    +block-posts-latest(
+                        'latest posts',
+                        '%=static=%img/assets/block-posts-latest/posts-latest-image-01.jpg',
+                        '%=static=%img/assets/block-posts-latest/posts-latest-image-02.jpg',
+                        '%=static=%img/assets/block-posts-latest/posts-latest-image-03.jpg',
+                        '%=static=%img/assets/block-posts-latest/posts-latest-image-04.jpg'
+                        )
                     +block-category(
                         'categories',
                         'photography',

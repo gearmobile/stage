@@ -1,0 +1,15 @@
+mixin block-posts-latest( title, ...items )
+    .posts-latest
+        h3.posts-latest__title= title
+        ul.posts-latest__list
+            each item in items
+                li.posts-latest__item
+                    .posts-latest__primary
+                        .posts-latest__picture
+                            a( href='#{js}' )
+                                img( src=item alt='Picture' )
+                    .posts-latest__secondary
+                        h4.posts-latest__caption
+                            | sit amet pretium odio magna ege
+                        p
+                            | Nullam lobortis, turpis lobortis placerat vehicula, ipsum

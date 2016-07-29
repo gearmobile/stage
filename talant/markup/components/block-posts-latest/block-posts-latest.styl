@@ -1,0 +1,71 @@
+
+// POSTS-LATEST
+// --------------------------------
+
+.posts-latest
+    //
+
+    // POSTS-LATEST TITLE
+    // --------------------------------
+
+    &__title
+        text-transform uppercase
+        font 1.6rem/1.2 $montserrat-bold
+
+    // POSTS-LATEST LIST
+    // --------------------------------
+
+    &__list
+        margin 0 0 6rem
+
+    // POSTS-LATEST ITEM
+    // --------------------------------
+
+    &__item
+        display flex
+        padding 3rem 0
+        border-bottom .1rem solid $color-grey-4
+
+        &:last-child
+            padding-bottom 0
+            border-bottom none
+
+    // POSTS-LATEST PRIMARY
+    // --------------------------------
+
+    &__primary
+        flex 1 1 auto
+
+    // POSTS-LATEST PICTURE
+    // --------------------------------
+
+    &__picture a
+        img-adaptive()
+        opacity .8
+        transition: opacity .2s
+
+        &:hover
+            opacity 1
+
+    // POSTS-LATEST SECONDARY
+    // --------------------------------
+
+    &__secondary
+        flex 1 2 auto
+        padding 0 0 0 2rem
+
+    // POSTS-LATEST CAPTION
+    // --------------------------------
+
+    &__caption
+        font 1.2rem/1.4 $montserrat-regular
+        color $color-grey
+        text-transform uppercase
+        margin 0 0 2rem
+
+    // POSTS-LATEST PARAGRAPH
+    // --------------------------------
+
+    & p
+        font 1.4rem/1.6 $crimson-italic
+        color $color-grey
