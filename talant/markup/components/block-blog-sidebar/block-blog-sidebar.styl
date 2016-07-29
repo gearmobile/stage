@@ -35,3 +35,37 @@
 .blog-sidebar__secondary
     lost-column 4/12
     lost-column-gutter $gutter*2
+
+
+// BLOG SIDEBAR FORM
+// ----------------------------------
+
+.blog-sidebar__form
+    margin 0 0 4rem
+
+    & fieldset
+        position relative
+        border .2rem solid $color-grey-5
+        transition border-color .2s
+
+        &:hover
+        &:focus
+            border-color: darken( $color-grey-5, 20% )
+
+    & input
+        width 100%
+        padding 1.2rem 4.4rem 1.2rem 1.6rem
+        background-color transparent
+        border none
+        font 1.4rem/1.2 $crimson-italic
+        color $color-grey
+        +placeholder()
+            text-transform capitalize
+
+    & .blog-sidebar-icon
+        size( 1.4rem )
+        position absolute
+        top 50%
+        transform translateY( -50% )
+        right 1.6rem
+        fill: $color-grey

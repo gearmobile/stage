@@ -19,6 +19,11 @@ mixin block-blog-sidebar()
                     +block-post( '%=static=%img/assets/block-post/post-image-1-5.jpg' )
                     +block-pagination()
                 .blog-sidebar__secondary
+                    .blog-sidebar__form
+                        form( method='post' action='action.php' )
+                            fieldset
+                                input( type='text' name='search' id='search' placeholder='search' )
+                                != jadeHelpers.Icon.call( locals, { iconName: 'search-icon', className: 'blog-sidebar-icon' })
                     +block-posts-latest(
                         'latest posts',
                         '%=static=%img/assets/block-posts-latest/posts-latest-image-01.jpg',
