@@ -1,44 +1,47 @@
 
-// BLOG SIDEBAR HEADER
-// ----------------------------------
+.blog-sidebar
+    //
 
-.blog-sidebar__header .header-hero
-    background: url( '%=static=%assets/block-hero/block-hero-bg-02.jpg' ) 50% 50% no-repeat
+    // BLOG SIDEBAR HEADER
+    // ----------------------------------
 
-
-// BLOG SIDEBAR MAIN
-// ----------------------------------
-
-.blog-sidebar__main
-    background-color $color-grey-pale
-    padding 8rem 0
-
-// BLOG SIDEBAR CENTER
-// ----------------------------------
-
-.blog-sidebar__center
-    lost-center $width flex
-    padding: 0 $gutter
+    &__header .header-hero
+        background: url( '%=static=%assets/block-hero/block-hero-bg-02.jpg' ) 50% 50% no-repeat
 
 
-// BLOG SIDEBAR PRIMARY
-// ----------------------------------
+    // BLOG SIDEBAR MAIN
+    // ----------------------------------
 
-.blog-sidebar__primary
-    lost-column 8/12
-    lost-column-gutter $gutter*2
+    &__main
+        background-color $color-grey-pale
+        padding 8rem 0
+
+    // BLOG SIDEBAR CENTER
+    // ----------------------------------
+
+    &__center
+        lost-center $width flex
+        padding: 0 $gutter
 
 
-// BLOG SIDEBAR SECONDARY
-// ----------------------------------
+    // BLOG SIDEBAR PRIMARY
+    // ----------------------------------
 
-.blog-sidebar__secondary
-    lost-column 4/12
-    lost-column-gutter $gutter*2
+    &__primary
+        lost-column 8/12
+        lost-column-gutter $gutter*2
 
 
-// BLOG SIDEBAR FORM
-// ----------------------------------
+    // BLOG SIDEBAR SECONDARY
+    // ----------------------------------
 
-.blog-sidebar__form
-    margin 0 0 4rem
+    &__secondary
+        lost-column 4/12
+        lost-column-gutter $gutter*2
+
+
+    // BLOG SIDEBAR FORM
+    // ----------------------------------
+
+    &__form
+        margin 0 0 4rem

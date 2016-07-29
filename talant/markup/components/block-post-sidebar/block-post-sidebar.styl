@@ -8,23 +8,39 @@
     // POST-SIDEBAR HEADER
     // -----------------------------------
 
-    &__header
-        //
+    &__header .header-hero
+        background: url( '%=static=%assets/block-hero/block-hero-bg-03.jpg' ) 50% 50% no-repeat
 
     // POST-SIDEBAR MAIN
     // -----------------------------------
 
     &__main
-        //
+        background-color $color-grey-pale
+        padding 8rem 0
+
+    // POST-SIDEBAR CENTER
+    // -----------------------------------
+
+    &__center
+        lost-center $width flex
+        padding: 0 $gutter
 
     // POST-SIDEBAR PRIMARY
     // -----------------------------------
 
     &__primary
-        //
+        lost-column 8/12
+        lost-column-gutter $gutter*2
 
     // POST-SIDEBAR SECONDARY
     // -----------------------------------
 
     &__secondary
-        //
+        lost-column 4/12
+        lost-column-gutter $gutter*2
+
+    // POST-SIDEBAR FORM
+    // -----------------------------------
+
+    &__form
+        margin 0 0 4rem

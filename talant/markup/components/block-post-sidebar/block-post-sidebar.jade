@@ -1,9 +1,49 @@
 include ../block-hero/block-hero
+include ../block-search/block-search
+include ../block-posts-latest/block-posts-latest
+include ../block-category/block-category
+include ../block-photos/block-photos
 
 mixin block-post-sidebar()
     .post-sidebar
         .post-sidebar__header
             +block-hero( 'post with sidebar', 'home', 'blog' )
         .post-sidebar__main
-            .post-sidebar__primary
-            .post-sidebar__secondary
+            .post-sidebar__center
+                .post-sidebar__primary
+                .post-sidebar__secondary
+                    .post-sidebar__form
+                        +block-search()
+                    +block-posts-latest(
+                        'latest posts',
+                        '%=static=%img/assets/block-posts-latest/posts-latest-image-01.jpg',
+                        '%=static=%img/assets/block-posts-latest/posts-latest-image-02.jpg',
+                        '%=static=%img/assets/block-posts-latest/posts-latest-image-03.jpg',
+                        '%=static=%img/assets/block-posts-latest/posts-latest-image-04.jpg'
+                        )
+                    +block-category(
+                        'categories',
+                        'photography',
+                        'website design',
+                        'branding',
+                        'flyers',
+                        'uncategories',
+                        'popups'
+                        )
+                    +block-category(
+                        'archives',
+                        'january 2015',
+                        'december 2015',
+                        'november 2015',
+                        'october 2015',
+                        'september 2015'
+                        )
+                    +block-photos(
+                        'flickr photos',
+                        '%=static=%img/assets/block-photos/photos-image-01.jpg',
+                        '%=static=%img/assets/block-photos/photos-image-02.jpg',
+                        '%=static=%img/assets/block-photos/photos-image-03.jpg',
+                        '%=static=%img/assets/block-photos/photos-image-04.jpg',
+                        '%=static=%img/assets/block-photos/photos-image-05.jpg',
+                        '%=static=%img/assets/block-photos/photos-image-06.jpg'
+                        )
