@@ -1,16 +1,7 @@
-mixin block-category( title, item1, item2, item3, item4, item5, item6 )
+mixin block-category( title, ...items )
     .category
         h3.category__title= title
         ul.category__list
-            li.category__item
-                a.category__link( href='#{js}' )= item1
-            li.category__item
-                a.category__link( href='#{js}' )= item2
-            li.category__item
-                a.category__link( href='#{js}' )= item3
-            li.category__item
-                a.category__link( href='#{js}' )= item4
-            li.category__item
-                a.category__link( href='#{js}' )= item5
-            li.category__item
-                a.category__link( href='#{js}' )= item6
+            each item in items
+                li.category__item
+                    a.category__link( href='#{js}' )= item
