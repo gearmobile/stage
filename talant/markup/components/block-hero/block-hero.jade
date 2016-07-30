@@ -1,6 +1,9 @@
-include ../module-heading-navigation/module-heading-navigation
 
-mixin block-hero( title, itemPrimary, itemSecondary )
+mixin block-hero( title, ...items )
     .header-hero
         .center
-            +module-heading-navigation( title, itemPrimary, itemSecondary )
+            h2.header-hero__title= title
+            ul.breadcrumbs
+                each item in items
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link( href='#{js}' )= item

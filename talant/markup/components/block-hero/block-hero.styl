@@ -3,7 +3,6 @@
 // --------------------------------------
 
 .header-hero
-    // background: url( '%=static=%assets/block-hero/header-blog-bg.jpg' ) 50% 50% no-repeat
     background-size cover
     height 39.6rem
 
@@ -13,3 +12,58 @@
     & .center
         height 39.6rem
         justify-content center
+
+    // HEADER HERO TITLE
+    // --------------------------------------
+
+    &__title
+        margin: 0 0 3rem
+        text-transform: uppercase
+        font: 2rem/1.2 $amsdam-regular
+        letter-spacing: .2rem
+        padding: 0 0 2.4rem
+        color: $color-white
+        position relative
+
+        &::after
+            content ''
+            display block
+            width 80%
+            height .5rem
+            position absolute
+            bottom 0
+            left 50%
+            transform translateX(-50%)
+            background: url('%=static=%assets/module-heading-oneside/underline-pattern-white.png') 50% 100% repeat-x
+
+    // HEADER HERO BREADCRUMBS
+    // --------------------------------------
+
+    & .breadcrumbs
+        display flex
+        flex-direction row
+
+        // HEADER HERO ITEM
+        // --------------------------------------
+
+        &__item:last-child .breadcrumbs__link::after
+            display none
+
+        // HEADER HERO LINK
+        // --------------------------------------
+
+        &__link
+            text-transform capitalize
+            color $color-white
+            font 1.4rem/1.2 $crimson-regular
+
+            &::after
+                content ''
+                display inline-block
+                margin 0 1rem
+                size( 1.2rem )
+                vertical-align middle
+                background: url( '%=static=%assets/block-hero/block-hero-icon.png' ) 50% 50% no-repeat
+
+            &:hover
+                color $color-grey-pale
