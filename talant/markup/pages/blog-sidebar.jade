@@ -3,18 +3,18 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head
     include ../components/block-topheader/block-topheader
-    include ../components/block-blog-sidebar/block-blog-sidebar
+    include ../components/page-blog-sidebar/page-blog-sidebar
     include ../components/footer/footer
 
     head
         +head(head.blogSidebar)
-    body.page#blog-sidebar
+    body.page#page-blog-sidebar
         |%=symbols=%
         +block-topheader()
         section.page__wrapper
 
             //- Include your components here
-            +block-blog-sidebar()
+            +page-blog-sidebar()
 
             .page__buffer
 

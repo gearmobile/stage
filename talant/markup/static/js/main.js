@@ -106,7 +106,6 @@ window.addEventListener( 'load', function () {
     // ------------------------------------
 
     portfolioControl.addEventListener( 'click', function ( event ) {
-        event.preventDefault();
         iso.arrange({ filter: event.target.getAttribute( 'data-filter' ) });
     });
 
@@ -253,17 +252,21 @@ window.addEventListener( 'load', function () {
 
     // PAGE BLOG GRID
     // ------------------------------------
-    var pageBlogGrid = document.querySelector( '#blog .grid' );
+    var pageBlogGrid = document.querySelector('.page-blog .grid');
+    var pageBlogSizer = '.page-blog .grid__sizer';
+    var pageBlogItem = '.page-blog .grid__item';
     var blogGrid;
+
     imagesload( pageBlogGrid, function () {
         blogGrid = new Isotope( pageBlogGrid, {
-            itemSelector: '#blog .grid__item',
+            itemSelector: pageBlogItem,
             percentPosition: true,
             masonry: {
-                columnWidth: '#blog .grid__sizer'
+                columnWidth: pageBlogSizer
             }
         });
     });
+
 
 }, false );
 
