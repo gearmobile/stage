@@ -22,22 +22,24 @@ mixin block-comments(data)
                     .comments__reply
                         != jadeHelpers.Icon.call( locals, { iconName: 'comment-icon-01', className: 'comment-icon' })
                         a( href='#{js}' ) reply
-                    li.comments__item
-                        .comments__primo
-                            .comments__image
-                                a( href='#{js}' )
-                                    img( src='%=static=%img/assets/block-comments/comments-image-02.jpg' alt='Comment Image' )
-                        .comments__secondo
-                            .comments__header
-                                h4.comments__subtitle
-                                    | angela roberts
-                                small.comments__info
-                                    | 02 November 2015 at 11:00 pm
-                            .comments__content
-                                p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
-                        .comments__reply
-                            != jadeHelpers.Icon.call( locals, { iconName: 'comment-icon-01', className: 'comment-icon' })
-                            a( href='#{js}' ) reply
+                li.comments__item
+                    ul.comments__list--inside
+                        li.comments__item
+                            .comments__primo
+                                .comments__image
+                                    a( href='#{js}' )
+                                        img( src='%=static=%img/assets/block-comments/comments-image-02.jpg' alt='Comment Image' )
+                            .comments__secondo
+                                .comments__header
+                                    h4.comments__subtitle
+                                        | angela roberts
+                                    small.comments__info
+                                        | 02 November 2015 at 11:00 pm
+                                .comments__content
+                                    p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
+                            .comments__reply
+                                != jadeHelpers.Icon.call( locals, { iconName: 'comment-icon-01', className: 'comment-icon' })
+                                a( href='#{js}' ) reply
         .comments__secondary
             h3.comments__title
                 | leave a comment
