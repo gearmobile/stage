@@ -1,0 +1,42 @@
+
+// PAGE-BLOG
+// ------------------------------------------------
+
+.page-blog
+    //
+
+    // PAGE-BLOG HEADER
+    // ------------------------------------------------
+
+    &__header .header-hero
+        background: url( '%=static=%assets/block-hero/block-hero-bg-01.jpg' ) 0 0 no-repeat
+
+    // PAGE-BLOG MAIN
+    // ------------------------------------------------
+
+    &__main
+        background-color $color-grey-pale
+        padding 8rem 0
+
+    // PAGE-BLOG CENTER
+    // ------------------------------------------------
+
+    & .center
+        //
+
+    // PAGE-BLOG GRID
+    // ------------------------------------------------
+
+    & .grid
+        clearfix()
+
+        // PAGE-BLOG GRID SIZER && ITEM
+        // ------------------------------------------
+
+        &__sizer
+        &__item
+            width 31%
+
+        &__item
+            float left
+            margin calc( (100% - 31% * 3 ) / 6 )

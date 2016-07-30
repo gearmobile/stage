@@ -3,8 +3,9 @@ html( class='no-js' lang='ru' )
 
     include ../components/head/head
     include ../components/block-topheader/block-topheader
-    include ../components/block-hero/block-hero
-    include ../components/block-main-blog/block-main-blog
+    include ../components/page-blog/page-blog
+    //- include ../components/block-hero/block-hero
+    //- include ../components/block-main-blog/block-main-blog
     include ../components/footer/footer
 
     head
@@ -14,9 +15,7 @@ html( class='no-js' lang='ru' )
         +block-topheader()
         section.page__wrapper
 
-            +block-hero()
-            +block-main-blog()
-
+            +page-blog()
             .page__buffer
 
         .page__footer
