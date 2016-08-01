@@ -20,11 +20,20 @@
         border-bottom .1rem solid $color-grey-4
         position relative
 
+        @media screen and ( max-width $bp400 )
+            flex-direction column
+
+        &--last
+            border-bottom none
+
     // COMMENTS LIST INSIDE
     // ---------------------------------
 
     &__list--inside
         margin 0 0 0 10rem
+
+        @media screen and ( max-width $bp500 )
+            margin 0
 
     // COMMENTS PRIMO
     // ---------------------------------
@@ -32,12 +41,20 @@
     &__primo
         flex 1 1 auto
 
+        @media screen and ( max-width $bp400 )
+            display flex
+            justify-content center
+            margin 0 0 $gutter*1.5
+
     // COMMENTS SECONDO
     // ---------------------------------
 
     &__secondo
         flex 1 7 auto
         padding 0 0 0 $gutter*2
+
+        @media screen and ( max-width $bp400 )
+            padding 0
 
     // COMMENTS HEADER
     // ---------------------------------

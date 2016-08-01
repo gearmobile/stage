@@ -5,7 +5,7 @@ mixin block-comments(data)
         .comments__primary
             h3.comments__title
                 | comments (4)
-            ul.comments__list
+            ul.comments__list--outside
                 li.comments__item
                     .comments__primo
                         .comments__image
@@ -22,7 +22,7 @@ mixin block-comments(data)
                     .comments__reply
                         != jadeHelpers.Icon.call( locals, { iconName: 'comment-icon-01', className: 'comment-icon' })
                         a( href='#{js}' ) reply
-                li.comments__item
+                li.comments__item.comments__item--last
                     ul.comments__list--inside
                         li.comments__item
                             .comments__primo

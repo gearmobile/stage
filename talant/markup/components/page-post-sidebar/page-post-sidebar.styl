@@ -33,12 +33,19 @@
         lost-column 8/12
         lost-column-gutter $gutter*2
 
+        @media screen and ( max-width $bp980 )
+            lost-column 1/1
+            lost-column-gutter 0
+
     // POST-SIDEBAR SECONDARY
     // -----------------------------------
 
     &__secondary
         lost-column 4/12
         lost-column-gutter $gutter*2
+
+        @media screen and ( max-width $bp980 )
+            display none
 
     // POST-SIDEBAR FORM
     // -----------------------------------
