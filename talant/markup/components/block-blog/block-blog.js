@@ -32,5 +32,3 @@ window.addEventListener( 'load', function () {
 window.addEventListener( 'resize', function () {
     equalHeight( '.blog__item' );
 }, false );
-
-module.exports = {};

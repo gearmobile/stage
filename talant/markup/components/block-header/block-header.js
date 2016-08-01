@@ -1,23 +1,24 @@
+
 // HEADER SLIDER
 // ------------------------------------
 
 var swiper = require( 'swiper' );
 
-swiper( '.header .swiper-container', {
-    nextButton: '.header .swiper-button-next',
-    prevButton: '.header .swiper-button-prev',
-    loop: true,
-    breakpoints: {
-        768: {
-            autoplay: 2000,
-            speed: 800,
-            grabCursor: true
-        },
-        500: {
-            effect: 'fade',
-            grabCursor: false
+window.addEventListener( 'load', function () {
+    swiper( '.header .swiper-container', {
+        nextButton: '.header .swiper-button-next',
+        prevButton: '.header .swiper-button-prev',
+        loop: true,
+        breakpoints: {
+            768: {
+                autoplay: 2000,
+                speed: 800,
+                grabCursor: true
+            },
+            500: {
+                effect: 'fade',
+                grabCursor: false
+            }
         }
-    }
-});
-
-module.exports = {};
+    });
+}, false );

@@ -1,29 +1,29 @@
 include ../block-hero/block-hero
 include ../block-post/block-post
 
-mixin page-blog()
+mixin page-blog( data )
     .page-blog
         .page-blog__header
             +block-hero( 'masonry blog', 'home', 'blog' )
         .page-blog__main
             .center
-                .grid
-                    .grid__sizer
-                    .grid__item
+                .blog-grid
+                    .blog-grid__sizer
+                    .blog-grid__item
                         +block-post( '%=static=%img/assets/block-post/post-image-01.jpg' )
-                    .grid__item
+                    .blog-grid__item
                         +block-post( '%=static=%img/assets/block-post/post-image-02.jpg' )
-                    .grid__item
+                    .blog-grid__item
                         +block-post( '%=static=%img/assets/block-post/post-image-03.jpg' )
-                    .grid__item
+                    .blog-grid__item
                         +block-post( '%=static=%img/assets/block-post/post-image-04.jpg' )
-                    .grid__item
+                    .blog-grid__item
                         +block-post( '%=static=%img/assets/block-post/post-image-05.jpg' )
-                    .grid__item
+                    .blog-grid__item
                         +block-post( '%=static=%img/assets/block-post/post-image-06.jpg' )
-                    .grid__item
+                    .blog-grid__item
                         +block-post( '%=static=%img/assets/block-post/post-image-07.jpg' )
-                    .grid__item
+                    .blog-grid__item
                         +block-post( '%=static=%img/assets/block-post/post-image-08.jpg' )
-                    .grid__item
+                    .blog-grid__item
                         +block-post( '%=static=%img/assets/block-post/post-image-09.jpg' )

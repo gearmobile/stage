@@ -1,43 +1,52 @@
 
-// PAGE-BLOG
-// ------------------------------------------------
-
-.page-blog
-    //
-
     // PAGE-BLOG HEADER
     // ------------------------------------------------
 
-    &__header .header-hero
+    .page-blog__header .header-hero
         background: url( '%=static=%assets/block-hero/block-hero-bg-01.jpg' ) 0 0 no-repeat
         background-size cover
 
     // PAGE-BLOG MAIN
     // ------------------------------------------------
 
-    &__main
+    .page-blog__main
         background-color $color-grey-pale
         padding 8rem 0
 
-    // PAGE-BLOG CENTER
-    // ------------------------------------------------
+        & .center
+            flex-direction row
+            align-items stretch
+            flex-wrap nowrap
 
-    & .center
-        //
+        // PAGE-BLOG GRID
+        // ------------------------------------------------
 
-    // PAGE-BLOG GRID
-    // ------------------------------------------------
-
-    & .grid
-        clearfix()
+        & .blog-grid
+            width: 100%
+            clearfix()
 
         // PAGE-BLOG GRID SIZER && ITEM
         // ------------------------------------------
 
-        &__sizer
-        &__item
-            width 31%
+        & .blog-grid__sizer
+        & .blog-grid__item
+            width calc( 100% / 3 )
 
-        &__item
+            @media screen and ( max-width $bp980 )
+                width calc( 100% / 2 )
+
+            @media screen and ( max-width $bp768 )
+                width 100%
+
+        & .blog-grid__item
             float left
-            margin calc( (100% - 31% * 3 ) / 6 )
+            background-color #fff
+            padding 1.5rem
+
+        // PAGE-BLOG BUTTON
+        // ------------------------------------------
+
+        & .post__footer
+            @media screen and ( max-width $bp400 )
+                display flex
+                justify-content center
