@@ -71,40 +71,40 @@
         @media screen and ( max-width: $bp768 )
             font-size: 1.8rem
 
-        & blockqoute
-            quotes: '\201c' '\201d'
-            padding: 0 3rem
-            position: relative
+    &__blockqoute
+        quotes: '\201c' '\201d'
+        padding: 0 3rem
+        position: relative
+
+        @media screen and ( max-width: $bp768 )
+            padding: 0 2rem
+
+        @media screen and ( max-width: $bp500 )
+            padding 0
+
+        &::before
+        &::after
+            font-size: 9rem
+            line-height: 1
+            position: absolute
+            top: 0
 
             @media screen and ( max-width: $bp768 )
-                padding: 0 2rem
+                font-size: 7rem
 
             @media screen and ( max-width: $bp500 )
-                padding 0
+                display none
 
-            &::before
-            &::after
-                font-size: 9rem
-                line-height: 1
-                position: absolute
-                top: 0
+        &::before
+            content: open-quote
+            left: -1rem
 
-                @media screen and ( max-width: $bp768 )
-                    font-size: 7rem
+            @media screen and ( max-width: $bp768 )
+                left: 0
 
-                @media screen and ( max-width: $bp500 )
-                    display none
-
-            &::before
-                content: open-quote
-                left: -1rem
-
-                @media screen and ( max-width: $bp768 )
-                    left: 0
-
-            &::after
-                content: close-quote
-                right: .5rem
+        &::after
+            content: close-quote
+            right: .5rem
 
 
     // TESTIMONIALS INFO
