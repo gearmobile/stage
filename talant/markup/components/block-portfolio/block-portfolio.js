@@ -5,6 +5,9 @@ var imagesload = require( 'imagesloaded' );
 var Isotope = require( 'isotope-layout' );
 
 window.addEventListener( 'load', function () {
+
+    // PORTFOLIO VARIABLES
+    // ------------------------------------
     var portfolio = document.querySelector( '.portfolio__grid' );
     var portfolioItem = '.portfolio__item';
     var portfolioSizer = '.portfolio__sizer';

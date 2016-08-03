@@ -32,8 +32,10 @@
 
     &__link
         img-adaptive()
-        transition opacity .2s
-        opacity .8
 
-        &:hover
-            opacity 1
+        & > img
+            transition opacity .2s
+            opacity .8
+
+            &:hover
+                opacity 1
