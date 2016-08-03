@@ -28,6 +28,9 @@
             line-height: 1.4
             color: $color-grey-58
 
+            @media screen and ( max-width: $bp500 )
+                text-align center
+
         @media screen and ( max-width: $bp980 )
             lost-column 1/1
             lost-column-gutter 0
@@ -43,6 +46,11 @@
         margin: 0 0 4rem
         padding: 0 0 0 5.4rem
         background: url( '%=static=%assets/footer/footer-logo.png' ) 0 50% no-repeat
+
+        @media screen and ( max-width $bp500 )
+            justify-content center
+            padding 5rem 0 0 0
+            background: url( '%=static=%assets/footer/footer-logo.png' ) 50% 0 no-repeat
 
     // FOOTER TITLE
     // ----------------------------------------
@@ -63,6 +71,9 @@
             font-size: 1.4rem
             color: $color-grey-58
             line-height: 2
+
+        @media screen and ( max-width: $bp500 )
+            text-align center
 
     // FOOTER SUBTITLE
     // ----------------------------------------
@@ -90,6 +101,9 @@
 
             &:hover
                 color: $color-grey-58
+
+        @media screen and ( max-width: $bp500 )
+            text-align center
 
     // FOOTER SOCIALS
     // ----------------------------------------
