@@ -4,9 +4,11 @@
 
 .meta
     display: flex
-    width: 15rem
     padding: 0 0 1rem 0
     border-bottom: .1rem solid $color-grey-2
+
+    @media screen and ( max-width $bp500 )
+        justify-content center
 
     &__primary
     &__secondary
