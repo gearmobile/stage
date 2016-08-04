@@ -23,16 +23,16 @@
     // ----------------------------
 
     & .center
-        flex-direction row
-        justify-content: space-between
+        lost-center 100% flex
+        justify-content space-between
 
     // TOPHEADER PRIMARY
     // -----------------------------
 
     &__primary
-        display: flex
-        justify-content: space-between
-        align-items: center
+        display flex
+        justify-content space-between
+        align-items center
         lost-column 9/12
         lost-column-gutter 0
 
@@ -42,21 +42,21 @@
     &__secondary
         lost-column 1/12
         lost-column-gutter $gutter
-        display: flex
-        align-items: center
+        display flex
+        align-items center
 
     // TOPHEADER LOGO
     // -----------------------------
 
     &__logo
-        lost-column: 2/9
-        lost-column-gutter: $gutter
+        lost-column 2/9
+        lost-column-gutter $gutter
 
         & a
             display: flex
             align-items: center
             padding: 0 0 0 5rem
-            min-height: 2.9rem
+            height: 2.9rem
             text-transform: uppercase
             font: 1.8rem/1.2 $montserrat-regular
             color: $color-grey-light
@@ -66,15 +66,16 @@
     // -----------------------------
 
     &__menu--primary
-        lost-column: 6/9
-        lost-column-gutter: $gutter
-        display: flex
-        justify-content: space-between
+        lost-column 6/9
+        lost-column-gutter $gutter
+        display flex
+        justify-content space-between
 
         & > a
-            text-transform: uppercase
-            font: 1.2rem/1.2 $montserrat-regular
-            color: $color-grey-dark
+            display inline-block
+            text-transform uppercase
+            font 1.2rem/1.2 $montserrat-regular
+            color $color-grey-dark
 
             &:hover
                 color darken( $color-grey-dark, 50% )
