@@ -4,10 +4,11 @@
 
 var GoogleMapsLoader = require( 'google-maps' );
 
+GoogleMapsLoader.LANGUAGE = 'en';
+GoogleMapsLoader.KEY = 'AIzaSyAQTQ3gx58ulhmp6zKOzTwAlzv2zhbari8';
+
 GoogleMapsLoader.load( function ( google ) {
 
-    GoogleMapsLoader.LANGUAGE = 'en';
-    GoogleMapsLoader.KEY = 'AIzaSyAjunIsdBzwn5n0IhHJctIg4PPCMlH7u24';
     var brampton = document.querySelector( '#map' );
     var bramptonCoords = new google.maps.LatLng( 51.5220535, 0.0419289 );
     var zoomValue = 15;
