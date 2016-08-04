@@ -19,7 +19,7 @@
         margin: 0 0 4rem
 
         & p
-            lost-center 100rem flex
+            lost-center 100rem
             text-align: center
             font-size: 1.4rem
             color: $color-grey
@@ -206,7 +206,8 @@
             background: url( '%=static=%assets/block-history/arrow_left--active.png' ) 50% 50% no-repeat
 
         @media screen and ( min-width: $bp980 )
-            flex: 0 1 44%
+            width 44%
+            flex: 0 1 auto
 
             &:first-child
                 margin-bottom: 0
@@ -228,7 +229,6 @@
             text-align center
 
         @media screen and ( max-width: $bp400 )
-            // text-align center
             padding 2rem
 
     // HISTORY META

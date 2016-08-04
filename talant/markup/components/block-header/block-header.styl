@@ -15,7 +15,7 @@
     // ---------------------------------------------
 
     & .swiper-slide
-        min-height: 69.8rem
+        height: 69.8rem
         display: flex
         flex-direction: column
         align-items: center
@@ -86,10 +86,10 @@
             bottom: -4.4rem
             background: url( '%=static=%assets/block-header/button-arrow.png' ) 50% 50% no-repeat
             background-size: cover
-            transition bottom .2s
+            transition transform .2s
 
             @media screen and ( max-width $bp768 )
                 display: none
 
         &:hover::after
-            bottom -5.2rem
+            transform translate( -50%, .7rem )
