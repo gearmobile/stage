@@ -2,14 +2,6 @@
     padding: 6rem 0
     background-color: $color-grey-pale
 
-    // ABOUT CENTER
-    // -------------------------------------------
-
-    & .center
-        flex-direction: column
-        align-items: center
-
-
     // ABOUT PRIMARY
     // -------------------------------------------
 
@@ -67,18 +59,16 @@
     // -------------------------------------------
 
     &__secondary
-        display: flex
-        justify-content center
-        flex-wrap wrap
-        width: 100%
+        lost-center 100% flex
         padding: 3rem 0 0 0
 
     // ABOUT ITEM
     // -------------------------------------------
 
     &__item
+        lost-column 1/4
+        lost-column-gutter 0
         display: flex
-        flex: 0 1 25%
         flex-direction: column
         align-items: center
         padding: .2rem 0
@@ -88,7 +78,8 @@
             border-right: .1rem solid $color-grey-smooth
 
         @media screen and ( max-width $bp768 )
-            flex: 0 1 50%
+            lost-column 1/2
+            lost-column-gutter 0
             padding: 3rem 0
 
             &:nth-child( 2 )
@@ -98,7 +89,8 @@
                 border-bottom .1rem solid $color-grey-smooth
 
         @media screen and ( max-width $bp500 )
-            flex: 0 1 100%
+            lost-column 1/1
+            lost-column-gutter 0
 
             &:nth-child( 2n+1 )
                 border-right none
