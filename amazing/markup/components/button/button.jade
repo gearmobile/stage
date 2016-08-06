@@ -1,2 +1,13 @@
-mixin button(data)
-    a.button(href='javascript:void(0);')= data
+mixin button( data )
+    a.button( href='javascript:void(0);' )= data
+        .button__inner
+            a( href='#{js}' )
+                ul
+                    li: a( href='#{js}' ) item link
+                    li: a( href='#{js}' ) item link
+                    li: a( href='#{js}' ) item link
+                    li: a( href='#{js}' ) item link
+                    li: a( href='#{js}' ) item link
+                    li: a( href='#{js}' ) item link
+                form( action="action.php" method='post' )
+                    input(type="text")
