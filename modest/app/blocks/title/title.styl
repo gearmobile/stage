@@ -3,12 +3,23 @@
 // --------------------------------------
 
 .title
-	font-size 2.25rem
-	text-transform uppercase
-	color #292f36
-	margin-bottom 6rem
-	border-left 1rem solid #e1e6ea
-	padding-left 1.4rem
+	display flex
+	width 100%
+	margin 0 0 6rem
 
-	&::after
-		content '.'
+	+below( $bp-500 )
+		justify-content center
+		margin 0 0 4rem
+
+	// TITLE SPAN
+	// --------------------------------------
+
+	& span
+		padding 0 0 0 1.4rem
+		border-left 1rem solid #e1e6ea
+		font-size 2.25rem
+		text-transform uppercase
+		color #292f36
+
+		&::after
+			content '.'

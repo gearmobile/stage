@@ -1,6 +1,6 @@
-- [x] - hero slider - remove pagination < 400px and add swipe
+- [x] - hero slider - remove pagination < 500px and add swipe
 - [ ] - correct overlay
-- [ ] - make text-aligh center headings
+- [x] - make text-aligh center headings < 500px
 - [ ] - icons - add interactivity
 - [ ] - gallery - add interactivity to link and icon
 - [ ] - test safari
