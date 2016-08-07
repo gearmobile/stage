@@ -20,7 +20,12 @@ $( function () {
 		effect: 'fade',
 		autoplay: 8500,
 		pagination: '.swiper-pagination',
-		paginationClickable: true
+		paginationClickable: true,
+		breakpoints: {
+			500: {
+				grabCursor: true
+			}
+		}
 	});
 
 

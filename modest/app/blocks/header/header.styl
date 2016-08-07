@@ -49,10 +49,13 @@
 	// -------------------------------------------
 
 	& .swiper-pagination-bullet
-		size(1.4rem)
+		size( 1.4rem )
 		opacity 1
 		background-color transparent
 		border .2rem solid $color-white
+
+		+below( $bp-500 )
+			display none
 
 	// HEADER SWIPER-PAGINATION-BULLET-ACTIVE
 	// -------------------------------------------
