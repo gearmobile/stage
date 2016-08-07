@@ -1,6 +1,7 @@
 
 // CONTACT-FORM
 // --------------------------------------------
+
 .contact-form
 	background-color $color-white
 	padding 3rem
@@ -9,7 +10,7 @@
 	left 0
 	width 100%
 
-	+below($bp-786)
+	+below( $bp-786 )
 		position static
 		padding 0
 
@@ -19,20 +20,21 @@
 	& input
 	& textarea
 		display block
-		border none
+		border-radius .4rem
+		border .1rem solid transparent
 		width 100%
 		background-color #eaeef1
 		font-size 1.4rem
 		color #8d8f92
 		padding 1.2rem
-		transition background-color .2s
+		transition background-color .2s, border-color .2s
 
 		&:hover
-			background-color darken( #eaeef1, 2% )
+			border-color $color-grey
 
 		&:focus
 		&:active
-			background-color darken(#eaeef1, 5%)
+			border-color $color-gray
 
 	& textarea
 		min-height 16rem
@@ -60,10 +62,14 @@
 		&:not(:last-child)
 			margin-bottom 3rem
 
-		+below($bp-500)
-			& > .button-submit
+		+below( $bp-500 )
+			& .button-submit
 				display block
 				margin auto
+
+		& .button-submit:hover
+			background-color $color-gray
+			border-color $color-gray
 
 	// CONTACT-FORM HALF
 	// ------------------------------------------
@@ -79,7 +85,7 @@
 			right 0
 			z-index 1
 
-		+below($bp-786)
+		+below( $bp-786 )
 			lost-column 1/1
 			lost-column-gutter 0
 

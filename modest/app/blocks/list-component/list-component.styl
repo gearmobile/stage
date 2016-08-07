@@ -1,70 +1,68 @@
-// LIST ITEM
-// ------------------------------------------
 
-.list-component__item
-	display flex
-	justify-content space-between
+// LIST-COMPONENT
+// --------------------------------------
+.list-component
+	//
 
-	&:not(:last-child)
-		margin-bottom 2rem
+	// LIST-COMPONENT ITEM
+	// ------------------------------------------
 
-	+below( $bp-500 )
-		flex-direction column
-		align-items center
-		text-align center
+	&__row
+		display flex
 
 		&:not(:last-child)
-			margin-bottom 4rem
+			margin 0 0 2rem
 
-// LIST CONTENT
-// -------------------------------------------
+		+below( $bp-500 )
+			flex-direction column
+			align-items center
+			text-align center
 
-.list-component__content p
-	color #8d8f92
-	font-size 1rem
-	line-height 1.6
+			&:not(:last-child)
+				margin 0 0 4rem
 
-// LIST IMAGE
-// -------------------------------------------
+	// LIST-COMPONENT PRIMARY
+	// -------------------------------------------
 
-.list-component__image
-	width 5rem
-	margin-right 1rem
-
-	& > a
-		display block
+	&__primary
 		display flex
 		justify-content center
 		align-items center
 		size( 5rem )
-		font-family $quattro-bold
-		font-size 1.4rem
-		color $color-white
+		flex 0 0 1 5rem
 		background-color $color-blue
 		transition background-color .2s
 
-		&:hover
-		&:active
-			background-color darken( $color-blue, 10% )
+		& span
+			font 1.4rem/1.2 $quattro-bold
+			color $color-white
 
-	+below( $bp-500 )
-		margin-right 0
-		margin-bottom 2rem
+		+below( $bp-500 )
+			margin 0 0 2rem 0
 
+	// LIST-COMPONENT SECONDARY
+	// -------------------------------------------
 
-// LIST TITLE
-// -------------------------------------------
+	&__secondary
+		flex 1 24 auto
+		padding 0 0 0 1rem
 
-.list-component__title
-	margin-bottom 1rem
+		& p
+			color #8d8f92
+			font-size 1rem
+			line-height 1.6
 
-	& > a
-		text-transform uppercase
-		color #292f36
-		font-family $quattro-bold
-		font-size 1.2rem
-		transition color .2s
+	// LIST-COMPONENT TITLE
+	// -------------------------------------------
 
-		&:hover
-		&:active
-			color lighten( #292f36, 20% )
+	&__title
+		margin 0 0 1rem
+
+		& span
+			font 1.2rem/1.2 $quattro-bold
+			text-transform uppercase
+			color #292f36
+			transition color .2s
+
+			&:hover
+				color lighten( #292f36, 20% )

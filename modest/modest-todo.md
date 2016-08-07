@@ -4,7 +4,7 @@
 - [x] - icons - add interactivity
 - [x] - gallery - add interactivity to icon
 - [ ] - test safari
-- [ ] - test ie9+
+- [ ] - test IE10+
 - [x] - add comments to style files
 - [x] - remove to-top-button < 500px
 - [ ] - correct link javascript:void()
