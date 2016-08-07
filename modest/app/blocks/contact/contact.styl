@@ -1,5 +1,11 @@
+
+// CONTACT
+// -------------------------------------------
 .contact
 	padding 6rem 0 10rem
+
+	// CONTACT CENTER
+	// ------------------------------------------------
 
 	&__center
 		lost-center $width
@@ -21,28 +27,33 @@
 		min-height 35rem
 		background-color #ddd
 
-
 	// CONTACT FOOTER
 	// -----------------------------------------
 
 	&__footer
 		padding-top 6rem
 
+	// CONTACT FOOTER HALF
+	// ------------------------------------------
+
 	&__half
 		lost-column 6/12
 		lost-column-gutter 3rem
 		position relative
 
-		+below($bp-786)
+		+below( $bp-786 )
 			lost-column 1/1
 			lost-column-gutter 0
 
 			&:first-child
 				margin-bottom 6rem
 
-		+below($bp-500)
+		+below( $bp-500 )
 			&:first-child
 				text-align center
+
+	// CONTACT FOOTER TITLE
+	// ------------------------------------------
 
 	&__title
 		text-transform uppercase

@@ -1,6 +1,15 @@
+// TOPHEADER MENU
+// ----------------------------------------------
+
 .topheader__menu
 	display flex
 	justify-content space-between
+
+	+below( $bp-786 )
+		display none
+
+	// TOPHEADER MENU LINK
+	// ----------------------------------------------
 
 	& > a
 		display block
@@ -26,6 +35,3 @@
 		&.is-active
 			color $color-blue
 			border-color $color-blue
-
-	+below($bp-786)
-		display none

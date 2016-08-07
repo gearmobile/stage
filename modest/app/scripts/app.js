@@ -37,7 +37,7 @@ $( function () {
 		});
 	}
 
-	$(window).on('scroll', function () {
+	$(window).on( 'scroll', function () {
 		if ( $(this).scrollTop() > $(this).height() / 2 ) {
 			$buttonToTop.removeClass('fadeOutRight').addClass('fadeInRight');
 		} else {
@@ -198,7 +198,7 @@ $( function () {
 		}
 	});
 
-	$button.on('click', function () {
+	$button.on( 'click', function () {
 		$(this).toggleText( $buttonMore, $buttonLess );
 		flag = ( flag === 'short' ) ? 'full' : 'short';
 		if ( flag === 'short' ) {
@@ -216,9 +216,6 @@ $( function () {
 		}
 	});
 
-
-
-
 	// MAGNIFIC POPUP
 	// -------------------------------------------------
 	$('.gallery').magnificPopup({
@@ -228,13 +225,6 @@ $( function () {
 		mainClass: 'mfp-with-fade',
 		gallery: {enabled: true}
 	});
-
-
-	// SHOW MORE BUTTON
-	// --------------------------------------------------
-
-
-
 
 	// SVG SPRITE
 	// ------------------------------------------------

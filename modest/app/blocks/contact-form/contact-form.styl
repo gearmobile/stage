@@ -1,3 +1,6 @@
+
+// CONTACT-FORM
+// --------------------------------------------
 .contact-form
 	background-color $color-white
 	padding 3rem
@@ -9,6 +12,9 @@
 	+below($bp-786)
 		position static
 		padding 0
+
+	// CONTACT-FORM INPUT && TEXTAREA
+	// ---------------------------------------
 
 	& input
 	& textarea
@@ -22,7 +28,7 @@
 		transition background-color .2s
 
 		&:hover
-			background-color darken(#eaeef1, 2%)
+			background-color darken( #eaeef1, 2% )
 
 		&:focus
 		&:active
@@ -30,6 +36,9 @@
 
 	& textarea
 		min-height 16rem
+
+	// CONTACT-FORM LABEL
+	// --------------------------------------
 
 	& label
 		display inline-block
@@ -40,6 +49,9 @@
 		font-family $quattro-bold
 		font-size 1.2rem
 		margin-bottom 1rem
+
+	// CONTACT-FORM ROW
+	// ----------------------------------------
 
 	&__row
 		border none
@@ -52,6 +64,9 @@
 			& > .button-submit
 				display block
 				margin auto
+
+	// CONTACT-FORM HALF
+	// ------------------------------------------
 
 	&__half
 		lost-column 6/12

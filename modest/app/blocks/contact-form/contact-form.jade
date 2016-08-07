@@ -2,16 +2,16 @@ include ../title/title
 include ../button-submit/button-submit
 
 mixin contact-form()
-	form.contact-form(action="action.php" method="post")
+	form.contact-form( action='action.php' method='post' )
 		fieldset.contact-form__row
 			.contact-form__half
-				label(for="name") your name
-				input(type="text" name="name" id="name" required)
+				label( for='name' ) your name
+				input( type='text' name='name' id='name' required )
 			.contact-form__half
-				label(for="email") your email
-				input(type="email" name="email" id="email" required)
+				label( for='email' ) your email
+				input( type='email' name='email' id='email' required )
 		fieldset.contact-form__row
-			label(for="message") your message
-			textarea(id="message" name="message" required)
+			label( for='message' ) your message
+			textarea( id='message' name='message' required )
 		fieldset.contact-form__row
-			+button-submit('send message')
+			+button-submit( 'send message' )

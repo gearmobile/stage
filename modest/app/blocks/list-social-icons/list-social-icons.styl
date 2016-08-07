@@ -1,16 +1,23 @@
+
+// LIST-SOCIAL-ICONS
+// ----------------------------------
+
 .list-social-icons
 	display flex
 	margin-top 5rem
 
-	+below($bp-786)
+	+below( $bp-786 )
 		justify-content center
 
-	+below($bp-500)
+	+below( $bp-500 )
 		justify-content space-around
+
+	// LIST-SOCIAL-ICONS LINK
+	// ----------------------------------
 
 	& > a
 		display block
-		size(6rem)
+		size( 6rem )
 		display flex
 		justify-content center
 		align-items center
@@ -28,7 +35,7 @@
 		// ------------------------------------
 
 		& > .icon
-			size(2rem)
+			size( 2rem )
 
-			+below($bp-500)
-				size(2.4rem)
+			+below( $bp-500 )
+				size( 2.4rem )

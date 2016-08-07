@@ -1,3 +1,6 @@
+
+// HEADER-CONTENT
+// ---------------------------------------
 .header-content
 	lost-center $width
 	padding 0 1rem
@@ -6,6 +9,13 @@
 	justify-content center
 	min-height 66rem
 
+	+below( $bp-786 )
+		align-items center
+		text-align center
+
+	// HEADER-CONTENT TITLE
+	// ------------------------------------
+
 	&__title
 		text-transform uppercase
 		color $color-white
@@ -13,14 +23,20 @@
 		line-height 1.2
 		margin-bottom 3rem
 
-		+below($bp-500)
+		+below( $bp-500 )
 			font-size 1.8rem
+
+	// HEADER-CONTENT SUBTITLE
+	// -------------------------------------
 
 	&__subtitle
 		color #ccd1d7
 		font-size 1.4rem
 		line-height 1.6
 		margin-bottom 4rem
+
+	// HEADER-CONTENT BUTTON
+	// -------------------------------------
 
 	&__controls > .button
 		display inline-block
@@ -37,11 +53,6 @@
 			margin-right 1.6rem
 
 		&:hover
-		&:active
 		&:focus
 			background-color $color-blue
 			border-color $color-blue
-
-	+below($bp-786)
-		align-items center
-		text-align center

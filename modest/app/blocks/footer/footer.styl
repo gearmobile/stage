@@ -1,3 +1,6 @@
+
+// FOOTER
+// --------------------------------------
 .footer
 	padding 5rem 0
 	background-color #3a454d
@@ -8,14 +11,20 @@
 		&:hover
 			text-decoration underline
 
+	// FOOTER CENTER
+	// ----------------------------------
+
 	&__center
 		lost-center $width flex
 		padding 0 1rem
 		justify-content space-between
 
-		+below($bp-500)
+		+below( $bp-500 )
 			flex-direction column
 			align-items center
+
+	// FOOTER COPYRIGHT
+	// ---------------------------------------
 
 	&__copyright
 		font-size 1.3rem
@@ -25,19 +34,25 @@
 		& > span
 			white-space nowrap
 
-		+below($bp-500)
+		+below( $bp-500 )
 			margin-bottom 3rem
 			text-align center
+
+	// FOOTER SOCIAL
+	// ----------------------------------------
 
 	&__social
 		display flex
 		justify-content center
 		align-items center
 
+		// FOOTER SOCIAL ICON
+		// ----------------------------------------
+
 		& .icon
 			display block
-			size(1.75rem)
+			size( 1.75rem )
 			margin 0 1rem
 
-			+below($bp-500)
-				size(2rem)
+			+below( $bp-500 )
+				size( 2rem )

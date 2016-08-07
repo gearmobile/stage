@@ -1,5 +1,12 @@
+
+// SERVICE-GALLERY
+// ------------------------------------
+
 .service-gallery
 	lost-center 100%
+
+	// SERVICE-GALLERY ITEM
+	// ------------------------------------
 
 	&__item
 		lost-column 3/12
@@ -9,28 +16,31 @@
 		text-align center
 		font-size 1rem
 
-		&:nth-child(-n+4)
+		&:nth-child( -n+4 )
 			margin-bottom 9rem
 
 		& > .icon
-			size(4rem)
+			size( 4rem )
 			margin-bottom 3.5rem
 
 		& > p
 			color #8d8f92
 			line-height 1.8
 
-		+below($bp-786)
+		+below( $bp-786 )
 			lost-column 1/2 2
 
-			&:nth-child(-n+6)
+			&:nth-child( -n+6 )
 				margin-bottom 9rem
 
-		+below($bp-500)
+		+below( $bp-500 )
 			lost-column 1/1
 
 			&:not(:last-child)
 				margin-bottom 8rem
+
+	// SERVICE-GALLERY TITLE
+	// ------------------------------------
 
 	&__title
 		font-size 1.4rem

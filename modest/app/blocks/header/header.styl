@@ -1,44 +1,61 @@
+
+// HEADER
+// -------------------------------------------
 .header
 	lost-center 100%
 
-	& > .swiper-container
-		width 100%
-		height 100%
+	// HEADER SWIPER-CONTAINER
+	// -------------------------------------------
 
-		& .swiper-slide
-			min-height 66rem
-			background-size cover
-			background-position center center
-			background-repeat no-repeat
+	& .swiper-container
+		size( 100% )
 
-			&:nth-child(1)
-				retinaBackground('header-bg-1')
+	// HEADER SWIPER-SLIDE
+	// -------------------------------------------
 
-			&:nth-child(2)
-				retinaBackground('header-bg-2')
+	& .swiper-slide
+		min-height 66rem
+		background-size cover
+		background-position center center
+		background-repeat no-repeat
 
-			&:nth-child(3)
-				retinaBackground('header-bg-3')
+		&:nth-child(1)
+			retinaBackground( 'header-bg-1' )
 
-		& > .swiper-pagination
-			lost-center $width
-			position absolute
-			left 50%
-			transform translateX(-50%)
-			padding 0 1rem
-			display flex
-			justify-content flex-end
-			bottom 3rem
-			z-index 8
+		&:nth-child(2)
+			retinaBackground( 'header-bg-2' )
 
-			& > .swiper-pagination-bullet
-				size(1.4rem)
-				opacity 1
-				background-color transparent
-				border .2rem solid $color-white
+		&:nth-child(3)
+			retinaBackground( 'header-bg-3' )
 
-			& > .swiper-pagination-bullet-active
-				background-color $color-white
+	// HEADER SWIPER-PAGINATION
+	// -------------------------------------------
 
-			+below($bp-786)
-				justify-content center
+	& .swiper-pagination
+		lost-center $width
+		position absolute
+		left 50%
+		transform translateX( -50% )
+		padding 0 1rem
+		display flex
+		justify-content flex-end
+		bottom 3rem
+		z-index 8
+
+		+below( $bp-786 )
+			justify-content center
+
+	// HEADER SWIPER-PAGINATION-BULLET
+	// -------------------------------------------
+
+	& .swiper-pagination-bullet
+		size(1.4rem)
+		opacity 1
+		background-color transparent
+		border .2rem solid $color-white
+
+	// HEADER SWIPER-PAGINATION-BULLET-ACTIVE
+	// -------------------------------------------
+
+	& .swiper-pagination-bullet-active
+		background-color $color-white

@@ -1,7 +1,14 @@
+
+// TOPHEADER ICON
+// ----------------------------------------
+
 .topheader__icon
-	size(3rem)
+	size( 3rem )
 	position relative
 	display none
+
+	// TOPHEADER ICON SPAN
+	// ----------------------------------------
 
 	& > span
 		position relative
@@ -34,19 +41,22 @@
 		&::after
 			margin-top 1rem
 
+	// TOPHEADER IS-ACTIVE
+	// ----------------------------------------
+
 	&.is-active > span
-		background-color rgba($color-black, .0)
+		background-color rgba( $color-black, .0 )
 		transition-delay .2s
 
 		&:before
 			margin-top 0
-			transform rotate(45deg)
+			transform rotate( 45deg )
 			transition-delay 0s, .2s
 
 		&:after
 			margin-top 0
-			transform rotate(-45deg)
+			transform rotate( -45deg )
 			transition-delay 0s, .2s
 
-	+below($bp-786)
+	+below( $bp-786 )
 		display block

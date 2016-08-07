@@ -1,5 +1,11 @@
+
+// FEATURES-GALLERY
+// --------------------------------------
 .features-gallery
 	lost-center 100%
+
+	// FEATURES-GALLERY ITEM
+	// ----------------------------------------
 
 	&__item
 		lost-column 4/12
@@ -18,13 +24,15 @@
 			&:not(:last-child)
 				margin-bottom 3rem
 
+	// FEATURES-GALLERY IMAGE
+	// -----------------------------------------------
+
 	&__image
 		margin-bottom 5rem
+		img-adaptive()
 
-		& > img
-			display block
-			width 100%
-			height auto
+	// FEATURES-GALLERY TITLE
+	// ---------------------------------------------
 
 	&__title
 		text-transform uppercase

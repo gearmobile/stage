@@ -1,3 +1,7 @@
+
+// TOPHEADER MENU MOBILE
+// ----------------------------------------------
+
 .topheader__menu--mobile
 	position fixed
 	left 0
@@ -6,6 +10,9 @@
 	visibility hidden
 	transition opacity .4s, visibility .4s
 	z-index 1
+
+	// TOPHEADER MENU LINK
+	// ----------------------------------------
 
 	& > a
 		display block
@@ -21,8 +28,11 @@
 		transition background-color .2s, color .2s
 
 		&:hover
-			background-color darken($color-grey, 60%)
+			background-color darken( $color-grey, 60% )
 			color $color-blue
+
+	// TOPHEADER MENU IS-VISIBLE
+	// --------------------------------------------
 
 	&.is-visible
 		opacity 1

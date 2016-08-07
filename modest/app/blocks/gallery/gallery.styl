@@ -5,14 +5,12 @@
 .gallery
 	height 100%
 
-
 	// GALLERY HEADER
 	// ---------------------------------
 
 	&__header
 		lost-utility clearfix
 		margin-bottom 6rem
-
 
 	// GALLERY ITEM
 	// ---------------------------------
@@ -31,50 +29,53 @@
 			opacity 1
 
 		&:nth-child(1)
-			background-image url(../images/gallery/small/gallery-image-small-01.jpg)
+			background-image url( ../images/gallery/small/gallery-image-small-01.jpg )
 
 		&:nth-child(2)
-			background-image url(../images/gallery/small/gallery-image-small-02.jpg)
+			background-image url( ../images/gallery/small/gallery-image-small-02.jpg )
 
 		&:nth-child(3)
-			background-image url(../images/gallery/small/gallery-image-small-03.jpg)
+			background-image url( ../images/gallery/small/gallery-image-small-03.jpg )
 
 		&:nth-child(4)
-			background-image url(../images/gallery/small/gallery-image-small-04.jpg)
+			background-image url( ../images/gallery/small/gallery-image-small-04.jpg )
 
 		&:nth-child(5)
-			background-image url(../images/gallery/small/gallery-image-small-05.jpg)
+			background-image url( ../images/gallery/small/gallery-image-small-05.jpg )
 
 		&:nth-child(6)
-			background-image url(../images/gallery/small/gallery-image-small-06.jpg)
+			background-image url( ../images/gallery/small/gallery-image-small-06.jpg )
 
 		&:nth-child(7)
-			background-image url(../images/gallery/small/gallery-image-small-07.jpg)
+			background-image url( ../images/gallery/small/gallery-image-small-07.jpg )
 
 		&:nth-child(8)
-			background-image url(../images/gallery/small/gallery-image-small-08.jpg)
+			background-image url( ../images/gallery/small/gallery-image-small-08.jpg )
 
 		&:nth-child(9)
-			background-image url(../images/gallery/small/gallery-image-small-09.jpg)
+			background-image url( ../images/gallery/small/gallery-image-small-09.jpg )
 
 		&:nth-child(10)
-			background-image url(../images/gallery/small/gallery-image-small-10.jpg)
+			background-image url( ../images/gallery/small/gallery-image-small-10.jpg )
 
 		&:nth-child(11)
-			background-image url(../images/gallery/small/gallery-image-small-11.jpg)
+			background-image url( ../images/gallery/small/gallery-image-small-11.jpg )
 
 		&:nth-child(12)
-			background-image url(../images/gallery/small/gallery-image-small-12.jpg)
+			background-image url( ../images/gallery/small/gallery-image-small-12.jpg )
 
-		+below($bp-786)
+		+below( $bp-786 )
 			lost-column 1/2 2
 			lost-column-gutter 2rem
 			padding-bottom 32%
 
-		+below($bp-500)
+		+below( $bp-500 )
 			lost-column 1/1
 			lost-column-gutter 0
 			padding-bottom 62%
+
+	// GALLERY MORE
+	// ---------------------------------
 
 	&__more
 		display none
@@ -89,22 +90,21 @@
 	&__footer
 		text-align center
 
-
 // GALLERY OVERLAY
 // ---------------------------------
 
 .gallery-overlay
-	display block
+	// display block
 	position absolute
 	display flex
+	size( 100% )
 	flex-direction column
 	top 0
 	left 0
-	width 100%
-	height 100%
+	// width 100%
+	// height 100%
 	opacity 0
 	transition opacity .3s
-
 
 	// GALLERY OVERLAY HEADER
 	// ---------------------------------
@@ -114,14 +114,13 @@
 		justify-content center
 		align-items center
 		height 80%
-		background-color rgba(41, 47, 54, .5)
+		background-color rgba( 41, 47, 54, .5 )
 
 		&::before
 			content '+'
 			color $color-white
 			font-size 4rem
 			font-weight 700
-
 
 	// GALLERY OVERLAY FOOTER
 	// ---------------------------------
@@ -144,7 +143,7 @@
 
 .mfp-with-fade {
 
-	// before-open state
+	// BEFORE-OPEN STATE
 	.mfp-content,
 	.mfp-arrow,
 	&.mfp-bg {
@@ -156,7 +155,7 @@
 		transition: opacity 0.3s ease-out;
 	}
 
-	// open state
+	// OPEN STATE
 	&.mfp-ready {
 		.mfp-content,
 		.mfp-arrow {
@@ -167,7 +166,7 @@
 		}
 	}
 
-	// closed state
+	// CLOSED STATE
 	&.mfp-removing {
 		.mfp-content,
 		.mfp-arrow,
@@ -175,6 +174,5 @@
 			opacity: 0;
 		}
 	}
-
 
 }
