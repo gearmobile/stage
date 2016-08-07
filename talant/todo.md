@@ -9,3 +9,4 @@
 - [x] блок latest-posts - добавить интерактивность
 - [x] тест и фикс бага в Opera
 - [x] тест в IE
+- [ ] add background image to map
