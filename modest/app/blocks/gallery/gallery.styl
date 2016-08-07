@@ -9,7 +9,7 @@
 	// ---------------------------------
 
 	&__header
-		lost-utility clearfix
+		clearfix()
 		margin-bottom 6rem
 
 	// GALLERY ITEM
@@ -118,6 +118,10 @@
 			color $color-white
 			font-size 4rem
 			font-weight 700
+			transition color .2s
+
+	&__header:hover::before
+		color $color-blue
 
 	// GALLERY OVERLAY FOOTER
 	// ---------------------------------

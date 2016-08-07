@@ -54,11 +54,9 @@ sprite($sprite)
 
 // Clear the float on any element.
 clearfix()
-	&::before
 	&::after
 		content ''
 		display table
-	&::after
 		clear both
 
 // Fix no working `-webkit-text-size-adjust: 100%;` in Android.

@@ -2,11 +2,12 @@
 - [ ] - correct overlay
 - [x] - make text-aligh center headings < 500px
 - [x] - icons - add interactivity
-- [-] - gallery - add interactivity to link and icon
+- [x] - gallery - add interactivity to icon
 - [ ] - test safari
 - [ ] - test ie9+
 - [x] - add comments to style files
 - [x] - remove to-top-button < 500px
 - [ ] - correct link javascript:void()
+- [ ] - check validity
 
 - [x] - add reply to Pawel Grzybek about lost grid
