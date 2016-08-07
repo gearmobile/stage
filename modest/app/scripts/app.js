@@ -69,6 +69,18 @@ $( function () {
 		$(this).removeClass('button-to-top--active');
 	});
 
+	$(window).on( 'load', function () {
+		if ( $(window).width() < 500 ) {
+			$buttonToTop.css('display', 'none');
+		}
+	});
+
+	$(window).on( 'resize', function () {
+		if ( $(window).width() < 500 ) {
+			$buttonToTop.css('display', 'none');
+		}
+	});
+
 
 	// CONTACT HALF BLOCKS EQUAL HEIGHT
 	// -------------------------------------

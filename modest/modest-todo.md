@@ -1,11 +1,12 @@
 - [x] - hero slider - remove pagination < 500px and add swipe
 - [ ] - correct overlay
 - [x] - make text-aligh center headings < 500px
-- [ ] - icons - add interactivity
-- [ ] - gallery - add interactivity to link and icon
+- [x] - icons - add interactivity
+- [-] - gallery - add interactivity to link and icon
 - [ ] - test safari
 - [ ] - test ie9+
 - [x] - add comments to style files
-- [ ] - remove to-top-button < 500px
+- [x] - remove to-top-button < 500px
+- [ ] - correct link javascript:void()
 
 - [x] - add reply to Pawel Grzybek about lost grid

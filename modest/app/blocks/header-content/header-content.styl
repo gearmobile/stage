@@ -38,21 +38,28 @@
 	// HEADER-CONTENT BUTTON
 	// -------------------------------------
 
-	&__controls > .button
-		display inline-block
-		vertical-align top
-		padding 1.6rem 3rem
-		border-radius .3rem
-		color $color-white
-		border 1px solid $color-white
-		font-size 1.2rem
-		text-transform uppercase
-		font-weight 700
+	&__controls
+		display flex
+		justify-content center
 
-		&:not(:last-child)
-			margin-right 1.6rem
+		+below( $bp-500 )
+			flex-direction column
+			align-items center
 
-		&:hover
-		&:focus
-			background-color $color-blue
-			border-color $color-blue
+		& .button
+			padding 1.6rem 3rem
+			border-radius .3rem
+			color $color-white
+			border .1rem solid $color-white
+			font-size 1.2rem
+			text-transform uppercase
+			font-weight 700
+			margin 0 .8rem
+
+			&:hover
+			&:focus
+				background-color $color-blue
+				border-color $color-blue
+
+			+below( $bp-500 )
+				margin .8rem 0

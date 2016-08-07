@@ -28,14 +28,17 @@
 			margin-right .1rem
 
 		&:hover
-		&:active
 			background-color #d0d5d9
+
+		&:hover .icon
+			fill: $color-blue
 
 		// SVG ICON SIZE
 		// ------------------------------------
 
 		& > .icon
 			size( 2rem )
+			fill: $color-white
 
 			+below( $bp-500 )
 				size( 2.4rem )

@@ -53,6 +53,10 @@
 		opacity 1
 		background-color transparent
 		border .2rem solid $color-white
+		transition border-color .2s, background-color .2s
+
+		&:hover
+			border-color $color-blue
 
 		+below( $bp-500 )
 			display none
