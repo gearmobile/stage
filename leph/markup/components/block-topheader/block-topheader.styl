@@ -3,15 +3,28 @@
 .topheader
     //
 
+    // TOPHEADER CENTER
+    // --------------------------------------
+
     & .center
         display flex
         flex-direction row
         justify-content space-between
         align-items center
 
+        // TOPHEADER CENTER LINKS
+        // --------------------------------------
+
         & a
             text-transform uppercase
             color $color-white
+
+            &:hover
+            &:active
+                color $color-orange
+
+    // TOPHEADER PRIMARY
+    // --------------------------------------
 
     &__primary
         width _d( 18.4rem )
@@ -24,23 +37,45 @@
             width inherit
             height inherit
 
+    // TOPHEADER SECONDARY
+    // --------------------------------------
+
     &__secondary
         //
 
         & nav
-            //
+            display flex
+            justify-content center
 
         & a
+            margin 0 1rem
             font 700 _d( 1.3rem )/1.2 $raleway
+
+    // TOPHEADER TERTIARY
+    // --------------------------------------
 
     &__tertiary
         width _d( 28rem )
 
         & nav
             flex-center()
+            height _d( 3.2rem )
 
-            & a:first-child
-                font 700 _d( 1.6rem )/1.2 $ptsans
+            & a
+                margin 0 1rem
 
-            & a:last-child
-                font 700 _d( 1.3rem )/1.2 $raleway
+                &:first-child
+                    font 700 _d( 1.6rem )/1.2 $ptsans
+
+                &:last-child
+                    flex-center()
+                    height _d( 3.2rem )
+                    font 700 _d( 1.3rem )/1.2 $raleway
+                    background: url( '%=static=%assets/block-topheader/icon-login.png' ) 100% 0 no-repeat
+                    background-size _d( 3.2rem ) _d( 3.2rem )
+                    padding-right _d(4.2rem)
+
+                    &:hover
+                    &:active
+                        background: url( '%=static=%assets/block-topheader/icon-login--active.png' ) 100% 0 no-repeat
+                        background-size _d( 3.2rem ) _d( 3.2rem )
