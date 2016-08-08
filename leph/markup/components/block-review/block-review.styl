@@ -1,0 +1,74 @@
+// REVIEW
+// -------------------------------------
+.review
+    background-color $color-white
+    padding _d(7rem) 0 _d(14rem)
+
+    & .center
+        flex-direction column
+        align-items center
+
+    // REVIEW TITLE
+    // -----------------------------------
+
+    &__header
+        margin 0 0 _d(7rem)
+
+    &__title
+        font 700 _d(4rem)/1.2 $raleway
+        color $color-black--light
+
+    &__main
+        width 100%
+
+    &__list
+        display flex
+        position relative
+
+    &__item
+        display flex
+        flex 0 1 40%
+
+        &:last-of-type
+            margin 0 0 0 _d(8rem)
+
+    &__image
+        width _d(13rem)
+        height _d(13rem)
+        img-adaptive()
+        overflow hidden
+        border-radius 50%
+
+    &__content
+        padding _d(.6rem) 0 0 _d(1.8rem)
+
+        & p
+            color $color-black--light
+            font 400 _d(1.6rem) $ptsans
+
+    &__meta
+        margin 0 0 _d(2rem)
+
+    &__caption
+        color $color-black--light
+        text-transform uppercase
+        font 900 _d(1.5rem)/1.2 $raleway
+        margin 0 0 _d(1rem)
+
+    &__info
+        text-transform uppercase
+        font 400 _d(1rem) $ptsans
+
+    &__button
+        position absolute
+        top 0
+        right 0
+        width _d(3.8rem)
+        height _d(3rem)
+        background url( '%=static=%assets/block-review/review-button.png' ) 50% 50% no-repeat
+        background-size _d(3.8rem) _d(3rem)
+
+        &:hover
+        &:active
+            background url( '%=static=%assets/block-review/review-button--active.png' ) 50% 50% no-repeat
+            background-size _d(3.8rem) _d(3rem)

@@ -1,0 +1,35 @@
+mixin block-review(data)
+    section.review
+        .center
+            .review__header
+                h2.review__title
+                    | Отзывы наших клиентов
+            .review__main
+                ul.review__list
+                    li.review__item
+                        .review__heading
+                            .review__image
+                                img( src='%=static=%img/assets/block-review/review-image-01.jpg' alt='Review Image' )
+                        .review__content
+                            .review__meta
+                                h4.review__caption
+                                    | Сергей Жуков
+                                .review__info
+                                    | солист группы «Руки Вверх!»
+                            p
+                                | Наконец-то, я освободил голову от бытовых забот и могу уделять больше времени творчеству и семье.
+                    li.review__item
+                        .review__heading
+                            .review__image
+                                img( src='%=static=%img/assets/block-review/review-image-02.jpg' alt='Review Image' )
+                        .review__content
+                            .review__meta
+                                h4.review__caption
+                                    | Алена Маринина
+                                .review__info
+                                    | Главный бухгалтер
+                            p
+                                | Спасибо помощникам! Теперь у меня есть время спокойно сходить в салон красоты.
+                    button.review__button( type='button' )
+                    
+                    
