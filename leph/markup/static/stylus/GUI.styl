@@ -1,7 +1,58 @@
-// BUTTON
+// BUTTON PRIMARY
 // ---------------------------------------------
-.button
-    padding 1.8rem 6rem 2rem
-    border 0.1rem solid $color-orange
+.btn-primary
+    padding _d(1.8rem) _d(6rem) _d(2rem)
+    border-width .1rem
+    border-style solid
     border-radius 2.5rem
-    font 600 1.7rem/1.2 $raleway
+    font 600 _d(1.6rem)/1.2 $raleway
+
+    transition background-color .2s, color .2s
+
+    // BUTTON PRIMO
+    // -----------------------------------
+    &--primo
+        border-color $color-orange
+        color $color-orange
+
+        &:hover
+            background-color $color-orange
+            color $color-white
+
+        &:focus
+        &:active
+            background-color $color-brown
+            border-color $color-brown
+
+    // BUTTON SECONDO
+    // ------------------------------------
+    &--secondo
+        border-color $color-yellow
+        color $color-yellow
+
+        &:hover
+            background-color $color-yellow
+            color $color-white
+
+        &:focus
+        &:active
+            background-color $color-orange
+            border-color $color-orange
+
+    // BUTTON TETRO
+    // ------------------------------------
+    &--tetro
+        border-color $color-orange
+        background-color $color-orange
+        color $color-white
+
+        &:hover
+            background-color $color-brown
+
+        &:focus
+        &:active
+            background-color $color-brown--dark
+
+    // BUTTON INACTIVE
+    // -----------------------------------
+    //

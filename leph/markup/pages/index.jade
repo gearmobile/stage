@@ -2,6 +2,7 @@ doctype html
 html(class="no-js", lang="ru")
 
     include ../components/head/head
+    include ../components/block-hero/block-hero
     include ../components/footer/footer
 
     head
@@ -12,6 +13,7 @@ html(class="no-js", lang="ru")
         section.page__wrapper
 
             //- Include your components here
+            +block-hero()
 
             .page__buffer
 

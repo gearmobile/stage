@@ -1,2 +1,15 @@
+include ../block-topheader/block-topheader
+include ../block-info/block-info
+
 mixin block-hero(data)
-    .block-hero
+    header.hero
+        .center
+            +block-topheader()
+            .hero__content
+                h1.hero__title
+                    | освободите свое время!
+                p.hero__subtitle
+                    | Передайте бытовые заботы по стирке, глажке белья или его химчистке нашим помощниками, а сами займитесь любимым делом
+                button.btn-primary.btn-primary--secondo
+                    | Сколько стоит?
+            +block-info()

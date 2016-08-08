@@ -1,1 +1,38 @@
+// HERO
+// ---------------------------------
+.hero
+    height _d(90rem)
+    background-color #342727
+    padding 5rem 0 0 0
 
+    // HERO CENTER
+    // -----------------------------------
+    & .center
+        height 100%
+        display flex
+        flex-direction column
+        justify-content space-between
+
+    // HERO CONTENT
+    // -------------------------------
+    &__content
+        color $color-white
+
+    // HERO TITLE
+    // -------------------------------
+    &__title
+        text-transform uppercase
+        font 900 _d(6rem)/1.2 $raleway
+        margin 0 0 _d(6rem)
+        max-width _d(64rem)
+
+    // HERO SUBTITLE
+    // -------------------------------
+    &__subtitle
+        font 400 _d(1.8rem)/1.6 $ptsans
+        max-width _d(48rem)
+
+    // HERO BUTTON
+    // -------------------------------
+    & .btn-primary
+        margin _d(8rem) 0 0
