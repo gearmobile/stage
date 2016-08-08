@@ -1,0 +1,66 @@
+// COMMON STYLES OF THE PROJECT
+// ----------------------------------------
+
+*, *::before, *::after
+    box-sizing: border-box
+
+html, body
+    height 100%
+    width: 100%
+
+html
+    font-size: 62.5%
+
+ul, ol
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+a
+    text-decoration: none
+    transition: color .2s
+    will-change: transition
+
+    &:focus
+        outline: none
+
+button
+    cursor: pointer
+    padding: 0
+    border: none
+    background-color: transparent
+
+img
+    vertical-align: top
+
+svg
+    transition: all .2s
+
+    & path
+        fill: inherit
+
+input, textarea
+    resize: none
+    user-select: text
+
+h1, h2, h3, h4, p
+    margin: 0
+
+
+.page
+    // Стили для body
+
+.center
+    lost-center: $width
+    padding: 0 $gutter
+
+.page__wrapper
+    min-height 100%
+    margin-bottom -50px
+
+
+* html .page__wrapper
+    height 100%
+
+.page__buffer
+    height 50px
