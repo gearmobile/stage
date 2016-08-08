@@ -1,0 +1,5 @@
+mixin module-invite(data)
+    form.invite( action='action.php' method='post' )
+        input( type='email' name='email' placeholder='Адрес эл. почты' required )
+        button.btn.btn--tetro
+            | Получить приглашение

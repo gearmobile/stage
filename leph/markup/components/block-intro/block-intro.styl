@@ -1,0 +1,49 @@
+// intro
+// ---------------------------------
+.intro
+    //
+
+    & .center
+        //
+
+    &__primary
+        padding _d( 6rem ) 0 _d( 8rem )
+        background-color $color-grey
+
+        & .center
+            flex-direction column
+            align-items center
+
+    &__title
+        margin-bottom _d( 7.6rem )
+        font 400 _d( 4rem )/1.2 $raleway
+        color $color-black--light
+
+    &__list
+        display flex
+        justify-content space-between
+
+    &__item
+        flex: 0 1 _d( 28rem )
+        height _d( 17.2rem )
+        padding _d( 8.2rem ) 0 0 _d( 10rem )
+
+        &:nth-child(1)
+            background: url( '%=static=%assets/block-intro/intro-list-bg-01.png' ) 0 0 no-repeat
+            background-size _d( 14rem ) _d( 14rem )
+
+        &:nth-child(2)
+            background: url( '%=static=%assets/block-intro/intro-list-bg-02.png' ) 0 0 no-repeat
+            background-size _d( 14rem ) _d( 14rem )
+
+        &:nth-child(3)
+            background: url( '%=static=%assets/block-intro/intro-list-bg-03.png' ) 0 0 no-repeat
+            background-size _d( 14rem ) _d( 14rem )
+
+        & p
+            font 700 _d( 1.7rem )/1.2 $ptsans
+            color $color-black-light
+
+    &__secondary
+        background-color $color-white
+        padding _d( 11.4rem ) 0 _d( 17.2rem )
