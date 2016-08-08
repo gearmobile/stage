@@ -1,6 +1,30 @@
 // MIXINS
 // ----------------------------------------------------
 
+// hide text ----------------------------------
+squish-text()
+    font 0/0 serif
+    text-shadow none
+    color transparent
+
+// centering absolute --------------------------
+abs-center()
+    position absolute
+    top 50%
+    left 50%
+    transform translate( -50%, -50% )
+
+// centering flexbox --------------------------
+flex-center()
+    display flex
+    justify-content center
+    align-items center
+
+// size for block --------------------------
+size( $width, $height = $width )
+    width $width
+    height $height
+
 // devide value by 2 --------------------------
 _d( value )
     ( value / 2 )
@@ -31,7 +55,6 @@ clearfix()
 size($width, $height = $width)
     width $width
     height $height
-
 
 // placeholder style -----------------------------
 placeholder()

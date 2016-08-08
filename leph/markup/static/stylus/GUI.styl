@@ -1,12 +1,11 @@
 // BUTTON PRIMARY
 // ---------------------------------------------
-.btn-primary
+.btn
     padding _d(1.8rem) _d(6rem) _d(2rem)
     border-width .1rem
     border-style solid
     border-radius 2.5rem
     font 600 _d(1.6rem)/1.2 $raleway
-
     transition background-color .2s, color .2s
 
     // BUTTON PRIMO
@@ -48,11 +47,40 @@
 
         &:hover
             background-color $color-brown
+            border-color $color-brown
 
         &:focus
         &:active
             background-color $color-brown--dark
+            border-color $color-brown--dark
 
-    // BUTTON INACTIVE
+    // BUTTON QUATTRO
+    // ------------------------------------
+    &--quattro
+        border-color $color-white
+        color $color-white
+
+        &:hover
+            color $color-yellow
+            border-color $color-yellow
+
+        &:focus
+        &:active
+            border-color $color-yellow
+            background-color $color-yellow
+            color $color-white
+
+    // BUTTON INACTIVE FULL
     // -----------------------------------
-    //
+    &--inactive-full
+        color $color-white
+        background-color $color-grey--light
+        border-color $color-grey--light
+        cursor not-allowed
+
+    // BUTTON INACTIVE TRANS
+    // -----------------------------------
+    &--inactive-trans
+        border-color $color-grey--light
+        color $color-grey--light
+        cursor not-allowed
