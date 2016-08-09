@@ -4,7 +4,7 @@
     padding 1.8rem 6rem 2rem
     border-width .1rem
     border-style solid
-    border-radius 2.5rem
+    border-radius 50em
     font 600 1.6rem/1.2 $raleway
     transition background-color .2s, color .2s
 
@@ -84,3 +84,23 @@
         border-color $color-grey--light
         color $color-grey--light
         cursor not-allowed
+
+// input
+// -------------------------------------
+.input
+    background-color $color-white
+    border-radius 50em
+    box-shadow inset 0 .3rem 0 #dadada
+    border none
+    padding 1.8rem 3rem 1.8rem 3rem
+    font 600 1.7rem/1.2 $raleway
+    color #b5b5b5
+    // transition all .2s
+
+    &:focus
+        box-shadow none
+        color $color-black--light
+
+    &.is-error
+        border .1rem solid $color-orange
+        color $color-orange

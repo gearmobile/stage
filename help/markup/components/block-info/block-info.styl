@@ -1,46 +1,46 @@
 // INFO
 // ------------------------------------
 .info
+    width 100%
     border-top .1rem solid rgba( $color-white, .2 )
-    padding _d( 2rem ) 0
+    padding 2rem 0
 
     // INFO CENTER
     // ------------------------------------
-
-    & .center
-        //
+    & > .center
+        display flex
 
     // INFO PRIMARY
     // ------------------------------------
-
     &__primary
-        lost-column 1/2
-        lost-column-gutter $gutter
+        display flex
+        flex 0 1 50%
+        padding 0 6rem 0 0
 
     // INFO ITEM
     // ------------------------------------
-
     &__item
-        lost-column 3/6
-        lost-column-gutter $gutter
-        padding-left _d( 6rem )
+        flex 0 1 50%
+        padding 0 0 0 6rem
         background: url( '%=static=%assets/block-info/icon-block-info.png' ) 0 0 no-repeat
-        background-size _d( 5rem ) _d( 5rem )
 
+        & p
+            font 400 1.6rem/1.2 $ptsans
+            color $color-white
+
+    // INFO TITLE
+    // ------------------------------------
     &__title
         text-transform uppercase
-        padding-top _d( 1rem )
-        font 900 _d( 1.5rem )/1.2 $raleway
+        padding 1rem 0 0 0
+        margin 0 0 1.4rem
+        font 900 1.5rem/1.2 $raleway
         color $color-orange
-        margin-bottom _d( 1.4rem )
 
     // INFO SECONDARY
     // ------------------------------------
-
     &__secondary
-        lost-column 1/2
-        lost-column-gutter $gutter
-
-    & p
-        font 400 _d( 1.6rem )/1.2 $ptsans
-        color $color-white
+        display flex
+        align-items center
+        flex 0 1 50%
+        // padding 0 0 0 6rem
