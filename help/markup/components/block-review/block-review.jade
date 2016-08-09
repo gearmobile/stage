@@ -30,5 +30,6 @@ mixin block-review()
                                     | Главный бухгалтер
                             p
                                 | Спасибо помощникам! Теперь у меня есть время спокойно сходить в салон красоты.
-                button.review__button( type='button' )        
+                button.review__button( type='button' )
+                    != jadeHelpers.Icon.call( locals, { iconName: 'review-icon-01', className: 'review-icon' })   
                     

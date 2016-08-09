@@ -85,10 +85,10 @@
         top 0
         right 0
         size( 3.8rem, 3rem )
-        background url( '%=static=%assets/block-review/review-button.png' ) 50% 50% no-repeat
-        background-size cover
 
-        &:hover
-        &:active
-            background url( '%=static=%assets/block-review/review-button--active.png' ) 50% 50% no-repeat
-            background-size cover
+        & .review-icon
+            fill: $color-orange
+
+        &:hover .review-icon
+        &:active .review-icon
+            fill: $color-brown

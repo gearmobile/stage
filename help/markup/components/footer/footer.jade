@@ -13,4 +13,6 @@ mixin footer()
             .footer__tertiary
                 nav
                     a( href='#0' )
+                        != jadeHelpers.Icon.call( locals, { iconName: 'instagram-icon', className: 'footer-icon' })
                     a( href='#0' )
+                        != jadeHelpers.Icon.call( locals, { iconName: 'facebook-icon', className: 'footer-icon' })
