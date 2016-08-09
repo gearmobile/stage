@@ -1,38 +1,49 @@
 // MOBILE
 // ---------------------------------------
 .mobile
-    height _d( 20rem )
+    min-height 20rem
     background url( '%=static=%assets/block-mobile/block-mobile-bg.png' ) 0 0 repeat-x
     background-size cover
 
     // MOBILE CENTER
     // ---------------------------------------
-
     & .center
-        height inherit
+        min-height 20rem
         align-items center
         color $color-white
+        position relative
+        outline 1px solid red
+
+        &::before
+            content ''
+            display block
+            size( 28.1rem, 22.5rem )
+            position absolute
+            bottom 0
+            left 30rem
+            background url( '%=static=%assets/block-mobile/block-mobile-image.png' ) 50% 50% no-repeat
+            background-size cover
 
     // MOBILE PRIMO
     // ---------------------------------------
-
     &__primo
-        //
+        flex 0 1 28rem
 
     // MOBILE TITLE
     // ---------------------------------------
-
     &__title
-        //
+        font 700 2.4rem/1.2 $raleway
 
     // MOBILE SECONDO
     // ---------------------------------------
-
     &__secondo
-        //
+        flex 0 1 18rem
+
+        & p
+            font 400 1.6rem/1.2 $ptsans
 
     // MOBILE TETRO
     // ---------------------------------------
-
     &__tetro
-        //
+        flex 0 1 33rem
+        height 6rem

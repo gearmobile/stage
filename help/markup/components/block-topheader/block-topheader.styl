@@ -1,0 +1,101 @@
+// TOPHEADER
+// --------------------------------------
+.topheader
+    padding 4rem 0 2rem
+    background-color transparent
+    position fixed
+    top 0
+    left 0
+    width 100%
+    z-index 999
+    transition all .2s
+
+    // SCROLL TOP HEADER
+    // ---------------------------------------------
+    &.is-hidden
+        background-color $color-white
+        padding 2rem 0
+        box-shadow 0 .5rem 1rem rgba( $color-black, .1)
+
+    &.is-hidden .center a
+        color $color-black--light
+
+    // TOPHEADER CENTER
+    // --------------------------------------
+    & .center
+        display flex
+        justify-content space-between
+        align-items center
+
+        // TOPHEADER CENTER LINKS
+        // --------------------------------------
+        & a
+            text-transform uppercase
+            color $color-white
+
+            &:hover
+            &:active
+                color $color-orange
+
+    // TOPHEADER PRIMARY
+    // --------------------------------------
+    &__primary
+        size( 18.4rem, 8.6rem )
+        background: url( '%=static=%assets/block-topheader/topheader-logo.png' ) 50% 50% no-repeat
+
+        & a
+            display block
+            width inherit
+            height inherit
+
+    // TOPHEADER SECONDARY
+    // --------------------------------------
+    &__secondary nav
+        display flex
+        justify-content center
+
+        & a
+            margin 0 1rem
+            font 700 1.3rem/1.2 $raleway
+            position relative
+            padding 0 0 1rem 0
+
+            &::before
+                content ''
+                display block
+                width 0
+                background-color $color-orange
+                height .3rem
+                position absolute
+                bottom 0
+                left 0
+                transition width .2s
+
+            &:hover::before
+                width 100%
+
+    // TOPHEADER TERTIARY
+    // --------------------------------------
+    &__tertiary
+        width 28rem
+
+        & nav
+            flex-center()
+            height 3.2rem
+
+        & a
+            margin 0 1rem
+
+            &:first-child
+                font 700 1.6rem/1.2 $ptsans
+
+            &:last-child
+                flex-center()
+                height 3.2rem
+                font 700 1.3rem/1.2 $raleway
+                background: url( '%=static=%assets/block-topheader/icon-login.png' ) 100% 0 no-repeat
+                padding-right 4.2rem
+
+                &:hover
+                &:active
+                    background: url( '%=static=%assets/block-topheader/icon-login--active.png' ) 100% 0 no-repeat
