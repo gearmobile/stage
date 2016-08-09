@@ -1,19 +1,47 @@
-// advantage
+// ADVANTAGE
 // -------------------------------------
 .advantage
+    padding 8rem 0 12rem
     background-color $color-grey
-    padding _d( 9rem ) 0 _d( 13rem )
 
+    // ADVANTAGE CENTER
+    // -------------------------------------
     & .center
         flex-direction column
         align-items center
 
+    // ADVANTAGE HEADER
+    // -------------------------------------
+    &__header
+        margin 0 0 8rem
+
+    // ADVANTAGE THUMB
+    // -----------------------------------------
+    &__thumb
+        size( 14rem )
+
+    // ADVANTAGE CONTENT
+    // -------------------------------------
+    &__content
+        margin 3rem 0 0 0
+        text-align center
+
+        & p
+            font 400 1.8rem/1.2 $ptsans
+            color $color-black--light
+
     // ADVANTAGE TITLE
     // --------------------------------------
     &__title
-        margin 0 0 _d( 8rem )
-        font 400 _d( 4rem )/1.2 $raleway
+        font 400 4rem/1.2 $raleway
         color $color-black--light
+
+    // ADVANTAGE SUBTITLE
+    // ---------------------------------
+    &__subtitle
+        font 700 2.4rem/1.2 $raleway
+        color $color-black--light
+        margin 0 0 2rem
 
     // ADVANTAGE LIST
     // ------------------------------------
@@ -25,47 +53,28 @@
     // ADVANTAGE ITEM
     // -------------------------------------
     &__item
-        flex 1 1 calc( 100% / 3 )
+        flex 0 1 calc( 100% / 3 )
         display flex
         flex-direction column
         align-items center
-        padding _d( 8rem ) _d( 4rem )
+        padding 4rem
 
         &:nth-child(1) .advantage__thumb
             background url( '%=static=%assets/block-intro/advantage-icon-01.png' ) 50% 50% no-repeat
-            background-size _d( 14rem ) _d( 14rem )
+            background-size cover
 
         &:nth-child(2) .advantage__thumb
             background url( '%=static=%assets/block-intro/advantage-icon-02.png' ) 50% 50% no-repeat
-            background-size _d( 14rem ) _d( 14rem )
+            background-size cover
 
         &:nth-child(3) .advantage__thumb
             background url( '%=static=%assets/block-intro/advantage-icon-03.png' ) 50% 50% no-repeat
-            background-size _d( 14rem ) _d( 14rem )
+            background-size cover
 
         &:nth-child(4) .advantage__thumb
             background url( '%=static=%assets/block-intro/advantage-icon-04.png' ) 50% 50% no-repeat
-            background-size _d( 14rem ) _d( 14rem )
+            background-size cover
 
         &:nth-child(5) .advantage__thumb
             background url( '%=static=%assets/block-intro/advantage-icon-05.png' ) 50% 50% no-repeat
-            background-size _d( 14rem ) _d( 14rem )
-
-        & p
-            text-align center
-            font 400 _d( 1.8rem )/1.2 $ptsans
-            color $color-black--light
-
-    // ADVANTAGE THUMB
-    // -----------------------------------------
-    &__thumb
-        margin 0 0 _d( 3.2rem )
-        width _d( 14rem )
-        height _d( 14rem )
-
-    // ADVANTAGE SUBTITLE
-    // ---------------------------------
-    &__subtitle
-        font 700 _d( 2.4rem )/1.2 $raleway
-        color $color-black--light
-        margin 0 0 _d( 2rem )
+            background-size cover
