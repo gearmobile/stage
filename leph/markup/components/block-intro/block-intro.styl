@@ -1,117 +1,124 @@
 // INTRO
 // ---------------------------------
 .intro
-    //
+    width 100%
 
     // INTRO PRIMARY
     // ---------------------------------
-
     &__primary
-        padding _d( 6rem ) 0 _d( 8rem )
+        min-height 44rem
+        padding 6rem 0 8rem
         background-color $color-grey
 
+        // INTRO PRIMARY CENTER
+        // ---------------------------------
         & .center
             flex-direction column
             align-items center
 
+    // INTRO HEADING
+    // ---------------------------------
+    &__heading
+        margin 0 0 7.6rem 0
+
     // INTRO TITLE
     // ---------------------------------
-
     &__title
-        margin 0 0 _d( 7.6rem ) 0
-        font 400 _d( 4rem )/1.2 $raleway
+        font 400 4rem/1.2 $raleway
         color $color-black--light
+
+    // INTRO CONTENT
+    // ---------------------------------
+    &__content
+        width 100%
 
     // INTRO LIST
     // ---------------------------------
-
     &__list
         display flex
         justify-content space-between
 
     // INTRO ITEM
     // ---------------------------------
-
     &__item
-        flex: 0 1 _d( 28rem )
-        height _d( 17.2rem )
-        padding _d( 8.2rem ) 0 0 _d( 10rem )
+        display flex
+        flex: 0 1 28rem
+        min-height 17.2rem
+        padding 8.2rem 0 0 10rem
         position relative
 
         &:nth-child(1)
             background: url( '%=static=%assets/block-intro/intro-list-bg-01.png' ) 0 0 no-repeat
-            background-size _d( 14rem ) _d( 14rem )
 
         &:nth-child(2)
             background: url( '%=static=%assets/block-intro/intro-list-bg-02.png' ) 0 0 no-repeat
-            background-size _d( 14rem ) _d( 14rem )
 
         &:nth-child(3)
             background: url( '%=static=%assets/block-intro/intro-list-bg-03.png' ) 0 0 no-repeat
-            background-size _d( 14rem ) _d( 14rem )
 
         &:nth-child(2)
         &:nth-child(3)
             &::before
                 content ''
                 display block
-                width _d( 10.8rem )
-                height _d( 1.4rem )
-                background url( '%=static=%assets/block-intro/intro-arrow.png' ) 50% 50% no-repeat
-                background-size _d( 10.8rem ) _d( 1.4rem )
+                size( 10.8rem, 1.4rem )
                 position absolute
                 top 40%
-                transform translateY(-40%)
-                left _d( -16rem )
+                transform translateY( -40% )
+                left -14rem
+                background url( '%=static=%assets/block-intro/intro-arrow.png' ) 50% 50% no-repeat
 
         & p
-            font 700 _d( 1.7rem )/1.2 $ptsans
+            font 700 1.7rem/1.2 $ptsans
             color $color-black-light
 
     // INTRO SECONDARY
     // ---------------------------------
-
     &__secondary
         background-color $color-white
-        padding _d( 11.4rem ) 0 _d( 17.2rem )
+        padding 10rem 0 16rem
         position relative
 
         &::before
             content ''
             display block
-            width _d( 52.8rem )
-            height _d( 51.8rem )
-            background url( '%=static=%assets/block-intro/intro-bg.png' ) 50% 50% no-repeat
-            background-size _d( 52.8rem ) _d( 51.8rem )
+            size( 52.8rem, 51.8rem )
             position absolute
             bottom 0
             left 50%
             transform translateX( -50% )
+            background url( '%=static=%assets/block-intro/intro-bg.png' ) 50% 50% no-repeat
 
+        // INTRO SECONDARY CENTER
+        // ---------------------------------
         & .center
             justify-content space-between
 
+    // INTRO SECONDARY PRIMO
+    // ---------------------------------
     &__primo
-        // flex 0 1 _d( 48rem )
-        flex 0 1 40%
+        flex 0 1 30%
         position relative
 
         & p
-            font 400 _d( 1.8rem )/1.4 $ptsans
+            font 400 1.8rem/1.4 $ptsans
             color $color-black--light
 
+    // INTRO SECONDARY SUBTITLE
+    // ---------------------------------
     &__subtitle
-        font 700 _d(2.4rem)/1.4 $raleway
+        font 700 2.4rem/1.4 $raleway
         color $color-black--light
-        margin 0 0 _d( 3rem )
+        margin 0 0 3rem
 
+    // INTRO SECONDARY SECONDO
+    // ---------------------------------
     &__secondo
-        // flex 0 1 _d( 38rem )
         flex 0 1 40%
         position relative
 
         & p
-            font 400 _d( 1.6rem )/1.4 $ptsans
+            font 400 1.6rem/1.4 $ptsans
             color $color-black--light
 
             &:not(:last-child)
