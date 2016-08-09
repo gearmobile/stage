@@ -1,0 +1,47 @@
+// announce
+// -------------------------------
+.announce
+    padding 10rem 0 12rem
+    background url( '%=static=%assets/block-announce/block-announce-bg.png' ) 50% 50% no-repeat
+    background-size cover
+
+    &__primary
+        display flex
+        justify-content space-between
+        margin 0 0 6rem
+        color $color-white
+
+        & > .primo
+            flex 0 1 8rem
+
+            p
+                font 900 1.5rem/1.2 $raleway
+
+                & span
+                    font 700 4rem/1.4 $ptsans
+                    color $color-yellow
+
+        & > .secondo
+            flex 0 1 58rem
+
+            & .secondo__title
+                font 400 4rem/1.2 $raleway
+                margin 0 0 4rem
+
+            & p
+                font 400 1.8rem/1.4 $ptsans
+
+        & > .tetro
+            flex 0 1 18rem
+
+            & .tetro__thumb
+                size( 3.2rem )
+                margin 0 0 2rem
+                border .1rem solid $color-yellow
+                border-radius 50%
+
+            & p
+                font 400 1.4rem/1.2 $ptsans
+
+    &__secondary
+        //
