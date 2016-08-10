@@ -61,7 +61,8 @@ module.exports = {
     "templater": "jade",
     "cssPreprocessor": "stylus",
     "useImagesForDisplayWithDpi": [
-        96
+        96,
+        192
     ],
     "fs": {
         "staticFolderName": "static",

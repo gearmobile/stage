@@ -8,15 +8,16 @@ mixin block-announce()
                     p
                         | <span>786</span> человек уже с нами
                 .secondo
-                    .secondo__title
+                    h2.secondo__title
                         | Help работает в тестовом режиме с 1 октября
                     p
                         | Каждый день мы приглашаем по 20 человек, которые могут воспользоваться нашим сервисом, введите свой емейл и мы сообщим вам, когда наступит ваша очередь
                 .tetro
                     .tetro__thumb
+                        != jadeHelpers.Icon.call( locals, { iconName: 'location-icon', className: 'announce-icon' })
                     p
                         | На текущий момент услуги сервиса gethelp оказываются только для жителей Москвы в пределах МКАД
             .announce__secondary
                 .primo
                 .secondo
-                    module-invite()
+                    +module-invite()

@@ -1,16 +1,21 @@
-// announce
+// ANNOUNCE
 // -------------------------------
 .announce
     padding 10rem 0 12rem
     background url( '%=static=%assets/block-announce/block-announce-bg.png' ) 50% 50% no-repeat
     background-size cover
 
+    // ANNOUNCE PRIMARY
+    // -------------------------------
     &__primary
         display flex
         justify-content space-between
         margin 0 0 6rem
         color $color-white
+        outline 1px dotted blue
 
+        // ANNOUNCE PRIMARY PRIMO
+        // -------------------------------
         & > .primo
             flex 0 1 8rem
 
@@ -21,6 +26,8 @@
                     font 700 4rem/1.4 $ptsans
                     color $color-yellow
 
+        // ANNOUNCE PRIMARY SECONDO
+        // -------------------------------
         & > .secondo
             flex 0 1 58rem
 
@@ -31,17 +38,37 @@
             & p
                 font 400 1.8rem/1.4 $ptsans
 
+        // ANNOUNCE PRIMARY TETRO
+        // -------------------------------
         & > .tetro
             flex 0 1 18rem
 
             & .tetro__thumb
+                flex-center()
                 size( 3.2rem )
                 margin 0 0 2rem
                 border .1rem solid $color-yellow
                 border-radius 50%
 
+                & .announce-icon
+                    size( 1.8rem )
+                    fill: $color-yellow
+
             & p
                 font 400 1.4rem/1.2 $ptsans
 
+    // ANNOUNCE SECONDARY
+    // -------------------------------
     &__secondary
-        //
+        display flex
+        justify-content space-between
+        outline 1px dotted green
+
+        & > .primo
+            size( 18.4rem, 8.6rem )
+            background url( '%=static=%assets/block-announce/announce-logo.png' ) 50% 50% no-repeat
+            background-size cover
+
+        & > .secondo
+            padding 1.5rem 0 0 0
+            lost-column 9/12
