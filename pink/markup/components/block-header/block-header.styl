@@ -1,1 +1,61 @@
+.header
+    background url( '%=static=%assets/block-header/hero-bg.png' ) 50% 50% no-repeat
+    background-size cover
 
+    & .center
+        display flex
+        height 85.3rem
+
+    &__content
+        lost-column 4/12
+        lost-column-gutter 0
+        display flex
+        flex-direction column
+        align-items center
+        justify-content center
+        color $color-white
+
+        & .title
+            font 5rem/1.2 $open-sans--light
+            text-align center
+            padding 0 2rem
+            margin 0 0 6rem
+
+        & .button
+            font 2rem/1.2 $open-sans--semibold
+            color $color-white
+            padding 1.8rem 3.2rem 1.6rem
+            border .3rem solid $color-white
+            border-radius 50em
+            margin 0 0 6rem
+            transition all .2s
+
+            &:hover
+                background-color $color-white
+                color $color-black
+
+        & .socials
+            display flex
+            justify-content space-between
+            align-items center
+            width 100%
+            padding 0 8rem
+            margin 0 0 6rem
+
+            &__item
+                size( 5rem )
+
+                &:nth-child(1)
+                    // @include bg($png-image-name)
+                    bg($header-icon-01)
+
+                &:nth-child(2)
+                    bg($header-icon-02)
+
+                &:nth-child(3)
+                    bg($header-icon-03)
+                    // background-color rgba( $color-white, .2 )
+
+        & .remarks
+            font 1.8rem/1.4 $open-sans--light
+            text-align center
