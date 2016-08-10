@@ -1,11 +1,20 @@
+
+// HEADER
+// ------------------------------------
 .header
     background url( '%=static=%assets/block-header/hero-bg.png' ) 50% 50% no-repeat
     background-size cover
 
+    // HEADER CENTER
+    // ------------------------------------
     & .center
         display flex
         height 85.3rem
+        position relative
+        outline 1px dashed salmon
 
+    // HEADER CONTENT
+    // ------------------------------------
     &__content
         lost-column 4/12
         lost-column-gutter 0
@@ -15,12 +24,16 @@
         justify-content center
         color $color-white
 
+        // HEADER CONTENT TITLE
+        // ------------------------------------
         & .title
             font 5rem/1.2 $open-sans--light
             text-align center
             padding 0 2rem
             margin 0 0 6rem
 
+        // HEADER CONTENT BUTTON
+        // ------------------------------------
         & .button
             font 2rem/1.2 $open-sans--semibold
             color $color-white
@@ -34,6 +47,8 @@
                 background-color $color-white
                 color $color-black
 
+        // HEADER CONTENT SOCIALS
+        // ------------------------------------
         & .socials
             display flex
             justify-content space-between
@@ -46,7 +61,6 @@
                 size( 5rem )
 
                 &:nth-child(1)
-                    // @include bg($png-image-name)
                     bg($header-icon-01)
 
                 &:nth-child(2)
@@ -54,8 +68,18 @@
 
                 &:nth-child(3)
                     bg($header-icon-03)
-                    // background-color rgba( $color-white, .2 )
 
+        // HEADER CONTENT REMARKS
+        // ------------------------------------
         & .remarks
             font 1.8rem/1.4 $open-sans--light
             text-align center
+
+    // HEADER SLIDER
+    // ------------------------------------
+    &__slider
+        size( 56rem, 64.5rem )
+        position absolute
+        bottom 0
+        right 4rem
+        background: url( '%=static=%assets/block-header/header-image.png' ) 0 0 no-repeat

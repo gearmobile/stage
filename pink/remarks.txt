@@ -1,0 +1,15 @@
+// BACKGROUND FOR MODULE
+// -------------------------------
+background: url( '%=static=%assets/moduleName/sample-image-name.png' ) 0 0 no-repeat
+
+// IMAGE FOR MODULE
+// -------------------------------
+img( src='%=static=%img/assets/moduleName/sample-image-name.png' alt='' )
+
+// IMAGES FOR CONTENT
+// -------------------------------
+img( src='%=static=%img/content/sample-image-name.jpg' alt='' )
+
+// SVG ICON
+// -------------------------------
+!= jadeHelpers.Icon.call( locals, {iconName: '%iconName%', className: '%customClass%' })
