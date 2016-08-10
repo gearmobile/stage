@@ -1,11 +1,11 @@
-const $header = $('.header');
+const $header = $( '.header' );
 
-$(window).on('scroll', function () {
+$(window).on( 'scroll', function () {
 
     if ( $(this).scrollTop() > $(this).height() / 5 ) {
-        $header.addClass('is-active');
+        $header.addClass( 'is-active' );
     } else {
-        $header.removeClass('is-active');
+        $header.removeClass( 'is-active' );
     }
 
 });

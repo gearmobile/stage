@@ -1,4 +1,4 @@
-$( () => {
+$( function () {
 
     const $playButton = $('.video__button');
     const $playLink = 'https://www.youtube.com/watch?v=TaWKUpahFZM';
