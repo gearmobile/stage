@@ -2,18 +2,19 @@ doctype html
 html(class="no-js", lang="ru")
 
     include ../components/head/head
-    include ../components/example/example
+    include ../components/block-topheader/block-topheader
+    include ../components/block-header/block-header
     include ../components/footer/footer
 
     head
         +head(head.defaults)
     body.page
         |%=symbols=%
-
+        +block-topheader()
         section.page__wrapper
 
             //- Include your components here
-            +example()
+            +block-header()
 
             .page__buffer
 

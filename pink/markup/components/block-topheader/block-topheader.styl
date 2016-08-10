@@ -1,0 +1,33 @@
+.topheader
+    padding 2rem 0 4rem
+    background-color rgba( $color-black, .3 )
+    position fixed
+    top 0
+    left 0
+    width 100%
+    z-index 999
+
+    &__primary
+        lost-column 4/12
+        lost-column-gutter 0
+
+        & .logo
+            display block
+            size( 14.7rem, 4rem )
+            background url( '%=static=%assets/block-topheader/topheader-logo.png' ) 0 0 no-repeat
+            background-size cover
+
+    &__secondary
+        lost-column 8/12
+        lost-column-gutter 0
+
+        & .navigation
+            display flex
+            height 4rem
+            align-items center
+            justify-content space-between
+
+            &__item
+                text-transform capitalize
+                font 1.8rem/1.2 $open-sans--regular
+                color $color-white
