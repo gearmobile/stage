@@ -1,11 +1,13 @@
 window.addEventListener( 'scroll', function () {
-    var topHeader = document.querySelector( '.topheader' );
-    var topOffset = 10;
-    var scrollOffset = window.pageYOffset || document.documentElement.scrollTop;
+    
+    const topHeader = document.querySelector( '.topheader' );
+    const topOffset = 10;
+    let scrollOffset = window.pageYOffset || document.documentElement.scrollTop;
 
     if ( scrollOffset > topOffset ) {
-        topHeader.classList.add( 'is-hidden' );
+        topHeader.classList.add( 'js-hidden' );
     } else {
-        topHeader.classList.remove( 'is-hidden' );
+        topHeader.classList.remove( 'js-hidden' );
     }
+
 }, false );
