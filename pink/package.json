@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "directories": {},
   "dependencies": {
+    "fontfaceobserver": "^2.0.1",
     "lost": "^7.0.3",
     "postcss-flexibility": "^1.1.0"
   },
