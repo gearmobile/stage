@@ -78,8 +78,41 @@
     // HEADER SLIDER
     // ------------------------------------
     &__image
-        // size( 56rem, 64.5rem )
         position absolute
         bottom 0
-        right 4rem
-        // background: url( '%=static=%assets/block-header/header-image.png' ) 0 0 no-repeat
+        right 0
+
+        @media screen and ( max-width $desktop )
+            size( 105rem, 64.5rem )
+            background url( '%=static=%assets/block-header/iphone-hand-desktop@1x.png' ) 0 0 no-repeat
+            background-size cover
+
+        @media screen and ( max-width $desktop ) and ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 192dpi )
+            size( 105rem, 64.5rem )
+            background url( '%=static=%assets/block-header/iphone-hand-desktop@2x.png' ) 0 0 no-repeat
+            background-size cover
+
+        @media screen and ( max-width $bp768 )
+            size( 105rem, 64.5rem )
+            background url( '%=static=%assets/block-header/iphone-hand-tablet@1x.png' ) 0 0 no-repeat
+            background-size cover
+
+        @media screen and ( max-width $bp768 ) and ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 192dpi )
+            size( 105rem, 64.5rem )
+            background url( '%=static=%assets/block-header/iphone-hand-tablet@2x.png' ) 0 0 no-repeat
+            background-size cover
+
+        @media screen and ( max-width $bp768 )
+            size( 105rem, 64.5rem )
+            background url( '%=static=%assets/block-header/iphone-hand-mobile@1x.png' ) 0 0 no-repeat
+            background-size cover
+
+        @media screen and ( max-width $bp768 ) and ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 192dpi )
+            size( 105rem, 64.5rem )
+            background url( '%=static=%assets/block-header/iphone-hand-mobile@2x.png' ) 0 0 no-repeat
+            background-size cover
+
+        @media screen and ( max-width $bp768 ) and ( -webkit-min-device-pixel-ratio: 3 ), ( min-resolution: 288dpi )
+            size( 105rem, 64.5rem )
+            background url( '%=static=%assets/block-header/iphone-hand-mobile@3x.png' ) 0 0 no-repeat
+            background-size cover
