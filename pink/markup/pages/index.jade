@@ -1,5 +1,5 @@
 doctype html
-html(class="no-js", lang="ru")
+html( class="no-js", lang="ru" )
 
     include ../components/head/head
     include ../components/block-topheader/block-topheader
@@ -13,13 +13,11 @@ html(class="no-js", lang="ru")
         |%=symbols=%
         +block-topheader()
         section.page__wrapper
-
-            //- Include your components here
+    
             +block-header()
             +block-info()
-
+    
             .page__buffer
-
         .page__footer
             +footer()
 

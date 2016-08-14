@@ -23,6 +23,8 @@
         align-items center
         justify-content center
         color $color-white
+        position relative
+        z-index 2
 
         // HEADER CONTENT TITLE
         // ------------------------------------
@@ -81,38 +83,45 @@
         position absolute
         bottom 0
         right 0
+        z-index auto
 
-        @media screen and ( max-width $desktop )
+        // header desktop image
+        // --------------------------------------------------
+        @media screen and ( min-resolution 96dpi )
             size( 105rem, 64.5rem )
             background url( '%=static=%assets/block-header/iphone-hand-desktop@1x.png' ) 0 0 no-repeat
             background-size cover
 
-        @media screen and ( max-width $desktop ) and ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 192dpi )
+        @media screen and ( min-resolution 144dpi )
             size( 105rem, 64.5rem )
             background url( '%=static=%assets/block-header/iphone-hand-desktop@2x.png' ) 0 0 no-repeat
             background-size cover
 
-        @media screen and ( max-width $bp768 )
-            size( 105rem, 64.5rem )
+        // header tablet image
+        // --------------------------------------------------
+        @media screen and ( max-width $tablet ) and ( min-resolution 96dpi )
+            size( 70rem, 54.5rem )
             background url( '%=static=%assets/block-header/iphone-hand-tablet@1x.png' ) 0 0 no-repeat
             background-size cover
 
-        @media screen and ( max-width $bp768 ) and ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 192dpi )
-            size( 105rem, 64.5rem )
+        @media screen and ( max-width $tablet ) and ( min-resolution 144dpi )
+            size( 70rem, 54.5rem )
             background url( '%=static=%assets/block-header/iphone-hand-tablet@2x.png' ) 0 0 no-repeat
             background-size cover
 
-        @media screen and ( max-width $bp768 )
-            size( 105rem, 64.5rem )
+        // header mobile image
+        // --------------------------------------------------
+        @media screen and ( max-width $mobile ) and ( min-resolution 96dpi )
+            size( 25.8rem, 28.6rem )
             background url( '%=static=%assets/block-header/iphone-hand-mobile@1x.png' ) 0 0 no-repeat
             background-size cover
 
-        @media screen and ( max-width $bp768 ) and ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 192dpi )
-            size( 105rem, 64.5rem )
+        @media screen and ( max-width $mobile ) and ( min-resolution 144dpi )
+            size( 25.8rem, 28.6rem )
             background url( '%=static=%assets/block-header/iphone-hand-mobile@2x.png' ) 0 0 no-repeat
             background-size cover
 
-        @media screen and ( max-width $bp768 ) and ( -webkit-min-device-pixel-ratio: 3 ), ( min-resolution: 288dpi )
-            size( 105rem, 64.5rem )
+        @media screen and ( max-width $mobile ) and ( min-resolution 288dpi )
+            size( 25.8rem, 28.6rem )
             background url( '%=static=%assets/block-header/iphone-hand-mobile@3x.png' ) 0 0 no-repeat
             background-size cover

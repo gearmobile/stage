@@ -10,5 +10,10 @@ const openSansRegular = new FontFaceObserver('open_sansregular');
 const openSansSemiBold = new FontFaceObserver('open_sanssemibold');
 const openSansBold = new FontFaceObserver('open_sansbold');
 
-const dpr = window.devicePixelRatio;
-console.log('Device Pixel Ratio: ' + dpr);
+// PAGE INDEX
+// ----------------------------------------------------------
+require( '../../components/block-topheader/block-topheader' );
+
+window.addEventListener( 'load', function () {
+    console.log( window.devicePixelRatio );
+}, false );

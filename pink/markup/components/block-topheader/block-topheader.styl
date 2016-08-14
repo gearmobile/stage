@@ -1,11 +1,18 @@
 .topheader
-    padding 2rem 0 4rem
-    background-color rgba( $color-black, .3 )
     position fixed
     top 0
     left 0
     width 100%
-    z-index 999
+    padding 2rem 0 4rem
+    z-index 9999
+    background-color rgba( $color-black, .3 )
+    transition all .2s
+    will-change transition
+
+
+    &.js-hidden
+        padding 2rem 0 3rem
+        background-color rgba( $color-black, .6 )
 
     &__primary
         lost-column 4/12
@@ -14,7 +21,7 @@
         & .logo
             display block
             size( 14.6rem, 4rem )
-            bg-svg($logotype-white-desktop)
+            bg-svg( $logotype-white-desktop )
 
     &__secondary
         lost-column 8/12
