@@ -3,9 +3,13 @@ mixin block-topheader()
         .center
             .topheader__primary
                 a.logo( href='/' )
+                    != jadeHelpers.Icon.call( locals, { iconName: 'logotype-white-desktop', className: 'topheader-icon-logo' })
             .topheader__secondary
                 nav.navigation
                     a.navigation__item( href='#0' ) главная
                     a.navigation__item( href='#0' ) фотографии
                     a.navigation__item( href='#0' ) конкурс
                     a.navigation__item( href='#0' ) HTML academy
+            .topheader__tertiary
+                a.topheader__menu( href='#0' )
+                    != jadeHelpers.Icon.call( locals, { iconName: 'menu-burger', className: 'topheader-icon-hamburger' })

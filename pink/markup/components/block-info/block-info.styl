@@ -10,7 +10,6 @@
         background-color $color-white
 
         & .title
-            lost-center 73rem
             font 5rem/1.2 $open-sans--light
             color $pink-color-dark
             text-align center
@@ -20,18 +19,74 @@
     &__main
         background-color $pink-color-grey
         padding 0 0 6rem
+        position relative
+
+        &::before
+            content ''
+            display block
+            width 100%
+            height 9.4rem
+            position absolute
+            top 0
+            left 0
+            background url( '%=static=%assets/block-info/triangle-white.svg' ) 0 0 no-repeat
+            background-size cover
+
+        & .center
+            position relative
+
+        // INFO GALLERY
+        // ------------------------------------------
 
         & .gallery
             lost-center 100%
 
             &__item
                 lost-column 1/3
-                lost-column-gutter $gutter*8
+                lost-column-gutter $gutter*6
                 text-align center
 
+                &:nth-child(1) .gallery__image
+
+                    @media screen and ( min-resolution 96dpi )
+                        size( 29.2rem, 30.2rem )
+                        background url( '%=static=%assets/block-info/iphone-screen-desktop-1@1x.png' ) 50% 50% no-repeat
+                        background-size cover
+
+                    @media screen and ( min-resolution 144dpi )
+                        size( 29.2rem, 30.2rem )
+                        background url( '%=static=%assets/block-info/iphone-screen-desktop-1@2x.png' ) 50% 50% no-repeat
+                        background-size cover
+
+                &:nth-child(2) .gallery__image
+
+                    @media screen and ( min-resolution 96dpi )
+                        size( 29.2rem, 30.2rem )
+                        background url( '%=static=%assets/block-info/iphone-screen-desktop-2@1x.png' ) 50% 50% no-repeat
+
+                    @media screen and ( min-resolution 144dpi )
+                        size( 29.2rem, 30.2rem )
+                        background url( '%=static=%assets/block-info/iphone-screen-desktop-2@2x.png' ) 50% 50% no-repeat
+                        background-size cover
+
+                &:nth-child(3) .gallery__image
+
+                    @media screen and ( min-resolution 96dpi )
+                        size( 29.2rem, 30.2rem )
+                        background url( '%=static=%assets/block-info/iphone-screen-desktop-3@1x.png' ) 50% 50% no-repeat
+
+                    @media screen and ( min-resolution 144dpi )
+                        size( 29.2rem, 30.2rem )
+                        background url( '%=static=%assets/block-info/iphone-screen-desktop-3@2x.png' ) 50% 50% no-repeat
+                        background-size cover
+
+            // INFO IMAGE
+            // ------------------------------------------
             &__image
                 margin 0 0 6rem
 
+            // INFO TITLE
+            // ------------------------------------------
             &__title
                 font 3rem/1.2 $open-sans--bold
                 color $color-black
@@ -45,3 +100,36 @@
     // ------------------------------------------
     &__footer
         background-color $pink-color-grey
+        padding 2rem 0 6rem
+
+        & .center
+            display flex
+            align-items center
+
+        & .info-icon
+            fill: #dedede
+
+        & .title
+            font 3rem/1.2 $open-sans--bold
+            color $color-black
+            margin 0 0 2rem
+
+        & p
+            font 1.8rem/1.4 $open-sans--regular
+            color $pink-color-dark
+            margin 0 0 2rem
+
+        & .readmore
+            font 1.8rem/1.4 $open-sans--regular
+            color $pink-color-pink
+            text-decoration underline
+
+            &:hover
+                color $pink-color-dark
+
+            &:focus
+            &:active
+                color rgba( $pink-color-dark, .3 )
+
+    &__content
+        padding 0 0 0 10rem

@@ -1,3 +1,5 @@
+// TOPHEADER
+// ------------------------------------------
 .topheader
     position fixed
     top 0
@@ -9,31 +11,80 @@
     transition all .2s
     will-change transition
 
-
     &.js-hidden
         padding 2rem 0 3rem
         background-color rgba( $color-black, .6 )
 
+    // TOPHEADER PRIMARY
+    // ------------------------------------------
     &__primary
         lost-column 4/12
         lost-column-gutter 0
 
+
+        // TOPHEADER LOGO
+        // ------------------------------------------
         & .logo
             display block
-            size( 14.6rem, 4rem )
-            bg-svg( $logotype-white-desktop )
 
+            & .topheader-icon-logo
+                fill: $color-white
+
+                &:hover
+                    fill: $pink-color-pink
+
+    // TOPHEADER SECONDARY
+    // ------------------------------------------
     &__secondary
         lost-column 8/12
         lost-column-gutter 0
 
+        @media screen and ( max-width $tablet )
+            display none
+
+        // TOPHEADER NAVIGATION
+        // ------------------------------------------
         & .navigation
             display flex
             height 4rem
             align-items center
             justify-content space-between
 
+            // TOPHEADER NAVIGATION ITEM
+            // ------------------------------------------
             &__item
                 text-transform capitalize
                 font 1.8rem/1.2 $open-sans--regular
                 color $color-white
+                position relative
+
+                &::before
+                    content ''
+                    display block
+                    width 0
+                    height .2rem
+                    background-color $color-white
+                    position absolute
+                    bottom -1rem
+                    left 0
+                    transition width .2s, color .2s
+
+                &:hover::before
+                    width 100%
+
+                &:focus
+                &:active
+                    color rgba( $color-white, .3 )
+
+                &:focus::before
+                &:active::before
+                    width 0
+
+    // TOPHEADER TERTIARY
+    // ------------------------------------------
+    &__tertiary
+        display none
+
+        @media screen and ( max-width $tablet )
+            float right
+            // display block

@@ -25,6 +25,7 @@
         color $color-white
         position relative
         z-index 2
+        outline 1px dotted green
 
         // HEADER CONTENT TITLE
         // ------------------------------------
@@ -37,9 +38,13 @@
         // HEADER CONTENT BUTTON
         // ------------------------------------
         & .button
+            display flex
+            justify-content center
+            align-items center
+            width 78%
+            height 5.5rem
             font 2rem/1.2 $open-sans--semibold
             color $color-white
-            padding 1.8rem 3.2rem 1.6rem
             border .3rem solid $color-white
             border-radius 50em
             margin 0 0 6rem
@@ -47,29 +52,28 @@
 
             &:hover
                 background-color $color-white
-                color $color-black
+                color $pink-color-pink
+
+            &:focus
+            &:active
+                color rgba( $pink-color-pink, .3 )
 
         // HEADER CONTENT SOCIALS
         // ------------------------------------
         & .socials
             display flex
-            justify-content space-between
+            justify-content center
             align-items center
             width 100%
-            padding 0 8rem
             margin 0 0 6rem
 
             &__item
                 size( 5rem )
+                margin 0 1rem
 
-                &:nth-child(1)
-                    bg-svg($header-icon-01)
+                & .header-icon
+                    //
 
-                &:nth-child(2)
-                    bg-svg($header-icon-02)
-
-                &:nth-child(3)
-                    bg-svg($header-icon-03)
 
         // HEADER CONTENT REMARKS
         // ------------------------------------

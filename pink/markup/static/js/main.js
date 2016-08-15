@@ -1,7 +1,7 @@
 'use strict';
 
 const FontFaceObserver = require( 'fontfaceobserver' );
-
+const swiper = require('swiper');
 
 // LOAD FONTS
 // ------------------------------------------
@@ -17,3 +17,9 @@ require( '../../components/block-topheader/block-topheader' );
 window.addEventListener( 'load', function () {
     console.log( window.devicePixelRatio );
 }, false );
+
+
+swiper( '.reviews .swiper-container', {
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev'
+});
