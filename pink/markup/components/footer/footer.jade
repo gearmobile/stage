@@ -5,6 +5,11 @@ mixin footer(data)
             .footer__secondary
                 nav.footer__nav
                     a.footer__item( href='#0' )
+                        != jadeHelpers.Icon.call( locals, { iconName: 'facebook', className: 'footer-icon' })
                     a.footer__item( href='#0' )
+                        != jadeHelpers.Icon.call( locals, { iconName: 'twitter', className: 'footer-icon' })
                     a.footer__item( href='#0' )
+                        != jadeHelpers.Icon.call( locals, { iconName: 'youtube', className: 'footer-icon' })
             .footer__tertiary
+                a( href='#0' ) разработано
+                    != jadeHelpers.Icon.call( locals, { iconName: 'htmlacademy', className: 'footer-icon-brand' })
