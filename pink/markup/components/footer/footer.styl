@@ -1,62 +1,112 @@
-// footer
+// FOOTER
 // ------------------------------
 .footer
     background-color $color-white
     padding 6rem 0
 
-    // footer center
+
+    // FOOTER CENTER
     // ------------------------------
     & .center
         display flex
         justify-content space-between
         align-items center
 
-    // footer nav
+        @media screen and ( max-width $bp600 )
+            flex-direction column
+
+
+    // FOOTER PRIMARY
     // ------------------------------
-    &__nav
-        display flex
-        justify-content center
+    &__primary
 
-    // footer nav item
+        @media screen and ( max-width $bp600 )
+            margin 0 0 3rem
+
+        // FOOTER PRIMARY LOGO
+        // ------------------------------
+        & .logo
+            display flex
+            align-items center
+            text-transform uppercase
+            color $pink-color-dark
+            font 3rem/1.2 $open-sans--regular
+
+            & .footer-icon-logo
+                margin 0 1rem 0 0
+                fill: $pink-color-pink
+
+            &:hover
+            &:focus
+                color $pink-color-pink
+
+            &:active
+                color rgba( $pink-color-dark, .3 )
+
+                & .footer-icon-logo
+                    fill: rgba( $pink-color-pink, .3 )
+
+    // FOOTER SECONDARY
     // ------------------------------
-    &__item
-        display flex
-        justify-content center
-        align-items center
-        size( 5rem )
-        margin 0 .6rem
-        background-color #fefefe
-        border-radius 50%
-        border .3rem solid rgba( $pink-color-dark, .1 )
-        transition all .2s
+    &__secondary
 
-        & .footer-icon
-            fill: $pink-color-pink
+        @media screen and ( max-width $bp600 )
+            margin 0 0 3rem
 
-        &:hover
-            border-color $pink-color-dark
+        // NAVIGATION
+        // ------------------------------
+        & .navigation
+            display flex
+            justify-content center
 
-        &:focus
-        &:active
-            border-color rgba( $pink-color-dark, .1 )
+            // NAVIGATION ITEM
+            // ------------------------------
+            &__item
+                display flex
+                justify-content center
+                align-items center
+                size( 5rem )
+                margin 0 .6rem
+                background-color #fefefe
+                border-radius 50%
+                border .3rem solid rgba( $pink-color-dark, .1 )
+                transition all .2s
 
-            & .footer-icon
-                fill: rgba( $pink-color-pink, .3 )
+                & .footer-icon
+                    fill: $pink-color-pink
 
-    &__tertiary a
-        display flex
-        align-items center
-        font 1.8rem/1.2 $open-sans--regular
-        color $pink-color-dark
-        text-transform capitalize
+                &:hover
+                    border-color $pink-color-dark
 
-        & .footer-icon-brand
-            fill: $pink-color-pink
-            margin 0 0 0 1.4rem
+                &:focus
+                &:active
+                    border-color rgba( $pink-color-dark, .1 )
 
-        &:hover .footer-icon-brand
-            fill: $pink-color-dark
+                    & .footer-icon
+                        fill: rgba( $pink-color-pink, .3 )
 
-        &:focus .footer-icon-brand
-        &:active .footer-icon-brand
-            fill: rgba( $pink-color-dark, .3 )
+
+    // FOOTER TERTIARY
+    // ------------------------------
+    &__tertiary
+        //
+
+        // FOOTER TERTIARY AUTHOR
+        // ------------------------------
+        & .author
+            display flex
+            align-items center
+            font 1.8rem/1.2 $open-sans--regular
+            color $pink-color-dark
+            text-transform capitalize
+
+            & .footer-icon-brand
+                fill: $pink-color-pink
+                margin 0 0 0 1.4rem
+
+            &:hover .footer-icon-brand
+                fill: $pink-color-dark
+
+            &:focus .footer-icon-brand
+            &:active .footer-icon-brand
+                fill: rgba( $pink-color-dark, .3 )

@@ -30,8 +30,12 @@
             & .topheader-icon-logo
                 fill: $color-white
 
-                &:hover
-                    fill: $pink-color-pink
+            &:hover .topheader-icon-logo
+            &:focus .topheader-icon-logo
+                fill: $pink-color-pink
+
+            &:active .topheader-icon-logo
+                fill: rgba( $color-white, .3 )
 
     // TOPHEADER SECONDARY
     // ------------------------------------------
