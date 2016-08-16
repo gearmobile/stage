@@ -1,8 +1,8 @@
-mixin footer(data)
+mixin footer()
     footer.footer
         .center
             .footer__primary
-                a.logo( href='#' )
+                a.logo( href='#0' )
                     != jadeHelpers.Icon.call( locals, { iconName: 'logotype', className: 'footer-icon-logo' })
                     | pink
             .footer__secondary
