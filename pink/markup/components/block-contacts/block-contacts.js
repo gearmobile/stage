@@ -7,87 +7,275 @@ GoogleMapsLoader.KEY = 'AIzaSyAQTQ3gx58ulhmp6zKOzTwAlzv2zhbari8';
 
 GoogleMapsLoader.load( function ( google ) {
 
-    var map = document.querySelector( '.contacts__main' );
-    var mapCoords = new google.maps.LatLng( 59.983173, 30.215911 );
-    var mapZoom = 16;
-    var isEdge = navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-    var markerPath = ( isEdge ) ? 'static/img/assets/block-contacts/map-marker.png' : 'static/img/assets/block-contacts/map-marker.svg';
+    const brampton = document.querySelector( '.contacts__main' );
+    const bramptonCoords = new google.maps.LatLng( 59.938942, 30.3149874 );
+    const zoomValue = 14;
+    const markerPath = 'static/img/assets/block-contacts/map-marker.png';
 
-    // var markerPath = 'static/img/assets/block-contacts/map-marker.svg';
+    const mapStyles = [
+        {
+            'featureType': 'all',
+            'elementType': 'labels',
+            'stylers': [
+                {
+                    'lightness': 63
+                },
+                {
+                    'hue': '#ff0000'
+                }
+            ]
+        },
+        {
+            'featureType': 'administrative',
+            'elementType': 'all',
+            'stylers': [
+                {
+                    'hue': '#000bff'
+                },
+                {
+                    'visibility': 'on'
+                }
+            ]
+        },
+        {
+            'featureType': 'administrative',
+            'elementType': 'geometry',
+            'stylers': [
+                {
+                    'visibility': 'on'
+                }
+            ]
+        },
+        {
+            'featureType': 'administrative',
+            'elementType': 'labels',
+            'stylers': [
+                {
+                    'color': '#4a4a4a'
+                },
+                {
+                    'visibility': 'on'
+                }
+            ]
+        },
+        {
+            'featureType': 'administrative',
+            'elementType': 'labels.text',
+            'stylers': [
+                {
+                    'weight': '0.01'
+                },
+                {
+                    'color': '#727272'
+                },
+                {
+                    'visibility': 'on'
+                }
+            ]
+        },
+        {
+            'featureType': 'administrative.country',
+            'elementType': 'labels',
+            'stylers': [
+                {
+                    'color': '#ff0000'
+                }
+            ]
+        },
+        {
+            'featureType': 'administrative.country',
+            'elementType': 'labels.text',
+            'stylers': [
+                {
+                    'color': '#ff0000'
+                }
+            ]
+        },
+        {
+            'featureType': 'administrative.province',
+            'elementType': 'geometry.fill',
+            'stylers': [
+                {
+                    'visibility': 'on'
+                }
+            ]
+        },
+        {
+            'featureType': 'administrative.province',
+            'elementType': 'labels.text',
+            'stylers': [
+                {
+                    'color': '#545454'
+                }
+            ]
+        },
+        {
+            'featureType': 'administrative.locality',
+            'elementType': 'labels.text',
+            'stylers': [
+                {
+                    'visibility': 'on'
+                },
+                {
+                    'color': '#737373'
+                }
+            ]
+        },
+        {
+            'featureType': 'administrative.neighborhood',
+            'elementType': 'labels.text',
+            'stylers': [
+                {
+                    'color': '#7c7c7c'
+                },
+                {
+                    'weight': '0.01'
+                }
+            ]
+        },
+        {
+            'featureType': 'administrative.land_parcel',
+            'elementType': 'labels.text',
+            'stylers': [
+                {
+                    'color': '#404040'
+                }
+            ]
+        },
+        {
+            'featureType': 'landscape',
+            'elementType': 'all',
+            'stylers': [
+                {
+                    'lightness': 16
+                },
+                {
+                    'hue': '#ff001a'
+                },
+                {
+                    'saturation': -61
+                }
+            ]
+        },
+        {
+            'featureType': 'poi',
+            'elementType': 'labels.text',
+            'stylers': [
+                {
+                    'color': '#828282'
+                },
+                {
+                    'weight': '0.01'
+                }
+            ]
+        },
+        {
+            'featureType': 'poi.government',
+            'elementType': 'labels.text',
+            'stylers': [
+                {
+                    'color': '#4c4c4c'
+                }
+            ]
+        },
+        {
+            'featureType': 'poi.park',
+            'elementType': 'all',
+            'stylers': [
+                {
+                    'hue': '#00ff91'
+                }
+            ]
+        },
+        {
+            'featureType': 'poi.park',
+            'elementType': 'labels.text',
+            'stylers': [
+                {
+                    'color': '#7b7b7b'
+                }
+            ]
+        },
+        {
+            'featureType': 'road',
+            'elementType': 'all',
+            'stylers': [
+                {
+                    'visibility': 'on'
+                }
+            ]
+        },
+        {
+            'featureType': 'road',
+            'elementType': 'labels',
+            'stylers': [
+                {
+                    'visibility': 'off'
+                }
+            ]
+        },
+        {
+            'featureType': 'road',
+            'elementType': 'labels.text',
+            'stylers': [
+                {
+                    'color': '#999999'
+                },
+                {
+                    'visibility': 'on'
+                },
+                {
+                    'weight': '0.01'
+                }
+            ]
+        },
+        {
+            'featureType': 'road.highway',
+            'elementType': 'all',
+            'stylers': [
+                {
+                    'hue': '#ff0011'
+                },
+                {
+                    'lightness': 53
+                }
+            ]
+        },
+        {
+            'featureType': 'road.highway',
+            'elementType': 'labels.text',
+            'stylers': [
+                {
+                    'color': '#626262'
+                }
+            ]
+        },
+        {
+            'featureType': 'transit',
+            'elementType': 'labels.text',
+            'stylers': [
+                {
+                    'color': '#676767'
+                },
+                {
+                    'weight': '0.01'
+                }
+            ]
+        },
+        {
+            'featureType': 'water',
+            'elementType': 'all',
+            'stylers': [
+                {
+                    'hue': '#0055ff'
+                }
+            ]
+        }
+    ];
 
-    // var bramptonMapStyles = [
-    //     {
-    //         featureType: 'water',
-    //         elementType: 'geometry',
-    //         stylers: [{color: '#e9e9e9'}, {lightness: 17}]
-    //     },
-    //     {
-    //         featureType: 'landscape',
-    //         elementType: 'geometry',
-    //         stylers: [{color: '#f5f5f5'}, {lightness: 20}]
-    //     },
-    //     {
-    //         featureType: 'road.highway',
-    //         elementType: 'geometry.fill',
-    //         stylers: [{color: '#ffffff'}, {lightness: 17}]
-    //     },
-    //     {
-    //         featureType: 'road.highway',
-    //         elementType: 'geometry.stroke',
-    //         stylers: [{color: '#ffffff'}, {lightness: 29}, {weight: 0.2}]
-    //     },
-    //     {
-    //         featureType: 'road.arterial',
-    //         elementType: 'geometry',
-    //         stylers: [{color: '#ffffff'}, {lightness: 18}]
-    //     },
-    //     {
-    //         featureType: 'road.local',
-    //         elementType: 'geometry',
-    //         stylers: [{color: '#ffffff'}, {lightness: 16}]
-    //     },
-    //     {
-    //         featureType: 'poi',
-    //         elementType: 'geometry',
-    //         stylers: [{color: '#f5f5f5'}, {lightness: 21}]
-    //     },
-    //     {
-    //         featureType: 'poi.park',
-    //         elementType: 'geometry',
-    //         stylers: [{color: '#dedede'}, {lightness: 21}]
-    //     },
-    //     {
-    //         elementType: 'labels.text.stroke',
-    //         stylers: [{visibility: 'on'}, {color: '#ffffff'}, {lightness: 16}]
-    //     },
-    //     {
-    //         elementType: 'labels.text.fill',
-    //         stylers: [{saturation: 36}, {color: '#333333'}, {lightness: 40}]
-    //     },
-    //     {
-    //         elementType: 'labels.icon',
-    //         stylers: [{visibility: 'off'}]
-    //     },
-    //     {
-    //         featureType: 'transit',
-    //         elementType: 'geometry',
-    //         stylers: [{ color: '#f2f2f2' }, { lightness: 19 }]
-    //     },
-    //     {
-    //         featureType: 'administrative',
-    //         elementType: 'geometry.fill',
-    //         stylers: [{ color: '#fefefe' }, { lightness: 20 }]
-    //     },
-    //     {
-    //         featureType: 'administrative',
-    //         elementType: 'geometry.stroke',
-    //         stylers: [{ color: '#fefefe' }, { lightness: 17 }, { weight: 1.2 }]
-    //     }
-    // ];
-
-    const mapProperties = {
-        center: mapCoords,
-        zoom: mapZoom,
+    const bramptonProperties = {
+        center: bramptonCoords,
+        zoom: zoomValue,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         panControl: false,
         zoomControl: false,
@@ -99,45 +287,42 @@ GoogleMapsLoader.load( function ( google ) {
         verviewMapControl: true,
         overviewMapControlOptions: {
             opened: false
-        }
-        // styles: bramptonMapStyles
+        },
+        styles: mapStyles
     };
 
-    // MARKER MAP
-    // -------------------------------------------------------------
+    const bramptonMap = new google.maps.Map( brampton, bramptonProperties );
 
-    const peterMap = new google.maps.Map( map, mapProperties );
-
-    const mapMarker = new google.maps.Marker({
-        position: mapCoords,
-        map: map,
+    const bramptonMarker = new google.maps.Marker({
+        position: bramptonCoords,
+        map: bramptonMap,
         icon: markerPath,
         visible: true,
         animation: google.maps.Animation.DROP
     });
 
-    const mapInfo = new google.maps.InfoWindow({
-        content: 'Brampton Manor Academy'
+    const bramptonInfo = new google.maps.InfoWindow({
+        content: 'Дворцовая площадь'
     });
 
-    mapMarker.addListener( 'click', function () {
-        mapInfo.open( peterMap, mapMarker );
+    bramptonMarker.addListener( 'click', function () {
+        bramptonInfo.open( bramptonMap, bramptonMarker );
     });
 
     // MAKE GOOGLE MAP RESPONSIVE
     // --------------------------------------------------------------------
 
-    let mapCenter = map.getCenter(); // returns the position displayed at the center of the map
+    let bramptonMapCenter = bramptonMap.getCenter(); // returns the position displayed at the center of the map
 
     // CENTER GOOGLE MAPS ON BROWSER RESIZE (RESPONSIVE)
     google.maps.event.addDomListener( window, 'resize', function () {
-        map.setCenter( mapCenter );
+        bramptonMap.setCenter( bramptonMapCenter );
     });
 
     // RETURN CENTER OF MAP TO THE CENTER OF WINDOW IF MAP WAS MOVED BY USER
-    google.maps.event.addListener( map, 'center_changed', function () {
+    google.maps.event.addListener( bramptonMap, 'center_changed', function () {
         window.setTimeout( function () {
-            map.setCenter( mapCenter );
+            bramptonMap.setCenter( bramptonMapCenter );
         }, 3000 );
     });
 
