@@ -1,16 +1,22 @@
-mixin block-contacts(data)
+mixin block-contacts()
     section.contacts
         header.contacts__header
             .center
-                h2.contacts__title Остались вопросы? #[br] Свяжитесь с нами!
-                ul.contacts__list
-                    li.contacts__item
-                        h3.contacts__subtitle Звоните:
-                        a.link.contacts__link( href='tel:+78125556666' ) +7 (812) 555-66-66
-                    li.contacts__item
-                        h3.contacts__subtitle Приезжайте в гости:
-                        a.link.contacts__link( href='#0' ) ул. Большая #[br] Конюшенная, 19/8
-                    li.contacts__item
-                        h3.contacts__subtitle Пишите:
-                        a.link.contacts__link( href='mailto:mail@htmlacademy.ru' ) mail@htmlacademy.ru
+                h2.title Остались вопросы? #[br] Свяжитесь с нами!
+                ul.list
+                    li.list__item
+                        h3.list__subtitle
+                            | Звоните:
+                        a.link.list__link( href='tel:+78125556666' )
+                            | +7 (812) 555-66-66
+                    li.list__item
+                        h3.list__subtitle
+                            | Приезжайте в гости:
+                        a.link.list__link( href='#0' )
+                            | ул. Большая Конюшенная, 19/8
+                    li.list__item
+                        h3.list__subtitle
+                            | Пишите:
+                        a.link.list__link( href='mailto:mail@htmlacademy.ru' )
+                            | mail@htmlacademy.ru
         main.contacts__main
