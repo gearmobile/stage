@@ -14,3 +14,5 @@ const openSansBold = new FontFaceObserver('open_sansbold');
 require( '../../components/block-topheader/block-topheader' );
 require( '../../components/block-reviews/block-reviews' );
 require( '../../components/block-contacts/block-contacts' );
+
+console.log( 'Pixel Ratio is ' + window.devicePixelRatio );
