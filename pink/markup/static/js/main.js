@@ -1,7 +1,6 @@
 'use strict';
 
 const FontFaceObserver = require( 'fontfaceobserver' );
-const swiper = require('swiper');
 
 // LOAD FONTS
 // ------------------------------------------
@@ -13,13 +12,5 @@ const openSansBold = new FontFaceObserver('open_sansbold');
 // PAGE INDEX
 // ----------------------------------------------------------
 require( '../../components/block-topheader/block-topheader' );
-
-window.addEventListener( 'load', function () {
-    console.log( window.devicePixelRatio );
-}, false );
-
-
-swiper( '.reviews .swiper-container', {
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev'
-});
+require( '../../components/block-reviews/block-reviews' );
+require( '../../components/block-contacts/block-contacts' );

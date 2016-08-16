@@ -138,5 +138,3 @@ GoogleMapsLoader.load( function ( google ) {
     });
 
 });
-
-module.exports = {};

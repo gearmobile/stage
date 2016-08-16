@@ -1,0 +1,35 @@
+// price
+// -----------------------------
+.price
+    background-color #f2f2f2
+    padding 14rem 0 8rem
+    position relative
+
+    &::before
+        content ''
+        display block
+        width 100%
+        height 9.4rem
+        background url( '%=static=%assets/block-price/triangle-white.svg' ) no-repeat
+        background-size cover
+        position absolute
+        top 0
+        left 0
+
+    & .table
+        width 100%
+
+        & td
+            border 0.2rem solid #e5e5e5
+            background-color $color-white
+            width calc( 100% / 4 )
+            text-align center
+            height 6rem
+            font 1.8rem/1.2 $open-sans--regular
+            color $pink-color-dark
+
+        & .table-icon-yes
+            fill: $pink-color-green
+
+        & .table-icon-no
+            fill: $pink-color-red

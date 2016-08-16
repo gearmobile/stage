@@ -35,3 +35,16 @@
         height 52.2rem
         background url( '%=static=%assets/block-contacts/map-desktop.jpg' ) no-repeat
         background-size cover
+        position relative
+
+        &::before
+            content ''
+            display block
+            size( 100%, 6.2rem )
+            position absolute
+            top 0
+            left 0
+            // background-color $pink-color-pink
+            z-index 10
+            background url( '%=static=%assets/block-contacts/triangle-white-footer.svg' ) no-repeat
+            background-size cover

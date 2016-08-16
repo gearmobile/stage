@@ -1,0 +1,32 @@
+mixin block-price()
+    section.price
+        .center
+            table.table
+                thead
+                    //
+                tbody
+                    tr
+                        td
+                            | Розовый фильтр
+                        td
+                            != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
+                        td
+                            != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
+                        td
+                            != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
+                    tr
+                        td Смайлики
+                        td
+                            != jadeHelpers.Icon.call( locals, { iconName: 'no', className: 'table-icon-no' })
+                        td
+                            != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
+                        td
+                            != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
+                    tr
+                        td Комментарии
+                        td
+                            != jadeHelpers.Icon.call( locals, { iconName: 'no', className: 'table-icon-no' })
+                        td
+                            != jadeHelpers.Icon.call( locals, { iconName: 'no', className: 'table-icon-no' })
+                        td
+                            != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
