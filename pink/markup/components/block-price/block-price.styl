@@ -19,6 +19,23 @@
     & .table
         width 100%
 
+        & th
+            width calc( 100% / 4 )
+            height 9.8rem
+            text-align center
+            border 0.2rem solid #f2f2f2
+            color $color-white
+            text-transform uppercase
+            position relative
+            overflow hidden
+
+            & .title
+                font 1.8rem/1.2 $open-sans--bold
+                margin 0 0 .4rem
+
+            & .price-value
+                font 2.4rem/1.2 $open-sans--light
+
         & td
             border 0.2rem solid #e5e5e5
             background-color $color-white
@@ -29,7 +46,25 @@
             color $pink-color-dark
 
         & .table-icon-yes
+        & .table-icon-no
+            size( 2.6rem )
+
+        & .table-icon-yes
             fill: $pink-color-green
 
         & .table-icon-no
             fill: $pink-color-red
+
+        &__head
+            background-color $pink-color-dark
+
+        &__label
+            display block
+            width 100%
+            font 1.4rem/2.6rem $open-sans--semibold
+            text-transform uppercase
+            background-color $pink-color-pink
+            position absolute
+            transform rotate(-45deg)
+            top .8rem
+            left -12.6rem
