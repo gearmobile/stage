@@ -1,29 +1,40 @@
-// reviews
+// REVIEWS
 // ---------------------------
 .reviews
     padding 6rem 0 3rem
     background-color $color-white
 
-    // reviews swiper-container
+    // REVIEWS SWIPER-CONTAINER
     // -------------------------------------------
     & .swiper-container
         width 100%
         height 100%
 
-    // reviews swiper-slide
+    // REVIEWS SWIPER-SLIDE
     // ------------------------------------------
     & .swiper-slide
         display flex
         flex-direction column
         align-items center
 
-    // reviews swiper-button-next && swiper-button-prev
+    // REVIEWS SWIPER-BUTTON-NEXT && SWIPER-BUTTON-PREV
     // --------------------------------------------------
     & .swiper-button-next
     & .swiper-button-prev
         background none
+        opacity 1
 
-    // reviews content
+        & .reviews-arrows
+            fill: rgba( $pink-color-dark, .3 )
+
+        &:hover .reviews-arrows
+            fill: rgba( $pink-color-dark, .6 )
+
+        &:focus .reviews-arrows
+            fill: rgba( $pink-color-dark, .1 )
+
+
+    // REVIEWS CONTENT
     // ----------------------------------------
     &__content
         lost-center 70rem
@@ -31,7 +42,7 @@
         flex-direction column
         align-items center
 
-    // reviews thumb
+    // REVIEWS THUMB
     // ----------------------------------------
     &__thumb
         margin 0 0 5rem
@@ -39,27 +50,27 @@
         & .reviews-icon
             fill: #efefef
 
-    // reviews cite
+    // REVIEWS CITE
     // ----------------------------------------
     &__cite
         font 1.8rem/1.4 $open-sans--regular
         color $pink-color-dark
         text-align center
 
-    // reviews meta
+    // REVIEWS META
     // ----------------------------------------
     &__meta
         margin 4rem 0 0
         text-align center
 
-        // reviews meta title
+        // REVIEWS META TITLE
         // ---------------------------------------
         & .title
             font 3rem/1.4 $open-sans--bold
             color $color-black
             text-transform capitalize
 
-        // reviews meta subtitle
+        // REVIEWS META SUBTITLE
         // --------------------------------------------
         & .subtitle
             font 1.8rem/1.4 $open-sans--regular
