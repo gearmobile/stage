@@ -4,27 +4,35 @@ mixin block-reviews()
             .swiper-container
                 .swiper-wrapper
                     .swiper-slide
-                        .reviews__thumb
-                        p
-                            | Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-                        .reviews__meta
-                            h3.title Николай Петров
-                            .subtitle 25 лет, водитель трамвая
+                        .reviews__content
+                            .reviews__thumb
+                                != jadeHelpers.Icon.call( locals, { iconName: 'quotes', className: 'reviews-icon' })
+                            p.reviews__cite
+                                | Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+                            .reviews__meta
+                                h3.title Николай Петров
+                                .subtitle 25 лет, водитель трамвая
                     .swiper-slide
-                        .reviews__thumb
-                        p
-                            | Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-                        .reviews__meta
-                            h3.title Николай Петров
-                            .subtitle 25 лет, водитель трамвая
+                        .reviews__content
+                            .reviews__thumb
+                                != jadeHelpers.Icon.call( locals, { iconName: 'quotes', className: 'reviews-icon' })
+                            p.reviews__cite
+                                | Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+                            .reviews__meta
+                                h3.title Николай Петров
+                                .subtitle 25 лет, водитель трамвая
                     .swiper-slide
-                        .reviews__thumb
-                        p
-                            | Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-                        .reviews__meta
-                            h3.title Николай Петров
-                            .subtitle 25 лет, водитель трамвая
+                        .reviews__content
+                            .reviews__thumb
+                                != jadeHelpers.Icon.call( locals, { iconName: 'quotes', className: 'reviews-icon' })
+                            p.reviews__cite
+                                | Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+                            .reviews__meta
+                                h3.title Николай Петров
+                                .subtitle 25 лет, водитель трамвая
                 .swiper-button-next
+                    != jadeHelpers.Icon.call( locals, { iconName: 'review-arrow-right', className: 'reviews-arrows' })
                 .swiper-button-prev
+                    != jadeHelpers.Icon.call( locals, { iconName: 'review-arrow-left', className: 'reviews-arrows' })
                 
                 

@@ -4,11 +4,63 @@
     padding 6rem 0 3rem
     background-color $color-white
 
+    // reviews swiper-container
+    // -------------------------------------------
     & .swiper-container
         width 100%
         height 100%
 
+    // reviews swiper-slide
+    // ------------------------------------------
     & .swiper-slide
         display flex
         flex-direction column
         align-items center
+
+    // reviews swiper-button-next && swiper-button-prev
+    // --------------------------------------------------
+    & .swiper-button-next
+    & .swiper-button-prev
+        background none
+
+    // reviews content
+    // ----------------------------------------
+    &__content
+        lost-center 70rem
+        display flex
+        flex-direction column
+        align-items center
+
+    // reviews thumb
+    // ----------------------------------------
+    &__thumb
+        margin 0 0 5rem
+
+        & .reviews-icon
+            fill: #efefef
+
+    // reviews cite
+    // ----------------------------------------
+    &__cite
+        font 1.8rem/1.4 $open-sans--regular
+        color $pink-color-dark
+        text-align center
+
+    // reviews meta
+    // ----------------------------------------
+    &__meta
+        margin 4rem 0 0
+        text-align center
+
+        // reviews meta title
+        // ---------------------------------------
+        & .title
+            font 3rem/1.4 $open-sans--bold
+            color $color-black
+            text-transform capitalize
+
+        // reviews meta subtitle
+        // --------------------------------------------
+        & .subtitle
+            font 1.8rem/1.4 $open-sans--regular
+            color $pink-color-dark
