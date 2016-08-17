@@ -11,13 +11,28 @@ window.addEventListener( 'scroll', function () {
     } else {
         topHeader.classList.remove( 'js-hidden' );
     }
-    // menu button
-    // ------------------------------------------
-    const buttonMenu = document.querySelector( '.topheader__tertiary .menu' );
+}, false );
+
+// MENU BUTTON && OVERLAY BUTTON
+// ------------------------------------------
+window.addEventListener( 'load', function () {
+    // ------------------------------------------------
+    // variables
+    // -------------------------------------------------
+    const topHeaderButton = document.querySelector( '.topheader .menu' );
     const overlay = document.querySelector( '.overlay' );
-    console.log( buttonMenu );
-    buttonMenu.addEventListener( 'click', function () {
+    const overlayButton = document.querySelector( '.overlay .overlay__button' );
+    const overlayLinks = document.querySelectorAll( '.overlay .overlay__link' );
+    // ------------------------------------------------
+    // topheader button
+    // -------------------------------------------------
+    topHeaderButton.addEventListener( 'click', function () {
         overlay.classList.toggle( 'js-visible' );
     }, false );
-
+    // ------------------------------------------------
+    // overlay button
+    // -------------------------------------------------
+    overlayButton.addEventListener( 'click', function () {
+        overlay.classList.remove( 'js-visible' );
+    }, false );
 }, false );

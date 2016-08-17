@@ -16,12 +16,14 @@
     // TOPHEADER CENTER
     // ------------------------------------------
     & .center
-        //
+        display flex
+        justify-content space-between
+        align-items center
 
     // TOPHEADER PRIMARY
     // ------------------------------------------
     &__primary
-        float left
+        //
 
         // TOPHEADER LOGO
         // ------------------------------------------
@@ -56,7 +58,6 @@
     // TOPHEADER SECONDARY
     // ------------------------------------------
     &__secondary
-        float right
 
         @media screen and ( max-width $tablet )
             display none
@@ -109,12 +110,10 @@
     // TOPHEADER TERTIARY
     // ------------------------------------------
     &__tertiary
-        float right
-        height 4rem
         display none
         
         @media screen and ( max-width $tablet )
-            display flex
+            display block
         
         // TOPHEADER TERTIARY ICON
         // ------------------------------------------
