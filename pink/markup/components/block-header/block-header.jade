@@ -1,13 +1,14 @@
 mixin block-header()
     header.header
-        .center
-            .header__content
-                h1.title Взгляните на жизнь иначе!
-                button.download( type='button' ) Скачать приложение
-                nav.socials
-                    a.socials__item( href='#0' title='App Store' rel='nofollow' target='_blank' )
-                    a.socials__item( href='#0' title='Google Play' rel='nofollow' target='_blank' )
-                    a.socials__item( href='#0' title='Windows Store' rel='nofollow' target='_blank' )
-                p.remarks
-                    | Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-            //- .header__image
+        .header__primary
+            .center
+                .header__image
+        .header__secondary
+            h1.title Взгляните на жизнь иначе!
+            button.header__download( type='button' ) Скачать приложение
+            nav.header__socials
+                a.header__item( href='#0' title='App Store' rel='nofollow' target='_blank' )
+                a.header__item( href='#0' title='Google Play' rel='nofollow' target='_blank' )
+                a.header__item( href='#0' title='Windows Store' rel='nofollow' target='_blank' )
+            p.header__remarks
+                | Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8

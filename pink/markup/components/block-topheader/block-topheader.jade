@@ -1,3 +1,5 @@
+include ../block-overlay/block-overlay
+
 mixin block-topheader()
     section.topheader
         .center
@@ -14,3 +16,4 @@ mixin block-topheader()
             .topheader__tertiary
                 button.menu( type='button' )
                     != jadeHelpers.Icon.call( locals, { iconName: 'menu-burger', className: 'topheader-icon-menu' })
+        +block-overlay()

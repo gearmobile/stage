@@ -1,164 +1,107 @@
-
-// HEADER
-// ------------------------------------
+// header
+// ---------------------------------
 .header
-    background url( '%=static=%assets/block-header/background-fullsize.jpg' ) 50% 50% no-repeat
-    background-size cover
+    //
 
-    // HEADER CENTER
-    // ------------------------------------
-    & .center
-        display flex
-        height 85.3rem
-        position relative
-        outline 1px dashed salmon
-        
-        @media screen and ( max-width $mobile )
-            padding-bottom 29rem
+    &__primary
+        background url( '%=static=%assets/block-header/background-fullsize.jpg' ) 50% 50% no-repeat
+        background-size cover
+        overflow hidden
 
-    // HEADER CONTENT
-    // ------------------------------------
-    &__content
-        float left
-        width 30rem
-        display flex
-        flex-direction column
-        align-items center
-        justify-content center
-        color $color-white
-        position relative
-        z-index 2
-        outline 1px dotted green
-        
-        @media screen and ( max-width $mobile )
-            position absolute
-            bottom 0
-            left 0
-            width 100%
-            padding 3rem
-            background-color $pink-color-dark
-
-        // HEADER CONTENT TITLE
-        // ------------------------------------
-        & .title
-            font 5rem/1.2 $open-sans--light
-            text-align center
-            padding 0 2rem
-            margin 0 0 6rem
-            
-            @media screen and ( max-width $mobile )
-                display none
-
-        // HEADER CONTENT BUTTON
-        // ------------------------------------
-        & .download
-            display flex
-            justify-content center
-            align-items center
-            width 80%
-            height 5.5rem
-            font 2rem/1.2 $open-sans--semibold
-            color $color-white
-            border .3rem solid $color-white
-            border-radius 50em
-            margin 0 0 6rem
-            transition all .2s
-            
-            @media screen and ( max-width $mobile )
-                margin 0 0 4rem
-                width 100%
-
-            &:hover
-                background-color $color-white
-                color $pink-color-pink
-
-            &:focus
-            &:active
-                color rgba( $pink-color-pink, .3 )
-
-        // HEADER CONTENT SOCIALS
-        // ------------------------------------
-        & .socials
-            display flex
-            justify-content center
-            align-items center
-            width 100%
-            margin 0 0 6rem
-            
-            @media screen and ( max-width $mobile )
-                margin 0 0 3rem
-                justify-content space-around
-
-            &__item
-                size( 5rem )
-                margin 0 1rem
-                
-                @media screen and ( max-width $mobile )
-                    margin 0
-
-                &:nth-child(1)
-                    bg($header-icon-01)
-
-                &:nth-child(2)
-                    bg($header-icon-02)
-
-                &:nth-child(3)
-                    bg($header-icon-03)
-
-        // HEADER CONTENT REMARKS
-        // ------------------------------------
-        & .remarks
-            font 1.8rem/1.4 $open-sans--light
-            text-align center
-            
-            @media screen and ( max-width $mobile )
-                max-width 90%
-
-    // HEADER SLIDER
-    // ------------------------------------
-    &__image
-        position absolute
-        bottom 0
-        right 0
-        z-index auto
-
-        // header desktop image
-        // --------------------------------------------------
-        @media screen and ( min-resolution 96dpi )
-            size( 105rem, 64.5rem )
-            background url( '%=static=%assets/block-header/iphone-hand-desktop@1x.png' ) 0 0 no-repeat
-            background-size cover
-
-        @media screen and ( min-resolution 144dpi )
-            size( 105rem, 64.5rem )
-            background url( '%=static=%assets/block-header/iphone-hand-desktop@2x.png' ) 0 0 no-repeat
-            background-size cover
-
-        // header tablet image
-        // --------------------------------------------------
         @media screen and ( max-width $tablet ) and ( min-resolution 96dpi )
-            size( 70rem, 54.5rem )
-            background url( '%=static=%assets/block-header/iphone-hand-tablet@1x.png' ) 0 0 no-repeat
+            background url( '%=static=%assets/block-header/background-tablet@1x.jpg' ) 50% 50% no-repeat
             background-size cover
 
         @media screen and ( max-width $tablet ) and ( min-resolution 144dpi )
-            size( 70rem, 54.5rem )
-            background url( '%=static=%assets/block-header/iphone-hand-tablet@2x.png' ) 0 0 no-repeat
+            background url( '%=static=%assets/block-header/background-tablet@2x.jpg' ) 50% 50% no-repeat
             background-size cover
 
-        // header mobile image
-        // --------------------------------------------------
+        @media screen and ( max-width $mobile ) and ( min-resolution 96dpi )
+            background url( '%=static=%assets/block-header/background-mobile@1x.jpg' ) 50% 50% no-repeat
+            background-size cover
+
+        @media screen and ( max-width $mobile ) and ( min-resolution 144dpi )
+            background url( '%=static=%assets/block-header/background-mobile@2x.jpg' ) 50% 50% no-repeat
+            background-size cover
+
+        & .center
+            height 85.3rem
+            position relative
+
+            @media screen and ( max-width $tablet )
+                height 72.9rem
+
+            @media screen and ( max-width $mobile )
+                height 45.8rem
+
+    &__image
+        position absolute
+        bottom -.2rem
+        right $gutter
+
+        @media screen and ( min-resolution 96dpi )
+            size( 58rem, 64.5rem )
+            background url( '%=static=%assets/block-header/iphone-hand-desktop@1x.png' ) 50% 50% no-repeat
+            background-size cover
+
+        @media screen and ( min-resolution 144dpi )
+            size( 58rem, 64.5rem )
+            background url( '%=static=%assets/block-header/iphone-hand-desktop@2x.png' ) 50% 50% no-repeat
+            background-size cover
+
+        @media screen and ( max-width $tablet ) and ( min-resolution 96dpi )
+            size( 47.2rem, 54.5rem )
+            background url( '%=static=%assets/block-header/iphone-hand-tablet@1x.png' ) 0 0 no-repeat
+            background-size cover
+            right $gutter
+
+        @media screen and ( max-width $tablet ) and ( min-resolution 144dpi )
+            size( 47.2rem, 54.5rem )
+            background url( '%=static=%assets/block-header/iphone-hand-tablet@2x.png' ) 0 0 no-repeat
+            background-size cover
+            right $gutter
+
         @media screen and ( max-width $mobile ) and ( min-resolution 96dpi )
             size( 25.8rem, 28.6rem )
             background url( '%=static=%assets/block-header/iphone-hand-mobile@1x.png' ) 0 0 no-repeat
             background-size cover
+            left 50%
+            transform translateX(-50%)
 
         @media screen and ( max-width $mobile ) and ( min-resolution 144dpi )
             size( 25.8rem, 28.6rem )
             background url( '%=static=%assets/block-header/iphone-hand-mobile@2x.png' ) 0 0 no-repeat
             background-size cover
+            left 50%
+            transform translateX(-50%)
 
         @media screen and ( max-width $mobile ) and ( min-resolution 288dpi )
             size( 25.8rem, 28.6rem )
             background url( '%=static=%assets/block-header/iphone-hand-mobile@3x.png' ) 0 0 no-repeat
             background-size cover
+            left 50%
+            transform translateX(-50%)
+
+
+
+    &__secondary
+        height 27rem
+        padding 2rem
+        background-color lightgreen
+
+        @media screen and ( min-width $mobile )
+            position absolute
+            left 0
+            top 0
+            height 72.9rem
+            width 30rem
+            display flex
+            flex-direction column
+            align-items center
+            justify-content center
+
+        @media screen and ( min-width $tablet )
+            height 85.3rem
+
+    &__remarks
+        text-align center
