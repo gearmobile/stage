@@ -6,7 +6,6 @@
 
     // FOOTER CENTER
     // ----------------------------------------
-
     & > .center
         display flex
         justify-content space-between
@@ -14,13 +13,20 @@
 
     // FOOTER PRIMARY
     // ----------------------------------------
-
     &__primary
         display flex
         align-items center
+        position relative
         height 3.2rem
         padding 0 0 0 4.6rem
-        background url( '%=static=%assets/footer/footer-logo.png' ) 0 50% no-repeat
+
+        &::before
+            content ''
+            display block
+            position absolute
+            top 0
+            left 0
+            bg($footer-logo)
 
         & p
             font 400 1.4rem/1.2 $ptsans
@@ -28,7 +34,6 @@
 
     // FOOTER SECONDARY
     // ----------------------------------------
-
     &__secondary a
         margin 0 1rem
         font 400 1.4rem/1.2 $ptsans
@@ -39,7 +44,6 @@
 
     // FOOTER TERTIARY
     // ----------------------------------------
-
     &__tertiary
 
         & nav

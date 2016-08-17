@@ -1,7 +1,7 @@
 // INTRO
 // ---------------------------------
 .intro
-    width 100%
+    //
 
     // INTRO PRIMARY
     // ---------------------------------
@@ -47,15 +47,6 @@
         padding 8.2rem 0 0 10rem
         position relative
 
-        &:nth-child(1)
-            background: url( '%=static=%assets/block-intro/intro-list-bg-01.png' ) 0 0 no-repeat
-
-        &:nth-child(2)
-            background: url( '%=static=%assets/block-intro/intro-list-bg-02.png' ) 0 0 no-repeat
-
-        &:nth-child(3)
-            background: url( '%=static=%assets/block-intro/intro-list-bg-03.png' ) 0 0 no-repeat
-
         &:nth-child(2)
         &:nth-child(3)
             &::before
@@ -66,7 +57,26 @@
                 top 40%
                 transform translateY( -40% )
                 left -14rem
-                background url( '%=static=%assets/block-intro/intro-arrow.png' ) 50% 50% no-repeat
+                bg($intro-arrow)
+
+        &:nth-child(1)
+        &:nth-child(2)
+        &:nth-child(3)
+            &::after
+                content ''
+                display block
+                position absolute
+                top 0
+                left 0
+
+        &:nth-child(1)::after
+            bg($intro-list-bg-01)
+
+        &:nth-child(2)::after
+            bg($intro-list-bg-02)
+
+        &:nth-child(3)::after
+            bg($intro-list-bg-03)
 
         & p
             font 700 1.7rem/1.2 $ptsans
@@ -92,13 +102,14 @@
         // INTRO SECONDARY CENTER
         // ---------------------------------
         & > .center
-            display flex
+            lost-center $width flex
             justify-content space-between
 
     // INTRO SECONDARY PRIMO
     // ---------------------------------
     &__primo
-        flex 0 1 30%
+        lost-column 4/12
+        lost-column-gutter 0
         position relative
 
         & p
@@ -115,7 +126,8 @@
     // INTRO SECONDARY SECONDO
     // ---------------------------------
     &__secondo
-        flex 0 1 40%
+        lost-column 5/12
+        lost-column-gutter 0
         position relative
 
         & p

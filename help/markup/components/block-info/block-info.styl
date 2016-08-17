@@ -22,7 +22,15 @@
     &__item
         flex 0 1 50%
         padding 0 0 0 6rem
-        background: url( '%=static=%assets/block-info/icon-block-info.png' ) 0 0 no-repeat
+        position relative
+
+        &::before
+            content ''
+            display block
+            position absolute
+            top 0
+            left 0
+            bg($icon-block-info)
 
         & p
             font 400 1.6rem/1.2 $ptsans
