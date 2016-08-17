@@ -1,7 +1,8 @@
 include ../module-invite/module-invite
+include ../block-logo/block-logo
 
 mixin block-announce()
-    .announce
+    section.announce
         .center
             .announce__primary
                 .primo
@@ -19,5 +20,6 @@ mixin block-announce()
                         | На текущий момент услуги сервиса gethelp оказываются только для жителей Москвы в пределах МКАД
             .announce__secondary
                 .primo
+                    +block-logo()
                 .secondo
                     +module-invite()
