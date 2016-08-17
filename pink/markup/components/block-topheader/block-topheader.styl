@@ -5,43 +5,58 @@
     top 0
     left 0
     width 100%
-    padding 2rem 0 4rem
+    padding 2rem 0
     z-index 9999
     background-color rgba( $color-black, .3 )
     transition all .2s
-    will-change transition
 
     &.js-hidden
-        padding 2rem 0 3rem
         background-color rgba( $color-black, .8 )
+
+    // TOPHEADER CENTER
+    // ------------------------------------------
+    & .center
+        //
 
     // TOPHEADER PRIMARY
     // ------------------------------------------
     &__primary
-        lost-column 4/12
-        lost-column-gutter 0
-
+        float left
 
         // TOPHEADER LOGO
         // ------------------------------------------
         & .logo
-            display block
+            display flex
+            align-items center
+            text-transform uppercase
+            color $color-white
+            font 3rem/1.2 $open-sans--regular
 
             & .topheader-icon-logo
+                margin 0 1rem 0 0
                 fill: $color-white
+                
+                @media screen and ( max-width $mobile )
+                    display none
+
+            &:hover
+            &:focus
+                color $pink-color-pink
 
             &:hover .topheader-icon-logo
             &:focus .topheader-icon-logo
                 fill: $pink-color-pink
 
+            &:active
+                color rgba( $pink-color-pink, .3 )
+
             &:active .topheader-icon-logo
-                fill: rgba( $color-white, .3 )
+                fill: rgba( $pink-color-pink, .3 )
 
     // TOPHEADER SECONDARY
     // ------------------------------------------
     &__secondary
-        lost-column 8/12
-        lost-column-gutter 0
+        float right
 
         @media screen and ( max-width $tablet )
             display none
@@ -57,10 +72,17 @@
             // TOPHEADER NAVIGATION ITEM
             // ------------------------------------------
             &__item
+                margin 0 0 0 8rem
                 text-transform capitalize
                 font 1.8rem/1.2 $open-sans--regular
                 color $color-white
                 position relative
+                
+                @media screen and ( max-width 980px )
+                    margin 0 0 0 6rem
+
+                &:first-child
+                    margin 0
 
                 &::before
                     content ''
@@ -87,8 +109,22 @@
     // TOPHEADER TERTIARY
     // ------------------------------------------
     &__tertiary
+        float right
+        height 4rem
         display none
-
+        
         @media screen and ( max-width $tablet )
-            float right
-            // display block
+            display flex
+        
+        // TOPHEADER TERTIARY ICON
+        // ------------------------------------------
+        & .topheader-icon-menu
+            fill $pink-color-white
+            
+        &:hover .topheader-icon-menu
+        &:focus .topheader-icon-menu
+            fill $pink-color-pink
+        
+        &:active .topheader-icon-menu
+            fill rgba( $pink-color-pink, .3 )
+

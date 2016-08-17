@@ -1,0 +1,79 @@
+// OVERLAY
+// ---------------------------------------
+.overlay
+    width 100%
+    background-color $pink-color-dark
+    position absolute
+    left 0
+    top 10rem
+    z-index 999
+    
+    // OVERLAY CENTER
+    // ---------------------------------------
+    & .center
+        display flex
+        justify-content space-between
+        align-items center
+      
+    // OVERLAY HEADER
+    // ---------------------------------------
+    &__header
+        padding 3rem 0
+        border-bottom .1rem solid $pink-color-black
+        border-top .1rem solid rgba( $pink-color-white, .15 )
+        
+    // OVERLAY LOGO
+    // ---------------------------------------
+    &__primary .logo
+        display flex
+        align-items center
+        text-transform uppercase
+        color $color-white
+        font 3rem/1.2 $open-sans--regular
+        
+        & .overlay-icon-logo
+            margin 0 1rem 0 0
+            fill $pink-color-white
+            
+            @media screen and ( max-width $mobile )
+                display none
+            
+    // OVERLAY CROSS
+    // ---------------------------------------
+    &__button .overlay-icon-cross
+        fill $pink-color-white
+        
+    &__button:hover .overlay-icon-cross
+    &__button:focus .overlay-icon-cross
+        fill $pink-color-pink
+        
+    &__button:active .overlay-icon-cross
+        fill rgba( $pink-color-pink, .3 )
+            
+    // OVERLAY MENU
+    // ---------------------------------------
+    &__menu
+        //
+            
+    // OVERLAY MENU ITEM
+    // ---------------------------------------
+    &__item
+        text-align center
+        border-bottom .1rem solid $pink-color-black
+                
+    // OVERLAY MENU LINK
+    // ---------------------------------------
+    &__link
+        display block
+        padding 2rem 0
+        border-top .1rem solid rgba( $pink-color-white, .15 )
+        font 1.8rem/1.2 $open-sans--bold
+        text-transform uppercase
+        color $pink-color-white
+        
+        &:hover
+        &:focus
+            color $pink-color-pink
+        
+        &:active
+            color rgba( $pink-color-pink, .3 )

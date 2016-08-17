@@ -30,6 +30,10 @@ button
     padding 0
     border none
     background-color transparent
+    
+    &:active
+    &:focus
+        outline none
 
 img
     vertical-align top
@@ -61,8 +65,9 @@ h1, h2, h3, h4, p
     margin-bottom -50px
 
 .center
-    lost-center $width
+    max-width $width
     padding 0 $gutter
+    margin auto
 
 * html .page__wrapper
     height 100%

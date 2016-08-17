@@ -3,6 +3,7 @@ html( class="no-js", lang="ru" )
 
     include ../components/head/head
     include ../components/block-topheader/block-topheader
+    include ../components/block-overlay/block-overlay
     include ../components/block-header/block-header
     include ../components/block-info/block-info
     include ../components/block-reviews/block-reviews
@@ -15,13 +16,14 @@ html( class="no-js", lang="ru" )
     body.page
         |%=symbols=%
         +block-topheader()
+        +block-overlay()
         section.page__wrapper
     
             +block-header()
-            +block-info()
-            +block-reviews()
-            +block-price()
-            +block-contacts()
+            //- +block-info()
+            //- +block-reviews()
+            //- +block-price()
+            //- +block-contacts()
     
             .page__buffer
         .page__footer

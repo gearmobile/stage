@@ -11,4 +11,13 @@ window.addEventListener( 'scroll', function () {
     } else {
         topHeader.classList.remove( 'js-hidden' );
     }
+    // menu button
+    // ------------------------------------------
+    const buttonMenu = document.querySelector( '.topheader__tertiary .menu' );
+    const overlay = document.querySelector( '.overlay' );
+    console.log( buttonMenu );
+    buttonMenu.addEventListener( 'click', function () {
+        overlay.classList.toggle( 'js-visible' );
+    }, false );
+
 }, false );

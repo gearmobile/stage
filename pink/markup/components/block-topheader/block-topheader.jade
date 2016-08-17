@@ -4,12 +4,13 @@ mixin block-topheader()
             .topheader__primary
                 a.logo( href='/' )
                     != jadeHelpers.Icon.call( locals, { iconName: 'logotype', className: 'topheader-icon-logo' })
+                    | pink
             .topheader__secondary
                 nav.navigation
                     a.navigation__item( href='#0' ) главная
                     a.navigation__item( href='#0' ) фотографии
                     a.navigation__item( href='#0' ) конкурс
-                    a.navigation__item( href='#0' ) HTML academy
+                    a.navigation__item( href='#0' ) html academy
             .topheader__tertiary
-                a.topheader__menu( href='#0' )
-                    != jadeHelpers.Icon.call( locals, { iconName: 'menu-burger', className: 'topheader-icon-hamburger' })
+                button.menu( type='button' )
+                    != jadeHelpers.Icon.call( locals, { iconName: 'menu-burger', className: 'topheader-icon-menu' })

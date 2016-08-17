@@ -1,0 +1,29 @@
+mixin block-overlay()
+    section.overlay
+        header.overlay__header
+            .center
+                .overlay__primary
+                    a.logo
+                        != jadeHelpers.Icon.call( locals, { iconName: 'logotype', className: 'overlay-icon-logo' })
+                        | pink
+                .overlay__secondary
+                    button.overlay__button( type='button' )
+                        != jadeHelpers.Icon.call( locals, { iconName: 'menu-cross', className: 'overlay-icon-cross' })
+        ul.overlay__menu
+            li.overlay__item
+                a.overlay__link( href='#0' ) Главная
+            li.overlay__item
+                a.overlay__link( href='#0' ) Фотографии
+            li.overlay__item
+                a.overlay__link( href='#0' ) Конкурс
+            li.overlay__item
+                a.overlay__link( href='#0' ) HMTL Academy
+
+
+
+
+
+
+
+
+
