@@ -12,12 +12,15 @@
         height 85.3rem
         position relative
         outline 1px dashed salmon
+        
+        @media screen and ( max-width $mobile )
+            padding-bottom 29rem
 
     // HEADER CONTENT
     // ------------------------------------
     &__content
-        lost-column 4/12
-        lost-column-gutter 0
+        float left
+        width 30rem
         display flex
         flex-direction column
         align-items center
@@ -26,6 +29,14 @@
         position relative
         z-index 2
         outline 1px dotted green
+        
+        @media screen and ( max-width $mobile )
+            position absolute
+            bottom 0
+            left 0
+            width 100%
+            padding 3rem
+            background-color $pink-color-dark
 
         // HEADER CONTENT TITLE
         // ------------------------------------
@@ -34,6 +45,9 @@
             text-align center
             padding 0 2rem
             margin 0 0 6rem
+            
+            @media screen and ( max-width $mobile )
+                display none
 
         // HEADER CONTENT BUTTON
         // ------------------------------------
@@ -41,7 +55,7 @@
             display flex
             justify-content center
             align-items center
-            width 78%
+            width 80%
             height 5.5rem
             font 2rem/1.2 $open-sans--semibold
             color $color-white
@@ -49,6 +63,10 @@
             border-radius 50em
             margin 0 0 6rem
             transition all .2s
+            
+            @media screen and ( max-width $mobile )
+                margin 0 0 4rem
+                width 100%
 
             &:hover
                 background-color $color-white
@@ -66,10 +84,17 @@
             align-items center
             width 100%
             margin 0 0 6rem
+            
+            @media screen and ( max-width $mobile )
+                margin 0 0 3rem
+                justify-content space-around
 
             &__item
                 size( 5rem )
                 margin 0 1rem
+                
+                @media screen and ( max-width $mobile )
+                    margin 0
 
                 &:nth-child(1)
                     bg($header-icon-01)
@@ -85,6 +110,9 @@
         & .remarks
             font 1.8rem/1.4 $open-sans--light
             text-align center
+            
+            @media screen and ( max-width $mobile )
+                max-width 90%
 
     // HEADER SLIDER
     // ------------------------------------

@@ -1,6 +1,5 @@
 // TOPHEADER HIDE AND SHOW
 // ------------------------------------
-
 window.addEventListener( 'scroll', function () {
     const topHeader = document.querySelector( '.topheader' );
     const topOffset = 10;
