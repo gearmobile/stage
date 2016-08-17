@@ -39,8 +39,16 @@
         display flex
         flex 0 1 40%
 
+        &:first-of-type
+
+            @media screen and ( max-width $bp768 )
+                flex 1 1 40%
+
         &:last-of-type
             margin 0 0 0 8rem
+
+            @media screen and ( max-width $bp768 )
+                display none
 
     // REVIEW IMAGE
     // -------------------------------------

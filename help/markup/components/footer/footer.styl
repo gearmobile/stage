@@ -34,13 +34,18 @@
 
     // FOOTER SECONDARY
     // ----------------------------------------
-    &__secondary a
-        margin 0 1rem
-        font 400 1.4rem/1.2 $ptsans
-        color $color-black--light
+    &__secondary
+    
+        @media screen and ( max-width $bp768 )
+            display none
 
-        &:hover
-            color $color-orange
+        & a
+            margin 0 1rem
+            font 400 1.4rem/1.2 $ptsans
+            color $color-black--light
+
+            &:hover
+                color $color-orange
 
     // FOOTER TERTIARY
     // ----------------------------------------
