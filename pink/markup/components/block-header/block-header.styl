@@ -1,8 +1,10 @@
-// header
+// HEADER
 // ---------------------------------
 .header
     //
 
+    // HEADER PRIMARY
+    // ---------------------------------
     &__primary
         background url( '%=static=%assets/block-header/background-fullsize.jpg' ) 50% 50% no-repeat
         background-size cover
@@ -34,6 +36,8 @@
             @media screen and ( max-width $mobile )
                 height 45.8rem
 
+    // HEADER IMAGE
+    // ---------------------------------
     &__image
         position absolute
         bottom -.2rem
@@ -83,11 +87,16 @@
             transform translateX(-50%)
 
 
-
+    // HEADER SECONDARY
+    // ---------------------------------
     &__secondary
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
         height 27rem
         padding 2rem
-        background-color lightgreen
+        background-color $pink-color-dark
 
         @media screen and ( min-width $mobile )
             position absolute
@@ -95,13 +104,57 @@
             top 0
             height 72.9rem
             width 30rem
-            display flex
-            flex-direction column
-            align-items center
-            justify-content center
 
         @media screen and ( min-width $tablet )
             height 85.3rem
 
+    // HEADER TITLE
+    // ---------------------------------
+    &__title
+
+        @media screen and ( max-width $mobile )
+            display none
+
+    // HEADER DOWNLOAD
+    // ---------------------------------
+    &__download
+        margin 0 0 4rem
+        border .3rem solid $pink-color-white
+        border-radius 50em
+        size( 80%, 5.5rem )
+        font 1.8rem/1.2 $open-sans--bold
+        color $pink-color-white
+
+        &:hover
+        &:focus
+            background-color $pink-color-white
+            color $pink-color-pink
+
+        &:active
+            color rgba( $pink-color-pink, .3 )
+
+    // HEADER SOCIALS
+    // ---------------------------------
+    &__socials
+        display flex
+        align-items center
+        justify-content space-around
+        width 70%
+        margin 0 0 2rem
+
+        & .header__item:nth-child(1)
+            bg($header-icon-01)
+
+        & .header__item:nth-child(2)
+            bg($header-icon-02)
+
+        & .header__item:nth-child(3)
+            bg($header-icon-03)
+
+    // HEADER REMARKS
+    // ---------------------------------
     &__remarks
         text-align center
+        font 1.4rem/1.6 $open-sans--light
+        color $pink-color-white
+        max-width 70%
