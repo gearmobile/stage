@@ -12,6 +12,7 @@ const openSansBold = new FontFaceObserver('open_sansbold');
 // PAGE INDEX
 // ----------------------------------------------------------
 require( '../../components/block-topheader/block-topheader' );
+require( '../../components/block-overlay/block-overlay' );
 require( '../../components/block-header/block-header' );
 require( '../../components/block-reviews/block-reviews' );
 // require( '../../components/block-contacts/block-contacts' );
