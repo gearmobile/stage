@@ -1,4 +1,4 @@
-// information
+// INFORMATION
 // ---------------------------
 .information
     //
@@ -51,21 +51,24 @@
                 top -.2rem
 
         @media screen and ( min-width $tablet )
-            clearfix()
+            display flex
 
     &__content
-        padding 0 2rem 4rem
+        padding 4rem 2rem
 
         @media screen and ( min-width $tablet )
-            float right
             max-width 62%
+            display flex
+            flex-direction column
+            justify-content center
+            order 2
 
         @media screen and ( min-width $desktop )
-            float none
             max-width 100%
-            display flex
+            flex-direction row
             justify-content space-between
             position relative
+            padding 0 2rem 4rem
 
     &__item
         text-align center
@@ -107,10 +110,10 @@
         background-color salmon
 
         @media screen and ( min-width $tablet )
-            float left
             width 26.8rem
             height 54.8rem
             position relative
+            order 1
 
         @media screen and ( min-width $desktop )
             display none
