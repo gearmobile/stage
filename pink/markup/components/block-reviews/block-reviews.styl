@@ -9,6 +9,7 @@
     & .swiper-container
         width 100%
         height 100%
+        padding 0 0 4rem
 
     // REVIEWS SWIPER-SLIDE
     // ------------------------------------------
@@ -33,11 +34,44 @@
         &:focus .reviews-arrows
             fill: rgba( $pink-color-dark, .1 )
 
+        @media screen and ( max-width $tablet )
+            display none
+
+    // REVIEWS SWIPER-PAGINATION
+    // ---------------------------
+    & .swiper-pagination
+        bottom 0
+        display flex
+        align-items center
+        justify-content center
+        
+        @media screen and ( min-width $tablet )
+            display none
+
+    // REVIEWS SWIPER-PAGINATION-BULLET
+    // ---------------------------
+    & .swiper-pagination-bullet
+        size( .6rem )
+        opacity 1
+        background-color rgba( $pink-color-dark, .3 )
+
+        &:hover
+        &:focus
+            background-color rgba( $pink-color-dark, .6 )
+
+        &:active
+            background-color rgba( $pink-color-dark, .1 )
+
+    & .swiper-pagination-bullet-active
+        size( 1.2rem )
+        background-color transparent
+        border .3rem solid $pink-color-dark
+
 
     // REVIEWS CONTENT
     // ----------------------------------------
     &__content
-        lost-center 70rem
+        max-width 90%
         display flex
         flex-direction column
         align-items center
@@ -48,14 +82,27 @@
         margin 0 0 5rem
 
         & .reviews-icon
-            fill: #efefef
+            fill #efefef
+
+        @media screen and ( max-width $tablet )
+            display none
 
     // REVIEWS CITE
     // ----------------------------------------
     &__cite
-        font 1.8rem/1.4 $open-sans--regular
+        font 1.8rem/1.8 $open-sans--regular
         color $pink-color-dark
         text-align center
+        quotes '\00ab' '\00bb'
+
+        &::before
+            content open-quote
+
+        &::after
+            content close-quote
+            
+        @media screen and ( min-width $tablet )
+            max-width 80%
 
     // TODO
     // добавить кавычки

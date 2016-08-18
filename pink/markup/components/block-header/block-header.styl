@@ -94,16 +94,17 @@
         flex-direction column
         justify-content center
         align-items center
-        height 27rem
-        padding 2rem
+        padding 4rem 2rem
         background-color $pink-color-dark
 
         @media screen and ( min-width $mobile )
             position absolute
             left $gutter
             top 0
+            z-index 2
             height 72.9rem
             width 30rem
+            background-color transparent
 
         @media screen and ( min-width $tablet )
             height 85.3rem
@@ -111,6 +112,11 @@
     // HEADER TITLE
     // ---------------------------------
     &__title
+        font 4rem/1.2 $open-sans--light
+        max-width 70%
+        text-align center
+        color $pink-color-white
+        margin 0 0 4rem
 
         @media screen and ( max-width $mobile )
             display none
