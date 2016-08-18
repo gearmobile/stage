@@ -40,7 +40,7 @@
         // INFO GALLERY
         // ------------------------------------------
         & .gallery
-            lost-center 100%
+            // lost-center 100%
 
             &__item
                 lost-column 1/3
@@ -85,6 +85,9 @@
             // ------------------------------------------
             &__image
                 margin 0 0 6rem
+
+                @media screen and ( max-width $tablet )
+                    display none
 
             // INFO TITLE
             // ------------------------------------------
