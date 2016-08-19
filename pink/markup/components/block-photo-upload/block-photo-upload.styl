@@ -1,0 +1,67 @@
+// PHOTO-UPLOAD
+// -------------------------------
+.photo-upload
+    //
+
+    // PHOTO-UPLOAD CENTER
+    // -------------------------------
+    & .center
+        //
+
+    // PHOTO-UPLOAD HEADER
+    // -------------------------------
+    &__header
+        background-color $pink-color-white
+        padding 0 0 6rem
+
+    // PHOTO-UPLOAD TITLE
+    // -------------------------------
+    &__title
+        text-align center
+        font 1.8rem/1.6 $open-sans--regular
+        color $pink-color-dark
+
+    // PHOTO-UPLOAD MAIN
+    // -------------------------------
+    &__main
+        lost-center 100% flex
+        background-color #f2f2f2
+        padding 4rem 8rem
+
+    &__primary
+        lost-column 4/12
+        lost-column-gutter $gutter*2
+        img-adaptive()
+
+    &__secondary
+        lost-column 8/12
+        lost-column-gutter $gutter*2
+        display flex
+        flex-direction column
+        justify-content space-between
+
+        & .toolbar
+            //
+
+            &__list
+                //
+
+            &__item
+                padding 1.4rem 3rem 1.4rem 0
+                border-bottom .1rem solid rgba( $pink-color-dark, .1 )
+                display flex
+
+                & .toolbar-icon
+                    size( 4rem )
+                    fill $pink-color-pink
+                    margin 0 4rem 0 0
+
+        & .submit
+            display flex
+            justify-content space-between
+
+            &__item
+                //
+
+            &__button
+                //
