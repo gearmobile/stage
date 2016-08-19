@@ -1,0 +1,74 @@
+include ../block-photo-post/block-photo-post
+
+mixin block-photo()
+    section.photo
+        header.photo__header
+            .picture
+                img( src='%=static=%img/assets/block-photo/panorama-desktop.jpg' alt='Photo' )
+                span.picture-label
+                    | панорама дня
+            .picture-caption
+                .center
+                    .picture-caption__header
+                        .picture-caption__title
+                            | Анна <span>(5 минут назад)</span>
+                        a.picture-caption__subtitle( href='#0' )
+                            | Нравится: <span class='picture-caption__count'>215</span>
+                    .picture-caption__content
+                        | Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!
+        main.photo__main
+            .center
+                .gallery
+                    .gallery__item
+                        +block-photo-post(
+                        '%=static=%img/assets/block-photo-post/photo-post-image-01.png',
+                        'Левон',
+                        '(5 часов назад)',
+                        'Вчера он на луну летал, сегодня в руки к нам попал.',
+                        '356')
+                    .gallery__item
+                        +block-photo-post(
+                        '%=static=%img/assets/block-photo-post/photo-post-image-02.png',
+                        'Антон',
+                        '(12 часов назад)',
+                        'Соседи будут рады!',
+                        '666')
+                    .gallery__item
+                        +block-photo-post(
+                        '%=static=%img/assets/block-photo-post/photo-post-image-03.png',
+                        'Борис',
+                        '(20 часов назад)',
+                        'Здесь могла быть ваша цитата о высоком и вечном.',
+                        '215')
+                    .gallery__item
+                        +block-photo-post(
+                        '%=static=%img/assets/block-photo-post/photo-post-image-04.png',
+                        'Сергей',
+                        '(25 часов назад)',
+                        'Самая кубанская в мире!',
+                        '4')
+                    .gallery__item
+                        +block-photo-post(
+                        '%=static=%img/assets/block-photo-post/photo-post-image-05.png',
+                        'Максим',
+                        '(40 часов назад)',
+                        'Где снег-то?',
+                        '150')
+                    .gallery__item
+                        +block-photo-post(
+                        '%=static=%img/assets/block-photo-post/photo-post-image-06.png',
+                        'Надежда',
+                        '(45 часов назад)',
+                        'Всем GM и взаимные лайки!',
+                        '2560')
+
+
+
+
+
+
+
+
+
+
+

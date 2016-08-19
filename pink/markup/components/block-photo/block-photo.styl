@@ -1,0 +1,78 @@
+// PHOTO
+// --------------------------------------------
+.photo
+    //
+
+    // PHOTO HEADER
+    // --------------------------------------------
+    &__header
+        //
+
+    & .picture
+        position relative
+        img-adaptive()
+
+    & .picture-label
+        padding 1.1rem 2rem
+        background-color $pink-color-pink
+        text-transform uppercase
+        color $pink-color-white
+        font 1.2rem/1.2 $open-sans--bold
+        position absolute
+        top 4rem
+        right 4rem
+
+    & .picture-caption
+        //
+
+        & > .center
+            background-color #f2f2f2
+            padding 3rem 2rem
+
+        &__header
+            display flex
+            justify-content space-between
+            margin 0 0 1rem
+
+        &__title
+            font 1.4rem/1.2 $open-sans--bold
+            color $pink-color-dark
+
+            & span
+                font 1.4rem/1.2 $open-sans--light
+                text-transform uppercase
+
+        &__subtitle
+            font 1.4rem/1.2 $open-sans--regular
+            text-transform uppercase
+            color $pink-color-pink
+
+            &:hover
+            &:focus
+                text-decoration underline
+                color $pink-color-dark
+
+            &:active
+                color rgba( $pink-color-dark, .3 )
+
+        &__content
+            font 1.4rem/1.2 $open-sans--regular
+            color $pink-color-dark
+
+    // PHOTO MAIN
+    // --------------------------------------------
+    &__main
+
+        & > .center
+            padding 5rem 0
+
+        & .gallery
+            lost-center 100% flex
+
+            &__item
+                lost-column 4/12
+                lost-column-gutter $gutter
+                lost-column-cycle 3
+
+                &:nth-child( -n+3 )
+                    margin-bottom 4rem

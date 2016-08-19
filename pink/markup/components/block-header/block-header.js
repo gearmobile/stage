@@ -7,8 +7,9 @@ const mobileWidth = 500;
 let flag = true;
 // ----------------------------
 window.addEventListener( 'load', function () {
-    if ( window.innerWidth > mobileWidth ) {
+    if ( window.innerWidth > mobileWidth && flag ) {
         center.insertBefore( headerSecondary.cloneNode( true ), center.childNodes[0] );
         headerSecondary.parentNode.removeChild( headerSecondary );
+        flag = false;
     }
 }, false );

@@ -1,6 +1,10 @@
 head: {
     defaults: {
-        title: 'Pink',
+        title: 'Pink - Index',
+        useSocialMetaTags: true
+    },
+    photo: {
+        title: 'Pink - Photo',
         useSocialMetaTags: true
     }
 }

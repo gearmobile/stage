@@ -1,0 +1,32 @@
+// HERO
+// --------------------------------
+.hero
+    height 40rem
+    display flex
+    justify-content center
+    align-items center
+    background $pink-color-dark url( '%=static=%assets/block-header/background-fullsize.jpg' ) 50% 50% no-repeat
+    background-size cover
+
+    @media screen and ( max-width $tablet ) and ( min-resolution 96dpi )
+        background url( '%=static=%assets/block-header/background-tablet@1x.jpg' ) 50% 50% no-repeat
+        background-size cover
+
+    @media screen and ( max-width $tablet ) and ( min-resolution 144dpi )
+        background url( '%=static=%assets/block-header/background-tablet@2x.jpg' ) 50% 50% no-repeat
+        background-size cover
+
+    @media screen and ( max-width $mobile ) and ( min-resolution 96dpi )
+        background url( '%=static=%assets/block-header/background-mobile@1x.jpg' ) 50% 50% no-repeat
+        background-size cover
+
+    @media screen and ( max-width $mobile ) and ( min-resolution 144dpi )
+        background url( '%=static=%assets/block-header/background-mobile@2x.jpg' ) 50% 50% no-repeat
+        background-size cover
+
+    // HERO TITLE
+    // --------------------------------
+    &__title
+        font 5rem/1.2 $open-sans--light
+        color $pink-color-white
+        text-align center

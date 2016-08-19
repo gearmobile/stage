@@ -1,0 +1,51 @@
+// photo-post
+// --------------------------------
+.photo-post
+    display flex
+    flex-direction column
+    min-height 15.6rem
+
+    &:hover .photo-post__thumb img
+        opacity 1
+
+    &__thumb
+        img-adaptive()
+
+        & img
+            opacity .8
+            transition opacity .2s
+
+    &__content
+        padding 3rem 4rem 3rem 3rem
+        background-color #f2f2f2
+
+    &__header
+        margin 0 0 2rem
+
+    &__title
+        color $pink-color-dark
+        font 2rem/1.2 $open-sans--bold
+        margin 0 0 .4rem
+
+    &__date
+        font 1.4rem/1.2 $open-sans--light
+
+    &__subtitle
+        color $pink-color-dark
+        font 1.4rem/1.6 $open-sans--regular
+
+    &__footer
+        display flex
+        justify-content space-between
+        align-items center
+
+        & p
+            font 1.8rem/1.6 $open-sans--bold
+            color $pink-color-pink
+
+        &__count
+            font 1.8rem/1.6 $open-sans--light
+
+        & .photo-post-icon
+            size( 1.4rem )
+            fill $pink-color-pink
