@@ -1,1 +1,78 @@
+// DIAGRAM
+// --------------------------------------
+.diagram
+    background-color #f2f2f2
+    padding 2rem 0 6rem
 
+    @media screen and ( max-width $tablet )
+        display none
+
+    // DIAGRAM CENTER
+    // --------------------------------------
+    & .center
+        display flex
+        align-items center
+
+    // DIAGRAM PRIMARY
+    // --------------------------------------
+    &__primary
+        size( 29.8rem, 34.5rem )
+        background url( '%=static=%assets/block-diagram/timer.svg' ) 50% 50% no-repeat
+        background-size cover
+        position relative
+
+    // DIAGRAM TIMER
+    // --------------------------------------
+    &__timer
+        size( 24rem )
+        border-radius 50%
+        border 2rem solid $pink-color-pink
+        position absolute
+        left 50%
+        transform translateX(-50%)
+        bottom 3rem
+
+    // DIAGRAM COUNT
+    // --------------------------------------
+    &__count
+        color $pink-color-pink
+        position absolute
+        top 50%
+        left 50%
+        transform translate( -50%, -50% )
+        font 12rem/1 $open-sans--bold
+
+    // DIAGRAM SECONDARY
+    // --------------------------------------
+    &__secondary
+        padding 0 0 0 6rem
+        max-width calc( 100% - 358px )
+
+    // DIAGRAM TXT
+    // --------------------------------------
+    &__content p
+        font 1.8rem/1.6 $open-sans--regular
+        color $pink-color-dark
+        margin 0 0 3rem
+
+    // DIAGRAM TITLE
+    // --------------------------------------
+    &__title
+        font 3rem/1.2 $open-sans--bold
+        color $pink-color-black
+        margin 0 0 2rem
+
+    // DIAGRAM LINK
+    // --------------------------------------
+    &__link
+        color $pink-color-pink
+        font 1.8rem/1.2 $open-sans--regular
+        text-decoration underline
+
+        &:hover
+        &:focus
+            text-decoration none
+            color $pink-color-dark
+
+        &:active
+            color rgba( $pink-color-dark, .3 )

@@ -44,7 +44,7 @@
         display flex
         align-items center
         justify-content center
-        
+
         @media screen and ( min-width $tablet )
             display none
 
@@ -94,19 +94,16 @@
         font 1.8rem/1.8 $open-sans--regular
         color $pink-color-dark
         text-align center
-        quotes '\00ab' '\00bb'
+        quotes '\00ab\0020' '\0020\00bb'
 
         &::before
             content open-quote
 
         &::after
             content close-quote
-            
+
         @media screen and ( min-width $tablet )
             max-width 80%
-
-    // TODO
-    // добавить кавычки
 
     // REVIEWS META
     // ----------------------------------------
