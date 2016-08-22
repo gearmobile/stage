@@ -1,0 +1,86 @@
+// form
+// ------------------------------
+.pink-form
+    //
+
+    & .center
+        //
+
+    & .form
+        //
+
+        &__title
+            //
+
+        &__section
+            //
+
+            &--primary
+            &--secondary
+            &--tertiary
+            &--fourth
+                padding 4.4rem 6rem
+                margin 0 0 6rem
+
+            &--secondary
+            &--tertiary
+            &--fourth
+                border .2rem solid #e5e5e5
+
+            &--secondary
+                display flex
+                justify-content space-between
+
+        &__primo
+        &__secondo
+            max-width 40%
+
+        &__legend
+            text-transform uppercase
+            color $pink-color-pink
+            font 1.4rem/1.2 $open-sans--regular
+            text-align center
+            padding 0 4rem
+
+        &__description
+            width 100%
+            min-height 13rem
+            padding 2.5rem 2.2rem 2.2rem 2.2rem
+            font 1.8rem/1.4 $open-sans--regular
+            color $pink-color-dark
+
+    & .list
+        display flex
+        justify-content center
+        flex-wrap wrap
+
+        &__item
+            display flex
+            flex 0 1 30%
+            align-items center
+            height 3.9rem
+            padding 0 0 0 6rem
+
+            &:nth-child( -n+3 )
+                margin 0 0 4rem
+
+        &__check
+            display none
+
+            &:checked + .list__label::before
+                bg( $check-2 )
+
+        &__label
+            font 1.8rem/1.4 $open-sans--regular
+            cursor pointer
+            position relative
+
+            &::before
+                content ''
+                display block
+                size( 3.9rem )
+                position absolute
+                left -6rem
+                top 50%
+                transform translateY( -50% )
+                bg( $check-1 )

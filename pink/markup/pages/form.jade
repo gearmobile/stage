@@ -4,21 +4,18 @@ html(class="no-js", lang="ru")
     include ../components/head/head
     include ../components/block-topheader/block-topheader
     include ../components/block-hero/block-hero
-    include ../components/block-photo/block-photo
-    include ../components/block-photo-upload/block-photo-upload
+    include ../components/block-form/block-form
     include ../components/footer/footer
 
     head
-        +head(head.photo)
+        +head(head.form)
     body.page
         |%=symbols=%
         +block-topheader()
         section.page__wrapper
 
-            //- Include your components here
-            +block-hero( 'Фотографии пользователей' )
-            +block-photo()
-            +block-photo-upload()
+            +block-hero( 'Конкурс на самое безбашенное путешествие с Пинк' )
+            +block-form()
 
             .page__buffer
 

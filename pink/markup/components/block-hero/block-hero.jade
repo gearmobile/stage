@@ -1,4 +1,3 @@
-mixin block-hero()
+mixin block-hero( data )
     .hero
-        h1.hero__title
-            | Фотографии #[br] пользователей
+        h1.hero__title= data

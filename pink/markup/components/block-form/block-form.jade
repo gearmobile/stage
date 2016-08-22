@@ -1,0 +1,39 @@
+mixin block-form()
+    section.pink-form
+        .center
+            form.form( method='post' action='action.php' )
+                h2.form__title
+                    | Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+                fieldset.form__section.form__section--primary
+                fieldset.form__section.form__section--secondary
+                    legend.form__legend контактная информация
+                    .form__primo
+                        input( type='tel' id='tel' placeholder='+7 ХХХ ХХХ-ХХ-ХХ' )
+                        label( for='tel' ) номер телефона
+                    .form__secondo
+                        input( type='email' id='email' placeholder='Введите почту' )
+                        label( for='email' ) адрес почты
+                fieldset.form__section.form__section--tertiary
+                    legend.form__legend ваши безбашенные достижения в путешествии
+                    ul.list
+                        li.list__item
+                            input.list__check( type='checkbox' id='one' checked )
+                            label.list__label( for='one' ) Сделал селфи с акулой
+                        li.list__item
+                            input.list__check( type='checkbox' id='two' )
+                            label.list__label( for='two' ) Видел Чака Норриса
+                        li.list__item
+                            input.list__check( type='checkbox' id='three' checked )
+                            label.list__label( for='three' ) Удержал башню
+                        li.list__item
+                            input.list__check( type='checkbox' id='four' checked )
+                            label.list__label( for='four' ) Обгорел на пляже
+                        li.list__item
+                            input.list__check( type='checkbox' id='five' )
+                            label.list__label( for='five' ) Накупил сувениров
+                        li.list__item
+                            input.list__check( type='checkbox' id='six' )
+                            label.list__label( for='six' ) Разгромил отель
+                fieldset.form__section.form__section--fourth
+                    legend.form__legend опишите свои эмоции
+                    textarea.form__description( placeholder='Можно прям в красках, не стесняясь в выражениях' )

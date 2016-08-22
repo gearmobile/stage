@@ -1,12 +1,12 @@
 mixin block-photo-post( path, title, date, subtitle, count )
     a.photo-post( href='#0' )
-        .photo-post__thumb
+        figure.photo-post__thumb
             img( src=path alt='Post Image' )
         .photo-post__content
             .photo-post__header
                 .photo-post__title= title
                     = ' '
-                    span.photo-post__date= date
+                    small.photo-post__date= date
                 .photo-post__subtitle= subtitle
             .photo-post__footer
                 p Нравится:

@@ -24,25 +24,26 @@
     // PHOTO-UPLOAD MAIN
     // -------------------------------
     &__main
-        lost-center 100% flex
+        display flex
+        justify-content space-between
         background-color #f2f2f2
         padding 4rem 8rem
 
     // PHOTO-UPLOAD PRIMARY
     // -------------------------------
     &__primary
-        lost-column 4/12
-        lost-column-gutter $gutter*4
+        size( 30rem, 40rem )
+        margin-right 9rem
         img-adaptive()
+        flex 0 1 40%
 
     // PHOTO-UPLOAD SECONDARY
     // -------------------------------
     &__secondary
-        lost-column 8/12
-        lost-column-gutter $gutter*4
         display flex
         flex-direction column
         justify-content space-between
+        flex 0 1 60%
 
         // PHOTO-UPLOAD TOOLBAR
         // -------------------------------
@@ -88,10 +89,15 @@
             display flex
             justify-content space-between
 
+            @media screen and ( max-width 980px )
+                flex-direction column
+                align-items center
+
             // PHOTO-UPLOAD ITEM
             // -------------------------------
-            &__item
-                //
+            &__item:nth-child(1)
+                @media screen and ( max-width 980px )
+                    margin 0 0 2rem
 
             // PHOTO-UPLOAD BUTTON
             // -------------------------------

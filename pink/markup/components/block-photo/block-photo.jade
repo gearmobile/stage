@@ -3,9 +3,9 @@ include ../block-photo-post/block-photo-post
 mixin block-photo()
     section.photo
         header.photo__header
-            .picture
+            figure.picture
                 img( src='%=static=%img/assets/block-photo/panorama-desktop.jpg' alt='Photo' )
-                span.picture-label
+                figcaption.picture-label
                     | панорама дня
             .picture-caption
                 .center
@@ -13,7 +13,7 @@ mixin block-photo()
                         .picture-caption__title
                             | Анна
                             = ' '
-                            span.picture-caption__date (5 минут назад)
+                            small.picture-caption__date (5 минут назад)
                         a.picture-caption__subtitle( href='#0' )
                             | Нравится:
                             = ' '
