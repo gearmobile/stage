@@ -20,14 +20,16 @@
             color $pink-color-dark
             text-align center
             max-width 75rem
-            margin 0 0 8rem
+            margin 0 auto 8rem
 
         // FORM SECTION
         // ------------------------------
         & .section
             padding 4.4rem 6rem
             margin 0 0 6rem
+            position relative
 
+            &:nth-child(2)
             &:nth-child(3)
             &:nth-child(4)
             &:nth-child(5)
@@ -35,12 +37,17 @@
 
             // FORM LEGEND
             // ------------------------------
-            &__legend
+            &__caption
                 text-transform uppercase
                 color $pink-color-pink
                 font 1.4rem/1.2 $open-sans--regular
                 text-align center
                 padding 0 4rem
+                position absolute
+                left 50%
+                top -.8rem
+                transform translateX(-50%)
+                background-color $pink-color-white
 
             // FORM DESCRIPTION
             // ------------------------------
@@ -50,6 +57,16 @@
                 padding 2.5rem 2.2rem 2.2rem 2.2rem
                 font 1.8rem/1.4 $open-sans--regular
                 color $pink-color-dark
+
+            &__half
+                width 46%
+
+            &__field
+                border .2rem solid #e5e5e5
+
+        & .section--half
+            display flex
+            justify-content space-between
 
         // FORM LIST
         // ------------------------------

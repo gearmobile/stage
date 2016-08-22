@@ -4,8 +4,8 @@ mixin block-form()
             form.form( method='post' action='action.php' )
                 h2.form__title
                     | Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
-                fieldset.section
-                    fieldset.section__half
+                .section.section--half
+                    .section__half
                         .section__row
                             label( for='name' ) имя
                             input( type='text' id='name' placeholder='Введите ваше имя' required )
@@ -15,8 +15,8 @@ mixin block-form()
                         .section__row
                             label( for='second-name' ) отчество
                             input( type='text' id='second-name' placeholder='Ну и отчество тоже' required )
-                    fieldset.section__half
-                        legend.section__legend С каким приложением путешествовали?
+                    .section__half
+                        small.section__caption С каким приложением путешествовали?
                         .section__row
                             input( type='radio' id='ios' checked )
                             label( for='ios' ) Pink для iOS
@@ -26,16 +26,20 @@ mixin block-form()
                         .section__row
                             input( type='radio' id='windows' )
                             label( for='windows' ) Windows Phone
-                fieldset.section
-                    legend.section__legend контактная информация
-                    fieldset.section__half
-                        input( type='tel' id='tel' placeholder='+7 ХХХ ХХХ-ХХ-ХХ' )
+                .section.section--half
+                    small.section__caption контактная информация
+                    .section__half
+                        .section__field
+                            input( type='tel' id='tel' placeholder='+7 ХХХ ХХХ-ХХ-ХХ' )
+                            != jadeHelpers.Icon.call( locals, { iconName: 'old-phone', className: 'section-icon' })
                         label( for='tel' ) номер телефона
-                    fieldset.section__half
-                        input( type='email' id='email' placeholder='Введите почту' )
+                    .section__half
+                        .section__field
+                            input( type='email' id='email' placeholder='Введите почту' )
+                            != jadeHelpers.Icon.call( locals, { iconName: 'mail', className: 'section-icon' })
                         label( for='email' ) адрес почты
-                fieldset.section
-                    legend.section__legend ваши безбашенные достижения в путешествии
+                .section
+                    small.section__caption ваши безбашенные достижения в путешествии
                     ul.list
                         li.list__item
                             input.list__check( type='checkbox' id='one' checked )
@@ -55,6 +59,6 @@ mixin block-form()
                         li.list__item
                             input.list__check( type='checkbox' id='six' )
                             label.list__label( for='six' ) Разгромил отель
-                fieldset.section
-                    legend.section__legend опишите свои эмоции
+                .section
+                    small.section__caption опишите свои эмоции
                     textarea.section__description( placeholder='Можно прям в красках, не стесняясь в выражениях' )
