@@ -15,7 +15,10 @@ mixin block-photo()
                             = ' '
                             span.picture-caption__date (5 минут назад)
                         a.picture-caption__subtitle( href='#0' )
-                            | Нравится: <span class='picture-caption__count'>215</span>
+                            | Нравится:
+                            = ' '
+                            span.picture-caption__count 215
+                            != jadeHelpers.Icon.call( locals, { iconName: 'like', className: 'photo-post-icon' })
                     .picture-caption__content
                         | Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!
         main.photo__main
