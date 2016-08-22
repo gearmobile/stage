@@ -32,14 +32,14 @@
     // -------------------------------
     &__primary
         lost-column 4/12
-        lost-column-gutter $gutter*2
+        lost-column-gutter $gutter*4
         img-adaptive()
 
     // PHOTO-UPLOAD SECONDARY
     // -------------------------------
     &__secondary
         lost-column 8/12
-        lost-column-gutter $gutter*2
+        lost-column-gutter $gutter*4
         display flex
         flex-direction column
         justify-content space-between
@@ -65,11 +65,14 @@
                 // -------------------------------
                 & .toolbar-icon
                     size( 4rem )
-                    fill $pink-color-pink
+                    fill rgba( $pink-color-dark, .3 )
                     margin 0 4rem 0 0
 
-                &:focus .toolbar-icon
-                    fill rgba( $pink-color-dark, .3 )
+                &:hover .toolbar-icon
+                    fill rgba( $pink-color-dark, .5 )
+
+                &:active .toolbar-icon
+                    fill $pink-color-pink
 
             &__form
                 width 100%

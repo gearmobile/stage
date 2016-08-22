@@ -1,4 +1,4 @@
-// photo-post
+// PHOTO-POST
 // --------------------------------
 .photo-post
     display flex
@@ -8,6 +8,8 @@
     &:hover .photo-post__thumb img
         opacity 1
 
+    // PHOTO-POST THUMB
+    // --------------------------------
     &__thumb
         img-adaptive()
 
@@ -15,25 +17,37 @@
             opacity .8
             transition opacity .2s
 
+    // PHOTO-POST CONTENT
+    // --------------------------------
     &__content
         padding 3rem 4rem 3rem 3rem
         background-color #f2f2f2
 
+    // PHOTO-POST HEADER
+    // --------------------------------
     &__header
         margin 0 0 2rem
 
+    // PHOTO-POST TITLE
+    // --------------------------------
     &__title
         color $pink-color-dark
         font 2rem/1.2 $open-sans--bold
         margin 0 0 .4rem
 
+    // PHOTO-POST DATE
+    // --------------------------------
     &__date
         font 1.4rem/1.2 $open-sans--light
 
+    // PHOTO-POST SUBTITLE
+    // --------------------------------
     &__subtitle
         color $pink-color-dark
         font 1.4rem/1.6 $open-sans--regular
 
+    // PHOTO-POST FOOTER
+    // --------------------------------
     &__footer
         display flex
         justify-content space-between
@@ -46,6 +60,8 @@
         &__count
             font 1.8rem/1.6 $open-sans--light
 
+        // PHOTO-POST FOOTER ICON
+        // --------------------------------
         & .photo-post-icon
             size( 1.4rem )
             fill $pink-color-pink

@@ -11,7 +11,9 @@ mixin block-photo()
                 .center
                     .picture-caption__header
                         .picture-caption__title
-                            | Анна <span>(5 минут назад)</span>
+                            | Анна
+                            = ' '
+                            span.picture-caption__date (5 минут назад)
                         a.picture-caption__subtitle( href='#0' )
                             | Нравится: <span class='picture-caption__count'>215</span>
                     .picture-caption__content
@@ -19,21 +21,22 @@ mixin block-photo()
         main.photo__main
             .center
                 .gallery
-                    .gallery__item
+                    article.gallery__sizer
+                    article.gallery__item
                         +block-photo-post(
                         '%=static=%img/assets/block-photo-post/photo-post-image-01.png',
                         'Левон',
                         '(5 часов назад)',
                         'Вчера он на луну летал, сегодня в руки к нам попал.',
                         '356')
-                    .gallery__item
+                    article.gallery__item
                         +block-photo-post(
                         '%=static=%img/assets/block-photo-post/photo-post-image-02.png',
                         'Антон',
                         '(12 часов назад)',
                         'Соседи будут рады!',
                         '666')
-                    .gallery__item
+                    article.gallery__item
                         +block-photo-post(
                         '%=static=%img/assets/block-photo-post/photo-post-image-03.png',
                         'Борис',
@@ -47,14 +50,14 @@ mixin block-photo()
                         '(25 часов назад)',
                         'Самая кубанская в мире!',
                         '4')
-                    .gallery__item
+                    article.gallery__item
                         +block-photo-post(
                         '%=static=%img/assets/block-photo-post/photo-post-image-05.png',
                         'Максим',
                         '(40 часов назад)',
                         'Где снег-то?',
                         '150')
-                    .gallery__item
+                    article.gallery__item
                         +block-photo-post(
                         '%=static=%img/assets/block-photo-post/photo-post-image-06.png',
                         'Надежда',

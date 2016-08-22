@@ -14,17 +14,21 @@
 
 // input type range
 // ---------------------------------------------------
+
 input[type=range].toolbar__slider {
   -webkit-appearance: none;
   width: 100%;
   margin: 6px 0;
 }
+
 input[type=range]::-moz-focus-outer {
   border: 0;
 }
+
 input[type=range].toolbar__slider:focus {
   outline: none;
 }
+
 input[type=range].toolbar__slider::-webkit-slider-runnable-track {
   width: 100%;
   height: 2px;
@@ -33,6 +37,7 @@ input[type=range].toolbar__slider::-webkit-slider-runnable-track {
   border-radius: 0px;
   border: 0px solid rgba(0, 0, 0, 0);
 }
+
 input[type=range].toolbar__slider::-webkit-slider-thumb {
   border: 2px solid $pink-color-pink;
   height: 14px;
@@ -43,9 +48,15 @@ input[type=range].toolbar__slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   margin-top: -6px;
 }
+
+input[type=range].toolbar__slider:focus::-webkit-slider-thumb {
+    background-color $pink-color-pink
+}
+
 input[type=range].toolbar__slider:focus::-webkit-slider-runnable-track {
   background: #314355;
 }
+
 input[type=range].toolbar__slider::-moz-range-track {
   width: 100%;
   height: 2px;
@@ -54,6 +65,7 @@ input[type=range].toolbar__slider::-moz-range-track {
   border-radius: 0px;
   border: 0px solid rgba(0, 0, 0, 0);
 }
+
 input[type=range].toolbar__slider::-moz-range-thumb {
   border: 2px solid #d22856;
   height: 14px;
@@ -62,6 +74,11 @@ input[type=range].toolbar__slider::-moz-range-thumb {
   background: #f2f2f2;
   cursor: pointer;
 }
+
+input[type=range].toolbar__slider:focus::-moz-range-thumb {
+    background-color $pink-color-pink
+}
+
 input[type=range].toolbar__slider::-ms-track {
   width: 100%;
   height: 2px;
@@ -70,16 +87,19 @@ input[type=range].toolbar__slider::-ms-track {
   border-color: transparent;
   color: transparent;
 }
+
 input[type=range].toolbar__slider::-ms-fill-lower {
   background: #1f2935;
   border: 0px solid rgba(0, 0, 0, 0);
   border-radius: 0px;
 }
+
 input[type=range].toolbar__slider::-ms-fill-upper {
   background: #283645;
   border: 0px solid rgba(0, 0, 0, 0);
   border-radius: 0px;
 }
+
 input[type=range].toolbar__slider::-ms-thumb {
   border: 2px solid #d22856;
   height: 14px;
@@ -89,9 +109,15 @@ input[type=range].toolbar__slider::-ms-thumb {
   cursor: pointer;
   height: 2px;
 }
+
+input[type=range].toolbar__slider:focus::-ms-thumb {
+    background-color $pink-color-pink
+}
+
 input[type=range].toolbar__slider:focus::-ms-fill-lower {
   background: #283645;
 }
+
 input[type=range].toolbar__slider:focus::-ms-fill-upper {
   background: #314355;
 }

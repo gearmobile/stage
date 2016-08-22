@@ -8,10 +8,14 @@
     &__header
         //
 
+    // PHOTO PICTURE
+    // --------------------------------------------
     & .picture
         position relative
         img-adaptive()
 
+    // PHOTO PICTURE LABEL
+    // --------------------------------------------
     & .picture-label
         padding 1.1rem 2rem
         background-color $pink-color-pink
@@ -22,26 +26,36 @@
         top 4rem
         right 4rem
 
+    // PHOTO PICTURE-CAPTION
+    // --------------------------------------------
     & .picture-caption
         //
 
+        // PHOTO PICTURE-CAPTION CENTER
+        // --------------------------------------------
         & > .center
             background-color #f2f2f2
             padding 3rem 2rem
 
+        // PHOTO PICTURE-CAPTION HEADER
+        // --------------------------------------------
         &__header
             display flex
             justify-content space-between
             margin 0 0 1rem
 
+        // PHOTO PICTURE-CAPTION TITLE
+        // --------------------------------------------
         &__title
-            font 1.4rem/1.2 $open-sans--bold
+            font 2rem/1.2 $open-sans--bold
             color $pink-color-dark
 
-            & span
-                font 1.4rem/1.2 $open-sans--light
-                text-transform uppercase
+        &__date
+            font 1.4rem/1.2 $open-sans--light
+            text-transform uppercase
 
+        // PHOTO PICTURE-CAPTION SUBTITLE
+        // --------------------------------------------
         &__subtitle
             font 1.4rem/1.2 $open-sans--regular
             text-transform uppercase
@@ -55,6 +69,8 @@
             &:active
                 color rgba( $pink-color-dark, .3 )
 
+        // PHOTO PICTURE-CAPTION CONTENT
+        // --------------------------------------------
         &__content
             font 1.4rem/1.2 $open-sans--regular
             color $pink-color-dark
@@ -63,16 +79,20 @@
     // --------------------------------------------
     &__main
 
+        // PHOTO MAIN CENTER
+        // --------------------------------------------
         & > .center
             padding 5rem 0
 
+        // PHOTO MAIN GALLERY
+        // --------------------------------------------
         & .gallery
-            lost-center 100% flex
+            clearfix()
+
+            &__sizer
+            &__item
+                width calc( 100% / 3 )
 
             &__item
-                lost-column 4/12
-                lost-column-gutter $gutter
-                lost-column-cycle 3
-
-                &:nth-child( -n+3 )
-                    margin-bottom 4rem
+                float left
+                padding calc( ( 100% - 30% * 3 ) / 6 )
