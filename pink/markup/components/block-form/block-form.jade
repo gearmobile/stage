@@ -4,17 +4,38 @@ mixin block-form()
             form.form( method='post' action='action.php' )
                 h2.form__title
                     | Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
-                fieldset.form__section.form__section--primary
-                fieldset.form__section.form__section--secondary
-                    legend.form__legend контактная информация
-                    .form__primo
+                fieldset.section
+                    fieldset.section__half
+                        .section__row
+                            label( for='name' ) имя
+                            input( type='text' id='name' placeholder='Введите ваше имя' required )
+                        .section__row
+                            label( for='surname' ) фамилия
+                            input( type='text' id='surname' placeholder='Укажите фамилию' required )
+                        .section__row
+                            label( for='second-name' ) отчество
+                            input( type='text' id='second-name' placeholder='Ну и отчество тоже' required )
+                    fieldset.section__half
+                        legend.section__legend С каким приложением путешествовали?
+                        .section__row
+                            input( type='radio' id='ios' checked )
+                            label( for='ios' ) Pink для iOS
+                        .section__row
+                            input( type='radio' id='android' )
+                            label( for='android' ) Pink на Android
+                        .section__row
+                            input( type='radio' id='windows' )
+                            label( for='windows' ) Windows Phone
+                fieldset.section
+                    legend.section__legend контактная информация
+                    fieldset.section__half
                         input( type='tel' id='tel' placeholder='+7 ХХХ ХХХ-ХХ-ХХ' )
                         label( for='tel' ) номер телефона
-                    .form__secondo
+                    fieldset.section__half
                         input( type='email' id='email' placeholder='Введите почту' )
                         label( for='email' ) адрес почты
-                fieldset.form__section.form__section--tertiary
-                    legend.form__legend ваши безбашенные достижения в путешествии
+                fieldset.section
+                    legend.section__legend ваши безбашенные достижения в путешествии
                     ul.list
                         li.list__item
                             input.list__check( type='checkbox' id='one' checked )
@@ -34,6 +55,6 @@ mixin block-form()
                         li.list__item
                             input.list__check( type='checkbox' id='six' )
                             label.list__label( for='six' ) Разгромил отель
-                fieldset.form__section.form__section--fourth
-                    legend.form__legend опишите свои эмоции
-                    textarea.form__description( placeholder='Можно прям в красках, не стесняясь в выражениях' )
+                fieldset.section
+                    legend.section__legend опишите свои эмоции
+                    textarea.section__description( placeholder='Можно прям в красках, не стесняясь в выражениях' )
