@@ -28,11 +28,15 @@
         background-color #f2f2f2
         padding 4rem 8rem
 
+    // PHOTO-UPLOAD PRIMARY
+    // -------------------------------
     &__primary
         lost-column 4/12
         lost-column-gutter $gutter*2
         img-adaptive()
 
+    // PHOTO-UPLOAD SECONDARY
+    // -------------------------------
     &__secondary
         lost-column 8/12
         lost-column-gutter $gutter*2
@@ -40,28 +44,84 @@
         flex-direction column
         justify-content space-between
 
+        // PHOTO-UPLOAD TOOLBAR
+        // -------------------------------
         & .toolbar
             //
 
+            // PHOTO-UPLOAD TOOLBAR LIST
+            // -------------------------------
             &__list
                 //
 
+            // PHOTO-UPLOAD ITEM
+            // -------------------------------
             &__item
                 padding 1.4rem 3rem 1.4rem 0
                 border-bottom .1rem solid rgba( $pink-color-dark, .1 )
                 display flex
 
+                // PHOTO-UPLOAD ITEM ICON
+                // -------------------------------
                 & .toolbar-icon
                     size( 4rem )
                     fill $pink-color-pink
                     margin 0 4rem 0 0
 
+                &:focus .toolbar-icon
+                    fill rgba( $pink-color-dark, .3 )
+
+            &__form
+                width 100%
+                display flex
+                align-items center
+
+            &__slider
+                width 100%
+
+        // PHOTO-UPLOAD SUBMIT
+        // -------------------------------
         & .submit
             display flex
             justify-content space-between
 
+            // PHOTO-UPLOAD ITEM
+            // -------------------------------
             &__item
                 //
 
+            // PHOTO-UPLOAD BUTTON
+            // -------------------------------
             &__button
-                //
+                size( 18rem, 5.6rem )
+                border .2rem solid $pink-color-pink
+                border-radius 50em
+                color $pink-color-pink
+                text-transform capitalize
+                font 1.8rem/1.2 $open-sans--bold
+                text-transform all .2s
+
+                &:hover
+                &:focus
+                    background-color $pink-color-pink
+                    color $pink-color-white
+
+                &:active
+                    color rgba( $pink-color-white, .3 )
+
+                // PHOTO-UPLOAD BUTTON INACTIVE
+                // -------------------------------
+                &--cancel
+                    border-color rgba( $pink-color-dark, .1 )
+                    color rgba( $pink-color-dark, .1 )
+
+                    &:hover
+                    &:focus
+                        border-color rgba( $pink-color-dark, .3 )
+                        color rgba( $pink-color-dark, .3 )
+                        background-color transparent
+
+                    &:active
+                        background-color rgba( $pink-color-dark, .3 )
+                        color rgba( $pink-color-white, .3 )
+                        border-color rgba( $pink-color-dark, .3 )

@@ -14,15 +14,21 @@ mixin block-photo-upload(data)
                         ul.toolbar__list
                             li.toolbar__item
                                 != jadeHelpers.Icon.call( locals, { iconName: 'crop', className: 'toolbar-icon' })
+                                form.toolbar__form( method='post' action='action.php' )
+                                    input.toolbar__slider( type='range' min='0' max='100' value='20' step='1' )
                             li.toolbar__item
                                 != jadeHelpers.Icon.call( locals, { iconName: 'flask', className: 'toolbar-icon' })
+                                form.toolbar__form( method='post' action='action.php' )
+                                    input.toolbar__slider( type='range' min='0' max='100' value='80' step='1' )
                             li.toolbar__item
                                 != jadeHelpers.Icon.call( locals, { iconName: 'adjust', className: 'toolbar-icon' })
+                                form.toolbar__form( method='post' action='action.php' )
+                                    input.toolbar__slider( type='range' min='0' max='100' value='60' step='1' )
                     ul.submit
                         li.submit__item
                             button.submit__button( type='button' ) Запостить
                         li.submit__item
-                            button.submit__button( type='button' ) Отмена
+                            button.submit__button.submit__button--cancel( type='button' ) Отмена
 
 
 
