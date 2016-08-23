@@ -71,8 +71,7 @@
             width 46%
 
         & .section-half--secondary .section-row
-            height 3.9rem
-            cursor pointer
+            // height 3.9rem
 
             &:hover .section-row__label::before
                 border-color $pink-color-dark
@@ -84,25 +83,41 @@
 
         & .section-half--secondary .section-row__label
             color $pink-color-dark
-            font 1.8rem/1.2 $open-sans--regular
+            font 1.8rem/4rem $open-sans--regular
             padding 0 0 0 6rem
             position relative
+            cursor pointer
 
             &::before
+            &::after
                 content ''
                 display block
-                size( 3.9rem )
-                border .2rem solid #e5e5e5
-                border-radius 50%
                 position absolute
                 top 50%
                 transform translateY( -50% )
+                border-radius 50%
+                transition border-color .2s, background-color .2s
+
+            &::before
+                size( 4rem )
                 left 0
+                border .2rem solid #e5e5e5
                 transition border-color .2s
+
+            &::after
+                size( 1.4rem )
+                left 1.3rem
+                background-color transparent
 
         & .section-half--secondary .section-row__input
             position absolute
             clip rect( 0, 0, 0, 0 )
+
+            &:checked + .section-row__label::before
+                border-color $pink-color-pink
+
+            &:checked + .section-row__label::after
+                background-color $pink-color-pink
 
         // SECTION FIELD
         // ------------------------------
@@ -163,7 +178,7 @@
                 display flex
                 flex 0 1 30%
                 align-items center
-                height 3.9rem
+                height 4rem
                 padding 0 0 0 6rem
 
                 &:nth-child( -n+3 )
@@ -192,7 +207,7 @@
                 &::before
                     content ''
                     display block
-                    size( 3.9rem )
+                    size( 4rem )
                     border .2rem solid #e5e5e5
                     position absolute
                     left -6rem

@@ -18,24 +18,26 @@ mixin block-form()
                     .section-half.section-half--secondary.section--bordered
                         small.section__caption С каким приложением путешествовали?
                         .section-row
-                            input.section-row__input( type='radio' id='ios' checked )
+                            input.section-row__input( type='radio' name='mobile' id='ios' value='ios' checked )
                             label.section-row__label( for='ios' ) Pink для iOS
                         .section-row
-                            input.section-row__input( type='radio' id='android' )
+                            input.section-row__input( type='radio' name='mobile' id='android' value='android' )
                             label.section-row__label( for='android' ) Pink на Android
                         .section-row
-                            input.section-row__input( type='radio' id='windows' )
-                            label.section-row__label( for='windows' ) Windows Phone
+                            input.section-row__input( type='radio' name='mobile' id='windows-phone' value='windows-phone' )
+                            label.section-row__label( for='windows-phone' ) Windows Phone
                 .section.section--split.section--bordered
                     small.section__caption контактная информация
                     .section-half
                         .section-field
                             input.section-field__input( type='tel' id='tel' placeholder='+7 ХХХ ХХХ-ХХ-ХХ' )
+                            // todo - pattern phone number
                             != jadeHelpers.Icon.call( locals, { iconName: 'old-phone', className: 'section-icon' })
                         label.section-field__label( for='tel' ) номер телефона
                     .section-half
                         .section-field
                             input.section-field__input( type='email' id='email' placeholder='Введите почту' )
+                            // todo - pattern email
                             != jadeHelpers.Icon.call( locals, { iconName: 'mail', className: 'section-icon' })
                         label.section-field__label( for='email' ) адрес почты
                 .section.section--bordered
