@@ -67,27 +67,55 @@
 
         // FORM SECTION HALF
         // ------------------------------
-        & .section--half
+        & .section-half
             width 46%
 
-            & label
-                text-transform uppercase
-                color $pink-color-pink
-                font 1.4rem/1.2 $open-sans--regular
-                letter-spacing .1rem
-                margin 0 0 0 2rem
+        & .section-half--secondary .section-row
+            height 3.9rem
+            cursor pointer
 
-        // FORM SECTION DOUBLE
+            &:hover .section-row__label::before
+                border-color $pink-color-dark
+
+        & .section-half--primary .section-row__label
+            text-transform uppercase
+            color $pink-color-pink
+            font 1.4rem/1.2 $open-sans--regular
+
+        & .section-half--secondary .section-row__label
+            color $pink-color-dark
+            font 1.8rem/1.2 $open-sans--regular
+            padding 0 0 0 6rem
+            position relative
+
+            &::before
+                content ''
+                display block
+                size( 3.9rem )
+                border .2rem solid #e5e5e5
+                border-radius 50%
+                position absolute
+                top 50%
+                transform translateY( -50% )
+                left 0
+                transition border-color .2s
+
+        & .section-half--secondary .section-row__input
+            position absolute
+            clip rect( 0, 0, 0, 0 )
+
+        // SECTION FIELD
         // ------------------------------
-        & .section__field
+        & .section-field
             display flex
             justify-content space-between
             align-items center
             padding 2rem
             margin 0 0 2rem
             border .2rem solid #e5e5e5
+            transition border-color .2s
 
-            & input
+            &__input
                 width 100%
                 background-color transparent
                 border 0
@@ -102,9 +130,29 @@
                 margin 0 0 0 2rem
                 fill $pink-color-pink
 
+            &:hover
+                border-color $pink-color-dark
+
+            &__label
+                text-transform uppercase
+                color $pink-color-pink
+                font 1.4rem/1.2 $open-sans--regular
+                letter-spacing .1rem
+                margin 0 0 0 2rem
+
+        // SECTION ROW
+        // ------------------------------------------------------
+        & .section-row
+            display flex
+            align-items center
+            margin 0 0 2rem
+
+            &:last-child
+                margin 0
+
         // FORM LIST
         // ------------------------------
-        & .list
+        & .section-list
             display flex
             justify-content center
             flex-wrap wrap
@@ -121,16 +169,16 @@
                 &:nth-child( -n+3 )
                     margin 0 0 4rem
 
-                &:hover .list__label::before
+                &:hover .section-list__label::before
                     border-color $pink-color-dark
 
             // FORM LIST CHECK
             // ------------------------------
-            &__check
+            &__input
                 position absolute
                 clip rect( 0, 0, 0, 0 )
 
-                &:checked + .list__label::before
+                &:checked + .section-list__label::before
                     background url( '%=static=%assets/block-form/checked.png' ) 50% 50% no-repeat
                     border-color $pink-color-pink
 

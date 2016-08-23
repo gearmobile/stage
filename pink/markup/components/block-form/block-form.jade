@@ -5,60 +5,60 @@ mixin block-form()
                 h2.form__title
                     | Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
                 .section.section--split
-                    .section--half
-                        .section__row
-                            label( for='name' ) имя
-                            input( type='text' id='name' placeholder='Введите ваше имя' required )
-                        .section__row
-                            label( for='surname' ) фамилия
-                            input( type='text' id='surname' placeholder='Укажите фамилию' required )
-                        .section__row
-                            label( for='second-name' ) отчество
-                            input( type='text' id='second-name' placeholder='Ну и отчество тоже' required )
-                    .section--half.section--bordered
+                    .section-half.section-half--primary
+                        .section-row
+                            label.section-row__label( for='name' ) имя
+                            input.section-row__input( type='text' id='name' placeholder='Введите ваше имя' required )
+                        .section-row
+                            label.section-row__label( for='surname' ) фамилия
+                            input.section-row__input( type='text' id='surname' placeholder='Укажите фамилию' required )
+                        .section-row
+                            label.section-row__label( for='second-name' ) отчество
+                            input.section-row__input( type='text' id='second-name' placeholder='Ну и отчество тоже' required )
+                    .section-half.section-half--secondary.section--bordered
                         small.section__caption С каким приложением путешествовали?
-                        .section__row
-                            input( type='radio' id='ios' checked )
-                            label( for='ios' ) Pink для iOS
-                        .section__row
-                            input( type='radio' id='android' )
-                            label( for='android' ) Pink на Android
-                        .section__row
-                            input( type='radio' id='windows' )
-                            label( for='windows' ) Windows Phone
+                        .section-row
+                            input.section-row__input( type='radio' id='ios' checked )
+                            label.section-row__label( for='ios' ) Pink для iOS
+                        .section-row
+                            input.section-row__input( type='radio' id='android' )
+                            label.section-row__label( for='android' ) Pink на Android
+                        .section-row
+                            input.section-row__input( type='radio' id='windows' )
+                            label.section-row__label( for='windows' ) Windows Phone
                 .section.section--split.section--bordered
                     small.section__caption контактная информация
-                    .section--half
-                        .section__field
-                            input( type='tel' id='tel' placeholder='+7 ХХХ ХХХ-ХХ-ХХ' )
+                    .section-half
+                        .section-field
+                            input.section-field__input( type='tel' id='tel' placeholder='+7 ХХХ ХХХ-ХХ-ХХ' )
                             != jadeHelpers.Icon.call( locals, { iconName: 'old-phone', className: 'section-icon' })
-                        label( for='tel' ) номер телефона
-                    .section--half
-                        .section__field
-                            input( type='email' id='email' placeholder='Введите почту' )
+                        label.section-field__label( for='tel' ) номер телефона
+                    .section-half
+                        .section-field
+                            input.section-field__input( type='email' id='email' placeholder='Введите почту' )
                             != jadeHelpers.Icon.call( locals, { iconName: 'mail', className: 'section-icon' })
-                        label( for='email' ) адрес почты
+                        label.section-field__label( for='email' ) адрес почты
                 .section.section--bordered
                     small.section__caption ваши безбашенные достижения в путешествии
-                    ul.list
-                        li.list__item
-                            input.list__check( type='checkbox' id='one' checked )
-                            label.list__label( for='one' ) Сделал селфи с акулой
-                        li.list__item
-                            input.list__check( type='checkbox' id='two' )
-                            label.list__label( for='two' ) Видел Чака Норриса
-                        li.list__item
-                            input.list__check( type='checkbox' id='three' checked )
-                            label.list__label( for='three' ) Удержал башню
-                        li.list__item
-                            input.list__check( type='checkbox' id='four' checked )
-                            label.list__label( for='four' ) Обгорел на пляже
-                        li.list__item
-                            input.list__check( type='checkbox' id='five' )
-                            label.list__label( for='five' ) Накупил сувениров
-                        li.list__item
-                            input.list__check( type='checkbox' id='six' )
-                            label.list__label( for='six' ) Разгромил отель
+                    ul.section-list
+                        li.section-list__item
+                            input.section-list__input( type='checkbox' id='one' checked )
+                            label.section-list__label( for='one' ) Сделал селфи с акулой
+                        li.section-list__item
+                            input.section-list__input( type='checkbox' id='two' )
+                            label.section-list__label( for='two' ) Видел Чака Норриса
+                        li.section-list__item
+                            input.section-list__input( type='checkbox' id='three' checked )
+                            label.section-list__label( for='three' ) Удержал башню
+                        li.section-list__item
+                            input.section-list__input( type='checkbox' id='four' checked )
+                            label.section-list__label( for='four' ) Обгорел на пляже
+                        li.section-list__item
+                            input.section-list__input( type='checkbox' id='five' )
+                            label.section-list__label( for='five' ) Накупил сувениров
+                        li.section-list__item
+                            input.section-list__input( type='checkbox' id='six' )
+                            label.section-list__label( for='six' ) Разгромил отель
                 .section.section--bordered
                     small.section__caption опишите свои эмоции
                     textarea.section__description( placeholder='Можно прям в красках, не стесняясь в выражениях' )
