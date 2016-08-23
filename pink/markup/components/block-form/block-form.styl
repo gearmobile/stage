@@ -154,38 +154,40 @@
         // SECTION FIELD
         // ------------------------------
         & .section-field
-            display flex
-            justify-content space-between
-            align-items center
-            padding 2rem
+            width 100%
+            padding 2rem 5rem 2rem 2rem
             margin 0 0 2rem
             border .2rem solid #e5e5e5
             transition border-color .2s
-
-            &__input
-                width 100%
-                background-color transparent
-                border 0
-                font 1.8rem/1.2 $open-sans--regular
-                color $pink-color-dark
-
-                &:focus
-                    outline none
-
-            & .section-icon
-                size( 2rem )
-                margin 0 0 0 2rem
-                fill $pink-color-pink
+            background-color transparent
+            font 1.8rem/1.2 $open-sans--regular
+            color $pink-color-dark
 
             &:hover
                 border-color $pink-color-dark
 
-            &__label
-                text-transform uppercase
-                color $pink-color-pink
-                font 1.4rem/1.2 $open-sans--regular
-                letter-spacing .1rem
-                margin 0 0 0 2rem
+            &:focus
+            &:active
+                border-color $pink-color-pink
+
+            &:focus
+                out
+                line none
+
+        & .section-field[ type='tel' ]
+            background url( '%=static=%assets/block-form/old-phone.svg' ) 96% 50% no-repeat
+
+        & .section-field[ type='email' ]
+            background url( '%=static=%assets/block-form/mail.svg' ) 96% 50% no-repeat
+
+        // SECTION LABEL
+        // ------------------------------
+        & .section-label
+            text-transform uppercase
+            color $pink-color-pink
+            font 1.4rem/1.2 $open-sans--regular
+            letter-spacing .1rem
+            margin 0 0 0 2rem
 
         // SECTION ROW
         // ------------------------------------------------------

@@ -29,17 +29,11 @@ mixin block-form()
                 .section.section--split.section--bordered
                     small.section__caption контактная информация
                     .section-half
-                        .section-field
-                            input.section-field__input( type='tel' id='tel' placeholder='+7 ХХХ ХХХ-ХХ-ХХ' )
-                            // todo - pattern phone number
-                            != jadeHelpers.Icon.call( locals, { iconName: 'old-phone', className: 'section-icon' })
-                        label.section-field__label( for='tel' ) номер телефона
+                        input.section-field( type='tel' id='tel' placeholder='+7 ХХХ ХХХ-ХХ-ХХ' )
+                        label.section-label( for='tel' ) номер телефона
                     .section-half
-                        .section-field
-                            input.section-field__input( type='email' id='email' placeholder='Введите почту' )
-                            // todo - pattern email
-                            != jadeHelpers.Icon.call( locals, { iconName: 'mail', className: 'section-icon' })
-                        label.section-field__label( for='email' ) адрес почты
+                        input.section-field( type='email' id='email' placeholder='Введите почту' )
+                        label.section-label( for='email' ) адрес почты
                 .section.section--bordered
                     small.section__caption ваши безбашенные достижения в путешествии
                     ul.section-list
