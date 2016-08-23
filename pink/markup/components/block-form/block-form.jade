@@ -4,8 +4,8 @@ mixin block-form()
             form.form( method='post' action='action.php' )
                 h2.form__title
                     | Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
-                .section.section--half
-                    .section__half
+                .section.section--split
+                    .section--half
                         .section__row
                             label( for='name' ) имя
                             input( type='text' id='name' placeholder='Введите ваше имя' required )
@@ -15,7 +15,7 @@ mixin block-form()
                         .section__row
                             label( for='second-name' ) отчество
                             input( type='text' id='second-name' placeholder='Ну и отчество тоже' required )
-                    .section__half.section--bordered
+                    .section--half.section--bordered
                         small.section__caption С каким приложением путешествовали?
                         .section__row
                             input( type='radio' id='ios' checked )
@@ -26,14 +26,14 @@ mixin block-form()
                         .section__row
                             input( type='radio' id='windows' )
                             label( for='windows' ) Windows Phone
-                .section.section--half.section--bordered
+                .section.section--split.section--bordered
                     small.section__caption контактная информация
-                    .section__half
+                    .section--half
                         .section__field
                             input( type='tel' id='tel' placeholder='+7 ХХХ ХХХ-ХХ-ХХ' )
                             != jadeHelpers.Icon.call( locals, { iconName: 'old-phone', className: 'section-icon' })
                         label( for='tel' ) номер телефона
-                    .section__half
+                    .section--half
                         .section__field
                             input( type='email' id='email' placeholder='Введите почту' )
                             != jadeHelpers.Icon.call( locals, { iconName: 'mail', className: 'section-icon' })

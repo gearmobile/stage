@@ -41,6 +41,7 @@
             color $pink-color-pink
             font 1.4rem/1.2 $open-sans--regular
             text-align center
+            letter-spacing .1rem
             padding 0 4rem
             position absolute
             left 50%
@@ -56,16 +57,50 @@
             padding 2.5rem 2.2rem 2.2rem 2.2rem
             font 1.8rem/1.4 $open-sans--regular
             color $pink-color-dark
+            border .2rem solid #e5e5e5
 
-            &__half
-                width 46%
-
-            &__field
-                border .2rem solid #e5e5e5
-
-        & .section--half
+        // FORM SECTION SPLIT
+        // ------------------------------
+        & .section--split
             display flex
             justify-content space-between
+
+        // FORM SECTION HALF
+        // ------------------------------
+        & .section--half
+            width 46%
+
+            & label
+                text-transform uppercase
+                color $pink-color-pink
+                font 1.4rem/1.2 $open-sans--regular
+                letter-spacing .1rem
+                margin 0 0 0 2rem
+
+        // FORM SECTION DOUBLE
+        // ------------------------------
+        & .section__field
+            display flex
+            justify-content space-between
+            align-items center
+            padding 2rem
+            margin 0 0 2rem
+            border .2rem solid #e5e5e5
+
+            & input
+                width 100%
+                background-color transparent
+                border 0
+                font 1.8rem/1.2 $open-sans--regular
+                color $pink-color-dark
+
+                &:focus
+                    outline none
+
+            & .section-icon
+                size( 2rem )
+                margin 0 0 0 2rem
+                fill $pink-color-pink
 
         // FORM LIST
         // ------------------------------
@@ -86,13 +121,18 @@
                 &:nth-child( -n+3 )
                     margin 0 0 4rem
 
+                &:hover .list__label::before
+                    border-color $pink-color-dark
+
             // FORM LIST CHECK
             // ------------------------------
             &__check
-                display none
+                position absolute
+                clip rect( 0, 0, 0, 0 )
 
                 &:checked + .list__label::before
-                    bg( $check-2 )
+                    background url( '%=static=%assets/block-form/checked.png' ) 50% 50% no-repeat
+                    border-color $pink-color-pink
 
             // FORM LIST LABEL
             // ------------------------------
@@ -105,8 +145,9 @@
                     content ''
                     display block
                     size( 3.9rem )
+                    border .2rem solid #e5e5e5
                     position absolute
                     left -6rem
                     top 50%
                     transform translateY( -50% )
-                    bg( $check-1 )
+                    transition border-color .2s
