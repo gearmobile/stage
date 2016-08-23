@@ -68,6 +68,9 @@
             justify-content space-between
             align-items center
 
+            @media screen and ( max-width $tablet )
+                flex-direction column
+
         // FORM SECTION HALF
         // ------------------------------
         & .section-half
@@ -238,8 +241,11 @@
         // -------------------------------------------------------
         & .section-list
             display flex
-            justify-content center
+            justify-content space-between
             flex-wrap wrap
+
+            @media screen and ( max-width $tablet )
+                flex-direction column
 
             // FORM LIST ITEM
             // ---------------------------------------------------
@@ -247,7 +253,6 @@
                 display flex
                 flex 0 1 30%
                 align-items center
-                height 4rem
                 padding 0 0 0 6rem
 
                 &:nth-child( -n+3 )
@@ -255,6 +260,10 @@
 
                 &:hover .section-list__label::before
                     border-color $pink-color-dark
+
+                @media screen and ( max-width $tablet )
+                    &:nth-child( -n+5 )
+                        margin 0 0 4rem
 
             // FORM LIST CHECK
             // ------------------------------
@@ -269,7 +278,7 @@
             // FORM LIST LABEL
             // ------------------------------
             &__label
-                font 1.8rem/1.4 $open-sans--regular
+                font 1.8rem/1.2 $open-sans--regular
                 cursor pointer
                 position relative
 
@@ -283,3 +292,6 @@
                     top 50%
                     transform translateY( -50% )
                     transition border-color .2s
+
+                @media screen and ( max-width $tablet )
+                    line-height 4rem
