@@ -37,6 +37,7 @@
         // FORM LEGEND
         // ------------------------------
         & .section__caption
+            white-space: nowrap
             text-transform uppercase
             color $pink-color-pink
             font 1.4rem/1.2 $open-sans--regular
@@ -64,11 +65,41 @@
         & .section--split
             display flex
             justify-content space-between
+            align-items center
+            cursor not-allowed
 
         // FORM SECTION HALF
         // ------------------------------
         & .section-half
             width 46%
+
+        & .section-half--primary
+            display flex
+            flex-direction column
+            justify-content space-between
+
+        & .section-half--primary .section-row
+            display flex
+
+        & .section-half--primary .section-row__label
+
+            &::after
+                content ':'
+                margin 0 2rem 0 0
+
+        & .section-half--primary .section-row__input
+            width 100%
+            border .2rem solid #e5e5e5
+            padding 2rem
+            font 1.8rem/1.2 $open-sans--regular
+            color $pink-color-dark
+            transition border-color .2s
+
+            &:hover
+                border-color $pink-color-dark
+
+            &:focus
+                border-color $pink-color-pink
 
         & .section-half--secondary .section-row
             // height 3.9rem
@@ -165,15 +196,50 @@
             &:last-child
                 margin 0
 
+        // SECTION BUTTON
+        // -------------------------------------------------------
+        & .section-button
+            size( 30rem, 6rem )
+            background-color $pink-color-green
+            text-transform uppercase
+            font 1.8rem/1.2 $open-sans--bold
+            color $pink-color-white
+            transition background-color .2s, color .2s
+
+            &:hover
+                background-color darken( $pink-color-green, 20% )
+
+            &:active
+            &:focus
+                color rgba( $pink-color-white, .3 )
+                background-color darken( $pink-color-green, 20% )
+
+            &.is-disabled
+                background-color #e5e5e5
+                color $pink-color-white
+                pointer-events none
+
+        // SECTION REMARK
+        // ------------------------------------------------------
+        & .section-remark
+            text-transform uppercase
+            color $pink-color-dark
+            font 1.4rem/1.2 $open-sans--regular
+
+            &::before
+                content '*'
+                color $pink-color-pink
+                margin 0 .5rem 0 0
+
         // FORM LIST
-        // ------------------------------
+        // -------------------------------------------------------
         & .section-list
             display flex
             justify-content center
             flex-wrap wrap
 
             // FORM LIST ITEM
-            // ------------------------------
+            // ---------------------------------------------------
             &__item
                 display flex
                 flex 0 1 30%
