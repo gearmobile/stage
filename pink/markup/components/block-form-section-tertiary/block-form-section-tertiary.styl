@@ -19,13 +19,17 @@
         font 1.4rem/1.2 $open-sans--regular
         text-transform uppercase
         background-color $pink-color-white
+        white-space nowrap
 
     // SECTION-TERTIARY LIST
     // -------------------------------------------
     &__list
         display flex
-        justify-content space-between
+        justify-content center
         flex-wrap wrap
+
+        @media screen and ( max-width $tablet )
+            flex-direction column
 
     // SECTION-TERTIARY ITEM
     // -------------------------------------------
@@ -41,6 +45,10 @@
 
         &:hover .section-tertiary__label::before
             border-color $pink-color-dark
+
+        @media screen and ( max-width $tablet )
+            &:nth-child( -n + 5 )
+                margin 0 0 4rem
 
     // SECTION-TERTIARY INPUT
     // -------------------------------------------

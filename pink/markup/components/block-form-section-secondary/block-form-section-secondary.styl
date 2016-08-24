@@ -15,6 +15,10 @@
         display flex
         flex-direction column
 
+        @media screen and ( max-width $tablet )
+            lost-column 1/1
+            margin 0 0 4rem
+
     // SECTION-SECONDARY SECONDARY
     // --------------------------------
     &__secondary
@@ -22,6 +26,9 @@
         lost-column-gutter $gutter*3
         display flex
         flex-direction column
+
+        @media screen and ( max-width $tablet )
+            lost-column 1/1
 
     // SECTION-SECONDARY CAPTION
     // --------------------------------

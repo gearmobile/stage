@@ -13,6 +13,10 @@
         lost-column 1/2
         lost-column-gutter $gutter*3
 
+        @media screen and ( max-width $tablet )
+            lost-column 1/1
+            margin 0 0 6rem
+
     // SECTION-PRIMARY RIGHT
     // --------------------------------
     &__secondary
@@ -22,6 +26,15 @@
         flex-direction column
         justify-content center
         padding 0 0 0 6rem
+
+        @media screen and ( max-width $tablet )
+            lost-column 1/1
+            flex-direction row
+            justify-content space-between
+            padding 0
+
+            & .section-primary__row
+                margin 0
 
     // SECTION-PRIMARY ROW
     // --------------------------------
@@ -118,3 +131,4 @@
         font 1.4rem/1.2 $open-sans--regular
         text-transform uppercase
         background-color $pink-color-white
+        white-space nowrap

@@ -1,5 +1,7 @@
 mixin block-form-section-primary()
     section.section-primary
+        span.section-primary__caption
+            | С каким приложением путешествовали?
         ul.section-primary__primary
             li.section-primary__row
                 label.section-primary__label( for='name' )
@@ -14,8 +16,6 @@ mixin block-form-section-primary()
                     | отчество
                 input.section-primary__input( type='text' id='second-name' placeholder='Ну и отчество тоже' required )
         .section-primary__secondary
-            span.section-primary__caption
-                | С каким приложением путешествовали?
             .section-primary__row
                 input.section-primary__input-radio( type='radio' name='mobile' id='ios' value='ios' checked )
                 label.section-primary__label-radio( for='ios' )
