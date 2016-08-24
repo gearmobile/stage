@@ -2,66 +2,7 @@
 
 
 
-// FORM SECTION
-// ------------------------------
-& .section
-    margin 0 0 6rem
 
-// SECTION FIRST
-// --------------------------------------------------------
-& .section--first
-    @media screen and ( max-width $desktop )
-        display flex
-        flex-direction column
-
-        & > .section-half
-            width 100%
-
-            &:first-child
-                margin 0 0 6rem
-
-// SECTION SECOND
-// ----------------------------------------------------------
-& .section--second
-    @media screen and ( max-width $desktop )
-        display flex
-        flex-direction column
-
-        & > .section-half
-            width 100%
-
-            &:nth-child(2)
-                margin 0 0 6rem
-
-// SECTION FIFTH
-// ----------------------------------------------------------
-& .section--fifth .section-half
-    width 50%
-
-    @media screen and ( max-width $tablet )
-        flex-direction column
-
-        & > .section-half
-            width 100%
-            display flex
-            justify-content center
-
-            &:first-child
-                margin 0 0 6rem
-
-& .section--fifth .section-half.section-half--secondary
-    text-align right
-
-
-
-
-
-// FORM SECTION SPLIT
-// ------------------------------
-& .section--split
-    display flex
-    justify-content space-between
-    align-items center
 
 // FORM SECTION HALF
 // ------------------------------
@@ -171,61 +112,5 @@
 
 
 
-// FORM LIST
-// -------------------------------------------------------
-& .section-list
-    display flex
-    justify-content space-between
-    flex-wrap wrap
 
-    @media screen and ( max-width $desktop )
-        flex-direction column
 
-    // FORM LIST ITEM
-    // ---------------------------------------------------
-    &__item
-        display flex
-        flex 0 1 30%
-        align-items center
-        padding 0 0 0 6rem
-
-        &:nth-child( -n+3 )
-            margin 0 0 4rem
-
-        &:hover .section-list__label::before
-            border-color $pink-color-dark
-
-        @media screen and ( max-width $desktop )
-            &:nth-child( -n+5 )
-                margin 0 0 4rem
-
-    // FORM LIST CHECK
-    // ------------------------------
-    &__input
-        position absolute
-        clip rect( 0, 0, 0, 0 )
-
-        &:checked + .section-list__label::before
-            background url( '%=static=%assets/block-form/checked.png' ) 50% 50% no-repeat
-            border-color $pink-color-pink
-
-    // FORM LIST LABEL
-    // ------------------------------
-    &__label
-        font 1.8rem/1.2 $open-sans--regular
-        cursor pointer
-        position relative
-
-        &::before
-            content ''
-            display block
-            size( 4rem )
-            border .2rem solid #e5e5e5
-            position absolute
-            left -6rem
-            top 50%
-            transform translateY( -50% )
-            transition border-color .2s
-
-        @media screen and ( max-width $desktop )
-            line-height 4rem
