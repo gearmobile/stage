@@ -27,17 +27,43 @@
     // --------------------------------
     &__caption
         position absolute
+        top -1rem
         left 50%
-        transform translateX(-50%)
-        top 0
+        transform translateX( -50% )
         padding 0 2rem
+        color $pink-color-pink
+        font 1.4rem/1.2 $open-sans--regular
+        text-transform uppercase
+        background-color $pink-color-white
 
     // SECTION-SECONDARY INPUT
     // --------------------------------
     &__input
-        //
+        padding 2rem 5rem 2rem 2rem
+        margin 0 0 2rem
+        border .2rem solid $pink-color-grey-dark
+        background-color transparent
+        font 1.8rem/1.2 $open-sans--regular
+        color $pink-color-dark
+        transition border-color .2s
+
+        &:hover
+            border-color $pink-color-dark
+
+        &:focus
+        &:active
+            border-color $pink-color-pink
+
+        &[ type='tel' ]
+            background url( '%=static=%assets/block-pink-form/old-phone.svg' ) 96% 50% no-repeat
+
+        &[ type='email' ]
+            background url( '%=static=%assets/block-pink-form/mail.svg' ) 96% 50% no-repeat
 
     // SECTION-SECONDARY LABEL
     // --------------------------------
     &__label
-        //
+        text-transform uppercase
+        color $pink-color-pink
+        font 1.4rem/1.2 $open-sans--regular
+        margin 0 0 0 2rem

@@ -1,8 +1,4 @@
 
-// FORM FORM
-// ------------------------------
-& .form
-    // padding 10rem 0 0 0
 
 
 
@@ -56,44 +52,9 @@
 & .section--fifth .section-half.section-half--secondary
     text-align right
 
-// FORM SECTION BORDERED
-// ------------------------------
-& .section--bordered
-    padding 4.4rem 6rem
-    position relative
-    border .2rem solid #e5e5e5
 
-    @media screen and ( max-width $tablet )
-        padding 4rem 2rem
 
-// FORM LEGEND
-// ------------------------------
-& .section__caption
-    white-space nowrap
-    text-transform uppercase
-    color $pink-color-pink
-    font 1.4rem/1.2 $open-sans--regular
-    text-align center
-    padding 0 2rem
-    position absolute
-    left 50%
-    top -.8rem
-    transform translateX( -50% )
-    background-color $pink-color-white
 
-    @media screen and ( max-width $mobile )
-        white-space wrap
-
-// FORM DESCRIPTION
-// ------------------------------
-& .section__description
-    width 100%
-    min-height 13rem
-    padding 2.5rem 2.2rem 2.2rem 2.2rem
-    font 1.8rem/1.4 $open-sans--regular
-    color $pink-color-dark
-    border .2rem solid #e5e5e5
-    background-color transparent
 
 // FORM SECTION SPLIT
 // ------------------------------
@@ -188,43 +149,9 @@
     &:checked + .section-row__label::after
         background-color $pink-color-pink
 
-// SECTION FIELD
-// ------------------------------
-& .section-field
-    width 100%
-    padding 2rem 5rem 2rem 2rem
-    margin 0 0 2rem
-    border .2rem solid #e5e5e5
-    transition border-color .2s
-    background-color transparent
-    font 1.8rem/1.2 $open-sans--regular
-    color $pink-color-dark
 
-    &:hover
-        border-color $pink-color-dark
 
-    &:focus
-    &:active
-        border-color $pink-color-pink
 
-    &:focus
-        out
-        line none
-
-& .section-field[ type='tel' ]
-    background url( '%=static=%assets/block-form/old-phone.svg' ) 96% 50% no-repeat
-
-& .section-field[ type='email' ]
-    background url( '%=static=%assets/block-form/mail.svg' ) 96% 50% no-repeat
-
-// SECTION LABEL
-// ------------------------------
-& .section-label
-    text-transform uppercase
-    color $pink-color-pink
-    font 1.4rem/1.2 $open-sans--regular
-    letter-spacing .1rem
-    margin 0 0 0 2rem
 
 // SECTION ROW
 // ------------------------------------------------------
@@ -242,40 +169,7 @@
         &:last-child
             margin 0
 
-// SECTION BUTTON
-// -------------------------------------------------------
-& .section-button
-    size( 30rem, 6rem )
-    background-color $pink-color-green
-    text-transform uppercase
-    font 1.8rem/1.2 $open-sans--bold
-    color $pink-color-white
-    transition background-color .2s, color .2s
 
-    &:hover
-        background-color darken( $pink-color-green, 20% )
-
-    &:active
-    &:focus
-        color rgba( $pink-color-white, .3 )
-        background-color darken( $pink-color-green, 20% )
-
-    &.is-disabled
-        background-color #e5e5e5
-        color $pink-color-white
-        pointer-events none
-
-// SECTION REMARK
-// ------------------------------------------------------
-& .section-remark
-    text-transform uppercase
-    color $pink-color-dark
-    font 1.4rem/1.2 $open-sans--regular
-
-    &::before
-        content '*'
-        color $pink-color-pink
-        margin 0 .5rem 0 0
 
 // FORM LIST
 // -------------------------------------------------------

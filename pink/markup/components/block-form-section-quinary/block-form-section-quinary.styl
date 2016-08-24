@@ -2,7 +2,8 @@
 // ----------------------------------------
 .section-quinary
     lost-center 100% flex
-    padding 4rem 2rem
+    padding 4rem 0
+    align-items center
 
     // SECTION-QUINARY PRIMARY
     // ----------------------------------------
@@ -20,9 +21,34 @@
     // SECTION-QUINARY BUTTON
     // ----------------------------------------
     &__button
-        //
+        size( 30rem, 6rem )
+        background-color $pink-color-green
+        text-transform uppercase
+        font 1.8rem/1.2 $open-sans--bold
+        color $pink-color-white
+        transition background-color .2s, color .2s
+
+        &:hover
+            background-color darken( $pink-color-green, 20% )
+
+        &:active
+        &:focus
+            color rgba( $pink-color-white, .3 )
+            background-color darken( $pink-color-green, 20% )
+
+        &.is-disabled
+            background-color #e5e5e5
+            color $pink-color-white
+            pointer-events none
 
     // SECTION-QUINARY REMARK
     // ----------------------------------------
     &__remark
-        //
+        text-transform uppercase
+        color $pink-color-dark
+        font 1.4rem/1.2 $open-sans--regular
+
+        &::before
+            content '*'
+            color $pink-color-pink
+            margin 0 .5rem 0 0
