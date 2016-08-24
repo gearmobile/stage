@@ -1,66 +1,13 @@
+include ../block-form-section-primary/block-form-section-primary
+include ../block-form-section-secondary/block-form-section-secondary
+include ../block-form-section-tertiary/block-form-section-tertiary
+include ../block-form-section-quaternary/block-form-section-quaternary
+include ../block-form-section-quinary/block-form-section-quinary
+
 mixin block-form()
-    section.pink-form
-        .center
-            form.form( method='post' action='action.php' )
-                h2.form__title
-                    | Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
-                section.section.section--first.section--split
-                    section.section-half.section-half--primary
-                        section.section-row
-                            label.section-row__label( for='name' ) имя
-                            input.section-row__input( type='text' id='name' placeholder='Введите ваше имя' required )
-                        section.section-row
-                            label.section-row__label( for='surname' ) фамилия
-                            input.section-row__input( type='text' id='surname' placeholder='Укажите фамилию' required )
-                        section.section-row
-                            label.section-row__label( for='second-name' ) отчество
-                            input.section-row__input( type='text' id='second-name' placeholder='Ну и отчество тоже' required )
-                    section.section-half.section-half--secondary.section--bordered
-                        small.section__caption С каким приложением путешествовали?
-                        section.section-row
-                            input.section-row__input( type='radio' name='mobile' id='ios' value='ios' checked )
-                            label.section-row__label( for='ios' ) Pink для iOS
-                        section.section-row
-                            input.section-row__input( type='radio' name='mobile' id='android' value='android' )
-                            label.section-row__label( for='android' ) Pink на Android
-                        section.section-row
-                            input.section-row__input( type='radio' name='mobile' id='windows-phone' value='windows-phone' )
-                            label.section-row__label( for='windows-phone' ) Windows Phone
-                section.section.section--second.section--split.section--bordered
-                    small.section__caption контактная информация
-                    section.section-half
-                        input.section-field( type='tel' id='tel' placeholder='+7 ХХХ ХХХ-ХХ-ХХ' )
-                        label.section-label( for='tel' ) номер телефона
-                    section.section-half
-                        input.section-field( type='email' id='email' placeholder='Введите почту' )
-                        label.section-label( for='email' ) адрес почты
-                section.section.section--third.section--bordered
-                    small.section__caption ваши безбашенные достижения в путешествии
-                    ul.section-list
-                        li.section-list__item
-                            input.section-list__input( type='checkbox' id='one' checked )
-                            label.section-list__label( for='one' ) Сделал селфи с акулой
-                        li.section-list__item
-                            input.section-list__input( type='checkbox' id='two' )
-                            label.section-list__label( for='two' ) Видел Чака Норриса
-                        li.section-list__item
-                            input.section-list__input( type='checkbox' id='three' checked )
-                            label.section-list__label( for='three' ) Удержал башню
-                        li.section-list__item
-                            input.section-list__input( type='checkbox' id='four' checked )
-                            label.section-list__label( for='four' ) Обгорел на пляже
-                        li.section-list__item
-                            input.section-list__input( type='checkbox' id='five' )
-                            label.section-list__label( for='five' ) Накупил сувениров
-                        li.section-list__item
-                            input.section-list__input( type='checkbox' id='six' )
-                            label.section-list__label( for='six' ) Разгромил отель
-                section.section.section--fourth.section--bordered
-                    small.section__caption опишите свои эмоции
-                    textarea.section__description( placeholder='Можно прям в красках, не стесняясь в выражениях' )
-                section.section.section--fifth.section--split
-                    section.section-half
-                        button.section-button( type='button' ) отправить форму
-                    section.section-half
-                        p.section-remark
-                            | — обязательные для заполнения поля
+    form.form( method='post' action='action.php' )
+        +block-form-section-primary()
+        +block-form-section-secondary()
+        +block-form-section-tertiary()
+        +block-form-section-quaternary()
+        +block-form-section-quinary()

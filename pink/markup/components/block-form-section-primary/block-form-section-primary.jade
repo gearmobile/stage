@@ -1,0 +1,30 @@
+mixin block-form-section-primary()
+    section.section-primary
+        ul.section-primary__primary
+            li.section-primary__row
+                label.section-primary__label( for='name' )
+                    | имя
+                input.section-primary__input( type='text' id='name' placeholder='Введите ваше имя' required )
+            li.section-primary__row
+                label.section-primary__label( for='surname' )
+                    | фамилия
+                input.section-primary__input( type='text' id='surname' placeholder='Укажите фамилию' required )
+            li.section-primary__row
+                label.section-primary__label( for='second-name' )
+                    | отчество
+                input.section-primary__input( type='text' id='second-name' placeholder='Ну и отчество тоже' required )
+        .section-primary__secondary
+            span.section-primary__caption
+                | С каким приложением путешествовали?
+            .section-primary__row
+                input.section-primary__input( type='radio' name='mobile' id='ios' value='ios' checked )
+                label.section-primary__label( for='ios' )
+                    | Pink для iOS
+            .section-primary__row
+                input.section-primary__input( type='radio' name='mobile' id='android' value='android' )
+                label.section-primary__label( for='android' )
+                    | Pink на Android
+            .section-primary__row
+                input.section-primary__input( type='radio' name='mobile' id='windows-phone' value='windows-phone' )
+                label.section-primary__label( for='windows-phone' )
+                    | Windows Phone

@@ -1,0 +1,14 @@
+include ../block-form/block-form
+
+mixin block-pink-form()
+    section.pink-form
+        header.pink-form__header
+            .center
+                h2.pink-form__title
+                    p
+                        | Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+                    p
+                        | Пожалуйста, заполните форму ниже:
+        main.pink-form__main
+            .center
+                +block-form()

@@ -1,328 +1,337 @@
-// FORM
+
+// FORM FORM
 // ------------------------------
-.pink-form
-    //
+& .form
+    // padding 10rem 0 0 0
 
-    // FORM FORM
-    // ------------------------------
-    & .form
-        padding 10rem 0 0 0
 
-    // FORM TITLE
-    // ------------------------------
-    & .form__title
-        font 1.8rem/1.4 $open-sans--regular
-        color $pink-color-dark
-        text-align center
-        max-width 75rem
-        margin 0 auto 8rem
 
-    // FORM SECTION
-    // ------------------------------
-    & .section
-        margin 0 0 6rem
+// FORM SECTION
+// ------------------------------
+& .section
+    margin 0 0 6rem
 
-    // SECTION FIRST
-    // --------------------------------------------------------
-    & .section--first
-        @media screen and ( max-width $desktop )
-            display flex
-            flex-direction column
-
-            & > .section-half
-                width 100%
-
-                &:first-child
-                    margin 0 0 6rem
-
-            & .section-half--secondary
-                display none
-
-    // SECTION SECOND
-    // ----------------------------------------------------------
-    & .section--second
-        @media screen and ( max-width $desktop )
-            display flex
-            flex-direction column
-
-            & > .section-half
-                width 100%
-
-                &:nth-child(2)
-                    margin 0 0 6rem
-
-    & .section--second .section--bordered
-        @media screen and ( max-width $mobile )
-            padding 4rem
-
-    .section--fifth
-        @media screen and ( max-width $tablet )
-            //
-
-    // FORM SECTION BORDERED
-    // ------------------------------
-    & .section--bordered
-        padding 4.4rem 6rem
-        position relative
-        border .2rem solid #e5e5e5
-
-    // FORM LEGEND
-    // ------------------------------
-    & .section__caption
-        white-space nowrap
-        text-transform uppercase
-        color $pink-color-pink
-        font 1.4rem/1.2 $open-sans--regular
-        text-align center
-        padding 0 2rem
-        position absolute
-        left 50%
-        top -.8rem
-        transform translateX( -50% )
-        background-color $pink-color-white
-
-    // FORM DESCRIPTION
-    // ------------------------------
-    & .section__description
-        width 100%
-        min-height 13rem
-        padding 2.5rem 2.2rem 2.2rem 2.2rem
-        font 1.8rem/1.4 $open-sans--regular
-        color $pink-color-dark
-        border .2rem solid #e5e5e5
-        background-color transparent
-
-    // FORM SECTION SPLIT
-    // ------------------------------
-    & .section--split
-        display flex
-        justify-content space-between
-        align-items center
-
-    // FORM SECTION HALF
-    // ------------------------------
-    & .section-half
-        width 46%
-
-    & .section-half--primary
+// SECTION FIRST
+// --------------------------------------------------------
+& .section--first
+    @media screen and ( max-width $desktop )
         display flex
         flex-direction column
-        justify-content space-between
 
-    & .section-half--primary .section-row
-        display flex
-
-        @media screen and ( max-width $mobile )
-            flex-direction column
-
-    & .section-half--primary .section-row__label::after
-        content ':'
-        margin 0 2rem 0 0
-
-    & .section-half--primary .section-row__input
-        width 100%
-        border .2rem solid #e5e5e5
-        padding 2rem
-        font 1.8rem/1.2 $open-sans--regular
-        color $pink-color-dark
-        transition border-color .2s
-        background-color transparent
-
-        &:hover
-            border-color $pink-color-dark
-
-        &:focus
-            border-color $pink-color-pink
-
-        &:hover .section-row__label::before
-            border-color $pink-color-dark
-
-    & .section-half--primary .section-row__label
-        text-transform uppercase
-        color $pink-color-pink
-        font 1.4rem/1.2 $open-sans--regular
-
-        @media screen and ( max-width $mobile )
-            display block
+        & > .section-half
             width 100%
-            margin 0 0 2rem 4rem
 
-    & .section-half--secondary .section-row__label
-        color $pink-color-dark
-        font 1.8rem/4rem $open-sans--regular
-        padding 0 0 0 6rem
-        position relative
-        cursor pointer
+            &:first-child
+                margin 0 0 6rem
 
-        &::before
-        &::after
-            content ''
-            display block
-            position absolute
-            top 50%
-            transform translateY( -50% )
-            border-radius 50%
-            transition border-color .2s, background-color .2s
+// SECTION SECOND
+// ----------------------------------------------------------
+& .section--second
+    @media screen and ( max-width $desktop )
+        display flex
+        flex-direction column
 
-        &::before
-            size( 4rem )
-            left 0
-            border .2rem solid #e5e5e5
-            transition border-color .2s
+        & > .section-half
+            width 100%
 
-        &::after
-            size( 1.4rem )
-            left 1.3rem
-            background-color transparent
+            &:nth-child(2)
+                margin 0 0 6rem
 
-    & .section-half--secondary .section-row__input
-        position absolute
-        clip rect( 0, 0, 0, 0 )
+// SECTION FIFTH
+// ----------------------------------------------------------
+& .section--fifth .section-half
+    width 50%
 
-        &:checked + .section-row__label::before
-            border-color $pink-color-pink
+    @media screen and ( max-width $tablet )
+        flex-direction column
 
-        &:checked + .section-row__label::after
-            background-color $pink-color-pink
+        & > .section-half
+            width 100%
+            display flex
+            justify-content center
 
-    // SECTION FIELD
-    // ------------------------------
-    & .section-field
+            &:first-child
+                margin 0 0 6rem
+
+& .section--fifth .section-half.section-half--secondary
+    text-align right
+
+// FORM SECTION BORDERED
+// ------------------------------
+& .section--bordered
+    padding 4.4rem 6rem
+    position relative
+    border .2rem solid #e5e5e5
+
+    @media screen and ( max-width $tablet )
+        padding 4rem 2rem
+
+// FORM LEGEND
+// ------------------------------
+& .section__caption
+    white-space nowrap
+    text-transform uppercase
+    color $pink-color-pink
+    font 1.4rem/1.2 $open-sans--regular
+    text-align center
+    padding 0 2rem
+    position absolute
+    left 50%
+    top -.8rem
+    transform translateX( -50% )
+    background-color $pink-color-white
+
+    @media screen and ( max-width $mobile )
+        white-space wrap
+
+// FORM DESCRIPTION
+// ------------------------------
+& .section__description
+    width 100%
+    min-height 13rem
+    padding 2.5rem 2.2rem 2.2rem 2.2rem
+    font 1.8rem/1.4 $open-sans--regular
+    color $pink-color-dark
+    border .2rem solid #e5e5e5
+    background-color transparent
+
+// FORM SECTION SPLIT
+// ------------------------------
+& .section--split
+    display flex
+    justify-content space-between
+    align-items center
+
+// FORM SECTION HALF
+// ------------------------------
+& .section-half
+    width 46%
+
+& .section-half--primary
+    display flex
+    flex-direction column
+    justify-content space-between
+
+& .section-half--primary .section-row
+    display flex
+
+    @media screen and ( max-width $mobile )
+        flex-direction column
+
+& .section-half--primary .section-row__label::after
+    content ':'
+    margin 0 2rem 0 0
+
+& .section-half--primary .section-row__input
+    width 100%
+    border .2rem solid #e5e5e5
+    padding 2rem
+    font 1.8rem/1.2 $open-sans--regular
+    color $pink-color-dark
+    transition border-color .2s
+    background-color transparent
+
+    &:hover
+        border-color $pink-color-dark
+
+    &:focus
+        border-color $pink-color-pink
+
+    &:hover .section-row__label::before
+        border-color $pink-color-dark
+
+& .section-half--primary .section-row__label
+    text-transform uppercase
+    color $pink-color-pink
+    font 1.4rem/1.2 $open-sans--regular
+
+    @media screen and ( max-width $mobile )
+        display block
         width 100%
-        padding 2rem 5rem 2rem 2rem
-        margin 0 0 2rem
+        margin 0 0 2rem 4rem
+
+& .section-half--secondary .section-row__label
+    color $pink-color-dark
+    font 1.8rem/4rem $open-sans--regular
+    padding 0 0 0 6rem
+    position relative
+    cursor pointer
+
+    &::before
+    &::after
+        content ''
+        display block
+        position absolute
+        top 50%
+        transform translateY( -50% )
+        border-radius 50%
+        transition border-color .2s, background-color .2s
+
+    &::before
+        size( 4rem )
+        left 0
         border .2rem solid #e5e5e5
         transition border-color .2s
+
+    &::after
+        size( 1.4rem )
+        left 1.3rem
         background-color transparent
-        font 1.8rem/1.2 $open-sans--regular
-        color $pink-color-dark
 
-        &:hover
-            border-color $pink-color-dark
+& .section-half--secondary .section-row__input
+    position absolute
+    clip rect( 0, 0, 0, 0 )
 
-        &:focus
-        &:active
-            border-color $pink-color-pink
+    &:checked + .section-row__label::before
+        border-color $pink-color-pink
 
-        &:focus
-            out
-            line none
+    &:checked + .section-row__label::after
+        background-color $pink-color-pink
 
-    & .section-field[ type='tel' ]
-        background url( '%=static=%assets/block-form/old-phone.svg' ) 96% 50% no-repeat
+// SECTION FIELD
+// ------------------------------
+& .section-field
+    width 100%
+    padding 2rem 5rem 2rem 2rem
+    margin 0 0 2rem
+    border .2rem solid #e5e5e5
+    transition border-color .2s
+    background-color transparent
+    font 1.8rem/1.2 $open-sans--regular
+    color $pink-color-dark
 
-    & .section-field[ type='email' ]
-        background url( '%=static=%assets/block-form/mail.svg' ) 96% 50% no-repeat
+    &:hover
+        border-color $pink-color-dark
 
-    // SECTION LABEL
-    // ------------------------------
-    & .section-label
-        text-transform uppercase
-        color $pink-color-pink
-        font 1.4rem/1.2 $open-sans--regular
-        letter-spacing .1rem
-        margin 0 0 0 2rem
+    &:focus
+    &:active
+        border-color $pink-color-pink
 
-    // SECTION ROW
-    // ------------------------------------------------------
-    & .section-row
-        display flex
-        align-items center
-        margin 0 0 2rem
+    &:focus
+        out
+        line none
+
+& .section-field[ type='tel' ]
+    background url( '%=static=%assets/block-form/old-phone.svg' ) 96% 50% no-repeat
+
+& .section-field[ type='email' ]
+    background url( '%=static=%assets/block-form/mail.svg' ) 96% 50% no-repeat
+
+// SECTION LABEL
+// ------------------------------
+& .section-label
+    text-transform uppercase
+    color $pink-color-pink
+    font 1.4rem/1.2 $open-sans--regular
+    letter-spacing .1rem
+    margin 0 0 0 2rem
+
+// SECTION ROW
+// ------------------------------------------------------
+& .section-row
+    display flex
+    align-items center
+    margin 0 0 2rem
+
+    &:last-child
+        margin 0
+
+    @media screen and ( max-width $mobile )
+        margin 0 0 4rem
 
         &:last-child
             margin 0
 
-    // SECTION BUTTON
-    // -------------------------------------------------------
-    & .section-button
-        size( 30rem, 6rem )
-        background-color $pink-color-green
-        text-transform uppercase
-        font 1.8rem/1.2 $open-sans--bold
+// SECTION BUTTON
+// -------------------------------------------------------
+& .section-button
+    size( 30rem, 6rem )
+    background-color $pink-color-green
+    text-transform uppercase
+    font 1.8rem/1.2 $open-sans--bold
+    color $pink-color-white
+    transition background-color .2s, color .2s
+
+    &:hover
+        background-color darken( $pink-color-green, 20% )
+
+    &:active
+    &:focus
+        color rgba( $pink-color-white, .3 )
+        background-color darken( $pink-color-green, 20% )
+
+    &.is-disabled
+        background-color #e5e5e5
         color $pink-color-white
-        transition background-color .2s, color .2s
+        pointer-events none
 
-        &:hover
-            background-color darken( $pink-color-green, 20% )
+// SECTION REMARK
+// ------------------------------------------------------
+& .section-remark
+    text-transform uppercase
+    color $pink-color-dark
+    font 1.4rem/1.2 $open-sans--regular
 
-        &:active
-        &:focus
-            color rgba( $pink-color-white, .3 )
-            background-color darken( $pink-color-green, 20% )
+    &::before
+        content '*'
+        color $pink-color-pink
+        margin 0 .5rem 0 0
 
-        &.is-disabled
-            background-color #e5e5e5
-            color $pink-color-white
-            pointer-events none
+// FORM LIST
+// -------------------------------------------------------
+& .section-list
+    display flex
+    justify-content space-between
+    flex-wrap wrap
 
-    // SECTION REMARK
-    // ------------------------------------------------------
-    & .section-remark
-        text-transform uppercase
-        color $pink-color-dark
-        font 1.4rem/1.2 $open-sans--regular
+    @media screen and ( max-width $desktop )
+        flex-direction column
 
-        &::before
-            content '*'
-            color $pink-color-pink
-            margin 0 .5rem 0 0
-
-    // FORM LIST
-    // -------------------------------------------------------
-    & .section-list
+    // FORM LIST ITEM
+    // ---------------------------------------------------
+    &__item
         display flex
-        justify-content space-between
-        flex-wrap wrap
+        flex 0 1 30%
+        align-items center
+        padding 0 0 0 6rem
+
+        &:nth-child( -n+3 )
+            margin 0 0 4rem
+
+        &:hover .section-list__label::before
+            border-color $pink-color-dark
 
         @media screen and ( max-width $desktop )
-            flex-direction column
-
-        // FORM LIST ITEM
-        // ---------------------------------------------------
-        &__item
-            display flex
-            flex 0 1 30%
-            align-items center
-            padding 0 0 0 6rem
-
-            &:nth-child( -n+3 )
+            &:nth-child( -n+5 )
                 margin 0 0 4rem
 
-            &:hover .section-list__label::before
-                border-color $pink-color-dark
+    // FORM LIST CHECK
+    // ------------------------------
+    &__input
+        position absolute
+        clip rect( 0, 0, 0, 0 )
 
-            @media screen and ( max-width $desktop )
-                &:nth-child( -n+5 )
-                    margin 0 0 4rem
+        &:checked + .section-list__label::before
+            background url( '%=static=%assets/block-form/checked.png' ) 50% 50% no-repeat
+            border-color $pink-color-pink
 
-        // FORM LIST CHECK
-        // ------------------------------
-        &__input
+    // FORM LIST LABEL
+    // ------------------------------
+    &__label
+        font 1.8rem/1.2 $open-sans--regular
+        cursor pointer
+        position relative
+
+        &::before
+            content ''
+            display block
+            size( 4rem )
+            border .2rem solid #e5e5e5
             position absolute
-            clip rect( 0, 0, 0, 0 )
+            left -6rem
+            top 50%
+            transform translateY( -50% )
+            transition border-color .2s
 
-            &:checked + .section-list__label::before
-                background url( '%=static=%assets/block-form/checked.png' ) 50% 50% no-repeat
-                border-color $pink-color-pink
-
-        // FORM LIST LABEL
-        // ------------------------------
-        &__label
-            font 1.8rem/1.2 $open-sans--regular
-            cursor pointer
-            position relative
-
-            &::before
-                content ''
-                display block
-                size( 4rem )
-                border .2rem solid #e5e5e5
-                position absolute
-                left -6rem
-                top 50%
-                transform translateY( -50% )
-                transition border-color .2s
-
-            @media screen and ( max-width $desktop )
-                line-height 4rem
+        @media screen and ( max-width $desktop )
+            line-height 4rem
