@@ -22,6 +22,8 @@
     & .section
         margin 0 0 6rem
 
+    // SECTION FIRST
+    // --------------------------------------------------------
     & .section--first
         @media screen and ( max-width $desktop )
             display flex
@@ -33,9 +35,11 @@
                 &:first-child
                     margin 0 0 6rem
 
-                @media screen and ( max-width $mobile )
-                    //
+            & .section-half--secondary
+                display none
 
+    // SECTION SECOND
+    // ----------------------------------------------------------
     & .section--second
         @media screen and ( max-width $desktop )
             display flex
@@ -46,6 +50,10 @@
 
                 &:nth-child(2)
                     margin 0 0 6rem
+
+    & .section--second .section--bordered
+        @media screen and ( max-width $mobile )
+            padding 4rem
 
     .section--fifth
         @media screen and ( max-width $tablet )
