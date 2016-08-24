@@ -36,6 +36,12 @@
             & .section-primary__row
                 margin 0
 
+        @media screen and ( max-width 700px )
+            flex-direction column
+
+            & .section-primary__row:nth-child( -n + 3 )
+                margin 0 0 4rem
+
     // SECTION-PRIMARY ROW
     // --------------------------------
     &__row
@@ -45,6 +51,10 @@
 
         &:last-child
             margin-bottom 0
+
+        @media screen and ( max-width $mobile )
+            flex-direction column
+            align-items flex-start
 
     // SECTION-PRIMARY LABEL
     // --------------------------------
@@ -56,6 +66,9 @@
         &::after
             content ':'
             margin 0 2rem 0 0
+
+        @media screen and ( max-width $mobile )
+            margin 0 0 2rem 2rem
 
     // SECTION-PRIMARY INPUT
     // --------------------------------

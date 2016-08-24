@@ -28,6 +28,9 @@
         justify-content center
         flex-wrap wrap
 
+        @media screen and ( max-width $desktop )
+            justify-content space-between
+
         @media screen and ( max-width $tablet )
             flex-direction column
 
@@ -77,3 +80,6 @@
             top 50%
             transform translateY( -50% )
             transition border-color .2s
+
+        @media screen and ( max-width $tablet )
+            line-height 4rem

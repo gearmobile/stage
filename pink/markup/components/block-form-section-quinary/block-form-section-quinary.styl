@@ -11,12 +11,21 @@
         lost-column 1/2
         lost-column-gutter 0
 
+        @media screen and ( max-width $tablet )
+            lost-column 1/1
+            text-align center
+            margin 0 0 4rem
+
     // SECTION-QUINARY SECONDARY
     // ----------------------------------------
     &__secondary
         lost-column 1/2
         lost-column-gutter 0
         text-align right
+
+        @media screen and ( max-width $tablet )
+            lost-column 1/1
+            text-align center
 
     // SECTION-QUINARY BUTTON
     // ----------------------------------------
@@ -47,6 +56,7 @@
         text-transform uppercase
         color $pink-color-dark
         font 1.4rem/1.2 $open-sans--regular
+        white-space nowrap
 
         &::before
             content '*'
