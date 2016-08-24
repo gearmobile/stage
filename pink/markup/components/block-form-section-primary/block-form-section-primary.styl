@@ -32,18 +32,85 @@
     // SECTION-PRIMARY LABEL
     // --------------------------------
     &__label
-        //
+        text-transform uppercase
+        color $pink-color-pink
+        font 1.4rem/1.2 $open-sans--regular
+
+        &::after
+            content ':'
+            margin 0 2rem 0 0
 
     // SECTION-PRIMARY INPUT
     // --------------------------------
     &__input
-        //
+        width 100%
+        border .2rem solid $pink-color-grey-dark
+        padding 2rem
+        font 1.8rem/1.2 $open-sans--regular
+        color $pink-color-dark
+        transition border-color .2s
+        background-color transparent
+
+        &:hover
+            border-color $pink-color-dark
+
+        &:focus
+            border-color $pink-color-pink
+
+        &:hover .section-row__label::before
+            border-color $pink-color-dark
+
+    // SECTION-PRIMARY LABEL RADIO
+    // --------------------------------
+    &__label-radio
+        color $pink-color-dark
+        font 1.8rem/4rem $open-sans--regular
+        padding 0 0 0 6rem
+        position relative
+        cursor pointer
+
+        &::before
+        &::after
+            content ''
+            display block
+            position absolute
+            top 50%
+            transform translateY( -50% )
+            border-radius 50%
+            transition border-color .2s, background-color .2s
+
+        &::before
+            size( 4rem )
+            left 0
+            border .2rem solid $pink-color-grey-dark
+            transition border-color .2s
+
+        &::after
+            size( 1.4rem )
+            left 1.3rem
+            background-color transparent
+
+    // SECTION-PRIMARY INPUT RADIO
+    // --------------------------------
+    &__input-radio
+        position absolute
+        clip rect( 0, 0, 0, 0 )
+
+        &:checked + .section-primary__label-radio::before
+            border-color $pink-color-pink
+
+        &:checked + .section-primary__label-radio::after
+            background-color $pink-color-pink
 
     // SECTION-PRIMARY CAPTION
     // --------------------------------
     &__caption
         position absolute
-        top 0
+        top -1rem
         left 50%
-        transform translateX(-50%)
+        transform translateX( -50% )
         padding 0 2rem
+        color $pink-color-pink
+        font 1.4rem/1.2 $open-sans--regular
+        text-transform uppercase
+        background-color $pink-color-white
