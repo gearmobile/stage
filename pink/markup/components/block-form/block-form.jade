@@ -4,37 +4,37 @@ mixin block-form()
             form.form( method='post' action='action.php' )
                 h2.form__title
                     | Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
-                .section.section--split
-                    .section-half.section-half--primary
-                        .section-row
+                section.section.section--first.section--split
+                    section.section-half.section-half--primary
+                        section.section-row
                             label.section-row__label( for='name' ) имя
                             input.section-row__input( type='text' id='name' placeholder='Введите ваше имя' required )
-                        .section-row
+                        section.section-row
                             label.section-row__label( for='surname' ) фамилия
                             input.section-row__input( type='text' id='surname' placeholder='Укажите фамилию' required )
-                        .section-row
+                        section.section-row
                             label.section-row__label( for='second-name' ) отчество
                             input.section-row__input( type='text' id='second-name' placeholder='Ну и отчество тоже' required )
-                    .section-half.section-half--secondary.section--bordered
+                    section.section-half.section-half--secondary.section--bordered
                         small.section__caption С каким приложением путешествовали?
-                        .section-row
+                        section.section-row
                             input.section-row__input( type='radio' name='mobile' id='ios' value='ios' checked )
                             label.section-row__label( for='ios' ) Pink для iOS
-                        .section-row
+                        section.section-row
                             input.section-row__input( type='radio' name='mobile' id='android' value='android' )
                             label.section-row__label( for='android' ) Pink на Android
-                        .section-row
+                        section.section-row
                             input.section-row__input( type='radio' name='mobile' id='windows-phone' value='windows-phone' )
                             label.section-row__label( for='windows-phone' ) Windows Phone
-                .section.section--split.section--bordered
+                section.section.section--second.section--split.section--bordered
                     small.section__caption контактная информация
-                    .section-half
+                    section.section-half
                         input.section-field( type='tel' id='tel' placeholder='+7 ХХХ ХХХ-ХХ-ХХ' )
                         label.section-label( for='tel' ) номер телефона
-                    .section-half
+                    section.section-half
                         input.section-field( type='email' id='email' placeholder='Введите почту' )
                         label.section-label( for='email' ) адрес почты
-                .section.section--bordered
+                section.section.section--third.section--bordered
                     small.section__caption ваши безбашенные достижения в путешествии
                     ul.section-list
                         li.section-list__item
@@ -55,12 +55,12 @@ mixin block-form()
                         li.section-list__item
                             input.section-list__input( type='checkbox' id='six' )
                             label.section-list__label( for='six' ) Разгромил отель
-                .section.section--bordered
+                section.section.section--fourth.section--bordered
                     small.section__caption опишите свои эмоции
                     textarea.section__description( placeholder='Можно прям в красках, не стесняясь в выражениях' )
-                .section.section--split
-                    .section-half
+                section.section.section--fifth.section--split
+                    section.section-half
                         button.section-button( type='button' ) отправить форму
-                    .section-half
+                    section.section-half
                         p.section-remark
                             | — обязательные для заполнения поля
