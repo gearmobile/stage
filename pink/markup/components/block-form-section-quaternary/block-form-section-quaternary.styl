@@ -4,18 +4,28 @@
     lost-center 100% flex
     padding 4rem 2rem
     position relative
-    border .2rem solid #e5e5e5
+    border .2rem solid $pink-color-grey-dark
 
     // SECTION-QUATERNARY CAPTION
     // --------------------------------------
     &__caption
         position absolute
-        top 0
+        top -1rem
         left 50%
         transform translateX(-50%)
         padding 0 2rem
+        color $pink-color-pink
+        font 1.4rem/1.2 $open-sans--regular
+        text-transform uppercase
+        background-color $pink-color-white
 
     // SECTION-QUATERNARY DESCRIPTION
     // --------------------------------------
     &__description
-        //
+        width 100%
+        min-height 13rem
+        padding 2rem
+        background-color transparent
+        border .2rem solid $pink-color-grey-dark
+        font 1.8rem/1.4 $open-sans--regular
+        color $pink-color-dark
