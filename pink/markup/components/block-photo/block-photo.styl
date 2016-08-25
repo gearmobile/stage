@@ -3,11 +3,6 @@
 .photo
     //
 
-    // PHOTO HEADER
-    // --------------------------------------------
-    &__header
-        //
-
     // PHOTO PICTURE
     // --------------------------------------------
     & .picture
@@ -44,11 +39,17 @@
             justify-content space-between
             margin 0 0 1rem
 
+            @media screen and ( max-width $tablet )
+                flex-direction column
+
         // PHOTO PICTURE-CAPTION TITLE
         // --------------------------------------------
         &__title
             font 2rem/1.2 $open-sans--bold
             color $pink-color-dark
+
+            @media screen and ( max-width $tablet )
+                margin 0 0 1rem
 
         &__date
             font 1.4rem/1.2 $open-sans--light
@@ -64,10 +65,10 @@
             color $pink-color-pink
 
             &:hover
-            &:focus
                 text-decoration underline
                 color $pink-color-dark
 
+            &:focus
             &:active
                 color rgba( $pink-color-dark, .3 )
 
@@ -76,10 +77,13 @@
                 size( 1.4rem )
                 margin 0 0 0 1.4rem
 
+        &__count
+            margin 0 0 0 .4rem
+
         // PHOTO PICTURE-CAPTION CONTENT
         // --------------------------------------------
         &__content
-            font 1.4rem/1.2 $open-sans--regular
+            font 1.4rem/1.6 $open-sans--regular
             color $pink-color-dark
 
     // PHOTO MAIN

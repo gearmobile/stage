@@ -13,11 +13,13 @@ mixin block-photo()
                         .picture-caption__title
                             | Анна
                             = ' '
-                            small.picture-caption__date (5 минут назад)
+                            small.picture-caption__date
+                                | (5 минут назад)
                         a.picture-caption__subtitle( href='#0' )
                             | Нравится:
                             = ' '
-                            span.picture-caption__count 215
+                            span.picture-caption__count
+                                | 215
                             != jadeHelpers.Icon.call( locals, { iconName: 'like', className: 'photo-post-icon' })
                     .picture-caption__content
                         | Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!
