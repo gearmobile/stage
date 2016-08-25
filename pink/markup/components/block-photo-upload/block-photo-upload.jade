@@ -1,4 +1,4 @@
-mixin block-photo-upload(data)
+mixin block-photo-upload()
     section.photo-upload
         .center
             header.photo-upload__header
@@ -8,7 +8,7 @@ mixin block-photo-upload(data)
                     | Выкладывайте все, что накопилось в телефоне!
             main.photo-upload__main
                 figure.photo-upload__primary
-                    img( src='%=static=%img/assets/block-photo-upload/photo-upload-image.jpg' alt='Upload Image' )
+                    img.photo-upload__image( src='%=static=%img/assets/block-photo-upload/photo-upload-image.jpg' alt='Upload Image' )
                 .photo-upload__secondary
                     .toolbar
                         ul.toolbar__list
@@ -26,9 +26,11 @@ mixin block-photo-upload(data)
                                     input.toolbar__slider( type='range' min='0' max='100' value='60' step='1' )
                     ul.submit
                         li.submit__item
-                            button.submit__button( type='button' ) Запостить
+                            button.submit__button( type='button' )
+                                | запостить
                         li.submit__item
-                            button.submit__button.submit__button--cancel( type='button' ) Отмена
+                            button.submit__button.submit__button--cancel( type='button' )
+                                | отмена
 
 
 

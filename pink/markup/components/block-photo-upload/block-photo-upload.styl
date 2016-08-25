@@ -3,11 +3,6 @@
 .photo-upload
     //
 
-    // PHOTO-UPLOAD CENTER
-    // -------------------------------
-    & .center
-        //
-
     // PHOTO-UPLOAD HEADER
     // -------------------------------
     &__header
@@ -25,17 +20,31 @@
     // -------------------------------
     &__main
         display flex
-        justify-content space-between
         background-color #f2f2f2
         padding 4rem 8rem
+
+        @media screen and ( max-width 980px )
+            padding 4rem
+
+        @media screen and ( max-width $tablet )
+            flex-direction column
+            align-items center
+            padding 2rem
 
     // PHOTO-UPLOAD PRIMARY
     // -------------------------------
     &__primary
         size( 30rem, 40rem )
-        margin-right 9rem
-        img-adaptive()
-        flex 0 1 40%
+        margin 0 8rem 0 0
+
+        @media screen and ( max-width 980px )
+            margin 0 4rem 0 0
+
+        @media screen and ( max-width $tablet )
+            margin 0 0 4rem 0
+
+    &__image
+        max-width 100%
 
     // PHOTO-UPLOAD SECONDARY
     // -------------------------------
@@ -43,31 +52,32 @@
         display flex
         flex-direction column
         justify-content space-between
-        flex 0 1 60%
+        width calc( 100% - 30rem - 8rem )
+
+        @media screen and ( max-width $tablet )
+            width 100%
 
         // PHOTO-UPLOAD TOOLBAR
         // -------------------------------
         & .toolbar
             //
 
-            // PHOTO-UPLOAD TOOLBAR LIST
-            // -------------------------------
-            &__list
-                //
-
-            // PHOTO-UPLOAD ITEM
+            // TOOLBAR ITEM
             // -------------------------------
             &__item
                 padding 1.4rem 3rem 1.4rem 0
                 border-bottom .1rem solid rgba( $pink-color-dark, .1 )
                 display flex
 
-                // PHOTO-UPLOAD ITEM ICON
+                // TOOLBAR ITEM ICON
                 // -------------------------------
                 & .toolbar-icon
                     size( 4rem )
                     fill rgba( $pink-color-dark, .3 )
                     margin 0 4rem 0 0
+
+                    @media screen and ( max-width $mobile )
+                        margin 0 0 4rem
 
                 &:hover .toolbar-icon
                     fill rgba( $pink-color-dark, .5 )
@@ -75,11 +85,21 @@
                 &:active .toolbar-icon
                     fill $pink-color-pink
 
+                @media screen and ( max-width $mobile )
+                    flex-direction column
+                    align-items center
+                    padding 1rem
+                    border-bottom none
+
+            // TOOLBAR FORM
+            // -------------------------------
             &__form
                 width 100%
                 display flex
                 align-items center
 
+            // TOOLBAR SLIDER
+            // -------------------------------
             &__slider
                 width 100%
 
@@ -93,10 +113,25 @@
                 flex-direction column
                 align-items center
 
+            @media screen and ( max-width $tablet )
+                flex-direction row
+                justify-content space-around
+                padding 4rem 0
+
+            @media screen and ( max-width $mobile )
+                flex-direction column
+                align-items center
+
             // PHOTO-UPLOAD ITEM
             // -------------------------------
             &__item:nth-child(1)
                 @media screen and ( max-width 980px )
+                    margin 0 0 2rem
+
+                @media screen and ( max-width $tablet )
+                    margin 0
+
+                @media screen and ( max-width $mobile )
                     margin 0 0 2rem
 
             // PHOTO-UPLOAD BUTTON
