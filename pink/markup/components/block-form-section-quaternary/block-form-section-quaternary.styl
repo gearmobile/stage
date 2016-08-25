@@ -15,10 +15,13 @@
         transform translateX(-50%)
         padding 0 2rem
         color $pink-color-pink
-        font 1.4rem/1.2 $open-sans--regular
+        font 1.4rem/1.4 $open-sans--regular
         text-transform uppercase
         background-color $pink-color-white
         white-space nowrap
+
+        @media screen and ( max-width $mobile )
+            display none
 
     // SECTION-QUATERNARY DESCRIPTION
     // --------------------------------------
@@ -30,3 +33,6 @@
         border .2rem solid $pink-color-grey-dark
         font 1.8rem/1.4 $open-sans--regular
         color $pink-color-dark
+
+        @media screen and ( max-width $mobile )
+            font-size 1.4rem

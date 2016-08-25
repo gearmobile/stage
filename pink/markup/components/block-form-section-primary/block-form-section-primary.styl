@@ -7,6 +7,23 @@
     border .2rem solid $pink-color-grey-dark
     position relative
 
+    // SECTION-PRIMARY CAPTION
+    // --------------------------------
+    &__caption
+        position absolute
+        top -1rem
+        left 50%
+        transform translateX( -50% )
+        padding 0 2rem
+        color $pink-color-pink
+        font 1.4rem/1.4 $open-sans--regular
+        text-transform uppercase
+        background-color $pink-color-white
+        white-space nowrap
+
+        @media screen and ( max-width $mobile )
+            display none
+
     // SECTION-PRIMARY LEFT
     // --------------------------------
     &__primary
@@ -70,6 +87,9 @@
         @media screen and ( max-width $mobile )
             margin 0 0 2rem 2rem
 
+        @media screen and ( max-width $mobile )
+            font-size 1.2rem
+
     // SECTION-PRIMARY INPUT
     // --------------------------------
     &__input
@@ -89,6 +109,9 @@
 
         &:hover .section-row__label::before
             border-color $pink-color-dark
+
+        @media screen and ( max-width $mobile )
+            font-size 1.4rem
 
     // SECTION-PRIMARY LABEL RADIO
     // --------------------------------
@@ -120,6 +143,9 @@
             left 1.3rem
             background-color transparent
 
+        @media screen and ( max-width $mobile )
+            font-size 1.4rem
+
     // SECTION-PRIMARY INPUT RADIO
     // --------------------------------
     &__input-radio
@@ -132,16 +158,3 @@
         &:checked + .section-primary__label-radio::after
             background-color $pink-color-pink
 
-    // SECTION-PRIMARY CAPTION
-    // --------------------------------
-    &__caption
-        position absolute
-        top -1rem
-        left 50%
-        transform translateX( -50% )
-        padding 0 2rem
-        color $pink-color-pink
-        font 1.4rem/1.2 $open-sans--regular
-        text-transform uppercase
-        background-color $pink-color-white
-        white-space nowrap

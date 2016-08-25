@@ -7,6 +7,23 @@
     border .2rem solid $pink-color-grey-dark
     position relative
 
+    // SECTION-SECONDARY CAPTION
+    // --------------------------------
+    &__caption
+        position absolute
+        top -1rem
+        left 50%
+        transform translateX( -50% )
+        padding 0 2rem
+        color $pink-color-pink
+        font 1.4rem/1.4 $open-sans--regular
+        text-transform uppercase
+        background-color $pink-color-white
+        white-space nowrap
+
+        @media screen and ( max-width $mobile )
+            display none
+
     // SECTION-SECONDARY PRIMARY
     // --------------------------------
     &__primary
@@ -32,20 +49,6 @@
             lost-column 1/1
             padding 0
 
-    // SECTION-SECONDARY CAPTION
-    // --------------------------------
-    &__caption
-        position absolute
-        top -1rem
-        left 50%
-        transform translateX( -50% )
-        padding 0 2rem
-        color $pink-color-pink
-        font 1.4rem/1.2 $open-sans--regular
-        text-transform uppercase
-        background-color $pink-color-white
-        white-space nowrap
-
     // SECTION-SECONDARY INPUT
     // --------------------------------
     &__input
@@ -69,6 +72,9 @@
         &[ type='email' ]
             background url( '%=static=%assets/block-pink-form/mail.svg' ) 96% 50% no-repeat
 
+        @media screen and ( max-width $mobile )
+            font-size 1.4rem
+
     // SECTION-SECONDARY LABEL
     // --------------------------------
     &__label
@@ -76,3 +82,6 @@
         color $pink-color-pink
         font 1.4rem/1.2 $open-sans--regular
         margin 0 0 0 2rem
+
+        @media screen and ( max-width $mobile )
+            font-size 1.2rem

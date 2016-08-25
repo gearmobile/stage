@@ -16,10 +16,13 @@
         transform translateX( -50% )
         padding 0 2rem
         color $pink-color-pink
-        font 1.4rem/1.2 $open-sans--regular
+        font 1.4rem/1.4 $open-sans--regular
         text-transform uppercase
         background-color $pink-color-white
         white-space nowrap
+
+        @media screen and ( max-width $mobile )
+            display none
 
     // SECTION-TERTIARY LIST
     // -------------------------------------------
@@ -83,3 +86,6 @@
 
         @media screen and ( max-width $tablet )
             line-height 4rem
+
+        @media screen and ( max-width $mobile )
+            font-size 1.4rem
