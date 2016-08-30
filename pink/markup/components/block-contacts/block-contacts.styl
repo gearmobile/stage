@@ -8,6 +8,7 @@
     &__header
         padding 6rem 0 4rem
         background-color $color-white
+        position relative
 
     // CONTACTS TITLE
     // -------------------------------------
@@ -61,17 +62,5 @@
         height 52.2rem
         background url( '%=static=%assets/block-contacts/map-desktop.jpg' ) no-repeat
         background-size cover
-        position relative
+        // position relative
 
-        // CONTACTS MAIN TRIANGLE
-        // -------------------------------------
-        &::before
-            content ''
-            display block
-            size( 100%, 6.2rem )
-            position absolute
-            top -.1rem
-            left 0
-            z-index 10
-            background url( '%=static=%assets/block-contacts/triangle-white.svg' ) no-repeat
-            background-size auto auto
