@@ -3,6 +3,8 @@
 .information
     //
 
+    // INFORMATION HEADER
+    // ---------------------------
     &__header
         padding 3rem 0
         background-color $pink-color-white
@@ -10,6 +12,8 @@
         @media screen and ( min-width $desktop )
             padding 6rem 0
 
+    // INFORMATION TITLE
+    // ---------------------------
     &__title
         text-align center
         font 2.4rem/1.6 $open-sans--light
@@ -28,31 +32,35 @@
         @media screen and ( min-width $desktop )
             font-size 5rem
 
+    // INFORMATION MAIN
+    // ---------------------------
     &__main
         padding 0 2rem 0 2rem
         background-color #f2f2f2
         position relative
 
-        &::before
-            content ''
-            display block
-            width 100%
-            height 9.4rem
-            position absolute
-            top 0
-            left 0
-            background url( '%=static=%assets/block-information/triangle-white.svg' ) 0 0 no-repeat
-            background-size auto
+        // &::before
+        //     content ''
+        //     display block
+        //     width 100%
+        //     height 9.4rem
+        //     position absolute
+        //     top 0
+        //     left 0
+        //     background url( '%=static=%assets/block-information/triangle-white.svg' ) 0 0 no-repeat
+        //     background-size auto
 
-            @media screen and ( min-resolution 144dpi )
-                top -.1rem
+        //     @media screen and ( min-resolution 144dpi )
+        //         top -.1rem
 
-            @media screen and ( min-resolution 288dpi )
-                top -.2rem
+        //     @media screen and ( min-resolution 288dpi )
+        //         top -.2rem
 
         @media screen and ( min-width $tablet )
             display flex
 
+    // INFORMATION CONTENT
+    // ---------------------------
     &__content
         padding 4rem 2rem
 
@@ -70,6 +78,8 @@
             position relative
             padding 0 2rem 4rem
 
+    // INFORMATION ITEM
+    // ---------------------------
     &__item
         text-align center
 
@@ -86,24 +96,30 @@
             &:not(:last-child)
                 margin 0
 
+    // INFORMATION THUMB
+    // ---------------------------
     &__thumb
         width 18.6rem
         height 28rem
         background-color cornflowerblue
         margin 0 auto 6rem
 
+        & p
+            font 1.4rem/1.6 $open-sans--regular
+            color $pink-color-dark
+
         @media screen and ( max-width $desktop )
             display none
 
-    & p
-        font 1.4rem/1.6 $open-sans--regular
-        color $pink-color-dark
-
+    // INFORMATION CAPTION
+    // ---------------------------
     &__caption
         font 1.8rem/1.2 $open-sans--bold
         color $pink-color-black
         margin 0 0 2rem
 
+    // INFORMATION PICTURE
+    // ---------------------------
     &__picture
         size( 16rem, 32rem )
         margin auto
