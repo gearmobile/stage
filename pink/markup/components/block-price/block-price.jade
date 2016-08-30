@@ -2,43 +2,51 @@ mixin block-price()
     section.price
         canvas.price__canvas
         .center
-            table.table
-                thead
-                    tr
-                        th
-                        th.table__head
-                            h4.title База
-                            p.price-value 1,99 USD
-                        th.table__head
-                            h4.title Стандарт
-                            p.price-value 3,99 USD
-                            small.table__label хит
-                        th.table__head
-                            h4.title Анлим
-                            p.price-value 9,99 USD
-                tbody
-                    tr
-                        td
-                            | Розовый фильтр
-                        td
-                            != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
-                        td
-                            != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
-                        td
-                            != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
-                    tr
-                        td Смайлики
-                        td
-                            != jadeHelpers.Icon.call( locals, { iconName: 'no', className: 'table-icon-no' })
-                        td
-                            != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
-                        td
-                            != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
-                    tr
-                        td Комментарии
-                        td
-                            != jadeHelpers.Icon.call( locals, { iconName: 'no', className: 'table-icon-no' })
-                        td
-                            != jadeHelpers.Icon.call( locals, { iconName: 'no', className: 'table-icon-no' })
-                        td
-                            != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
+            ul.table
+                li.table__column
+                    .table__caption.table__caption--first
+                        | empty
+                    .table__item.table__item--heading.table__item--first
+                        | Розовый фильтр
+                    .table__item.table__item--heading
+                        | Смайлики
+                    .table__item.table__item--heading
+                        | Комментарии
+                li.table__column
+                    .table__caption
+                        h4.table__title
+                            | база
+                        p.table__value
+                            | 1,99 usd
+                    .table__item
+                        != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
+                    .table__item
+                        != jadeHelpers.Icon.call( locals, { iconName: 'no', className: 'table-icon-no' })
+                    .table__item
+                        != jadeHelpers.Icon.call( locals, { iconName: 'no', className: 'table-icon-no' })
+                li.table__column
+                    .table__caption
+                        h4.table__title
+                            | стандарт
+                        p.table__value
+                            | 3,99 usd
+                        span.table__label
+                            | хит
+                    .table__item
+                        != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
+                    .table__item
+                        != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
+                    .table__item
+                        != jadeHelpers.Icon.call( locals, { iconName: 'no', className: 'table-icon-no' })
+                li.table__column
+                    .table__caption
+                        h4.table__title
+                            | анлим
+                        p.table__value
+                            | 9,99 usd
+                    .table__item
+                        != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
+                    .table__item
+                        != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
+                    .table__item
+                        != jadeHelpers.Icon.call( locals, { iconName: 'yes', className: 'table-icon-yes' })
