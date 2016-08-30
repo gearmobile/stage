@@ -9,7 +9,6 @@
     // ----------------------------------------------
     // SECTION INFORMATION ELEMENTS
     // ----------------------------------------------
-    const blockInformation = document.querySelector( '.information__main' );
     const blockInformationCanvas = document.querySelector( '.information__canvas' );
     const blockInformationCanvasContext = blockInformationCanvas.getContext( '2d' );
     // ----------------------------------------------
