@@ -62,5 +62,12 @@
         height 52.2rem
         background url( '%=static=%assets/block-contacts/map-desktop.jpg' ) no-repeat
         background-size cover
-        // position relative
+
+        @media screen and ( max-width $tablet )
+            background url( '%=static=%assets/block-contacts/map-tablet.jpg' ) no-repeat
+            background-size cover
+
+        @media screen and ( max-width $mobile )
+            background url( '%=static=%assets/block-contacts/map-mobile.jpg' ) no-repeat
+            background-size cover
 
