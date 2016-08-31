@@ -114,15 +114,18 @@
                 background-size cover
                 size( 29.2rem, 30.2rem )
 
+        & p
+            font 1.6rem/1.6 $open-sans--regular
+            color $pink-color-dark
+
+            @media screen and ( max-width $tablet )
+                font-size 1.4rem
+
     // INFORMATION THUMB
     // ---------------------------
     &__thumb
         size( 18.6rem, 28rem )
         margin 0 auto 6rem
-
-        & p
-            font 1.4rem/1.6 $open-sans--regular
-            color $pink-color-dark
 
         @media screen and ( max-width $desktop )
             display none
@@ -130,9 +133,13 @@
     // INFORMATION CAPTION
     // ---------------------------
     &__caption
-        font 1.8rem/1.2 $open-sans--bold
+        font 3rem/1.2 $open-sans--bold
         color $pink-color-black
         margin 0 0 2rem
+
+        @media screen and ( max-width $tablet )
+            font-size 2.4rem
+            line-height 1.4
 
     // INFORMATION PICTURE
     // ---------------------------
