@@ -41,6 +41,7 @@
 
         @media screen and ( min-width $tablet )
             display flex
+            padding 0 2rem
 
     // INFORMATION CONTENT
     // ---------------------------
@@ -79,6 +80,40 @@
             &:not(:last-child)
                 margin 0
 
+        @media screen and ( min-width $desktop ) and ( min-resolution 96dpi )
+
+            &:nth-child(1) .information__thumb
+                background url( '%=static=%assets/block-information/iphone-screen-desktop-1@1x.png' ) 0 0 no-repeat
+                background-size cover
+                size( 29.2rem, 30.2rem )
+
+            &:nth-child(2) .information__thumb
+                background url( '%=static=%assets/block-information/iphone-screen-desktop-2@1x.png' ) 0 0 no-repeat
+                background-size cover
+                size( 29.2rem, 30.2rem )
+
+            &:nth-child(3) .information__thumb
+                background url( '%=static=%assets/block-information/iphone-screen-desktop-3@1x.png' ) 0 0 no-repeat
+                background-size cover
+                size( 29.2rem, 30.2rem )
+
+        @media screen and ( min-width $desktop ) and ( min-resolution 144dpi )
+
+            &:nth-child(1) .information__thumb
+                background url( '%=static=%assets/block-information/iphone-screen-desktop-1@2x.png' ) 0 0 no-repeat
+                background-size cover
+                size( 29.2rem, 30.2rem )
+
+            &:nth-child(2) .information__thumb
+                background url( '%=static=%assets/block-information/iphone-screen-desktop-2@2x.png' ) 0 0 no-repeat
+                background-size cover
+                size( 29.2rem, 30.2rem )
+
+            &:nth-child(3) .information__thumb
+                background url( '%=static=%assets/block-information/iphone-screen-desktop-3@2x.png' ) 0 0 no-repeat
+                background-size cover
+                size( 29.2rem, 30.2rem )
+
     // INFORMATION THUMB
     // ---------------------------
     &__thumb
@@ -104,22 +139,27 @@
     // INFORMATION PICTURE
     // ---------------------------
     &__picture
-        size( 14.2rem, 25.1rem )
         margin auto
-        // background-color salmon
 
-        @media screen and ( min-resolution 96dpi )
+        // information picture mobile --------------------
+        // -----------------------------------------------
+        @media screen and ( min-width $mobile ) and ( min-resolution 96dpi )
             background url( '%=static=%assets/block-information/iphone-screen-mobile-3@1x.png' ) 0 0 no-repeat
             background-size cover
+            size( 14.2rem, 25.1rem )
 
-        @media screen and ( min-resolution 144dpi )
+        @media screen and ( min-width $mobile ) and ( min-resolution 144dpi )
             background url( '%=static=%assets/block-information/iphone-screen-mobile-3@2x.png' ) 0 0 no-repeat
             background-size cover
+            size( 14.2rem, 25.1rem )
 
-        @media screen and ( min-resolution 288dpi )
+        @media screen and ( min-width $mobile ) and ( min-resolution 288dpi )
             background url( '%=static=%assets/block-information/iphone-screen-mobile-3@3x.png' ) 0 0 no-repeat
             background-size cover
+            size( 14.2rem, 25.1rem )
 
+        // information picture tablet --------------------
+        // -----------------------------------------------
         @media screen and ( min-width $tablet ) and ( min-resolution 96dpi )
             background url( '%=static=%assets/block-information/iphone-screen-tablet-3@1x.png' ) 0 0 no-repeat
             background-size cover
@@ -134,5 +174,7 @@
             position relative
             order 1
 
+        // information picture desktop --------------------
+        // -----------------------------------------------
         @media screen and ( min-width $desktop )
             display none
