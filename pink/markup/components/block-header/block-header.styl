@@ -108,8 +108,10 @@
             background-color transparent
 
         @media screen and ( min-width $tablet )
-            background-color rgba( $pink-color-black, .6 )
             height 85.3rem
+
+        @media screen and ( max-width $tablet )
+            background-color rgba( $pink-color-black, .6 )
 
     // HEADER TITLE
     // ---------------------------------
@@ -161,7 +163,8 @@
         & .header__item:nth-child(3)
             bg($header-icon-03)
 
-        //
+        @media screen and ( max-width $tablet )
+            width 100%
 
     // HEADER REMARKS
     // ---------------------------------
@@ -170,3 +173,6 @@
         font 1.4rem/1.6 $open-sans--light
         color $pink-color-white
         max-width 70%
+
+        @media screen and ( max-width $tablet )
+            max-width 100%
