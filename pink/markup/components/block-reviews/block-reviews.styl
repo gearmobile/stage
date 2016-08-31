@@ -26,13 +26,13 @@
         opacity 1
 
         & .reviews-arrows
-            fill: rgba( $pink-color-dark, .3 )
+            fill rgba( $pink-color-dark, .3 )
 
         &:hover .reviews-arrows
-            fill: rgba( $pink-color-dark, .6 )
+            fill rgba( $pink-color-dark, .6 )
 
         &:focus .reviews-arrows
-            fill: rgba( $pink-color-dark, .1 )
+            fill rgba( $pink-color-dark, .1 )
 
         @media screen and ( max-width $tablet )
             display none
@@ -77,6 +77,9 @@
         flex-direction column
         align-items center
 
+        @media screen and ( max-width $tablet )
+            max-width 100%
+
     // REVIEWS THUMB
     // ----------------------------------------
     &__thumb
@@ -106,6 +109,10 @@
         @media screen and ( min-width $tablet )
             max-width 80%
 
+        @media screen and ( max-width $tablet )
+            font-size 1.6rem
+            line-height 1.6
+
     // REVIEWS META
     // ----------------------------------------
     &__meta
@@ -119,8 +126,14 @@
             color $color-black
             text-transform capitalize
 
+            @media screen and ( max-width $tablet )
+                font-size 2.2rem
+
         // REVIEWS META SUBTITLE
         // --------------------------------------------
         & .subtitle
             font 1.8rem/1.4 $open-sans--regular
             color $pink-color-dark
+
+            @media screen and ( max-width $tablet )
+                font-size 1.6rem
