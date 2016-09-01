@@ -33,7 +33,7 @@
     // ---------------------------
     &__main
         padding 5rem 2rem 0 2rem
-        background-color #f2f2f2
+        background-color $pink-color-grey
         position relative
 
         @media screen and ( min-width $tablet )
@@ -130,13 +130,12 @@
     // INFORMATION CAPTION
     // ---------------------------
     &__caption
-        font 3rem/1.2 $open-sans--bold
+        font 2rem/1.2 $open-sans--bold
         color $pink-color-black
         margin 0 0 2rem
 
         @media screen and ( max-width $tablet )
-            font-size 2.4rem
-            line-height 1.4
+            font-size 1.8rem
 
     // INFORMATION PICTURE
     // ---------------------------
@@ -144,7 +143,6 @@
         margin auto
 
         // information picture mobile --------------------
-        // -----------------------------------------------
         @media screen and ( min-width $mobile ) and ( min-resolution 96dpi )
             background url( '%=static=%assets/block-information/iphone-screen-mobile-3@1x.png' ) 0 0 no-repeat
             background-size cover
@@ -161,7 +159,6 @@
             size( 14.2rem, 25.1rem )
 
         // information picture tablet --------------------
-        // -----------------------------------------------
         @media screen and ( min-width $tablet ) and ( min-resolution 96dpi )
             background url( '%=static=%assets/block-information/iphone-screen-tablet-3@1x.png' ) 0 0 no-repeat
             background-size cover
@@ -177,6 +174,5 @@
             order 1
 
         // information picture desktop --------------------
-        // -----------------------------------------------
         @media screen and ( min-width $desktop )
             display none
