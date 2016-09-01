@@ -3,7 +3,7 @@ module.exports = {
         {
             "name": "lost",
             "options": {
-                "gutter": "15px"
+                "gutter": "20px"
             }
         },
         {
@@ -61,8 +61,7 @@ module.exports = {
     "templater": "jade",
     "cssPreprocessor": "stylus",
     "useImagesForDisplayWithDpi": [
-        96,
-        192
+        96
     ],
     "fs": {
         "staticFolderName": "static",

@@ -1,42 +1,12 @@
 // MIXINS
 // ----------------------------------------------------
 
-// hide text ----------------------------------
-squish-text()
-    font 0/0 a
-    color transparent
-    text-shadow none
-    background-color transparent
-    border 0
-
-// centering absolute --------------------------
-abs-center()
-    position absolute
-    top 50%
-    left 50%
-    transform translate( -50%, -50% )
-
-// centering flexbox --------------------------
-flex-center()
-    display flex
-    justify-content center
-    align-items center
-
-// size for block --------------------------
-size( $width, $height = $width )
-    width $width
-    height $height
-
-// devide value by 2 --------------------------
-_d( value )
-    ( value / 2 )
-
 // image adaptive -------------------------------
 img-adaptive()
     & img
-        display: block
-        width: 100%
-        height: auto
+        display block
+        width 100%
+        height auto
 
 // clearfix -------------------------------------
 clearfix()
@@ -45,18 +15,18 @@ clearfix()
         content ''
         display table
     &::after
-        clear: both
+        clear both
 
 
 // placeholder hide on focus ---------------------
 [placeholder]:focus::placeholder
     color transparent
 
-
 // size ------------------------------------------
-size($width, $height = $width)
+size( $width, $height = $width )
     width $width
     height $height
+
 
 // placeholder style -----------------------------
 placeholder()

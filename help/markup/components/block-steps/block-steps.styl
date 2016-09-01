@@ -1,0 +1,68 @@
+// BLOCK-STEPS
+// ---------------------------------------------------------
+.block-steps
+    padding 6rem 0 8rem
+    background-color $help-color-grey-light
+
+    // BLOCK-STEPS HEADER
+    // ---------------------------------------------------------
+    &__header
+        margin 0 0 6rem
+
+    // BLOCK-STEPS CAPTION
+    // ---------------------------------------------------------
+    &__caption
+        text-align center
+        font 4rem/1.2 sans-serif
+        color $help-color-grey-dark
+
+    // BLOCK-STEPS MAIN
+    // ---------------------------------------------------------
+    &__main
+        display flex
+        justify-content space-between
+
+    // BLOCK-STEPS ITEM
+    // ---------------------------------------------------------
+    &__item
+        max-width 28rem
+        padding 8rem 0 0 10rem
+        position relative
+
+        // BLOCK-STEPS ITEM ICONS
+        // ---------------------------------------------------------
+        &::before
+            content ''
+            display block
+            size( 14rem )
+            position absolute
+            top 0
+            left 0
+
+        &:nth-child(1)::before
+            bg( $steps-icon-01 )
+
+        &:nth-child(2)::before
+            bg( $steps-icon-02 )
+
+        &:nth-child(3)::before
+            bg( $steps-icon-03 )
+
+        // BLOCK-STEPS ITEM ARROWS
+        // ---------------------------------------------------------
+        &:nth-child(2)::after
+        &:nth-child(3)::after
+            content ''
+            display block
+            size( 10.8rem, 1.4rem )
+            bg( $steps-arrow )
+            position absolute
+            top 60%
+            transform translateY(-50%)
+            left -14rem
+
+    // BLOCK-STEPS CONTENT
+    // ---------------------------------------------------------
+    &__content
+        font 1.6rem/1.6 sans-serif
+        color $help-color-grey-dark

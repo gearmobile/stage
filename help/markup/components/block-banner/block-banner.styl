@@ -1,0 +1,59 @@
+// BLOCK-BANNER
+// --------------------------------------------------
+.block-banner
+    width 100%
+    padding 2rem 0 3rem
+    position absolute
+    left 0
+    bottom 0
+    border-top .1rem solid rgba( $help-color-white, .2 )
+
+    // BLOCK-BANNER PRIMARY
+    // --------------------------------------------------
+    &__primary
+        lost-column 6/12
+        lost-column-gutter $gutter
+
+    // BLOCK-BANNER SECONDARY
+    // --------------------------------------------------
+    &__secondary
+        lost-column 6/12
+        lost-column-gutter $gutter
+
+    // BLOCK-BANNER TERTIARY
+    // --------------------------------------------------
+    &__tertiary
+        lost-column 1/2
+        lost-column-gutter $gutter
+        padding 0 0 0 6rem
+        display flex
+        flex-direction column
+        justify-content center
+        min-height 5rem
+        position relative
+
+        &::before
+            content ''
+            display block
+            size( 5rem )
+            position absolute
+            top 0
+            left 0
+            bg( $banner-icon )
+
+    // BLOCK-BANNER CONTENT
+    // --------------------------------------------------
+    &__content
+        padding 1rem 0 0 0
+
+    // BLOCK-BANNER TITLE
+    // --------------------------------------------------
+    &__title
+        text-transform uppercase
+        margin 0 0 1rem
+        color $help-color-orange
+
+    // BLOCK-BANNER SLOGAN
+    // --------------------------------------------------
+    &__slogan
+        color $help-color-white

@@ -1,8 +1,0 @@
-mixin module-invite()
-    form.invite( action='action.php' method='post' )
-        .invite__field.invite__field--primary
-            input.invite__input( type='email' name='email' placeholder='Адрес эл. почты' required )
-            button.invite__button( type='button' ) Получить приглашение
-        .invite__field.invite__field--secondary.invite__field--visible
-            input.invite__checkbox( type='checkbox' name='terms' id='terms' value='check' )
-            label.invite__label( for='terms' ) Я согласен с <a href='#0'>условиями оказания услуги</a>

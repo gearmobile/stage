@@ -1,38 +1,34 @@
 doctype html
-html( class="no-js", lang="ru" )
+html(class="no-js", lang="ru")
 
     include ../components/head/head
     include ../components/block-topheader/block-topheader
-    include ../components/block-hero/block-hero
-    include ../components/block-intro/block-intro
-    include ../components/block-advantage/block-advantage
-    include ../components/block-mobile/block-mobile
-    include ../components/block-announce/block-announce
-    include ../components/block-review/block-review
+    include ../components/block-header/block-header
+    include ../components/block-steps/block-steps
+    include ../components/block-brief/block-brief
+    include ../components/block-benefits/block-benefits
     include ../components/footer/footer
 
     head
-        +head( head.defaults )
+        +head(head.defaults)
     body.page
         |%=symbols=%
-        //- +block-topheader()
+        +block-topheader()
         section.page__wrapper
 
             //- Include your components here
-            +block-hero()
-            +block-intro()
-            +block-advantage()
-            +block-mobile()
-            +block-announce()
-            +block-review()
+            +block-header()
+            +block-steps()
+            +block-brief()
+            +block-benefits()
 
             .page__buffer
 
         .page__footer
             +footer()
 
-        script( src='%=static=%js/separate-js/svg4everybody.min.js' )
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();
 
         //- Main scripts. You can replace it, but I recommend you to leave it here
-        script( src='%=static=%js/main%=hash=%%=min=%.js' )
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

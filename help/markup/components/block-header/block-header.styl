@@ -1,0 +1,42 @@
+// BLOCK-HEADER
+// ---------------------------------------------------------
+.block-header
+    height 90rem
+    background url( '%=static=%assets/block-header/header-bg.jpg' ) 50% 50% no-repeat
+    background-size cover
+    position relative
+
+    // BLOCK HEADER OVERLAY
+    // ------------------------------------------------
+    &::before
+        content ''
+        display block
+        min-width 100%
+        min-height 100%
+        position absolute
+        top 0
+        left 0
+        background-color rgba( $help-color-black, .6 )
+
+    // BLOCK-HEADER CENTER
+    // ---------------------------------------------------------
+    & .center
+        min-height 90rem
+        display flex
+        flex-direction column
+        justify-content center
+        position relative
+
+    // BLOCK-HEADER TITLE
+    // ---------------------------------------------------------
+    &__title
+        color $help-color-white
+        margin 0 0 6rem
+        max-width 65rem
+
+    // BLOCK-HEADER SUBTITLE
+    // ---------------------------------------------------------
+    &__subtitle
+        color $help-color-white
+        margin 0 0 8rem
+        max-width 50rem

@@ -1,6 +1,6 @@
 head: {
     defaults: {
-        title: 'Help',
+        title: 'Help - Index',
         useSocialMetaTags: true
     }
 }

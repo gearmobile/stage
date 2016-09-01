@@ -30,6 +30,10 @@ button
     border none
     background-color transparent
 
+    &:active
+    &:focus
+        outline none
+
 img
     vertical-align top
 
@@ -43,21 +47,28 @@ input, textarea
     resize none
     user-select text
 
+    &:focus
+    &:active
+        outline none
+
 h1, h2, h3, h4, p
     margin 0
 
+// ------------------------------------------------
 
 .page
-    // Стили для body
-
-.center
-    max-width $width
-    margin auto
-    padding 0 $gutter
+    position relative
+    -moz-osx-font-smoothing grayscale
+    -webkit-font-smoothing antialiased
 
 .page__wrapper
     min-height 100%
     margin-bottom -50px
+
+.center
+    max-width $width
+    padding 0 $gutter
+    margin auto
 
 * html .page__wrapper
     height 100%
