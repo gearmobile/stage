@@ -3,9 +3,10 @@
 .block-brief
     background-color $help-color-white
     position relative
+    padding 4rem 0 0 0
 
     @media screen and ( min-width $mobile )
-        height 46rem
+        padding 0
 
     // BLOCK-BRIEF CENTER
     // --------------------------------------------
@@ -15,6 +16,8 @@
 
         @media screen and ( min-width $mobile )
             flex-direction row
+            align-items center
+            height 46rem
 
     // BLOCK-BRIEF CONTENT
     // ---------------------------------------------
@@ -23,6 +26,9 @@
 
         @media screen and ( min-width $mobile )
             max-width 50%
+            position relative
+            z-index 2
+            margin 0
 
         @media screen and ( min-width $tablet )
             max-width 100%
@@ -32,23 +38,37 @@
     // BLOCK-BRIEF PRIMARY
     // ---------------------------------------------
     &__primary
+        margin 0 0 3rem
 
         @media screen and ( min-width $tablet )
-            lost-column 5/12
+            lost-column 4/12
             lost-column-gutter 0
+
+        & p
+            font 400 1.6rem/1.4 $ptsans
+            color $help-color-grey-dark
 
     // BLOCK-BRIEF SECONDARY
     // ---------------------------------------------
     &__secondary
 
         @media screen and ( min-width $tablet )
-            lost-column 4/12
+            lost-column 5/12
             lost-column-gutter 0
+
+        & p
+            font 400 1.4rem/1.4 $ptsans
+            color $help-color-grey-dark
+
+            &:not(:last-child)
+                margin 0 0 2rem
 
     // BLOCK-BRIEF CAPTION
     // ---------------------------------------------
     &__caption
-        //
+        font 700 2rem/1.2 $raleway
+        margin 0 0 2rem
+        color $help-color-grey-dark
 
     // BLOCK-BRIEF PICTURE
     // ---------------------------------------------
