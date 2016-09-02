@@ -26,10 +26,17 @@
     &__main
         display flex
 
+        @media screen and ( max-width $tablet )
+            justify-content center
+
     // BLOCK-REVIEW ITEM
     // -----------------------------------------
     &__item
         //
+
+        @media screen and ( max-width $tablet )
+            &:not(:first-child)
+                display none
 
     // BLOCK-REVIEW ICON
     // -----------------------------------------
