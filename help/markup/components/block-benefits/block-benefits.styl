@@ -1,4 +1,71 @@
-// block-benefits
+// BLOCK-BENEFITS
 // -----------------------------------------------------------------
 .block-benefits
+    padding 8rem 0 12rem
     background-color $help-color-grey-light
+
+    @media screen and ( max-width $tablet )
+        padding 6rem 0
+
+    // BLOCK-BENEFITS CENTER
+    // -----------------------------------------------------------------
+    & .center
+        //
+
+    // BLOCK-BENEFITS HEADER
+    // -----------------------------------------------------------------
+    &__header
+        margin 0 0 8rem
+        text-align center
+
+    // BLOCK-BENEFITS TITLE
+    // -----------------------------------------------------------------
+    &__title
+        font 400 2.4rem/1.2 sans-serif
+        color $help-color-grey-dark
+
+    // BLOCK-BENEFITS MAIN
+    // -----------------------------------------------------------------
+    &__main
+        display flex
+        justify-content center
+        flex-wrap wrap
+
+    // BLOCK-BENEFITS ITEM
+    // -----------------------------------------------------------------
+    &__item
+        flex 0 1 30rem
+        text-align center
+        margin 3rem
+
+        &:nth-child(1) .block-benefits__icon
+            bg( $benefits-icon-01 )
+
+        &:nth-child(2) .block-benefits__icon
+            bg( $benefits-icon-02 )
+
+        &:nth-child(3) .block-benefits__icon
+            bg( $benefits-icon-03 )
+
+        &:nth-child(4) .block-benefits__icon
+            bg( $benefits-icon-04 )
+
+        &:nth-child(5) .block-benefits__icon
+            bg( $benefits-icon-05 )
+
+        // BLOCK-BENEFITS TEXT
+        // -----------------------------------------------------------------
+        & p
+            font 400 1.8rem/1.2 sans-serif
+
+    // BLOCK-BENEFITS ICON
+    // -----------------------------------------------------------------
+    &__icon
+        size( 1.4rem )
+        margin 0 auto 3rem
+
+    // BLOCK-BENEFITS CAPTION
+    // -----------------------------------------------------------------
+    &__caption
+        font 700 2.4rem/1.2 sans-serif
+        margin 0 0 1rem
