@@ -7,6 +7,7 @@ html(class="no-js", lang="ru")
     include ../components/block-steps/block-steps
     include ../components/block-brief/block-brief
     include ../components/block-benefits/block-benefits
+    include ../components/block-mobile/block-mobile
     include ../components/footer/footer
 
     head
@@ -16,11 +17,11 @@ html(class="no-js", lang="ru")
         +block-topheader()
         section.page__wrapper
 
-            //- Include your components here
             +block-header()
             +block-steps()
             +block-brief()
             +block-benefits()
+            +block-mobile()
 
             .page__buffer
 

@@ -1,0 +1,48 @@
+// BLOCK-MOBILE
+// ----------------------------------------------------
+.block-mobile
+    min-height 36rem
+    padding 3rem 0 4rem
+    background url( '%=static=%assets/block-mobile/block-mobile-bg.png' ) 0 0 repeat
+    position relative
+
+    // BLOCK-MOBILE CENTER
+    // ----------------------------------------------------
+    & .center
+        display flex
+        flex-direction column
+
+    // BLOCK-MOBILE CONTENT
+    // ----------------------------------------------------
+    &__content
+        //
+
+        // BLOCK-MOBILE CONTENT TEXT
+        // ----------------------------------------------------
+        & p
+            font 400 1.4rem/1.4 $ptsans
+            color $help-color-white
+            margin 0 0 2rem
+
+    // BLOCK-MOBILE CAPTION
+    // ----------------------------------------------------
+    &__caption
+        font 700 2rem/1.2 $raleway
+        color $help-color-white
+        margin 0 0 2rem`
+
+    // BLOCK-MOBILE APPS
+    // ----------------------------------------------------
+    &__apps
+        display flex
+        flex-direction column
+
+    // BLOCK-MOBILE ICONS
+    // ----------------------------------------------------
+    &__icon
+        size( 16rem, 6rem )
+        background-color $help-color-black
+        border-radius .4rem
+
+        &:nth-child(1)
+            margin 0 0 2rem
