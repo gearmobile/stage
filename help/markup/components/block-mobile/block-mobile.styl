@@ -6,16 +6,25 @@
     background url( '%=static=%assets/block-mobile/block-mobile-bg.png' ) 0 0 repeat
     position relative
 
+    @media screen and ( min-width $tablet )
+        min-height 25rem
+        position static
+
     // BLOCK-MOBILE CENTER
     // ----------------------------------------------------
     & .center
         display flex
         flex-direction column
 
+        @media screen and ( min-width $tablet )
+            position relative
+
     // BLOCK-MOBILE CONTENT
     // ----------------------------------------------------
     &__content
-        //
+
+        @media screen and ( min-width $tablet )
+            padding 0 0 0 40%
 
         // BLOCK-MOBILE CONTENT TEXT
         // ----------------------------------------------------
@@ -27,15 +36,19 @@
     // BLOCK-MOBILE CAPTION
     // ----------------------------------------------------
     &__caption
+        max-width 80%
         font 700 2rem/1.2 $raleway
         color $help-color-white
-        margin 0 0 2rem`
+        margin 0 0 2rem
 
     // BLOCK-MOBILE APPS
     // ----------------------------------------------------
     &__apps
         display flex
         flex-direction column
+
+        @media screen and ( min-width $tablet )
+            flex-direction row
 
     // BLOCK-MOBILE ICONS
     // ----------------------------------------------------
@@ -45,4 +58,39 @@
         border-radius .4rem
 
         &:nth-child(1)
-            margin 0 0 2rem
+            margin 0 0 1rem
+
+            @media screen and ( min-width $tablet )
+                margin 0 1rem 0 0
+
+    // BLOCK-MOBILE IMAGE
+    // ----------------------------------------------------
+    &__image
+        size( 12rem, 21.4rem )
+        position absolute
+        right 0
+        bottom -4.2rem
+        background url( '%=static=%assets/block-mobile/mobile-image-mobile.png' ) 0 0 no-repeat
+
+        @media screen and ( min-width $tablet )
+            display none
+
+        &--tablet
+            display none
+
+            @media screen and ( min-width $tablet )
+                display block
+                size( 22.7rem, 27.5rem )
+                background url( '%=static=%assets/block-mobile/mobile-image-tablet.png' ) 0 0 no-repeat
+                position absolute
+                bottom -5.8rem
+                left $gutter
+
+    // BLOCK-MOBILE LABEL
+    // ----------------------------------------------------
+    &__label
+        size( 10rem )
+        position absolute
+        background url( '%=static=%assets/block-mobile/label-bg.png' ) 0 0 no-repeat
+        top -4rem
+        right 1rem
