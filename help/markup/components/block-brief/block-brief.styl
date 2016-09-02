@@ -1,56 +1,70 @@
 // BLOCK-BRIEF
 // ---------------------------------------------
 .block-brief
-    // padding 10rem 0 16rem
     background-color $help-color-white
     position relative
 
-    // BLOCK-BRIEF IMAGE
-    // --------------------------------------------
-    &::before
-        content ''
-        display block
-        position absolute
-        bottom 0
-        left 50%
-        transform translateX( -50% )
-        size( 52.8rem, 51.8rem )
-        background url( '%=static=%assets/block-brief/brief-bg.png' ) 0 0 no-repeat
+    @media screen and ( min-width $mobile )
+        height 46rem
 
     // BLOCK-BRIEF CENTER
     // --------------------------------------------
     & .center
         display flex
-        justify-content space-between
-        min-height 48rem
-        padding 10rem $gutter 16rem
-        position relative
+        flex-direction column
+
+        @media screen and ( min-width $mobile )
+            flex-direction row
+
+    // BLOCK-BRIEF CONTENT
+    // ---------------------------------------------
+    &__content
+        margin 0 0 4rem
+
+        @media screen and ( min-width $mobile )
+            max-width 50%
+
+        @media screen and ( min-width $tablet )
+            max-width 100%
+            display flex
+            justify-content space-between
 
     // BLOCK-BRIEF PRIMARY
     // ---------------------------------------------
     &__primary
-        lost-column 5/12
-        lost-column-gutter 0
 
-        & p
-            font 1.8rem/1.4 sans-serif
-            color $help-color-grey-dark
+        @media screen and ( min-width $tablet )
+            lost-column 5/12
+            lost-column-gutter 0
 
     // BLOCK-BRIEF SECONDARY
     // ---------------------------------------------
     &__secondary
-        lost-column 4/12
-        lost-column-gutter 0
 
-        & p
-            font 1.6rem/1.4 sans-serif
-            color $help-color-grey-dark
-
-            &:not(:last-child)
-                margin 0 0 2rem
+        @media screen and ( min-width $tablet )
+            lost-column 4/12
+            lost-column-gutter 0
 
     // BLOCK-BRIEF CAPTION
     // ---------------------------------------------
     &__caption
-        font 700 2.4rem/1.2 sans-serif
-        margin 0 0 3rem
+        //
+
+    // BLOCK-BRIEF PICTURE
+    // ---------------------------------------------
+    &__picture
+        margin auto
+        size( 28rem, 27.5rem )
+        background url( '%=static=%assets/block-brief/brief-bg.png' ) 0 0 no-repeat
+        background-size cover
+
+        @media screen and ( min-width $mobile )
+            size( 34.7rem, 51.8rem )
+            position absolute
+            bottom 0
+            right 0
+
+        @media screen and ( min-width $tablet )
+            left 50%
+            transform translateX( -50% )
+            size( 52.8rem, 51.8rem )
