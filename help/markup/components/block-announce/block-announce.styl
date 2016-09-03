@@ -18,8 +18,8 @@
         // BLOCK-ANNOUNCE PRIMARY COLUMN FIRST
         // --------------------------------------------
         & .column-primary
-            lost-column 3/12
-            lost-column-gutter $gutter
+            lost-column 2/12
+            lost-column-gutter $gutter*2
 
             height 10rem
             background-color salmon
@@ -31,11 +31,11 @@
         // --------------------------------------------
         & .column-secondary
             lost-column 7/12
-            lost-column-gutter $gutter
+            lost-column-gutter $gutter*2
 
             @media screen and ( max-width $tablet )
                 lost-column 4/6
-                lost-column-gutter $gutter
+                lost-column-gutter $gutter*2
 
             @media screen and ( max-width $mobile )
                 lost-column 1/1
@@ -55,19 +55,19 @@
         // BLOCK-ANNOUNCE PRIMARY COLUMN THIRD
         // --------------------------------------------
         & .column-tertiary
-            lost-column 2/12
-            lost-column-gutter $gutter
+            lost-column 3/12
+            lost-column-gutter $gutter*2
 
             @media screen and ( max-width $tablet )
                 lost-column 2/6
-                lost-column-gutter $gutter
+                lost-column-gutter $gutter*2
 
             @media screen and ( max-width $mobile )
                 lost-column 1/1
                 lost-column-gutter 0
 
             &__first
-                margin 0 0 6rem
+                margin 0 0 4rem
 
                 & p
                     font 400 1.4rem/1.4 $ptsans
