@@ -33,9 +33,6 @@
             lost-column 7/12
             lost-column-gutter $gutter
 
-            height 10rem
-            background-color salmon
-
             @media screen and ( max-width $tablet )
                 lost-column 4/6
                 lost-column-gutter $gutter
@@ -45,14 +42,21 @@
                 lost-column-gutter 0
                 margin-bottom 4rem
 
+            & .block-announce__title
+                font 400 2.4rem/1.4 $raleway
+                color $help-color-white
+                margin 0 0 4rem
+                text-align center
+
+            & p
+                font 400 1.6rem/1.4 $ptsans
+                color $help-color-white
+
         // BLOCK-ANNOUNCE PRIMARY COLUMN THIRD
         // --------------------------------------------
         & .column-tertiary
             lost-column 2/12
             lost-column-gutter $gutter
-
-            height 10rem
-            background-color salmon
 
             @media screen and ( max-width $tablet )
                 lost-column 2/6
@@ -63,22 +67,28 @@
                 lost-column-gutter 0
 
             &__first
-                size( 100%, 3rem )
-                background-color lightgreen
-                // margin 0 0 6rem
-                margin 0 0 1rem
+                margin 0 0 6rem
+
+                & p
+                    font 400 1.4rem/1.4 $ptsans
+                    color $help-color-white
 
             &__second
                 display flex
                 justify-content space-between
-                size( 100%, 6rem )
-                background-color cyan
 
-                // @media screen and ( min-width $tablet )
+            & .block-announce__thumb
+                display flex
+                justify-content center
+                align-items center
+                size( 3.2rem )
+                border-radius 50%
+                border .1rem solid $help-color-yellow
+                margin 0 auto 2rem
 
-                //     & .block-counter
-                //     & .block-logo
-                //         display none
+                & .block-announce-icon
+                    size( 1.6rem )
+                    fill $help-color-yellow
 
     // BLOCK-ANNOUNCE SECONDARY
     // --------------------------------------------

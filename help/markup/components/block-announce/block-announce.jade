@@ -8,8 +8,16 @@ mixin block-announce()
                 .column-primary
                     +block-counter()
                 .column-secondary
+                    h1.block-announce__title
+                        | Help работает в тестовом режиме с 1 октября
+                    p
+                        | Каждый день мы приглашаем по 20 человек, которые могут воспользоваться нашим сервисом, введите свой емейл и мы сообщим вам, когда наступит ваша очередь
                 .column-tertiary
                     .column-tertiary__first
+                        .block-announce__thumb
+                            != jadeHelpers.Icon.call( locals, {iconName: 'location', className: 'block-announce-icon' })
+                        p
+                            | На текущий момент услуги сервиса gethelp оказываются только для жителей Москвы в пределах МКАД
                     .column-tertiary__second
                         +block-counter()
                         +block-logo()
