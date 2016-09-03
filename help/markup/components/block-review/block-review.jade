@@ -1,12 +1,14 @@
-mixin block-review(data)
-    .block-review
+mixin block-review()
+    section.block-review
         .center
             header.block-review__header
                 h2.block-review__caption
                     | Отзывы наших клиентов
             main.block-review__main
-                .block-review__item
-                    a.block-review__icon( href='#0' )
+                article.block-review__item
+                    figure.block-review__thumb
+                        a.block-review__icon( href='#0' )
+                            img.block-review__image( src='%=static=%img/assets/block-review/review-image-01.jpg' alt='Review Image' )
                     .block-review__content
                         .block-review__meta
                             h4.block-review__title
@@ -15,8 +17,10 @@ mixin block-review(data)
                                 | солист группы «Руки Вверх!»
                         .block-review__cite
                             | Наконец-то, я освободил голову от бытовых забот и могу уделять больше времени творчеству и семье.
-                .block-review__item
-                    a.block-review__icon( href='#0' )
+                article.block-review__item
+                    figure.block-review__thumb
+                        a.block-review__icon( href='#0' )
+                            img.block-review__image( src='%=static=%img/assets/block-review/review-image-02.jpg' alt='Review Image' )
                     .block-review__content
                         .block-review__meta
                             h4.block-review__title
@@ -26,6 +30,7 @@ mixin block-review(data)
                         .block-review__cite
                             | Спасибо помощникам! Теперь у меня есть время спокойно сходить в салон красоты.
                 button.block-review__button( type='button' )
+                    != jadeHelpers.Icon.call( locals, {iconName: 'reload', className: 'block-review-icon' })
 
 
 
