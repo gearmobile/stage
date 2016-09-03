@@ -1,5 +1,6 @@
 include ../block-counter/block-counter
 include ../block-logo/block-logo
+include ../block-submit/block-submit
 
 mixin block-announce()
     section.block-announce
@@ -25,3 +26,4 @@ mixin block-announce()
                 .column-primary
                     +block-logo()
                 .column-secondary
+                    +block-submit( 'Получить приглашение' )

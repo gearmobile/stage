@@ -57,11 +57,19 @@
         background-color $help-color-black
         border-radius .4rem
 
-        &:nth-child(1)
+        // BLOCK-MOBILE ICON PRIMARY
+        // ----------------------------------------------------
+        &--primary
             margin 0 0 1rem
+            bg( $app-store )
 
             @media screen and ( min-width $tablet )
                 margin 0 1rem 0 0
+
+        // BLOCK-MOBILE ICON SECONDARY
+        // ----------------------------------------------------
+        &--secondary
+            bg( $google-play )
 
     // BLOCK-MOBILE IMAGE
     // ----------------------------------------------------
