@@ -1,0 +1,19 @@
+include ../block-counter/block-counter
+include ../block-logo/block-logo
+
+mixin block-announce()
+    section.block-announce
+        .center
+            .block-announce__primary
+                .column-primary
+                    +block-counter()
+                .column-secondary
+                .column-tertiary
+                    .column-tertiary__first
+                    .column-tertiary__second
+                        +block-counter()
+                        +block-logo()
+            .block-announce__secondary
+                .column-primary
+                    +block-logo()
+                .column-secondary
