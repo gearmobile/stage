@@ -1,0 +1,86 @@
+// FOOTER
+// -----------------------------------------
+.footer
+    padding 3rem 0
+    background-color $help-color-medium
+
+    // FOOTER CENTER
+    // -----------------------------------------
+    & .center
+        display flex
+        justify-content space-between
+        min-height 3.2rem
+
+    // FOOTER PRIMARY
+    // -----------------------------------------
+    &__primary
+        padding 0 0 0 4.5rem
+        font 400 1.4rem/3.2rem $ptsans
+        color $help-color-grey-dark
+        position relative
+
+        &::before
+            content ''
+            display block
+            size( 3.2rem )
+            position absolute
+            left 0
+            top 50%
+            transform translateY( -50% )
+            bg( $logo-small )
+
+    // FOOTER PRIMARY LINK
+    // -----------------------------------------
+    &__brand
+        color $help-color-grey-dark
+
+        &:hover
+            color $help-color-orange
+
+
+    // FOOTER SECONDARY
+    // -----------------------------------------
+    &__secondary
+        display flex
+        justify-content center
+
+        @media screen and ( max-width $tablet )
+            display none
+
+    // FOOTER SECONDARY LINK
+    // -----------------------------------------
+    &__link
+        font 400 1.4rem/3.2rem $ptsans
+        color $help-color-grey-dark
+        margin 0 .6rem
+
+        &:hover
+            color $help-color-orange
+
+    // FOOTER TERTIARY
+    // -----------------------------------------
+    &__tertiary
+        display flex
+
+    // FOOTER TERTIARY ICONS
+    // -----------------------------------------
+    &__icon
+        display flex
+        justify-content center
+        align-items center
+        size( 3.2rem )
+        background-color $help-color-orange
+        border-radius 50%
+
+        &:not(:first-child)
+            margin 0 0 0 1.2rem
+
+        &:nth-child(1):hover
+            background-color $help-color-instagram-hover
+
+        &:nth-child(2):hover
+            background-color $help-color-facebook-hover
+
+        & .footer-icon
+            size( 1.4rem )
+            fill $help-color-white
