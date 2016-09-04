@@ -31,7 +31,7 @@
             lost-column-gutter $gutter*2
 
             @media screen and ( max-width $desktop-x )
-                lost-column 4/6
+                lost-column 7/12
                 lost-column-gutter $gutter*2
 
             @media screen and ( max-width $mobile )
@@ -55,7 +55,7 @@
             lost-column-gutter $gutter*2
 
             @media screen and ( max-width $desktop-x )
-                lost-column 2/6
+                lost-column 5/12
                 lost-column-gutter $gutter*2
 
             @media screen and ( max-width $mobile )
@@ -76,7 +76,6 @@
             &__second
                 display flex
                 justify-content space-around
-                // justify-content space-between
 
                 @media screen and ( min-width $desktop-x )
                     display none
@@ -91,6 +90,9 @@
                 border-radius 50%
                 border .1rem solid $help-color-yellow
                 margin 0 0 2rem
+
+                @media screen and ( max-width $mobile )
+                    margin 0 auto 2rem
 
                 // BLOCK-ANNOUNCE THUMB ICON
                 // --------------------------------------------
@@ -108,9 +110,6 @@
         & > .column-primary
             lost-column 2/12
             lost-column-gutter $gutter*2
-
-            height 10rem
-            background-color salmon
 
             & .block-logo
                 flex-direction row
@@ -132,9 +131,6 @@
         & > .column-secondary
             lost-column 10/12
             lost-column-gutter $gutter*2
-
-            height 10rem
-            background-color salmon
 
             @media screen and ( max-width $desktop-x )
                 lost-column 1/1

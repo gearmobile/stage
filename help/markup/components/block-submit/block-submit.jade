@@ -1,9 +1,10 @@
-mixin block-submit( submit )
+mixin block-submit( value )
     .block-submit
         form.form( method='post' action='action.php' )
             .form__row.form__row--primary
                 input.form__email( type='email' name='email' placeholder='Адрес эл. почты' )
-                input.form__submit( type='submit' name='submit' placeholder=submit )= submit
+                input.form__submit( type='submit' name='submit' placeholder=value )= value
             .form__row
                 input.form__check( type='checkbox' id='form-check' checked )
-                label.form__label(for='form-check') Я согласен с <a href='#0'>условиями оказания услуги</a>
+                label.form__label(for='form-check')
+                    | Я согласен с <a href='#0'>условиями оказания услуги</a>
