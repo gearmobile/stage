@@ -2,11 +2,11 @@
 // ----------------------------------------------------
 .block-mobile
     min-height 36rem
-    background url( '%=static=%assets/block-mobile/block-mobile-bg.png' ) 0 0 repeat
+    background url( '%=static=%assets/block-mobile/mobile-bg.png' ) 0 0 repeat
     position relative
 
     @media screen and ( min-width $tablet )
-        min-height 25rem
+        min-height 20rem
 
     // BLOCK-MOBILE CENTER
     // ----------------------------------------------------
@@ -16,9 +16,8 @@
 
         @media screen and ( min-width $tablet )
             position relative
-            min-height 25rem
+            min-height 20rem
             justify-content center
-            // padding 0 0 0 36%
 
     // BLOCK-MOBILE CONTENT
     // ----------------------------------------------------
@@ -30,7 +29,7 @@
 
         @media screen and ( min-width $tablet )
             padding 0 0 0 40%
-            min-height 25rem
+            min-height 20rem
 
         @media screen and ( min-width $desktop )
             padding 0
@@ -49,9 +48,8 @@
             lost-column-gutter $gutter
             margin 0
             max-width 100%
-            padding 10rem 0 0 0
+            padding 8rem 0 0 0
             font-size 1.4rem
-            outline 1px dashed blue
 
     // BLOCK-MOBILE SLOGAN
     // ----------------------------------------------------
@@ -63,27 +61,27 @@
         @media screen and ( min-width $desktop )
             lost-column 6/12
             lost-column-gutter $gutter
-            padding 10rem 0 0 30rem
+            padding 8rem 0 0 30rem
             margin 0
             position relative
-            outline 1px dashed black
 
     // BLOCK-MOBILE APPS
     // ----------------------------------------------------
     &__apps
         display flex
-        flex-direction column
 
-        @media screen and ( min-width $tablet )
+        @media screen and ( max-width $mobile )
+            flex-direction column
+
+        @media screen and ( min-width $mobile )
             flex-direction row
 
         @media screen and ( min-width $desktop )
             lost-column 4/12
             lost-column-gutter $gutter
-            padding 10rem 0 0 0
+            padding 8rem 0 0 0
             display flex
             justify-content flex-end
-            outline 1px dashed white
 
     // BLOCK-MOBILE ICONS
     // ----------------------------------------------------
@@ -98,7 +96,7 @@
             margin 0 0 1rem
             bg( $app-store )
 
-            @media screen and ( min-width $tablet )
+            @media screen and ( min-width $mobile )
                 margin 0 1rem 0 0
 
         // BLOCK-MOBILE ICON SECONDARY
@@ -150,7 +148,7 @@
         right -5rem
         top 8rem
 
-    @media screen and ( min-width $desktop-x )
+    @media screen and ( min-width $desktop )
         display none
 
 // BLOCK-MOBILE LABEL DESKTOP
@@ -165,3 +163,6 @@
     & > .block-mobile__label
         right -5rem
         top 8rem
+
+    @media screen and ( max-width $desktop )
+        display none
