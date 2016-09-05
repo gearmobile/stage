@@ -1,2 +1,40 @@
-// GUI stylies of the project
-// For example, styles of the links, buttons and so on.
+
+// BUTTON
+// ------------------------------------------
+.button
+    height 5rem
+    padding 0 6rem
+    border-radius 50em
+    border-width .1rem
+    border-style solid
+    font 600 1.7rem/1.2 $raleway
+    transition color .2s, border-color .2s, background-color .2s
+    background-color transparent
+
+    // BUTTON PRIMARY
+    // ------------------------------------------
+    &--primary
+        border-color $help-color-orange
+        color $help-color-orange
+
+        &:hover
+            background-color $help-color-orange
+            color $help-color-white
+
+        &:active
+            background-color $help-color-brown
+            border-color $help-color-brown
+
+    // BUTTON SECONDARY
+    // ------------------------------------------
+    &--secondary
+        border-color $help-color-yellow
+        color $help-color-yellow
+
+        &:hover
+            background-color $help-color-yellow
+            color $help-color-white
+
+        &:active
+            background-color $help-color-orange
+            border-color $help-color-orange

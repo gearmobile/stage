@@ -1,6 +1,6 @@
 include ../block-banner/block-banner
 
-mixin block-header(data)
+mixin block-header()
     header.block-header
         .center
             .block-header__content
@@ -8,5 +8,5 @@ mixin block-header(data)
                     | Освободите свое время!
                 p.block-header__subtitle
                     | Передайте бытовые заботы по стирке, глажке белья или его химчистке нашим помощниками, а сами займитесь любимым делом
-                button.button( type='button' ) Сколько стоит?
-        +block-banner()
+                button.button.button--secondary( type='button' ) Сколько стоит?
+        //- +block-banner()

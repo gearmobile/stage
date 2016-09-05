@@ -5,7 +5,8 @@
     width 100%
     top 0
     left 0
-    padding 1rem 0
+    z-index 999
+    padding 2rem 0
     outline 1px dotted green
 
     // BLOCK TOPHEADER JS-HIDDEN
@@ -16,4 +17,94 @@
     // BLOCK TOPHEADER CENTER
     // -------------------------------------------------
     & .center
+        display flex
+        justify-content space-between
+        align-items center
+
+    // BLOCK TOPHEADER PRIMO
+    // -------------------------------------------------
+    &__primo
         //
+
+        @media screen and ( max-width $desktop )
+
+            & .block-logo-large__subtitle
+                display none
+
+    // BLOCK TOPHEADER SECONDO
+    // -------------------------------------------------
+    &__secondo
+
+        @media screen and ( max-width $desktop )
+            display none
+
+    &__item
+        text-transform uppercase
+        font 700 1.3rem/1.2 $raleway
+        color $help-color-white
+        margin 0 1rem
+
+        &:hover
+            color $help-color-orange
+
+    // BLOCK TOPHEADER TETRO
+    // -------------------------------------------------
+    &__tetro
+
+        @media screen and ( max-width $mobile )
+            display none
+
+    &__phone
+        font 700 1.6rem/1.2 $ptsans
+        color $help-color-white
+
+        &:hover
+            color $help-color-orange
+
+    // BLOCK TOPHEADER QUATTRO
+    // -------------------------------------------------
+    &__quattro
+        //
+
+    &__entry
+        display flex
+        align-items center
+
+        &:hover .block-topheader__login
+            color $help-color-orange
+
+        &:hover .block-topheader__icon
+            background-color $help-color-brown
+
+    &__login
+        text-transform uppercase
+        font 700 1.3rem/1.2 $raleway
+        color $help-color-white
+        margin 0 2rem 0 0
+
+        @media screen and ( max-width $mobile )
+            display none
+
+    &__icon
+        size( 3.2rem )
+        border-radius 50%
+        background-color $help-color-orange
+        display flex
+        justify-content center
+        align-items center
+
+        & .block-topheader-icon
+            fill $help-color-white
+            size( 1.8rem )
+
+    // BLOCK TOPHEADER CINQUE
+    // -------------------------------------------------
+    &__cinque .block-topheader-menu
+        fill $help-color-white
+        cursor pointer
+
+        &:hover
+            fill $help-color-orange
+
+        @media screen and ( min-width $desktop )
+            display none

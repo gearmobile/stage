@@ -1,3 +1,28 @@
-mixin block-topheader(data)
+include ../block-logo-large/block-logo-large
+
+mixin block-topheader()
     section.block-topheader
         .center
+            .block-topheader__primo
+                +block-logo-large()
+            .block-topheader__secondo
+                nav.block-topheader__menu
+                    a.block-topheader__item( href='#0' )
+                        | Получить приглашение
+                    a.block-topheader__item( href='#0' )
+                        | Калькулятор стоимости
+                    a.block-topheader__item( href='#0' )
+                        | Отзывы
+            .block-topheader__tetro
+                    a.block-topheader__phone( href='tel:+78003330872' )
+                        | 8 800 333-08-72
+            .block-topheader__quattro
+                nav.block-topheader__entry
+                    a.block-topheader__login( href='#0' )
+                        | Вход
+                    a.block-topheader__icon( href='#0' )
+                        != jadeHelpers.Icon.call( locals, {iconName: 'lock', className: 'block-topheader-icon' })
+            .block-topheader__cinque
+                != jadeHelpers.Icon.call( locals, {iconName: 'menu', className: 'block-topheader-menu' })
+
+
