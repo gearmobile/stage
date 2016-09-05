@@ -8,17 +8,51 @@
     bottom 0
     border-top .1rem solid rgba( $help-color-white, .2 )
 
+    & > .center
+        display flex
+
+        @media screen and ( max-width $desktop )
+            flex-direction column
+
     // BLOCK-BANNER PRIMARY
     // --------------------------------------------------
     &__primary
         lost-column 6/12
         lost-column-gutter $gutter
 
+        @media screen and ( max-width $desktop )
+            lost-column 1/1
+            lost-column-gutter 0
+            margin-bottom 4rem
+
+        @media screen and ( max-width $mobile )
+            display flex
+            flex-direction column
+
     // BLOCK-BANNER SECONDARY
     // --------------------------------------------------
     &__secondary
         lost-column 6/12
         lost-column-gutter $gutter
+
+        & .block-submit .form__row--primary
+            margin 0
+
+        & .block-submit .form__row--secondary
+            display none
+
+        & .block-submit .form__email
+            width calc( 100% - 2.6rem - 2rem )
+
+            @media screen and ( max-width $mobile )
+                width 100%
+
+        & .block-submit .form__submit
+            padding 0 4rem
+
+        @media screen and ( max-width $desktop )
+            lost-column 1/1
+            lost-column-gutter 0
 
     // BLOCK-BANNER TERTIARY
     // --------------------------------------------------
@@ -41,19 +75,27 @@
             left 0
             bg( $banner-icon )
 
+        @media screen and ( max-width $mobile )
+            lost-column 1/1
+            lost-column-gutter 0
+
+            &:first-child
+                margin-bottom 4rem
+
     // BLOCK-BANNER CONTENT
     // --------------------------------------------------
     &__content
-        padding 1rem 0 0 0
+        // padding 1rem 0 0 0
 
     // BLOCK-BANNER TITLE
     // --------------------------------------------------
     &__title
         text-transform uppercase
-        margin 0 0 1rem
         color $help-color-orange
+        font 900 1.5rem/2 $raleway
 
     // BLOCK-BANNER SLOGAN
     // --------------------------------------------------
     &__slogan
         color $help-color-white
+        font 400 1.6rem/1.2 $ptsans
