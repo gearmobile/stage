@@ -3,7 +3,7 @@ mixin block-submit( value )
         form.form( method='post' action='action.php' )
             .form__row.form__row--primary
                 input.form__email( type='email' name='email' placeholder='Адрес эл. почты' )
-                input.form__submit( type='submit' name='submit' placeholder=value )
+                button.form__submit( type='submit' name='submit' )= value
             .form__row.form__row--secondary
                 input.form__check( type='checkbox' id='form-check' checked )
                 label.form__label(for='form-check')
