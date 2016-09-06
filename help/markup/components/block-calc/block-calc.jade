@@ -28,35 +28,67 @@ mixin block-calc(data)
                                     li.list__item
                                         .primary
                                             .primary__thumb
-                                                img( src='%=static=%img/content/gallery-image-01.jpg' alt='Gallery Image' )
+                                                img.primary__image( src='%=static=%img/content/gallery-image-01.jpg' alt='Gallery Image' )
                                             h3.primary__caption
                                                 | Пуховик с натуральным мехом
                                         .secondary
+                                            .secondary__title
+                                                | 220 <span class='secondary__currency'>&#8381;</span>
+                                            .secondary__subtitle
+                                                | за 1 штуку
                                         .tertiary
+                                            .stepper
+                                                button.stepper__button.stepper__button--left( type='button' ) -
+                                                input.stepper__input( type='text' value='1' placeholder='Amount' )
+                                                button.stepper__button.stepper__button--right( type='button' ) +
                                     li.list__item
                                         .primary
                                             .primary__thumb
-                                                img( src='%=static=%img/content/gallery-image-02.jpg' alt='Gallery Image' )
+                                                img.primary__image( src='%=static=%img/content/gallery-image-02.jpg' alt='Gallery Image' )
                                             h3.primary__caption
                                                 | Ветровка
                                         .secondary
+                                            .secondary__title
+                                                | 500 <span class='secondary__currency'>&#8381;</span>
+                                            .secondary__subtitle
+                                                | за 1 штуку
                                         .tertiary
+                                            .stepper
+                                                button.stepper__button.stepper__button--left( type='button' ) -
+                                                input.stepper__input( type='text' value='1' placeholder='Amount' )
+                                                button.stepper__button.stepper__button--right( type='button' ) +
                                     li.list__item
                                         .primary
                                             .primary__thumb
-                                                img( src='%=static=%img/content/gallery-image-03.jpg' alt='Gallery Image' )
+                                                img.primary__image( src='%=static=%img/content/gallery-image-03.jpg' alt='Gallery Image' )
                                             h3.primary__caption
                                                 | Пальто демисезонное средней длинны
                                         .secondary
+                                            .secondary__title
+                                                | 1 256 <span class='secondary__currency'>&#8381;</span>
+                                            .secondary__subtitle
+                                                | за 1 штуку
                                         .tertiary
+                                            .stepper
+                                                button.stepper__button.stepper__button--left( type='button' ) -
+                                                input.stepper__input( type='text' value='1' placeholder='Amount' )
+                                                button.stepper__button.stepper__button--right( type='button' ) +
                                     li.list__item
                                         .primary
                                             .primary__thumb
-                                                img( src='%=static=%img/content/gallery-image-04.jpg' alt='Gallery Image' )
+                                                img.primary__image( src='%=static=%img/content/gallery-image-04.jpg' alt='Gallery Image' )
                                             h3.primary__caption
                                                 | Пиджак с карманами
                                         .secondary
+                                            .secondary__title
+                                                | 500 <span class='secondary__currency'>&#8381;</span>
+                                            .secondary__subtitle
+                                                | за 1 штуку
                                         .tertiary
+                                            .stepper
+                                                button.stepper__button.stepper__button--left( type='button' ) -
+                                                input.stepper__input( type='text' value='1' placeholder='Amount' )
+                                                button.stepper__button.stepper__button--right( type='button' ) +
                 aside.block-calc__sibebar
                     +block-widget()
                     +block-widget()
