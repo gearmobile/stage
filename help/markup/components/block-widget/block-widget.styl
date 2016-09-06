@@ -1,1 +1,67 @@
+// BLOCK-WIDGET
+// ----------------------------------------------
+.block-widget
+    display flex
+    flex-direction column
+    width 28rem
 
+    // BLOCK-WIDGET HEADER
+    // ----------------------------------------------
+    &__header
+        padding 3rem
+        background-color $help-color-white
+        position relative
+
+        &::after
+            content ''
+            display block
+            height .4rem
+            width 100%
+            position absolute
+            left 0
+            bottom -.2rem
+            background url( '%=static=%assets/block-widget/widget-border-bg.png' ) 0 0 repeat-x
+
+    &__title
+        font 700 2.4rem/1.2 $raleway
+        color $help-color-grey-dark
+        margin 0 0 2rem
+
+    &__list
+        display flex
+        justify-content space-around
+        margin 0 0 4rem
+
+    &__item
+        //
+
+    &__caption
+        color $help-color-grey-medium-x
+        text-transform uppercase
+        font 400 1rem/1.4 $ptsans
+
+        &::after
+            content ':'
+            font 400 1rem/1.2 $ptsans
+
+    &__value
+        font 700 1.8rem/1.4 $ptsans
+        color $help-color-grey-dark
+
+    &__total
+        //
+
+    &__heading
+        //
+
+    &__total-value
+        //
+
+    // BLOCK-WIDGET FOOTER
+    // ----------------------------------------------
+    &__footer
+        display flex
+        justify-content center
+        align-items center
+        min-height 10rem
+        background url( '%=static=%assets/block-widget/widget-bg.jpg' ) 0 0 no-repeat

@@ -1,2 +1,26 @@
 mixin block-widget(data)
     .block-widget
+        header.block-widget__header
+            h3.block-widget__title
+                | Ваш заказ
+            ul.block-widget__list
+                li.block-widget__item
+                    h4.block-widget__caption
+                        | Стоимость
+                    p.block-widget__value
+                        | 1 490
+                li.block-widget__item
+                    h4.block-widget__caption
+                        | Доставка
+                    p.block-widget__value
+                        | 220
+            .block-widget__total
+                .block-widget__heading
+                    | общая стоимость
+                p.block-widget__total-value
+                    | 1 900
+            a.block-widget__reset( href='#0' )
+                | Сбросить расчет
+        footer.block-widget__footer
+            button.button.button--quaternary( type='button' )
+                | Вызвать помощника

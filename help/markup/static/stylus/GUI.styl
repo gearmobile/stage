@@ -2,14 +2,15 @@
 // BUTTON
 // ------------------------------------------
 .button
+    width 23rem
     height 5rem
-    padding 0 6rem
     border-radius 50em
     border-width .1rem
     border-style solid
-    font 600 1.7rem/1.2 $raleway
+    font 600 1.4rem/1.2 $raleway
     transition color .2s, border-color .2s, background-color .2s
     background-color transparent
+    white-space nowrap
 
     // BUTTON PRIMARY
     // ------------------------------------------
@@ -38,3 +39,22 @@
         &:active
             background-color $help-color-orange
             border-color $help-color-orange
+
+    // BUTTON TERTIARY
+    // ------------------------------------------
+    &--tertiary
+        //
+
+    // BUTTON QUATERNARY
+    // ------------------------------------------
+    &--quaternary
+        border-color $help-color-white
+        color $help-color-white
+
+        &:hover
+            border-color $help-color-yellow
+            color $help-color-yellow
+
+        &:active
+            background-color $help-color-yellow
+            color $help-color-white
