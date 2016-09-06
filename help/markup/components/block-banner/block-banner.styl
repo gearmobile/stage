@@ -1,15 +1,26 @@
 // BLOCK-BANNER
 // --------------------------------------------------
 .block-banner
-    width 100%
-    padding 2rem 0 3rem
-    position absolute
-    left 0
-    bottom 0
-    border-top .1rem solid rgba( $help-color-white, .2 )
+    position relative
+    padding 2rem 0
 
+    // BLOCK-BANNER STRIKE
+    // --------------------------------------------------
+    &::before
+        content ''
+        display block
+        height .1rem
+        width 160%
+        background-color rgba( $help-color-white, .2 )
+        position absolute
+        top 0
+        left -30%
+
+    // BLOCK-BANNER CENTER
+    // --------------------------------------------------
     & > .center
         display flex
+        padding 0
 
         @media screen and ( max-width $desktop )
             flex-direction column
@@ -80,7 +91,7 @@
             lost-column-gutter 0
 
             &:first-child
-                margin-bottom 4rem
+                margin-bottom 3rem
 
     // BLOCK-BANNER CONTENT
     // --------------------------------------------------
