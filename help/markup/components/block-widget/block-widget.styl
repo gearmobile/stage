@@ -10,17 +10,6 @@
     &__header
         padding 3rem
         background-color $help-color-white
-        position relative
-
-        &::after
-            content ''
-            display block
-            height .4rem
-            width 100%
-            position absolute
-            left 0
-            bottom -.2rem
-            background url( '%=static=%assets/block-widget/widget-border-bg.png' ) 0 0 repeat-x
 
     &__title
         font 700 2.4rem/1.2 $raleway
@@ -70,3 +59,14 @@
         align-items center
         min-height 10rem
         background url( '%=static=%assets/block-widget/widget-bg.jpg' ) 0 0 no-repeat
+        position relative
+
+        &::before
+            content ''
+            display block
+            height .4rem
+            width 100%
+            position absolute
+            left 0
+            top -.2rem
+            background url( '%=static=%assets/block-widget/widget-border-bg.png' ) 0 0 repeat-x
