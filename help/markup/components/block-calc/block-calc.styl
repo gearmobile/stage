@@ -4,16 +4,30 @@
     padding 14rem 0 0 0
     background-color $help-color-grey-light
 
-    &__primary
-        lost-column 100% flex
+    // BLOCK-CALC CENTER
+    // -----------------------------------------
+    & > .center
+        display flex
 
+    // BLOCK-CALC PRIMARY
+    // -----------------------------------------
+    &__primary
+        display flex
+        justify-content space-between
+
+    // BLOCK-CALC
+    // -----------------------------------------
     &__main
-        lost-column 9/12
+        lost-column 8/12
         lost-column-gutter $gutter
 
+    // BLOCK-CALC HEADER
+    // -----------------------------------------
     &__header
         margin 0 0 16rem
 
+    // BLOCK-CALC TITLE
+    // -----------------------------------------
     &__title
         padding 0 0 0 8rem
         font 400 4rem/5.2rem $raleway
@@ -29,6 +43,8 @@
             top 0
             bg( $calc-icon )
 
+    // BLOCK-CALC SUBTITLE
+    // -----------------------------------------
     &__subtitle
         margin 5rem 0 0 8rem
 
@@ -36,18 +52,107 @@
             font 400 1.8rem/1.4 $ptsans
             color $help-color-grey-dark
 
+    // BLOCK-CALC CAPTION
+    // -----------------------------------------
     &__caption
         text-transform uppercase
         font 900 1.5rem/1.2rem $raleway
         color $help-color-grey-dark
         margin 0 0 2rem
 
-    &__gallery
+    // BLOCK-CALC CONTENT
+    // -----------------------------------------
+    &__content
         //
 
+    // BLOCK-CALC GALLERY
+    // -----------------------------------------
+    & .gallery
+        border .3rem solid $help-color-white
+
+        // BLOCK-CALC GALLERY HEADER
+        // -----------------------------------------
+        &__header
+            padding 5rem 0
+            border-bottom .3rem solid $help-color-white
+
+            // BLOCK-CALC GALLERY CONTROLS
+            // -----------------------------------------
+            & .controls
+                padding 0 4rem
+
+                // BLOCK-CALC GALLERY CONTROLS ITEM
+                // -----------------------------------------
+                &__item
+                    text-transform uppercase
+                    font 900 1.3rem/1.2 $raleway
+                    color $help-color-grey-dark
+                    position relative
+
+                    &:not(:last-child)
+                        margin 0 2rem 0 0
+
+                    &::after
+                        content ''
+                        display block
+                        width 0
+                        height .3rem
+                        background-color $help-color-orange
+                        position absolute
+                        left 0
+                        bottom -.6rem
+                        transition width .2s
+
+                    &:hover
+                        color $help-color-orange
+
+                    &:hover::after
+                        width 100%
+
+        // BLOCK-CALC GALLERY MAIN
+        // -----------------------------------------
+        &__main
+            //
+
+            // BLOCK-CALC GALLERY LIST
+            // -----------------------------------------
+            & .list
+                //
+
+                // BLOCK-CALC GALLERY LIST ITEM
+                // -----------------------------------------
+                &__item
+                    display flex
+                    justify-content space-between
+                    padding 4rem
+
+                    &:not(:last-child)
+                        border-bottom .1rem solid $help-color-white
+
+                & .primary
+                    display flex
+                    align-items center
+
+                & .primary__thumb
+                    display flex
+                    justify-content center
+                    align-items center
+                    size( 10rem )
+                    border-radius 50%
+                    background-color $help-color-white
+
+                & .primary__caption
+                    margin 0 0 0 2rem
+                    font 700 1.8rem/1.4 $ptsans
+                    color $help-color-grey-dark
+
+    // BLOCK-CALC SIDEBAR
+    // -----------------------------------------
     &__sibebar
         lost-column 3/12
         lost-column-gutter $gutter
 
+    // BLOCK-CALC SECONDARY
+    // -----------------------------------------
     &__secondary
-        //
+        display flex

@@ -13,7 +13,50 @@ mixin block-calc(data)
                                 | Что будем стирать, гладить, чистить?
                             p
                                 | Если вам требуется просто постирать и погладить или выполнить химчистку ваших вещей, мы с радостью поможем в этом.
-                    .block-calc__gallery
+                    main.block-calc__content
+                        .gallery
+                            header.gallery__header
+                                nav.controls
+                                    a.controls__item( href='#0' )
+                                        | Все
+                                    a.controls__item( href='#0' )
+                                        | Мужские вещи
+                                    a.controls__item( href='#0' )
+                                        | Женские вещи
+                            main.gallery__main
+                                ul.list
+                                    li.list__item
+                                        .primary
+                                            .primary__thumb
+                                                img( src='%=static=%img/content/gallery-image-01.jpg' alt='Gallery Image' )
+                                            h3.primary__caption
+                                                | Пуховик с натуральным мехом
+                                        .secondary
+                                        .tertiary
+                                    li.list__item
+                                        .primary
+                                            .primary__thumb
+                                                img( src='%=static=%img/content/gallery-image-02.jpg' alt='Gallery Image' )
+                                            h3.primary__caption
+                                                | Ветровка
+                                        .secondary
+                                        .tertiary
+                                    li.list__item
+                                        .primary
+                                            .primary__thumb
+                                                img( src='%=static=%img/content/gallery-image-03.jpg' alt='Gallery Image' )
+                                            h3.primary__caption
+                                                | Пальто демисезонное средней длинны
+                                        .secondary
+                                        .tertiary
+                                    li.list__item
+                                        .primary
+                                            .primary__thumb
+                                                img( src='%=static=%img/content/gallery-image-04.jpg' alt='Gallery Image' )
+                                            h3.primary__caption
+                                                | Пиджак с карманами
+                                        .secondary
+                                        .tertiary
                 aside.block-calc__sibebar
                     +block-widget()
                     +block-widget()
@@ -22,3 +65,4 @@ mixin block-calc(data)
                 .column.column--two
                 .column.column--three
 
+      
