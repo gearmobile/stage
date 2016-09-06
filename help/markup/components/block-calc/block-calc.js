@@ -1,4 +1,6 @@
 window.addEventListener( 'load', function () {
+    // counter
+    // -------------------------------------------
     const galleryList = document.querySelector( '.block-calc .list' );
     if ( galleryList === null ) {
         return false;
