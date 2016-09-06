@@ -1,4 +1,4 @@
-mixin block-widget(data)
+mixin block-widget()
     .block-widget
         header.block-widget__header
             h3.block-widget__title
@@ -19,8 +19,11 @@ mixin block-widget(data)
                     | общая стоимость
                 p.block-widget__total-value
                     | 1 900 <span class='block-widget__currency'>&#8381;</span>
-            a.block-widget__reset( href='#0' )
-                | Сбросить расчет
+            .block-widget__reset
+                .block-widget__icon
+                    != jadeHelpers.Icon.call( locals, { iconName: 'close', className: 'block-widget-icon' })
+                a.block-widget__link( href='#0' )
+                    | Сбросить расчет
         footer.block-widget__footer
             button.button.button--quaternary( type='button' )
                 | Вызвать помощника

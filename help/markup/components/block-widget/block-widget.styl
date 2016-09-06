@@ -10,6 +10,24 @@
     &__header
         padding 3rem
         background-color $help-color-white
+        position relative
+
+        &::before
+        &::after
+            content ''
+            display block
+            position absolute
+            position absolute
+            size( 2rem )
+            top -1rem
+            border-radius 50%
+            background-color $help-color-grey-light
+
+        &::before
+            left -1rem
+
+        &::after
+            right -1rem
 
     &__title
         font 700 2.4rem/1.2 $raleway
@@ -43,13 +61,42 @@
         vertical-align top
 
     &__total
-        //
+        margin 0 0 4rem
 
     &__heading
-        //
+        text-transform uppercase
+        font 900 1.5rem/1.4 $raleway
+        color $help-color-grey-dark
 
     &__total-value
-        //
+        font 700 4rem/1.4 $ptsans
+        color $help-color-grey-dark
+
+        & .block-widget__currency
+            font 700 2rem/1.2 $ptsans
+            vertical-align top
+
+    &__reset
+        display flex
+
+    &__icon
+        display flex
+        justify-content center
+        align-items center
+        size( 3.2rem )
+        border-radius 50%
+        background-color $help-color-orange
+
+        & .block-widget-icon
+            fill $help-color-white
+
+        &:hover
+            background-color $help-color-brown
+
+    &__link
+        color $help-color-orange
+        font 600 1.7rem/3.2rem $raleway
+        margin 0 0 0 1rem
 
     // BLOCK-WIDGET FOOTER
     // ----------------------------------------------
