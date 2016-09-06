@@ -1,0 +1,24 @@
+include ../block-widget/block-widget
+
+mixin block-calc(data)
+    .block-calc
+        .center
+            .block-calc__primary
+                main.block-calc__main
+                    header.block-calc__header
+                        h1.block-calc__title
+                            | Калькулятор стоимости
+                        .block-calc__subtitle
+                            h3.block-calc__caption
+                                | Что будем стирать, гладить, чистить?
+                            p
+                                | Если вам требуется просто постирать и погладить или выполнить химчистку ваших вещей, мы с радостью поможем в этом.
+                    .block-calc__gallery
+                aside.block-calc__sibebar
+                    +block-widget()
+                    +block-widget()
+            .block-calc__secondary
+                .column.column--one
+                .column.column--two
+                .column.column--three
+

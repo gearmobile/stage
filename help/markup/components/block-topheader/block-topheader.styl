@@ -41,9 +41,24 @@
         font 700 1.3rem/1.2 $raleway
         color $help-color-white
         margin 0 1rem
+        position relative
+
+        &::before
+            content ''
+            display block
+            height .3rem
+            width 0
+            background-color $help-color-orange
+            position absolute
+            left 0
+            bottom -.8rem
+            transition width .4s
 
         &:hover
             color $help-color-orange
+
+        &:hover::before
+            width 100%
 
     // BLOCK TOPHEADER TETRO
     // -------------------------------------------------
