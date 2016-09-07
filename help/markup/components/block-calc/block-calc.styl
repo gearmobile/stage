@@ -235,141 +235,106 @@
 
         @media screen and ( max-width $mobile )
             flex-direction column
-            padding 4rem 0
+            padding 6rem 0
 
-        // BLOCK-CALC SECONDARY PRIMARY
+        // BLOCK-CALC SECONDARY HALF-FIRST
         // -----------------------------------------
-        & .block-calc-primo
+        & .half-first
             lost-column 1/2
             lost-column-gutter $gutter
-            display flex
-            flex-direction column
 
             @media screen and ( max-width $mobile )
                 lost-column 1/1
                 lost-column-gutter 0
-                margin-bottom 4rem
+                margin-bottom 2rem
 
-            &__title
-                text-transform uppercase
-                font 900 1.5rem/1.6 $raleway
+            // BLOCK-CALC SECONDARY HALF-FIRST HEADER
+            // -----------------------------------------
+            & .header
+                font 900 1.3rem/1.2 $raleway
                 color $help-color-grey-dark
+                margin 0 0 1rem
 
-                @media screen and ( max-width $mobile )
-                    font-size 1.3rem
-
-            &__list
+            // BLOCK-CALC SECONDARY HALF-FIRST LIST
+            // -----------------------------------------
+            & .list
                 display flex
                 flex-direction row
-                margin 4rem 0
+                margin 2rem 0
 
-                @media screen and ( max-width $desktop-x )
+                @media screen and ( max-width $tablet )
                     flex-direction column
 
-            &__item
-                lost-column 2/6
-                lost-column-gutter $gutter
-
-                @media screen and ( max-width $desktop-x )
-                    lost-column 1/1
-                    lost-column-gutter 0
+                // BLOCK-CALC SECONDARY HALF-FIRST LIST ITEM
+                // -----------------------------------------
+                &__item
+                    lost-column 1/3
+                    lost-column-gutter $gutter
                     display flex
                     align-items center
+                    min-height 3.2rem
 
-                    &:not(:last-child)
-                        margin 0 0 2rem
+                    @media screen and ( max-width $tablet )
+                        lost-column 1/1
+                        lost-column-gutter 0
 
-            &__thumb
-                size( 5rem )
-                margin 0 0 2rem
-                bg( $block-calc-icon )
+                        &:not(:last-child)
+                            margin 0 0 2rem
 
-                @media screen and ( max-width $desktop-x )
+                &__thumb
+                    size( 5rem )
                     margin 0 1rem 0 0
+                    bg( $block-calc-icon )
 
-            &__slogan
-                font 700 1.6rem/1.2 $ptsans
-                color $help-color-grey-dark
-
-                @media screen and ( max-width $desktop-x )
+                &__slogan
                     width calc( 100% - 5rem - 1rem )
+                    font 700 1.6rem/1.2 $ptsans
+                    color $help-color-grey-dark
 
-            &__mark
-                max-width 40rem
+            // BLOCK-CALC SECONDARY HALF-FIRST MARK
+            // -----------------------------------------
+            & .mark
+                font 400 1rem/1.5 $ptsans
+                color $help-color-grey-medium-x
                 padding 1.6rem 0 0 0
                 position relative
-                text-transform uppercase
-                font 400 1rem/1.6 $ptsans
-                color $help-color-grey-medium-x
 
                 &::before
                     content '*'
-                    font 700 1.2rem/1 $ptsans
                     color $help-color-orange
-                    position absolute
-                    top 0
-                    left 0
+                    font 700 2rem/1 $ptsans
 
-                @media screen and ( max-width $desktop-x )
-                    max-width 100%
-
-        // BLOCK-CALC BLOCK-CALC-SECONDO
+        // BLOCK-CALC SECONDARY HALF-SECOND
         // -----------------------------------------
-        & .block-calc-secondo
+        & .half-second
             lost-column 1/2
             lost-column-gutter $gutter
+            display flex
 
             @media screen and ( max-width $tablet )
-                lost-column 1/1
-                lost-column-gutter 0
-                display flex
                 flex-direction column
 
-        // BLOCK-CALC SECONDARY SECONDARY
+            @media screen and ( max-width $mobile )
+                lost-column 1/1
+                lost-column-gutter 0
+
+        // BLOCK-CALC SECONDARY QUATTER-FIRST
         // -----------------------------------------
-        & .secondary
+        & .quatter-first
             lost-column 1/2
             lost-column-gutter $gutter
-            display flex
-            flex-direction column
 
             @media screen and ( max-width $tablet )
                 lost-column 1/1
                 lost-column-gutter 0
-                margin 0 0 3rem
+                margin-bottom 2rem
 
-            &__title
-                text-transform uppercase
-                font 900 1.5rem/3.2rem $raleway
-                color $help-color-grey-dark
-                margin 0 0 3rem
-                padding 0 0 0 4.2rem
-                position relative
-
-                &::before
-                    content ''
-                    display block
-                    size( 3.2rem )
-                    position absolute
-                    top 0
-                    left 0
-                    bg( $icon-exclamation )
-
-            & > p
-                font 400 1.4rem/1.4 $ptsans
-                color $help-color-grey-dark
-
-        // BLOCK-CALC SIDEBAR TERTIARY
+        // BLOCK-CALC SECONDARY QUATTER-SECOND
         // -----------------------------------------
-        & .tertiary
+        & .quatter-second
             lost-column 1/2
             lost-column-gutter $gutter
-            display flex
 
             @media screen and ( max-width $tablet )
                 lost-column 1/1
                 lost-column-gutter 0
-
-            & > p
-                font 700 1.6rem/1.6 $ptsans
-                color $help-color-grey-dark
