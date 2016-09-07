@@ -251,9 +251,13 @@
             // BLOCK-CALC SECONDARY HALF-FIRST HEADER
             // -----------------------------------------
             & .header
-                font 900 1.3rem/1.2 $raleway
+                font 900 1.4rem/1.4 $raleway
+                text-transform uppercase
                 color $help-color-grey-dark
                 margin 0 0 1rem
+
+                @media screen and ( min-width $tablet )
+                    font 900 1.8rem/1.2 $raleway
 
             // BLOCK-CALC SECONDARY HALF-FIRST LIST
             // -----------------------------------------
@@ -271,30 +275,44 @@
                     lost-column 1/3
                     lost-column-gutter $gutter
                     display flex
-                    align-items center
+                    flex-direction column
                     min-height 3.2rem
 
                     @media screen and ( max-width $tablet )
                         lost-column 1/1
                         lost-column-gutter 0
+                        flex-direction row
+                        align-items center
 
                         &:not(:last-child)
                             margin 0 0 2rem
 
+                // BLOCK-CALC SECONDARY HALF-FIRST LIST THUMB
+                // -----------------------------------------
                 &__thumb
                     size( 5rem )
-                    margin 0 1rem 0 0
                     bg( $block-calc-icon )
 
+                    @media screen and ( max-width $tablet )
+                        margin 0 1rem 0 0
+
+                    @media screen and ( min-width $tablet )
+                        margin 0 0 2rem 0
+
+                // BLOCK-CALC SECONDARY HALF-FIRST LIST SLOGAN
+                // -----------------------------------------
                 &__slogan
-                    width calc( 100% - 5rem - 1rem )
                     font 700 1.6rem/1.2 $ptsans
                     color $help-color-grey-dark
+
+                    @media screen and ( max-width $tablet )
+                        width calc( 100% - 5rem - 1rem )
 
             // BLOCK-CALC SECONDARY HALF-FIRST MARK
             // -----------------------------------------
             & .mark
                 font 400 1rem/1.5 $ptsans
+                text-transform uppercase
                 color $help-color-grey-medium-x
                 padding 1.6rem 0 0 0
                 position relative
@@ -303,6 +321,12 @@
                     content '*'
                     color $help-color-orange
                     font 700 2rem/1 $ptsans
+                    position absolute
+                    top 0
+                    left 0
+
+                @media screen and ( min-width $tablet )
+                    max-width 40rem
 
         // BLOCK-CALC SECONDARY HALF-SECOND
         // -----------------------------------------
@@ -324,6 +348,28 @@
             lost-column 1/2
             lost-column-gutter $gutter
 
+            & .header
+                display flex
+                align-items center
+                min-height 3.2rem
+                text-transform uppercase
+                padding 0 0 0 4.2rem
+                margin 0 0 2rem
+                position relative
+
+                &::before
+                    content ''
+                    display block
+                    size( 3.2rem )
+                    position absolute
+                    top 0
+                    left 0
+                    bg( $icon-exclamation )
+
+            & > p
+                font 400 1.4rem/1.4 $ptsans
+                color $help-color-grey-dark
+
             @media screen and ( max-width $tablet )
                 lost-column 1/1
                 lost-column-gutter 0
@@ -334,6 +380,10 @@
         & .quatter-second
             lost-column 1/2
             lost-column-gutter $gutter
+
+            & > p
+                font 700 1.6rem/1.5 $ptsans
+                color $help-color-grey-dark
 
             @media screen and ( max-width $tablet )
                 lost-column 1/1
