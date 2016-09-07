@@ -36,10 +36,9 @@ window.addEventListener( 'load', function () {
     }
     // filter
     // --------------------------------------------
-    const controls = document.querySelector( '.controls' );
     let listItems = $$('.list__item');
 
-    controls.addEventListener( 'click', function ( event ) {
+    document.querySelector( '.controls' ).addEventListener( 'click', function ( event ) {
         // filter all
         // -------------------------------------------------------------------------
         if ( event && event.target.getAttribute( 'data-filter' ).toLowerCase() === 'all' ) {

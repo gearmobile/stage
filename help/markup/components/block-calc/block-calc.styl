@@ -8,6 +8,7 @@
     // -----------------------------------------
     & > .center
         display flex
+        flex-direction column
 
     // BLOCK-CALC PRIMARY
     // -----------------------------------------
@@ -230,3 +231,91 @@
     // -----------------------------------------
     &__secondary
         display flex
+        padding 10rem 0
+
+        // BLOCK-CALC SECONDARY PRIMARY
+        // -----------------------------------------
+        & .primary
+            lost-column 6/12
+            lost-column-gutter $gutter
+            display flex
+            flex-direction column
+
+            &__title
+                text-transform uppercase
+                font 900 1.5rem/1.2 $raleway
+                color $help-color-grey-dark
+
+            &__list
+                display flex
+                flex-direction row
+                margin 4rem 0
+
+            &__item
+                lost-column 2/6
+                lost-column-gutter $gutter
+
+            &__thumb
+                size( 5rem )
+                margin 0 0 2rem
+                bg( $block-calc-icon )
+
+            &__slogan
+                font 700 1.6rem/1.4 $ptsans
+                color $help-color-grey-dark
+
+            &__mark
+                max-width 40rem
+                padding 1.6rem 0 0 0
+                position relative
+                text-transform uppercase
+                font 400 1rem/1.6 $ptsans
+                color $help-color-grey-medium-x
+
+                &::before
+                    content '*'
+                    font 700 1.2rem/1 $ptsans
+                    color $help-color-orange
+                    position absolute
+                    top 0
+                    left 0
+
+        // BLOCK-CALC SECONDARY SECONDARY
+        // -----------------------------------------
+        & .secondary
+            lost-column 3/12
+            lost-column-gutter $gutter
+            display flex
+            flex-direction column
+
+            &__title
+                text-transform uppercase
+                font 900 1.5rem/3.2rem $raleway
+                color $help-color-grey-dark
+                margin 0 0 3rem
+                padding 0 0 0 4.2rem
+                position relative
+
+                &::before
+                    content ''
+                    display block
+                    size( 3.2rem )
+                    position absolute
+                    top 0
+                    left 0
+                    bg( $icon-exclamation )
+
+            & > p
+                font 400 1.4rem/1.4 $ptsans
+                color $help-color-grey-dark
+
+        // BLOCK-CALC SIDEBAR TERTIARY
+        // -----------------------------------------
+        & .tertiary
+            lost-column 3/12
+            lost-column-gutter $gutter
+            display flex
+
+            & > p
+                font 700 1.6rem/1.6 $ptsans
+                color $help-color-grey-dark
