@@ -233,18 +233,30 @@
         display flex
         padding 10rem 0
 
+        @media screen and ( max-width $mobile )
+            flex-direction column
+            padding 4rem 0
+
         // BLOCK-CALC SECONDARY PRIMARY
         // -----------------------------------------
-        & .primary
-            lost-column 6/12
+        & .block-calc-primo
+            lost-column 1/2
             lost-column-gutter $gutter
             display flex
             flex-direction column
+
+            @media screen and ( max-width $mobile )
+                lost-column 1/1
+                lost-column-gutter 0
+                margin-bottom 4rem
 
             &__title
                 text-transform uppercase
                 font 900 1.5rem/1.6 $raleway
                 color $help-color-grey-dark
+
+                @media screen and ( max-width $mobile )
+                    font-size 1.3rem
 
             &__list
                 display flex
@@ -276,7 +288,7 @@
                     margin 0 1rem 0 0
 
             &__slogan
-                font 700 1.4rem/1.2 $ptsans
+                font 700 1.6rem/1.2 $ptsans
                 color $help-color-grey-dark
 
                 @media screen and ( max-width $desktop-x )
@@ -301,13 +313,15 @@
                 @media screen and ( max-width $desktop-x )
                     max-width 100%
 
-        // BLOCK-CALC SECONDARY HOLDER
+        // BLOCK-CALC BLOCK-CALC-SECONDO
         // -----------------------------------------
-        &__holder
-            lost-column 6/12
+        & .block-calc-secondo
+            lost-column 1/2
             lost-column-gutter $gutter
 
             @media screen and ( max-width $tablet )
+                lost-column 1/1
+                lost-column-gutter 0
                 display flex
                 flex-direction column
 
