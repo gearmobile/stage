@@ -243,7 +243,7 @@
 
             &__title
                 text-transform uppercase
-                font 900 1.5rem/1.2 $raleway
+                font 900 1.5rem/1.6 $raleway
                 color $help-color-grey-dark
 
             &__list
@@ -251,18 +251,36 @@
                 flex-direction row
                 margin 4rem 0
 
+                @media screen and ( max-width $desktop-x )
+                    flex-direction column
+
             &__item
                 lost-column 2/6
                 lost-column-gutter $gutter
+
+                @media screen and ( max-width $desktop-x )
+                    lost-column 1/1
+                    lost-column-gutter 0
+                    display flex
+                    align-items center
+
+                    &:not(:last-child)
+                        margin 0 0 2rem
 
             &__thumb
                 size( 5rem )
                 margin 0 0 2rem
                 bg( $block-calc-icon )
 
+                @media screen and ( max-width $desktop-x )
+                    margin 0 1rem 0 0
+
             &__slogan
-                font 700 1.6rem/1.4 $ptsans
+                font 700 1.4rem/1.2 $ptsans
                 color $help-color-grey-dark
+
+                @media screen and ( max-width $desktop-x )
+                    width calc( 100% - 5rem - 1rem )
 
             &__mark
                 max-width 40rem
@@ -280,13 +298,31 @@
                     top 0
                     left 0
 
+                @media screen and ( max-width $desktop-x )
+                    max-width 100%
+
+        // BLOCK-CALC SECONDARY HOLDER
+        // -----------------------------------------
+        &__holder
+            lost-column 6/12
+            lost-column-gutter $gutter
+
+            @media screen and ( max-width $tablet )
+                display flex
+                flex-direction column
+
         // BLOCK-CALC SECONDARY SECONDARY
         // -----------------------------------------
         & .secondary
-            lost-column 3/12
+            lost-column 1/2
             lost-column-gutter $gutter
             display flex
             flex-direction column
+
+            @media screen and ( max-width $tablet )
+                lost-column 1/1
+                lost-column-gutter 0
+                margin 0 0 3rem
 
             &__title
                 text-transform uppercase
@@ -312,9 +348,13 @@
         // BLOCK-CALC SIDEBAR TERTIARY
         // -----------------------------------------
         & .tertiary
-            lost-column 3/12
+            lost-column 1/2
             lost-column-gutter $gutter
             display flex
+
+            @media screen and ( max-width $tablet )
+                lost-column 1/1
+                lost-column-gutter 0
 
             & > p
                 font 700 1.6rem/1.6 $ptsans
