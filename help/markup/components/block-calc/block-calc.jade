@@ -17,15 +17,15 @@ mixin block-calc(data)
                         .gallery
                             header.gallery__header
                                 nav.controls
-                                    a.controls__item( href='#0' )
+                                    a.controls__item( href='#0' data-filter='all' )
                                         | Все
-                                    a.controls__item( href='#0' )
-                                        | Мужские вещи
-                                    a.controls__item( href='#0' )
+                                    a.controls__item( href='#0' data-filter='female' )
                                         | Женские вещи
+                                    a.controls__item( href='#0' data-filter='male' )
+                                        | Мужские вещи
                             main.gallery__main
                                 ul.list
-                                    li.list__item
+                                    li.list__item( data-filter='female' )
                                         .primary
                                             .primary__thumb
                                                 img.primary__image( src='%=static=%img/content/gallery-image-01.jpg' alt='Gallery Image' )
@@ -41,7 +41,7 @@ mixin block-calc(data)
                                                 button.stepper__button.stepper__button--left( type='button' ) -
                                                 input.stepper__input( type='text' value='1' placeholder='Amount' )
                                                 button.stepper__button.stepper__button--right( type='button' ) +
-                                    li.list__item
+                                    li.list__item( data-filter='male' )
                                         .primary
                                             .primary__thumb
                                                 img.primary__image( src='%=static=%img/content/gallery-image-02.jpg' alt='Gallery Image' )
@@ -57,7 +57,7 @@ mixin block-calc(data)
                                                 button.stepper__button.stepper__button--left( type='button' ) -
                                                 input.stepper__input( type='text' value='1' placeholder='Amount' )
                                                 button.stepper__button.stepper__button--right( type='button' ) +
-                                    li.list__item
+                                    li.list__item( data-filter='female' )
                                         .primary
                                             .primary__thumb
                                                 img.primary__image( src='%=static=%img/content/gallery-image-03.jpg' alt='Gallery Image' )
@@ -73,7 +73,7 @@ mixin block-calc(data)
                                                 button.stepper__button.stepper__button--left( type='button' ) -
                                                 input.stepper__input( type='text' value='1' placeholder='Amount' )
                                                 button.stepper__button.stepper__button--right( type='button' ) +
-                                    li.list__item
+                                    li.list__item( data-filter='male' )
                                         .primary
                                             .primary__thumb
                                                 img.primary__image( src='%=static=%img/content/gallery-image-04.jpg' alt='Gallery Image' )
