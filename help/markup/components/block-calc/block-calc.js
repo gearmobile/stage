@@ -1,11 +1,11 @@
 function $$( selector, context ) {
     context = context || document;
-    var elements = context.querySelectorAll( selector );
+    let elements = context.querySelectorAll( selector );
     return Array.prototype.slice.call( elements );
 }
 
 window.addEventListener( 'load', function () {
-    // counter
+    // COUNTER
     // -------------------------------------------
     const galleryList = document.querySelector( '.block-calc .list' );
     if ( galleryList === null ) {
@@ -34,18 +34,18 @@ window.addEventListener( 'load', function () {
             }
         }, false );
     }
-    // filter
+    // FILTER
     // --------------------------------------------
     let listItems = $$('.list__item');
 
     document.querySelector( '.controls' ).addEventListener( 'click', function ( event ) {
-        // filter all
+        // FILTER ALL
         // -------------------------------------------------------------------------
         if ( event && event.target.getAttribute( 'data-filter' ).toLowerCase() === 'all' ) {
             listItems.forEach( function ( item ) {
                 item.style.display = 'flex';
             });
-        // filter famale
+        // FILTER FEMALE
         // -------------------------------------------------------------------------
         } else if ( event && event.target.getAttribute( 'data-filter' ).toLowerCase() === 'female' ) {
             listItems.forEach( function ( item ) {
@@ -55,7 +55,7 @@ window.addEventListener( 'load', function () {
                     item.style.display = 'none';
                 }
             });
-        // filter male
+        // FILTER MALE
         // -------------------------------------------------------------------------
         } else if ( event && event.target.getAttribute( 'data-filter' ).toLowerCase() === 'male' ) {
             listItems.forEach( function ( item ) {

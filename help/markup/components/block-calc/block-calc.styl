@@ -8,39 +8,47 @@
     // -----------------------------------------
     & > .center
         display flex
+        flex-direction column
 
     // BLOCK-CALC PRIMARY
     // -----------------------------------------
     &__primary
         border 1px dashed #000
         display flex
-        flex-direction column
+        justify-content space-between
 
         @media screen and ( max-width $tablet )
-            flex-direction row
-            justify-content space-between
+            flex-direction column
 
     // BLOCK-CALC SIDEBAR
     // -----------------------------------------
     &__sibebar
-        background-color salmon
+        lost-column 3/12
+        lost-column-gutter 0
         margin 0 0 2rem
 
+        @media screen and ( max-width $tablet )
+            lost-column 1/1
+            lost-column-gutter 0
+
         @media screen and ( min-width $tablet )
-            lost-column 3/12
-            lost-column-gutter $gutter
             order 2
-            margin 0
 
     // BLOCK-CALC MAIN
     // -----------------------------------------
     &__main
+        lost-column 9/12
+        lost-column-gutter 0
+        padding-right $gutter
         background-color lightgreen
         height 600px
 
+        @media screen and ( max-width $tablet )
+            lost-column 1/1
+            lost-column-gutter 0
+            padding 0
+
         @media screen and ( min-width $tablet )
-            lost-column 9/12
-            lost-column-gutter $gutter
             order 1
 
     // BLOCK-CALC WIDGET
@@ -64,6 +72,9 @@
 
             @media screen and ( max-width $tablet )
                 width calc( 100% - 26rem )
+                display flex
+                align-items center
+                padding 3rem 2rem
 
             @media screen and ( max-width $mobile )
                 width 100%
@@ -74,20 +85,20 @@
             &::after
                 content ''
                 display block
-                size( 1rem )
+                size( 2rem )
                 background-color blue //!!
                 border-radius 50%
                 position absolute
-                top -.5rem
+                top -1rem
 
                 @media screen and ( max-width $tablet )
                     display none
 
             &::before
-                left -.5rem
+                left -1rem
 
             &::after
-                right -.5rem
+                right -1rem
 
         // BLOCK-CALC WIDGET FOOTER
         // -----------------------------------------
@@ -96,11 +107,13 @@
             justify-content center
             align-items center
             height 10rem
-            background-color green //!!
+            background url( '%=static=%assets/block-calc/widget-bg.png' ) 0 0 repeat
             position relative
 
             @media screen and ( max-width $tablet )
                 width 26rem
+                background url( '%=static=%assets/block-calc/widget-bg-tablet.png' ) 0 0 no-repeat
+                background-size cover
 
             @media screen and ( max-width $mobile )
                 width 100%
@@ -112,16 +125,19 @@
                 content ''
                 display block
                 background-color red //!!
-                size( 1rem )
+                size( 2rem )
                 border-radius 50%
                 position absolute
-                bottom -.5rem
+                bottom -1rem
+
+                @media screen and ( max-width $tablet )
+                    display none
 
             &::before
-                left -.5rem
+                left -1rem
 
             &::after
-                right -.5rem
+                right -1rem
 
         // BLOCK-CALC WIDGET LIST
         // --------------------------------------------
@@ -131,7 +147,6 @@
 
             @media screen and ( max-width $tablet )
                 flex-direction row
-                justify-content space-between
 
         // BLOCK-CALC WIDGET LIST TITLE
         // --------------------------------------------
