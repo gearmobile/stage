@@ -1,0 +1,310 @@
+// -----------------------------------  structure ---------------------------------------
+header.block-calc__header
+    h1.block-calc__title
+        | Калькулятор стоимости
+    .block-calc__subtitle
+        h3.block-calc__caption
+            | Что будем стирать, гладить, чистить?
+        p
+            | Если вам требуется просто постирать и погладить или выполнить химчистку ваших вещей, мы с радостью поможем в этом.
+main.block-calc__content
+    .gallery
+        header.gallery__header
+            nav.controls
+                a.controls__item( href='#0' data-filter='all' )
+                    | Все
+                a.controls__item( href='#0' data-filter='female' )
+                    | Женские вещи
+                a.controls__item( href='#0' data-filter='male' )
+                    | Мужские вещи
+        main.gallery__main
+            ul.list
+                li.list__item( data-filter='female' )
+                    .primary
+                        .primary__thumb
+                            img.primary__image( src='%=static=%img/content/gallery-image-01.jpg' alt='Gallery Image' )
+                        h3.primary__caption
+                            | Пуховик с натуральным мехом
+                    .secondary
+                        .secondary__title
+                            | 220 <span class='secondary__currency'>&#8381;</span>
+                        .secondary__subtitle
+                            | за 1 штуку
+                    .tertiary
+                        .stepper
+                            button.stepper__button.stepper__button--left( type='button' ) -
+                            input.stepper__input( type='text' value='1' placeholder='Amount' )
+                            button.stepper__button.stepper__button--right( type='button' ) +
+                li.list__item( data-filter='male' )
+                    .primary
+                        .primary__thumb
+                            img.primary__image( src='%=static=%img/content/gallery-image-02.jpg' alt='Gallery Image' )
+                        h3.primary__caption
+                            | Ветровка
+                    .secondary
+                        .secondary__title
+                            | 500 <span class='secondary__currency'>&#8381;</span>
+                        .secondary__subtitle
+                            | за 1 штуку
+                    .tertiary
+                        .stepper
+                            button.stepper__button.stepper__button--left( type='button' ) -
+                            input.stepper__input( type='text' value='1' placeholder='Amount' )
+                            button.stepper__button.stepper__button--right( type='button' ) +
+                li.list__item( data-filter='female' )
+                    .primary
+                        .primary__thumb
+                            img.primary__image( src='%=static=%img/content/gallery-image-03.jpg' alt='Gallery Image' )
+                        h3.primary__caption
+                            | Пальто демисезонное средней длинны
+                    .secondary
+                        .secondary__title
+                            | 1 256 <span class='secondary__currency'>&#8381;</span>
+                        .secondary__subtitle
+                            | за 1 штуку
+                    .tertiary
+                        .stepper
+                            button.stepper__button.stepper__button--left( type='button' ) -
+                            input.stepper__input( type='text' value='1' placeholder='Amount' )
+                            button.stepper__button.stepper__button--right( type='button' ) +
+                li.list__item( data-filter='male' )
+                    .primary
+                        .primary__thumb
+                            img.primary__image( src='%=static=%img/content/gallery-image-04.jpg' alt='Gallery Image' )
+                        h3.primary__caption
+                            | Пиджак с карманами
+                    .secondary
+                        .secondary__title
+                            | 500 <span class='secondary__currency'>&#8381;</span>
+                        .secondary__subtitle
+                            | за 1 штуку
+                    .tertiary
+                        .stepper
+                            button.stepper__button.stepper__button--left( type='button' ) -
+                            input.stepper__input( type='text' value='1' placeholder='Amount' )
+                            button.stepper__button.stepper__button--right( type='button' ) +
+
+// -------------------------------------------------  sidebar
+                    +block-widget()
+                    +block-widget()
+
+
+
+// --------------------------------------------------  styles  ----------------------------------
+
+// BLOCK-CALC PRIMARY
+// -----------------------------------------
+&__primary
+    display flex
+    justify-content space-between
+
+// BLOCK-CALC
+// -----------------------------------------
+&__main
+    lost-column 8/12
+    lost-column-gutter $gutter
+
+// BLOCK-CALC HEADER
+// -----------------------------------------
+&__header
+    margin 0 0 16rem
+
+// BLOCK-CALC TITLE
+// -----------------------------------------
+&__title
+    padding 0 0 0 8rem
+    font 400 4rem/5.2rem $raleway
+    color $help-color-grey-dark
+    position relative
+
+    &::before
+        content ''
+        display block
+        size( 4rem, 5.2rem )
+        position absolute
+        left 0
+        top 0
+        bg( $calc-icon )
+
+// BLOCK-CALC SUBTITLE
+// -----------------------------------------
+&__subtitle
+    margin 5rem 0 0 8rem
+
+    & p
+        font 400 1.8rem/1.4 $ptsans
+        color $help-color-grey-dark
+
+// BLOCK-CALC CAPTION
+// -----------------------------------------
+&__caption
+    text-transform uppercase
+    font 900 1.5rem/1.2rem $raleway
+    color $help-color-grey-dark
+    margin 0 0 2rem
+
+// BLOCK-CALC CONTENT
+// -----------------------------------------
+&__content
+    //
+
+// BLOCK-CALC GALLERY
+// -----------------------------------------
+& .gallery
+    border .3rem solid $help-color-white
+
+    // BLOCK-CALC GALLERY HEADER
+    // -----------------------------------------
+    &__header
+        padding 5rem 0
+        border-bottom .3rem solid $help-color-white
+
+        // BLOCK-CALC GALLERY CONTROLS
+        // -----------------------------------------
+        & .controls
+            padding 0 4rem
+
+            // BLOCK-CALC GALLERY CONTROLS ITEM
+            // -----------------------------------------
+            &__item
+                text-transform uppercase
+                font 900 1.3rem/1.2 $raleway
+                color $help-color-grey-dark
+                position relative
+
+                &:not(:last-child)
+                    margin 0 2rem 0 0
+
+                &::after
+                    content ''
+                    display block
+                    width 0
+                    height .3rem
+                    background-color $help-color-orange
+                    position absolute
+                    left 0
+                    bottom -.6rem
+                    transition width .2s
+
+                &:hover
+                    color $help-color-orange
+
+                &:hover::after
+                    width 100%
+
+    // BLOCK-CALC GALLERY MAIN
+    // -----------------------------------------
+    &__main
+        //
+
+        // BLOCK-CALC GALLERY LIST
+        // -----------------------------------------
+        & .list
+            //
+
+            // BLOCK-CALC GALLERY LIST ITEM
+            // -----------------------------------------
+            &__item
+                display flex
+                justify-content space-between
+                padding 4rem
+
+                &:not(:last-child)
+                    border-bottom .1rem solid $help-color-white
+
+            // BLOCK-CALC GALLERY PRIMARY
+            // -----------------------------------------
+            & .primary
+                display flex
+                align-items center
+                lost-column 4/8
+                lost-column-gutter $gutter
+
+            & .primary__thumb
+                display flex
+                justify-content center
+                align-items center
+                size( 10rem )
+                border-radius 50%
+                background-color $help-color-white
+
+            & .primary__image
+                border-radius 50%
+
+            & .primary__caption
+                margin 0 0 0 2rem
+                font 700 1.8rem/1.4 $ptsans
+                color $help-color-grey-dark
+
+            // BLOCK-CALC GALLERY SECONDARY
+            // -----------------------------------------
+            & .secondary
+                display flex
+                flex-direction column
+                justify-content center
+                lost-column 2/8
+                lost-column-gutter $gutter
+                padding 0 0 0 2rem
+
+            & .secondary__title
+                font 700 4rem/1.2 $ptsans
+                color $help-color-grey-dark
+
+            & .secondary__currency
+                vertical-align top
+                font-size 2.4rem
+                margin 0 0 0 -.6rem
+
+            & .secondary__subtitle
+                text-transform uppercase
+                font 400 1rem/1.2 $ptsans
+                color $help-color-grey-medium-x
+
+            // BLOCK-CALC GALLERY TERTIARY
+            // -----------------------------------------
+            & .tertiary
+                display flex
+                align-items center
+                justify-content center
+                lost-column 2/8
+                lost-column-gutter $gutter
+
+            & .stepper
+                display flex
+
+            & .stepper__button
+                size( 4rem )
+                cursor pointer
+                color $help-color-white
+                background-color $help-color-orange
+                font 700 3rem/1.2 $ptsans
+                border-radius .4rem
+                transition background-color .2s
+
+                &:hover
+                &:active
+                    background-color $help-color-brown
+
+                &--left
+                    border-top-right-radius 0
+                    border-bottom-right-radius 0
+
+                &--right
+                    border-top-left-radius 0
+                    border-bottom-left-radius 0
+
+            & .stepper__input
+                border none
+                padding 0
+                size( 5rem, 4rem )
+                background-color $help-color-white
+                font 700 1.6rem/1.2 $ptsans
+                color $help-color-grey-dark
+                text-align center
+                box-shadow inset 0 .3rem 0 #dadada
+
+// BLOCK-CALC SIDEBAR
+// -----------------------------------------
+&__sibebar
+    lost-column 3/12
+    lost-column-gutter $gutter
