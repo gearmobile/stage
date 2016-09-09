@@ -10,26 +10,28 @@ mixin block-calc(data)
                     article.widget.widget--primary
                         header.widget__header
                             ul.list
-                                li.list__item
+                                li.list__item.list__item--first
                                     h3.title
                                         | Ваш заказ
-                                li.list__item
+                                li.list__item.list__item--second
                                     .primo
                                         h4.caption
                                             | Стоимость
                                         .value
-                                            p 1 490 <span class='currency'></span>
+                                            p 1 490 <span class='currency'>&#8381;</span>
                                     .secondo
                                         h4.caption
                                             | Доставка
                                         .value
-                                            p 220 <span class='currency'></span>
-                                li.list__item
+                                            p 220 <span class='currency'>&#8381;</span>
+                                li.list__item.list__item--third
                                     h4.caption
                                         | общая стоимость
                                     .value
-                                        p 1 900 <span class='currency'></span>
-                                li.list__item
+                                        p 1 900 <span class='currency'>&#8381;</span>
+                                li.list__item.list__item--fourth
+                                    .icon
+                                        != jadeHelpers.Icon.call( locals, { iconName: 'close', className: 'block-widget-icon' })
                                     a.link( href='#0' )
                                         | Сбросить расчет
                         footer.widget__footer

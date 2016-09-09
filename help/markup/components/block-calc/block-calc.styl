@@ -151,27 +151,93 @@
         // BLOCK-CALC WIDGET LIST TITLE
         // --------------------------------------------
         & .title
-            font 700 1.5rem/1.2 $raleway
+            font 700 2.4rem/1.2 $raleway
             color $help-color-grey-dark
 
             @media screen and ( max-width $tablet )
                 display none
 
-        // BLOCK-CALC WIDGET LIST ITEM
+        // BLOCK-CALC CAPTION
+        // -----------------------------------------
+        & .caption
+            text-transform uppercase
+            color $help-color-grey-medium-x
+            font 400 1rem/1.4 $ptsans
+
+            &::after
+                content ':'
+
+        // BLOCK-CALC VALUE
+        // -----------------------------------------
+        & .value
+            font 700 1.8rem/1.4 $ptsans
+            color $help-color-grey-dark
+
+        & .currency
+            vertical-align super
+            font-size 1.2rem
+            line-height 1.2
+
+
+        // BLOCK-CALC WIDGET LIST ITEM FIRST
         // --------------------------------------------
-        & .list__item:not(:last-child)
-            margin 0 0 2rem
+        & .list__item--first
+            margin 0 0 3rem
 
-            // BLOCK-CALC WIDGET LIST ITEM COMPLEX
-            // --------------------------------------------
-            &:nth-child(2)
-                display flex
+        // BLOCK-CALC WIDGET LIST ITEM SECOND
+        // --------------------------------------------
+        & .list__item--second
+            display flex
+            margin 0 0 6rem
 
-                & .primo
-                    margin 0 2rem 0 0
+        & .list__item--second .primo
+            margin 0 2rem 0 0
 
             @media screen and ( max-width $tablet )
                 margin 0
+
+        // BLOCK-CALC WIDGET LIST ITEM THIRD
+        // --------------------------------------------
+        & .list__item--third
+            margin 0 0 6rem
+
+        & .list__item--third .caption
+            text-transform uppercase
+            font 900 1.5rem/1.2 $raleway
+            color $help-color-grey-dark
+
+        & .list__item--third .value
+            font 700 4rem/1.2 $ptsans
+            color $help-color-grey-dark
+
+        & .list__item--third .currency
+            font-size 2rem
+            vertical-align super
+
+        // BLOCK-CALC WIDGET LIST ITEM FOURTH
+        // --------------------------------------------
+        & .list__item--fourth
+            display flex
+            align-items center
+
+        & .list__item--fourth .icon
+            size( 3.2rem )
+            border-radius 50%
+            background-color $help-color-orange
+            display flex
+            justify-content center
+            align-items center
+            margin 0 1rem 0 0
+
+        & .list__item--fourth .icon .block-widget-icon
+            fill $help-color-white
+
+        & .list__item--fourth .link
+            font 600 1.4rem/1.2 $raleway
+            color $help-color-orange
+
+        // ----------------------------------------------
+        // ----------------------------------------------
 
         &--primary
             margin 0 0 2rem
