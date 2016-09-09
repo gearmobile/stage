@@ -66,7 +66,7 @@
         // BLOCK-CALC WIDGET HEADER
         // -----------------------------------------
         &__header
-            padding 3rem
+            padding 3rem 2rem
             background-color $help-color-white
             position relative
 
@@ -74,7 +74,6 @@
                 width calc( 100% - 26rem )
                 display flex
                 align-items center
-                padding 3rem 2rem
 
             @media screen and ( max-width $mobile )
                 width 100%
@@ -147,19 +146,31 @@
 
             @media screen and ( max-width $tablet )
                 flex-direction row
+                width 100%
 
-        // BLOCK-CALC WIDGET LIST TITLE
+        // BLOCK-CALC WIDGET LIST ITEM FIRST
         // --------------------------------------------
-        & .title
-            font 700 2.4rem/1.2 $raleway
-            color $help-color-grey-dark
+        & .list__item--first
+            margin 0 0 3rem
 
             @media screen and ( max-width $tablet )
                 display none
 
-        // BLOCK-CALC CAPTION
-        // -----------------------------------------
-        & .caption
+        & .list__item--first .title
+            font 700 2.4rem/1.2 $raleway
+            color $help-color-grey-dark
+
+        // BLOCK-CALC WIDGET LIST ITEM SECOND
+        // --------------------------------------------
+        & .list__item--second
+            display flex
+            margin 0 0 6rem
+
+            @media screen and ( max-width $tablet )
+                margin 0
+                // flex 0 1 30%
+
+        & .list__item--second .caption
             text-transform uppercase
             color $help-color-grey-medium-x
             font 400 1rem/1.4 $ptsans
@@ -167,28 +178,28 @@
             &::after
                 content ':'
 
-        // BLOCK-CALC VALUE
-        // -----------------------------------------
-        & .value
+            @media screen and ( max-width $tablet )
+                //
+
+        & .list__item--second .value
             font 700 1.8rem/1.4 $ptsans
             color $help-color-grey-dark
 
-        & .currency
+            @media screen and ( max-width $tablet )
+                font 700 1.8rem/1.2 $ptsans
+                color $help-color-grey-dark
+
+        & .list__item--second .currency
             vertical-align super
             font-size 1.2rem
             line-height 1.2
 
+            @media screen and ( max-width $tablet )
+                //
 
-        // BLOCK-CALC WIDGET LIST ITEM FIRST
-        // --------------------------------------------
-        & .list__item--first
-            margin 0 0 3rem
-
-        // BLOCK-CALC WIDGET LIST ITEM SECOND
-        // --------------------------------------------
-        & .list__item--second
-            display flex
-            margin 0 0 6rem
+        & .list__item--second p
+            font 400 1.4rem/1.4 $ptsans
+            color $help-color-grey-dark
 
         & .list__item--second .primo
             margin 0 2rem 0 0
@@ -201,24 +212,41 @@
         & .list__item--third
             margin 0 0 6rem
 
+            @media screen and ( max-width $tablet )
+                margin 0
+
         & .list__item--third .caption
             text-transform uppercase
             font 900 1.5rem/1.2 $raleway
             color $help-color-grey-dark
 
+            @media screen and ( max-width $tablet )
+                color $help-color-grey-medium-x
+                font 400 1rem/1.4 $ptsans
+
         & .list__item--third .value
             font 700 4rem/1.2 $ptsans
             color $help-color-grey-dark
 
+            @media screen and ( max-width $tablet )
+                font 700 1.8rem/1.2 $ptsans
+                color $help-color-grey-dark
+
         & .list__item--third .currency
             font-size 2rem
             vertical-align super
+
+            @media screen and ( max-width $tablet )
+                font-size 1.2rem
 
         // BLOCK-CALC WIDGET LIST ITEM FOURTH
         // --------------------------------------------
         & .list__item--fourth
             display flex
             align-items center
+
+            @media screen and ( max-width $tablet )
+                max-width 10rem
 
         & .list__item--fourth .icon
             size( 3.2rem )
@@ -229,6 +257,9 @@
             align-items center
             margin 0 1rem 0 0
 
+            @media screen and ( max-width $tablet )
+                margin 0 .5rem 0 0
+
         & .list__item--fourth .icon .block-widget-icon
             fill $help-color-white
 
@@ -236,19 +267,24 @@
             font 600 1.4rem/1.2 $raleway
             color $help-color-orange
 
-        // ----------------------------------------------
-        // ----------------------------------------------
-
-        &--primary
-            margin 0 0 2rem
-            background-color red
-
-        &--secondary
-            background-color cyan
-
             @media screen and ( max-width $tablet )
-                display none
+                font 400 1rem/1.2 $ptsans
 
+    // BLOCK-CALC WIDGET PRIMARY
+    // -----------------------------------------
+    & .widget--primary
+        margin 0 0 3rem
+
+    // BLOCK-CALC WIDGET SECONDARY
+    // -----------------------------------------
+    & .widget--secondary
+
+        @media screen and ( max-width $tablet )
+            display none
+
+    // ---------------------------------------------------------------------------
+    // ******************
+    // ---------------------------------------------------------------------------
 
     // BLOCK-CALC SECONDARY
     // -----------------------------------------
