@@ -12,4 +12,4 @@ mixin block-photo-post( path, title, date, subtitle, count )
                 p Нравится:
                     = ' '
                     span.photo-post__count= count
-                != jadeHelpers.Icon.call( locals, { iconName: 'like', className: 'photo-post-icon' })
+                != jadeHelpers.Icon.call( locals, { iconName: 'heart-o', className: 'photo-post-icon' })
