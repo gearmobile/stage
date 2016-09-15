@@ -2,15 +2,15 @@
     // ----------------------------------------------
     // VARIABLES
     // ----------------------------------------------
-    const primaryColor = '#fff';
-    let width;
-    let height;
-    const aspectRatio = 0.074;
+    var primaryColor = '#fff';
+    var width;
+    var height;
+    var aspectRatio = 0.074;
     // ----------------------------------------------
     // SECTION INFORMATION ELEMENTS
     // ----------------------------------------------
-    const blockInformationCanvas = document.querySelector( '.information__canvas' );
-    const blockInformationCanvasContext = blockInformationCanvas.getContext( '2d' );
+    var blockInformationCanvas = document.querySelector( '.information__canvas' );
+    var blockInformationCanvasContext = blockInformationCanvas.getContext( '2d' );
     // ----------------------------------------------
     // DRAW TRIANGLE TOP
     // ----------------------------------------------

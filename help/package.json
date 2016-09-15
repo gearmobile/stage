@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "directories": {},
   "dependencies": {
+    "isotope-layout": "^3.0.1",
     "lost": "^7.1.0",
     "postcss-flexibility": "^1.1.0"
   },

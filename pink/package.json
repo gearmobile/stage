@@ -8,8 +8,8 @@
     "fontfaceobserver": "^2.0.1",
     "google-maps": "^3.2.1",
     "imagesloaded": "^4.1.0",
+    "isotope-layout": "^3.0.1",
     "lost": "^7.0.3",
-    "masonry-layout": "^4.1.1",
     "postcss-flexibility": "^1.1.0",
     "swiper": "^3.3.1"
   },

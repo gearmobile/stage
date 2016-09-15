@@ -1,13 +1,15 @@
-const Masonry = require('masonry-layout');
-const imagesLoaded = require('imagesloaded');
+const imagesLoaded = require( 'imagesloaded' );
+const Isotope = require( 'isotope-layout' );
 
 window.addEventListener( 'load', function () {
-    const photoGallery = document.querySelector( '.photo .gallery' );
-    imagesLoaded( photoGallery, function () {
-        const photoLayout = new Masonry( photoGallery, {
+    let grid = document.querySelector('#gallery');
+    imagesLoaded( grid, function () {
+        let iso = new Isotope( grid, {
             itemSelector: '.gallery__item',
-            columnWidth: '.gallery__sizer',
-            percentPosition: true
-        }, false );
-    }, false );
+            percentPosition: true,
+            masonry: {
+                columnWidth: '.gallery__sizer'
+            }
+        });
+    });
 }, false );

@@ -12,12 +12,10 @@ const openSansBold = new FontFaceObserver('open_sansbold');
 // PAGE INDEX
 // ----------------------------------------------------------
 require( '../../components/block-topheader/block-topheader' );
-require( '../../components/block-information/block-information' );
-require( '../../components/block-price/block-price' );
+// require( '../../components/block-information/block-information' );
+// require( '../../components/block-price/block-price' );
 require( '../../components/block-overlay/block-overlay' );
 require( '../../components/block-header/block-header' );
 require( '../../components/block-reviews/block-reviews' );
 require( '../../components/block-photo/block-photo' );
 require( '../../components/block-contacts/block-contacts' );
-
-console.log( 'Pixel Ratio is ' + window.devicePixelRatio );
