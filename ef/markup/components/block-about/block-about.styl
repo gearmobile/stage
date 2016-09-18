@@ -1,3 +1,5 @@
+// ABOUT
+// --------------------------------
 .about
     padding 12rem 0
     background-color $color-white
@@ -5,14 +7,14 @@
     @media screen and ( max-width $bp768 )
         padding 6rem 0
 
+    // ABOUT CENTER
+    // --------------------------------
     &__center
         lost-center $width flex
         padding 0 $gutter
 
-
         // ABOUT CONTENT
         // --------------------------------
-
         & .about-content
             width 100%
             margin 4rem 0 0
@@ -22,7 +24,6 @@
 
             // ABOUT CONTENT CONTROL
             // --------------------------------
-
             &__control
                 margin 0 0 12rem
 
@@ -54,14 +55,12 @@
 
         // ABOUT CONTENT GRID
         // --------------------------------
-
         & .about-content-grid
             lost-center 100% flex
 
 
         // ABOUT CONTENT GRID ITEM
         // --------------------------------
-
         & .about-content-item
             lost-column 1/2 flex
             lost-column-gutter 0
@@ -101,7 +100,7 @@
                 justify-content: flex-start
 
                 &:nth-child( 2n+1 )
-                    border-right: none
+                    border-right none
 
                 &:nth-child( 1 )::after
                     display: none
@@ -118,7 +117,6 @@
 
         // ABOUT CONTENT GRID ICON
         // --------------------------------
-
         & .about-content-icon
             display: flex
             justify-content: center
@@ -128,6 +126,8 @@
             background-color: $color-grey-light
             transform: skewX( -8deg )
 
+            // ABOUT CONTENT ICON
+            // --------------------------------
             & .about-icon
                 width: 4.6rem
                 height: auto
@@ -140,7 +140,6 @@
 
         // ABOUT CONTENT GRID INFO
         // --------------------------------
-
         & .about-content-info
             margin: 0 0 0 3rem
 
@@ -157,30 +156,3 @@
             @media screen and ( max-width: $bp768 )
                 text-align: center
                 margin: 0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

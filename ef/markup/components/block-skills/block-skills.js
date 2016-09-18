@@ -53,7 +53,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
     // CHARTS DATA  ------------------------------------
     // -------------------------------------------------
     var wpData = {
-        labels: ['Blue', 'White'],
+        labels: [ 'Blue', 'White' ],
         datasets: [
             {
                 data: [ wpValue, 100 - wpValue ],
@@ -63,7 +63,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
         ]
     };
     var htmlData = {
-        labels: ['Blue', 'White'],
+        labels: [ 'Blue', 'White' ],
         datasets: [
             {
                 data: [ htmlValue, 100 - htmlValue ],
@@ -73,7 +73,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
         ]
     };
     var cssData = {
-        labels: ['Blue', 'White'],
+        labels: [ 'Blue', 'White' ],
         datasets: [
             {
                 data: [ cssValue, 100 - cssValue ],
@@ -83,7 +83,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
         ]
     };
     var ptData = {
-        labels: ['Blue', 'White'],
+        labels: [ 'Blue', 'White' ],
         datasets: [
             {
                 data: [ ptValue, 100 - ptValue ],
@@ -93,7 +93,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
         ]
     };
     // -------------------------------------------------
-    // CHARTS OPTIONS  ---------------------------------
+    // CHARTS OPTIONS
     // -------------------------------------------------
     var wpOptions = {
         cutoutPercentage: cutoutValue,

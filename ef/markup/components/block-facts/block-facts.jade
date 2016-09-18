@@ -1,27 +1,37 @@
-mixin block-facts(data)
-    .facts
+mixin block-facts()
+    section.facts
         .facts__center
             .facts__header
-                h2.facts__title fun facts
-                p Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse
+                h2.facts__title
+                    | fun facts
+                p
+                    | Lorem ipsum dolor sit amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, porttitor bibendum facilisi suspendisse
             .facts__content
                 .facts__item
                     .facts__thumb
                         != jadeHelpers.Icon.call(locals, {iconName: 'facts-icon-01', className: 'facts-icon'})
-                    h4.facts__caption in business
-                    p.facts__count 2006
+                    h4.facts__caption
+                        | in business
+                    p.facts__count
+                        | 2006
                 .facts__item
                     .facts__thumb
                         != jadeHelpers.Icon.call(locals, {iconName: 'facts-icon-02', className: 'facts-icon'})
-                    h4.facts__caption clients served
-                    p.facts__count 240
+                    h4.facts__caption
+                        | clients served
+                    p.facts__count
+                        | 240
                 .facts__item
                     .facts__thumb
                         != jadeHelpers.Icon.call(locals, {iconName: 'facts-icon-03', className: 'facts-icon'})
-                    h4.facts__caption projects delivered
-                    p.facts__count 120
+                    h4.facts__caption
+                        | projects delivered
+                    p.facts__count
+                        | 120
                 .facts__item
                     .facts__thumb
                         != jadeHelpers.Icon.call(locals, {iconName: 'facts-icon-04', className: 'facts-icon'})
-                    h4.facts__caption awards won
-                    p.facts__count 10
+                    h4.facts__caption
+                        | awards won
+                    p.facts__count
+                        | 10
