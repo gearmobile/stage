@@ -2,16 +2,23 @@ mixin block-recent()
     section.recent
         .recent__center
             .recent__header
-                h2.recent__title additional recent work
-                p.recent__subtitle Market-proven software with award winning design
+                h2.recent__title
+                    | additional recent work
+                p.recent__subtitle
+                    | Market-proven software with award winning design
             .recent__content
                 .recent-grid
                     .recent-grid__control
-                        a.recent-grid__link( href='javascript:void(0);' data-filter='*') all
-                        a.recent-grid__link( href='javascript:void(0);' data-filter='.website' ) website
-                        a.recent-grid__link( href='javascript:void(0);' data-filter='.graphic' ) graphic
-                        a.recent-grid__link( href='javascript:void(0);' data-filter='.identity' ) identity
-                        a.recent-grid__link( href='javascript:void(0);' data-filter='.mobile' ) mobile apps
+                        a.recent-grid__link( href='#0' data-filter='*')
+                            | all
+                        a.recent-grid__link( href='#0' data-filter='.website' )
+                            | website
+                        a.recent-grid__link( href='#0' data-filter='.graphic' )
+                            | graphic
+                        a.recent-grid__link( href='#0' data-filter='.identity' )
+                            | identity
+                        a.recent-grid__link( href='#0' data-filter='.mobile' )
+                            | mobile apps
                     .recent-grid__main
                         .recent-grid__sizer
                         .recent-grid__item.website
@@ -19,71 +26,84 @@ mixin block-recent()
                                 img(src='%=static=%img/assets/block-recent/recent-image-01.jpg' alt='Recent Image')
                                 .recent-grid__overlay
                                     .recent-grid__social
-                                        a.recent-grid__search( href='javascript:void(0);' )
+                                        a.recent-grid__search( href='#0' )
                                             != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-01', className: 'recent-icon' })
-                                        a.recent-grid__anchor( href='javascript:void(0);' )
+                                        a.recent-grid__anchor( href='#0' )
                                             != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-02', className: 'recent-icon' })
                             .recent-grid__info
-                                h4.recent-grid__caption outfield
-                                p.recent-grid__subcaption Mobile interaction CRM for field reps
+                                h4.recent-grid__caption
+                                    | outfield
+                                p.recent-grid__subcaption
+                                    | Mobile interaction CRM for field reps
                         .recent-grid__item.graphic
                             figure.recent-grid__image
                                 img(src='%=static=%img/assets/block-recent/recent-image-02.jpg' alt='Recent Image')
                                 .recent-grid__overlay
                                     .recent-grid__social
-                                        a.recent-grid__search( href='javascript:void(0);' )
-                                            != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-01',className: 'recent-icon' })
-                                        a.recent-grid__anchor( href='javascript:void(0);' )
-                                            != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-02',className: 'recent-icon' })
+                                        a.recent-grid__search( href='#0' )
+                                            != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-01', className: 'recent-icon' })
+                                        a.recent-grid__anchor( href='#0' )
+                                            != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-02', className: 'recent-icon' })
                             .recent-grid__info
-                                h4.recent-grid__caption outfield
-                                p.recent-grid__subcaption Mobile interaction CRM for field reps
+                                h4.recent-grid__caption
+                                    | outfield
+                                p.recent-grid__subcaption
+                                    | Mobile interaction CRM for field reps
                         .recent-grid__item.identity
                             figure.recent-grid__image
                                 img(src='%=static=%img/assets/block-recent/recent-image-03.jpg' alt='Recent Image')
                                 .recent-grid__overlay
                                     .recent-grid__social
-                                        a.recent-grid__search( href='javascript:void(0);' )
-                                            != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-01',className: 'recent-icon' })
-                                        a.recent-grid__anchor( href='javascript:void(0);' )
+                                        a.recent-grid__search( href='#0' )
+                                            != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-01', className: 'recent-icon' })
+                                        a.recent-grid__anchor( href='#0' )
                                             != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-02', className: 'recent-icon' })
                             .recent-grid__info
-                                h4.recent-grid__caption outfield
-                                p.recent-grid__subcaption Mobile interaction CRM for field reps
+                                h4.recent-grid__caption
+                                    | outfield
+                                p.recent-grid__subcaption
+                                    | Mobile interaction CRM for field reps
                         .recent-grid__item.mobile
                             figure.recent-grid__image
                                 img(src='%=static=%img/assets/block-recent/recent-image-04.jpg' alt='Recent Image')
                                 .recent-grid__overlay
                                     .recent-grid__social
-                                        a.recent-grid__search( href='javascript:void(0);' )
+                                        a.recent-grid__search( href='#0' )
                                             != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-01', className: 'recent-icon' })
-                                        a.recent-grid__anchor( href='javascript:void(0);' )
+                                        a.recent-grid__anchor( href='#0' )
                                             != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-02', className: 'recent-icon' })
                             .recent-grid__info
-                                h4.recent-grid__caption outfield
-                                p.recent-grid__subcaption Mobile interaction CRM for field reps
+                                h4.recent-grid__caption
+                                    | outfield
+                                p.recent-grid__subcaption
+                                    | Mobile interaction CRM for field reps
                         .recent-grid__item.website
                             figure.recent-grid__image
                                 img(src='%=static=%img/assets/block-recent/recent-image-05.jpg' alt='Recent Image')
                                 .recent-grid__overlay
                                     .recent-grid__social
-                                        a.recent-grid__search( href='javascript:void(0);' )
+                                        a.recent-grid__search( href='#0' )
                                             != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-01', className: 'recent-icon' })
-                                        a.recent-grid__anchor( href='javascript:void(0);' )
-                                            != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-02',className: 'recent-icon' })
+                                        a.recent-grid__anchor( href='#0' )
+                                            != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-02', className: 'recent-icon' })
                             .recent-grid__info
-                                h4.recent-grid__caption outfield
-                                p.recent-grid__subcaption Mobile interaction CRM for field reps
+                                h4.recent-grid__caption
+                                    | outfield
+                                p.recent-grid__subcaption
+                                    | Mobile interaction CRM for field reps
                         .recent-grid__item.graphic
                             figure.recent-grid__image
                                 img(src='%=static=%img/assets/block-recent/recent-image-06.jpg' alt='Recent Image')
                                 .recent-grid__overlay
                                     .recent-grid__social
-                                        a.recent-grid__search( href='javascript:void(0);' )
+                                        a.recent-grid__search( href='#0' )
                                             != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-01', className: 'recent-icon' })
-                                        a.recent-grid__anchor( href='javascript:void(0);' )
+                                        a.recent-grid__anchor( href='#0' )
                                             != jadeHelpers.Icon.call( locals, { iconName: 'recent-icon-02', className: 'recent-icon' })
                             .recent-grid__info
-                                h4.recent-grid__caption outfield
-                                p.recent-grid__subcaption Mobile interaction CRM for field reps
-                    .recent-grid__button load more
+                                h4.recent-grid__caption
+                                    | outfield
+                                p.recent-grid__subcaption
+                                    | Mobile interaction CRM for field reps
+                    .recent-grid__button
+                        | load more

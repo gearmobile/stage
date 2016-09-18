@@ -2,10 +2,11 @@ var GoogleMapsLoader = require( 'google-maps' );
 // -----------------------------------------------------
 
 window.addEventListener( 'load', function () {
-    GoogleMapsLoader.load( function ( google ) {
 
-        GoogleMapsLoader.LANGUAGE = 'en';
-        GoogleMapsLoader.KEY = 'AIzaSyAjunIsdBzwn5n0IhHJctIg4PPCMlH7u24';
+    GoogleMapsLoader.LANGUAGE = 'en';
+    GoogleMapsLoader.KEY = 'AIzaSyAQTQ3gx58ulhmp6zKOzTwAlzv2zhbari8';
+
+    GoogleMapsLoader.load( function ( google ) {
 
         var brampton = document.querySelector( '#brampton' );
         var bramptonCoords = new google.maps.LatLng( 51.5220535, 0.041928900000016256 );

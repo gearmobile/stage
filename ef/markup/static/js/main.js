@@ -1,80 +1,18 @@
 'use strict';
 
-// PAGE INDEX
-// ----------------------------------------------------------
-require( '../../components/block-topheader/block-topheader' );
-require( '../../components/block-skills/block-skills' );
-require( '../../components/block-follow/block-follow' );
-require( '../../components/block-citation/block-citation' );
-require( '../../components/block-testimonials/block-testimonials' );
-require( '../../components/block-recent/block-recent' );
-require( '../../components/block-map/block-map' );
-require( '../../components/module-button/module-button' );
-
-
-// var Isotope = require('isotope-layout');
-// var imagesload = require('imagesloaded');
-// var swiper = require('swiper');
-var smoothScroll = require('smooth-scroll');
-
-
-
 // TRIANGLES
 // -------------------------------------------------------
-
 var primaryColor = '#fff';
 var secondaryColor = '#0cf';
 var tertiaryColor = '#f7f7f7';
-
 var delta = 0.12;
 var delta1 = 0.08;
 var delta2 = 0.041;
 var delta3 = 0.66;
-
 var width, height, width1, height1, height2;
-
-// SECTION HERO ------------------------------------------
-var hero = document.querySelector( '.hero' );
-
-var heroBottom = document.querySelector( '.hero__bottom' );
-var heroBottomCanvas = document.querySelector( '#heroBottomCanvas' );
-var heroBottomCanvasContext = heroBottomCanvas.getContext( '2d' );
-
-// SECTION FOLLOW -----------------------------------------
-var follow = document.querySelector( '.follow' );
-
-var followTop = document.querySelector( '.follow__top' );
-var followTopCanvas = document.querySelector( '#followTopCanvas' );
-var followTopCanvasContext = followTopCanvas.getContext( '2d' );
-
-var followBottom = document.querySelector( '.follow__bottom' );
-var followBottomCanvas = document.querySelector( '#followBottomCanvas' );
-var followBottomCanvasContext = followBottomCanvas.getContext( '2d' );
-
-// SECTION CITATION -----------------------------------------
-var citation = document.querySelector( '.citation' );
-
-var citationTop = document.querySelector( '.citation__top' );
-var citationTopCanvas = document.querySelector( '#citationTopCanvas' );
-var citationTopCanvasContext = citationTopCanvas.getContext( '2d' );
-
-var citationBottom = document.querySelector( '.citation__bottom' );
-var citationBottomCanvas = document.querySelector( '#citationBottomCanvas' );
-var citationBottomCanvasContext = citationBottomCanvas.getContext( '2d' );
-
-// SECTION TEAM -----------------------------------------
-var team = document.querySelector( '.team' );
-
-var teamTop = document.querySelector( '.team__top' );
-var teamTopCanvas = document.querySelector( '#teamTopCanvas' );
-var teamTopCanvasContext = teamTopCanvas.getContext( '2d' );
-
-var teamBottom = document.querySelector( '.team__bottom' );
-var teamBottomCanvas = document.querySelector( '#teamBottomCanvas' );
-var teamBottomCanvasContext = teamBottomCanvas.getContext( '2d' );
-
+// -------------------------------------------------------
 // DRAW TRIANGLE TOP
-// -------------------------------------------------
+// -------------------------------------------------------
 function drawTriangleTop( topCanvasContext, color ) {
     topCanvasContext.lineWidth = 1;
     topCanvasContext.strokeStyle = color;
@@ -87,12 +25,11 @@ function drawTriangleTop( topCanvasContext, color ) {
     topCanvasContext.fill();
     topCanvasContext.closePath();
 }
-
+// -------------------------------------------------------
 // DRAW TRIANGLE BOTTOM
-// -------------------------------------------------
+// -------------------------------------------------------
 function drawTriangleBottom( bottomCanvasContext, color1, color2 ) {
     bottomCanvasContext.lineWidth = 1;
-
     // draw large triangle
     bottomCanvasContext.strokeStyle = color1;
     bottomCanvasContext.fillStyle = color1;
@@ -103,7 +40,6 @@ function drawTriangleBottom( bottomCanvasContext, color1, color2 ) {
     bottomCanvasContext.stroke();
     bottomCanvasContext.fill();
     bottomCanvasContext.closePath();
-
     // draw small triangle
     bottomCanvasContext.beginPath();
     bottomCanvasContext.strokeStyle = color2;
@@ -145,9 +81,47 @@ function stylingBottom( block, blockBottom, blockBottomCanvas ) {
     blockBottomCanvas.width = width;
     blockBottomCanvas.height = height;
 }
+// SECTION HERO ------------------------------------------
+var hero = document.querySelector( '.hero' );
 
+var heroBottom = document.querySelector( '.hero__bottom' );
+var heroBottomCanvas = document.querySelector( '#heroBottomCanvas' );
+var heroBottomCanvasContext = heroBottomCanvas.getContext( '2d' );
 
-window.addEventListener( 'DOMContentLoaded', function () {
+// SECTION FOLLOW -----------------------------------------
+var follow = document.querySelector( '.follow' );
+
+var followTop = document.querySelector( '.follow__top' );
+var followTopCanvas = document.querySelector( '#followTopCanvas' );
+var followTopCanvasContext = followTopCanvas.getContext( '2d' );
+
+var followBottom = document.querySelector( '.follow__bottom' );
+var followBottomCanvas = document.querySelector( '#followBottomCanvas' );
+var followBottomCanvasContext = followBottomCanvas.getContext( '2d' );
+
+// SECTION CITATION -----------------------------------------
+var citation = document.querySelector( '.citation' );
+
+var citationTop = document.querySelector( '.citation__top' );
+var citationTopCanvas = document.querySelector( '#citationTopCanvas' );
+var citationTopCanvasContext = citationTopCanvas.getContext( '2d' );
+
+var citationBottom = document.querySelector( '.citation__bottom' );
+var citationBottomCanvas = document.querySelector( '#citationBottomCanvas' );
+var citationBottomCanvasContext = citationBottomCanvas.getContext( '2d' );
+
+// SECTION TEAM -----------------------------------------
+var team = document.querySelector( '.team' );
+
+var teamTop = document.querySelector( '.team__top' );
+var teamTopCanvas = document.querySelector( '#teamTopCanvas' );
+var teamTopCanvasContext = teamTopCanvas.getContext( '2d' );
+
+var teamBottom = document.querySelector( '.team__bottom' );
+var teamBottomCanvas = document.querySelector( '#teamBottomCanvas' );
+var teamBottomCanvasContext = teamBottomCanvas.getContext( '2d' );
+
+window.addEventListener( 'load', function () {
     variablesValues();
 
     // SECTION HERO -----------------------------------------
@@ -201,3 +175,14 @@ window.addEventListener( 'resize', function () {
 
 }, false );
 
+// ----------------------------------------------------------
+// PAGE INDEX
+// ----------------------------------------------------------
+require( '../../components/block-topheader/block-topheader' );
+require( '../../components/block-skills/block-skills' );
+require( '../../components/block-follow/block-follow' );
+require( '../../components/block-citation/block-citation' );
+require( '../../components/block-testimonials/block-testimonials' );
+require( '../../components/block-recent/block-recent' );
+require( '../../components/block-map/block-map' );
+require( '../../components/module-button/module-button' );
