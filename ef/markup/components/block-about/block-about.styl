@@ -1,30 +1,36 @@
 .about
-    padding: 12rem 0
-    background-color: $color-white
+    padding 12rem 0
+    background-color $color-white
+
+    @media screen and ( max-width $bp768 )
+        padding 6rem 0
 
     &__center
         lost-center $width flex
-        padding: 0 $gutter
+        padding 0 $gutter
 
 
         // ABOUT CONTENT
         // --------------------------------
 
         & .about-content
-            width: 100%
-            margin: 4rem 0 0 0
+            width 100%
+            margin 4rem 0 0
+
+            @media screen and ( max-width $bp768 )
+                margin 0
 
             // ABOUT CONTENT CONTROL
             // --------------------------------
 
             &__control
-                margin: 0 0 12rem
+                margin 0 0 12rem
+
+                @media screen and ( max-width $bp768 )
+                    display none
 
                 & ul
-                    display: flex
-
-                    @media screen and ( max-width: $bp768 )
-                        justify-content: center
+                    display flex
 
                 & li
                     width: 17.6rem
@@ -33,7 +39,7 @@
                     margin: 0 .1rem 0 0
                     display: flex
                     justify-content: center
-                    align-items: center
+                    align-items center
                     color: $color-grey-dark
                     text-transform: uppercase
                     font: 1.8rem/1 $lato-regular
@@ -43,14 +49,8 @@
                         transform: skewX( 15deg )
 
                     &:first-child
-                        background-color: $color-blue
-                        color: $color-white
-
-                    @media screen and ( max-width: $bp768 )
-                        &:nth-child( n+2 )
-                            display: none
-
-
+                        background-color $color-blue
+                        color $color-white
 
         // ABOUT CONTENT GRID
         // --------------------------------
@@ -107,13 +107,13 @@
                     display: none
 
                 &:nth-child( -n+3 )
-                    border-bottom: .1rem solid $color-grey-light
+                    border-bottom .1rem solid $color-grey-light
 
-            @media screen and ( max-width: $bp768 )
-                flex-direction: column
-                justify-content: center
-                align-items: center
-                padding: 3rem 1rem
+            @media screen and ( max-width $bp768 )
+                flex-direction column
+                justify-content center
+                align-items center
+                padding 6rem 1rem
 
 
         // ABOUT CONTENT GRID ICON

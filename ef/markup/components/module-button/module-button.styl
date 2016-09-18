@@ -1,22 +1,35 @@
+// BUTTON
+// ------------------------------------------
 .module-button
-    display: block
-    width: 4rem
-    height: 4rem
-    border-radius: 50%
-    background-color: $color-orange
-    position: fixed
-    right: 2rem
-    bottom: 2rem
-    cursor: pointer
-    z-index: 99
-    visibility: hidden
-    opacity: 0
-    transition: visibility .2s, opacity .2s, background-color .2s
-    will-change: transition
+    display block
+    width 4rem
+    height 4rem
+    border-radius 50%
+    background-color $color-orange
+    position fixed
+    right 2rem
+    bottom 2rem
+    cursor pointer
+    z-index 99
+    transition visibility .2s, opacity .2s, background-color .2s
+    will-change transition
 
     &:hover
-        background-color: lighten( $color-orange, 20% )
+        background-color lighten( $color-orange, 20% )
 
+    // BUTTON IS-HIDDEN
+    // ------------------------------------------
+    &.is-hidden
+        visibility hidden
+        opacity 0
+
+    // BUTTON IS-VISIBLE
+    // ------------------------------------------
     &.is-visible
-        visibility: visible
-        opacity: 1
+        visibility visible
+        opacity 1
+
+    // BUTTON DESTROYED
+    // ------------------------------------------
+    &.is-destroy
+        display none

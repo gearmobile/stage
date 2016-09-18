@@ -1,65 +1,70 @@
+// TOPHEADER
+// --------------------------------------
 .topheader
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    z-index: 999
-    padding: 3rem 0 0
-    visibility visible
-    opacity 1
-    transition: visibility .2s, opacity .2s
+    position fixed
+    top 0
+    left 0
+    width 100%
+    z-index 999
+    padding 3rem 0 0
+    transition visibility .2s, opacity .2s
 
-    @media screen and ( max-width: $bp600 )
-        padding: 1rem 0 0 0
+    // TOPHEADER IS-VISIBLE
+    // --------------------------------------
+    &.is-visible
+        visibility visible
+        opacity 1
 
+    // TOPHEADER IS-HIDDEN
+    // --------------------------------------
+    &.is-hidden
+        visibility hidden
+        opacity 0
+
+    @media screen and ( max-width $bp600 )
+        padding 1rem 0 0 0
 
     // TOPHEADER CENTER
     // --------------------------------------
-
     &__center
         lost-center $width flex
-        padding: 0 $gutter
-        justify-content: space-between
-        align-items: center
-
+        padding 0 $gutter
+        justify-content space-between
+        align-items center
 
     // TOPHEADER LOGO
     // --------------------------------------
-
     &__logo
-        width: 69px
-        height: 64px
-        background: url('%=static=%assets/block-topheader/topheader-logo.png') 50% 50% no-repeat
-        background-size: cover
+        width 69px
+        height 64px
+        background url('%=static=%assets/block-topheader/topheader-logo.png') 50% 50% no-repeat
+        background-size cover
 
-        @media screen and ( max-width: $bp600 )
-            display: none
-
+        @media screen and ( max-width $bp600 )
+            display none
 
     // TOPHEADER MENU
     // --------------------------------------
-
     & .topheader-menu
-        display: flex
+        display flex
 
+    // TOPHEADER MENU ITEM
+    // --------------------------------------
     & .topheader__item
-        margin: 0 0 0 3rem
+        margin 0 0 0 3rem
 
         &:first-child
-            margin-left: 0
+            margin-left 0
 
+    // TOPHEADER MENU LINK
+    // --------------------------------------
     & .topheader__link
-        text-transform: capitalize
-        color: $color-white
-        transition: color .2s
+        text-transform capitalize
+        color $color-white
+        transition color .2s
 
         &:hover
-            color: $color-orange
+            color $color-orange
 
-        @media screen and ( max-width: $bp600 )
-            display: none
-
-
-&.is-hidden
-    visibility hidden
-    opacity 0
+        @media screen and ( max-width $bp600 )
+            display none
