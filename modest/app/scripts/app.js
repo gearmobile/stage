@@ -10,7 +10,6 @@ $( function () {
 
 	// HEADER SWIPER SLIDER
 	// ------------------------------------------
-
 	const $topheader = $('.topheader');
 	const $buttonToTop = $('.button-to-top');
 
@@ -31,7 +30,6 @@ $( function () {
 
 	// TOP MENU FIXED
 	// -------------------------------------------
-
 	if ( $(window).width() > 768 ) {
 		$(this).on('scroll', function () {
 			if ( $(this).scrollTop() > 0 ) {
@@ -53,7 +51,6 @@ $( function () {
 
 	// BACK TO TOP BUTTON
 	// ------------------------------------
-
 	$buttonToTop.on('click', function (event) {
 		event.preventDefault();
 		$('html, body').stop().animate({scrollTop: 0}, 1500);
@@ -91,7 +88,6 @@ $( function () {
 
 	// GOOGLE MAPS
 	// -------------------------------------
-
 	GoogleMapsLoader.KEY = 'AIzaSyB8K34DDu7gT9BqenQE8vJDxx7FQZt4Khg';
 	GoogleMapsLoader.LANGUAGE = 'en';
 
@@ -109,7 +105,6 @@ $( function () {
 			mapTypeControl: false,
 			streetViewControl: false,
 			scrollwheel: false
-			// styles: brisbaneMapStyles // ПОДКЛЮЧИТЬ КАСТОМНЫЕ СТИЛИ ДЛЯ КАРТЫ
 		};
 
 		const ahmedabadMap = new google.maps.Map(ahmedabad, ahmedabadProp);
@@ -130,7 +125,6 @@ $( function () {
 
 	// SCROLLSPY MENU
 	// ------------------------------------------------
-
 	const $header = $('.topheader__menu');
 	const $headerLinks = $header.children('a');
 	const $activeClass = 'is-active';
@@ -189,48 +183,6 @@ $( function () {
 		$(this).parent().removeClass($menuActiveClass);
 		$('html, body').stop().animate({scrollTop: $( $(this).attr('href') ).offset().top - $topheader.outerHeight()}, 1500, 'swing');
 		$menuIcon.removeClass('is-active');
-	});
-
-
-	// GALLERY SHOW MORE
-	// -------------------------------------------------
-
-	const $button = $('.gallery__footer .button');
-	const $buttonMore = 'show me more';
-	const $buttonLess = 'show me less';
-	const $col = $('.gallery .gallery__item');
-	let flag = 'short';
-
-	$.fn.toggleText = function ( $more, $less ) {
-		$(this).text( ( $(this).text() === $more ) ? $less : $more );
-	};
-
-	$button.text($buttonMore);
-
-	$col.each( function ( index ) {
-		if ( index < $col.length / 2 ) {
-			$(this).css('display', 'block');
-		} else {
-			$(this).css('display', 'none');
-		}
-	});
-
-	$button.on( 'click', function () {
-		$(this).toggleText( $buttonMore, $buttonLess );
-		flag = ( flag === 'short' ) ? 'full' : 'short';
-		if ( flag === 'short' ) {
-			$col.each( function ( index ) {
-				if ( index < $col.length / 2 ) {
-					$(this).css('display', 'block');
-				} else {
-					$(this).css('display', 'none');
-				}
-			});
-		} else if ( flag === 'full' ) {
-			$col.each( function () {
-				$(this).css('display', 'block');
-			});
-		}
 	});
 
 	// MAGNIFIC POPUP
