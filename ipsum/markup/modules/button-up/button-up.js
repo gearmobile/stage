@@ -4,7 +4,7 @@ $buttonToTop.addClass( 'is-out' );
 
 $(window).on( 'scroll', function () {
     if ( $(this).scrollTop() > $(this).height() / 3 ) {
-        $buttonToTop.removeClass( 'is-out' ).addClass( 'is-in'  );
+        $buttonToTop.removeClass( 'is-out' ).addClass( 'is-in' );
     } else {
         $buttonToTop.removeClass( 'is-in' ).addClass( 'is-out' );
     }
