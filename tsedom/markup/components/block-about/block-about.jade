@@ -4,5 +4,55 @@ mixin block-about(data)
     section.block-about
         .center
             .block-about__header
-                +block-heading()
+                +block-heading( 'we are modest' )
             .block-about__main
+                .block-about__primary
+                    article.block-about__content
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid fuga, ipsam quas odit! Eum totam incidunt veritatis distinctio voluptatibus ea quos reprehenderit velit quas consectetur nihil perspiciatis, vero eaque animi nobis sequi saepe ex voluptates ullam laudantium quasi. Enim expedita incidunt voluptas, tempore optio obcaecati dolorum impedit nemo minima voluptatum.
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nulla #[strong delectus optio itaque consequatur cupiditate sint], aliquam. Autem, tempore officia nobis natus voluptatum magni, reiciendis. Earum similique dolore id non consectetur quod possimus qui, veniam, dolores sunt nihil cum molestiae, inventore molestias quibusdam quam esse quos facere perspiciatis illo beatae.
+                    nav.block-about__socials
+                        a.block-about__icon( href='#0' title='Facebook' target='_blank' rel='nofollow' )
+                            != jadeHelpers.Icon.call( locals, {iconName: 'facebook', className: 'block-about-icons' })
+                        a.block-about__icon( href='#0' title='Twitter' target='_blank' rel='nofollow' )
+                            != jadeHelpers.Icon.call( locals, {iconName: 'twitter', className: 'block-about-icons' })
+                        a.block-about__icon( href='#0' title='Google' target='_blank' rel='nofollow' )
+                            != jadeHelpers.Icon.call( locals, {iconName: 'google', className: 'block-about-icons' })
+                        a.block-about__icon( href='#0' title='Dribbble' target='_blank' rel='nofollow' )
+                            != jadeHelpers.Icon.call( locals, {iconName: 'dribbble', className: 'block-about-icons' })
+                        a.block-about__icon( href='#0' title='Tumblr' target='_blank' rel='nofollow' )
+                            != jadeHelpers.Icon.call( locals, {iconName: 'tumblr', className: 'block-about-icons' })
+                .block-about__secondary
+                    .list
+                        .list__row
+                            .list__primary
+                                span
+                                    | 01
+                            .list__secondary
+                                h4.list__title
+                                    span
+                                        | lorem ipsum dolor est
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam recusandae laudantium vitae velit nostrum, et reiciendis quibusdam ut totam deserunt.
+                        .list__row
+                            .list__primary
+                                span
+                                    | 02
+                            .list__secondary
+                                h4.list__title
+                                    span
+                                        | lorem ipsum dolor est
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam recusandae laudantium vitae velit nostrum, et reiciendis quibusdam ut totam deserunt.
+                        .list__row
+                            .list__primary
+                                span
+                                    | 03
+                            .list__secondary
+                                h4.list__title
+                                    span
+                                        | lorem ipsum dolor est
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam recusandae laudantium vitae velit nostrum, et reiciendis quibusdam ut totam deserunt.
+

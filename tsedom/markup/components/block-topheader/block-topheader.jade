@@ -1,3 +1,22 @@
 mixin block-topheader(data)
     section.block-topheader
         .center
+            .block-topheader__primary
+                a.block-topheader__logo( href='#header' target='_blank' rel='nofollow' )
+                    | modest
+            .block-topheader__secondary
+                nav.menu
+                    a.menu__link( href='#home' )
+                        | home
+                    a.menu__link( href='#about' )
+                        | about
+                    a.menu__link( href='#team' )
+                        | team
+                    a.menu__link( href='#work' )
+                        | work
+                    a.menu__link( href='#services' )
+                        | services
+                    a.menu__link( href='#features' )
+                        | features
+                    a.menu__link( href='#contact' )
+                        | contact

@@ -1,27 +1,49 @@
-// Mixins.
+// MIXINS
+// ----------------------------------------------------
 
-m-nl()
-    margin 0
-    padding 0
-    text-indent 0
-    list-style none
-    list-style-position outside
+// image adaptive -------------------------------
+img-adaptive()
 
-m-cf()
-    &:before, &:after
+    & img
+        display: block
+        width: 100%
+        height: auto
+
+// clearfix -------------------------------------
+clearfix()
+    &::before
+    &::after
+        content ''
         display table
-        content ""
-
-    &:after
-        clear both
-
-    .lt-ie8 &
-        zoom 1
+    &::after
+        clear: both
 
 
-m-blocks-justify()
-    text-align justify
-    text-justify newspaper
+// placeholder hide on focus ---------------------
+[placeholder]:focus::placeholder
+    color transparent
 
 
-// You can add your own mixins here:
+// size ------------------------------------------
+size($width, $height = $width)
+    width $width
+    height $height
+
+
+// placeholder style -----------------------------
+placeholder()
+    &::-webkit-input-placeholder
+        {block}
+    &::-moz-placeholder
+        {block}
+    &:-moz-placeholder
+        {block}
+    &:-ms-input-placeholder
+        {block}
+
+// HIDE TEXT
+//===============================
+squish-text()
+    font 0/0 serif
+    text-shadow none
+    color transparent

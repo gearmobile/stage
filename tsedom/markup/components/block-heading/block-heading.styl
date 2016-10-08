@@ -1,1 +1,23 @@
+// TITLE
+// --------------------------------------
+.title
+    display flex
+    width 100%
+    // margin 0 0 6rem
 
+    // +below( $bp-500 )
+    @media screen and ( max-width $bp-500 )
+        justify-content center
+        // margin 0 0 4rem
+
+    // TITLE SPAN
+    // --------------------------------------
+    & span
+        padding 0 0 0 1.4rem
+        border-left 1rem solid $modest-white-light
+        font-size 2.25rem
+        text-transform uppercase
+        color $modest-dark
+
+        &::after
+            content '.'
