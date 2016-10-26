@@ -1,6 +1,6 @@
 $(document).ready( function () {
-
-    // VARIABLES
+    // ------------------------------------------------------------------------
+    // constIABLES
     // -----------------------------------------------------------------
     const topHeader = $('.topheader');
     const topHeaderNav = topHeader.find('.topheader__secondary-nav');
@@ -12,13 +12,13 @@ $(document).ready( function () {
     const topOverlay = topHeader.find('.topheader-overlay');
     const topHeaderOverlayButton = topHeader.find('.topheader-overlay__button > .hamburger');
     const topHeaderOverlayLinks = topHeader.find('.topheader-overlay .topheader-overlay__link');
-
+    // ------------------------------------------------------------------------
     // HIDE \ SHOW SECONDARY MENU TO RIGHT
     // -----------------------------------------------------------------
     if ( !topHeaderNav.hasClass('animated') ) {
         topHeaderNav.addClass('animated');
     }
-
+    // ------------------------------------------------------------------------
     $(window).on( 'scroll', function () {
         if ( $( window ).scrollTop() > 0 ) {
             topHeaderNav.removeClass( 'fadeInRight' ).addClass( 'fadeOutRight' );
@@ -28,7 +28,7 @@ $(document).ready( function () {
             topHeaderSecondarySubscribe.removeClass( 'is-fixed' );
         }
     });
-
+    // ------------------------------------------------------------------------
     // ANIMATE SCROLL
     // -----------------------------------------------------------------
     $('a[href*="#"]:not([href="#"])').on( 'click', function () {
@@ -43,25 +43,25 @@ $(document).ready( function () {
             }
         }
     });
-
+    // ------------------------------------------------------------------------
     // SHOW \ HIDE SEARCH BLOCK
     // -----------------------------------------------------------------
     topHeaderSecondaryOpen.on( 'click', function () {
         topHeaderSecondarySubscribe.removeClass( 'is-visible' ).addClass( 'is-hidden' );
         topHeaderSecondarySearch.removeClass( 'is-hidden' ).addClass( 'is-visible' );
     });
-
+    // ------------------------------------------------------------------------
     topHeaderSecondaryClose.on( 'click', function () {
         topHeaderSecondarySearch.removeClass( 'is-visible' ).addClass( 'is-hidden' );
         topHeaderSecondarySubscribe.removeClass( 'is-hidden' ).addClass( 'is-visible' );
     });
-
+    // ------------------------------------------------------------------------
     // TOPHEADER MOBILE MENU
     // -----------------------------------------------------------------
     if ( !topOverlay.hasClass( 'animated' ) ) {
         topOverlay.addClass( 'animated' );
     }
-
+    // ------------------------------------------------------------------------
     topHeaderHamburgerIcon.hover(
         function () {
             $(this).addClass( 'is-active' );
@@ -70,7 +70,7 @@ $(document).ready( function () {
             $(this).removeClass( 'is-active' );
         }
     );
-
+    // ------------------------------------------------------------------------
     topHeaderHamburgerIcon.on( 'click', function () {
         if ( !topOverlay.hasClass( 'fadeInDown' ) ) {
             topOverlay.css( 'visibility', 'visible').removeClass( 'fadeOutUp' ).addClass( 'fadeInDown' );
@@ -78,7 +78,7 @@ $(document).ready( function () {
             topOverlay.css( 'visibility', 'hidden').removeClass( 'fadeInDown' ).addClass( 'fadeOutUp' );
         }
     });
-
+    // ------------------------------------------------------------------------
     topHeaderOverlayButton.hover(
         function () {
             $(this).addClass( 'is-active' );
@@ -87,14 +87,15 @@ $(document).ready( function () {
             $(this).removeClass( 'is-active' );
         }
     );
-
+    // ------------------------------------------------------------------------
     topHeaderOverlayButton.on( 'click', function () {
         topOverlay.removeClass( 'fadeInDown' ).addClass( 'fadeOutUp' );
     });
-
+    // ------------------------------------------------------------------------
     topHeaderOverlayLinks.on( 'click', function () {
         topOverlay.removeClass( 'fadeInDown' ).addClass( 'fadeOutUp' );
     });
+    // ------------------------------------------------------------------------
 });
 
 

@@ -1,10 +1,4 @@
 module.exports = {
-    "autoprefixerConfig": [
-        "> 1%",
-        "last 2 versions",
-        "Firefox ESR",
-        "android 4"
-    ],
     "postcss": [
         {
             "name": "lost",
@@ -52,17 +46,7 @@ module.exports = {
         "sounds": {},
         "taskFinishedText": "Task finished at: "
     },
-    "browserSyncConfig": {
-        "baseDir": "./dev",
-        "port": 3004,
-        "open": true,
-        "browser": "default",
-        "startUrl": "/index.html",
-        "useNotifyInBrowser": true,
-        "injectChanges": false
-    },
     "minifyHtml": false,
-    "staticPrefix": "static/",
     "buildPath": "./builds/",
     "useBuildVersioning": true,
     "useArchiver": true,
@@ -75,6 +59,11 @@ module.exports = {
     ],
     "fs": {
         "staticFolderName": "static",
-        "imagesFolderName": "img"
-    }
+        "imagesFolderName": "img",
+        "componentsFolderName": "modules"
+    },
+    "css": {
+        "workflow": "concat"
+    },
+    "generateStaticPath": true
 };

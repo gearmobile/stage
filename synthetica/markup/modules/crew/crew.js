@@ -3,7 +3,7 @@ $(document).ready(function () {
     // BAR CHART ANIMATION
     // -------------------------------------------------------------
     const blockSkills = $('.skills');
-    const bars = $('.skills__bar-value').width('0%');
+    const bars = $('.skills__bar-value').width( '0%' );
     // -------------------------------------------------------------
     $( window ).on( 'scroll', function () {
         if ( $( window ).scrollTop() < blockSkills.offset().top - $( window ).height() * 0.65 ) {

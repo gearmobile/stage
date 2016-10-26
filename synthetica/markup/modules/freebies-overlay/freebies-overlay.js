@@ -20,7 +20,7 @@ $(document).ready( function () {
         // -------------------------------------------------------------
         // изменить иконку при клике
         // -------------------------------------------------------------
-        let currentIcon = $( this ).find( '.overlay-icon' );
+        const currentIcon = $( this ).find( '.overlay-icon' );
         currentIcon.html( '<use xlink:href="../svg-symbols.svg#heart-selected"></use>' );
     });
     // -------------------------------------------------------------
