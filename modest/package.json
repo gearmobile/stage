@@ -1,7 +1,7 @@
 {
-  "name": "csssr-project-template",
-  "version": "0.11.5",
-  "description": "A template for a quick start.",
+  "name": "Modest",
+  "version": "0.1.1",
+  "description": "Modest Page",
   "keywords": [
     "project",
     "template",
@@ -17,18 +17,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/CSSSR/csssr-project-template.git"
+    "url": ""
   },
   "author": {
-    "name": "felixexter",
-    "url": "https://github.com/felixexter"
+    "name": "gearmobile",
+    "url": ""
   },
-  "copyright": "©CSSSR",
+  "copyright": "",
   "bugs": {
-    "url": "https://github.com/CSSSR/csssr-project-template/issues/",
-    "email": "dev@csssr.com"
+    "url": "",
+    "email": ""
   },
-  "homepage": "https://github.com/CSSSR/csssr-project-template/",
+  "homepage": "",
   "engines": {
     "node": ">= 0.10.0"
   },
