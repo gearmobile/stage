@@ -6,7 +6,7 @@ $(document).ready( function () {
 
     function count() {
         counters.each( function () {
-            var current = $( this );
+            let current = $( this );
             $( { Counter: 0 }).animate( { Counter: current.attr('data-stop') }, {
                 duration: 2000,
                 easing: 'swing',
