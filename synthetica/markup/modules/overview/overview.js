@@ -1,8 +1,8 @@
 $(document).ready( function () {
 
-    var overview = $( '.overview');
-    var counters = overview.find('.overview__item-counter').text('0');
-    var marker = true;
+    const overview = $( '.overview');
+    const counters = overview.find('.overview__item-counter').text('0');
+    let marker = true;
 
     function count() {
         counters.each( function () {

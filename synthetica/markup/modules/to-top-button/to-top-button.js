@@ -1,6 +1,6 @@
 $(document).ready( function () {
-    var topButton = $('.to-top-button');
-    var scrollValue = $('.hero').height();
+    const topButton = $('.to-top-button');
+    const scrollValue = $('.hero').height();
     $(window).on('scroll', function () {
         if ( $(window).scrollTop() > scrollValue ) {
             topButton.fadeIn();

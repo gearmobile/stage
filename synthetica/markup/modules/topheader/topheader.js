@@ -2,16 +2,16 @@ $(document).ready( function () {
 
     // VARIABLES
     // -----------------------------------------------------------------
-    var topHeader = $('.topheader');
-    var topHeaderNav = topHeader.find('.topheader__secondary-nav');
-    var topHeaderSecondarySubscribe = topHeader.find('.topheader__secondary-subscribe');
-    var topHeaderSecondarySearch = topHeader.find('.topheader__secondary-search');
-    var topHeaderSecondaryOpen = topHeader.find('.topheader__secondary-open');
-    var topHeaderSecondaryClose = topHeader.find('.topheader__secondary-close');
-    var topHeaderHamburgerIcon = topHeader.find('.topheader__secondary-mobile > .hamburger');
-    var topOverlay = topHeader.find('.topheader-overlay');
-    var topHeaderOverlayButton = topHeader.find('.topheader-overlay__button > .hamburger');
-    var topHeaderOverlayLinks = topHeader.find('.topheader-overlay .topheader-overlay__link');
+    const topHeader = $('.topheader');
+    const topHeaderNav = topHeader.find('.topheader__secondary-nav');
+    const topHeaderSecondarySubscribe = topHeader.find('.topheader__secondary-subscribe');
+    const topHeaderSecondarySearch = topHeader.find('.topheader__secondary-search');
+    const topHeaderSecondaryOpen = topHeader.find('.topheader__secondary-open');
+    const topHeaderSecondaryClose = topHeader.find('.topheader__secondary-close');
+    const topHeaderHamburgerIcon = topHeader.find('.topheader__secondary-mobile > .hamburger');
+    const topOverlay = topHeader.find('.topheader-overlay');
+    const topHeaderOverlayButton = topHeader.find('.topheader-overlay__button > .hamburger');
+    const topHeaderOverlayLinks = topHeader.find('.topheader-overlay .topheader-overlay__link');
 
     // HIDE \ SHOW SECONDARY MENU TO RIGHT
     // -----------------------------------------------------------------

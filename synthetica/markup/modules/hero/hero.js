@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     // HERO CAROUSSEL
     // -------------------------------------------------------
-    var heroSlider = $('.main-carousel');
+    const heroSlider = $('.main-carousel');
     heroSlider.flickity({
         cellAlign: 'left',
         contain: true,
@@ -16,10 +16,10 @@ $(document).ready(function () {
 
     // HERO ANIMATE
     // -------------------------------------------------------
-    var hero = $('.hero');
-    var heroTitle = hero.find('.hero__content-title');
-    var heroButtonPrimary = hero.find('.button-primary');
-    var heroContentSecondary = hero.find('.hero__content-secondary');
+    const hero = $('.hero');
+    const heroTitle = hero.find('.hero__content-title');
+    const heroButtonPrimary = hero.find('.button-primary');
+    const heroContentSecondary = hero.find('.hero__content-secondary');
 
     if ( !heroTitle.hasClass('animated') || !heroButtonPrimary.hasClass('animated') || !heroContentSecondary.hasClass('animated') ) {
         heroTitle.addClass('animated');
