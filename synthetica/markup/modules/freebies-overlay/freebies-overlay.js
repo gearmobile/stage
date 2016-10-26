@@ -21,7 +21,7 @@ $(document).ready( function () {
         // изменить иконку при клике
         // -------------------------------------------------------------
         const currentIcon = $( this ).find( '.overlay-icon' );
-        currentIcon.html( '<use xlink:href="../svg-symbols.svg#heart-selected"></use>' );
+        currentIcon.html( '<use xlink:href="svg-symbols.svg#heart-selected"></use>' );
     });
     // -------------------------------------------------------------
     likeLinks.on( 'click', function ( event ) {
