@@ -1,19 +1,16 @@
 
 // COMMENTS
 // ---------------------------------
-
 .comments
     padding 6rem 0
 
     // COMMENTS PRIMARY
     // ---------------------------------
-
     &__primary
         margin 0 0 8rem
 
     // COMMENTS ITEM
     // ---------------------------------
-
     &__item
         display flex
         width 100%
@@ -23,26 +20,27 @@
 
         @media screen and ( max-width $bp500 )
             flex-direction column
+            justify-content center
+            align-items center
 
         &--last
             border-bottom none
 
     // COMMENTS LIST
     // ---------------------------------
-
     &__list
         display block
 
         &--inside
-            padding: 0 0 0 10rem
+            padding 0 0 0 10rem
             width 100%
 
             @media screen and ( max-width $bp600 )
                 margin 0
+                padding 0
 
     // COMMENTS PRIMO
     // ---------------------------------
-
     &__primo
         flex 1 1 20%
         width 20%
@@ -54,7 +52,6 @@
 
     // COMMENTS SECONDO
     // ---------------------------------
-
     &__secondo
         flex 1 7 80%
         width 80%
@@ -65,7 +62,6 @@
 
     // COMMENTS HEADER
     // ---------------------------------
-
     &__header
         padding 1rem 0 0 0
 
@@ -74,7 +70,6 @@
 
     // COMMENTS SUBTITLE
     // ---------------------------------
-
     &__subtitle
         text-transform uppercase
         font 1.3rem/1.2 $montserrat-bold
@@ -83,14 +78,12 @@
 
     // COMMENTS INFO
     // ---------------------------------
-
     &__info
         font 1.4rem/1.2 $crimson-italic
         color $color-grey
 
     // COMMENTS CONTENT
     // ---------------------------------
-
     &__content
         width 100%
         margin 3rem 0 0 0
@@ -104,7 +97,6 @@
 
     // COMMENTS IMAGE
     // ---------------------------------
-
     &__image
         size( 7rem )
         border-radius 50%
@@ -120,7 +112,6 @@
 
     // COMMENTS REPLY
     // ---------------------------------
-
     &__reply
         display flex
         align-items center
@@ -144,7 +135,6 @@
 
     // COMMENTS SECONDARY
     // ---------------------------------
-
     &__secondary .form
         margin 4rem 0 0 0
 
@@ -158,7 +148,6 @@
 
     // COMMENTS TITLE
     // ---------------------------------
-
     &__title
         font 1.6rem/1.2 $montserrat-bold
         color $color-grey
