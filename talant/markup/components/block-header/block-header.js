@@ -1,9 +1,8 @@
-
+// ------------------------------------
 // HEADER SLIDER
 // ------------------------------------
-
-var swiper = require( 'swiper' );
-
+const swiper = require( 'swiper' );
+// ------------------------------------
 window.addEventListener( 'load', function () {
     swiper( '.header .swiper-container', {
         nextButton: '.header .swiper-button-next',
@@ -22,3 +21,4 @@ window.addEventListener( 'load', function () {
         }
     });
 }, false );
+// ------------------------------------

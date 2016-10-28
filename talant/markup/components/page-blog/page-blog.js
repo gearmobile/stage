@@ -1,16 +1,15 @@
-
+// -----------------------------------------------------------
 // PAGE BLOG GRID
 // -----------------------------------------------------------
-
-var imagesLoaded = require( 'imagesloaded' );
-var IsotopeBlog = require( 'isotope-layout' );
-
+const imagesLoaded = require( 'imagesloaded' );
+const IsotopeBlog = require( 'isotope-layout' );
+// -----------------------------------------------------------
 window.addEventListener( 'load', function () {
-    var blogGrid = document.querySelector( '.page-blog__main .blog-grid' );
-    var blogGridSizer = '.blog-grid__sizer';
-    var blogGridItem = '.blog-grid__item';
-    var blogLayout;
-
+    const blogGrid = document.querySelector( '.page-blog__main .blog-grid' );
+    const blogGridSizer = '.blog-grid__sizer';
+    const blogGridItem = '.blog-grid__item';
+    let blogLayout;
+    // -------------------------------------------------------
     imagesLoaded( blogGrid, function () {
         blogLayout = new IsotopeBlog( blogGrid, {
             itemSelector: blogGridItem,
@@ -21,3 +20,4 @@ window.addEventListener( 'load', function () {
         });
     });
 });
+// ----------------------------------------------------------

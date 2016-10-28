@@ -1,8 +1,8 @@
+// ------------------------------------
 // TESTIMONIALS SLIDER
 // ------------------------------------
-
-var swiper = require( 'swiper' );
-
+const swiper = require( 'swiper' );
+// ------------------------------------
 window.addEventListener( 'load', function () {
     swiper( '.testimonials .swiper-container', {
         pagination: '.testimonials .swiper-pagination',
@@ -16,3 +16,4 @@ window.addEventListener( 'load', function () {
         }
     });
 }, false );
+// ------------------------------------

@@ -1,10 +1,9 @@
 // TOPHEADER HIDE AND SHOW
 // ------------------------------------
-
 window.addEventListener( 'scroll', function () {
-    var topHeader = document.querySelector( '#topheader' );
-    var topOffset = 50;
-    var scrollOffset = window.pageYOffset || document.documentElement.scrollTop;
+    const topHeader = document.querySelector( '#topheader' );
+    const topOffset = 50;
+    const scrollOffset = window.pageYOffset || document.documentElement.scrollTop;
 
     if ( scrollOffset > topOffset ) {
         topHeader.classList.add( 'is-hidden' );

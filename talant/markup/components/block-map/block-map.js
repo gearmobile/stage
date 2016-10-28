@@ -1,20 +1,18 @@
-
+// ------------------------------------
 // GOOGLE MAPS
 // ------------------------------------
-
-var GoogleMapsLoader = require( 'google-maps' );
-
+const GoogleMapsLoader = require( 'google-maps' );
+// ------------------------------------
 GoogleMapsLoader.LANGUAGE = 'en';
 GoogleMapsLoader.KEY = 'AIzaSyAQTQ3gx58ulhmp6zKOzTwAlzv2zhbari8';
-
+// ------------------------------------
 GoogleMapsLoader.load( function ( google ) {
-
-    var brampton = document.querySelector( '#map' );
-    var bramptonCoords = new google.maps.LatLng( 51.5220535, 0.0419289 );
-    var zoomValue = 15;
-    var markerPath = 'static/img/assets/block-map/location-icon.png';
-
-    var bramptonMapStyles = [
+    // ------------------------------------
+    const brampton = document.querySelector( '#map' );
+    const bramptonCoords = new google.maps.LatLng( 51.5220535, 0.0419289 );
+    const zoomValue = 15;
+    const markerPath = 'static/img/assets/block-map/location-icon.png';
+    const bramptonMapStyles = [
         {
             featureType: 'water',
             elementType: 'geometry',
@@ -83,8 +81,7 @@ GoogleMapsLoader.load( function ( google ) {
             stylers: [{ color: '#fefefe' }, { lightness: 17 }, { weight: 1.2 }]
         }
     ];
-
-    var bramptonProperties = {
+    const bramptonProperties = {
         center: bramptonCoords,
         zoom: zoomValue,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -101,40 +98,34 @@ GoogleMapsLoader.load( function ( google ) {
         },
         styles: bramptonMapStyles
     };
-
-    var bramptonMap = new google.maps.Map( brampton, bramptonProperties );
-
-    var bramptonMarker = new google.maps.Marker({
+    const bramptonMap = new google.maps.Map( brampton, bramptonProperties );
+    const bramptonMarker = new google.maps.Marker({
         position: bramptonCoords,
         map: bramptonMap,
         icon: markerPath,
         visible: true,
         animation: google.maps.Animation.DROP
     });
-
-    var bramptonInfo = new google.maps.InfoWindow({
+    const bramptonInfo = new google.maps.InfoWindow({
         content: 'Brampton Manor Academy'
     });
-
     bramptonMarker.addListener( 'click', function () {
         bramptonInfo.open( bramptonMap, bramptonMarker );
     });
-
+    // --------------------------------------------------------------------
     // MAKE GOOGLE MAP RESPONSIVE
     // --------------------------------------------------------------------
-
-    var bramptonMapCenter = bramptonMap.getCenter(); // returns the position displayed at the center of the map
-
+    const bramptonMapCenter = bramptonMap.getCenter(); // returns the position displayed at the center of the map
     // CENTER GOOGLE MAPS ON BROWSER RESIZE (RESPONSIVE)
     google.maps.event.addDomListener( window, 'resize', function () {
         bramptonMap.setCenter( bramptonMapCenter );
     });
-
+    // -------------------------------------------------------------------
     // RETURN CENTER OF MAP TO THE CENTER OF WINDOW IF MAP WAS MOVED BY USER
     google.maps.event.addListener( bramptonMap, 'center_changed', function () {
         window.setTimeout( function () {
             bramptonMap.setCenter( bramptonMapCenter );
         }, 3000 );
     });
-
+    // -------------------------------------------------------------------
 });

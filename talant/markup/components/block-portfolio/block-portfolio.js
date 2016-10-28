@@ -1,22 +1,21 @@
+// ------------------------------------
 // PORTFOLIO
 // ------------------------------------
-
-var imagesload = require( 'imagesloaded' );
-var Isotope = require( 'isotope-layout' );
-
+const imagesload = require( 'imagesloaded' );
+const Isotope = require( 'isotope-layout' );
+// ------------------------------------
 window.addEventListener( 'load', function () {
-
+    // ------------------------------------
     // PORTFOLIO VARIABLES
     // ------------------------------------
-    var portfolio = document.querySelector( '.portfolio__grid' );
-    var portfolioItem = '.portfolio__item';
-    var portfolioSizer = '.portfolio__sizer';
-    var portfolioControl = document.querySelector( '.portfolio__controls' );
-    var iso;
-
+    const portfolio = document.querySelector( '.portfolio__grid' );
+    const portfolioItem = '.portfolio__item';
+    const portfolioSizer = '.portfolio__sizer';
+    const portfolioControl = document.querySelector( '.portfolio__controls' );
+    let iso;
+    // ------------------------------------
     // PORTFOLIO LAYOUT
     // ------------------------------------
-
     imagesload( portfolio, function () {
         iso = new Isotope( portfolio, {
             itemSelector: portfolioItem,
@@ -26,11 +25,11 @@ window.addEventListener( 'load', function () {
             }
         });
     });
-
+    // ------------------------------------
     // PORTFOLIO FILTERING
     // ------------------------------------
-
     portfolioControl.addEventListener( 'click', function ( event ) {
         iso.arrange({ filter: event.target.getAttribute( 'data-filter' ) });
     });
+    // ------------------------------------
 }, false );
