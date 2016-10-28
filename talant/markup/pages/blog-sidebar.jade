@@ -1,5 +1,5 @@
 doctype html
-html(class="no-js", lang="ru")
+html( class='no-js', lang='ru' )
 
     include ../components/head/head
     include ../components/block-topheader/block-topheader
@@ -7,7 +7,7 @@ html(class="no-js", lang="ru")
     include ../components/footer/footer
 
     head
-        +head(head.blogSidebar)
+        +head( head.blogSidebar )
     body.page#page-blog-sidebar
         |%=symbols=%
         +block-topheader()

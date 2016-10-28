@@ -6,23 +6,34 @@ mixin footer()
         .center
             .footer__primary
                 .footer__caption
-                    h2.footer__title atlantida
+                    h2.footer__title
+                        | atlantida
                 .footer__wrapper
                     .footer__first-part
-                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
                         .footer__address
-                            h3.footer__subtitle atlantida studio
+                            h3.footer__subtitle
+                                | atlantida studio
                             ul
-                                li Steven Bernson, Attorney at Law
-                                li 1556 Broadway, suite 416
-                                li New York, NY, 10120, USA
+                                li
+                                    | Steven Bernson, Attorney at Law
+                                li
+                                    | 1556 Broadway, suite 416
+                                li
+                                    | New York, NY, 10120, USA
                         .footer__contacts
                             ul
-                                li: a( href='mailto:elegantflyers@gmail.com' ) E-mail: elegantflyers@gmail.com
-                                li: a( href='tel:+84956654972' ) +84 956 654 972
+                                li
+                                    a( href='mailto:elegantflyers@gmail.com' )
+                                        | E-mail: elegantflyers@gmail.com
+                                li
+                                    a( href='tel:+84956654972' )
+                                        | +84 956 654 972
                         .footer__socials
                             +module-social-icons()
                     .footer__second-part
                         +module-contact-form()
             .footer__secondary
-                p Copyright &copy; 2015 Atlantida Theme
+                p
+                    | Copyright &copy; 2015 Atlantida Theme

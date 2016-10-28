@@ -9,7 +9,7 @@ mixin block-comments(data)
                 li.comments__item
                     .comments__primo
                         .comments__image
-                            a( href='#{js}' )
+                            a( href='#0' )
                                 img( src='%=static=%img/assets/block-comments/comments-image-01.jpg' alt='Comment Image' )
                     .comments__secondo
                         .comments__header
@@ -21,13 +21,13 @@ mixin block-comments(data)
                             p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
                     .comments__reply
                         != jadeHelpers.Icon.call( locals, { iconName: 'comment-icon-01', className: 'comment-icon' })
-                        a( href='#{js}' ) reply
+                        a( href='#0' ) reply
                 li.comments__item.comments__item--last
                     ul.comments__list--inside
                         li.comments__item
                             .comments__primo
                                 .comments__image
-                                    a( href='#{js}' )
+                                    a( href='#0' )
                                         img( src='%=static=%img/assets/block-comments/comments-image-02.jpg' alt='Comment Image' )
                             .comments__secondo
                                 .comments__header
@@ -39,7 +39,7 @@ mixin block-comments(data)
                                     p Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
                             .comments__reply
                                 != jadeHelpers.Icon.call( locals, { iconName: 'comment-icon-01', className: 'comment-icon' })
-                                a( href='#{js}' ) reply
+                                a( href='#0' ) reply
         .comments__secondary
             h3.comments__title
                 | leave a comment
