@@ -1,10 +1,10 @@
-.sidebar-panel {
-    padding: 0 0 6rem 0
-}
+// SIDEBAR
+// ---------------------------------------------------
+.sidebar-panel
+    padding 0 0 6rem 0
 
 // SIDEBAR HEADER
 // ---------------------------------------------------
-
 .sidebar-header
     display: flex
     justify-content: space-between
@@ -20,30 +20,26 @@
         cursor: pointer
 
     & .sidebar-form
-        width: 100%
+        width 100%
 
         & #sidebar-input
-            width: 100%
-            padding: .2rem 2rem .2rem 4rem
-            font: 2rem/1 $josefin-sans-regular
-            border: none
+            width 100%
+            padding .2rem 2rem .2rem 4rem
+            font 2rem/1 $josefin-sans-regular
+            border none
 
             +placeholder()
-                text-transform: capitalize;
-
+                text-transform capitalize
 
 // SIDEBAR CONTENT
 // ---------------------------------------------------
-
 .sidebar-content
     min-height: 100%
-    text-align: center;
+    text-align: center
     padding: 0 1rem
-
 
 // SIDEBAR MENU PRIMARY
 // ---------------------------------------------------
-
 .sidebar-menu--primary
     margin: 0 0 10rem
 
@@ -54,19 +50,18 @@
         margin-bottom: 0
 
     & a
-        text-transform: capitalize;
+        text-transform: capitalize
         color: $color-dark
-        font: 3.4rem / 1 $josefin-sans-bold;
-        transition: color .2s;
+        font: 3.4rem / 1 $josefin-sans-bold
+        transition: color .2s
         will-change: color
 
         &:hover
-            color: $color-red;
+            color: $color-red
 
 
 // SIDEBAR MENU SECONDARY
 // ---------------------------------------------------
-
 .sidebar-menu--secondary .sidebar-menu__item
     margin: 0 0 3rem
 
@@ -74,8 +69,8 @@
         margin-bottom: 0
 
     & a
-        text-transform: capitalize;
-        font: 2.4rem/1 $josefin-sans-regular;
+        text-transform: capitalize
+        font: 2.4rem/1 $josefin-sans-regular
         color: $color-dark
         transition: color .2s
         will-change: color
