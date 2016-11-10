@@ -1,52 +1,54 @@
+// SUBSCRIBE
+// ---------------------------------------------------
 .subscribe
-    padding: 8rem 0
-    background-color: $color-white
+    padding 8rem 0
+    background-color $color-white
 
+    // SUBSCRIBE CENTER
+    // ------------------------------------------------
     &__center
         lost-center $width flex
-        padding: 0 $gutter
+        padding 0 $gutter
 
-        @media screen and (max-width: $bp1180)
-            flex-direction: column
-            justify-content: center
-            align-items: center
-
+        @media screen and ( max-width: $bp1180 )
+            flex-direction column
+            justify-content center
+            align-items center
 
     // SUBSCRIBE ICONS
     // ---------------------------------------------------
-
     & .social
         lost-column 3/12
         lost-column-gutter 0
-        display: flex
-        justify-content: center
-        box-shadow: .1rem 0 0 0 #e8e8e8
+        display flex
+        justify-content center
+        box-shadow .1rem 0 0 0 #e8e8e8
 
-        @media screen and (max-width: $bp1180)
-            order: 2
-            box-shadow: none
+        @media screen and ( max-width: $bp1180 )
+            order 2
+            box-shadow none
             lost-column 1/1
             lost-column-gutter 0
 
         &__icon
-            display: flex
-            justify-content: center
-            align-items: center
-            width: 6rem
-            height: 6rem
-            margin: 0 .8rem
+            display flex
+            justify-content center
+            align-items center
+            width 6rem
+            height 6rem
+            margin 0 .8rem
 
             &--facebook
                 background-color: $color-facebook
 
                 &:hover
-                    background-color: darken($color-facebook, 20%)
+                    background-color: darken( $color-facebook, 20% )
 
             &--twitter
                 background-color: $color-twitter
 
                 &:hover
-                    background-color: darken($color-twitter, 20%)
+                    background-color: darken( $color-twitter, 20% )
 
             &--instagram
                 background-color: $color-instagram
@@ -61,53 +63,57 @@
 
     // SIBSCRIBE FORM
     // ----------------------------------------------------
-
     .subscribe-holder
         lost-column 9/12
         lost-column-gutter 0
-        padding: 0 0 0 4rem
-        display: flex
-        align-items: center
-        justify-content: space-between
+        padding 0 0 0 4rem
+        display flex
+        align-items center
+        justify-content space-between
+        outline 1px solid red
 
-        @media screen and (max-width: $bp1180)
-            order: 1
+        @media screen and ( max-width: $bp1180 )
+            order 1
             lost-column 1/1
             lost-column-gutter 0
-            padding: 0
-            margin: 0 0 5rem
-            justify-content: center
-            flex-direction: column
+            padding 0
+            margin 0 0 5rem
+            justify-content center
+            flex-direction column
 
+    // SIBSCRIBE FORM LABEL
+    // ----------------------------------------------------
     .subscribe-form-label
-        lost-column 4/9 flex
+        lost-column 3/9 flex
         lost-column-gutter 0
-        font: 2.6rem/1 $josefin-sans-regular
-        color: $color-dark
+        font 2.6rem/1 $josefin-sans-regular
+        color $color-dark
         text-wrap nowrap
 
         span
             font-family: $josefin-sans-semibold
 
-        @media screen and (max-width: $bp1180)
+        @media screen and ( max-width: $bp1180 )
             lost-column 1/1
             lost-column-gutter 0
             text-align: center
             margin: 0 0 4rem
 
-
+    // SIBSCRIBE FORM FORM
+    // ----------------------------------------------------
     .subscribe-form
-        lost-column 5/9
+        lost-column 6/9
         lost-column-gutter $gutter
-        width: 100%
-        padding: 0 0 0 2rem
-        display: flex;
-        justify-content: space-between
+        display flex
+        justify-content space-between
 
+        // SIBSCRIBE FORM INPUT
+        // ----------------------------------------------------
         input
             float: left
             height: 6rem
-            width: 38rem
+            // width: 38rem
+            width 100%
             background-color: #fcfafa
             font: 2rem/1 $josefin-sans-regular
             color: #979797
@@ -117,75 +123,47 @@
             transition: border-color .2s
 
             &:hover
-                border-color: darken(#e8e8e8, 20%)
+                border-color: darken( #e8e8e8, 20% )
 
-            @media screen and (max-width: $bp1180)
+            @media screen and ( max-width: $bp1180 )
                 margin: 0 1rem 0 0
 
-            @media screen and (max-width: $bp480)
+            @media screen and ( max-width: $bp480 )
                 float: none
                 display: block
                 width: 100%
                 margin: 0 0 2rem
 
+        // SIBSCRIBE FORM BUTTON
+        // ----------------------------------------------------
         button
             float: right
             height: 6rem
             width: 17.6rem
-            background-color: #acdadc
-            border: none
-            padding: 0
-            font: 2rem / 1 $josefin-sans-bold
-            color: $color-white
+            background-color #acdadc
+            font 2rem/1 $josefin-sans-bold
+            color $color-white
             text-transform: capitalize
             will-change: background-color
             transition: background-color .2s
 
             &:hover
-                background-color: darken(#acdadc, 20%)
+                background-color: darken( #acdadc, 20% )
 
-            @media screen and (max-width: $bp1180)
+            @media screen and ( max-width: $bp1180 )
                 margin: 0 0 0 1rem
 
-            @media screen and (max-width: $bp480)
+            @media screen and ( max-width: $bp480 )
                 float: none
                 display: block
                 width: 100%
                 margin: 0
 
-        @media screen and (max-width: $bp1180)
+        @media screen and ( max-width: $bp1180 )
             lost-column 1/1
             lost-column-gutter 0
             padding: 0
             justify-content: center
 
-        @media screen and (max-width: $bp480)
+        @media screen and ( max-width: $bp480 )
             flex-direction: column
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

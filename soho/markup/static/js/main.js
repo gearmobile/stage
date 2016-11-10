@@ -3,7 +3,7 @@
 var swiper = require('swiper');
 var Slideout = require('slideout');
 var Isotope = require('isotope-layout');
-var imagesLoaded = require('imagesLoaded');
+var imagesLoaded = require('imagesloaded');
 var select2 = require('select2');
 var $ = require('jquery');
 

@@ -1,24 +1,22 @@
 .gallery
     background-color: $color-white
 
+    // GALLERY CONTROL
+    // -----------------------------------------
+    & .gallery-control
+        padding: 6rem 0
+        display: flex
+        justify-content: center
+        border-right: 1px solid #e8e8e8
+        border-left: 1px solid #e8e8e8
 
-// GALLERY CONTROL
-// -----------------------------------------
-
-.gallery .gallery-control
-    padding: 6rem 0
-    display: flex
-    justify-content: center
-    border-right: 1px solid #e8e8e8
-    border-left: 1px solid #e8e8e8
-
-    &__item
-        text-transform: capitalize
+    // GALLERY CONTROL ITEM
+    // -----------------------------------------
+    & .gallery-control__item
+        margin: 0 2rem .1rem
         font: 3rem/1 $josefin-sans-regular
         color: $color-dark
-        margin: 0 2rem .1rem
-        transition: color .2s
-        will-change: color
+        text-transform: capitalize
 
         &:hover
             color: $color-red
@@ -43,7 +41,6 @@
 
 // SELECT
 // -----------------------------------------
-
 .gallery .select2-container
     width: 38.4rem
 
@@ -77,7 +74,6 @@
 
 // GALLERY CONTENT
 // -----------------------------------------
-
 .gallery-content
     border: 1px solid #e8e8e8
 
@@ -111,7 +107,6 @@
 
 // SPECIAL
 // ----------------------------------
-
 .gallery-content__item.special
     background: url('%=static=%assets/content/product-image-08.jpg') 50% 50% no-repeat
     background-size: cover
@@ -152,7 +147,6 @@
 
 // SALES
 // ----------------------------------
-
 .gallery-content__item.sales
     background-color: $color-fusia
     will-change background-color
@@ -171,7 +165,7 @@
         margin: 0 0 4rem
         padding: 0 0 4rem
         position: relative
-        
+
         &::before
             content: ''
             display: block
@@ -243,7 +237,6 @@
 
 // GALLERY CONTENT BUTTON
 // ---------------------------------------
-
 .gallery-content-open
     width: 100%
     height 7rem
@@ -254,7 +247,7 @@
     text-transform: capitalize
 
     &:hover
-        background-color: darken(rgba(242, 245, 249, .4), 2%)
+        background-color: darken( rgba( 242, 245, 249, .4 ), 2% )
 
 
 

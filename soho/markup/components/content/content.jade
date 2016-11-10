@@ -3,12 +3,12 @@ mixin content(data)
         .gallery
             .gallery-control
                 .gallery-control__wrapper
-                    a.gallery-control__item(href='javascript:void(0);' data-filter='*') all
-                    a.gallery-control__item(href='javascript:void(0);' data-filter='.featured') featured
-                    a.gallery-control__item(href='javascript:void(0);' data-filter='.furniture') furniture
-                    a.gallery-control__item(href='javascript:void(0);' data-filter='.decoration') decoration
-                    a.gallery-control__item(href='javascript:void(0);' data-filter='.lighting') lighting
-                    a.gallery-control__item(href='javascript:void(0);' data-filter='.electronics') electronics
+                    a.gallery-control__item(href='#0' data-filter='*') all
+                    a.gallery-control__item(href='#0' data-filter='.featured') featured
+                    a.gallery-control__item(href='#0' data-filter='.furniture') furniture
+                    a.gallery-control__item(href='#0' data-filter='.decoration') decoration
+                    a.gallery-control__item(href='#0' data-filter='.lighting') lighting
+                    a.gallery-control__item(href='#0' data-filter='.electronics') electronics
 
                 .gallery-control__holder
                     select.gallery-control--mobile( style='width: 384px' )
@@ -23,7 +23,7 @@ mixin content(data)
                 li.gallery-content__sizer
 
                 li.gallery-content__item.furniture
-                    a(href='javascript:void(0);')
+                    a(href='#0')
                         figure.gallery-image
                             img(src="%=static=%img/assets/content/product-image-01.png" alt="Product Image")
                         .gallery-info
@@ -32,7 +32,7 @@ mixin content(data)
                             p.gallery-price $99
 
                 li.gallery-content__item.decoration
-                    a(href='javascript:void(0);')
+                    a(href='#0')
                         figure.gallery-image
                             img(src="%=static=%img/assets/content/product-image-02.png" alt="Product Image")
                         .gallery-info
@@ -41,21 +41,21 @@ mixin content(data)
                             p.gallery-price $89
 
                 li.gallery-content__item.featured.special
-                    a(href='javascript:void(0);')
+                    a(href='#0')
                         p.special-label special
                         .special__info
                             h2.special__title vifa <br> speaker
                             p.special__price $49 <span>$89</span>
 
                 li.gallery-content__item.featured.sales
-                    a(href='javascript:void(0);')
+                    a(href='#0')
                         .sales__caption
                             h2.sales__title 60 <span class='sales__percentage'>%</span>
                             p.sales__brief Flash Sale
                         p.sales__slogan Just use coupon code 60 WINTER for getting your discount.
 
                 li.gallery-content__item.decoration
-                    a(href='javascript:void(0);')
+                    a(href='#0')
                         figure.gallery-image
                             img(src="%=static=%img/assets/content/product-image-03.png" alt="Product Image")
                         .gallery-info
@@ -64,7 +64,7 @@ mixin content(data)
                             p.gallery-price $99
 
                 li.gallery-content__item.furniture
-                    a(href='javascript:void(0);')
+                    a(href='#0')
                         figure.gallery-image
                             img(src="%=static=%img/assets/content/product-image-04.png" alt="Product Image")
                         .gallery-info
@@ -73,7 +73,7 @@ mixin content(data)
                             p.gallery-price $299
 
                 li.gallery-content__item.furniture
-                    a(href='javascript:void(0);')
+                    a(href='#0')
                         figure.gallery-image
                             img(src="%=static=%img/assets/content/product-image-05.png" alt="Product Image")
                         .gallery-info
@@ -82,7 +82,7 @@ mixin content(data)
                             p.gallery-price $199
 
                 li.gallery-content__item.electronics
-                    a(href='javascript:void(0);')
+                    a(href='#0')
                         figure.gallery-image
                             img(src="%=static=%img/assets/content/product-image-06.png" alt="Product Image")
                         .gallery-info
@@ -91,7 +91,7 @@ mixin content(data)
                             p.gallery-price $499
 
                 li.gallery-content__item.lighting
-                    a(href='javascript:void(0);')
+                    a(href='#0')
                         figure.gallery-image
                             img(src="%=static=%img/assets/content/product-image-07.png" alt="Product Image")
                         .gallery-info
