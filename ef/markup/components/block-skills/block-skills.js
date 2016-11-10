@@ -1,6 +1,7 @@
 var Chart = require('chart.js');
+const d3 = require( 'd3' );
 // -------------------------------------------------
-// variables
+// VARIABLES
 // -------------------------------------------------
 var color1 = '#0cf';
 var color2 = '#eaeaea';

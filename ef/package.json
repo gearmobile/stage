@@ -6,6 +6,7 @@
   "directories": {},
   "dependencies": {
     "chart.js": "^2.2.2",
+    "d3": "^4.3.0",
     "google-maps": "^3.2.1",
     "imagesloaded": "^4.1.0",
     "isotope-layout": "^3.0.1",
