@@ -3,6 +3,7 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head
     include ../components/block-about/block-about
+    include ../components/block-do/block-do
     include ../components/footer/footer
 
     head
@@ -12,6 +13,7 @@ html(class="no-js", lang="ru")
 
         section.page__wrapper
 
+            +block-do()
             +block-about()
 
             .page__buffer
