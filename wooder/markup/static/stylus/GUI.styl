@@ -1,7 +1,6 @@
 // GUI stylies of the project
 // For example, styles of the links, buttons and so on.
 
-
 // LEARN MORE LINK
 // ------------------------------
 .lear-more
@@ -10,7 +9,7 @@
     text-decoration none
     font-size 1.4rem
     color $color-wooder-black
-    padding 0 0 1rem 0
+    padding 0 0 .9rem 0
     position relative
 
     &::before
@@ -23,6 +22,15 @@
         left 0
         bottom -.2rem
 
+    &::after
+        content ''
+        display block
+        width 3.5rem
+        height .7rem
+        position absolute
+        top .4rem
+        right -4.5rem
+        background url('%=static=%assets/block-about/arrow.png') no-repeat
 
 // PARAGRAPH WITH INDENT
 // --------------------------------
@@ -38,3 +46,48 @@
         position absolute
         left -7.4rem
         top .6rem
+
+// STRIKE TITLE
+// --------------------------------
+.strike
+    position relative
+
+    &::before
+        content ''
+        display block
+        width 15rem
+        height .1rem
+        background-color $color-wooder-black
+        position absolute
+        top 50%
+        transform translateY( -50% )
+        left -18rem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
