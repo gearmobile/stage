@@ -3,6 +3,18 @@
 .block-about
     padding 14rem 0 12rem
     background-color $color-wooder-white
+    overflow hidden
+    position relative
+
+    &::before
+        content ''
+        display block
+        position absolute
+        top 0
+        right 0
+        width 27.5rem
+        height 26.4rem
+        background url( '%=static=%assets/block-about/cover-secondary.png' ) no-repeat
 
     // BLOCK ABOUT CENTER
     // ----------------------------
@@ -14,7 +26,20 @@
     // BLOCK ABOUT PRIMARY
     // ----------------------------
     &__primary
-        //
+        position relative
+
+        // BLOCK ABOUT PRIMARY COVER
+        // ----------------------------
+        &::before
+            content ''
+            display block
+            position absolute
+            top 50%
+            transform translateY( -50% )
+            left 0
+            width 86.7rem
+            height 11.6rem
+            background url( '%=static=%assets/block-about/cover-primary.png' ) no-repeat
 
     // BLOCK ABOUT
     // ----------------------------
