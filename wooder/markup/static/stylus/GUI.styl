@@ -1,0 +1,40 @@
+// GUI stylies of the project
+// For example, styles of the links, buttons and so on.
+
+
+// LEARN MORE LINK
+// ------------------------------
+.lear-more
+    font-family $ProximaNovaBold
+    text-transform uppercase
+    text-decoration none
+    font-size 1.4rem
+    color $color-wooder-black
+    padding 0 0 1rem 0
+    position relative
+
+    &::before
+        content ''
+        display block
+        width 4.4rem
+        height .2rem
+        background-color $color-wooder-beige-light
+        position absolute
+        left 0
+        bottom -.2rem
+
+
+// PARAGRAPH WITH INDENT
+// --------------------------------
+.indent
+    position relative
+
+    &::before
+        content ''
+        display block
+        width 4.4rem
+        height .4rem
+        background-color $color-wooder-beige-light
+        position absolute
+        left -4.4rem
+        top .6rem

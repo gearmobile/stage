@@ -1,0 +1,51 @@
+// FOOTER
+// -------------------------------
+.footer
+    padding 2.4rem
+    height 6.8rem
+    background-color $color-wooder-black
+
+    // FOOTER CENTER
+    // ----------------------------------
+    & > .center
+        display flex
+        justify-content space-between
+        align-items center
+
+    // FOOTER PRIMARY
+    // ----------------------------------
+    &__primary
+        text-transform uppercase
+        color $color-wooder-grey
+        font-size 1.5rem
+
+    // FOOTER SECONDARY
+    // ---------------------------------
+    &__secondary
+        color $color-wooder-white
+        text-transform uppercase
+        font-size 3rem
+        font-family $ProximaNovaBold
+        position relative
+
+        &::before
+            content ''
+            display block
+            width 4rem
+            height .4rem
+            background-color $color-wooder-beige-light
+            position absolute
+            top 50%
+            transform translateY( -50% )
+            left 25%
+
+    // FOOTER TERTIARY
+    // ----------------------------------
+    &__tertiary
+        color $color-wooder-grey
+        font-size 1.5rem
+
+    &__author
+        color $color-wooder-grey-light
+        text-decoration none
+        text-transform capitalize
