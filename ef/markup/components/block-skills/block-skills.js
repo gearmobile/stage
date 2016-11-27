@@ -1,144 +1,114 @@
-var Chart = require('chart.js');
-const d3 = require( 'd3' );
+const Chart = require('chart.js');
 // -------------------------------------------------
 // VARIABLES
 // -------------------------------------------------
-var color1 = '#0cf';
-var color2 = '#eaeaea';
-var colorStroke = '#f00';
-var wpValue = 58;
-var htmlValue = 75;
-var cssValue = 80;
-var ptValue = 90;
-var cutoutValue = 82;
+const color1 = '#0cf';
+const color2 = '#eaeaea';
+const colorStroke = '#f00';
+const wpValue = 58;
+const htmlValue = 75;
+const cssValue = 80;
+const ptValue = 90;
+const cutoutValue = 82;
 // -------------------------------------------------
 window.addEventListener( 'DOMContentLoaded', function () {
     // -------------------------------------------------
-    var wpElement = document.querySelector( '#wordpress' );
-    var htmlElement = document.querySelector( '#html' );
-    var cssElement = document.querySelector( '#css' );
-    var ptElement = document.querySelector( '#photoshop' );
+    const wpElement = document.querySelector( '#wordpress' );
+    const htmlElement = document.querySelector( '#html' );
+    const cssElement = document.querySelector( '#css' );
+    const ptElement = document.querySelector( '#photoshop' );
     // -------------------------------------------------
-    if ( wpElement && wpElement.getContext ) {
-        var wpContext = wpElement.getContext('2d');
-    } else {
-        return false;
-    }
-    // -------------------------------------------------
-    if ( htmlElement && htmlElement.getContext ) {
-        var htmlContext = htmlElement.getContext('2d');
-    } else {
-        return false;
-    }
-    // -------------------------------------------------
-    if ( cssElement && cssElement.getContext ) {
-        var cssContext = cssElement.getContext('2d');
-    } else {
-        return false;
-    }
-    // -------------------------------------------------
-    if ( ptElement && ptElement.getContext ) {
-        var ptContext = ptElement.getContext('2d');
-    } else {
-        return false;
-    }
+    const wpContext = wpElement.getContext( '2d' );
+    const htmlContext = htmlElement.getContext( '2d' );
+    const cssContext = cssElement.getContext( '2d' );
+    const ptContext = ptElement.getContext( '2d' );
+
     // -------------------------------------------------
     // CHARTS GLOBAL CONFIG  ---------------------------
     // -------------------------------------------------
     Chart.defaults.global.showTooltips = false;
     Chart.defaults.global.legend.display = false;
     Chart.defaults.global.title.display = false;
-    Chart.defaults.global.animation.duration = 1000;
     Chart.defaults.global.animation.easing = 'easeOutQuart';
     // -------------------------------------------------
     // CHARTS DATA  ------------------------------------
     // -------------------------------------------------
-    var wpData = {
-        labels: [ 'Blue', 'White' ],
+    const wpData = {
+        labels: [ 'Skill', 'No Skill' ],
         datasets: [
             {
                 data: [ wpValue, 100 - wpValue ],
-                backgroundColor: [ color1, color2 ],
-                hoverBackgroundColor: [ color1, color2 ]
+                backgroundColor: [ color1, color2 ]
             }
         ]
     };
-    var htmlData = {
-        labels: [ 'Blue', 'White' ],
+    const htmlData = {
+        labels: [ 'Skill', 'No Skill' ],
         datasets: [
             {
                 data: [ htmlValue, 100 - htmlValue ],
-                backgroundColor: [ color1, color2 ],
-                hoverBackgroundColor: [ color1, color2 ]
+                backgroundColor: [ color1, color2 ]
             }
         ]
     };
-    var cssData = {
-        labels: [ 'Blue', 'White' ],
+    const cssData = {
+        labels: [ 'Skill', 'No Skill' ],
         datasets: [
             {
                 data: [ cssValue, 100 - cssValue ],
-                backgroundColor: [ color1, color2 ],
-                hoverBackgroundColor: [ color1, color2 ]
+                backgroundColor: [ color1, color2 ]
             }
         ]
     };
-    var ptData = {
-        labels: [ 'Blue', 'White' ],
+    const ptData = {
+        labels: [ 'Skill', 'No Skill' ],
         datasets: [
             {
                 data: [ ptValue, 100 - ptValue ],
-                backgroundColor: [ color1, color2 ],
-                hoverBackgroundColor: [ color1, color2 ]
+                backgroundColor: [ color1, color2 ]
             }
         ]
     };
     // -------------------------------------------------
     // CHARTS OPTIONS
     // -------------------------------------------------
-    var wpOptions = {
+    const wpOptions = {
         cutoutPercentage: cutoutValue,
         borderWidth: 3,
         borderColor: colorStroke,
         responsive: true,
         animation: {
-            animateScale: true,
-            animateRotate: true,
-            onCompvare: function () {
+            onComplete: function () {
                 wpContext.fillStyle = '#333';
                 wpContext.font = '3rem Lato, sans-serif';
-                wpContext.textAlign = 'center';
                 wpContext.textBaseline = 'middle';
+                wpContext.textAlign = 'center';
                 wpContext.fillText( wpData.datasets[0].data[0] + '%', wpElement.width / 2, wpElement.height / 2 );
             }
         }
     };
-    var htmlOptions = {
+    const htmlOptions = {
         cutoutPercentage: cutoutValue,
         borderWidth: 3,
         borderColor: colorStroke,
         responsive: true,
         animation: {
-            animateScale: true,
-            animateRotate: true,
-            onCompvare: function () {
+            onComplete: function () {
                 htmlContext.fillStyle = '#333';
                 htmlContext.font = '3rem Lato, sans-serif';
-                htmlContext.textAlign = 'center';
                 htmlContext.textBaseline = 'middle';
+                htmlContext.textAlign = 'center';
                 htmlContext.fillText( htmlData.datasets[0].data[0] + '%', htmlElement.width / 2, htmlElement.height / 2 );
             }
         }
     };
-    var cssOptions = {
+    const cssOptions = {
         cutoutPercentage: cutoutValue,
         borderWidth: 3,
         borderColor: colorStroke,
         responsive: true,
         animation: {
-            animateScale: true,
-            animateRotate: true,
-            onCompvare: function () {
+            onComplete: function () {
                 cssContext.fillStyle = '#333';
                 cssContext.font = '3rem Lato, sans-serif';
                 cssContext.textAlign = 'center';
@@ -147,15 +117,13 @@ window.addEventListener( 'DOMContentLoaded', function () {
             }
         }
     };
-    var ptOptions = {
+    const ptOptions = {
         cutoutPercentage: cutoutValue,
         borderWidth: 3,
         borderColor: colorStroke,
         responsive: true,
         animation: {
-            animateScale: true,
-            animateRotate: true,
-            onCompvare: function () {
+            onComplete: function () {
                 ptContext.fillStyle = '#333';
                 ptContext.font = '3rem Lato, sans-serif';
                 ptContext.textAlign = 'center';
