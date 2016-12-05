@@ -66,16 +66,20 @@
         overflow hidden
         position relative
 
-        & img
-            display block
-            width 100%
-            height auto
-            border-radius 50%
-            overflow hidden
+    &__picture
+        overflow hidden
+        border-radius 50%
+        position relative
 
         &:hover .team__header--overlay
             visibility: visible
             opacity: 1
+
+    &__icon
+        display inline
+        margin 0 auto
+        height 100%
+        width auto
 
     // TEAM CONTENT IMAGE OVERLAY
     // -------------------------------------------
@@ -93,6 +97,7 @@
         transition: visibility .2s, opacity .2s
         visibility: hidden
         opacity: 0
+        border-radius 50%
 
         & ul
             display: flex
