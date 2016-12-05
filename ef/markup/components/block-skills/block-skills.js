@@ -17,8 +17,6 @@ const donutDuo = document.querySelector( '#donutDuo' );
 const donutTre = document.querySelector( '#donutTre' );
 const donutQuattro = document.querySelector( '#donutQuattro' );
 
-const colorStroke = '#f00';
-
 // DONUT DATAS
 // -----------------------------------------------------
 const donutUnoData = {
@@ -50,10 +48,10 @@ window.addEventListener( 'load', function () {
 
     // DRAW DONUT CHARTS
     // -----------------------------------------------------
-    const chartUno = new Chartist.Pie( donutUno, donutUnoData, donutOptions );
-    const chartDuo = new Chartist.Pie( donutDuo, donutDuoData, donutOptions );
-    const chartTre = new Chartist.Pie( donutTre, donutTreData, donutOptions );
-    const chartQuattro = new Chartist.Pie( donutQuattro, donutQuattroData, donutOptions );
+    new Chartist.Pie( donutUno, donutUnoData, donutOptions );
+    new Chartist.Pie( donutDuo, donutDuoData, donutOptions );
+    new Chartist.Pie( donutTre, donutTreData, donutOptions );
+    new Chartist.Pie( donutQuattro, donutQuattroData, donutOptions );
 
     // ADD DONUT VALUES
     // -----------------------------------------------------
