@@ -9,6 +9,7 @@ const donutUnoSkill = 58;
 const donutDuoSkill = 75;
 const donutTreSkill = 80;
 const donutQuattroSkill = 90;
+const dividerWidth = 0.6;
 
 // DONUT ELEMENTS
 // -----------------------------------------------------
@@ -21,19 +22,39 @@ const donutQuattro = document.querySelector( '#donutQuattro' );
 // -----------------------------------------------------
 const donutUnoData = {
     labels: [ 'Skill', 'No skill' ],
-    series: [ donutUnoSkill, 100 - donutUnoSkill ]
+    series: [
+        { value: donutUnoSkill, className: '' },
+        { value: dividerWidth, className: 'divider' },
+        { value: ( 100 - donutUnoSkill ), className: '' },
+        { value: dividerWidth, className: 'divider' }
+    ]
 };
 const donutDuoData = {
     labels: [ 'Skill', 'No skill' ],
-    series: [ donutDuoSkill, 100 - donutDuoSkill ]
+    series: [
+        { value: donutDuoSkill, className: '' },
+        { value: dividerWidth, className: 'divider' },
+        { value: ( 100 - donutDuoSkill ), className: '' },
+        { value: dividerWidth, className: 'divider' }
+    ]
 };
 const donutTreData = {
     labels: [ 'Skill', 'No skill' ],
-    series: [ donutTreSkill, 100 - donutTreSkill ]
+    series: [
+        { value: donutTreSkill, className: '' },
+        { value: dividerWidth, className: 'divider' },
+        { value: ( 100 - donutTreSkill ), className: '' },
+        { value: dividerWidth, className: 'divider' }
+    ]
 };
 const donutQuattroData = {
     labels: [ 'Skill', 'No skill' ],
-    series: [ donutQuattroSkill, 100 - donutQuattroSkill ]
+    series: [
+        { value: donutQuattroSkill, className: '' },
+        { value: dividerWidth, className: 'divider' },
+        { value: ( 100 - donutQuattroSkill ), className: '' },
+        { value: dividerWidth, className: 'divider' }
+    ]
 };
 
 // DONUT OPTIONS
@@ -57,22 +78,22 @@ window.addEventListener( 'load', function () {
     // -----------------------------------------------------
     const chartUnoValue = document.createElement( 'div' );
     chartUnoValue.classList.add( 'holder-value' );
-    chartUnoValue.innerHTML = donutUnoData.series[0] + '%';
+    chartUnoValue.innerHTML = donutUnoData.series[0].value + '%';
     donutUno.appendChild( chartUnoValue );
     // -----------------------------------------------------
     const chartDuoValue = document.createElement( 'div' );
     chartDuoValue.classList.add( 'holder-value' );
-    chartDuoValue.innerHTML = donutDuoData.series[0] + '%';
+    chartDuoValue.innerHTML = donutDuoData.series[0].value + '%';
     donutDuo.appendChild( chartDuoValue );
     // -----------------------------------------------------
     const chartTreValue = document.createElement( 'div' );
     chartTreValue.classList.add( 'holder-value' );
-    chartTreValue.innerHTML = donutTreData.series[0] + '%';
+    chartTreValue.innerHTML = donutTreData.series[0].value + '%';
     donutTre.appendChild( chartTreValue );
     // -----------------------------------------------------
     const chartQuattroValue = document.createElement( 'div' );
     chartQuattroValue.classList.add( 'holder-value' );
-    chartQuattroValue.innerHTML = donutQuattroData.series[0] + '%';
+    chartQuattroValue.innerHTML = donutQuattroData.series[0].value + '%';
     donutQuattro.appendChild( chartQuattroValue );
 
 }, false );
