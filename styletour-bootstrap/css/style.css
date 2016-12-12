@@ -1,3 +1,78 @@
+/* ------------------ COMMON RULES -------------------- */
+
 body {
     font-family: 'Open Sans', sans-serif;
+    background-color: #ececec;
+    font-size: 14px;
+    color: #000;
+    min-width: 320px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.btn--red {
+    border-radius: 3px;
+    background-color:  #d51e08;
+    /*color: #fff;*/
+    font-size: 14px;
+    font-weight: 400;
+    transition: background-color .2s
+    border: none;
+}
+
+.btn--red:hover {
+    /*background-color: #ec4835;*/
+}
+
+/* -------------------- HEADER ---------------------- */
+.header__top .navbar {
+    margin-bottom: 0;
+    background-color: #fff;
+    border: none;
+    padding: 20px 0;
+}
+
+.header__top .navbar-default .navbar-nav > li a {
+    text-transform: uppercase;
+    color: #000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.header__top .navbar-default .navbar-nav > li > a:hover {
+    text-decoration: underline;
+}
+
+.header__top .flag {
+    margin-right: 8px;
+    position: relative;
+    top: -1px;
+}
+
+.header__top .navbar-default .navbar-nav .btn--red {
+    color: #fff;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.header__top .navbar-default .navbar-nav .btn--red:hover {
+    background-color: #ec4835;
+    text-decoration: none;
+}
+
+.header__top .navbar-default .navbar-nav .glyphicon-shopping-cart {
+    margin-right: 14px;
+    font-size: 18px;
+}
+
+/*.navbar-default .navbar-nav > li > a*/
+
+
+/* -------------------- media screens ---------------------- */
+
+@media screen and ( max-width: 1200px ) {
+    /**/
 }
