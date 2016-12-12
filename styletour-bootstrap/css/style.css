@@ -16,7 +16,6 @@ h3 {
 .btn--red {
     border-radius: 3px;
     background-color:  #d51e08;
-    /*color: #fff;*/
     font-size: 14px;
     font-weight: 400;
     transition: background-color .2s
@@ -24,7 +23,7 @@ h3 {
 }
 
 .btn--red:hover {
-    /*background-color: #ec4835;*/
+    background-color: #ec4835;
 }
 
 /* -------------------- HEADER ---------------------- */
@@ -95,6 +94,35 @@ h3 {
 }
 .carousel-inner .item:nth-child(3) .carousel-slide {
     background-image: url( '../images/slider.jpg' );
+}
+
+#carousel-top .carousel-caption {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: none;
+    /*padding: 0;*/
+}
+
+#carousel-top .carousel-caption .carousel-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 30px;
+}
+
+#carousel-top .carousel-caption .carousel-subtitle {
+    font-size: 30px;
+    margin: 0 0 40px;
+}
+
+#carousel-top .carousel-caption .carousel-button {
+    padding: 20px 30px;
+    color: #fff;
+    font-size: 24px;
+}
+
+#carousel-top .carousel-caption .carousel-button:hover {
+    text-decoration: none;
 }
 
 /* -------------------- MEDIA SCREENS ---------------------- */

@@ -1,5 +1,5 @@
-$( function () {
-    $( '#carousel-top' ).carousel({
-        interval: 1000,
-    })
-});
+
+$( '#carousel-top' ).carousel({
+  // interval: 2000
+  'pause'
+})
