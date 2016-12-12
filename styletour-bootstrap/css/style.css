@@ -35,6 +35,11 @@ h3 {
     padding: 20px 0;
 }
 
+.header__top .container,
+.header__top .navbar-collapse {
+    padding-left: 0;
+}
+
 .header__top .navbar-default .navbar-nav > li a {
     text-transform: uppercase;
     color: #000;
@@ -74,5 +79,20 @@ h3 {
 /* -------------------- media screens ---------------------- */
 
 @media screen and ( max-width: 1200px ) {
-    /**/
+    .header__top .navbar-nav {
+        float: none !important;
+    }
+    .header__top .navbar-right {
+        margin-top: 5px;
+    }
+}
+
+@media screen and ( max-width: 768px ) {
+    .header__top .navbar-default .navbar-nav > li > a:hover {
+        background-color: #eee;
+    }
+    .header__top .container,
+    .header__top .navbar-collapse {
+        padding-left: 15px;
+    }
 }
