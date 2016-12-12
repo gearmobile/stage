@@ -72,7 +72,7 @@ h3 {
     font-size: 18px;
 }
 
-/* --------------------------- header slider ------------------------- */
+/* --------------------------- HEADER SLIDER ------------------------- */
 .carousel-inner .item {
     min-height: 700px;
 }
@@ -97,11 +97,7 @@ h3 {
 }
 
 #carousel-top .carousel-caption {
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
     text-shadow: none;
-    /*padding: 0;*/
 }
 
 #carousel-top .carousel-caption .carousel-title {
@@ -116,6 +112,7 @@ h3 {
 }
 
 #carousel-top .carousel-caption .carousel-button {
+    display: inline-block;
     padding: 20px 30px;
     color: #fff;
     font-size: 24px;
@@ -124,6 +121,8 @@ h3 {
 #carousel-top .carousel-caption .carousel-button:hover {
     text-decoration: none;
 }
+
+
 
 /* -------------------- MEDIA SCREENS ---------------------- */
 
