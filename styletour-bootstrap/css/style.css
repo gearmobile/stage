@@ -73,10 +73,31 @@ h3 {
     font-size: 18px;
 }
 
-/*.navbar-default .navbar-nav > li > a*/
+/* --------------------------- header slider ------------------------- */
+.carousel-inner .item {
+    min-height: 700px;
+}
 
+.carousel-inner .item .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.carousel-inner .item:nth-child(1) .carousel-slide {
+    background-image: url( '../images/slider.jpg' );
+}
+.carousel-inner .item:nth-child(2) .carousel-slide {
+    background-image: url( '../images/slider.jpg' );
+}
+.carousel-inner .item:nth-child(3) .carousel-slide {
+    background-image: url( '../images/slider.jpg' );
+}
 
-/* -------------------- media screens ---------------------- */
+/* -------------------- MEDIA SCREENS ---------------------- */
 
 @media screen and ( max-width: 1200px ) {
     .header__top .navbar-nav {
