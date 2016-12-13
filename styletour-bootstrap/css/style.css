@@ -126,6 +126,12 @@ h3 {
     text-decoration: none;
 }
 
+#carousel-top .carousel-indicators {
+    margin: 0;
+    width: auto;
+    bottom: -10px;
+}
+
 /* -------------------- MEDIA SCREENS ---------------------- */
 
 @media screen and ( max-width: 1200px ) {
