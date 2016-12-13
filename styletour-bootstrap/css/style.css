@@ -185,15 +185,6 @@ h3 {
     position: relative;
 }
 
-/*#main-menu .form-group .glyphicon-search {
-    position: absolute;
-    top: 50%;
-    transform: translateY( -50% );
-    right: 6px;
-    font-size: 14px;
-    color: #bebebe;
-}*/
-
 #main-menu .navbar-inverse .navbar-nav > li > a {
     text-transform: capitalize;
     color: #fff;
@@ -208,7 +199,7 @@ h3 {
 #main-menu .navbar-inverse .navbar-nav > .active > a {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 #main-menu .navbar-brand {
@@ -233,6 +224,10 @@ h3 {
     .header__top .container,
     .header__top .navbar-collapse {
         padding-left: 15px;
+    }
+    #main-menu .container {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
