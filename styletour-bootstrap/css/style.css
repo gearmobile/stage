@@ -218,13 +218,20 @@ h3 {
 }
 
 @media screen and ( max-width: 768px ) {
+
     .header__top .navbar-default .navbar-nav > li > a:hover {
         background-color: #eee;
     }
+
     .header__top .container,
     .header__top .navbar-collapse {
         padding-left: 15px;
     }
+
+    #main-menu .navbar-brand {
+        display: none;
+    }
+
     #main-menu .container {
         padding-left: 0;
         padding-right: 0;
