@@ -2,7 +2,6 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #ececec;
     font-size: 14px;
     color: #000;
     min-width: 320px;
@@ -73,6 +72,10 @@ h3 {
 }
 
 /* --------------------------- HEADER SLIDER ------------------------- */
+.header-slider {
+    position: relative;
+}
+
 .carousel-inner .item {
     min-height: 700px;
 }
@@ -162,6 +165,54 @@ h3 {
 
 #carousel-top .carousel-indicators .carousel-indicator-item.active {
     background-color: #a3a3a3;
+}
+
+/* ---------------------- MAIN MENU ----------------------- */
+#main-menu {
+    position: absolute;
+    top: 20px;
+    z-index: 20;
+    width: 100%;
+}
+
+#main-menu .navbar {
+    background-color: #000;
+    margin-bottom: 0;
+    border: none;
+}
+
+#main-menu .form-group {
+    position: relative;
+}
+
+/*#main-menu .form-group .glyphicon-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY( -50% );
+    right: 6px;
+    font-size: 14px;
+    color: #bebebe;
+}*/
+
+#main-menu .navbar-inverse .navbar-nav > li > a {
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 16px;
+}
+
+#main-menu .navbar-inverse .navbar-nav > li > a:hover {
+    color: #d51e08;
+    transition: color .2s;
+}
+
+#main-menu .navbar-inverse .navbar-nav > .active > a {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+#main-menu .navbar-brand {
+    padding-top: 0;
 }
 
 /* -------------------- MEDIA SCREENS ---------------------- */
