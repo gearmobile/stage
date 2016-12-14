@@ -219,6 +219,20 @@ h3 {
     cursor: default;
 }
 
+/* -------------------      SLOGAN      ------------------- */
+.slogan {
+    background-color: #fff;
+    padding: 60px 0 46px;
+    border-top: 1px solid #cfcfcf;
+}
+
+.slogan-title {
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 /* -------------------- MEDIA SCREENS ---------------------- */
 
