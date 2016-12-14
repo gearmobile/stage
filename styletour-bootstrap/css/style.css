@@ -202,9 +202,27 @@ h3 {
     font-size: 24px;
 }
 
+/*#main-menu .navbar-header {
+    margin-right: 10px;
+}*/
+
 #main-menu .navbar-brand {
     padding-top: 0;
 }
+
+#main-menu .navbar-brand-logo {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+#main-menu .navbar-brand-logo:hover {
+    text-decoration: none;
+    cursor: default;
+}
+
 
 /* -------------------- MEDIA SCREENS ---------------------- */
 
@@ -214,6 +232,16 @@ h3 {
     }
     .header__top .navbar-right {
         margin-top: 5px;
+    }
+    #main-menu #main-menu-right {
+        float: left !important;
+        margin-left: 100px;
+    }
+}
+
+@media screen and ( max-width: 1000px ) {
+    #main-menu #main-menu-left {
+        margin-left: 100px;
     }
 }
 
@@ -236,6 +264,11 @@ h3 {
         padding-left: 0;
         padding-right: 0;
     }
+
+    #main-menu .navbar-header {
+        margin-left: 0;
+    }
+
 }
 
 @media screen and ( max-width: 500px ) {
