@@ -202,10 +202,6 @@ h3 {
     font-size: 24px;
 }
 
-/*#main-menu .navbar-header {
-    margin-right: 10px;
-}*/
-
 #main-menu .navbar-brand {
     padding-top: 0;
 }
@@ -267,6 +263,20 @@ h3 {
 
     #main-menu .navbar-header {
         margin-left: 0;
+    }
+    #main-menu #main-menu-left {
+        margin-left: 0;
+    }
+    #main-menu .navbar-inverse .navbar-nav > li > a:hover {
+        background-color: #222;
+        color: #fff;
+    }
+    #main-menu #main-menu-right {
+        float: none !important;
+        margin-left: 0;
+        padding-right: 14px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
 }
