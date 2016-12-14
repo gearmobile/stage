@@ -274,6 +274,7 @@ h3 {
 
 .content-main__item .thumbnail__image {
     min-height: 200px;
+    margin: 0 0 20px;
 }
 
 .content-main__item .thumbnail__sale {
@@ -352,6 +353,10 @@ h3 {
 
 .content-main__item .btn.btn-default:hover {
     background-color:  #ececec;
+}
+
+.content-main .content-main__thumb {
+    height: 250px;
 }
 
 
