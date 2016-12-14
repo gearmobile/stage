@@ -234,6 +234,145 @@ h3 {
     margin-bottom: 0;
 }
 
+/* --------------------------  SECTION CONTENT  ------------------- */
+.content {
+    background-color: #ececec;
+    border-top: 3px solid #dadada;
+}
+
+/* -------------------- SECTION CONTENT-MAIN ------------------------ */
+
+.content .content-main,
+.content .content-sidebar {
+    padding: 20px 0 50px;
+}
+
+.content-main .content-main__title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+    margin: 0 0 50px;
+}
+
+.content-main .content-main__row {
+    padding-bottom: 50px;
+}
+
+.content-main .content-main__item:hover {
+    box-shadow: 0 0 16px 0 rgba( 0, 0, 0, 0.5 );
+}
+
+.content-main__item .thumbnail {
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 1px 0 rgba( 0, 0, 0, 0.75 );
+}
+
+.content-main__item .thumbnail__sale {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(229, 30, 39, 0);
+    box-shadow: 0 0 2px 0 rgba( 1, 1, 1, 0.75 );
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+}
+
+.content-main__item .thumbnail__sale a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.content-main__item .thumbnail__sale a:hover {
+    text-decoration: none;
+}
+
+.content-main__item .thumbnail__fav {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+}
+
+.content-main__item .thumbnail__fav span {
+    color: #909090;
+    font-size: 20px;
+}
+
+.content-main__item .thumbnail__title {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.content-main__item .thumbnail__subtitle {
+    font-size: 14px;
+    color: #000;
+    margin: 0 0 30px;
+}
+
+.content-main__item .thumbnail__price {
+    color: #d51e08;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 0 30px;
+}
+
+.content-main__item .btn.btn-default {
+    text-transform: uppercase;
+}
+
+
+/* -------------------- SECTION SIDEBAR ------------------------ */
+
+.content .content-sidebar {
+    border-right: 3px solid #dadada;
+}
+
+.widget {
+    padding: 30px 0;
+    border-bottom: 3px solid #dadada;
+}
+
+.widget-title {
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 30px;
+}
+
+.widget-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.widget-list__link {
+    text-transform: capitalize;
+    color: #000;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.widget-list__link--more {
+    color: #358acd;
+}
+
+.widget-list__link--more:hover {
+    /*text-decoration: underline;*/
+}
+
 /* -------------------- MEDIA SCREENS ---------------------- */
 
 @media screen and ( max-width: 1200px ) {
