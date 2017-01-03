@@ -1,0 +1,19 @@
+// SHOWCASE SECTION
+// ----------------------------------
+.showcase {
+  min-height: 400px;
+  background: $white-color url( '../images/showcase-bg.jpg' ) 50% 50% no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    color: $primary-color;
+  }
+
+}

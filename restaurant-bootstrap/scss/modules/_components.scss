@@ -1,0 +1,65 @@
+
+// BUTTON PLUS
+// ---------------------------------
+.plus-link {
+  @include size( 36px );
+  background-color: #2e2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: $color-white;
+  transition: color .2s;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $secondary-color;
+  }
+
+}
+
+// HEADING
+// ----------------------------------
+.heading {
+  color: $color-dark;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+
+// BACK TO TOP BUTTON
+// -----------------------------------
+.back-to-top {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99999;
+  background-color: $primary-color;
+  transition: background-color .2s;
+  
+  & .glyphicon-chevron-up {
+    color: $color-white;
+  }
+  
+  &:hover,
+  &:focus {
+    background-color: $color-dark;
+  }
+}
+
+
+@media only screen and (min-width : 768px) {
+  .is-table-row {
+    display: table;
+    table-layout: fixed;
+  }
+  .is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+  }
+}

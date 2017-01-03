@@ -1,0 +1,762 @@
+
+// SEARCH-FORM
+// ----------------------------------
+.search-form {
+  padding: $padding 0;
+  background-color: $pale-color;
+
+  &--offset {
+    padding-top: 100px;
+  }
+
+  &__content {
+    width: 90%;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    border: 2px solid $primary-color;
+    width: calc( 100% - 54px );
+    height: 50px;
+    padding: 5px 20px;
+    font-size: 18px;
+  }
+
+  &__button {
+    padding: 0;
+    border: none;
+  }
+}
+
+// FEATURE-ONE
+// ----------------------------------
+.feature-one {
+  padding: $padding 0;
+  background-color: $white-color;
+
+  & .block {
+    padding: 20px;
+    color: $white-color;
+    position: relative;
+
+    & p {
+      font-size: 16px;
+      line-height: 1.6;
+
+      &:last-of-type {
+        margin-bottom: 80px;
+      }
+    }
+  }
+  
+  & .block--primary {
+    background-color: $primary-color;
+  }
+  
+  & .block--secondary {
+    background-color: $secondary-color;
+  }
+
+  & .block__title {
+    text-transform: capitalize;
+    font-size: 24px;
+
+    & i {
+      margin-right: 8px;
+    }
+  }
+
+  & .block__link {
+    text-transform: capitalize;
+    font-size: 16px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+// FEATURE-TWO
+// ----------------------------------
+.feature-two {
+  padding: $padding 0;
+  
+  & .block {
+    background-color: $pale-color;
+    padding: 20px;
+    text-align: center;
+    
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 20px;
+      @include size( 100px );
+      border: 1px solid $primary-color;
+      @include border-radius( 4px );
+      color: $primary-color;
+    }
+    
+    &__title {
+      text-transform: capitalize;
+      color: $primary-color;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 1.6;
+
+      &:last-of-type {
+        margin-bottom: 40px;
+      }
+    }
+
+  }
+
+}
+
+// FEATURE-THREE
+// ----------------------------------
+.feature-three {
+  padding: $padding 0;
+  background-color: $pale-color;
+
+  &__title {
+    text-transform: capitalize;
+    font-size: 30px;
+    
+    & span {
+      color: $primary-color;
+    }
+  }
+
+  & .list {
+    width: 80%;
+    margin-bottom: 30px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      padding: 6px 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $grey-color;
+      }
+      
+      & .fa {
+        color: $primary-color;
+        margin-right: 12px;
+      }
+
+      & span {
+        font-size: 20px;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+  
+  &__button {
+    text-transform: capitalize;
+    color: $white-color;
+    background-color: $primary-color;
+    border: none;
+    transition: background-color .2s, color .2s;
+    
+    &:hover,
+    &:focus {
+      background-color: darken( $primary-color, 10% );
+      color: $white-color;
+    }
+  }
+}
+
+// FEATURE-FOUR
+// ----------------------------------
+.feature-four {
+  padding: $padding 0;
+  background-color: $primary-color;
+  
+  &__secondary p {
+    color: $white-color;
+    font-size: 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__title {
+    text-transform: capitalize;
+    color: $white-color;
+  }
+
+  &__image {
+    margin-bottom: -30px;
+  }
+
+  &__button {
+    margin-top: 30px;
+    text-transform: capitalize;
+  }
+}
+
+// SLOGAN
+// ----------------------------------
+.slogan {
+  background-color: $primary-color;
+  padding: $padding 0;
+  border-top: 6px solid $secondary-color;
+  
+  &__title {
+    color: $white-color;
+    text-transform: capitalize;
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+}
+
+// ABOUT-US
+// ----------------------------------
+.about-us {
+  padding: ( $padding + 10px ) 0;
+  background-color: $white-color;
+  
+  &__title {
+    text-transform: capitalize;
+    color: $primary-color;
+    border-bottom-color: $primary-color;
+    border-bottom-width: 2px;
+  }
+
+  &__primary p {
+    line-height: 1.6;
+  }
+
+  &__secondary &__title {
+    margin-top: 0;
+  }
+
+  &__secondary .list {
+    margin-bottom: 40px;
+  }
+
+  &__secondary .list__item {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey-color;
+    }
+
+    & .fa {
+      margin-right: 10px;
+      color: $primary-color;
+    }
+
+    & span {
+      text-transform: capitalize;
+      font-size: 18px;
+    }
+  }
+
+  &__secondary .panel-title a {
+    text-transform: capitalize;
+    font-size: 18px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      
+      & span {
+        color: $secondary-color;
+      }
+    }
+    
+    & span {
+      color: $primary-color;
+      font-weight: 700;
+    }
+  }
+}
+
+// ABOUT-TEAM
+// ----------------------------------
+.about-team {
+  padding: $padding 0;
+  background-color: $white-color;
+  
+  &__title {
+    text-transform: capitalize;
+    color: $secondary-color;
+    border-bottom-color: $secondary-color;
+    border-bottom-width: 2px;
+  }
+
+  &__item .thumbnail {
+    padding: 10px;
+    margin-bottom: 0;
+    border-color: $grey-color;
+
+    &__picture {
+      margin: 0 0 10px;
+    }
+
+    &__image {
+      border-radius: 4px 4px 0 0;
+    }
+
+    &__title {
+      text-transform: capitalize;
+    }
+
+    & p {
+      line-height: 1.5;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    &--active {
+      background-color: $light-color;
+    }
+  }
+}
+
+// TESTIMONIALS
+// ----------------------------------
+.testimonials {
+  padding: $padding 0;
+  background-color: $primary-color;
+  border-bottom: 6px solid $secondary-color;
+  
+  & .block__title {
+    text-transform: capitalize;
+    color: $white-color;
+    border-bottom-width: 2px;
+    margin-bottom: $padding;
+  }
+
+  & .block__subtitle {
+    color: $white-color;
+    line-height: 1.4;
+  }
+
+  & .block__cite {
+    text-transform: capitalize;
+    font-size: 18px;
+    color: $white-color;
+  }
+}
+
+// SERVICES
+// ----------------------------------
+.services {
+  padding: $padding 0;
+
+  &__title {
+    text-transform: capitalize;
+    color: $primary-color;
+    border-bottom-color: $primary-color;
+    border-bottom-width: 2px;
+  }
+
+  &__content {
+    margin: 0 0 40px;
+  }
+
+  &__accordion .panel-title a {
+    text-transform: capitalize;
+    font-size: 18px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $primary-color;
+    }
+  }
+
+  // secondary tabs form
+  &__secondary .services__tabs {
+    margin: 0 0 ( $padding + 10px );
+
+    // nav tabs
+    & .nav-tabs {
+      border-color: transparent;
+
+      & li > a {
+        border-color: transparent;
+        text-transform: capitalize;
+        transition: background-color .2s, color .2s;
+        font-weight: 700;
+
+        &:hover,
+        &:focus {
+          border-color: transparent;
+        }
+      }
+
+      & li.active > a {
+        background-color: $primary-color;
+        color: $white-color;
+
+        &:focus {
+          background-color: $primary-color;
+          color: $white-color;
+        }
+      }
+    }
+
+    // tab panels
+    & .tab-content .tab-pane {
+      padding: 14px 20px;
+      border-radius: 0 0 4px 4px;
+      font-size: 16px;
+      line-height: 1.6;
+
+      &.active {
+        background-color: $primary-color;
+        color: $white-color;
+      }
+    }
+  }
+
+}
+
+// SERVICES-DO
+// ----------------------------------
+.services-do {
+  padding: ( $padding + 10px ) 0;
+  background-color: $primary-color;
+
+  &__title {
+    color: $white-color;
+    border-bottom-width: 2px;
+  }
+
+  &__content {
+    padding-left: 0;
+    padding-right: 0;
+
+    &:not(:last-child) {
+      margin: 0 0 $padding;
+    }
+  }
+  
+  & .item {
+    color: $white-color;
+    @include clearfix();
+
+    &__icon {
+      width: 20%;
+      float: left;
+
+      & .fa {
+        margin-top: 10px;
+      }
+    }
+
+    &__content {
+      width: 80%;
+      float: left;
+
+      & p:last-of-type {
+        margin: 0;
+      }
+    }
+
+    &__title {
+      text-transform: capitalize;
+    }
+  }
+}
+
+// BLOG
+// ----------------------------------
+.blog {
+  padding: ( $padding + 10px ) 0;
+
+  // blog title
+  &__title {
+    text-transform: capitalize;
+    margin-bottom: $padding;
+  }
+
+  // blog post block
+  & .blog-post {
+    border: 1px solid $grey-color;
+
+    &:not(:last-child) {
+      margin-bottom: ( $padding + 10px );
+    }
+
+    &__header {
+      padding: 0 20px;
+      margin: $padding 0 ( $padding / 2 );
+    }
+
+    // blog post title
+    &__title {
+      text-transform: capitalize;
+      margin: 0;
+      border-bottom-color: $grey-color;
+    }
+
+    // blog post main
+    &__main {
+      padding: 10px 20px;
+      @include clearfix();
+
+      // blog post thumb
+      & .thumb {
+        border: 1px solid $grey-color;
+        float: left;
+        margin-right: $padding;
+
+        // blog post image
+        &__image {
+          max-width: 200px;
+          height: auto;
+          opacity: .8;
+          transition: opacity .2s;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        // blog post content
+        &__content p {
+          line-height: 1.6;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+    }
+
+    // blog post footer
+    &__footer {
+      border-top: 1px solid $grey-color;
+      background-color: #f3f3ff;
+      padding: 14px 20px;
+      @include clearfix();
+
+      // footer primary
+      & > .primary {
+        float: left;
+      }
+
+      // footer secondary
+      & > .secondary {
+        float: right !important;
+      }
+
+      // meta block
+      & .meta {
+        margin-bottom: 0;
+
+        // meta icon
+        &__icon {
+          margin-right: 2px;
+        }
+
+        // meta link
+        &__link {
+          text-transform: capitalize;
+          color: $base-font-color;
+
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    // read more link
+    &__link {
+      text-transform: capitalize;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $secondary-color;
+      }
+    }
+
+  }
+
+  // blog secondary
+  &__secondary {
+
+    // blog secondary tabs
+    & .blog-tabs {
+      margin: 0 0 $padding;
+
+      // nav tabs
+      & .nav-tabs {
+        border-bottom-color: transparent;
+
+        & .nav-tabs__item .nav-tabs__link {
+          border-color: transparent;
+          text-transform: capitalize;
+          font-weight: 700;
+          transition: background-color .2s, color .2s;
+        }
+
+        & .nav-tabs__item.active .nav-tabs__link {
+          background-color: $primary-color;
+          color: $white-color;
+        }
+      }
+
+      // tab content
+      & .tab-content .tab-pane {
+        padding: 20px 16px;
+        border-radius: 0 0 4px 4px;
+
+        // tab content title
+        & .tab-content__title {
+          text-transform: capitalize;
+        }
+
+        & p {
+          line-height: 1.6;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+
+        // tab content active
+        &.active {
+          background-color: $primary-color;
+          color: $white-color;
+        }
+      }
+    }
+
+    // blog secondary video
+    & .blog-video {
+      margin: 0 0 $padding;
+
+      & .blog-video__content {
+        padding: 6px ( $padding / 4 ) 2px;
+      }
+    }
+
+    // blog secondary comments
+    & .blog-comments {
+
+      &__content .list {
+        margin-bottom: 0;
+
+        &__item {
+          padding: 10px 0;
+          @include clearfix();
+
+          &:not(:last-child) {
+            margin-bottom: ( $padding / 2 );
+            border-bottom: 1px solid $grey-color;
+          }
+
+          & .list__thumb {
+            float: left;
+            margin-right: ( $padding / 2 );
+
+            & .list__image {
+              max-width: 100px;
+              height: auto;
+              opacity: .8;
+              transition: opacity .2s;
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+
+          & p:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+    }
+
+  }
+}
+
+// MAP
+// ----------------------------------
+.map {
+  padding: $padding 0;
+}
+
+// CONTACT
+// ----------------------------------
+.contact {
+  padding: $padding 0;
+
+  // contact title
+  &__title {
+    text-transform: capitalize;
+    margin-bottom: $padding;
+  }
+
+  // contact form label
+  & .contact-form__label {
+    text-transform: capitalize;
+  }
+
+  & .contact-form__textarea {
+    min-height: 100px;
+  }
+
+  & .contact-form__button {
+    text-transform: capitalize;
+    background-color: $primary-color;
+    color: $white-color;
+    transition: background-color .2s;
+    
+    &:hover,
+    &:focus {
+      background-color: darken( $primary-color, 10% );
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

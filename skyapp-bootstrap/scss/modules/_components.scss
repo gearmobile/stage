@@ -1,0 +1,39 @@
+.block--primary {
+  border: 1px solid $primary-color;
+  
+  &__title {
+    background-color: $primary-color;
+    color: $white-color;
+    text-transform: capitalize;
+    padding: 12px 16px;
+    margin: 0;
+  }
+
+  &__icon {
+    margin: 0 10px 0 0;
+  }
+
+  &__content {
+    padding: 20px;
+
+    & .form-group label {
+      text-transform: capitalize;
+    }
+
+    & .form-group textarea {
+      min-height: 100px;
+    }
+
+    & .block--primary__button {
+      text-transform: capitalize;
+      color: $white-color;
+      background-color: $primary-color;
+      font-size: 16px;
+      
+      &:hover,
+      &:focus {
+        background-color: darken( $primary-color, 10% );
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+
+// 1200 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 1200px ) {
+  //
+}
+
+// 992 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 991px ) {
+  //
+  .hero .hero__main .hero__row .hero__column:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  //
+  .hero .hero__main .hero__row .hero__column .hero__image {
+    width: 100%;
+  }
+  //
+  .hero .hero__column:nth-child(2) .hero__picture {
+    position: static;
+  }
+  //
+  .thumbs .thumbs__main .thumbs__row .thumbs__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  //
+  .feature-one .feature-one__main .feature-one__row .feature-one__primary {
+    margin-bottom: 40px;
+  }
+  //
+  .feature-two .feature-two__main .feature-two__row .feature-two__column:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .feature-two .feature-two__main .feature-two__row .feature-two__column .feature-two__image {
+    width: 100%;
+  }
+  //
+  .feature-three .feature-three__main .feature-three__primary,
+  .feature-three .feature-three__main .feature-three__secondary {
+    margin-bottom: 40px;
+  }
+  //
+  .menu .menu__column .menu__image {
+    width: 100%;
+  }
+  //
+  .reservation .reservation__primary {
+    margin-bottom: 40px;
+  }
+  //
+  .blog .blog__primary {
+    margin-bottom: 40px;
+
+    & .post__image img {
+      width: 100%;
+    }
+
+    & .post__column:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  //
+}
+
+// 900 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 899px ) {
+  //
+}
+
+
+// 768 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 767px ) {
+  //
+  .block-equal {
+    height: auto !important;
+  }
+  //
+  .header .header__main {
+    padding-left: 0;
+    padding-right: 0;
+
+    & .header__holder .header__secondary li > a {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 30px;
+      transition: background-color .2s, color .2s;
+      
+      &:hover,
+      &:focus {
+        background-color: #2e2d2d;
+        color: $color-white;
+      }
+    }
+  }
+  //.header .header__main .header__holder .header__secondary li > a {
+  //  padding-top: 30px;
+  //  padding-bottom: 30px;
+  //  padding-left: 30px;
+  //}
+  //
+  .reservation .reservation__image {
+    float: none;
+    margin: 0 0 40px;
+
+    & img {
+      width: 100%;
+    }
+
+  }
+
+}
+
+// 700 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 699px ) {
+  //
+  .footer .footer__primary,
+  .footer .footer__secondary {
+    float: none;
+    text-align: center;
+  }
+  .footer .footer__primary {
+    margin-bottom: 40px;
+  }
+  .footer .footer__secondary .icons {
+    justify-content: center;
+  }
+}
+
+// 600 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 599px ) {
+  //
+}
+
+// 500 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 499px ) {
+  //
+  .header .header__holder .header__brand .header__subtitle {
+    display: none;
+  }
+}
+
+// 400 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 399px ) {
+  //
+  .feature-two .feature-two__column .feature-two__link {
+    float: none;
+    margin: auto;
+  }
+  //
+  .feature-three .feature-three__secondary .list__thumb {
+    float: none;
+    margin: 0 auto 30px;
+    width: auto;
+    padding: 20px;
+  }
+  //
+  .menu .menu__content {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .menu .menu__button {
+    left: 50%;
+    transform: translateX( -50% );
+  }
+  //
+  .reservation .reservation__primary .reservation__block .button {
+    display: table;
+    margin: 30px auto 0;
+  }
+  .reservation .reservation__form .selects .selects__group {
+    display: block;
+  }
+  //
+  .blog .blog__secondary .recent-posts .media-left {
+    float: none;
+    display: block;
+    margin: 0 0 30px;
+  }
+}
+

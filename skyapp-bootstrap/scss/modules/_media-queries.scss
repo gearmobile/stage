@@ -1,0 +1,195 @@
+
+// 992 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 992px ) {
+
+  // feature one
+  .feature-one__column:not(:last-child) {
+    margin: 0 0 $padding;
+  }
+  // feature two
+  .feature-two__column:not(:last-child){
+    margin: 0 0 $padding;
+  }
+  .feature-two__row .feature-two__column:not(:last-child) {
+    margin-bottom: $padding;
+  }
+  // feature four
+  .feature-four__primary {
+    text-align: center;
+    margin-bottom: ( $padding * 2 );
+
+    & .feature-four__image {
+      margin-bottom: 0;
+    }
+  }
+  // about us
+  .about-us__primary {
+    margin-bottom: $padding + 10px;
+  }
+  // testimonials
+  .testimonials .block__subtitle {
+    font-size: 30px;
+  }
+  // about-team
+  .about-team .about-team__item:not(:last-child) {
+    margin-bottom: $padding;
+  }
+  .about-team .about-team__item .thumbnail__image {
+    width: 100%;
+  }
+  // services
+  .services .services__primary {
+    margin-bottom: $padding + 10px;
+  }
+  // services-do
+  .services-do .services-do__row .services-do__column:not(:last-child) {
+    margin-bottom: $padding;
+  }
+  .services-do .item {
+    text-align: center;
+  }
+  .services-do .item__icon {
+    width: 100%;
+    margin-bottom: $padding;
+  }
+  .services-do .item__content {
+    width: 100%;
+  }
+  // blog
+  .blog .blog__primary {
+    margin-bottom: $padding + 10px;
+  }
+  .blog .blog-comments .list__item {
+    text-align: center;
+  }
+  .blog .blog-comments .list__item .list__thumb {
+    float: none;
+    margin: 0 0 $padding / 2;
+  }
+  // contact
+  .contact .contact__primary {
+    margin: 0 0 ( $padding + 10px );
+  }
+  // FOOTER
+  .footer-main__column:not(:last-child) {
+    margin: 0 0 $padding;
+  }
+}
+
+
+// 900 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 900px ) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left, .navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in{
+    display:block !important;
+  }
+}
+
+// 767 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 767px ) {
+  // testimonials
+  .testimonials .block__title {
+    text-align: center;
+  }
+  // slogan
+  .slogan .slogan__title {
+    font-size: 26px;
+    line-height: 1.4;
+    text-align: center;
+  }
+  // block equal
+  .block-equal {
+    height: auto !important;
+  }
+  // blog
+  .blog .blog-post__footer {
+    display: flex;
+    flex-direction: column;
+
+    & .primary,
+    & .secondary {
+      float: none !important;
+    }
+
+    & .primary {
+      margin: 0 0 $padding / 4;
+    }
+  }
+}
+
+// 600 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 600px ) {
+  // blog
+  .blog .blog-post__footer .primary {
+    display: none;
+  }
+}
+
+// 500 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 500px ) {
+
+  .showcase__title {
+    font-size: 30px;
+  }
+
+  .about-us .about-us__primary .left.carousel-control,
+  .about-us .about-us__primary .right.carousel-control,
+  .about-us .about-us__primary .carousel-indicators {
+    display: none;
+  }
+
+  // blog
+  .blog .blog-post__main .thumb {
+    float: none;
+    margin: 0 0 $padding/2;
+
+    & .thumb__image {
+      max-width: 100%;
+    }
+  }
+
+  // testimonials
+  .testimonials .block__subtitle {
+    font-size: 20px;
+  }
+  // footer
+  .footer-main__column,
+  .feature-four__secondary {
+    text-align: center;
+  }
+}

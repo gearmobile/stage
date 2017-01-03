@@ -1,0 +1,19 @@
+p {
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 0 !important;
+  }
+}
+
+textarea {
+  border-radius: 0 !important;
+}
+
+img {
+  transition: opacify .2s;
+}
+
+wbr {
+  display: inline-block;
+}

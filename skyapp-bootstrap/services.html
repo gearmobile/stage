@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skyapp | Services</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="services">
+
+    <!-- Modal Register -->
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="registerModalLabel">Skyapp Register</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="registerName1" class="col-sm-2 control-label">First Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="registerName1" placeholder="First Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerName2" class="col-sm-2 control-label">Last Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="registerName2" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerName3" class="col-sm-2 control-label">Nickname</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="registerName3" placeholder="Nickname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerEmail" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="registerEmail" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword1" class="col-sm-2 control-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="registerPassword1" placeholder="Password" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword2" class="col-sm-2 control-label">Repeat Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="registerPassword2" placeholder="Password" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="loginModalLabel">Skyapp Login</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="loginEmail" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="loginEmail" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword" class="col-sm-2 control-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header-main">
+        <nav class="header-main__holder navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+
+                <div class="header-main__toggle navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-main" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Skyapp</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="header-main">
+
+                    <!-- header-main primary -->
+                    <ul class="header-main__primary nav navbar-nav">
+                        <li class="active"><a href="index.html">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="services.html">services</a></li>
+                        <li><a href="blog.html">blog</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul><!-- end header-main primary -->
+
+                    <!-- header-main secondary -->
+                    <ul class="header-main__secondary nav navbar-nav navbar-sub pull-right">
+                        <li><a href="#" data-toggle="modal" data-target="#register">register</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#login">login</a></li>
+                    </ul><!-- end header-main secondary -->
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav><!-- end navigation -->
+    </header><!-- end header -->
+
+    <!-- search-form -->
+    <section class="search-form search-form--offset">
+        <div class="search-form__content container-fluid">
+            <div class="search-form__row row">
+                <div class="search-form__primary col-sm-6">
+                    <form action="#" method="get" class="search-form__search">
+                        <div class="search-form__block">
+                            <input class="search-form__input" type="search" placeholder="Search Our Website & Products">
+                            <button class="search-form__button" type="submit" value=""><img src="images/search.png" alt="Search"></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section><!-- end search-form -->
+
+    <!-- slogan -->
+    <section class="slogan">
+        <div class="slogan__content container">
+            <div class="slogan__row row">
+                <div class="col-md-12">
+                    <h1 class="slogan__title">building technology to shape our future</h1>
+                </div>
+            </div>
+        </div>
+    </section><!-- end slogan -->
+
+    <!-- services -->
+    <section class="services">
+        <div class="services__main container">
+            <div class="services__row row">
+                <div class="services__primary col-md-6 col-lg-8">
+                    <div class="services__content">
+                        <h2 class="services__title page-header">services</h2>
+                        <p>n lacinia ipsum sit amet ultricies semper. Nulla facilisi. Proin et nulla consequat mauris gravida vestibulum. Donec non risus et velit auctor lobortis. Aliquam in placerat justo. Etiam nisi libero, suscipit vel nulla eget, blandit ultricies quam. Nunc pretium pharetra tellus sed suscipit. Fusce rhoncus metus est, quis facilisis eros luctus vestibulum. Morbi vestibulum, urna vitae feugiat tincidunt, urna magna pharetra enim, id congue lectus elit sit amet quam. Vivamus sit amet enim eros. Etiam nec molestie risus.</p>
+                        <p>Donec non est gravida, condimentum mauris sed, bibendum lectus. Duis posuere turpis augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur mattis feugiat aliquam. Cras luctus magna tellus. Nullam consequat vitae sem nec luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer sodales congue nibh, quis pharetra dui tincidunt sit amet. Nunc suscipit, velit ut aliquet interdum, sapien metus gravida dui, in varius tortor justo a leo. Pellentesque auctor purus sed placerat gravida. Proin ac lobortis est. Cras pharetra pharetra maximus. Sed tellus neque, blandit sit amet sollicitudin eget, finibus quis felis. Morbi velit nibh, aliquam eu pharetra eget, tempus placerat metus. Nullam cursus suscipit quam, in vestibulum quam lobortis id.</p>
+                    </div>
+                    <div class="services__accordion">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            service one
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            services two
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            services three
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="services__secondary col-md-6 col-lg-4">
+                    <div class="services__tabs">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">services</a></li>
+                            <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">about</a></li>
+                            <li role="presentation"><a href="#support" aria-controls="support" role="tab" data-toggle="tab">support</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="home">
+                                Services denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="about">
+                                About truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="support">
+                                Support ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cupiditate dolore dolorem excepturi illo, iste mollitia necessitatibus quas quasi quod repellendus rerum vitae voluptate! Accusantium aliquam aliquid aperiam cupiditate delectus, ea esse et facere fugiat impedit laborum omnis possimus quasi quis repellendus sequi tempore? Earum id ipsam modi nostrum quaerat qui saepe sapiente sed tenetur voluptate? Ad aut fuga perspiciatis!
+                            </div>
+                        </div>
+                    </div><!-- end services__tabs -->
+                    <div class="block--primary services__form">
+                        <h3 class="block--primary__title"><i class="block--primary__icon fa fa-pencil"></i>quick quote</h3>
+                        <div class="block--primary__content">
+                            <form role="form" method="get" action="#">
+                                <div class="form-group">
+                                    <label for="services-name">name</label>
+                                    <input type="text" class="form-control" id="services-name" placeholder="Enter name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="services-phone">phone number</label>
+                                    <input type="text" class="form-control" id="services-phone" placeholder="Enter phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="services-email">email address</label>
+                                    <input type="email" class="form-control" id="services-email" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="services-message">message</label>
+                                    <textarea class="form-control" id="services-message"></textarea>
+                                </div>
+                                <button role="button" type="submit" class="block--primary__button btn">submit</button>
+                            </form>
+                        </div><!-- end services block -->
+                    </div><!-- end services__form -->
+                </div>
+            </div>
+        </div>
+    </section><!-- end services -->
+
+    <!--services-do-->
+    <section class="services-do">
+        <div class="services-do__main container">
+            <h2 class="services-do__title page-header">What We Do</h2>
+            <!--services-do__row-->
+            <div class="services-do__content container">
+                <div class="services-do__row row">
+                    <div class="services-do__column col-md-4">
+                        <div class="item">
+                            <div class="item__icon">
+                                <i class="fa fa-home fa-3x"></i>
+                            </div>
+                            <div class="item__content">
+                                <h3 class="item__title">interior design</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores fugit libero neque?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-do__column col-md-4">
+                        <div class="item">
+                            <div class="item__icon">
+                                <i class="fa fa-building fa-3x"></i>
+                            </div>
+                            <div class="item__content">
+                                <h3 class="item__title">architecture</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores fugit libero neque?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-do__column col-md-4">
+                        <div class="item">
+                            <div class="item__icon">
+                                <i class="fa fa-puzzle-piece fa-3x"></i>
+                            </div>
+                            <div class="item__content">
+                                <h3 class="item__title">remodeling</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores fugit libero neque?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end services-do__row -->
+            </div>
+            <div class="services-do__content container">
+                <div class="services-do__row row">
+                    <div class="services-do__column col-md-4">
+                        <div class="item">
+                            <div class="item__icon">
+                                <i class="fa fa-laptop fa-3x"></i>
+                            </div>
+                            <div class="item__content">
+                                <h3 class="item__title">graphic design</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores fugit libero neque?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-do__column col-md-4">
+                        <div class="item">
+                            <div class="item__icon">
+                                <i class="fa fa-cog fa-3x"></i>
+                            </div>
+                            <div class="item__content">
+                                <h3 class="item__title">web development</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores fugit libero neque?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-do__column col-md-4">
+                        <div class="item">
+                            <div class="item__icon">
+                                <i class="fa fa-paint-brush fa-3x"></i>
+                            </div>
+                            <div class="item__content">
+                                <h3 class="item__title">art services</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores fugit libero neque?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end services-do__row -->
+            </div>
+        </div>
+    </section><!-- end services-do -->
+
+
+    <!-- feature-two -->
+    <section class="feature-two">
+        <div class="feature-two__content container">
+            <div class="feature-two__row row">
+                <div class="feature-two__column col-md-3">
+                    <div class="block block-equal">
+                        <i class="block__icon fa fa-html5 fa-4x"></i>
+                        <h3 class="block__title">lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, minus?</p>
+                    </div>
+                </div>
+                <div class="feature-two__column col-md-3">
+                    <div class="block block-equal">
+                        <i class="block__icon fa fa-pie-chart fa-4x"></i>
+                        <h3 class="block__title">dolor est</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, pariatur?</p>
+                    </div>
+                </div>
+                <div class="feature-two__column col-md-3">
+                    <div class="block block-equal">
+                        <i class="block__icon fa fa-unlock-alt fa-4x"></i>
+                        <h3 class="block__title">consectetur adipisicing</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, est?</p>
+                    </div>
+                </div>
+                <div class="feature-two__column col-md-3">
+                    <div class="block block-equal">
+                        <i class="block__icon fa fa-question-circle fa-4x"></i>
+                        <h3 class="block__title">adipisicing elit</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, ducimus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--end feature-two-->
+
+    <!-- footer -->
+    <footer class="footer-main">
+        <div class="footer-main__content container">
+            <div class="footer-main__row row">
+                <div class="footer-main__column col-md-4">
+                    <h4 class="footer-main__title">get the skyapp</h4>
+                    <ul class="list list-unstyled">
+                        <li class="list__item list__item--apps-tore"><a href="#">app store</a></li>
+                        <li class="list__item list__item--google-play"><a href="#">google play store</a></li>
+                        <li class="list__item list__item--android-market"><a href="#">android market</a></li>
+                        <li class="list__item list__item--windows"><a href="#">windows</a></li>
+                        <li class="list__item list__item--google-chrome"><a href="#">google chrome store</a></li>
+                    </ul>
+                </div>
+                <div class="footer-main__column col-md-4">
+                    <h4 class="footer-main__title">about</h4>
+                    <ul class="list list-unstyled">
+                        <li class="list__item"><a href="#">what is skyapp</a></li>
+                        <li class="list__item"><a href="#">view our products</a></li>
+                        <li class="list__item"><a href="#">advertise with us</a></li>
+                        <li class="list__item"><a href="#">careers</a></li>
+                        <li class="list__item"><a href="#">web development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-main__column col-md-4">
+                    <h4 class="footer-main__title">support</h4>
+                    <ul class="list list-unstyled">
+                        <li class="list__item"><a href="#">support home</a></li>
+                        <li class="list__item"><a href="#">our community</a></li>
+                        <li class="list__item"><a href="#">send a ticket</a></li>
+                        <li class="list__item"><a href="#">contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!-- end footer -->
+
+    <!--SCRIPTS-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

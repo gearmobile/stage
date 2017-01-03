@@ -1,0 +1,30 @@
+// FOOTER-MAIN
+// ----------------------------------
+.footer-main {
+  border-top: 6px solid #7fba00;
+  padding: $padding 0;
+  background-color: #2b5464;
+
+  & .footer-main__row &__title {
+    color: $primary-color;
+    text-transform: capitalize;
+    font-size: 20px;
+  }
+
+  & .list__item {
+    padding: 4px 0;
+
+    & a {
+      color: $white-color;
+      text-transform: capitalize;
+      transition: color .2s;
+      
+      &:hover,
+      &:focus {
+        color: $secondary-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+}

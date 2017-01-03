@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurant | Reservation</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="reservation">
+
+    <!-- HEADER -->
+    <header class="header navbar-fixed-top">
+        <div class="header__main container">
+            <nav class="header__holder navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="header__brand navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">bliss<span class="header__subtitle">italian restaurant</span></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="header__secondary nav navbar-nav navbar-right">
+                            <li class="active"><a href="index.html">home</a></li>
+                            <li><a href="menu.html">menu</a></li>
+                            <li><a href="reservation.html">reservation</a></li>
+                            <li><a href="blog.html">blog</a></li>
+                            <li><a href="contacts.html">contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header><!-- END HEADER -->
+
+    <!--reservation-->
+    <section class="reservation" id="reservation">
+        <div class="reservation__main container">
+            <div class="reservation__row row">
+                <div class="reservation__primary col-md-8">
+                    <article class="reservation__block">
+                        <h2 class="reservation__title heading">reserve your table</h2>
+                        <div class="reservation__content">
+                            <figure class="reservation__image">
+                                <img src="images/reserve/reserve-image-01.jpg" alt="Reserve Image">
+                            </figure>
+                            <div class="reservation__body">
+                                <h3 class="reservation__subtitle">Lorem ipsum dolor sit amet</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, veniam.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam excepturi expedita laudantium, magni molestiae molestias placeat quaerat reiciendis. Assumenda, iure.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, voluptates?</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="reservation__block">
+                        <h2 class="reservation__title heading">useful information</h2>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, quisquam.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto cum debitis dolorum eos esse quidem similique tempora, voluptas voluptatem?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ea minus natus nesciunt recusandae vero? Dolorum odit ut voluptas. A amet in magnam nam nemo praesentium sequi tempora voluptas voluptatibus.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, velit!</p>
+                        <a href="#" class="button" role="button">more</a>
+                    </article>
+                </div>
+                <div class="reservation__secondary col-md-4">
+                    <h2 class="reservation__title heading">our hours</h2>
+                    <p class="reservation__lead lead">
+                        <span>We are open 7 days a week <wbr> - 8 AM to 12 PM</span>
+                        <span>+1 101 889 9898</span>
+                    </p>
+                    <div class="reservation__form">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <input type="email" class="form-control" id="reservationEmail1" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <input type="password" class="form-control" id="reservationPassword" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="input-daterange input-group" id="dataPicker">
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="reservationCheckIn">Check-in</label>
+                                    <div class="col-lg-9">
+                                        <div class="input-group">
+                                            <input type="text" class="input-with-icon input-sm form-control" id="reservationCheckIn" name="start">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-calendar"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="reservationCheckOut">Check-out</label>
+                                    <div class="col-lg-9">
+                                        <div class="input-group">
+                                            <input type="text" class="input-sm form-control" id="reservationCheckOut" name="end">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="selects form-group">
+                                <div class="selects__group selects__group--primary col-xs-6">
+                                    <label class="selects__label control-label" for="selectAdults">Adults</label>
+                                    <select class="selects__list" name="selectAdults" id="selectAdults">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                                <div class="selects__group selects__group--secondary col-xs-6">
+                                    <label class="selects__label control-label" for="selectChildren">Children</label>
+                                    <select class="selects__list" name="selectChildren" id="selectChildren">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <textarea class="form-control" rows="6" placeholder="Message:"></textarea>
+                                </div>
+                            </div>
+                            <div class="reservation__control form-group">
+                                <nav class="controls">
+                                    <button class="controls__reset button" type="reset" role="button">clear</button>
+                                    <button class="controls__submit button" type="submit" role="button">send</button>
+                                </nav>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- end reservation -->
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer__main container">
+            <div class="footer__primary">
+                <p>Bliss &copy; 2016 | Privacy Policy <br> Website designed by TemplateMonster.com</p>
+            </div>
+            <div class="footer__secondary">
+                <nav class="icons list-unstyled">
+                    <a class="icons__item" href="#"><i class="fa fa-twitter"></i></a>
+                    <a class="icons__item" href="#"><i class="fa fa-facebook"></i></a>
+                    <a class="icons__item" href="#"><i class="fa fa-google-plus"></i></a>
+                    <a class="icons__item" href="#"><i class="fa fa-pinterest"></i></a>
+                </nav>
+            </div>
+        </div>
+    </footer><!-- end footer -->
+
+    <!-- BACK TO TOP BUTTON -->
+    <a id="back-to-top" href="#" class="btn btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><!-- END BACK TO TOP BUTTON -->
+
+    <!--SCRIPTS-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

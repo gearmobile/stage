@@ -1,0 +1,16 @@
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: $base-font-color;
+  line-height: $base-line-height;
+}
+
+a {
+  color: $primary-color;
+}
+
+input,
+textarea,
+button {
+  @include border-radius( 0 );
+}

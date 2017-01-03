@@ -1,0 +1,24 @@
+@mixin border-radius( $radius ) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin size( $size ) {
+  @if length( $size ) == 1 {
+    width:  $size;
+    height: $size;
+  }
+  @else if length( $size ) == 2 {
+    width:  nth( $size, 1 );
+    height: nth( $size, 2 );
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
