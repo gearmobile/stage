@@ -1,0 +1,46 @@
+// HEADER
+// --------------------------------------
+.header {
+  background-color: #525b64;
+  color: $color-white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__logo {
+    width: 54.9rem;
+    height: 15.5rem;
+    background: url( '../images/logo.png' ) center center no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+  }
+
+  &__container {
+    max-width: 60rem;
+
+    & p {
+      font-size: 1.25rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin: 3rem 0;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: $font-montserrat-bold;
+    font-weight: 700;
+  }
+
+  &__control {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+
+    & .button {
+      margin: 0 1.5rem;
+    }
+  }
+}

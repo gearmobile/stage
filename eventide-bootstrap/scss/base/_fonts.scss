@@ -1,0 +1,62 @@
+
+// FONTS VARIABLES
+// --------------------------------------------------------
+
+$font-ubuntu-regular: 'Ubuntu Regular', sans-serif;
+$font-ubuntu-medium: 'Ubuntu Medium', sans-serif;
+$font-ubuntu-bold: 'Ubuntu Bold', sans-serif;
+
+$font-montserrat-regular: 'Montserrat Regular', sans-serif;
+$font-montserrat-bold: 'Montserrat Bold', sans-serif;
+
+
+// PRIMARY FONT
+// ----------------------------------------------------------
+
+@font-face {
+  font-family: 'Ubuntu Regular', sans-serif;
+  src: url('../fonts/ubuntu-regular.ttf') format('ttf'),
+      url('../fonts/ubuntu-regular.woff2') format('woff2'),
+      url('../fonts/ubuntu-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu Medium', sans-serif;
+  src: url('../fonts/ubuntu-medium.woff2') format('woff2'),
+      url('../fonts/ubuntu-medium.woff') format('woff'),
+      url('../fonts/ubuntu-medium.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu Bold', sans-serif;
+  src: url('../fonts/ubuntu-bold.ttf') format('ttf'),
+      url('../fonts/ubuntu-bold.woff2') format('woff2'),
+      url('../fonts/ubuntu-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// SECONDARY FONT
+// ----------------------------------------------
+
+@font-face {
+  font-family: 'Montserrat Regular', sans-serif;
+  src: url('../fonts/montserrat-regular.woff2') format('woff2'),
+      url('../fonts/montserrat-regular.woff') format('woff'),
+      url('../fonts/montserrat-regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold', sans-serif;
+  src: url('../fonts/montserrat-bold.woff2') format('woff2'),
+      url('../fonts/montserrat-bold.woff') format('woff'),
+      url('../fonts/montserrat-bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
