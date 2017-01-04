@@ -2,58 +2,64 @@
 // --------------------------------------
 .header {
   display: table;
-  color: $color-white;
   height: 100vh;
   width: 100vw;
   background: #525b64 url( '../images/header-bg.jpg' ) center center  no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 
+  // HEADER ROW ---------------------
   &__row {
     display: table-row;
   }
 
+  // HEADER CONTENT ------------------
   &__content {
     display: table-cell;
-    //text-align: center;
+    text-align: center;
     vertical-align: middle;
   }
 
+  // HEADER CONTAINER -------------------
   &__container {
+    display: inline-block;
     max-width: 60rem;
-    text-align: center;
-    margin: 0 auto;
+    color: $color-white;
 
+    // HEADER LOGO -------------------------
+    & .header__logo {
+      display: inline-block;
+      width: 54.9rem;
+      height: 15.5rem;
+      background: url( '../images/logo.png' ) center center no-repeat;
+      background-size: cover;
+    }
+
+    // HEADER TITLE -----------------------
+    & .header__title {
+      margin: 3rem 0;
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-family: $font-montserrat-bold;
+      font-weight: 700;
+    }
+
+    // HEADER PARAGRAPH -----------------------
     & p {
       font-size: 2rem;
     }
-  }
 
-  &__logo {
-    width: 54.9rem;
-    height: 15.5rem;
-    background: url( '../images/logo.png' ) center center no-repeat;
-    background-size: cover;
-    margin: 0 auto;
-  }
+    // HEADER CONTROL ------------------------
+    & .header__control {
+      margin-top: 4rem;
 
+      // HEADER CONTROL BUTTON ----------------
+      & .button {
+        margin: 0 1rem;
+      }
 
-
-  &__title {
-    margin: 3rem 0;
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-family: $font-montserrat-bold;
-    font-weight: 700;
-  }
-
-  &__control {
-    display: flex;
-    justify-content: center;
-    margin-top: 4rem;
-
-    & .button {
-      margin: 0 1.5rem;
     }
+
   }
+
 }
