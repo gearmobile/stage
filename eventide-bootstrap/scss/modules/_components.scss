@@ -1,0 +1,47 @@
+$ev-link-padding : .6rem;
+
+// LINK
+// ------------------------------------
+.ev-link {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: $font-montserrat-bold;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 3rem 0 0;
+
+  &--right .fa {
+    margin-left: $ev-link-padding;
+  }
+
+  &--left .fa {
+    margin-right: $ev-link-padding;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+}
+
+// TITLE
+// ------------------------------------
+.ev-title {
+  text-transform: uppercase;
+  font-family: $font-montserrat-regular;
+  font-weight: 400;
+  font-size: 3rem;
+  color: #828689;
+  margin: 0 0 3.4rem;
+}
+
+// lead
+// ------------------------------------
+.ev-lead {
+  font-family: $font-ubuntu-regular;
+  font-weight: 400;
+  font-size: 2.2rem;
+  color: #828689;
+  margin: 0 0 3rem;
+}

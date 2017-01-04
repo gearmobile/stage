@@ -1,13 +1,33 @@
 // HEADER
 // --------------------------------------
 .header {
-  background-color: #525b64;
+  display: table;
   color: $color-white;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background: #525b64 url( '../images/header-bg.jpg' ) center center  no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  &__row {
+    display: table-row;
+  }
+
+  &__content {
+    display: table-cell;
+    //text-align: center;
+    vertical-align: middle;
+  }
+
+  &__container {
+    max-width: 60rem;
+    text-align: center;
+    margin: 0 auto;
+
+    & p {
+      font-size: 2rem;
+    }
+  }
 
   &__logo {
     width: 54.9rem;
@@ -17,14 +37,7 @@
     margin: 0 auto;
   }
 
-  &__container {
-    max-width: 60rem;
 
-    & p {
-      font-size: 2rem;
-      //margin-bottom: 0;
-    }
-  }
 
   &__title {
     margin: 3rem 0;
