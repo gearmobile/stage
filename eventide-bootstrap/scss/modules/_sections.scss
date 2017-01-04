@@ -1,7 +1,84 @@
 // FEATURE-ONE
 // -------------------------------------
 .feature-one {
-  padding: 11rem 0 6rem;
+  padding: 10rem 0 6rem;
+
+  // TABS
+  &__tabs {
+    border: .3rem solid #ececec;
+
+    & .nav-tabs {
+      border-bottom: none;
+
+      & li {
+        width: 50%;
+      }
+
+      & li > a {
+        border-radius: 0;
+        border: none;
+        background-color: #ececec;
+        text-transform: uppercase;
+        font-family: $font-ubuntu-bold;
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: #9097a1;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 2rem;
+
+        &:hover {
+          color: $color-secondary;
+        }
+
+      }
+
+      & li.active > a {
+        border: none;
+        background-color: $color-white;
+        cursor: pointer;
+
+        &:hover {
+          color: $color-secondary;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+      }
+    }
+
+    // TAB CONTENT
+    & .tab-content {
+      padding: 3rem 5rem 4rem 2rem;
+
+      & p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: #999999;
+        margin-bottom: 2rem;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      & .tab-content__list {
+        margin: 3rem 0 0 2rem;
+
+        & li {
+          padding: .6rem 0;
+          
+          & .fa {
+            color: $color-secondary;
+            margin-right: 1.6rem;
+          }
+        }
+      }
+
+    }
+  }
 }
 
 // FEATURE-TWO
