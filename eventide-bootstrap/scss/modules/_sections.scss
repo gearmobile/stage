@@ -46,4 +46,45 @@
 // --------------------------------------
 .feature-seven {
   padding: 6rem 0;
+
+  & nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
+
+// FEATURE-EIGHT
+// --------------------------------------
+.feature-eight {
+  height: 67rem;
+  background: url( '../images/map-bg.jpg' ) center center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+// FEATURE-NINE
+// --------------------------------------
+.feature-nine {
+  padding: 9rem 0;
+  background-color: #525b64;
+  color: #cdd0d2;
+
+  &__title {
+    text-transform: capitalize;
+    color: $color-white;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

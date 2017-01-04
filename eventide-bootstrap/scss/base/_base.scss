@@ -9,7 +9,22 @@ body {
   height: 100%;
   font-size: $base-font-size;
   font-family: $base-font-family;
+  font-weight: 400;
   color: $base-font-color;
   background-color: $color-white;
   line-height: $base-line-height;
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+a {
+  color: $color-secondary;
 }
