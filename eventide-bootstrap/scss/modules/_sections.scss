@@ -1,3 +1,49 @@
+// FEATURE-ONE
+// -------------------------------------
 .feature-one {
   padding: 11rem 0 6rem;
+}
+
+// FEATURE-TWO
+// -------------------------------------
+.feature-two {
+  padding: 6rem 0 9rem;
+  text-align: center;
+  border-bottom: .8rem solid rgba(130, 134, 137, 0.12);
+
+  &__button {
+    margin: auto;
+  }
+}
+
+// FEATURE-THREE
+// --------------------------------------
+.feature-three {
+  padding: 12rem 0 6rem;
+}
+
+// FEATURE-FOUR
+// --------------------------------------
+.feature-four {
+  padding: 6rem 0;
+}
+
+// FEATURE-FIVE
+// --------------------------------------
+.feature-five {
+  padding: 6rem 0;
+}
+
+// FEATURE-SIX
+// --------------------------------------
+.feature-six {
+  padding: 15rem 0;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+
+// FEATURE-SEVEN
+// --------------------------------------
+.feature-seven {
+  padding: 6rem 0;
 }
