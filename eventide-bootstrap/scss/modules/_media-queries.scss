@@ -19,8 +19,26 @@
 
 // 600 BREAKPOINT
 // -----------------------------------------------
-@media only screen and ( max-width: 600px ) {
+@media only screen and ( max-width: 599px ) {
   //
+  .header .header__container {
+    max-width: 32rem;
+    padding: 0 1rem;
+
+    & .header__title {
+      font-size: 1.8rem;
+    }
+
+    & p {
+      font-size: 1.5rem;
+    }
+
+    & .header__control .button {
+      font-size: 1.4rem;
+      margin: 0 .2rem;
+    }
+
+  }
 }
 
 // 500 BREAKPOINT

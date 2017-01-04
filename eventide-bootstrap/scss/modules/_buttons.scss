@@ -7,7 +7,7 @@
   color: $color-white;
   font-family: $font-montserrat-regular;
   font-size: 1.6rem;
-  transition: background-color .2s;
+  transition: background-color .2s, color .2s;
 
   & .fa {
     margin-left: .4rem;
@@ -24,6 +24,11 @@
 
   &--secondary {
     background-color: #6a7079;
+
+    &:hover,
+    &:focus {
+      background-color: #474c52;
+    }
   }
 
   &:hover,
