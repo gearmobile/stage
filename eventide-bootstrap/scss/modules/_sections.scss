@@ -300,6 +300,24 @@
 // --------------------------------------
 .feature-five {
   padding: 6rem 0;
+
+  & .carousel-indicators {
+    margin-left: 0;
+    left: 4%;
+    text-align: left;
+
+    & li {
+      @include size( 1.8rem );
+      border-radius: 50%;
+      border: .2rem solid $color-secondary;
+    }
+
+    & li.active {
+      background-color: $color-secondary;
+    }
+
+  }
+
 }
 
 // FEATURE-SIX
