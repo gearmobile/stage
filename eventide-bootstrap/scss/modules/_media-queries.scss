@@ -1,8 +1,18 @@
 
+@media only screen and ( max-width: 1199px ) {
+  //
+  .feature-one .feature-one__tabs .nav-tabs a {
+    font-size: 1.6rem;
+  }
+}
+
 // 992 BREAKPOINT
 // -----------------------------------------------
-@media only screen and ( max-width: 992px ) {
+@media only screen and ( max-width: 991px ) {
   //
+  .feature-one .feature-one__primary {
+    margin-bottom: 4rem;
+  }
 }
 
 // 900 BREAKPOINT
@@ -43,6 +53,13 @@
 
 // 500 BREAKPOINT
 // -----------------------------------------------
-@media only screen and ( max-width: 500px ) {
+@media only screen and ( max-width: 499px ) {
   //
+  .feature-one .feature-one__tabs .nav-tabs li {
+    width: 100%;
+    float: none;
+  }
+  .feature-one .feature-one__tabs .tab-content .tab-content__image {
+    float: none;
+  }
 }
