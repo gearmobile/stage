@@ -226,6 +226,67 @@
 
   & .tab-content {
     padding: 2rem;
+
+    & .panel-group {
+      margin-bottom: 0;
+
+      & .panel {
+        border-radius: 0;
+        border: none;
+      }
+
+      & .panel-heading {
+        background-color: $color-white;
+      }
+
+      & .panel-title .panel-title__link {
+        display: block;
+        text-decoration: none;
+        @include clearfix();
+
+        & .panel-title__primary {
+          float: left;
+        }
+
+        & .panel-title__secondary {
+          float: right;
+        }
+        
+        & .fa {
+          color: $color-secondary;
+          font-size: 2rem;
+        }
+        
+        & .panel-title__label {
+          background-color: $color-secondary;
+          font-family: $font-ubuntu-medium;
+          font-weight: 500;
+          font-size: 1.7rem;
+          text-transform: uppercase;
+          padding: .6rem .8rem;
+          margin-right: 2rem;
+        }
+
+        & .panel-title__title {
+          color: #747a84;
+          font-family: $font-ubuntu-medium;
+          font-weight: 500;
+          font-size: 1.8rem;
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      & .panel-body {
+        color: #999;
+        font-size: 1.7rem;
+        line-height: 1.5;
+        border: none;
+      }
+    }
+
   }
 }
 
