@@ -189,6 +189,44 @@
 // --------------------------------------
 .feature-three {
   padding: 12rem 0 6rem;
+
+  // FEATURE THREE TABS
+  & .feature-three__tabs {
+    border: .3rem solid #ececec;
+  }
+
+  & .nav-tabs {
+    border-bottom: none;
+    background-color: #ececec;
+
+    & > li > a {
+      border-radius: 0;
+      border: none;
+      font-family: $font-ubuntu-bold;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #abb1ba;
+      text-transform: uppercase;
+      background-color: #ececec;
+      padding: 2rem 3rem;
+
+      &:hover {
+        color: #9097a1;
+      }
+    }
+
+    & > li.active > a {
+      border: none;
+      border-radius: 0;
+      color: #9097a1;
+      background-color: $color-white;
+    }
+
+  }
+
+  & .tab-content {
+    padding: 2rem;
+  }
 }
 
 // FEATURE-FOUR
