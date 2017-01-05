@@ -10,43 +10,60 @@
 // -----------------------------------------------
 @media only screen and ( max-width: 991px ) {
   //
+  .feature-one {
+    padding: 6rem 0;
+  }
+  //
+  .feature-two {
+    padding: 3rem 0;
+  }
+  //
   .feature-one .feature-one__primary {
     margin-bottom: 4rem;
   }
   //
+  .feature-three {
+    padding: 3rem 0;
+
+    & .feature-three__primary {
+      margin-bottom: 4rem;
+    }
+  }
+  //
   .feature-four {
     padding: 3rem 0;
-  }
-  .feature-four .feature-four__primary {
-    margin-bottom: 4rem;
-  }
-  .feature-four .feature-four__caption {
-    font-size: 2rem;
-    margin: 0 0 2rem;
-  }
-  .feature-four .feature-four__lead {
-    font-size: 1.8rem;
-    margin: 0 0 2rem;
+
+    & .feature-four__primary {
+      margin-bottom: 4rem;
+    }
   }
   //
   .feature-five {
     padding: 3rem 0;
-  }
-  .feature-five .feature-five__primary {
-    margin-bottom: 4rem;
-  }
-  .feature-five .feature-five__caption {
-    font-size: 2rem;
-    margin: 0 0 2rem;
-  }
-  .feature-five .feature-five__lead {
-    font-size: 2rem;
-    margin: 0 0 2rem;
+
+    & .feature-five__primary {
+      margin-bottom: 4rem;
+    }
   }
   //
   .ev-link {
     font-size: 1.6rem;
     margin: 2rem 0 0;
+  }
+  //
+  .ev-title {
+    font-size: 2rem;
+    margin: 0 0 2rem;
+  }
+  //
+  .ev-lead {
+    font-size: 2rem;
+    margin: 0 0 2rem;
+  }
+  //
+  .feature-nine .feature-nine__primary,
+  .feature-nine .feature-nine__secondary {
+    margin-bottom: 4rem;
   }
 }
 
@@ -84,6 +101,42 @@
     }
 
   }
+  //
+  .feature-one .tab-content .tab-content__list {
+    float: none;
+    margin-left: 0;
+  }
+  .feature-one .tab-content .tab-content__image {
+    float: none;
+    margin: 4rem 0 0;
+    text-align: center;
+  }
+  //
+  .feature-three .feature-three__tabs .panel-title__link {
+    position: relative;
+
+    & .panel-title__secondary {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    & .panel-title__title {
+      font-size: 1.6rem;
+    }
+
+  }
+  .feature-three .feature-three__secondary .feature-three__tabs .nav-tabs li {
+    float: none;
+
+    & a {
+      margin-right: 0;
+    }
+  }
+  .feature-three .feature-three__secondary .panel-title__label {
+    display: table;
+    margin: 0 0 1rem;
+  }
 }
 
 // 500 BREAKPOINT
@@ -97,4 +150,5 @@
   .feature-one .feature-one__tabs .tab-content .tab-content__image {
     float: none;
   }
+  //
 }

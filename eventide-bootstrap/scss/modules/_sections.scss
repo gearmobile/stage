@@ -334,9 +334,14 @@
   padding: 6rem 0;
 
   & nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: table;
+    width: 100%;
+
+    & a {
+      display: table-cell;
+      text-align: center;
+    }
+
   }
 }
 
