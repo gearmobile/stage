@@ -276,10 +276,15 @@
           font-family: $font-ubuntu-medium;
           font-weight: 500;
           font-size: 1.8rem;
+          line-height: 1.6;
         }
 
         &:hover {
           text-decoration: none;
+
+          & .panel-title__title {
+            color: $color-secondary;
+          }
         }
       }
 
@@ -309,6 +314,8 @@
     margin-left: 0;
     left: 4%;
     text-align: left;
+    bottom: 1.2rem;
+    width: auto;
 
     & li {
       @include size( 1.8rem );
@@ -331,6 +338,28 @@
   padding: 15rem 0;
   background-color: #f3f3f3;
   text-align: center;
+
+  & .feature-six__lead {
+    max-width: 60rem;
+    margin: 0 auto 3rem;
+  }
+
+  & .feature-six__plank {
+    background-color: $color-white;
+    padding: 5rem;
+    margin-bottom: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  // FORM
+  & .form {
+    //
+
+    & .form-group {
+      margin-bottom: 0;
+    }
+  }
 }
 
 // FEATURE-SEVEN

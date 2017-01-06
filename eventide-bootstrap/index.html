@@ -494,35 +494,30 @@
     
     <section class="feature-six">
         <div class="container">
-            <h2 class="ev-title">the most simple way to launch your event</h2>
-            <p class="lead ev-lead">Sed ut perspiciatis unde omnis iste natus errorsit voluptatem accusantium doloremque laudantium</p>
+            <h2 class="feature-six__title ev-title">the most simple way to launch your event</h2>
+            <p class="feature-six__lead lead ev-lead">Sed ut perspiciatis unde omnis iste natus errorsit voluptatem accusantium doloremque laudantium</p>
             <div class="row">
                 <div class="col-md-10 col-md-push-1">
-                    <div class="well well-lg">
-                        <form class="form-inline">
-                            <div class="form-group">
-                                <label for="exampleInputName2">Name</label>
-                                <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail2">Email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-                            </div>
-                            <div class="form-group">
-                                <div class="dropdown">
-                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                        Select Plan
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="#">1 Day - $20</a></li>
-                                        <li><a href="#">2 Day - $25</a></li>
-                                        <li><a href="#">3 Day - $40</a></li>
-                                    </ul>
+                    <div class="feature-six__plank well well-lg">
+                        <form id="featureSixForm" class="form">
+                            <div class="row">
+                                <div class="form-group col-md-3">
+                                    <input type="text" class="form-control" name="name" placeholder="Johanes Doe" required>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <a class="button button--primary" href="#" role="button">register <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                                <div class="form-group col-md-3">
+                                    <input type="email" class="form-control" name="email" placeholder="Email Address">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <select name="plan" id="plan" class="form__select form-control">
+                                        <option class="hidden" disabled selected>select plan</option>
+                                        <option value="20">1 Day - $20</option>
+                                        <option value="25">2 Day - $25</option>
+                                        <option value="40">3 Day - $40</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <button class="form__button button button--primary" type="submit" role="button">register<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                                </div>
                             </div>
                         </form>
                     </div>
