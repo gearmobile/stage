@@ -1,8 +1,5 @@
 $( document ).ready( function() {
 
-    // BLOCK EQUAL HEIGHT
-    $( '.block-equal' ).matchHeight();
-
     // ACCORDION ICONS CHANGE --------------------------------
     var blocks = $( '.tab-content .collapse' );
     blocks.on( 'shown.bs.collapse', function () {
@@ -30,7 +27,17 @@ $( document ).ready( function() {
     );
     // ---------------------------------------------------------
 
-    //  -----------------------------------------------
+    // FORM VALIDATION -----------------------------------------------
+    var form = $( '#featureSixForm' );
+    var formOptions = {
+        feedback: {
+            success: 'fa-check-circle',
+            error: 'fa-times-circle'
+        }
+    };
+    form.validator( formOptions );
+
+
     // ---------------------------------------------------------
 
 });

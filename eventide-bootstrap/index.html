@@ -499,24 +499,34 @@
             <div class="row">
                 <div class="col-md-10 col-md-push-1">
                     <div class="feature-six__plank well well-lg">
-                        <form id="featureSixForm" class="form">
+                        <form id="featureSixForm" class="form" action="#" method="post" role="form">
                             <div class="row">
-                                <div class="form-group col-md-3">
-                                    <input type="text" class="form__name form-control" name="name" placeholder="Johanes Doe" required>
+                                <div class="col-md-3">
+                                    <div class="form-group has-feedback">
+                                        <input class="form__name form-control input-lg" type="text" id="name" name="name" pattern="^[a-zA-Z0-9_-]{3,16}$" placeholder="Johanes Doe" required />
+                                        <i class="form-control-feedback fa" aria-hidden="true"></i>
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <input type="email" class="form__email form-control" name="email" placeholder="Email Address">
+                                <div class="col-md-3">
+                                    <div class="form-group has-feedback">
+                                        <input class="form__email form-control input-lg" type="email" id="email" name="email" pattern="^.+@.+$" placeholder="Email Address" required />
+                                        <i class="form-control-feedback fa" aria-hidden="true"></i>
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <select name="plan" id="plan" class="form__select form-control">
-                                        <option class="hidden" disabled selected>select plan</option>
-                                        <option value="20">1 Day - $20</option>
-                                        <option value="25">2 Day - $25</option>
-                                        <option value="40">3 Day - $40</option>
-                                    </select>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <select name="plan" id="plan" class="form__select form-control input-lg">
+                                            <option class="hidden" disabled selected>select plan</option>
+                                            <option value="20">1 Day - $20</option>
+                                            <option value="25">2 Day - $25</option>
+                                            <option value="40">3 Day - $40</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <button class="form__button button button--primary" type="submit" role="button">register<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <button class="form__button button button--primary" type="submit" role="button">register<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -585,8 +595,8 @@
 
     <!--SCRIPTS-->
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/jquery.matchHeight-min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/validator.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

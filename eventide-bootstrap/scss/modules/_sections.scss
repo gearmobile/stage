@@ -363,14 +363,16 @@
     & .form__name,
     & .form__email,
     & .form__select {
-      height: 4.6rem;
       border-radius: .4rem;
     }
 
     & .form__name,
     & .form__email {
       background-color: #efefef;
-      padding-right: 2rem;
+    }
+
+    & .form-control-feedback {
+      font-size: 2rem;
     }
 
     // form button ---------
