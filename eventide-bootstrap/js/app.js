@@ -18,7 +18,7 @@ $( document ).ready( function() {
     });
     // --------------------------------------------------------
 
-    // TITLE HIGHLIGHT
+    // TITLE HIGHLIGHT ----------------------------------------
     var captions = $( '.feature-two .flipper' );
     captions.hover(
         function () {
@@ -28,6 +28,9 @@ $( document ).ready( function() {
             $( this ).next( '.thumbnail__title' ).removeClass( 'thumbnail__title--highlight' );
         }
     );
+    // ---------------------------------------------------------
+
+    //  -----------------------------------------------
     // ---------------------------------------------------------
 
 });
