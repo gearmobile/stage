@@ -36,8 +36,13 @@ $( document ).ready( function() {
         }
     };
     form.validator( formOptions );
+    // ---------------------------------------------------------
 
-
+    // select styling -------------------------------------------
+    var select = $( '#plan' );
+    select.select2({
+        minimumResultsForSearch: Infinity
+    });
     // ---------------------------------------------------------
 
 });

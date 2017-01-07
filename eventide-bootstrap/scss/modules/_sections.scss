@@ -356,6 +356,27 @@
   & .form {
     //
 
+    // SELECT STYLING -----------
+    & .select2-container {
+
+      & .select2-selection--single {
+        height: 4.6rem;
+        text-align: left;
+        text-transform: capitalize;
+        background-color: #efefef;
+
+        & .select2-selection__rendered {
+          height: 4.6rem;
+          line-height: 4.6rem;
+          color: #bebebe;
+        }
+
+        & .select2-selection__arrow {
+          height: 4.6rem;
+        }
+      }
+    }
+
     & .form-group {
       margin-bottom: 0;
     }
@@ -401,8 +422,6 @@
     // form button ---------
     & .form__button {
       border: none;
-      //padding-left: 2.2rem;
-      //padding-right: 2.2rem;
 
       & .fa {
         margin-left: .6rem;
@@ -452,13 +471,35 @@
 }
 
 
+// SELECT STYLING
+// -----------------------------------------------
+.feature-six .form .select2-container.select2-container--open .select2-selection--single .select2-selection__rendered {
+  color: #fff;
+}
 
+.select2-container.select2-container--open {
+  
+  & .select2-dropdown {
+    background-color: #525b64;
 
-
-
-
-
-
+    & .select2-results__options .select2-results__option {
+      color: $color-secondary;
+      
+      &:hover {
+        color: $color-white;
+      }
+    }
+    
+    & .select2-results__options .select2-results__option:first-child {
+      display: none;
+    }
+  }
+  
+  & .select2-selection__rendered {
+    background-color: $color-secondary;
+    color: #fff;
+  }
+}
 
 
 
