@@ -360,10 +360,33 @@
       margin-bottom: 0;
     }
 
+    // INPUT SUCCESS
+    & .form-group.has-success {
+
+      & .form-control {
+        background-color: $color-white;
+        box-shadow: none;
+        border: .2rem solid $color-secondary;
+      }
+
+      & .form-control-feedback {
+        color: $color-secondary;
+      }
+
+    }
+
+    // INPUT ERROR
+    & .form-group.has-error.has-danger .form-control {
+      box-shadow: none;
+    }
+
     & .form__name,
     & .form__email,
     & .form__select {
       border-radius: .4rem;
+      font-family: $font-ubuntu-regular;
+      font-weight: 400;
+      font-size: 1.8rem;
     }
 
     & .form__name,
@@ -372,19 +395,20 @@
     }
 
     & .form-control-feedback {
-      font-size: 2rem;
+      font-size: 2.4rem;
     }
 
     // form button ---------
     & .form__button {
       border: none;
-      padding-left: 2.2rem;
-      padding-right: 2.2rem;
+      //padding-left: 2.2rem;
+      //padding-right: 2.2rem;
 
       & .fa {
         margin-left: .6rem;
       }
     }
+    
   }
 }
 
