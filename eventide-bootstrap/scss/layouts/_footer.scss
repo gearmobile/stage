@@ -4,8 +4,9 @@
   padding: 1.4rem 0;
   background-color: #3f464c;
 
-  & p {
-    color: rgba(202, 202, 202, 0.5);
+  &__copyright {
+    color: rgba( 202, 202, 202, 0.5 );
     font-size: 1.4rem;
+    margin-bottom: 0;
   }
 }

@@ -41,7 +41,8 @@ $( document ).ready( function() {
     // select styling -------------------------------------------
     var select = $( '#plan' );
     select.select2({
-        minimumResultsForSearch: Infinity
+        minimumResultsForSearch: Infinity,
+        width: '100%'
     });
     // ---------------------------------------------------------
 

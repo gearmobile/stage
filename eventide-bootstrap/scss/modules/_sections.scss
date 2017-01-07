@@ -436,13 +436,18 @@
 .feature-seven {
   padding: 6rem 0;
 
-  & nav {
+  & .container {
     display: table;
-    width: 100%;
 
-    & a {
-      display: table-cell;
-      text-align: center;
+    & .row {
+      display: table-row;
+
+      & a {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+
     }
 
   }
@@ -467,6 +472,16 @@
   &__title {
     text-transform: capitalize;
     color: $color-white;
+  }
+
+  &__list li:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+
+  &__list .fa {
+    margin-right: 1rem;
+    color: $color-secondary;
+    font-size: 1.8rem;
   }
 }
 

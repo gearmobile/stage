@@ -61,8 +61,7 @@
     margin: 0 0 2rem;
   }
   //
-  .feature-nine .feature-nine__primary,
-  .feature-nine .feature-nine__secondary {
+  .feature-nine .feature-nine__primary {
     margin-bottom: 4rem;
   }
   //
@@ -71,6 +70,17 @@
   }
   .feature-six .form .form-group {
     margin-bottom: 2rem;
+  }
+  //
+  .feature-seven .container .row {
+    display: block;
+  }
+  .feature-seven .container .row a {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
   }
 }
 
@@ -84,6 +94,9 @@
 // -----------------------------------------------
 @media only screen and ( max-width: 767px ) {
   //
+  .feature-nine .feature-nine__secondary {
+    margin-bottom: 4rem;
+  }
 }
 
 // 600 BREAKPOINT
@@ -143,6 +156,14 @@
   .feature-three .feature-three__secondary .panel-title__label {
     display: table;
     margin: 0 0 1rem;
+  }
+  //
+  .feature-nine {
+    padding: 5rem 0;
+  }
+  //
+  .footer {
+    text-align: center;
   }
 }
 
