@@ -38,12 +38,26 @@ $( document ).ready( function() {
     form.validator( formOptions );
     // ---------------------------------------------------------
 
-    // select styling -------------------------------------------
+    // SELECT STYLING ------------------------------------------
     var select = $( '#plan' );
     select.select2({
         minimumResultsForSearch: Infinity,
         width: '100%'
     });
     // ---------------------------------------------------------
+
+
+    // ANIMATE PAGE WITH WOW.JS -----------------------------------
+    // ---------------------------------------------------------
+    var wow = new WOW(
+        {
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 200,
+            mobile: false,
+            live: true
+        }
+    );
+    wow.init();
 
 });
