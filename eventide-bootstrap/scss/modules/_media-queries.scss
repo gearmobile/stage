@@ -103,6 +103,10 @@
 // -----------------------------------------------
 @media only screen and ( max-width: 599px ) {
   //
+  .header {
+    background-attachment: scroll !important;
+  }
+  //
   .header .header__container {
     max-width: 32rem;
     padding: 0 1rem;
