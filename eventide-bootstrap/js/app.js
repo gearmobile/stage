@@ -89,7 +89,7 @@ $( document ).ready( function() {
         animation: google.maps.Animation.DROP
     });
     var bramptonInfo = new google.maps.InfoWindow({
-        content: 'Brampton Manor Academy'
+        content: 'Australia - the most beautiful country in the world!'
     });
     bramptonMarker.addListener( 'click', function () {
         bramptonInfo.open( bramptonMap, bramptonMarker );
