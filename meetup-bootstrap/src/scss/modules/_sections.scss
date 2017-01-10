@@ -48,3 +48,73 @@
 .section-one {
     padding: 6rem 0;
 }
+
+// SECTION TWO
+// --------------------------------------
+.section-two {
+    padding: 6rem 0;
+
+    &__item {
+
+        & .thumbnail {
+            text-align: center;
+
+            &__caption {
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+// SECTION THREE
+// -------------------------------------
+.section-three {
+    padding: 6rem 0;
+
+    & .schedule {
+
+        &__button {
+            width: 100%;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            padding: 2rem 0;
+            color: $color-white;
+
+            &.is-active,
+            &:hover {
+                background-color: #ddd;
+            }
+
+            &:nth-child( odd ) {
+                background-color: #4b4d4f;
+            }
+
+            &:nth-child( even ) {
+                background-color: #373737;
+            }
+        }
+
+        &__panel {
+            padding: 0 20px;
+            display: none;
+
+            &.is-show {
+                display: block;
+            }
+        }
+    }
+}
+
+// SECTION-FOUR
+// -------------------------------------
+.section-four {
+    padding: 6rem 0;
+    background-color: #4b4d4f;
+    color: $color-white;
+    text-align: right;
+
+    & p {
+        font-size: 1.4rem;
+    }
+}
