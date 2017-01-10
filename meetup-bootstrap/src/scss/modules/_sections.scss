@@ -1,0 +1,51 @@
+// HERO
+// --------------------------------------
+.hero {
+    background-color: $color-dark;
+    min-height: 77rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .counter {
+        display: flex;
+        border: .2rem solid #90d23d;
+        border-radius: 2rem;
+        padding: 3rem 8rem;
+        font-family: $font-secondary;
+        color: $color-white;
+
+        &__item {
+            min-height: 15rem;
+            min-width: 15rem;
+            text-align: center;
+            // border: 1px solid $color-white;
+        }
+
+        &__value {
+            font-size: 13rem;
+            font-weight: 100;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        &__title {
+            font-weight: 400;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        &__divider {
+            padding: 0 4rem;
+            font-size: 9rem;
+            font-weight: 100;
+        }
+    }
+}
+
+
+// SECTION ONE
+// --------------------------------------
+.section-one {
+    padding: 6rem 0;
+}
