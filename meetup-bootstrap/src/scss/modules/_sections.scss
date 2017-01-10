@@ -9,7 +9,7 @@
 
     & .counter {
         display: flex;
-        border: .2rem solid #90d23d;
+        border: .2rem solid $color-secondary;
         border-radius: 2rem;
         padding: 3rem 8rem;
         font-family: $font-secondary;
@@ -19,7 +19,6 @@
             min-height: 15rem;
             min-width: 15rem;
             text-align: center;
-            // border: 1px solid $color-white;
         }
 
         &__value {

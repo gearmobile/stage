@@ -1,0 +1,28 @@
+// captions
+// ---------------------------------
+.meetup-caption-1,
+.meetup-caption-2,
+.meetup-caption-3 {
+    color: $color-primary;
+    font-family: $font-primary;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.meetup-caption-1 {
+    font-size: 5rem;
+    margin: 0 0 2.6rem;
+}
+
+.meetup-caption-1--invert {
+    color: $color-white;
+}
+
+.meetup-caption-2 {
+    font-size: 3.5rem;
+    margin: 0 0 2rem;
+}
+.meetup-caption-3 {
+    font-size: 3em;
+    margin: 0 0 2rem;
+}
