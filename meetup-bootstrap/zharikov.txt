@@ -1,0 +1,9 @@
+http://storage5.static.itmages.com/i/17/0110/h_1484043866_5918661_36dcb96411.png
+http://storage5.static.itmages.com/i/17/0110/s_1484043866_5918661_36dcb96411.png
+https://www.zharikov.pro/sharing/csgoroll.sketch
+
+sass -w src/scss:build/css -t compressed
+http://www.w3schools.com/howto/howto_js_sidenav.asp
+https://v4-alpha.getbootstrap.com/components/navbar/g
+
+http://www.w3schools.com/howto/howto_js_topnav.asp
