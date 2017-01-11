@@ -86,21 +86,33 @@
                 background-color: #ddd;
             }
 
-            &:nth-child( odd ) {
-                background-color: #4b4d4f;
-            }
+        }
 
-            &:nth-child( even ) {
-                background-color: #373737;
-            }
+        &__button--odd {
+            background-color: #373737;
+        }
+
+        &__button--even {
+            background-color: #4b4d4f;
         }
 
         &__panel {
+            background-color: #ccc;
             padding: 0 20px;
             display: none;
 
+            & p {
+                margin: 0 0 2rem;
+                // margin-bottom: 2rem;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
             &.is-show {
                 display: block;
+                padding: 20px;
             }
         }
     }

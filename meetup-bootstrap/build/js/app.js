@@ -50,10 +50,10 @@ $( document ).ready( function () {
     // -----------------------------------------------------------------------
 
     // ACCORDION -------------------------------------------------------------
-    var accordionButtons = $( '.schedule__button' );
-    accordionButtons.on( 'click', function () {
+    var buttons = $( '.schedule .schedule__button' );
+    buttons.on( 'click', function () {
         $( this ).toggleClass( 'is-active' );
-        $( this ).next( '.schedule__panel' ).toggleClass( 'is-show' );
+        $( this ).next( '.schedule__panel' ).toggleClass( 'is-show' ).siblings( '.schedule__panel' ).removeClass( 'is-show' );
     });
     // -----------------------------------------------------------------------
 
