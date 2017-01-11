@@ -1,0 +1,62 @@
+.wrapper {
+  @include clearfix();
+  height: 100%;
+  background: $color-black-dark url( '../images/main-bg.jpg' ) center center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  &__controls {
+    width: 674px;
+    height: 100%;
+  }
+
+  &__content {
+    margin-left: 674px;
+  }
+}
+
+.sidebar {
+  position: relative;
+  background-color: rgba( 0,0,0, .8 );
+  color: $color-white;
+  height: 100%;
+
+  & .nav {
+    padding-top: 24rem;
+    width: 27rem;
+    background-color: rgba( 0,0,0, 1 );
+    min-height: 100%;
+
+    &__link.is-selected {
+      color: $color-golden-dark;
+    }
+  }
+
+  & .content {
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    left: 270px;
+    height: 100%;
+    transition: opacity .2s;
+    width: 0;
+    opacity: 0;
+  }
+
+  & .content.is-visible {
+    width: calc( 100% - 270px );
+    opacity: 1;
+    //overflow: scroll;
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
