@@ -19,7 +19,38 @@
 // 768px BREAKPOINT
 // -----------------------------------------------
 @media only screen and ( max-width: 767px ) {
-  //
+  // top header -----------------------------------
+  .header {
+    position: relative;
+
+    & .header__icon {
+        display: block !important;
+        position: absolute;
+        right: 0;
+        top: 10px;
+      }
+
+    & .topnav {
+        float: left;
+        width: 100%;
+        display: none;
+
+        & .topnav__item {
+            float: none;
+        }
+
+        & .topnav__link {
+            display: block;
+            text-align: left;
+        }
+      }
+
+    & .topnav.topnav--responsive {
+        display: block;
+      }
+
+  }
+
 }
 
 // 600px BREAKPOINT

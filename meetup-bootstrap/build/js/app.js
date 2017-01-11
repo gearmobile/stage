@@ -1,5 +1,19 @@
 $( document ).ready( function () {
 
+    // TOPHEADER
+    // -------------------------------------------------------------
+    var topNavLink = document.querySelector( '#topNavLink' );
+    var topHeader = document.querySelector( '#topHeader' );
+    topNavLink.addEventListener( 'click', function ( event ) {
+        event.preventDefault();
+        if ( topHeader.className === 'topnav' ) {
+            topHeader.className += ' topnav--responsive';
+        } else {
+            topHeader.className = 'topnav';
+        }
+    });
+
+
     // HERO COUNTER ------------------------------------------------
     var countDownDate = new Date( 'Feb 5, 2017 15:37:25' ).getTime();
     var x = setInterval(function() {

@@ -1,2 +1,52 @@
 // HEADER
 // --------------------------------------
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: #333;
+    @include clearfix();
+
+    & .header__logo {
+        float: left;
+        padding: 1.4rem 1.6rem;
+        color: $color-white;
+    }
+
+    & .header__icon {
+        display: none;
+        // float: right;
+        color: $color-white;
+        padding: 1.4rem 1.6rem;
+        cursor: pointer;
+    }
+
+    & .topnav {
+        float: right;
+        @include clearfix();
+
+        &__item {
+            float: left;
+        }
+
+        &__link {
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 1.4rem 1.6rem;
+            text-decoration: none;
+            transition: .3s;
+            font-size: 1.7rem;
+
+            &:hover {
+                background-color: #555;
+            }
+        }
+
+    }
+
+}
+

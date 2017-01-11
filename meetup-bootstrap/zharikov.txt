@@ -1,9 +1,13 @@
-http://storage5.static.itmages.com/i/17/0110/h_1484043866_5918661_36dcb96411.png
-http://storage5.static.itmages.com/i/17/0110/s_1484043866_5918661_36dcb96411.png
-https://www.zharikov.pro/sharing/csgoroll.sketch
 
 sass -w src/scss:build/css -t compressed
+
 http://www.w3schools.com/howto/howto_js_sidenav.asp
 https://v4-alpha.getbootstrap.com/components/navbar/g
 
 http://www.w3schools.com/howto/howto_js_topnav.asp
+
+http://preview.themeforest.net/item/toplevel-responsive-countdown-landing-page/full_screen_preview/9469464?ref=blueberry1&ref=blueberry1&clickthrough_id=882818346&redirect_back=true
+
+http://azmind.com/demo/alissa-coming-soon/
+
+http://www.creabox.es/themes/new_bar/#theme=azul
