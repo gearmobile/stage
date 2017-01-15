@@ -121,12 +121,61 @@
 // SECTION-FOUR
 // -------------------------------------
 .section-four {
-    padding: 6rem 0;
+    padding: 17.4rem 0;
     background-color: #4b4d4f;
-    color: $color-white;
-    text-align: right;
 
-    & p {
+    & .row {
+        position: relative;
+    }
+
+    &__primary {
+        color: $color-white;
+        text-align: right;
         font-size: 1.4rem;
+    }
+
+    &__badge {
+        width: 35.4rem;
+        height: 35.7rem;
+        position: absolute;
+        left: 0;
+        top: -7.5rem;
+        background: transparent url( '../images/badge.png' ) center center no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+}
+
+// SECTION FIVE
+// -------------------------------------
+.section-five {
+    padding: 14.6rem 0 17.9rem;
+
+    &__header {
+        margin-bottom: 6rem;
+    }
+
+    &__footer {
+        //
+
+        & .row {
+            margin-bottom: 3rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        & .card {
+            background-color: $color-secondary;
+            @include size( 29.6rem );
+            border-radius: 1.5rem;
+            margin: auto;
+
+            &--image {
+                background: transparent url( '../images/lectors-image.png' ) center center no-repeat;
+            }
+        }
     }
 }
