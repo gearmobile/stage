@@ -179,3 +179,73 @@
         }
     }
 }
+
+// SECTION SIX
+// -------------------------------------
+.section-six {
+    background-color: #4b4d4f;
+    padding: 17rem 0 12.7rem;
+
+    &__main {
+        text-align: center;
+        color: $color-white;
+    }
+}
+
+// SECTION SEVEN
+// -------------------------------------
+.section-seven {
+    padding: 11.7rem 0 9.3rem;
+
+    &__header {
+        margin-bottom: 10.3rem;
+    }
+
+    &__main {
+        margin-bottom: 9.8rem;
+    }
+
+    &__image {
+        display: block;
+        min-height: 41.6rem;
+
+        &--first {
+            background-color: #3d6ed2;
+        }
+
+        &--second {
+            background-color: #90d23d;
+        }
+
+        &--third {
+            background-color: #ff9d00;
+        }
+
+        &--fourth {
+            background-color: #e0652a;
+        }
+    }
+
+    &__footer {
+        text-align: center;
+    }
+}
+
+// SECTION EIGHT
+// -------------------------------------
+.section-eight {
+    min-height: 66rem;
+    padding: 6.5rem 0;
+    background: transparent url( '../images/contact-bg.jpg' ) center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    
+    & .content {
+        background-color: $color-white;
+        padding: 5rem 5rem;
+
+        &__primary {
+            text-align: center;
+        }
+    }
+}

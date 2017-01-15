@@ -1,2 +1,23 @@
 // FOOTER
 // ----------------------------------
+.footer {
+  background-color: $color-secondary;
+  padding: 6rem 0;
+
+  &__main {
+    text-align: center;
+    color: $color-white;
+  }
+}
+
+// to top
+// ---------------------------------
+.toTop {
+  position: fixed;
+  right: 4rem;
+  bottom: 4rem;
+  
+  & .fa {
+    color: $color-black;
+  }
+}
