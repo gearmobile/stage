@@ -12,11 +12,13 @@
 .meetup-caption-1 {
     font-size: 5rem;
     margin: 0 0 2.6rem;
+
+    &--invert {
+        @extend .meetup-caption-1;
+        color: $color-white;
+    }
 }
 
-.meetup-caption-1--invert {
-    color: $color-white;
-}
 
 .meetup-caption-2 {
     font-size: 3.5rem;

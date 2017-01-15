@@ -47,6 +47,25 @@
 // --------------------------------------
 .section-one {
     padding: 6rem 0;
+
+    &__primary p {
+        font-size: 1.4rem;
+        font-weight: 300;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__secondary {
+        position: relative;
+
+        & .signup {
+            background-color: $color-white;
+            box-shadow: 0 .1rem .2rem 0 rgba( 35,31,32, .65 );
+        }
+    }
+
 }
 
 // SECTION TWO
@@ -57,8 +76,17 @@
     & .thumb {
         text-align: center;
 
+        &__image {
+            margin-bottom: 4rem;
+        }
+
         &__caption {
             text-transform: capitalize;
+        }
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 300;
         }
     }
 
@@ -158,7 +186,19 @@
     &__primary {
         color: $color-white;
         text-align: right;
-        font-size: 1.4rem;
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 300;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        & .meetup-button {
+            margin-top: 3.8rem;
+        }
     }
 
     &__badge {
@@ -166,7 +206,7 @@
         height: 35.7rem;
         position: absolute;
         left: 0;
-        top: -7.5rem;
+        top: -25rem;
         background: transparent url( '../images/badge.png' ) center center no-repeat;
         -webkit-background-size: cover;
         background-size: cover;
