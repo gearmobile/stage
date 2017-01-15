@@ -54,16 +54,14 @@
 .section-two {
     padding: 6rem 0;
 
-    &__item {
+    & .thumb {
+        text-align: center;
 
-        & .thumbnail {
-            text-align: center;
-
-            &__caption {
-                text-transform: capitalize;
-            }
+        &__caption {
+            text-transform: capitalize;
         }
     }
+
 }
 
 // SECTION THREE

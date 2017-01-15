@@ -47,7 +47,20 @@
 
 // COLUMNS WITHOUT GUTTERS
 // -------------------------------------
-.no-gutter > [class*='col-'] {
+.no-gutter > [ class*='col-' ] {
     padding-right:0;
     padding-left:0;
+}
+
+// COLUMNS EQUAL HEIGHT
+// -------------------------------------
+@media only screen and ( min-width: 768px ) {
+    .is-table-row {
+        display: table;
+    }
+    .is-table-row > [ class*='col-' ] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+    }
 }
