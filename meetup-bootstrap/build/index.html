@@ -13,28 +13,32 @@
 
     <!-- HEADER -->
     <header class="header">
-        <a href="#" class="header__logo">
-            <!--<i class="fa fa-3x fa-meetup" aria-hidden="true"></i>-->
-            <img src="images/logo-top.png" alt="Logo">
-        </a>
-        <div class="header__icon">
-            <i id="topNavLink" class="fa fa-2x fa-bars" aria-hidden="true"></i>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="#" class="header__logo">
+                        <img src="images/logo-top.png" alt="Logo">
+                    </a>
+                    <div class="header__icon">
+                        <i id="topNavLink" class="fa fa-2x fa-bars" aria-hidden="true"></i>
+                    </div>
+                    <ul class="topnav" id="topHeader">
+                        <li class="topnav__item">
+                            <a class="topnav__link" href="#home">home</a>
+                        </li>
+                        <li class="topnav__item">
+                            <a class="topnav__link" href="#news">news</a>
+                        </li>
+                        <li class="topnav__item">
+                            <a class="topnav__link" href="#contact">contact</a>
+                        </li>
+                        <li class="topnav__item">
+                            <a class="topnav__link" href="#about">about</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <ul class="topnav" id="topHeader">
-            <li class="topnav__item">
-                <a class="topnav__link" href="#home">home</a>
-            </li>
-            <li class="topnav__item">
-                <a class="topnav__link" href="#news">news</a>
-            </li>
-            <li class="topnav__item">
-                <a class="topnav__link" href="#contact">contact</a>
-            </li>
-            <li class="topnav__item">
-                <a class="topnav__link" href="#about">about</a>
-            </li>
-        </ul>
-
     </header>
 
     <!-- SECTION HERO -->
@@ -139,24 +143,53 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="schedule">
-                        <div class="schedule__top">top</div>
-                        <button class="schedule__button schedule__button--odd">Section 1</button>
+                        <div class="schedule__top">
+                            <div class="row">
+                                <div class="schedule__time col-md-3">Top</div>
+                                <div class="schedule__title col-md-7">Stuff that will happen</div>
+                            </div>
+                        </div>
+                        <button class="schedule__button schedule__button--odd">
+                            <div class="row">
+                                <div class="schedule__time col-md-3">10am - 12pm</div>
+                                <div class="schedule__title col-md-7">Introduction and presentations about Envato</div>
+                                <div class="schedule__icon col-md-2"><i class="fa fa-plus-circle" aria-hidden="true"></i></div>
+                            </div>
+                        </button>
                         <div class="schedule__panel">
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus aliquam, hic voluptatem ipsam molestiae cum veritatis atque quos modi ducimus doloremque, repellendus, porro dolores beatae. Maxime nesciunt doloribus, magni reprehenderit, ab necessitatibus dicta dolore nobis eveniet fugit ipsa distinctio quibusdam.</p>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus nemo eum similique. Dolorem esse, dolore distinctio suscipit, aut commodi veritatis!</p>
                         </div>
-                        <button class="schedule__button schedule__button--even">Section 2</button>
+                        <button class="schedule__button schedule__button--even">
+                            <div class="row">
+                                <div class="schedule__time col-md-3">12pm - 02pm</div>
+                                <div class="schedule__title col-md-7">Sessions by honorable guests and Speakers</div>
+                                <div class="schedule__icon col-md-2"><i class="fa fa-plus-circle" aria-hidden="true"></i></div>
+                            </div>
+                        </button>
                         <div class="schedule__panel">
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus aliquam, hic voluptatem ipsam molestiae cum veritatis atque quos modi ducimus doloremque, repellendus, porro dolores beatae. Maxime nesciunt doloribus, magni reprehenderit, ab necessitatibus dicta dolore nobis eveniet fugit ipsa distinctio quibusdam.</p>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta repudiandae excepturi impedit voluptates quia ducimus beatae perferendis nemo, ipsa, asperiores delectus. Quibusdam molestias id aspernatur inventore veniam ab neque aut?</p>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, doloremque!</p>
                         </div>
-                        <button class="schedule__button schedule__button--odd">Section 3</button>
+                        <button class="schedule__button schedule__button--odd">
+                            <div class="row">
+                                <div class="schedule__time col-md-3">02pm - 03pm</div>
+                                <div class="schedule__title col-md-7">Break and Mingle time with the authors</div>
+                                <div class="schedule__icon col-md-2"><i class="fa fa-plus-circle" aria-hidden="true"></i></div>
+                            </div>
+                        </button>
                         <div class="schedule__panel">
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus aliquam, hic voluptatem ipsam molestiae cum veritatis atque quos modi ducimus doloremque, repellendus, porro dolores beatae. Maxime nesciunt doloribus, magni reprehenderit, ab necessitatibus dicta dolore nobis eveniet fugit ipsa distinctio quibusdam.</p>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quod ipsum illum itaque, laudantium adipisci ad dicta accusantium amet similique enim totam facilis quae aliquid facere, eum laboriosam quasi. Voluptates dignissimos eum ut adipisci recusandae quibusdam quo doloribus totam repellat.</p>
                         </div>
-                        <button class="schedule__button schedule__button--even">Section 4</button>
+                        <button class="schedule__button schedule__button--even">
+                            <div class="row">
+                                <div class="schedule__time col-md-3">03pm - 05pm</div>
+                                <div class="schedule__title col-md-7">Portfolio Review, Rewards and Ending Presentation</div>
+                                <div class="schedule__icon col-md-2"><i class="fa fa-plus-circle" aria-hidden="true"></i></div>
+                            </div>
+                        </button>
                         <div class="schedule__panel">
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus aliquam, hic voluptatem ipsam molestiae cum veritatis atque quos modi ducimus doloremque, repellendus, porro dolores beatae. Maxime nesciunt doloribus, magni reprehenderit, ab necessitatibus dicta dolore nobis eveniet fugit ipsa distinctio quibusdam.</p>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat impedit enim ipsum ea corrupti accusantium autem debitis amet vero. Porro!</p>
