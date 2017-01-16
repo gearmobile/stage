@@ -7,11 +7,12 @@
     font-family: $font-primary;
     font-weight: 700;
     line-height: 1;
+    text-transform: capitalize;
 }
 
 .meetup-caption-1 {
     font-size: 5rem;
-    margin: 0 0 2.6rem;
+    margin: 0 0 1.4rem;
 
     &--invert {
         @extend .meetup-caption-1;
@@ -36,14 +37,33 @@
     background-color: $color-secondary;
     border-radius: 1.5rem;
     color: $color-white;
-    padding: 2rem 2.6rem;
+    padding: 1.6rem 2.6rem;
     font-size: 1.8rem;
+    text-transform: capitalize;
 
     &:hover,
     &:focus {
         background-color: #46bb09;
         color: $color-white;
         text-decoration: none;
+    }
+}
+
+.meetup-button--dark {
+    @extend .meetup-button;
+    background-color: $color-dark;
+    padding: 1.6rem 5.6rem;
+}
+
+// TO TOP
+// ---------------------------------
+.toTop {
+    position: fixed;
+    right: 11rem;
+    bottom: 8rem;
+
+    & .fa {
+        color: $color-black;
     }
 }
 

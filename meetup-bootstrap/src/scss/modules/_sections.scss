@@ -47,7 +47,7 @@
 // SECTION ONE
 // --------------------------------------
 .section-one {
-    padding: 6rem 0;
+    padding: 5rem 0;
 
     &__primary p {
         font-size: 1.4rem;
@@ -72,13 +72,22 @@
 // SECTION TWO
 // --------------------------------------
 .section-two {
-    padding: 6rem 0;
+    padding: 6rem 0 1rem;
 
     & .thumb {
         text-align: center;
+        border: 1px solid #000;
 
         &__image {
-            margin-bottom: 4rem;
+            min-height: 21.8rem;
+            margin: 1rem auto 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & img {
+                align-self: flex-end;
+            }
         }
 
         &__caption {
@@ -88,6 +97,10 @@
         & p {
             font-size: 1.4rem;
             font-weight: 300;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -96,16 +109,16 @@
 // SECTION THREE
 // -------------------------------------
 .section-three {
-    padding: 6rem 0;
+    padding: 6rem 0 16rem;
 
     & .schedule {
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
         border-radius: 1.5rem;
         color: $color-white;
 
         &__top,
         &__button {
-            padding: 2.6rem 5rem 2.5rem;
+            padding: 2rem 5rem 2rem;
         }
         
         &__top {
@@ -167,17 +180,17 @@
     }
 
     &__disclaimer {
-        max-width: 100rem;
+        max-width: 86rem;
         margin: 0 auto;
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 }
 
 // SECTION-FOUR
 // -------------------------------------
 .section-four {
-    padding: 17.4rem 0;
+    padding: 17rem 0;
     background-color: #4b4d4f;
 
     & .row {
@@ -187,6 +200,10 @@
     &__primary {
         color: $color-white;
         text-align: right;
+
+        & .meetup-caption-1--invert {
+            margin: 0 0 2rem;
+        }
 
         & p {
             font-size: 1.4rem;
@@ -198,7 +215,7 @@
         }
 
         & .meetup-button {
-            margin-top: 3.8rem;
+            margin-top: 5rem;
         }
     }
 
@@ -206,7 +223,7 @@
         width: 35.4rem;
         height: 35.7rem;
         position: absolute;
-        left: 0;
+        left: 6.6rem;
         top: -25rem;
         background: transparent url( '../images/badge.png' ) center center no-repeat;
         -webkit-background-size: cover;
@@ -218,17 +235,21 @@
 // SECTION FIVE
 // -------------------------------------
 .section-five {
-    padding: 14.6rem 0 17.9rem;
+    padding: 14rem 0 17.9rem;
 
     &__header {
         margin-bottom: 6rem;
+
+        & .meetup-caption-1 {
+            margin: 0 0 2rem;
+        }
     }
 
     &__footer {
         //
 
         & .row {
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
 
             &:last-child {
                 margin-bottom: 0;
@@ -257,20 +278,53 @@
     &__main {
         text-align: center;
         color: $color-white;
+
+        & .meetup-caption-1 {
+            margin: 0 0 2.6rem;
+        }
+
+        & p {
+            max-width: 60rem;
+            margin: auto;
+            line-height: 1.5;
+        }
+    }
+
+    &__logos {
+        margin: 4rem 0 7rem;
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .meetup-button {
+        padding: 1.6rem 5.6rem;
     }
 }
 
 // SECTION SEVEN
 // -------------------------------------
 .section-seven {
-    padding: 11.7rem 0 9.3rem;
+    padding: 11rem 0 9.3rem;
 
     &__header {
         margin-bottom: 10.3rem;
+
+        & .meetup-caption-1 {
+            text-transform: capitalize;
+        }
+
+        & p:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
     &__main {
-        margin-bottom: 9.8rem;
+        margin-bottom: 5rem;
     }
 
     &__image {

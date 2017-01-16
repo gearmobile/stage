@@ -8,16 +8,33 @@
     text-align: center;
     color: $color-white;
   }
-}
 
-// to top
-// ---------------------------------
-.toTop {
-  position: fixed;
-  right: 4rem;
-  bottom: 4rem;
-  
-  & .fa {
-    color: $color-black;
+  &__icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+
+    & a {
+      margin: 0 1rem;
+      background-color: $color-white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include size( 4rem );
+      color: $color-secondary;
+
+      &:hover {
+        text-decoration: none;
+        color: $color-primary;
+        transition: color .2s;
+      }
+
+      & .fa {
+        font-size: 2.4rem;
+      }
+    }
   }
 }
+
+
