@@ -1,0 +1,1 @@
+sass -w src/scss/app.scss:build/css/app.min.css -t compressed --sourcemap=none
