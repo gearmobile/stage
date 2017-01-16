@@ -11,9 +11,10 @@
         display: flex;
         border: .2rem solid $color-secondary;
         border-radius: 2rem;
-        padding: 3rem 8rem;
+        padding: 1rem 7rem;
         font-family: $font-secondary;
         color: $color-white;
+        margin-top: -12rem;
 
         &__item {
             min-height: 15rem;
@@ -25,7 +26,7 @@
             font-size: 13rem;
             font-weight: 100;
             line-height: 1;
-            margin-bottom: 1rem;
+            //margin-bottom: 1rem;
         }
 
         &__title {
@@ -35,7 +36,7 @@
         }
 
         &__divider {
-            padding: 0 4rem;
+            padding: 0 3rem;
             font-size: 9rem;
             font-weight: 100;
         }
